@@ -1,0 +1,38 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog')).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+---
+
+<BaseLayout title="Blog" description="Productivity tips, Notion guides, and budgeting advice to help you get organized.">
+  <h1 style="font-size: 2rem; margin-bottom: 2rem;">Blog</h1>
+  <ul class="post-list">
+    {posts.map((post) => (
+      <li>
+        <a href={`/blog/${post.id}`} style="text-decoration: none; color: inherit;">
+          <article class="post-card">
+            <h2>{post.data.title}</h2>
+            <p class="post-date">
+              {post.data.pubDate.toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+              })}
+            </p>
+            <p class="post-desc">{post.data.description}</p>
+            {post.data.tags.length > 0 && (
+              <div class="post-tags">
+                {post.data.tags.map((tag: string) => (
+                  <span class="tag">{tag}</span>
+                ))}
+              </div>
+            )}
+          </article>
+        </a>
+      </li>
+    ))}
+  </ul>
+</BaseLayout>
