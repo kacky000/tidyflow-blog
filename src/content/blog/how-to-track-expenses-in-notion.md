@@ -77,6 +77,6 @@ The magic happens at the end of the month when you sort by category and see exac
 
 If you'd rather not build this from scratch, we made a ready-to-use template with all of this pre-configured — including income tracking, sample data, and category filters.
 
-[Get the Tidyflow Budget Tracker →](https://yossyland.gumroad.com/l/notion-monthly-budget-tracker)
+[Get the Tidyflow Budget Tracker →](https://gettidyflow.gumroad.com/l/notion-monthly-budget-tracker)
 
 It takes about 30 seconds to duplicate into your workspace. Then you're ready to start tracking.

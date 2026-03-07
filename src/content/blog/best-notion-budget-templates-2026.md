@@ -27,7 +27,7 @@ What we like: It's genuinely simple. No formulas to break, no complex rollups to
 
 **Price:** $5.50
 
-[Get the Tidyflow Budget Tracker →](https://yossyland.gumroad.com/l/notion-monthly-budget-tracker)
+[Get the Tidyflow Budget Tracker →](https://gettidyflow.gumroad.com/l/notion-monthly-budget-tracker)
 
 ## 2. Notion's Built-in Budget Template
 
@@ -83,4 +83,4 @@ The most important thing isn't which template you pick — it's that you actuall
 
 The best time to start budgeting was last month. The second best time is today.
 
-[Get the Tidyflow Budget Tracker for $5.50 →](https://yossyland.gumroad.com/l/notion-monthly-budget-tracker)
+[Get the Tidyflow Budget Tracker for $5.50 →](https://gettidyflow.gumroad.com/l/notion-monthly-budget-tracker)

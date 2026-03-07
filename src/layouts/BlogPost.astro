@@ -8,45 +8,102 @@ interface Props {
   updatedDate?: Date;
   heroImage?: string;
   tags?: string[];
+  author?: string;
 }
 
-const { title, description, pubDate, updatedDate, heroImage, tags = [] } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, tags = [], author = 'Tidyflow' } = Astro.props;
 
 const formattedDate = pubDate.toLocaleDateString('en-US', {
   year: 'numeric',
   month: 'long',
   day: 'numeric',
 });
+
+const formattedUpdated = updatedDate?.toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+
+// Reading time estimate (rough)
+const readingTime = '5 min read';
+
+// Article structured data
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": title,
+  "description": description,
+  "datePublished": pubDate.toISOString(),
+  ...(updatedDate && { "dateModified": updatedDate.toISOString() }),
+  "author": {
+    "@type": "Organization",
+    "name": "Tidyflow",
+    "url": "https://gettidyflow.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Tidyflow",
+    "url": "https://gettidyflow.com"
+  },
+  ...(heroImage && { "image": heroImage }),
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": `https://gettidyflow.com${Astro.url.pathname}`
+  }
+};
 ---
 
-<BaseLayout title={title} description={description} image={heroImage}>
-  <article>
-    <div class="post-header" style="margin-bottom: 2rem;">
-      <h1 style="font-size: 2.2rem; font-weight: 800; line-height: 1.2; margin-bottom: 0.75rem;">{title}</h1>
-      <p class="post-date" style="color: var(--color-text-light); font-size: 0.9rem;">
-        {formattedDate}
-        {updatedDate && <span> · Updated {updatedDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>}
-      </p>
+<BaseLayout title={title} description={description} image={heroImage} type="article">
+  <!-- Article Structured Data -->
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} slot="head" />
+
+  <article itemscope itemtype="https://schema.org/Article">
+    <div class="article-header">
       {tags.length > 0 && (
-        <div class="post-tags">
+        <div class="post-tags" style="justify-content: center; margin-bottom: var(--space-md);">
           {tags.map((tag) => (
             <span class="tag">{tag}</span>
           ))}
         </div>
       )}
+
+      <h1 itemprop="headline">{title}</h1>
+
+      <div class="article-meta">
+        <time datetime={pubDate.toISOString()} itemprop="datePublished">{formattedDate}</time>
+        {updatedDate && (
+          <>
+            <span class="separator"></span>
+            <span>Updated <time datetime={updatedDate.toISOString()} itemprop="dateModified">{formattedUpdated}</time></span>
+          </>
+        )}
+        <span class="separator"></span>
+        <span>{readingTime}</span>
+      </div>
     </div>
 
-    {heroImage && <img src={heroImage} alt={title} style="width: 100%; margin-bottom: 2rem;" />}
+    <div class="container" style="padding-top: var(--space-2xl); padding-bottom: var(--space-3xl);">
+      {heroImage && (
+        <img
+          src={heroImage}
+          alt={title}
+          style="width: 100%; margin-bottom: var(--space-2xl); border-radius: var(--radius-lg);"
+          loading="eager"
+          itemprop="image"
+        />
+      )}
 
-    <div class="post-content">
-      <slot />
-    </div>
+      <div class="post-content" itemprop="articleBody">
+        <slot />
+      </div>
 
-    <!-- CTA: Product promotion -->
-    <div class="cta-box">
-      <h3>Get Organized with Tidyflow Templates</h3>
-      <p>Simple, minimal Notion templates that just work. No complicated setup.</p>
-      <a href="/products" class="cta-button">Browse Templates →</a>
+      <!-- CTA: Product promotion -->
+      <div class="cta-box">
+        <h3>Get Organized with Tidyflow Templates</h3>
+        <p>Simple, minimal Notion templates that just work. No complicated setup.</p>
+        <a href="/products" class="cta-button">Browse Templates →</a>
+      </div>
     </div>
   </article>
 </BaseLayout>

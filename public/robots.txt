@@ -1,4 +1,9 @@
 User-agent: *
 Allow: /
 
+# Block sensitive paths
+Disallow: /api/
+Disallow: /_astro/
+Disallow: /admin/
+
 Sitemap: https://gettidyflow.com/sitemap-index.xml

@@ -5,41 +5,148 @@ import { getCollection } from 'astro:content';
 const posts = (await getCollection('blog')).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
+const latestPosts = posts.slice(0, 6);
 ---
 
-<BaseLayout title="Home" description="Clean digital tools to help you get organized. Notion templates, productivity guides, and more.">
+<BaseLayout title="Home" description="Simple Notion templates and productivity guides to help you get organized. Budget trackers, planners, and more at Tidyflow.">
+
+  <!-- Hero Section -->
   <section class="hero">
-    <h1>Get Organized.<br />Stay Organized.</h1>
-    <p>Simple, minimal digital tools and guides to help you take control of your time, money, and goals.</p>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        Notion templates that just work
+      </div>
+      <h1>
+        Get Organized.<br />
+        <span class="gradient-text">Stay Organized.</span>
+      </h1>
+      <p class="hero-description">
+        Clean, minimal digital tools and guides to help you take control of your time, money, and goals. No complicated setup — just open and start.
+      </p>
+      <div class="hero-actions">
+        <a href="/products" class="btn btn-primary btn-arrow">Browse Templates </a>
+        <a href="/blog" class="btn btn-secondary">Read the Blog</a>
+      </div>
+    </div>
   </section>
 
-  <section>
-    <h2 style="font-size: 1.5rem; margin-bottom: 1.5rem;">Latest Posts</h2>
-    <ul class="post-list">
-      {posts.map((post) => (
-        <li>
-          <a href={`/blog/${post.id}`} style="text-decoration: none; color: inherit;">
-            <article class="post-card">
-              <h2>{post.data.title}</h2>
-              <p class="post-date">
+  <!-- Value Propositions -->
+  <section class="section">
+    <div class="container-wide">
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3>Instant Setup</h3>
+          <p>Duplicate to your Notion workspace and start using immediately. No tutorials needed.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🎯</div>
+          <h3>Purpose-Built</h3>
+          <p>Every template solves a real problem — budgeting, tracking habits, managing projects.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">✨</div>
+          <h3>Clean Design</h3>
+          <p>Minimal, beautiful layouts that are a pleasure to use every day. No clutter.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Products -->
+  <section class="section section-alt">
+    <div class="container-wide">
+      <div class="section-header">
+        <span class="section-label">Templates</span>
+        <h2 class="section-title">Tools to Simplify Your Life</h2>
+        <p class="section-desc">Start with a template that's ready to go. Customize it to fit your workflow.</p>
+      </div>
+      <div class="product-grid">
+        <div class="product-card">
+          <span class="product-emoji">💰</span>
+          <h3>Monthly Budget Tracker</h3>
+          <p class="product-desc">Track income and expenses in one place. 9 expense categories, 5 income sources, with sample data included.</p>
+          <div class="product-footer">
+            <span class="price">$5.50</span>
+            <a href="https://gettidyflow.gumroad.com/l/notion-monthly-budget-tracker" target="_blank" rel="noopener" class="btn btn-primary btn-sm btn-arrow">Get Template </a>
+          </div>
+        </div>
+        <div class="product-card">
+          <span class="product-emoji">🌸</span>
+          <h3>New Life Starter Kit</h3>
+          <p class="product-desc">Everything you need to organize a fresh start. Goals, habits, finances, and daily planning in one system.</p>
+          <div class="product-footer">
+            <span class="price">$3.99</span>
+            <a href="https://gettidyflow.gumroad.com" target="_blank" rel="noopener" class="btn btn-primary btn-sm btn-arrow">Get Template </a>
+          </div>
+        </div>
+        <div class="product-card">
+          <span class="product-emoji">📅</span>
+          <h3>Social Media Calendar</h3>
+          <p class="product-desc">Plan and schedule content across platforms. Track performance and never miss a posting day.</p>
+          <div class="product-footer">
+            <span class="price">$6.99</span>
+            <a href="https://gettidyflow.gumroad.com" target="_blank" rel="noopener" class="btn btn-primary btn-sm btn-arrow">Get Template </a>
+          </div>
+        </div>
+      </div>
+      <div style="text-align: center; margin-top: var(--space-2xl);">
+        <a href="/products" class="btn btn-ghost btn-arrow">View All Products </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Latest Blog Posts -->
+  <section class="section">
+    <div class="container-wide">
+      <div class="section-header">
+        <span class="section-label">Blog</span>
+        <h2 class="section-title">Latest Guides & Tips</h2>
+        <p class="section-desc">Practical advice on budgeting, productivity, and getting the most from Notion.</p>
+      </div>
+      <div class="post-grid" style="max-width: var(--max-width); margin: 0 auto;">
+        {latestPosts.map((post) => (
+          <a href={`/blog/${post.id}`} class="post-card" style="text-decoration: none; color: inherit;">
+            <div class="post-meta">
+              <span class="post-date">
                 {post.data.pubDate.toLocaleDateString('en-US', {
                   year: 'numeric',
-                  month: 'long',
+                  month: 'short',
                   day: 'numeric',
                 })}
-              </p>
-              <p class="post-desc">{post.data.description}</p>
-              {post.data.tags.length > 0 && (
-                <div class="post-tags">
-                  {post.data.tags.map((tag: string) => (
-                    <span class="tag">{tag}</span>
-                  ))}
-                </div>
-              )}
-            </article>
+              </span>
+            </div>
+            <h3>{post.data.title}</h3>
+            <p class="post-desc">{post.data.description}</p>
+            {post.data.tags.length > 0 && (
+              <div class="post-tags">
+                {post.data.tags.map((tag: string) => (
+                  <span class="tag">{tag}</span>
+                ))}
+              </div>
+            )}
+            <span class="read-more">Read more</span>
           </a>
-        </li>
-      ))}
-    </ul>
+        ))}
+      </div>
+      <div style="text-align: center; margin-top: var(--space-2xl);">
+        <a href="/blog" class="btn btn-ghost btn-arrow">View All Posts </a>
+      </div>
+    </div>
   </section>
+
+  <!-- Bottom CTA -->
+  <section class="section" style="padding-bottom: var(--space-4xl);">
+    <div class="container-wide">
+      <div class="newsletter">
+        <h2>Ready to Get Organized?</h2>
+        <p>Browse our collection of clean, minimal Notion templates and start building better habits today.</p>
+        <a href="https://gettidyflow.gumroad.com" target="_blank" rel="noopener" class="btn btn-primary" style="background: white; color: var(--color-primary-dark); box-shadow: 0 4px 20px rgba(0,0,0,0.2);">
+          Visit Our Store →
+        </a>
+      </div>
+    </div>
+  </section>
+
 </BaseLayout>

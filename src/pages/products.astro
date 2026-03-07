@@ -2,18 +2,102 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="Products" description="Browse our collection of clean, minimal Notion templates.">
-  <h1 style="font-size: 2rem; margin-bottom: 0.5rem;">Products</h1>
-  <p style="color: var(--color-text-light); margin-bottom: 2rem;">Simple templates that just work. No complicated setup needed.</p>
+<BaseLayout title="Products" description="Browse our collection of clean, minimal Notion templates. Budget trackers, planners, and productivity tools that just work.">
 
-  <div class="product-grid">
-    <div class="product-card">
-      <h3>💰 Monthly Budget Tracker</h3>
-      <p style="color: var(--color-text-light); margin: 0.5rem 0;">Track your income and expenses in one place. 9 expense categories, 5 income categories, and sample data included.</p>
-      <p class="price">$5.50</p>
-      <a href="https://yossyland.gumroad.com/l/notion-monthly-budget-tracker" target="_blank" class="cta-button" style="display: inline-block; background: var(--color-primary); color: white; padding: 0.5rem 1.2rem; border-radius: 8px; font-weight: 600; margin-top: 0.75rem; font-size: 0.9rem;">Get Template →</a>
-    </div>
-
-    <!-- More products will be added here -->
+  <div class="page-header">
+    <h1>Templates & Tools</h1>
+    <p>Simple digital products that help you get organized. No complicated setup — just open and start.</p>
   </div>
+
+  <section class="section">
+    <div class="container-wide">
+      <div class="product-grid">
+
+        <div class="product-card">
+          <span class="product-emoji">💰</span>
+          <h3>Monthly Budget Tracker</h3>
+          <p class="product-desc">Track your income and expenses in one place. 9 expense categories, 5 income sources, and sample data included to get you started immediately.</p>
+          <div class="product-footer">
+            <div>
+              <span class="price">$5.50</span>
+            </div>
+            <a href="https://gettidyflow.gumroad.com/l/notion-monthly-budget-tracker" target="_blank" rel="noopener" class="btn btn-primary btn-sm btn-arrow">Get Template </a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <span class="product-emoji">🌸</span>
+          <h3>New Life Starter Kit</h3>
+          <p class="product-desc">Everything you need to organize a fresh start — goals, habits, finances, and daily planning combined into one clean system.</p>
+          <div class="product-footer">
+            <div>
+              <span class="price">$3.99</span>
+            </div>
+            <a href="https://gettidyflow.gumroad.com" target="_blank" rel="noopener" class="btn btn-primary btn-sm btn-arrow">Get Template </a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <span class="product-emoji">💼</span>
+          <h3>Freelancer Expense Tracker</h3>
+          <p class="product-desc">Professional expense tracking built for freelancers. Categorize business expenses, track invoices, and prepare for tax season with ease.</p>
+          <div class="product-footer">
+            <div>
+              <span class="price">$9.99</span>
+            </div>
+            <a href="https://gettidyflow.gumroad.com" target="_blank" rel="noopener" class="btn btn-primary btn-sm btn-arrow">Get Template </a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <span class="product-emoji">🤖</span>
+          <h3>AI Prompt Pack for Content Creators</h3>
+          <p class="product-desc">50+ ready-to-use AI prompts for blog posts, social media, emails, and more. Customizable variables for any niche.</p>
+          <div class="product-footer">
+            <div>
+              <span class="price">$5.99</span>
+            </div>
+            <a href="https://gettidyflow.gumroad.com" target="_blank" rel="noopener" class="btn btn-primary btn-sm btn-arrow">Get Pack </a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <span class="product-emoji">💍</span>
+          <h3>Wedding Budget Planner</h3>
+          <p class="product-desc">Plan your dream wedding without overspending. Track vendor costs, guest lists, timelines, and every detail in one spreadsheet.</p>
+          <div class="product-footer">
+            <div>
+              <span class="price">$14.99</span>
+            </div>
+            <a href="https://gettidyflow.gumroad.com" target="_blank" rel="noopener" class="btn btn-primary btn-sm btn-arrow">Get Planner </a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <span class="product-emoji">📅</span>
+          <h3>Social Media Content Calendar</h3>
+          <p class="product-desc">Plan and schedule content across all platforms. Track post ideas, schedules, and performance in one place.</p>
+          <div class="product-footer">
+            <div>
+              <span class="price">$6.99</span>
+            </div>
+            <a href="https://gettidyflow.gumroad.com" target="_blank" rel="noopener" class="btn btn-primary btn-sm btn-arrow">Get Calendar </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container-wide">
+      <div class="cta-box">
+        <h3>Can't Find What You Need?</h3>
+        <p>We're always creating new templates. Visit our Gumroad store for the latest releases.</p>
+        <a href="https://gettidyflow.gumroad.com" target="_blank" rel="noopener" class="cta-button">Visit Gumroad Store →</a>
+      </div>
+    </div>
+  </section>
+
 </BaseLayout>
