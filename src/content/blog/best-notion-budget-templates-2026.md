@@ -4,6 +4,7 @@ description: "Looking for a simple way to track your money in Notion? Here are t
 pubDate: 2026-03-05
 tags: ["notion", "budgeting", "personal finance", "templates"]
 author: "Tidyflow"
+heroImage: "/thumbs/thumb-best-notion-budget-templates.jpg"
 ---
 
 Managing your money shouldn't feel like a second job. If you're already using Notion for notes, tasks, or projects, adding a budget tracker to your workspace just makes sense — everything in one place, no extra apps.

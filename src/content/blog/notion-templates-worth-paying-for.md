@@ -4,6 +4,7 @@ description: "With thousands of free Notion templates available, is it ever wort
 pubDate: 2026-02-22
 tags: ["notion", "templates", "productivity", "opinion"]
 author: "Tidyflow"
+heroImage: "/thumbs/thumb-notion-templates-worth-it.jpg"
 ---
 
 Notion's template gallery has thousands of free options. Reddit has thousands more. So why would anyone pay $5, $10, or even $30 for a Notion template?

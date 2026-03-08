@@ -4,6 +4,7 @@ description: "A simple monthly checklist to keep your finances on track. Follow 
 pubDate: 2026-02-20
 tags: ["budgeting", "checklist", "personal finance", "organization"]
 author: "Tidyflow"
+heroImage: "/thumbs/thumb-monthly-budget-checklist.jpg"
 ---
 
 The difference between people who are good with money and people who aren't usually isn't income or intelligence. It's having a routine.

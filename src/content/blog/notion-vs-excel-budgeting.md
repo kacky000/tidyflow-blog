@@ -4,6 +4,7 @@ description: "Comparing Notion and Excel for personal budgeting. Discover which 
 pubDate: 2026-03-03
 tags: ["notion", "excel", "budgeting", "comparison"]
 author: "Tidyflow"
+heroImage: "/thumbs/thumb-notion-vs-excel.jpg"
 ---
 
 When it comes to tracking your money, two tools come up again and again: Excel and Notion. Both can work. But they're built for very different types of people.

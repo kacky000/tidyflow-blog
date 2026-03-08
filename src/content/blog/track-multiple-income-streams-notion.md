@@ -4,6 +4,7 @@ description: "Managing money from multiple sources? Here's how to track all your
 pubDate: 2026-02-26
 tags: ["notion", "freelance", "income tracking", "side hustle"]
 author: "Tidyflow"
+heroImage: "/thumbs/thumb-multiple-income-streams.jpg"
 ---
 
 If you have one paycheck from one employer, tracking income is simple. But if you're freelancing, running a side hustle, or earning from multiple sources, things get messy fast.

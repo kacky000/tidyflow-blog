@@ -4,6 +4,7 @@ description: "A beginner-friendly guide to setting up expense tracking in Notion
 pubDate: 2026-03-04
 tags: ["notion", "expenses", "tutorial", "budgeting"]
 author: "Tidyflow"
+heroImage: "/thumbs/thumb-track-expenses-notion.jpg"
 ---
 
 You've probably tried tracking your expenses before. Maybe you used a spreadsheet that got messy after a week. Maybe you downloaded an app that wanted access to your bank account (no thanks). Or maybe you just... didn't.

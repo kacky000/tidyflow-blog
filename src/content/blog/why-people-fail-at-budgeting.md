@@ -4,6 +4,7 @@ description: "Budgeting failure isn't a discipline problem — it's a design pro
 pubDate: 2026-02-24
 tags: ["budgeting", "personal finance", "productivity", "habits"]
 author: "Tidyflow"
+heroImage: "/thumbs/thumb-fail-at-budgeting.jpg"
 ---
 
 There's a common belief that budgeting is about discipline. That if you just try harder, track more carefully, and resist temptation, your budget will work.

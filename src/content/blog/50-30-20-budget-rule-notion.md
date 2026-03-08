@@ -4,6 +4,7 @@ description: "Learn the simplest budgeting method that actually works. Plus, how
 pubDate: 2026-03-02
 tags: ["budgeting", "personal finance", "notion", "beginner"]
 author: "Tidyflow"
+heroImage: "/thumbs/thumb-50-30-20-rule.jpg"
 ---
 
 If you've ever Googled "how to budget," you've probably seen the 50/30/20 rule. It's one of the most popular budgeting methods for a reason: it's dead simple and it works.

@@ -4,6 +4,7 @@ description: "Most people fail at budgeting not because they lack discipline, bu
 pubDate: 2026-03-01
 tags: ["budgeting", "personal finance", "money tips"]
 author: "Tidyflow"
+heroImage: "/thumbs/thumb-budgeting-mistakes.jpg"
 ---
 
 You've tried budgeting before. It lasted a week, maybe two, then life happened and you stopped. Sound familiar?

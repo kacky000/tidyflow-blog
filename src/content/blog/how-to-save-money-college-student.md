@@ -1,16 +1,17 @@
 ---
 title: "How to Save Money as a College Student (Without Living Like a Monk)"
-description: "Practical money-saving tips for college students who want to build savings without sacrificing their social life."
+description: "Practical money-saving tips for college students who want to build savings without sacrificing their social life. Includes tracking tools and budget strategies."
 pubDate: 2026-02-28
-tags: ["saving money", "college", "budgeting", "student life"]
+tags: ["saving money", "college", "budgeting", "student life", "expense tracking"]
+heroImage: "/thumbs/thumb-save-money-student.jpg"
 author: "Tidyflow"
 ---
 
-College is expensive enough without tuition. Between textbooks, food, rent, and the occasional social outing, money disappears faster than free pizza at a dorm event.
+**Here's a number that might surprise you:** the average college student spends over $2,000 per year on things they can't even remember buying. That's textbook money, rent money, or a semester's worth of groceries — gone without a trace.
 
-But saving money in college doesn't mean eating ramen every night and never going out. It means being intentional about where your limited dollars go.
+If you're reading this, you already know you need to save more. The good news? You don't need to live on instant noodles or skip every social event. You just need a system — and the discipline to check it once a day.
 
-Here are practical strategies that actually work.
+This guide breaks down exactly how to save money in college using strategies that take minutes, not hours. Whether you're living in a dorm or splitting an apartment, these tips work.
 
 ## Know Your Numbers First
 
@@ -63,3 +64,13 @@ Whether you use a spreadsheet, a budgeting app, or a Notion template, the tool d
 [Try the Tidyflow Budget Tracker for Notion →](https://gettidyflow.gumroad.com/l/notion-monthly-budget-tracker)
 
 The best financial decision you can make in college isn't picking the right stock or finding the perfect side hustle. It's learning where your money goes. Everything else follows from that.
+
+If you want to avoid the most common [budgeting mistakes](/budgeting-mistakes-to-avoid/), start by tracking your spending — even $20/month in savings compounds over time.
+
+Need a simple system to get started? A Notion template can turn expense tracking into a 2-minute daily habit.
+
+[Try the Tidyflow Budget Tracker for Notion →](https://gettidyflow.gumroad.com)
+
+**Related reading:**
+- [How to Track Expenses in Notion](/how-to-track-expenses-in-notion/) — set up a complete tracking system in under 10 minutes
+- [The Monthly Budget Checklist You Actually Need](/monthly-budget-checklist/) — a simple monthly routine to stay on track
