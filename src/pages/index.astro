@@ -107,26 +107,33 @@ const latestPosts = posts.slice(0, 6);
       </div>
       <div class="post-grid" style="max-width: var(--max-width); margin: 0 auto;">
         {latestPosts.map((post) => (
-          <a href={`/blog/${post.id}`} class="post-card" style="text-decoration: none; color: inherit;">
-            <div class="post-meta">
-              <span class="post-date">
-                {post.data.pubDate.toLocaleDateString('en-US', {
-                  year: 'numeric',
-                  month: 'short',
-                  day: 'numeric',
-                })}
-              </span>
-            </div>
-            <h3>{post.data.title}</h3>
-            <p class="post-desc">{post.data.description}</p>
-            {post.data.tags.length > 0 && (
-              <div class="post-tags">
-                {post.data.tags.map((tag: string) => (
-                  <span class="tag">{tag}</span>
-                ))}
+          <a href={`/blog/${post.id}`} class="post-card post-card--has-thumb" style="text-decoration: none; color: inherit;">
+            {post.data.heroImage && (
+              <div class="post-card__thumb">
+                <img src={post.data.heroImage} alt={post.data.title} loading="lazy" />
               </div>
             )}
-            <span class="read-more">Read more</span>
+            <div class="post-card__body">
+              <div class="post-meta">
+                <span class="post-date">
+                  {post.data.pubDate.toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'short',
+                    day: 'numeric',
+                  })}
+                </span>
+              </div>
+              <h3>{post.data.title}</h3>
+              <p class="post-desc">{post.data.description}</p>
+              {post.data.tags.length > 0 && (
+                <div class="post-tags">
+                  {post.data.tags.map((tag: string) => (
+                    <span class="tag">{tag}</span>
+                  ))}
+                </div>
+              )}
+              <span class="read-more">Read more</span>
+            </div>
           </a>
         ))}
       </div>
