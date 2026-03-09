@@ -15,7 +15,6 @@
     "@astrojs/sitemap": "^3.0.0",
     "@astrojs/vercel": "^8.0.0",
     "@oslojs/encoding": "^1.1.0",
-    "@rollup/rollup-linux-arm64-gnu": "^4.59.0",
     "astro": "^5.0.0",
     "shiki": "^4.0.1",
     "stream-replace-string": "^2.0.0"
