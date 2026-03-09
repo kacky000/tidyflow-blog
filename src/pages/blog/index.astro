@@ -18,7 +18,7 @@ const posts = (await getCollection('blog')).sort(
     <div class="container">
       <div class="post-grid">
         {posts.map((post) => (
-          <a href={`/blog/${post.id}`} class="post-card post-card--has-thumb" style="text-decoration: none; color: inherit;">
+          <a href={`/blog/${post.id}`} class={`post-card ${post.data.heroImage ? 'post-card--has-thumb' : ''}`} style="text-decoration: none; color: inherit;">
             {post.data.heroImage && (
               <div class="post-card__thumb">
                 <img src={post.data.heroImage} alt={post.data.title} loading="lazy" />

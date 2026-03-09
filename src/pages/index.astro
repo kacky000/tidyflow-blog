@@ -107,7 +107,7 @@ const latestPosts = posts.slice(0, 6);
       </div>
       <div class="post-grid" style="max-width: var(--max-width); margin: 0 auto;">
         {latestPosts.map((post) => (
-          <a href={`/blog/${post.id}`} class="post-card post-card--has-thumb" style="text-decoration: none; color: inherit;">
+          <a href={`/blog/${post.id}`} class={`post-card ${post.data.heroImage ? 'post-card--has-thumb' : ''}`} style="text-decoration: none; color: inherit;">
             {post.data.heroImage && (
               <div class="post-card__thumb">
                 <img src={post.data.heroImage} alt={post.data.title} loading="lazy" />
