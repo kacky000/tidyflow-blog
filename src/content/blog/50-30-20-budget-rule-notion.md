@@ -63,10 +63,11 @@ Our Notion Budget Tracker comes with 9 expense categories that easily map to the
 
 ## Related Articles
 
+- [Zero-Based Budgeting: A Complete Beginner's Guide](/zero-based-budgeting-guide/) — Want more control? Try zero-based budgeting instead
+- [Best Free Budget Spreadsheet Templates for 2026](/best-budget-spreadsheet-templates/) — Compare Excel, Google Sheets, and Notion templates
 - [5 Best Notion Budget Templates in 2026](/best-notion-budget-templates-2026/) — Find the right template for your budgeting style
 - [7 Budgeting Mistakes That Keep You Broke](/budgeting-mistakes-to-avoid/) — Common mistakes the 50/30/20 rule helps you avoid
 - [How to Track Your Expenses in Notion](/how-to-track-expenses-in-notion/) — Detailed setup guide for expense tracking
-- [Monthly Budget Checklist](/monthly-budget-checklist/) — A step-by-step checklist for monthly budget reviews
 
 ## Common Questions
 

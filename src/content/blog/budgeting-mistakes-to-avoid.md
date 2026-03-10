@@ -84,4 +84,8 @@ The 50/30/20 rule is one of the most effective budgeting methods for beginners. 
 
 Most people fail at budgeting because of unrealistic expectations, not lack of discipline. They set $0 budgets for entertainment, try to track every penny, and use complicated tools. Successful budgeting requires a simple system, regular reviews, and self-forgiveness when you slip up. The goal is progress, not perfection.
 
+*Related reading:*
+- [Zero-Based Budgeting: A Complete Beginner's Guide](/zero-based-budgeting-guide/) — The most detailed budgeting method to prevent these mistakes
+- [Best Free Budget Spreadsheet Templates for 2026](/best-budget-spreadsheet-templates/) — Start with the right template
+
 [Start tracking with a simple Notion Budget Tracker →](https://gettidyflow.gumroad.com/l/notion-monthly-budget-tracker)

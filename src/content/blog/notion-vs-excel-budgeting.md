@@ -96,4 +96,8 @@ Notion has a formula property type that supports basic calculations like sum, av
 
 Yes, Notion supports CSV import, so you can export your Excel budget as a CSV file and import it directly into a Notion database. The import process maps columns to Notion properties automatically. However, Excel formulas won't transfer — you'll need to recreate any calculations using Notion's formula properties or rollup features.
 
+*Related reading:*
+- [Best Free Budget Spreadsheet Templates for 2026](/best-budget-spreadsheet-templates/) — Full comparison of free templates
+- [Zero-Based Budgeting: A Complete Beginner's Guide](/zero-based-budgeting-guide/) — Master the most detailed budgeting method
+
 [Get a ready-made Notion Budget Tracker →](https://gettidyflow.gumroad.com/l/notion-monthly-budget-tracker)

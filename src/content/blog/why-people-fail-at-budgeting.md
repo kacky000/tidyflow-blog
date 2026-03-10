@@ -90,4 +90,8 @@ Start by removing friction from the process. Use a tool you already open daily, 
 
 A paid budget template ($5-30) saves significant setup time and provides pre-built categories, sample data, and tested workflows. If you've failed at budgeting before, the reduction in setup friction alone makes it worthwhile. Free templates work fine for people who enjoy customizing, but paid templates remove the "I'll set it up later" excuse that kills most budgeting attempts.
 
+*Related reading:*
+- [Zero-Based Budgeting: A Complete Beginner's Guide](/zero-based-budgeting-guide/) — A structured method that gives every dollar a purpose
+- [Best Free Budget Spreadsheet Templates for 2026](/best-budget-spreadsheet-templates/) — Find the right template to make budgeting easy
+
 [Start with a simple system — Get the Tidyflow Budget Tracker →](https://gettidyflow.gumroad.com/l/notion-monthly-budget-tracker)
