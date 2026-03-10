@@ -107,7 +107,27 @@ Building a finance dashboard from scratch takes time. If you want to skip the se
 
 Your money, your rules, your dashboard.
 
+## Frequently Asked Questions
+
+### What should a personal finance dashboard include?
+
+A personal finance dashboard should include four core components: an expense tracker (with categories and monthly views), an income tracker (with source categorization), savings goals (with progress tracking), and a subscription manager (with cost and renewal dates). The dashboard ties everything together with a summary view showing monthly spending, income, net savings, and progress toward financial goals.
+
+### Is Notion good for tracking personal finances?
+
+Notion is excellent for personal finance tracking because it combines multiple financial databases into one connected workspace. You can track expenses, income, savings goals, and subscriptions in separate databases that feed into a unified dashboard. The mobile app allows quick expense logging, and Notion's flexibility lets you customize the system as your financial needs evolve.
+
+### How do I set up a finance dashboard in Notion?
+
+Set up a finance dashboard in Notion by creating four linked databases: Expenses (name, amount, category, date), Income (source, amount, type, date), Savings Goals (goal name, target amount, current amount, deadline), and Subscriptions (service, cost, billing cycle, category). Then create a dashboard page that displays filtered views from each database with summary calculations.
+
+### What's the difference between a budget tracker and a finance dashboard?
+
+A budget tracker focuses on comparing planned spending vs actual spending in predefined categories. A personal finance dashboard is more comprehensive — it tracks expenses, income from all sources, savings goal progress, and subscription costs in one unified view. A dashboard gives you a complete financial picture, while a tracker focuses specifically on spending limits. Our [Budget Templates guide](/best-notion-budget-templates-2026/) covers simpler tracking options.
+
 **Related articles:**
 - [How to Track Expenses in Notion](/how-to-track-expenses-in-notion/)
 - [Best Notion Budget Templates 2026](/best-notion-budget-templates-2026/)
 - [Notion vs Excel for Budgeting](/notion-vs-excel-budgeting/)
+- [Track Multiple Income Streams in Notion](/track-multiple-income-streams-notion/)
+- [The 50/30/20 Budget Rule](/50-30-20-budget-rule-notion/)

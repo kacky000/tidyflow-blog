@@ -12,8 +12,78 @@ export async function getStaticPaths() {
 
 const post = Astro.props;
 const { Content } = await render(post);
+
+// Read raw markdown file to extract FAQ content
+import fs from 'node:fs';
+import path from 'node:path';
+const blogDir = path.join(process.cwd(), 'src/content/blog');
+const mdPath = path.join(blogDir, `${post.id}.md`);
+let rawMarkdown = '';
+try {
+  rawMarkdown = fs.readFileSync(mdPath, 'utf-8');
+} catch { /* ignore if file not found */ }
+
+// Extract FAQ pairs from markdown body for JSON-LD FAQPage schema
+function extractFAQs(body: string): Array<{question: string, answer: string}> {
+  const faqs: Array<{question: string, answer: string}> = [];
+  const lines = body.split('\n');
+  let inFaqSection = false;
+  let currentQuestion = '';
+  let currentAnswer = '';
+
+  for (const line of lines) {
+    // Detect FAQ section headers
+    if (/^##\s+(Frequently Asked Questions|Common Questions|FAQ)/i.test(line)) {
+      inFaqSection = true;
+      continue;
+    }
+    // Exit FAQ section when hitting a new H2 that's not a FAQ header
+    if (inFaqSection && /^##\s+/.test(line) && !/^###/.test(line)) {
+      if (currentQuestion && currentAnswer.trim()) {
+        faqs.push({ question: currentQuestion, answer: currentAnswer.trim() });
+      }
+      inFaqSection = false;
+      continue;
+    }
+    if (!inFaqSection) continue;
+
+    // H3 = new question
+    if (/^###\s+/.test(line)) {
+      if (currentQuestion && currentAnswer.trim()) {
+        faqs.push({ question: currentQuestion, answer: currentAnswer.trim() });
+      }
+      currentQuestion = line.replace(/^###\s+/, '').trim();
+      currentAnswer = '';
+    } else if (currentQuestion && line.trim()) {
+      // Accumulate answer text, strip markdown links
+      const cleanLine = line.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1').trim();
+      if (cleanLine) {
+        currentAnswer += (currentAnswer ? ' ' : '') + cleanLine;
+      }
+    }
+  }
+  // Capture last FAQ pair
+  if (currentQuestion && currentAnswer.trim()) {
+    faqs.push({ question: currentQuestion, answer: currentAnswer.trim() });
+  }
+  return faqs;
+}
+
+const faqs = extractFAQs(rawMarkdown || post.body || '');
+const faqSchema = faqs.length > 0 ? {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(faq => ({
+    "@type": "Question",
+    "name": faq.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.answer
+    }
+  }))
+} : null;
 ---
 
-<BlogPost {...post.data}>
+<BlogPost {...post.data} faqSchema={faqSchema}>
   <Content />
 </BlogPost>

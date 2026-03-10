@@ -80,6 +80,58 @@ Here's our quick recommendation:
 
 The most important thing isn't which template you pick — it's that you actually use it. A simple system you stick with beats a complex system you abandon after a week.
 
+## Quick Comparison Table
+
+| Template | Price | Income Tracking | Sample Data | Mobile-Friendly | Best For |
+|----------|-------|:-:|:-:|:-:|---------|
+| Tidyflow Budget Tracker | $5.50 | ✅ | ✅ | ✅ | Simplicity |
+| Notion Built-in | Free | ❌ | ❌ | ✅ | Absolute beginners |
+| Thomas Frank's System | $29 | ✅ | ✅ | ✅ | Power users |
+| Easlo's Tracker | $9 | ✅ | ❌ | ✅ | Visual design fans |
+| Reddit Community | Free | Varies | Varies | Varies | DIY enthusiasts |
+
+## How to Set Up Any Budget Template in Notion
+
+Getting started takes just a few minutes:
+
+1. **Pick a template** from the options above
+2. **Duplicate it** into your Notion workspace (click "Duplicate" in the top right)
+3. **Delete the sample data** and start fresh, or keep it as a reference
+4. **Set a daily reminder** — 2 minutes before bed is all you need
+5. **Review monthly** — sort by category to see where your money goes
+
+Need a more detailed walkthrough? Check out our [step-by-step expense tracking guide](/how-to-track-expenses-in-notion/).
+
+## Related Articles
+
+- [How to Track Your Expenses in Notion](/how-to-track-expenses-in-notion/) — Detailed setup tutorial
+- [The 50/30/20 Budget Rule in Notion](/50-30-20-budget-rule-notion/) — A simple framework for splitting your income
+- [Notion vs Excel for Budgeting](/notion-vs-excel-budgeting/) — Which tool is better for your finances?
+- [7 Budgeting Mistakes to Avoid](/budgeting-mistakes-to-avoid/) — Common pitfalls and how to fix them
+- [Why People Fail at Budgeting](/why-people-fail-at-budgeting/) — Understanding the psychology behind budget failures
+
+## Frequently Asked Questions
+
+### What is the best free Notion budget template?
+
+The best free Notion budget template is Notion's built-in budget template, available directly in the Notion template gallery. It covers basic expense logging with categories and dates. For a more complete free option, Reddit's r/Notion community regularly shares community-tested templates with varying features.
+
+### Is Notion good for budgeting?
+
+Notion is an excellent tool for budgeting because it combines flexibility with simplicity. Unlike dedicated budgeting apps that require bank account access, Notion lets you build a custom tracking system within your existing workspace. The main advantage is that everything — your tasks, notes, and budget — lives in one place, which makes it more likely you'll actually use it consistently.
+
+### How much should I spend on a Notion budget template?
+
+Most quality Notion budget templates cost between $5 and $30. Free templates work for basic tracking, but paid templates typically include pre-built categories, sample data, income tracking, and filtered views that save you significant setup time. A $5-10 template is a good balance of features and value for most people.
+
+### Can I use Notion budget templates on my phone?
+
+Yes, all Notion budget templates work on the Notion mobile app for both iOS and Android. This is important because logging expenses immediately — rather than trying to remember them later — is the key habit that makes budgeting work. Look for templates with simple entry forms that are easy to fill out on a small screen.
+
+### What's the difference between a budget tracker and an expense tracker in Notion?
+
+An expense tracker only records what you spend. A budget tracker does that plus tracks your income, sets spending limits by category, and shows whether you're over or under budget. For meaningful financial insight, you want a budget tracker that handles both income and expenses — which is why all our top picks include both.
+
 ## Start Tracking Today
 
 The best time to start budgeting was last month. The second best time is today.

@@ -175,6 +175,31 @@ You don't need to wait until January to organize your taxes. You don't need the 
 
 If you'd rather not build your own freelancer tax organizer from scratch, we've created one pre-loaded with all the categories, formulas, and dashboards you need. It's designed specifically for self-employed professionals: income tracking by client, expense categorization, estimated quarterly tax calculations, and a clean summary for your accountant.
 
+## Related Articles
+
+- [Track Multiple Income Streams in Notion](/track-multiple-income-streams-notion/) — Organize all your freelance revenue in one place
+- [How to Track Your Expenses in Notion](/how-to-track-expenses-in-notion/) — Daily expense tracking made simple
+- [Monthly Budget Checklist](/monthly-budget-checklist/) — The monthly routine that keeps finances organized
+- [The 50/30/20 Budget Rule](/50-30-20-budget-rule-notion/) — Budget your freelance income effectively
+
+## Frequently Asked Questions
+
+### What expenses can freelancers deduct from taxes?
+
+Freelancers can deduct business-related expenses including home office costs (10-15% of rent/mortgage is typical), software subscriptions, equipment, internet and phone bills (business percentage), professional development, coworking space fees, business mileage at 67 cents per mile (2026 rate), health insurance premiums, and half of self-employment tax. Keep receipts for everything over $75.
+
+### How much should freelancers set aside for taxes?
+
+Freelancers should set aside 25-35% of their gross income for taxes, depending on their state and income level. This covers federal income tax, self-employment tax (15.3%), and state income tax. Set up a separate savings account and transfer your tax percentage after every payment. Make quarterly estimated payments to avoid penalties.
+
+### How do I organize freelance taxes without an accountant?
+
+Use a dedicated tax organizer with categories for income by client, deductible expenses by type, and quarterly estimated payments. Log income weekly (15 minutes on Sunday) and expenses monthly. Keep digital copies of all receipts. At year-end, calculate totals by category — most tax software can handle the filing if your records are organized.
+
+### When should freelancers pay estimated quarterly taxes?
+
+Freelancers must pay estimated quarterly taxes on April 15, June 15, September 15, and January 15 of the following year. Calculate each payment as 25% of your estimated annual tax liability. If you underpay by more than $1,000, the IRS charges a penalty. A freelancer tax organizer helps you track quarterly totals automatically.
+
 [Get the Freelancer Tax Organizer →](https://gettidyflow.gumroad.com)
 
 Just download, plug in your numbers, and you're done. No formula wrestling, no guessing about categories, no missing deductions.

@@ -74,6 +74,36 @@ The magic happens at the end of the month when you sort by category and see exac
 
 **Use your phone.** Notion's mobile app lets you add expenses on the go. The sooner you log it, the less likely you'll forget.
 
+## Related Articles
+
+- [5 Best Notion Budget Templates in 2026](/best-notion-budget-templates-2026/) — Compare the top budget templates side by side
+- [The 50/30/20 Budget Rule in Notion](/50-30-20-budget-rule-notion/) — A proven framework for allocating your income
+- [7 Budgeting Mistakes That Keep You Broke](/budgeting-mistakes-to-avoid/) — Common pitfalls to avoid when tracking expenses
+- [Track Multiple Income Streams in Notion](/track-multiple-income-streams-notion/) — For freelancers with more than one income source
+- [Why People Fail at Budgeting](/why-people-fail-at-budgeting/) — Understanding the habits that make or break budgeting
+
+## Frequently Asked Questions
+
+### How long does it take to set up an expense tracker in Notion?
+
+Setting up a basic expense tracker in Notion takes about 5 minutes. You need to create a database with four columns: Name, Amount, Category, and Date. If you use a pre-made template, setup takes under 30 seconds — just duplicate it into your workspace and start logging expenses immediately.
+
+### Is Notion better than Excel for tracking expenses?
+
+Notion is better than Excel for most people because it works seamlessly on mobile, making it easy to log expenses on the go. Excel is more powerful for complex calculations and charts, but that extra power often goes unused. The best tool is the one you'll actually use daily — and Notion's accessibility across devices gives it an edge for daily expense tracking.
+
+### How do I categorize expenses in Notion?
+
+Start with 9 basic categories: Housing, Food & Dining, Transportation, Utilities, Entertainment, Clothing, Healthcare, Education, and Other. Use Notion's Select property type so you can pick from a dropdown. You can always add more categories later, but starting simple prevents the overwhelm that kills most budgeting habits.
+
+### Can I track both income and expenses in the same Notion database?
+
+You can, but it's cleaner to use separate databases — one for income, one for expenses. This keeps your views and filters simpler. Then create a dashboard page that pulls data from both databases, giving you a complete financial picture in one place. Our [Budget Tracker template](https://gettidyflow.gumroad.com/l/notion-monthly-budget-tracker) uses this dual-database approach.
+
+### How often should I log my expenses in Notion?
+
+Log your expenses once daily, ideally before bed. This takes about 2 minutes and ensures you don't forget anything. Most people have 1-3 expenses per day. Then do a 5-minute weekly review and a 15-minute monthly review to see spending patterns. This simple routine is more effective than trying to log expenses in real time throughout the day.
+
 ## Skip the Setup Entirely
 
 If you'd rather not build this from scratch, we made a ready-to-use template with all of this pre-configured — including income tracking, sample data, and category filters.

@@ -77,6 +77,31 @@ The hardest part is setting up the system. Once it exists, adding a new entry ta
 
 If you don't want to build a Notion income tracker from scratch, our Budget Tracker template includes a dedicated Income database with 5 categories (Salary, Side Hustle, Investments, Gifts, Other) and sample data to get you started.
 
+## Related Articles
+
+- [How to Track Your Expenses in Notion](/how-to-track-expenses-in-notion/) — Complete the picture by tracking expenses alongside income
+- [Personal Finance Dashboard Guide](/personal-finance-dashboard-guide/) — An all-in-one Notion dashboard for income, expenses, and savings
+- [Freelancer Tax Organizer Guide](/freelancer-tax-organizer-guide/) — Organize your freelance finances for tax season
+- [Notion vs Excel for Budgeting](/notion-vs-excel-budgeting/) — Which tool handles multiple income streams better?
+
+## Frequently Asked Questions
+
+### How many income streams should I track in Notion?
+
+Track every income stream, no matter how small. A typical freelancer has 3-7 sources: main clients, side projects, passive income, platform sales, investments, and occasional one-off work. Notion's database filters make it easy to view all sources together or drill into any single stream. Even a $5 digital sale adds up over time.
+
+### What's the best way to track freelance income for taxes?
+
+Create a Notion database with these fields: Date, Source, Amount, Category, Invoice Number, and Tax-Deductible (checkbox). At the end of each quarter, filter by date range to calculate estimated tax payments. Export to CSV for your accountant. Our [Freelancer Tax Organizer](/freelancer-tax-organizer-guide/) template automates this process.
+
+### Can I use Notion to track income and expenses together?
+
+Yes, but use separate databases for clarity. Create one database for income and one for expenses, then build a dashboard page that displays both. This dual-database approach keeps your views clean while giving you a complete financial picture. You can calculate net income by comparing monthly totals from each database.
+
+### How do I calculate my average monthly income with irregular earnings?
+
+In Notion, create a view grouped by month and use the Sum calculation on your Amount column. Then calculate the average across 3-6 months manually or use a formula property. This rolling average is more useful for budgeting than any single month's total, especially when your income varies by 30-50% month to month.
+
 [Get the Tidyflow Budget Tracker →](https://gettidyflow.gumroad.com/l/notion-monthly-budget-tracker)
 
 Your future self — especially tax-season future self — will thank you.

@@ -71,6 +71,26 @@ Need a simple system to get started? A Notion template can turn expense tracking
 
 [Try the Tidyflow Budget Tracker for Notion →](https://gettidyflow.gumroad.com)
 
+## Frequently Asked Questions
+
+### How much should a college student save per month?
+
+A realistic savings target for college students is 10-20% of any income, even if that's just $50-100 per month. The exact amount matters less than the habit. Start by tracking expenses for one month to understand your spending patterns, then identify one or two areas to cut back. Even $25/month in savings adds up to $300/year — enough for an emergency fund.
+
+### What is the best budgeting method for college students?
+
+The 50/30/20 rule is the best budgeting method for college students because it's simple and flexible. Allocate 50% of income to needs (rent, food, textbooks), 30% to wants (entertainment, dining out), and 20% to savings. For a detailed guide on implementing this method, read our [50/30/20 Budget Rule guide](/50-30-20-budget-rule-notion/).
+
+### How do I track expenses as a college student?
+
+The easiest way to track expenses as a college student is to use a tool you already have on your phone. Notion's mobile app lets you log expenses in under 30 seconds. Create a simple database with four columns: what you bought, how much, the category, and the date. Log expenses once daily before bed — this 2-minute habit is the foundation of financial awareness.
+
+### What are the biggest money-wasting habits for college students?
+
+The biggest money-wasting habits for college students are food delivery fees (averaging $5-10 per order), unused subscriptions (streaming services, gym memberships), impulse online shopping, and buying new textbooks instead of renting or buying used. Tracking these expenses for just one month typically reveals $100-200/month in savings opportunities.
+
 **Related reading:**
 - [How to Track Expenses in Notion](/how-to-track-expenses-in-notion/) — set up a complete tracking system in under 10 minutes
 - [The Monthly Budget Checklist You Actually Need](/monthly-budget-checklist/) — a simple monthly routine to stay on track
+- [The 50/30/20 Budget Rule](/50-30-20-budget-rule-notion/) — the simplest framework for splitting your income
+- [Why People Fail at Budgeting](/why-people-fail-at-budgeting/) — avoid common pitfalls from the start

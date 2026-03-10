@@ -198,6 +198,24 @@ By using a comprehensive **wedding budget planner** and following this guide, yo
 
 Ready to take control of your wedding budget? Download our **[Wedding Budget Planner template](https://gettidyflow.gumroad.com)** for just $14.99 and start planning with confidence today.
 
+## Frequently Asked Questions
+
+### How much does an average wedding cost in 2026?
+
+The average wedding in 2026 costs between $30,000 and $40,000 in the United States. However, costs vary dramatically by location, guest count, and style. Urban weddings in major cities can exceed $50,000, while intimate celebrations or off-peak weddings can be done for $10,000-$15,000. The key is setting a realistic budget based on your specific financial situation, not national averages.
+
+### What is the biggest wedding expense?
+
+The venue and catering combined are typically the biggest wedding expense, consuming 40-50% of the total budget. The venue alone averages $10,000-$15,000, and catering costs $70-$150 per person. To control this expense, consider off-peak dates (15-25% savings), all-inclusive venue packages, or non-traditional venues like restaurants or parks.
+
+### How do I create a wedding budget spreadsheet?
+
+Create a wedding budget spreadsheet with 15 categories: venue, catering, photography, videography, flowers, music, attire, beauty, stationery, transportation, wedding cake, decorations, guest accommodations, favors, and contingency (5-10%). For each category, track the estimated cost, actual cost, deposits paid, and balance due. A dedicated wedding budget planner template automates these calculations.
+
+### How can I save money on my wedding?
+
+The most effective ways to save money on a wedding are: choosing off-peak dates like Fridays or Sundays (15-25% savings), limiting the guest list (each guest costs $100-$300), using digital invitations, hiring student vendors, DIY-ing selected elements like centerpieces, and negotiating vendor packages. Always maintain a 5-10% contingency fund for unexpected costs.
+
 Your future spouse will thank you for the organized approach—and your bank account will too.
 
 ---

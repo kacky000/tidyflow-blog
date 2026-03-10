@@ -107,4 +107,29 @@ The best way to follow this checklist consistently is to pair it with a tool tha
 
 [Get the Tidyflow Budget Tracker →](https://gettidyflow.gumroad.com/l/notion-monthly-budget-tracker)
 
+## Related Articles
+
+- [The 50/30/20 Budget Rule in Notion](/50-30-20-budget-rule-notion/) — A simple framework to structure your monthly budget
+- [How to Track Your Expenses in Notion](/how-to-track-expenses-in-notion/) — Detailed guide to the daily logging habit
+- [7 Budgeting Mistakes That Keep You Broke](/budgeting-mistakes-to-avoid/) — Avoid common pitfalls during your monthly review
+- [Why People Fail at Budgeting](/why-people-fail-at-budgeting/) — Build a system that makes this checklist stick
+
+## Frequently Asked Questions
+
+### How long should a monthly budget review take?
+
+A complete monthly budget review should take about 15 minutes at the start and end of each month. The daily expense logging takes just 2 minutes, and the weekly check-in takes 5 minutes on Sunday. In total, that's roughly 90 minutes per month — about 3 minutes per day — to maintain complete control of your finances.
+
+### What should I include in a monthly budget checklist?
+
+A monthly budget checklist should include five items at the start of the month (check bank balance, list expected income, list fixed expenses, set variable budget, note irregular expenses), one daily habit (log expenses), one weekly check (quick spending review), and five end-of-month items (total spending, compare to plan, calculate savings, note lessons, set next month's budget).
+
+### How do I track irregular expenses in my budget?
+
+List all annual and semi-annual expenses like car insurance, annual subscriptions, holiday gifts, and tax payments. Divide each by 12 and add that monthly amount to your budget. For example, a $1,200 annual car insurance payment becomes $100/month in your budget. When the bill arrives, the money is already accounted for.
+
+### What's the best day to do a monthly budget review?
+
+The best days are the last day of the month (to review what you spent) and the first day of the next month (to set your new budget). Some people combine both into a single 30-minute session on the 1st. The specific day matters less than consistency — pick a day and stick with it every month.
+
 Consistency beats perfection. A rough budget followed every month beats a perfect budget abandoned in February.
