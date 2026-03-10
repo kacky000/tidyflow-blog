@@ -5,7 +5,16 @@ import vercel from '@astrojs/vercel';
 
 export default defineConfig({
   site: 'https://gettidyflow.com',
-  integrations: [mdx(), sitemap()],
+  integrations: [
+    mdx(),
+    sitemap({
+      serialize(item) {
+        // Add lastmod to all URLs
+        item.lastmod = new Date().toISOString();
+        return item;
+      },
+    }),
+  ],
   adapter: vercel(),
   output: 'static',
 });
