@@ -1,0 +1,1239 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const title = 'Free AI Content Checker — Is Your Writing Too AI?';
+const description = 'Paste your text and instantly see what makes it sound AI-generated. Get a score across 7 detection categories plus custom rewrite prompts. 100% free, no signup.';
+---
+
+<BaseLayout title={title} description={description}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "AI Writing Coach",
+      "url": "https://gettidyflow.com/tools/ai-checker",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "description": description
+    })} />
+  </Fragment>
+
+  <!-- Hero -->
+  <section class="checker-hero">
+    <div class="checker-hero-inner">
+      <span class="checker-badge">Free Tool — No Signup Required</span>
+      <h1>Is Your Writing <span class="gradient-text">Too AI?</span></h1>
+      <p class="checker-subtitle">Paste your text below. We'll scan it across 7 detection categories, highlight the problems, and give you a custom rewrite prompt — all in your browser, no data sent anywhere.</p>
+    </div>
+  </section>
+
+  <!-- Main App -->
+  <section class="checker-app">
+    <div class="checker-container">
+      <div class="checker-grid">
+        <!-- Left: Input & Results -->
+        <div class="checker-main">
+          <div class="input-area">
+            <div class="input-header">
+              <label for="text-input">Paste your text</label>
+              <span class="char-count" id="char-count">0 words</span>
+            </div>
+            <textarea id="text-input" placeholder="Paste your blog post, article, or any text here to check for AI patterns..." rows="12"></textarea>
+            <div class="input-actions">
+              <button id="analyze-btn" class="btn-primary" disabled>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+                Analyze Text
+              </button>
+              <button id="clear-btn" class="btn-ghost" style="display:none">Clear</button>
+              <button id="sample-btn" class="btn-ghost">Try Sample Text</button>
+            </div>
+          </div>
+
+          <!-- Error Banner -->
+          <div id="error-banner" class="error-banner" style="display:none" role="alert">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            <span id="error-message"></span>
+          </div>
+
+          <!-- Results (hidden until analysis) -->
+          <div id="results-panel" class="results-panel" style="display:none" aria-live="polite" aria-label="Analysis results">
+            <!-- Overall Score -->
+            <div class="score-overview">
+              <div class="score-ring-container">
+                <svg class="score-ring" viewBox="0 0 120 120">
+                  <circle cx="60" cy="60" r="52" fill="none" stroke="var(--color-border)" stroke-width="8"/>
+                  <circle id="score-circle" cx="60" cy="60" r="52" fill="none" stroke="var(--color-primary)" stroke-width="8" stroke-linecap="round" stroke-dasharray="327" stroke-dashoffset="327" transform="rotate(-90 60 60)"/>
+                </svg>
+                <div class="score-value">
+                  <span id="score-number">0</span>
+                  <span class="score-max">/70</span>
+                </div>
+              </div>
+              <div class="score-info">
+                <h2 id="score-label">Analyzing...</h2>
+                <p id="score-description"></p>
+                <div class="score-badges" id="score-badges"></div>
+              </div>
+            </div>
+
+            <!-- Category Breakdown -->
+            <div class="category-breakdown">
+              <h3>Detection Breakdown</h3>
+              <div class="categories" id="categories"></div>
+            </div>
+
+            <!-- Highlighted Issues -->
+            <div class="issues-section">
+              <h3>Flagged Issues <span class="issue-count" id="issue-count"></span></h3>
+              <div class="issues-list" id="issues-list"></div>
+            </div>
+
+            <!-- Rewrite Prompt -->
+            <div class="prompt-section">
+              <h3>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                Your Custom Rewrite Prompt
+              </h3>
+              <p class="prompt-desc">Copy this prompt into ChatGPT, Claude, or any AI tool to humanize your text:</p>
+              <div class="prompt-box" id="prompt-box"></div>
+              <button class="btn-copy" id="copy-prompt-btn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                Copy Prompt
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="checker-sidebar">
+          <div class="sidebar-card sidebar-cta">
+            <div class="sidebar-cta-badge">150 Prompts</div>
+            <h4>AI Prompt Pack for Content Creators V2.0</h4>
+            <p>30 AI Humanization prompts + 120 content creation prompts. Excel + PDF, copy-paste ready.</p>
+            <a href="https://gettidyflow.gumroad.com/l/ai-prompt-pack" class="btn-primary btn-sm" target="_blank" rel="noopener">Get the Prompt Pack — $5.99</a>
+          </div>
+
+          <div class="sidebar-card">
+            <h4>How It Works</h4>
+            <div class="how-steps">
+              <div class="how-step"><span class="step-num">1</span><span>Paste your text above</span></div>
+              <div class="how-step"><span class="step-num">2</span><span>We scan for 7 AI patterns</span></div>
+              <div class="how-step"><span class="step-num">3</span><span>See scores & flagged issues</span></div>
+              <div class="how-step"><span class="step-num">4</span><span>Copy a custom rewrite prompt</span></div>
+            </div>
+          </div>
+
+          <div class="sidebar-card">
+            <h4>The 7 AI Patterns</h4>
+            <ul class="pattern-list">
+              <li><span class="pattern-icon">💀</span> Dead Phrases</li>
+              <li><span class="pattern-icon">📐</span> Structural Uniformity</li>
+              <li><span class="pattern-icon">😐</span> Emotional Flatness</li>
+              <li><span class="pattern-icon">🌫️</span> Lack of Specificity</li>
+              <li><span class="pattern-icon">📋</span> Over-Organization</li>
+              <li><span class="pattern-icon">🔗</span> Mechanical Transitions</li>
+              <li><span class="pattern-icon">🎤</span> Unnatural Reader Address</li>
+            </ul>
+          </div>
+
+          <div class="sidebar-card">
+            <h4>Privacy First</h4>
+            <p class="privacy-note">Your text never leaves your browser. All analysis runs locally in JavaScript. No data is sent to any server.</p>
+          </div>
+        </aside>
+      </div>
+
+      <!-- Bottom CTA -->
+      <div class="bottom-cta" id="bottom-cta" style="display:none">
+        <div class="bottom-cta-inner">
+          <div>
+            <h3>Want 30 more humanization prompts?</h3>
+            <p>The AI Prompt Pack V2.0 includes 30 AI Humanization prompts, from full-text rewrites to voice cloning — plus 120 content creation prompts.</p>
+          </div>
+          <a href="https://gettidyflow.gumroad.com/l/ai-prompt-pack" class="btn-primary" target="_blank" rel="noopener">Get the Prompt Pack — $5.99</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ for SEO -->
+  <section class="checker-faq">
+    <div class="faq-inner">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-grid">
+        <div class="faq-item">
+          <h3>How does the AI content checker work?</h3>
+          <p>Our tool scans your text for 7 categories of patterns that AI detection tools like GPTZero and Originality.ai flag. These include dead phrases, structural uniformity, emotional flatness, and more. It runs entirely in your browser — no data is ever sent to a server.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Is this tool free?</h3>
+          <p>Yes, 100% free with no signup required. Paste your text, get instant results. We also offer an AI Prompt Pack with 30 advanced humanization prompts if you want to go deeper.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Will this help my content pass AI detectors?</h3>
+          <p>This tool identifies the specific patterns that AI detectors flag. By fixing these issues — either manually or using the generated rewrite prompt — your content will read more naturally and score lower on AI detection tools.</p>
+        </div>
+        <div class="faq-item">
+          <h3>What are "dead phrases" in AI writing?</h3>
+          <p>Dead phrases are overused expressions that AI models tend to rely on, like "delve into," "it's important to note," "in today's fast-paced world," and "navigate the landscape." These phrases immediately signal AI-generated content to both readers and detection tools.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+/* ============ CHECKER HERO ============ */
+.checker-hero {
+  background: var(--gradient-hero);
+  padding: var(--space-3xl) var(--space-xl) var(--space-2xl);
+  text-align: center;
+}
+.checker-hero-inner {
+  max-width: 720px;
+  margin: 0 auto;
+}
+.checker-badge {
+  display: inline-block;
+  padding: 6px 16px;
+  background: var(--color-primary-subtle);
+  color: var(--color-primary);
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  margin-bottom: var(--space-lg);
+  letter-spacing: 0.02em;
+}
+.checker-hero h1 {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 800;
+  color: var(--color-text);
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin: 0 0 var(--space-lg);
+}
+.gradient-text {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.checker-subtitle {
+  font-size: 1.1rem;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ============ MAIN LAYOUT ============ */
+.checker-app {
+  padding: 0 var(--space-xl) var(--space-3xl);
+}
+.checker-container {
+  max-width: var(--max-width-wide);
+  margin: 0 auto;
+}
+.checker-grid {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: var(--space-2xl);
+  align-items: start;
+}
+
+/* ============ INPUT AREA ============ */
+.input-area {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  box-shadow: var(--shadow-card);
+}
+.input-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-sm);
+}
+.input-header label {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--color-text);
+}
+.char-count {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  font-variant-numeric: tabular-nums;
+}
+textarea {
+  width: 100%;
+  min-height: 260px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--color-text);
+  background: var(--color-bg-alt);
+  resize: vertical;
+  transition: border-color var(--transition-fast);
+}
+textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(99,102,241,0.1);
+}
+textarea::placeholder {
+  color: var(--color-text-muted);
+}
+.input-actions {
+  display: flex;
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+  flex-wrap: wrap;
+}
+
+/* ============ BUTTONS ============ */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: var(--gradient-primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  text-decoration: none;
+}
+.btn-primary:hover { opacity: 0.9; transform: translateY(-1px); box-shadow: var(--shadow-md); }
+.btn-primary:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 2px; }
+.btn-primary:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+.btn-primary:disabled:focus-visible { outline: 2px dotted var(--color-text-muted); }
+.btn-primary.btn-sm { padding: 10px 18px; font-size: 0.85rem; width: 100%; justify-content: center; }
+.btn-ghost {
+  padding: 12px 20px;
+  background: transparent;
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+.btn-ghost:hover { background: var(--color-bg-alt); border-color: var(--color-primary-light); color: var(--color-primary); }
+.btn-ghost:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 2px; }
+.btn-copy {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 20px;
+  background: var(--color-primary-subtle);
+  color: var(--color-primary);
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+.btn-copy:hover { background: var(--color-primary); color: white; }
+.btn-copy:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 2px; }
+.btn-copy:active { transform: scale(0.98); }
+.btn-copy.copied { background: var(--color-success); color: white; border-color: transparent; }
+
+/* ============ ERROR BANNER ============ */
+.error-banner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: var(--space-md);
+  background: rgba(239, 68, 68, 0.08);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  border-radius: var(--radius-md);
+  color: #dc2626;
+  font-size: 0.88rem;
+  margin-top: var(--space-md);
+}
+
+/* ============ SPIN ANIMATION ============ */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.spin { animation: spin 1s linear infinite; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ============ RESULTS ============ */
+.results-panel { margin-top: var(--space-xl); animation: fadeUp 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
+
+.score-overview {
+  display: flex;
+  gap: var(--space-xl);
+  align-items: center;
+  padding: var(--space-xl);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+}
+.score-ring-container { position: relative; width: 120px; height: 120px; flex-shrink: 0; }
+.score-ring { width: 100%; height: 100%; }
+.score-value {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.score-value span:first-child { font-size: 2rem; font-weight: 800; color: var(--color-text); letter-spacing: -0.03em; }
+.score-max { font-size: 0.85rem; color: var(--color-text-muted); }
+.score-info h2 { font-size: 1.3rem; margin: 0 0 4px; color: var(--color-text); }
+.score-info p { font-size: 0.9rem; color: var(--color-text-secondary); margin: 0 0 var(--space-sm); line-height: 1.5; }
+.score-badges { display: flex; gap: 6px; flex-wrap: wrap; }
+.score-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+.badge-green { background: rgba(16, 185, 129, 0.12); color: var(--color-success); }
+.badge-yellow { background: rgba(245, 158, 11, 0.12); color: var(--color-warning); }
+.badge-red { background: rgba(239, 68, 68, 0.12); color: #dc2626; }
+
+/* Category Breakdown */
+.category-breakdown {
+  margin-top: var(--space-xl);
+  padding: var(--space-xl);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+}
+.category-breakdown h3 { font-size: 1.1rem; margin: 0 0 var(--space-lg); }
+.categories { display: flex; flex-direction: column; gap: var(--space-md); }
+.category-row {
+  display: grid;
+  grid-template-columns: 180px 1fr 50px;
+  gap: var(--space-md);
+  align-items: center;
+}
+.cat-name {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.cat-bar-track {
+  height: 8px;
+  background: var(--color-surface);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+.cat-bar-fill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  transition: width 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.cat-score { font-size: 0.85rem; font-weight: 700; text-align: right; font-variant-numeric: tabular-nums; }
+
+/* Issues */
+.issues-section {
+  margin-top: var(--space-xl);
+  padding: var(--space-xl);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+}
+.issues-section h3 { font-size: 1.1rem; margin: 0 0 var(--space-lg); display: flex; align-items: center; gap: 8px; }
+.issue-count {
+  font-size: 0.75rem;
+  background: var(--color-surface);
+  color: var(--color-text-secondary);
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+}
+.issues-list { display: flex; flex-direction: column; gap: var(--space-sm); }
+.issue-item {
+  padding: var(--space-md);
+  background: var(--color-bg-alt);
+  border-radius: var(--radius-md);
+  border-left: 3px solid var(--color-warning);
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+.issue-item.severity-high { border-left-color: #ef4444; }
+.issue-item.severity-med { border-left-color: var(--color-warning); }
+.issue-item.severity-low { border-left-color: var(--color-accent); }
+.issue-category {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-muted);
+  margin-bottom: 4px;
+}
+.issue-text { color: var(--color-text); }
+.issue-text mark {
+  background: rgba(245, 158, 11, 0.15);
+  color: var(--color-text);
+  padding: 1px 4px;
+  border-radius: 3px;
+  font-weight: 500;
+}
+.issue-fix { color: var(--color-text-secondary); font-style: italic; margin-top: 4px; }
+
+/* Prompt Section */
+.prompt-section {
+  margin-top: var(--space-xl);
+  padding: var(--space-xl);
+  background: var(--color-bg);
+  border: 1px solid var(--color-primary-light);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+}
+.prompt-section h3 {
+  font-size: 1.1rem;
+  margin: 0 0 var(--space-sm);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-primary);
+}
+.prompt-desc { font-size: 0.85rem; color: var(--color-text-secondary); margin: 0 0 var(--space-md); }
+.prompt-box {
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  line-height: 1.7;
+  color: var(--color-text);
+  white-space: pre-wrap;
+  max-height: 300px;
+  overflow-y: auto;
+  margin-bottom: var(--space-md);
+}
+
+/* ============ SIDEBAR ============ */
+.checker-sidebar { position: sticky; top: 80px; display: flex; flex-direction: column; gap: var(--space-lg); }
+.sidebar-card {
+  padding: var(--space-lg);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+}
+.sidebar-card h4 { font-size: 1rem; margin: 0 0 var(--space-md); color: var(--color-text); }
+.sidebar-card p { font-size: 0.88rem; color: var(--color-text-secondary); line-height: 1.6; margin: 0 0 var(--space-md); }
+.sidebar-cta {
+  background: linear-gradient(135deg, #eef2ff 0%, #e0f2fe 100%);
+  border-color: var(--color-primary-light);
+}
+.sidebar-cta-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  background: var(--color-primary);
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+  border-radius: var(--radius-full);
+  margin-bottom: var(--space-sm);
+  letter-spacing: 0.03em;
+}
+.how-steps { display: flex; flex-direction: column; gap: 12px; }
+.how-step { display: flex; align-items: center; gap: 12px; font-size: 0.88rem; color: var(--color-text-secondary); }
+.step-num {
+  width: 28px; height: 28px;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--color-primary-subtle);
+  color: var(--color-primary);
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  font-size: 0.8rem;
+  flex-shrink: 0;
+}
+.pattern-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.pattern-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+}
+.pattern-icon { font-size: 1rem; }
+.privacy-note { font-size: 0.82rem !important; color: var(--color-text-muted) !important; }
+
+/* ============ BOTTOM CTA ============ */
+.bottom-cta {
+  margin-top: var(--space-2xl);
+  padding: var(--space-2xl);
+  background: linear-gradient(135deg, #eef2ff 0%, #e0f2fe 50%, #f0fdf4 100%);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--color-primary-light);
+}
+.bottom-cta-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-xl);
+}
+.bottom-cta h3 { font-size: 1.2rem; margin: 0 0 6px; }
+.bottom-cta p { font-size: 0.9rem; color: var(--color-text-secondary); margin: 0; }
+.bottom-cta .btn-primary { white-space: nowrap; flex-shrink: 0; }
+
+/* ============ FAQ ============ */
+.checker-faq {
+  padding: var(--space-3xl) var(--space-xl);
+  background: var(--color-bg-alt);
+}
+.faq-inner { max-width: var(--max-width-wide); margin: 0 auto; }
+.faq-inner h2 { font-size: 1.5rem; text-align: center; margin: 0 0 var(--space-2xl); }
+.faq-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-xl); }
+.faq-item {
+  padding: var(--space-lg);
+  background: var(--color-bg);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+}
+.faq-item h3 { font-size: 1rem; margin: 0 0 var(--space-sm); color: var(--color-text); }
+.faq-item p { font-size: 0.88rem; color: var(--color-text-secondary); line-height: 1.6; margin: 0; }
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 900px) {
+  .checker-grid { grid-template-columns: 1fr; }
+  .checker-sidebar { position: static; flex-direction: row; flex-wrap: wrap; }
+  .checker-sidebar .sidebar-card { flex: 1 1 280px; }
+  .bottom-cta-inner { flex-direction: column; text-align: center; }
+  .faq-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+  .checker-hero { padding: var(--space-2xl) var(--space-md) var(--space-xl); }
+  .checker-app { padding: 0 var(--space-md) var(--space-2xl); }
+  .score-overview { flex-direction: column; text-align: center; }
+  .category-row { grid-template-columns: 140px 1fr 40px; }
+  textarea { min-height: 180px; max-height: 45vh; }
+}
+</style>
+
+<script>
+/* ============================================
+   AI Writing Coach — Detection Engine
+   100% client-side, no API, no data sent
+   ============================================ */
+
+// === DEAD PHRASES DATABASE ===
+const DEAD_PHRASES = [
+  // High severity
+  { phrase: "delve into", severity: "high", fix: "explore / look at / dig into" },
+  { phrase: "delve deeper", severity: "high", fix: "explore further / dig deeper" },
+  { phrase: "it's important to note", severity: "high", fix: "just state the point directly" },
+  { phrase: "it's worth noting", severity: "high", fix: "just state the point directly" },
+  { phrase: "in today's fast-paced world", severity: "high", fix: "cut entirely or use specific context" },
+  { phrase: "in today's digital world", severity: "high", fix: "cut entirely or use specific context" },
+  { phrase: "in today's modern world", severity: "high", fix: "cut entirely or use specific context" },
+  { phrase: "navigate the landscape", severity: "high", fix: "deal with / figure out / work through" },
+  { phrase: "navigating the world of", severity: "high", fix: "figuring out / working with" },
+  { phrase: "a testament to", severity: "high", fix: "shows / proves / is proof that" },
+  { phrase: "unlock the power", severity: "high", fix: "use / learn / start using" },
+  { phrase: "unlock your potential", severity: "high", fix: "grow / get better at / improve" },
+  { phrase: "harness the power", severity: "high", fix: "use / take advantage of" },
+  { phrase: "game-changer", severity: "high", fix: "describe the actual change specifically" },
+  { phrase: "take it to the next level", severity: "high", fix: "describe the specific improvement" },
+  { phrase: "this comprehensive guide", severity: "high", fix: "just describe what the article covers" },
+  { phrase: "look no further", severity: "high", fix: "drop it or be specific about why" },
+  { phrase: "let's dive in", severity: "high", fix: "cut it — just start the content" },
+  { phrase: "let's delve", severity: "high", fix: "cut it — just start the content" },
+  { phrase: "let's explore", severity: "high", fix: "cut it or use 'here's how' / 'here's what'" },
+  { phrase: "without further ado", severity: "high", fix: "cut entirely" },
+  { phrase: "at the end of the day", severity: "high", fix: "ultimately / the bottom line is" },
+  { phrase: "plays a vital role", severity: "high", fix: "matters for / is key to" },
+  { phrase: "plays an important role", severity: "high", fix: "matters for / helps with" },
+  { phrase: "plays a key role", severity: "high", fix: "matters for / is essential" },
+  { phrase: "the journey of", severity: "high", fix: "cut entirely or rephrase" },
+  { phrase: "begins with a single step", severity: "high", fix: "cut entirely" },
+  { phrase: "in this article", severity: "high", fix: "cut or just describe what's covered" },
+  { phrase: "in this blog post", severity: "high", fix: "cut or just describe what's covered" },
+  { phrase: "have become more important than ever", severity: "high", fix: "describe the specific change" },
+  { phrase: "more important than ever", severity: "high", fix: "describe the specific context" },
+
+  // Medium severity
+  { phrase: "when it comes to", severity: "med", fix: "for / with / in" },
+  { phrase: "whether you're a", severity: "med", fix: "be more specific about who this is for" },
+  { phrase: "in conclusion", severity: "med", fix: "so / here's the takeaway / bottom line" },
+  { phrase: "to sum up", severity: "med", fix: "cut or rewrite naturally" },
+  { phrase: "in summary", severity: "med", fix: "cut or just state the key point" },
+  { phrase: "streamline your", severity: "med", fix: "simplify / speed up / make easier" },
+  { phrase: "streamlined", severity: "med", fix: "simple / efficient" },
+  { phrase: "leverage", severity: "med", fix: "use" },
+  { phrase: "leveraging", severity: "med", fix: "using" },
+  { phrase: "leveraged", severity: "med", fix: "used" },
+  { phrase: "robust", severity: "med", fix: "strong / solid / reliable" },
+  { phrase: "tapestry", severity: "med", fix: "mix / variety / range" },
+  { phrase: "it is important to", severity: "med", fix: "just state the thing directly" },
+  { phrase: "it is crucial to", severity: "med", fix: "you need to / you should" },
+  { phrase: "it is essential to", severity: "med", fix: "you need to / make sure you" },
+  { phrase: "plays a crucial role", severity: "med", fix: "matters for / helps with / affects" },
+  { phrase: "a wide range of", severity: "med", fix: "many / lots of / various" },
+  { phrase: "it goes without saying", severity: "med", fix: "cut entirely — if it goes without saying, don't say it" },
+  { phrase: "first and foremost", severity: "med", fix: "first / the main thing / most importantly" },
+  { phrase: "in order to", severity: "med", fix: "to" },
+  { phrase: "as a matter of fact", severity: "med", fix: "actually / in fact" },
+  { phrase: "needless to say", severity: "med", fix: "cut entirely" },
+  { phrase: "stands as", severity: "med", fix: "is" },
+  { phrase: "serves as", severity: "med", fix: "is / works as" },
+  { phrase: "not only...but also", severity: "med", fix: "rephrase more naturally" },
+  { phrase: "the realm of", severity: "med", fix: "cut — just name the topic" },
+  { phrase: "in the realm of", severity: "med", fix: "in / with / for" },
+  { phrase: "embark on", severity: "med", fix: "start / begin" },
+  { phrase: "embarking on", severity: "med", fix: "starting / beginning" },
+  { phrase: "foster", severity: "med", fix: "build / encourage / grow" },
+  { phrase: "fostering", severity: "med", fix: "building / encouraging / growing" },
+  { phrase: "paramount", severity: "med", fix: "critical / key / essential" },
+  { phrase: "plethora", severity: "med", fix: "many / lots of" },
+  { phrase: "myriad", severity: "med", fix: "many / tons of" },
+];
+
+const MECHANICAL_TRANSITIONS = [
+  { phrase: "furthermore", severity: "med" },
+  { phrase: "moreover", severity: "med" },
+  { phrase: "additionally", severity: "med" },
+  { phrase: "consequently", severity: "med" },
+  { phrase: "nevertheless", severity: "med" },
+  { phrase: "on the other hand", severity: "med" },
+  { phrase: "that being said", severity: "med" },
+  { phrase: "with that in mind", severity: "med" },
+  { phrase: "having established that", severity: "med" },
+  { phrase: "it is worth mentioning", severity: "med" },
+  { phrase: "moving forward", severity: "med" },
+  { phrase: "in light of", severity: "med" },
+];
+
+const READER_ADDRESS = [
+  { phrase: "you might be wondering", severity: "med" },
+  { phrase: "you may be wondering", severity: "med" },
+  { phrase: "as you can see", severity: "med" },
+  { phrase: "as you may know", severity: "med" },
+  { phrase: "as mentioned earlier", severity: "med" },
+  { phrase: "as we discussed", severity: "med" },
+  { phrase: "as previously mentioned", severity: "med" },
+  { phrase: "imagine a world where", severity: "high" },
+  { phrase: "picture this", severity: "low" },
+  { phrase: "have you ever wondered", severity: "med" },
+];
+
+// === ANALYSIS ENGINE ===
+
+function countWords(text) {
+  return text.trim().split(/\s+/).filter(w => w.length > 0).length;
+}
+
+function getSentences(text) {
+  return text.split(/[.!?]+/).map(s => s.trim()).filter(s => s.length > 5);
+}
+
+function getParagraphs(text) {
+  return text.split(/\n\s*\n/).map(p => p.trim()).filter(p => p.length > 10);
+}
+
+function findPhraseMatches(text, phraseList) {
+  const lower = text.toLowerCase();
+  const matches = [];
+  for (const item of phraseList) {
+    const p = item.phrase.toLowerCase();
+    let idx = lower.indexOf(p);
+    while (idx !== -1) {
+      const start = Math.max(0, idx - 30);
+      const end = Math.min(text.length, idx + p.length + 30);
+      const context = text.substring(start, end);
+      matches.push({ ...item, index: idx, context });
+      idx = lower.indexOf(p, idx + p.length);
+    }
+  }
+  return matches;
+}
+
+function analyzeDeadPhrases(text) {
+  const matches = findPhraseMatches(text, DEAD_PHRASES);
+  const wordCount = countWords(text);
+  const density = matches.length / (wordCount / 500);
+  let score = Math.min(10, Math.round(density * 2.5));
+  return { score, matches, count: matches.length };
+}
+
+function analyzeStructuralUniformity(text) {
+  const paras = getParagraphs(text);
+  const sentences = getSentences(text);
+  let score = 0;
+  const issues = [];
+
+  // Check paragraph length uniformity
+  if (paras.length >= 3) {
+    const lengths = paras.map(p => countWords(p));
+    const avg = lengths.reduce((a,b) => a+b, 0) / lengths.length;
+    const variance = lengths.reduce((sum, l) => sum + Math.pow(l - avg, 2), 0) / lengths.length;
+    const cv = Math.sqrt(variance) / avg; // coefficient of variation
+    if (cv < 0.25) { score += 4; issues.push("Paragraphs are suspiciously similar in length (low variation)"); }
+    else if (cv < 0.4) { score += 2; issues.push("Paragraphs could use more length variation"); }
+  }
+
+  // Check sentence length uniformity
+  if (sentences.length >= 5) {
+    const sLengths = sentences.map(s => s.split(/\s+/).length);
+    const avg = sLengths.reduce((a,b) => a+b, 0) / sLengths.length;
+    const variance = sLengths.reduce((sum, l) => sum + Math.pow(l - avg, 2), 0) / sLengths.length;
+    const cv = Math.sqrt(variance) / avg;
+    if (cv < 0.3) { score += 3; issues.push("Sentence lengths are too uniform — mix short and long sentences"); }
+    else if (cv < 0.45) { score += 1; }
+
+    // Check for short sentences (1-6 words) — humans use them, AI rarely does
+    const shortSentences = sLengths.filter(l => l <= 6).length;
+    const shortRatio = sentences.length > 0 ? shortSentences / sentences.length : 0;
+    if (shortRatio < 0.05 && sentences.length > 6) {
+      score += 2; issues.push("Almost no short punchy sentences — humans naturally mix in short sentences for emphasis");
+    } else if (shortRatio < 0.1 && sentences.length > 8) {
+      score += 1; issues.push("Few short sentences — try adding brief punchy lines for rhythm");
+    }
+  }
+
+  // Check paragraph opening patterns
+  if (paras.length >= 3) {
+    const openings = paras.map(p => p.split(/\s+/).slice(0, 4).join(' ').toLowerCase());
+    const uniqueRatio = new Set(openings).size / openings.length;
+    if (uniqueRatio < 0.5) { score += 2; issues.push("Multiple paragraphs start the same way"); }
+    else if (uniqueRatio < 0.7 && paras.length >= 5) { score += 1; issues.push("Several paragraphs have similar openings"); }
+  }
+
+  return { score: Math.min(10, score), issues };
+}
+
+function analyzeEmotionalFlatness(text) {
+  const lower = text.toLowerCase();
+  let score = 5; // Start neutral, adjust up/down
+  const issues = [];
+
+  // Check for opinion markers (reduce score if found)
+  const opinionMarkers = ["i think", "i believe", "honestly", "in my experience", "personally", "i've found", "i noticed", "my take", "unpopular opinion", "hot take", "if you ask me", "i'd argue", "frankly", "to be honest", "i'm convinced"];
+  const opinionCount = opinionMarkers.filter(m => lower.includes(m)).length;
+  score -= Math.min(3, opinionCount);
+
+  // Check for humor/informal markers
+  const humorMarkers = ["lol", "haha", "spoiler:", "plot twist", "nope", "yep", "nah", "btw", "tbh", "imo", "fwiw", "no-brainer", "here's the thing", "let me be real", "look,", "ok so", "real talk"];
+  const humorCount = humorMarkers.filter(m => lower.includes(m)).length;
+  score -= Math.min(2, humorCount);
+
+  // Check for hedging (increase score)
+  const hedgingPhrases = ["it can be argued", "some might say", "on one hand", "some people prefer", "while others"];
+  const hedgeCount = hedgingPhrases.filter(h => lower.includes(h)).length;
+  if (hedgeCount >= 2) { score += 2; issues.push("Too much hedging — AI avoids taking strong positions"); }
+
+  // Check for exclamation marks (humans use them occasionally)
+  const exclamations = (text.match(/!/g) || []).length;
+  const sentences = getSentences(text).length;
+  if (sentences > 10 && exclamations === 0) { score += 1; issues.push("No exclamation marks — adding occasional emphasis makes text feel more human"); }
+
+  // Check for parenthetical asides (humans love them)
+  const parentheticals = (text.match(/\([^)]+\)/g) || []).length;
+  if (parentheticals > 0) score -= 1;
+
+  // Check for em-dash usage (human writing style)
+  const emDashes = (text.match(/—|--/g) || []).length;
+  if (emDashes > 0) score -= 1;
+
+  // Check for contractions
+  const contractions = (text.match(/(?:don't|won't|can't|isn't|aren't|wouldn't|couldn't|shouldn't|it's|that's|there's|here's|what's|who's|how's|I'm|I've|I'll|I'd|we're|we've|they're|they've|you're|you've|you'll|you'd|he's|she's|let's|didn't|doesn't|hasn't|haven't|wasn't|weren't)/gi) || []).length;
+  if (contractions === 0 && countWords(text) > 150) {
+    score += 2; issues.push("No contractions found — formal writing without contractions reads as AI-generated");
+  } else if (contractions <= 1 && countWords(text) > 300) {
+    score += 1; issues.push("Very few contractions — natural writing uses more contractions");
+  }
+
+  if (opinionCount === 0) issues.push("No personal opinions detected — the text feels impersonal");
+  if (humorCount === 0 && countWords(text) > 300) issues.push("No humor or informal tone detected");
+
+  return { score: Math.max(0, Math.min(10, score)), issues };
+}
+
+function analyzeSpecificity(text) {
+  const lower = text.toLowerCase();
+  let score = 5;
+  const issues = [];
+
+  // Vague quantifiers (increase score)
+  const vagueQuants = ["many people", "a lot of", "some studies", "research shows", "experts say", "according to research", "studies suggest", "it has been shown", "data suggests", "evidence shows"];
+  const vagueCount = vagueQuants.filter(v => lower.includes(v)).length;
+  score += Math.min(3, vagueCount);
+  if (vagueCount > 0) issues.push(`Found ${vagueCount} vague claims without specific sources`);
+
+  // Check for specific numbers (decrease score)
+  const specificNumbers = (text.match(/\d+(\.\d+)?%|\$\d+[\d,.]*|\d{1,3}(,\d{3})+/g) || []).length;
+  score -= Math.min(3, Math.floor(specificNumbers / 2));
+  if (specificNumbers === 0 && countWords(text) > 200) {
+    issues.push("No specific numbers, percentages, or dollar amounts found");
+  }
+
+  // Check for proper nouns / brand names (rough check: capitalized words not at sentence start)
+  const words = text.split(/\s+/);
+  let properNouns = 0;
+  for (let i = 1; i < words.length; i++) {
+    if (/^[A-Z][a-z]+/.test(words[i]) && !/^[.!?]/.test(words[i-1].slice(-1))) {
+      properNouns++;
+    }
+  }
+  if (properNouns > 3) score -= 1;
+  if (properNouns === 0 && countWords(text) > 300) {
+    score += 1; issues.push("Few or no proper nouns (brand names, tools, places) — content feels generic");
+  }
+
+  // Check for "about/around" with round numbers
+  const roundNumbers = (lower.match(/(?:about|around|roughly|approximately)\s+\d+0+/g) || []).length;
+  if (roundNumbers >= 2) { score += 1; issues.push("Multiple round/approximate numbers — humans tend to use more specific figures"); }
+
+  return { score: Math.max(0, Math.min(10, score)), issues };
+}
+
+function analyzeOverOrganization(text) {
+  let score = 0;
+  const issues = [];
+
+  const paras = getParagraphs(text);
+
+  // Check for bullet/list heavy content
+  const bulletLines = (text.match(/^[\s]*[-•*]\s/gm) || []).length;
+  const totalLines = text.split('\n').filter(l => l.trim()).length;
+  const bulletRatio = totalLines > 0 ? bulletLines / totalLines : 0;
+  if (bulletRatio > 0.4) { score += 3; issues.push("Over 40% of content is bullet points — mix in more prose paragraphs"); }
+  else if (bulletRatio > 0.25) { score += 1; issues.push("High ratio of bullet points to prose"); }
+
+  // Check for numbered lists
+  const numberedLines = (text.match(/^[\s]*\d+[.)]\s/gm) || []).length;
+  if (numberedLines > 8) { score += 2; issues.push("Heavy use of numbered lists — break some into natural prose"); }
+
+  // Check for transition sentences between sections
+  const transitionPatterns = ["now that we've", "now let's", "let's move on", "next, we'll", "in the next section", "moving on to", "turning our attention", "with that in mind", "having said that", "that said,", "as we can see", "as you can see"];
+  const transCount = transitionPatterns.filter(t => text.toLowerCase().includes(t)).length;
+  if (transCount >= 2) { score += 3; issues.push("Formulaic section transitions found — try more natural flow between sections"); }
+  else if (transCount >= 1) { score += 1; }
+
+  // Check heading symmetry (all H2 sections roughly equal)
+  const h2Sections = text.split(/^#{2}\s/m).filter(s => s.trim());
+  if (h2Sections.length >= 3) {
+    const sectionLengths = h2Sections.map(s => countWords(s));
+    const avg = sectionLengths.reduce((a,b) => a+b, 0) / sectionLengths.length;
+    const maxDev = Math.max(...sectionLengths.map(l => Math.abs(l - avg)));
+    if (maxDev < avg * 0.2) { score += 2; issues.push("All sections are suspiciously similar in length"); }
+  }
+
+  // Check for formulaic introduction + conclusion pattern (common in AI text)
+  const lowerText = text.toLowerCase();
+  const hasIntro = /^(in today|have you ever|when it comes|whether you|if you'?re|are you)/.test(lowerText.trim());
+  const hasConclusion = /(in conclusion|to sum up|in summary|to summarize|in closing|as we'?ve seen|as you can see|the bottom line|by (leveraging|harnessing|embracing|utilizing))\b/.test(lowerText);
+  if (hasIntro && hasConclusion) { score += 3; issues.push("Classic AI intro + conclusion pattern detected"); }
+  else if (hasConclusion) { score += 2; issues.push("Formulaic conclusion pattern detected"); }
+  else if (hasIntro) { score += 1; }
+
+  return { score: Math.min(10, score), issues };
+}
+
+function analyzeMechanicalTransitions(text) {
+  const matches = findPhraseMatches(text, MECHANICAL_TRANSITIONS);
+  let score = 0;
+  const issues = [];
+
+  if (matches.length >= 5) { score = 8; issues.push("Heavy reliance on formal transition words"); }
+  else if (matches.length >= 3) { score = 5; issues.push("Multiple mechanical transitions found"); }
+  else if (matches.length >= 1) { score = 2; }
+
+  // Check "First... Second... Third..." pattern
+  const lower = text.toLowerCase();
+  const ordinalRegex = /\b(first(?:ly|,| and foremost)|second(?:ly|,)|third(?:ly|,)|fourth(?:ly|,)|fifth(?:ly|,)|finally,|lastly,)\b/gi;
+  const ordCount = (text.match(ordinalRegex) || []).length;
+  if (ordCount >= 3) { score += 3; issues.push("Sequential ordinal pattern (First, Second, Third...) detected"); }
+  else if (ordCount >= 2) { score += 1; issues.push("Ordinal transitions found"); }
+
+  return { score: Math.min(10, score), matches, issues };
+}
+
+function analyzeReaderAddress(text) {
+  const matches = findPhraseMatches(text, READER_ADDRESS);
+  let score = 0;
+  const issues = [];
+
+  if (matches.length >= 3) { score = 7; issues.push("Excessive formulaic reader address"); }
+  else if (matches.length >= 2) { score = 4; issues.push("Multiple formulaic reader address phrases found"); }
+  else if (matches.length >= 1) { score = 2; }
+
+  // Check "you" frequency (too much = AI trying to be conversational)
+  const sentences = getSentences(text);
+  const youSentences = sentences.filter(s => /\byou\b/i.test(s)).length;
+  const youRatio = sentences.length > 0 ? youSentences / sentences.length : 0;
+  if (youRatio > 0.5) { score += 3; issues.push("Over 50% of sentences address 'you' — feels over-directed"); }
+  else if (youRatio > 0.35) { score += 1; issues.push("Frequent 'you' usage — moderate reader address"); }
+
+  return { score: Math.min(10, score), matches, issues };
+}
+
+// === MAIN ANALYSIS ===
+function analyzeText(text) {
+  const deadPhrases = analyzeDeadPhrases(text);
+  const structure = analyzeStructuralUniformity(text);
+  const emotion = analyzeEmotionalFlatness(text);
+  const specificity = analyzeSpecificity(text);
+  const organization = analyzeOverOrganization(text);
+  const transitions = analyzeMechanicalTransitions(text);
+  const readerAddr = analyzeReaderAddress(text);
+
+  const categories = [
+    { name: "Dead Phrases", icon: "💀", ...deadPhrases },
+    { name: "Structural Uniformity", icon: "📐", ...structure },
+    { name: "Emotional Flatness", icon: "😐", ...emotion },
+    { name: "Lack of Specificity", icon: "🌫️", ...specificity },
+    { name: "Over-Organization", icon: "📋", ...organization },
+    { name: "Mechanical Transitions", icon: "🔗", ...transitions },
+    { name: "Unnatural Reader Address", icon: "🎤", ...readerAddr },
+  ];
+
+  const totalScore = categories.reduce((sum, c) => sum + c.score, 0);
+
+  // Collect all issues
+  const allIssues = [];
+  for (const cat of categories) {
+    if (cat.matches) {
+      for (const m of cat.matches) {
+        allIssues.push({
+          category: cat.name,
+          severity: m.severity || "med",
+          text: m.context,
+          phrase: m.phrase,
+          fix: m.fix || `Rephrase to sound more natural`,
+        });
+      }
+    }
+    if (cat.issues) {
+      for (const issue of cat.issues) {
+        allIssues.push({ category: cat.name, severity: "med", text: issue, phrase: "", fix: "" });
+      }
+    }
+  }
+
+  // Sort by severity
+  const severityOrder = { high: 0, med: 1, low: 2 };
+  allIssues.sort((a, b) => severityOrder[a.severity] - severityOrder[b.severity]);
+
+  return { totalScore, categories, issues: allIssues };
+}
+
+// === PROMPT GENERATOR ===
+function generatePrompt(text, result) {
+  const topCategories = result.categories
+    .filter(c => c.score >= 4)
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 3);
+
+  const deadMatches = result.issues.filter(i => i.category === "Dead Phrases").slice(0, 5);
+
+  let prompt = `You are a writing editor who specializes in making AI-generated content sound authentically human. Rewrite the following text to fix these specific issues:\n\n`;
+
+  prompt += `ISSUES FOUND:\n`;
+  for (const cat of topCategories) {
+    prompt += `- ${cat.name} (severity: ${cat.score}/10)\n`;
+  }
+
+  if (deadMatches.length > 0) {
+    prompt += `\nDEAD PHRASES TO REPLACE:\n`;
+    for (const m of deadMatches) {
+      prompt += `- "${m.phrase}" → ${m.fix}\n`;
+    }
+  }
+
+  prompt += `\nREWRITE RULES:\n`;
+  prompt += `1. Vary sentence length dramatically (5-word sentences mixed with 25-word ones)\n`;
+  prompt += `2. Replace ALL dead phrases with natural alternatives\n`;
+  prompt += `3. Add at least one personal opinion or genuine reaction\n`;
+  prompt += `4. Use contractions everywhere natural (don't, won't, isn't)\n`;
+  prompt += `5. Start some sentences with And, But, or So\n`;
+  prompt += `6. Keep the same meaning, keywords, and structure\n`;
+  prompt += `7. Make it sound like a knowledgeable human wrote it, not an AI\n`;
+  prompt += `\nTEXT TO REWRITE:\n`;
+  prompt += text.substring(0, 3000);
+
+  if (text.length > 3000) {
+    prompt += `\n[Text truncated at 3000 characters for prompt length. Apply the same fixes to the rest.]`;
+  }
+
+  return prompt;
+}
+
+// === UI RENDERING ===
+function renderResults(result) {
+  const panel = document.getElementById('results-panel');
+  const bottomCta = document.getElementById('bottom-cta');
+  panel.style.display = 'block';
+  bottomCta.style.display = 'block';
+
+  // Animate score ring
+  const total = result.totalScore;
+  const circle = document.getElementById('score-circle');
+  const circumference = 2 * Math.PI * 52;
+  const offset = circumference - (total / 70) * circumference;
+  circle.style.strokeDashoffset = offset;
+
+  // Color based on score
+  let ringColor, label, desc, badgeClass, badgeLabel;
+  if (total <= 15) {
+    ringColor = 'var(--color-success, #10b981)'; label = 'Looking Human!'; desc = 'Your text has minimal AI patterns. A few tweaks and it should pass most detectors.'; badgeClass = 'badge-green'; badgeLabel = 'Low Risk';
+  } else if (total <= 35) {
+    ringColor = 'var(--color-warning, #f59e0b)'; label = 'Needs Some Work'; desc = 'Your text has noticeable AI patterns. Focus on the top-scoring categories below.'; badgeClass = 'badge-yellow'; badgeLabel = 'Medium Risk';
+  } else {
+    ringColor = '#dc2626'; label = 'Heavily AI-Patterned'; desc = 'Your text shows strong AI patterns across multiple categories. Use the rewrite prompt below.'; badgeClass = 'badge-red'; badgeLabel = 'High Risk';
+  }
+  circle.style.stroke = ringColor;
+  document.getElementById('score-number').textContent = total;
+  document.getElementById('score-label').textContent = label;
+  document.getElementById('score-description').textContent = desc;
+  document.getElementById('score-badges').innerHTML = `<span class="score-badge ${badgeClass}">${badgeLabel}</span>`;
+
+  // Categories
+  const catEl = document.getElementById('categories');
+  catEl.innerHTML = '';
+  for (const cat of result.categories) {
+    const color = cat.score <= 3 ? 'var(--color-success, #10b981)' : cat.score <= 6 ? 'var(--color-warning, #f59e0b)' : '#dc2626';
+    const row = document.createElement('div');
+    row.className = 'category-row';
+    row.innerHTML = `
+      <span class="cat-name">${cat.icon} ${cat.name}</span>
+      <div class="cat-bar-track"><div class="cat-bar-fill" style="width:${cat.score * 10}%;background:${color}"></div></div>
+      <span class="cat-score" style="color:${color}">${cat.score}/10</span>
+    `;
+    catEl.appendChild(row);
+  }
+
+  // Issues
+  const issuesList = document.getElementById('issues-list');
+  const issueCount = document.getElementById('issue-count');
+  issuesList.innerHTML = '';
+  const displayIssues = result.issues.slice(0, 15);
+  issueCount.textContent = `${result.issues.length} found`;
+
+  for (const issue of displayIssues) {
+    const item = document.createElement('div');
+    item.className = `issue-item severity-${issue.severity}`;
+    let html = `<div class="issue-category">${issue.category}</div>`;
+    if (issue.phrase) {
+      const highlighted = issue.text.replace(
+        new RegExp(issue.phrase.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi'),
+        match => `<mark>${match}</mark>`
+      );
+      html += `<div class="issue-text">"...${highlighted}..."</div>`;
+      if (issue.fix) html += `<div class="issue-fix">Fix: ${issue.fix}</div>`;
+    } else {
+      html += `<div class="issue-text">${issue.text}</div>`;
+    }
+    item.innerHTML = html;
+    issuesList.appendChild(item);
+  }
+}
+
+// === EVENT HANDLERS ===
+const textarea = document.getElementById('text-input');
+const analyzeBtn = document.getElementById('analyze-btn');
+const clearBtn = document.getElementById('clear-btn');
+const sampleBtn = document.getElementById('sample-btn');
+const charCount = document.getElementById('char-count');
+const copyPromptBtn = document.getElementById('copy-prompt-btn');
+
+textarea.addEventListener('input', () => {
+  const words = countWords(textarea.value);
+  charCount.textContent = `${words} word${words !== 1 ? 's' : ''}`;
+  analyzeBtn.disabled = words < 30;
+});
+
+analyzeBtn.addEventListener('click', () => {
+  const text = textarea.value.trim();
+  if (countWords(text) < 30) return;
+
+  analyzeBtn.disabled = true;
+  analyzeBtn.innerHTML = '<svg class="spin" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4m0 12v4m-7.07-3.93l2.83-2.83m8.49-8.49l2.83-2.83M2 12h4m12 0h4m-3.93 7.07l-2.83-2.83M7.76 7.76L4.93 4.93"/></svg> Analyzing...';
+
+  // Small delay for UI feedback
+  setTimeout(() => {
+    const result = analyzeText(text);
+    renderResults(result);
+
+    // Generate prompt
+    const prompt = generatePrompt(text, result);
+    document.getElementById('prompt-box').textContent = prompt;
+
+    analyzeBtn.disabled = false;
+    analyzeBtn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg> Re-Analyze';
+    clearBtn.style.display = 'inline-flex';
+
+    // Smooth scroll to results
+    document.getElementById('results-panel').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }, 300);
+});
+
+clearBtn.addEventListener('click', () => {
+  textarea.value = '';
+  charCount.textContent = '0 words';
+  analyzeBtn.disabled = true;
+  analyzeBtn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg> Analyze Text';
+  document.getElementById('results-panel').style.display = 'none';
+  document.getElementById('bottom-cta').style.display = 'none';
+  document.getElementById('error-banner').style.display = 'none';
+  clearBtn.style.display = 'none';
+  sampleBtn.style.display = 'inline-flex';
+  textarea.focus();
+});
+
+sampleBtn.addEventListener('click', () => {
+  textarea.value = `In today's fast-paced world, budgeting has become more important than ever. It's worth noting that many people struggle with managing their finances effectively. Whether you're a seasoned professional or a complete beginner, this comprehensive guide will help you navigate the landscape of personal finance.
+
+First and foremost, it is essential to understand the basics of budgeting. A budget serves as a roadmap for your financial journey. Furthermore, it helps you track your income and expenses in a streamlined manner. Additionally, having a robust budget can be a game-changer when it comes to achieving your financial goals.
+
+When it comes to choosing a budgeting method, there are several options available. Some people prefer the traditional envelope system, while others opt for digital solutions. Moreover, the 50/30/20 rule has gained significant popularity in recent years. Nevertheless, each method has its own strengths and weaknesses.
+
+In conclusion, budgeting is a crucial skill that plays a vital role in achieving financial stability. By leveraging the strategies outlined in this comprehensive guide, you can unlock your potential for financial success. Remember, the journey of a thousand miles begins with a single step. Let's dive in and take your finances to the next level.`;
+  textarea.dispatchEvent(new Event('input'));
+  sampleBtn.style.display = 'none';
+});
+
+copyPromptBtn.addEventListener('click', () => {
+  const promptText = document.getElementById('prompt-box').textContent;
+  navigator.clipboard.writeText(promptText).then(() => {
+    copyPromptBtn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Copied!';
+    copyPromptBtn.classList.add('copied');
+    setTimeout(() => {
+      copyPromptBtn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg> Copy Prompt';
+      copyPromptBtn.classList.remove('copied');
+    }, 2000);
+  });
+});
+
+// Spin animation moved to <style> block above
+</script>
