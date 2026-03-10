@@ -66,7 +66,7 @@ const description = 'Paste your text and instantly see what makes it sound AI-ge
                 </svg>
                 <div class="score-value">
                   <span id="score-number">0</span>
-                  <span class="score-max">/70</span>
+                  <span class="score-max">/100</span>
                 </div>
               </div>
               <div class="score-info">
@@ -78,7 +78,7 @@ const description = 'Paste your text and instantly see what makes it sound AI-ge
 
             <!-- Category Breakdown -->
             <div class="category-breakdown">
-              <h3>Detection Breakdown</h3>
+              <h3>Human Score Breakdown</h3>
               <div class="categories" id="categories"></div>
             </div>
 
@@ -110,7 +110,7 @@ const description = 'Paste your text and instantly see what makes it sound AI-ge
             <div class="sidebar-cta-badge">150 Prompts</div>
             <h4>AI Prompt Pack for Content Creators V2.0</h4>
             <p>30 AI Humanization prompts + 120 content creation prompts. Excel + PDF, copy-paste ready.</p>
-            <a href="https://gettidyflow.gumroad.com/l/ai-prompt-pack" class="btn-primary btn-sm" target="_blank" rel="noopener">Get the Prompt Pack — $5.99</a>
+            <a href="https://gettidyflow.gumroad.com" class="btn-primary btn-sm" target="_blank" rel="noopener">Get the Prompt Pack — $5.99</a>
           </div>
 
           <div class="sidebar-card">
@@ -150,7 +150,7 @@ const description = 'Paste your text and instantly see what makes it sound AI-ge
             <h3>Want 30 more humanization prompts?</h3>
             <p>The AI Prompt Pack V2.0 includes 30 AI Humanization prompts, from full-text rewrites to voice cloning — plus 120 content creation prompts.</p>
           </div>
-          <a href="https://gettidyflow.gumroad.com/l/ai-prompt-pack" class="btn-primary" target="_blank" rel="noopener">Get the Prompt Pack — $5.99</a>
+          <a href="https://gettidyflow.gumroad.com" class="btn-primary" target="_blank" rel="noopener">Get the Prompt Pack — $5.99</a>
         </div>
       </div>
     </div>
@@ -1096,24 +1096,25 @@ function renderResults(result) {
   panel.style.display = 'block';
   bottomCta.style.display = 'block';
 
-  // Animate score ring
-  const total = result.totalScore;
+  // Animate score ring — Human Score (100 = fully human, 0 = fully AI)
+  const total = result.totalScore; // 0-70, higher = more AI
+  const humanScore = Math.round((1 - total / 70) * 100); // 0-100, higher = more human
   const circle = document.getElementById('score-circle');
   const circumference = 2 * Math.PI * 52;
-  const offset = circumference - (total / 70) * circumference;
+  const offset = circumference - (humanScore / 100) * circumference;
   circle.style.strokeDashoffset = offset;
 
-  // Color based on score
+  // Color based on human score (higher = better)
   let ringColor, label, desc, badgeClass, badgeLabel;
-  if (total <= 15) {
-    ringColor = 'var(--color-success, #10b981)'; label = 'Looking Human!'; desc = 'Your text has minimal AI patterns. A few tweaks and it should pass most detectors.'; badgeClass = 'badge-green'; badgeLabel = 'Low Risk';
-  } else if (total <= 35) {
-    ringColor = 'var(--color-warning, #f59e0b)'; label = 'Needs Some Work'; desc = 'Your text has noticeable AI patterns. Focus on the top-scoring categories below.'; badgeClass = 'badge-yellow'; badgeLabel = 'Medium Risk';
+  if (humanScore >= 80) {
+    ringColor = 'var(--color-success, #10b981)'; label = 'Very Human!'; desc = 'Your text reads naturally with minimal AI patterns. Great job — it should pass most detectors.'; badgeClass = 'badge-green'; badgeLabel = 'Human-Like';
+  } else if (humanScore >= 50) {
+    ringColor = 'var(--color-warning, #f59e0b)'; label = 'Needs Some Work'; desc = 'Your text has noticeable AI patterns. Focus on the flagged categories below to improve.'; badgeClass = 'badge-yellow'; badgeLabel = 'Mixed';
   } else {
-    ringColor = '#dc2626'; label = 'Heavily AI-Patterned'; desc = 'Your text shows strong AI patterns across multiple categories. Use the rewrite prompt below.'; badgeClass = 'badge-red'; badgeLabel = 'High Risk';
+    ringColor = '#dc2626'; label = 'Heavily AI-Patterned'; desc = 'Your text shows strong AI patterns across multiple categories. Use the rewrite prompt below.'; badgeClass = 'badge-red'; badgeLabel = 'AI-Like';
   }
   circle.style.stroke = ringColor;
-  document.getElementById('score-number').textContent = total;
+  document.getElementById('score-number').textContent = humanScore;
   document.getElementById('score-label').textContent = label;
   document.getElementById('score-description').textContent = desc;
   document.getElementById('score-badges').innerHTML = `<span class="score-badge ${badgeClass}">${badgeLabel}</span>`;
@@ -1122,13 +1123,14 @@ function renderResults(result) {
   const catEl = document.getElementById('categories');
   catEl.innerHTML = '';
   for (const cat of result.categories) {
-    const color = cat.score <= 3 ? 'var(--color-success, #10b981)' : cat.score <= 6 ? 'var(--color-warning, #f59e0b)' : '#dc2626';
+    const catHuman = 10 - cat.score; // invert: 10 = fully human, 0 = fully AI
+    const color = catHuman >= 7 ? 'var(--color-success, #10b981)' : catHuman >= 4 ? 'var(--color-warning, #f59e0b)' : '#dc2626';
     const row = document.createElement('div');
     row.className = 'category-row';
     row.innerHTML = `
       <span class="cat-name">${cat.icon} ${cat.name}</span>
-      <div class="cat-bar-track"><div class="cat-bar-fill" style="width:${cat.score * 10}%;background:${color}"></div></div>
-      <span class="cat-score" style="color:${color}">${cat.score}/10</span>
+      <div class="cat-bar-track"><div class="cat-bar-fill" style="width:${catHuman * 10}%;background:${color}"></div></div>
+      <span class="cat-score" style="color:${color}">${catHuman}/10</span>
     `;
     catEl.appendChild(row);
   }
