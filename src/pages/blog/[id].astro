@@ -52,6 +52,8 @@ function extractFAQs(body: string): Array<{question: string, answer: string}> {
       if (currentQuestion && currentAnswer.trim()) {
         faqs.push({ question: currentQuestion, answer: currentAnswer.trim() });
       }
+      currentQuestion = '';
+      currentAnswer = '';
       inFaqSection = false;
       continue;
     }
