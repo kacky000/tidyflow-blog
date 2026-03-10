@@ -78,6 +78,9 @@ const fullTitle = title === 'Home' ? 'Tidyflow — Simple Notion Templates for E
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
     <title>{fullTitle}</title>
+
+    <!-- Named slot for child layouts to inject structured data -->
+    <slot name="head" />
   </head>
   <body>
     <a href="#main-content" class="visually-hidden">Skip to main content</a>

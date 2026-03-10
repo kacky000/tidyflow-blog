@@ -21,7 +21,17 @@ const mdPath = path.join(blogDir, `${post.id}.md`);
 let rawMarkdown = '';
 try {
   rawMarkdown = fs.readFileSync(mdPath, 'utf-8');
-} catch { /* ignore if file not found */ }
+} catch {
+  // Fallback: try without .md extension (in case post.id already includes it)
+  try {
+    const altPath = path.join(blogDir, post.id);
+    rawMarkdown = fs.readFileSync(altPath, 'utf-8');
+  } catch { /* file not found, skip FAQ schema */ }
+}
+// Debug: log to verify extraction works during build
+if (rawMarkdown) {
+  console.log(`[FAQ] Processing ${post.id}: ${rawMarkdown.length} chars`);
+}
 
 // Extract FAQ pairs from markdown body for JSON-LD FAQPage schema
 function extractFAQs(body: string): Array<{question: string, answer: string}> {
