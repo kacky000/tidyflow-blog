@@ -3,6 +3,8 @@ title: "Zero-Based Budgeting: A Complete Beginner's Guide (With Free Templates)"
 description: "Learn how zero-based budgeting works, why it's one of the most effective budgeting methods, and how to start with free templates in Notion, Excel, and Google Sheets."
 pubDate: "2026-03-11"
 tags: ["budgeting", "zero-based-budgeting", "personal-finance", "notion", "excel"]
+author: "Tidyflow"
+heroImage: "/thumbs/thumb-zero-based-budgeting-guide.jpg"
 ---
 
 Have you ever reached the end of the month wondering where all your money went? You earned enough, paid your bills, maybe even set aside a little for savings — but somehow there's nothing left. That frustrating gap between what you planned and what actually happened is exactly what zero-based budgeting is designed to fix.

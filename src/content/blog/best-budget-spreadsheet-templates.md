@@ -3,6 +3,8 @@ title: "Best Free Budget Spreadsheet Templates for 2026 (Excel, Google Sheets & 
 description: "Find the best free budget spreadsheet templates for Excel, Google Sheets, and Notion. Compare features, download links, and tips to pick the right one for your needs."
 pubDate: "2026-03-11"
 tags: ["budget", "spreadsheet", "excel", "google-sheets", "notion", "template"]
+author: "Tidyflow"
+heroImage: "/thumbs/thumb-best-budget-spreadsheet-templates.jpg"
 ---
 
 A good budget spreadsheet can change your financial life — but finding the right one feels like searching for a needle in a haystack. There are hundreds of free templates floating around the internet, and most of them are either too basic to be useful or so complicated they take longer to set up than to actually use.
