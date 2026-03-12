@@ -61,6 +61,8 @@ Start with a simple system, be consistent, and give yourself grace when you slip
 
 ## Related Articles
 
+- [How to Stick to a Budget: 15 Proven Tips](/how-to-stick-to-a-budget/) — Avoid these mistakes and stay on track with your budget
+- [How to Budget When You Live Paycheck to Paycheck](/paycheck-to-paycheck-budgeting/) — Budgeting strategies when every dollar counts
 - [How to Track Your Expenses in Notion](/how-to-track-expenses-in-notion/) — A step-by-step guide to simple expense tracking
 - [The 50/30/20 Budget Rule in Notion](/50-30-20-budget-rule-notion/) — A framework that prevents the "too strict" mistake
 - [Why People Fail at Budgeting](/why-people-fail-at-budgeting/) — The psychology behind budgeting failure

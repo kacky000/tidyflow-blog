@@ -141,7 +141,7 @@ Even with a solid plan, these mistakes can derail your budget:
 4. **Not having an emergency fund** — Without savings for unexpected expenses, one car repair can destroy your entire budget. Start with $500 and grow from there.
 5. **Giving up after one bad month** — Every month is a fresh start. Adjust and keep going.
 
-Learn more about [why people fail at budgeting](/why-people-fail-at-budgeting/) and how to break the cycle.
+Learn more about [why people fail at budgeting](/why-people-fail-at-budgeting/) and how to break the cycle. Once your budget is set, check out our guide on [how to stick to a budget](/how-to-stick-to-a-budget/) with 15 proven strategies.
 
 ## How Much Should You Save Each Month?
 
@@ -178,5 +178,7 @@ Start with whatever amount you can, even if it is just $10 per month. The most i
 The best time to start budgeting was yesterday. The second best time is right now. You do not need a perfect plan — you just need to begin.
 
 Pick one method from this guide, set up a simple tracking system, and commit to reviewing your numbers once a week. Within a month, you will have a clearer picture of your finances than most people ever achieve.
+
+If you are currently [living paycheck to paycheck](/paycheck-to-paycheck-budgeting/), our dedicated guide shows you how to budget around your pay dates and start building savings even on a tight income.
 
 **Ready to get started?** Grab our [New Life Starter Kit](https://gettidyflow.gumroad.com/l/new-life-starter-kit) — a Notion template that combines budget tracking, habit building, and goal setting in one workspace. Or download the [Freelancer Expense Tracker](https://gettidyflow.gumroad.com/l/freelancer-expense-tracker) for a powerful Excel-based budgeting solution with built-in charts and dashboards.

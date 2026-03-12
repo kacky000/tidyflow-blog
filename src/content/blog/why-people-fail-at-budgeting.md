@@ -67,6 +67,8 @@ A simple expense tracker that takes 30 seconds to update, reviewed once a week, 
 
 ## Related Articles
 
+- [How to Stick to a Budget: 15 Proven Tips](/how-to-stick-to-a-budget/) — Practical strategies for staying on track once your budget is set
+- [How to Budget When You Live Paycheck to Paycheck](/paycheck-to-paycheck-budgeting/) — A budgeting system designed for tight finances
 - [7 Budgeting Mistakes That Keep You Broke](/budgeting-mistakes-to-avoid/) — Specific mistakes and actionable fixes
 - [How to Track Your Expenses in Notion](/how-to-track-expenses-in-notion/) — Build the simple system described above
 - [The 50/30/20 Budget Rule in Notion](/50-30-20-budget-rule-notion/) — The simplest budgeting framework

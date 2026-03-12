@@ -70,6 +70,8 @@ Our Notion Budget Tracker comes with 9 expense categories that easily map to the
 - [5 Best Notion Budget Templates in 2026](/best-notion-budget-templates-2026/) — Find the right template for your budgeting style
 - [7 Budgeting Mistakes That Keep You Broke](/budgeting-mistakes-to-avoid/) — Common mistakes the 50/30/20 rule helps you avoid
 - [How to Track Your Expenses in Notion](/how-to-track-expenses-in-notion/) — Detailed setup guide for expense tracking
+- [How to Stick to a Budget: 15 Proven Tips](/how-to-stick-to-a-budget/) — Master the habit of staying on budget long-term
+- [How to Budget When You Live Paycheck to Paycheck](/paycheck-to-paycheck-budgeting/) — Adapt the 50/30/20 rule when money is tight
 
 ## Common Questions
 
