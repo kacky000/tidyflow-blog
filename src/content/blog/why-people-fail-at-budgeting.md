@@ -67,6 +67,7 @@ A simple expense tracker that takes 30 seconds to update, reviewed once a week, 
 
 ## Related Articles
 
+- [Budgeting for Couples](/budgeting-for-couples/) — Why shared finances need a different approach
 - [How to Stick to a Budget: 15 Proven Tips](/how-to-stick-to-a-budget/) — Practical strategies for staying on track once your budget is set
 - [How to Budget When You Live Paycheck to Paycheck](/paycheck-to-paycheck-budgeting/) — A budgeting system designed for tight finances
 - [7 Budgeting Mistakes That Keep You Broke](/budgeting-mistakes-to-avoid/) — Specific mistakes and actionable fixes

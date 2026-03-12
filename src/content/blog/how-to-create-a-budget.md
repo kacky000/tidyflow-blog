@@ -182,3 +182,10 @@ Pick one method from this guide, set up a simple tracking system, and commit to 
 If you are currently [living paycheck to paycheck](/paycheck-to-paycheck-budgeting/), our dedicated guide shows you how to budget around your pay dates and start building savings even on a tight income.
 
 **Ready to get started?** Grab our [New Life Starter Kit](https://gettidyflow.gumroad.com/l/new-life-starter-kit) — a Notion template that combines budget tracking, habit building, and goal setting in one workspace. Or download the [Freelancer Expense Tracker](https://gettidyflow.gumroad.com/l/freelancer-expense-tracker) for a powerful Excel-based budgeting solution with built-in charts and dashboards.
+
+## Related Articles
+
+- [Budgeting for Couples](/budgeting-for-couples/) — How to manage money together as a team
+- [How to Stick to a Budget: 15 Proven Tips](/how-to-stick-to-a-budget/) — Strategies for staying on track with your budget
+- [Why People Fail at Budgeting](/why-people-fail-at-budgeting/) — The psychology behind budgeting failure
+- [7 Budgeting Mistakes That Keep You Broke](/budgeting-mistakes-to-avoid/) — Common mistakes and how to fix them
