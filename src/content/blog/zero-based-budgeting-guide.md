@@ -142,6 +142,8 @@ If you're looking for a ready-made system to track your expenses and manage your
 ---
 
 *Related reading:*
+- [How to Create a Budget: Step-by-Step Guide](/how-to-create-a-budget/)
+- [Envelope Budgeting Method: Complete Guide](/envelope-budgeting-method/)
 - [The 50/30/20 Budget Rule Explained](/50-30-20-budget-rule-notion/)
 - [7 Budgeting Mistakes That Keep You Broke](/budgeting-mistakes-to-avoid/)
 - [Why Most People Fail at Budgeting](/why-people-fail-at-budgeting/)

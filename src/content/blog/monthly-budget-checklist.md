@@ -109,6 +109,8 @@ The best way to follow this checklist consistently is to pair it with a tool tha
 
 ## Related Articles
 
+- [How to Create a Budget: Step-by-Step Guide](/how-to-create-a-budget/) — Build your first budget from scratch
+- [Envelope Budgeting Method: Complete Guide](/envelope-budgeting-method/) — Add spending limits to your monthly routine
 - [The 50/30/20 Budget Rule in Notion](/50-30-20-budget-rule-notion/) — A simple framework to structure your monthly budget
 - [How to Track Your Expenses in Notion](/how-to-track-expenses-in-notion/) — Detailed guide to the daily logging habit
 - [7 Budgeting Mistakes That Keep You Broke](/budgeting-mistakes-to-avoid/) — Avoid common pitfalls during your monthly review
