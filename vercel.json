@@ -5,56 +5,26 @@
       "destination": "/sitemap-index.xml",
       "permanent": true
     },
-    {
-      "source": "/50-30-20-budget-rule-notion/:path*",
-      "destination": "/blog/50-30-20-budget-rule-notion/",
-      "permanent": true
-    },
-    {
-      "source": "/best-notion-budget-templates-2026/:path*",
-      "destination": "/blog/best-notion-budget-templates-2026/",
-      "permanent": true
-    },
-    {
-      "source": "/budgeting-mistakes-to-avoid/:path*",
-      "destination": "/blog/budgeting-mistakes-to-avoid/",
-      "permanent": true
-    },
-    {
-      "source": "/how-to-save-money-college-student/:path*",
-      "destination": "/blog/how-to-save-money-college-student/",
-      "permanent": true
-    },
-    {
-      "source": "/how-to-track-expenses-in-notion/:path*",
-      "destination": "/blog/how-to-track-expenses-in-notion/",
-      "permanent": true
-    },
-    {
-      "source": "/monthly-budget-checklist/:path*",
-      "destination": "/blog/monthly-budget-checklist/",
-      "permanent": true
-    },
-    {
-      "source": "/notion-templates-worth-paying-for/:path*",
-      "destination": "/blog/notion-templates-worth-paying-for/",
-      "permanent": true
-    },
-    {
-      "source": "/notion-vs-excel-budgeting/:path*",
-      "destination": "/blog/notion-vs-excel-budgeting/",
-      "permanent": true
-    },
-    {
-      "source": "/track-multiple-income-streams-notion/:path*",
-      "destination": "/blog/track-multiple-income-streams-notion/",
-      "permanent": true
-    },
-    {
-      "source": "/why-people-fail-at-budgeting/:path*",
-      "destination": "/blog/why-people-fail-at-budgeting/",
-      "permanent": true
-    }
+    { "source": "/50-30-20-budget-rule-notion/", "destination": "/blog/50-30-20-budget-rule-notion/", "permanent": true },
+    { "source": "/50-30-20-budget-rule-notion", "destination": "/blog/50-30-20-budget-rule-notion/", "permanent": true },
+    { "source": "/best-notion-budget-templates-2026/", "destination": "/blog/best-notion-budget-templates-2026/", "permanent": true },
+    { "source": "/best-notion-budget-templates-2026", "destination": "/blog/best-notion-budget-templates-2026/", "permanent": true },
+    { "source": "/budgeting-mistakes-to-avoid/", "destination": "/blog/budgeting-mistakes-to-avoid/", "permanent": true },
+    { "source": "/budgeting-mistakes-to-avoid", "destination": "/blog/budgeting-mistakes-to-avoid/", "permanent": true },
+    { "source": "/how-to-save-money-college-student/", "destination": "/blog/how-to-save-money-college-student/", "permanent": true },
+    { "source": "/how-to-save-money-college-student", "destination": "/blog/how-to-save-money-college-student/", "permanent": true },
+    { "source": "/how-to-track-expenses-in-notion/", "destination": "/blog/how-to-track-expenses-in-notion/", "permanent": true },
+    { "source": "/how-to-track-expenses-in-notion", "destination": "/blog/how-to-track-expenses-in-notion/", "permanent": true },
+    { "source": "/monthly-budget-checklist/", "destination": "/blog/monthly-budget-checklist/", "permanent": true },
+    { "source": "/monthly-budget-checklist", "destination": "/blog/monthly-budget-checklist/", "permanent": true },
+    { "source": "/notion-templates-worth-paying-for/", "destination": "/blog/notion-templates-worth-paying-for/", "permanent": true },
+    { "source": "/notion-templates-worth-paying-for", "destination": "/blog/notion-templates-worth-paying-for/", "permanent": true },
+    { "source": "/notion-vs-excel-budgeting/", "destination": "/blog/notion-vs-excel-budgeting/", "permanent": true },
+    { "source": "/notion-vs-excel-budgeting", "destination": "/blog/notion-vs-excel-budgeting/", "permanent": true },
+    { "source": "/track-multiple-income-streams-notion/", "destination": "/blog/track-multiple-income-streams-notion/", "permanent": true },
+    { "source": "/track-multiple-income-streams-notion", "destination": "/blog/track-multiple-income-streams-notion/", "permanent": true },
+    { "source": "/why-people-fail-at-budgeting/", "destination": "/blog/why-people-fail-at-budgeting/", "permanent": true },
+    { "source": "/why-people-fail-at-budgeting", "destination": "/blog/why-people-fail-at-budgeting/", "permanent": true }
   ],
   "headers": [
     {
