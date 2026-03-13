@@ -1,6 +1,7 @@
 ---
 title: "How to Budget on $4,000 a Month: Avoid Lifestyle Inflation and Build Wealth"
 description: "Learn how to budget on $4,000 a month with smart expense allocation, lifestyle inflation warnings, and savings and investment strategies for middle-income earners."
+heroImage: "/thumbs/thumb-how-to-budget-on-4000-a-month.jpg"
 pubDate: "2026-03-15"
 tags: ["budget", "4000 a month", "lifestyle inflation", "investing", "personal finance"]
 ---

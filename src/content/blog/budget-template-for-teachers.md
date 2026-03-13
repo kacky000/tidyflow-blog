@@ -1,6 +1,7 @@
 ---
 title: "Budget Template for Teachers: Manage a 9-Month Salary All Year Long"
 description: "A practical budget template for teachers that covers 9-month vs 12-month pay, summer savings, out-of-pocket classroom costs, and tutoring income."
+heroImage: "/thumbs/thumb-budget-template-for-teachers.jpg"
 pubDate: 2026-03-15
 tags: ["budget template", "teachers", "personal finance", "budgeting", "education"]
 author: "Tidyflow"

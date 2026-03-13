@@ -1,6 +1,7 @@
 ---
 title: "Budget Template for Nurses: Manage Variable Income, Overtime & Loan Repayment"
 description: "Find the best budget template for nurses. Learn how to handle shift differentials, variable overtime pay, student loan repayment, and self-care expenses on a nursing income."
+heroImage: "/thumbs/thumb-budget-template-for-nurses.jpg"
 pubDate: "2026-03-15"
 tags: ["budget template", "nurses", "variable income", "personal finance", "student loans"]
 ---

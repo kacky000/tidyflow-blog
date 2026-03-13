@@ -1,6 +1,7 @@
 ---
 title: "How to Budget on $5,000 a Month: Maximize Savings and Build Wealth"
 description: "Learn how to budget on $5,000 a month with practical allocation strategies, savings targets, and investment tips to build long-term wealth on a mid-to-high income."
+heroImage: "/thumbs/thumb-how-to-budget-on-5000-a-month.jpg"
 pubDate: "2026-03-15"
 tags: ["budgeting", "budget planning", "personal finance", "savings", "investing"]
 ---

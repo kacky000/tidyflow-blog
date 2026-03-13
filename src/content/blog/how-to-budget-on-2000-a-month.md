@@ -1,6 +1,7 @@
 ---
 title: "How to Budget on $2,000 a Month: A Complete Guide to Making It Work"
 description: "Learn how to budget on $2,000 a month with realistic expense breakdowns, the 50/30/20 rule applied to $2K income, and practical tips to save money every month."
+heroImage: "/thumbs/thumb-how-to-budget-on-2000-a-month.jpg"
 pubDate: "2026-03-15"
 tags: ["budget", "money management", "2000 a month", "personal finance", "saving money"]
 ---

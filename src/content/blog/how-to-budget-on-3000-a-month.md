@@ -1,6 +1,7 @@
 ---
 title: "How to Budget on $3,000 a Month: Make the Most of a Growing Income"
 description: "A complete guide to budgeting on $3,000 a month — including expense breakdowns, savings strategies, and how to use the extra room over $2,000 to build wealth."
+heroImage: "/thumbs/thumb-how-to-budget-on-3000-a-month.jpg"
 pubDate: "2026-03-15"
 tags: ["budget", "3000 a month", "money management", "savings", "personal finance"]
 ---

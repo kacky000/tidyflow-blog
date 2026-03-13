@@ -1,6 +1,7 @@
 ---
 title: "Moving Budget Checklist: Every Cost You Need to Plan For"
 description: "A complete moving budget checklist covering movers vs DIY costs, hidden fees, and a week-by-week timeline from 8 weeks out to moving day."
+heroImage: "/thumbs/thumb-moving-budget-checklist.jpg"
 pubDate: 2026-03-15
 tags: ["moving budget", "checklist", "budgeting", "personal finance", "moving costs"]
 author: "Tidyflow"
