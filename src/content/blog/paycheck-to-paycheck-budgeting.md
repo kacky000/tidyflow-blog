@@ -3,6 +3,7 @@ title: "How to Budget When You Live Paycheck to Paycheck: A Complete Guide"
 description: "Living paycheck to paycheck? Learn how to create a realistic budget, build savings, and break the cycle with practical strategies and free tools."
 pubDate: "2026-03-13"
 tags: ["budgeting", "paycheck to paycheck", "personal finance", "saving money", "budget tips"]
+heroImage: "/thumbs/thumb-paycheck-to-paycheck-budgeting.jpg"
 ---
 
 # How to Budget When You Live Paycheck to Paycheck: A Complete Guide
