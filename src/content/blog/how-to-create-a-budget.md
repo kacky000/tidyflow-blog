@@ -3,6 +3,7 @@ title: "How to Create a Budget: A Step-by-Step Beginner's Guide for 2026"
 description: "Learn how to create a budget from scratch with this beginner-friendly step-by-step guide. Covers the 50/30/20 rule, zero-based budgeting, free templates, and tools."
 pubDate: "2026-03-12"
 tags: ["budgeting", "personal finance", "budget", "beginners", "money management"]
+heroImage: "/thumbs/thumb-how-to-create-a-budget.jpg"
 ---
 
 Creating a budget is the single most powerful step you can take toward financial freedom. Whether you are paying off debt, saving for a big purchase, or simply trying to stop living paycheck to paycheck, a budget gives you a clear picture of where your money goes and how to make it work harder for you.

@@ -3,6 +3,7 @@ title: "How to Build a Personal Finance Dashboard in Notion — Complete Guide 2
 description: "Learn how to create an all-in-one personal finance dashboard in Notion with expense tracking, income logging, savings goals with gamification, and subscription management."
 pubDate: "2026-03-09"
 tags: ["notion", "budget", "personal-finance", "dashboard", "template"]
+heroImage: "/thumbs/thumb-personal-finance-dashboard-guide.jpg"
 ---
 
 Managing your money shouldn't feel like a second job. Yet for many people, financial tracking means scattered spreadsheets, forgotten receipts, and that sinking feeling when you check your bank balance. What if you could see your entire financial picture — income, expenses, savings goals, and subscriptions — all in one beautiful dashboard?

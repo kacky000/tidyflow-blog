@@ -3,6 +3,7 @@ title: "Budgeting for Couples: How to Manage Money Together Without the Stress"
 description: "Learn practical budgeting tips for couples with step-by-step methods, free templates, and tools to manage shared expenses without arguments."
 pubDate: "2026-03-14"
 tags: ["budgeting", "couples", "personal finance", "notion", "templates"]
+heroImage: "/thumbs/thumb-budgeting-for-couples.jpg"
 ---
 
 ## The Money Talk Every Couple Needs to Have
