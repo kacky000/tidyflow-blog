@@ -1,0 +1,708 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const title = 'Free Savings Goal Calculator — How Long Until You Reach Your Goal?';
+const description = 'Enter your savings goal, current balance, and monthly contribution to see exactly when you will reach your target. Free calculator with progress bar and timeline.';
+---
+
+<BaseLayout title={title} description={description}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Savings Goal Calculator",
+      "url": "https://gettidyflow.com/tools/savings-goal-calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "description": description
+    })} />
+  </Fragment>
+
+  <section class="tool-hero">
+    <div class="tool-hero-inner">
+      <span class="tool-badge">Free Tool — No Signup Required</span>
+      <h1>Savings Goal <span class="gradient-text">Calculator</span></h1>
+      <p class="tool-subtitle">Set a goal, enter what you have today and what you can save each month. We will tell you exactly when you will get there — with a visual timeline to keep you motivated.</p>
+    </div>
+  </section>
+
+  <section class="tool-app">
+    <div class="tool-container">
+      <div class="inputs-grid">
+        <div class="input-card">
+          <label for="goal-amount">Savings Goal</label>
+          <div class="input-wrap">
+            <span class="symbol">$</span>
+            <input type="number" id="goal-amount" placeholder="10,000" min="0" step="100" />
+          </div>
+          <span class="input-hint">How much do you want to save?</span>
+        </div>
+        <div class="input-card">
+          <label for="current-savings">Current Savings</label>
+          <div class="input-wrap">
+            <span class="symbol">$</span>
+            <input type="number" id="current-savings" placeholder="1,500" min="0" step="100" />
+          </div>
+          <span class="input-hint">How much have you already saved?</span>
+        </div>
+        <div class="input-card">
+          <label for="monthly-contribution">Monthly Contribution</label>
+          <div class="input-wrap">
+            <span class="symbol">$</span>
+            <input type="number" id="monthly-contribution" placeholder="500" min="0" step="50" />
+          </div>
+          <span class="input-hint">How much can you save each month?</span>
+        </div>
+      </div>
+
+      <div class="results-section" id="results-section" style="display:none;">
+        <div class="progress-card">
+          <div class="progress-header">
+            <span class="progress-label">Your Progress</span>
+            <span class="progress-pct" id="progress-pct">0%</span>
+          </div>
+          <div class="progress-track">
+            <div class="progress-fill" id="progress-fill" style="width:0%"></div>
+          </div>
+          <div class="progress-amounts">
+            <span id="progress-current">$0 saved</span>
+            <span id="progress-goal">$0 goal</span>
+          </div>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card stat-primary">
+            <span class="stat-value" id="stat-months">—</span>
+            <span class="stat-label">Months to Goal</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-value" id="stat-date">—</span>
+            <span class="stat-label">Target Date</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-value" id="stat-remaining">—</span>
+            <span class="stat-label">Remaining to Save</span>
+          </div>
+        </div>
+
+        <div class="timeline-card" id="timeline-card" style="display:none;">
+          <h3>Savings Timeline</h3>
+          <div class="timeline" id="timeline"></div>
+        </div>
+
+        <div class="tip-card" id="tip-card" style="display:none;">
+          <span class="tip-icon">💡</span>
+          <p id="tip-text"></p>
+        </div>
+      </div>
+
+      <div class="already-done" id="already-done" style="display:none;">
+        <div class="done-card">
+          <span class="done-icon">🎉</span>
+          <h3>You have already reached your goal!</h3>
+          <p>Your current savings exceed your goal. Time to set a bigger target or start investing the surplus.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool-cta">
+    <div class="tool-container">
+      <div class="cta-card">
+        <h2>Track Your Savings Goals Visually</h2>
+        <p>This calculator shows you the plan. Our Personal Finance Dashboard helps you <strong>execute it</strong> — track every goal, every account, and every milestone in one beautiful Notion workspace.</p>
+        <a href="https://gettidyflow.gumroad.com" target="_blank" rel="noopener" class="cta-button">Get the Personal Finance Dashboard &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool-content">
+    <div class="tool-container content-narrow">
+      <h2>How to Set a Savings Goal That Sticks</h2>
+      <p>The biggest reason people fail at saving is vagueness. "I want to save more" does not work. You need a specific number, a deadline, and a plan. This calculator gives you all three.</p>
+      <p>Research shows that people who write down specific financial goals are <strong>42% more likely</strong> to achieve them. Pair a clear target with automatic transfers and you are almost guaranteed to succeed.</p>
+
+      <h2>How to Use This Calculator</h2>
+      <ol>
+        <li>Enter your <strong>savings goal</strong> — this could be an emergency fund, vacation, down payment, or anything else.</li>
+        <li>Enter your <strong>current savings</strong> — what you have already set aside for this goal.</li>
+        <li>Enter your <strong>monthly contribution</strong> — how much you can realistically put away each month.</li>
+        <li>The calculator will show your progress, target date, and a visual timeline.</li>
+      </ol>
+
+      <h2>Tips to Reach Your Goal Faster</h2>
+      <ul>
+        <li><strong>Automate transfers</strong> — set up a recurring transfer on payday so saving happens before spending.</li>
+        <li><strong>Use a high-yield savings account</strong> — earn 4-5% APY instead of 0.01% at a traditional bank.</li>
+        <li><strong>Save windfalls</strong> — tax refunds, bonuses, and gifts can supercharge your progress.</li>
+        <li><strong>Cut one expense</strong> — canceling a single $15/month subscription adds $180/year to your goal.</li>
+        <li><strong>Track visually</strong> — seeing a <a href="/blog/how-to-track-expenses-in-notion/">progress bar fill up</a> is deeply motivating.</li>
+      </ul>
+
+      <h2>Common Savings Goals and Timelines</h2>
+      <ul>
+        <li><strong>Emergency fund ($10,000)</strong> — saving $500/mo gets you there in 20 months</li>
+        <li><strong>Vacation ($3,000)</strong> — saving $250/mo takes 12 months</li>
+        <li><strong>Down payment ($50,000)</strong> — saving $1,500/mo takes about 2.8 years</li>
+        <li><strong>New car ($25,000)</strong> — saving $800/mo takes about 2.6 years</li>
+      </ul>
+
+      <h2>Related Resources</h2>
+      <ul>
+        <li><a href="/blog/how-to-save-money-college-student/">How to Save Money as a College Student</a></li>
+        <li><a href="/blog/why-people-fail-at-budgeting/">Why People Fail at Budgeting (and How to Fix It)</a></li>
+        <li><a href="/blog/50-30-20-budget-rule-notion/">The 50/30/20 Budget Rule in Notion</a></li>
+        <li><a href="/blog/notion-vs-excel-budgeting/">Notion vs Excel for Budgeting</a></li>
+      </ul>
+
+      <h2>Frequently Asked Questions</h2>
+      <details>
+        <summary>Does this calculator account for interest?</summary>
+        <p>This calculator shows a simple projection based on fixed monthly contributions. If you are using a high-yield savings account (4-5% APY), you will reach your goal slightly faster than shown. For most short-to-medium term goals (under 3 years), the difference is minor.</p>
+      </details>
+      <details>
+        <summary>What if I cannot save the same amount every month?</summary>
+        <p>Use your <strong>average</strong> monthly contribution. Some months you will save more, some less. The timeline will average out. The key is consistency — even small amounts add up over time.</p>
+      </details>
+      <details>
+        <summary>How much should I have in an emergency fund?</summary>
+        <p>Most financial advisors recommend <strong>3-6 months of essential expenses</strong>. If you spend $3,000/month on needs, aim for $9,000-$18,000. Start with a $1,000 "starter" emergency fund, then build from there.</p>
+      </details>
+      <details>
+        <summary>Should I save or pay off debt first?</summary>
+        <p>Build a small emergency fund first ($1,000), then attack high-interest debt (anything above 7-8%). Once high-interest debt is gone, build your full emergency fund and then save for other goals.</p>
+      </details>
+      <details>
+        <summary>How do I stay motivated?</summary>
+        <p>Visual tracking is the most effective motivator. Use a <a href="/blog/how-to-track-expenses-in-notion/">Notion dashboard</a> or savings tracker where you can see your progress bar grow. Celebrate milestones — when you hit 25%, 50%, and 75%, reward yourself with something small.</p>
+      </details>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .tool-hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 4rem 1.5rem 3rem;
+    text-align: center;
+    color: #fff;
+  }
+  .tool-hero-inner {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .tool-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(4px);
+    padding: 0.35rem 1rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+  }
+  .tool-hero h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 800;
+    line-height: 1.15;
+    margin: 0 0 1rem;
+  }
+  .gradient-text {
+    background: linear-gradient(90deg, #ffd6e0, #ffecd2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .tool-subtitle {
+    font-size: 1.1rem;
+    opacity: 0.92;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .tool-app {
+    padding: 2.5rem 1.5rem;
+    background: #f8f9fb;
+  }
+  .tool-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .inputs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  .input-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+  .input-card label {
+    display: block;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #1a1a2e;
+    margin-bottom: 0.5rem;
+  }
+  .input-wrap {
+    position: relative;
+  }
+  .symbol {
+    position: absolute;
+    left: 0.85rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: #667eea;
+  }
+  .input-card input {
+    width: 100%;
+    padding: 0.85rem 0.85rem 0.85rem 2rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    outline: none;
+    font-family: inherit;
+    color: #1a1a2e;
+    transition: border-color 0.2s;
+  }
+  .input-card input:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102,126,234,0.15);
+  }
+  .input-card input::placeholder {
+    color: #b0b8c4;
+    font-weight: 400;
+  }
+  .input-hint {
+    display: block;
+    font-size: 0.78rem;
+    color: #999;
+    margin-top: 0.4rem;
+  }
+
+  .progress-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    margin-bottom: 1.25rem;
+  }
+  .progress-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+  }
+  .progress-label {
+    font-weight: 700;
+    color: #1a1a2e;
+  }
+  .progress-pct {
+    font-size: 1.5rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .progress-track {
+    width: 100%;
+    height: 16px;
+    background: #f0f0f5;
+    border-radius: 999px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+  }
+  .progress-fill {
+    height: 100%;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+    transition: width 0.5s ease;
+  }
+  .progress-amounts {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    color: #888;
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+  }
+  .stat-card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 1.25rem;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  }
+  .stat-primary {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #fff;
+  }
+  .stat-value {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin-bottom: 0.25rem;
+    color: #1a1a2e;
+  }
+  .stat-primary .stat-value {
+    color: #fff;
+    font-size: 2rem;
+  }
+  .stat-label {
+    font-size: 0.78rem;
+    color: #888;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  .stat-primary .stat-label {
+    color: rgba(255,255,255,0.85);
+  }
+
+  .timeline-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    margin-bottom: 1.25rem;
+  }
+  .timeline-card h3 {
+    margin: 0 0 1.25rem;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #1a1a2e;
+  }
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .tl-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 0.75rem 0;
+    position: relative;
+  }
+  .tl-dot-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 20px;
+  }
+  .tl-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #e0e0ea;
+    flex-shrink: 0;
+  }
+  .tl-dot.active {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+  }
+  .tl-dot.done {
+    background: #43e97b;
+  }
+  .tl-line {
+    width: 2px;
+    flex: 1;
+    min-height: 20px;
+    background: #e8e8f0;
+  }
+  .tl-content {
+    flex: 1;
+    padding-bottom: 0.25rem;
+  }
+  .tl-date {
+    font-size: 0.82rem;
+    color: #999;
+    font-weight: 600;
+  }
+  .tl-amount {
+    font-weight: 700;
+    color: #1a1a2e;
+  }
+  .tl-milestone {
+    background: #f0f0ff;
+    padding: 0.35rem 0.7rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #667eea;
+    display: inline-block;
+    margin-top: 0.2rem;
+  }
+
+  .tip-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    background: #fffbe6;
+    border-radius: 14px;
+    padding: 1.25rem 1.5rem;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.04);
+  }
+  .tip-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+  }
+  .tip-card p {
+    margin: 0;
+    font-size: 0.92rem;
+    color: #665500;
+    line-height: 1.55;
+  }
+
+  .done-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 3rem 2rem;
+    text-align: center;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+  .done-icon {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 0.75rem;
+  }
+  .done-card h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.4rem;
+    color: #1a1a2e;
+  }
+  .done-card p {
+    margin: 0;
+    color: #666;
+  }
+
+  .tool-cta {
+    padding: 2.5rem 1.5rem;
+    background: #fff;
+  }
+  .cta-card {
+    max-width: 800px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 20px;
+    padding: 2.5rem;
+    text-align: center;
+    color: #fff;
+  }
+  .cta-card h2 {
+    margin: 0 0 0.75rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+  }
+  .cta-card p {
+    margin: 0 0 1.5rem;
+    opacity: 0.92;
+    line-height: 1.6;
+  }
+  .cta-button {
+    display: inline-block;
+    background: #fff;
+    color: #667eea;
+    font-weight: 700;
+    padding: 0.85rem 2rem;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  }
+
+  .tool-content {
+    padding: 3rem 1.5rem 4rem;
+    background: #f8f9fb;
+  }
+  .content-narrow {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .tool-content h2 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #1a1a2e;
+    margin: 2.5rem 0 0.75rem;
+  }
+  .tool-content h2:first-child { margin-top: 0; }
+  .tool-content p, .tool-content li {
+    font-size: 1.02rem;
+    line-height: 1.7;
+    color: #444;
+  }
+  .tool-content ul, .tool-content ol {
+    padding-left: 1.25rem;
+    margin: 0.5rem 0 1rem;
+  }
+  .tool-content li { margin-bottom: 0.35rem; }
+  .tool-content a {
+    color: #667eea;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .tool-content details {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 0.75rem;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  }
+  .tool-content summary {
+    font-weight: 600;
+    cursor: pointer;
+    color: #1a1a2e;
+    font-size: 1.02rem;
+  }
+  .tool-content details p { margin: 0.75rem 0 0; }
+
+  @media (max-width: 640px) {
+    .inputs-grid {
+      grid-template-columns: 1fr;
+    }
+    .stats-grid {
+      grid-template-columns: 1fr;
+    }
+    .cta-card {
+      padding: 2rem 1.5rem;
+    }
+  }
+</style>
+
+<script>
+  const goalInput = document.getElementById('goal-amount') as HTMLInputElement;
+  const currentInput = document.getElementById('current-savings') as HTMLInputElement;
+  const monthlyInput = document.getElementById('monthly-contribution') as HTMLInputElement;
+  const resultsSection = document.getElementById('results-section')!;
+  const alreadyDone = document.getElementById('already-done')!;
+
+  function formatCurrency(n: number): string {
+    return '$' + n.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+  }
+
+  function formatMonth(date: Date): string {
+    return date.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+  }
+
+  function calculate() {
+    const goal = parseFloat(goalInput.value) || 0;
+    const current = parseFloat(currentInput.value) || 0;
+    const monthly = parseFloat(monthlyInput.value) || 0;
+
+    if (goal <= 0) {
+      resultsSection.style.display = 'none';
+      alreadyDone.style.display = 'none';
+      return;
+    }
+
+    if (current >= goal) {
+      resultsSection.style.display = 'none';
+      alreadyDone.style.display = 'block';
+      return;
+    }
+
+    alreadyDone.style.display = 'none';
+
+    if (monthly <= 0) {
+      resultsSection.style.display = 'none';
+      return;
+    }
+
+    resultsSection.style.display = 'block';
+
+    const remaining = goal - current;
+    const months = Math.ceil(remaining / monthly);
+    const pct = Math.min((current / goal) * 100, 100);
+
+    // Progress
+    document.getElementById('progress-pct')!.textContent = pct.toFixed(1) + '%';
+    (document.getElementById('progress-fill') as HTMLElement).style.width = pct + '%';
+    document.getElementById('progress-current')!.textContent = formatCurrency(current) + ' saved';
+    document.getElementById('progress-goal')!.textContent = formatCurrency(goal) + ' goal';
+
+    // Stats
+    document.getElementById('stat-months')!.textContent = months.toString();
+
+    const targetDate = new Date();
+    targetDate.setMonth(targetDate.getMonth() + months);
+    document.getElementById('stat-date')!.textContent = formatMonth(targetDate);
+    document.getElementById('stat-remaining')!.textContent = formatCurrency(remaining);
+
+    // Timeline
+    const timelineCard = document.getElementById('timeline-card')!;
+    const timeline = document.getElementById('timeline')!;
+
+    if (months <= 120) {
+      timelineCard.style.display = 'block';
+      timeline.innerHTML = '';
+
+      const milestones: { pct: number; label: string }[] = [
+        { pct: 0, label: 'Start' },
+        { pct: 25, label: '25% milestone' },
+        { pct: 50, label: 'Halfway there!' },
+        { pct: 75, label: '75% milestone' },
+        { pct: 100, label: 'Goal reached!' },
+      ];
+
+      milestones.forEach((ms, idx) => {
+        const msAmount = goal * (ms.pct / 100);
+        const msMonths = msAmount <= current ? 0 : Math.ceil((msAmount - current) / monthly);
+        const msDate = new Date();
+        msDate.setMonth(msDate.getMonth() + msMonths);
+
+        const isDone = current >= msAmount;
+        const isLast = idx === milestones.length - 1;
+
+        let html = `<div class="tl-item">
+          <div class="tl-dot-wrap">
+            <div class="tl-dot ${isDone ? 'done' : (idx === 0 ? 'active' : '')}"></div>
+            ${!isLast ? '<div class="tl-line"></div>' : ''}
+          </div>
+          <div class="tl-content">
+            <div class="tl-date">${formatMonth(msDate)}</div>
+            <div class="tl-amount">${formatCurrency(msAmount)}</div>
+            <span class="tl-milestone">${ms.label}</span>
+          </div>
+        </div>`;
+        timeline.innerHTML += html;
+      });
+    } else {
+      timelineCard.style.display = 'none';
+    }
+
+    // Tip
+    const tipCard = document.getElementById('tip-card')!;
+    const tipText = document.getElementById('tip-text')!;
+    tipCard.style.display = 'flex';
+
+    if (months > 60) {
+      tipText.innerHTML = `At this rate, it will take <strong>${Math.floor(months / 12)} years and ${months % 12} months</strong>. Consider increasing your monthly contribution — even an extra $100/month would save you ${Math.ceil(remaining / (monthly + 100))} months of waiting.`;
+    } else if (months > 24) {
+      const extraMonths = months - Math.ceil(remaining / (monthly * 1.2));
+      tipText.innerHTML = `Great plan! Increasing your contribution by just 20% (to ${formatCurrency(monthly * 1.2)}/month) would get you there <strong>${extraMonths} months sooner</strong>.`;
+    } else if (months <= 6) {
+      tipText.innerHTML = `You are so close! Just <strong>${months} months</strong> to go. Stay consistent and you will be celebrating before you know it.`;
+    } else {
+      tipText.innerHTML = `Solid progress! At ${formatCurrency(monthly)}/month, you will reach your goal in <strong>${months} months</strong>. Automate your transfers so you never miss a contribution.`;
+    }
+  }
+
+  [goalInput, currentInput, monthlyInput].forEach(el => {
+    el.addEventListener('input', calculate);
+  });
+</script>

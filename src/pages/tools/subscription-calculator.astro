@@ -1,0 +1,643 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const title = 'Free Subscription Cost Calculator — See Your True Yearly Spend';
+const description = 'Add all your subscriptions and instantly see your monthly total, yearly cost, and daily spend. The average American pays $219/month — how do you compare? Free, no signup.';
+---
+
+<BaseLayout title={title} description={description}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Subscription Cost Calculator",
+      "url": "https://gettidyflow.com/tools/subscription-calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "description": description
+    })} />
+  </Fragment>
+
+  <section class="tool-hero">
+    <div class="tool-hero-inner">
+      <span class="tool-badge">Free Tool — No Signup Required</span>
+      <h1>Subscription Cost <span class="gradient-text">Calculator</span></h1>
+      <p class="tool-subtitle">Add your subscriptions below and see the real cost — monthly, yearly, and per day. The average American spends <strong>$219/month</strong> on subscriptions. How do you compare?</p>
+    </div>
+  </section>
+
+  <section class="tool-app">
+    <div class="tool-container">
+      <div class="add-form" id="add-form">
+        <div class="form-row">
+          <div class="form-field form-field-name">
+            <label for="sub-name">Subscription Name</label>
+            <input type="text" id="sub-name" placeholder="e.g. Netflix" />
+          </div>
+          <div class="form-field form-field-cost">
+            <label for="sub-cost">Monthly Cost ($)</label>
+            <div class="cost-input-wrap">
+              <span class="currency-symbol">$</span>
+              <input type="number" id="sub-cost" placeholder="15.99" min="0" step="0.01" />
+            </div>
+          </div>
+          <button type="button" class="add-btn" id="add-btn">Add</button>
+        </div>
+      </div>
+
+      <div class="quick-add">
+        <span class="quick-label">Quick add:</span>
+        <button class="quick-btn" data-name="Netflix" data-cost="15.49">Netflix</button>
+        <button class="quick-btn" data-name="Spotify" data-cost="11.99">Spotify</button>
+        <button class="quick-btn" data-name="YouTube Premium" data-cost="13.99">YouTube</button>
+        <button class="quick-btn" data-name="iCloud+" data-cost="2.99">iCloud+</button>
+        <button class="quick-btn" data-name="ChatGPT Plus" data-cost="20.00">ChatGPT</button>
+        <button class="quick-btn" data-name="Amazon Prime" data-cost="14.99">Prime</button>
+        <button class="quick-btn" data-name="Adobe Creative Cloud" data-cost="59.99">Adobe CC</button>
+        <button class="quick-btn" data-name="Disney+" data-cost="13.99">Disney+</button>
+      </div>
+
+      <div class="sub-list" id="sub-list">
+        <div class="empty-state" id="empty-state">
+          <span class="empty-icon">📋</span>
+          <p>No subscriptions added yet. Add your first one above.</p>
+        </div>
+      </div>
+
+      <div class="totals-card" id="totals-card" style="display:none;">
+        <div class="totals-grid">
+          <div class="total-item">
+            <span class="total-label">Monthly Total</span>
+            <span class="total-value" id="total-monthly">$0</span>
+          </div>
+          <div class="total-item total-yearly">
+            <span class="total-label">Yearly Impact</span>
+            <span class="total-value total-value-big" id="total-yearly">$0</span>
+          </div>
+          <div class="total-item">
+            <span class="total-label">Cost Per Day</span>
+            <span class="total-value" id="total-daily">$0</span>
+          </div>
+        </div>
+        <div class="comparison" id="comparison"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool-cta">
+    <div class="tool-container">
+      <div class="cta-card">
+        <h2>Take Control of Your Subscriptions</h2>
+        <p>Knowing is half the battle. Track every subscription, freelance expense, and recurring cost in one organized spreadsheet — our Freelancer Expense Tracker does the math for you.</p>
+        <a href="https://gettidyflow.gumroad.com/l/freelancer-expense-tracker" target="_blank" rel="noopener" class="cta-button">Get the Freelancer Expense Tracker &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool-content">
+    <div class="tool-container content-narrow">
+      <h2>Why You Should Audit Your Subscriptions</h2>
+      <p>Subscription creep is one of the biggest silent budget killers. A $10 app here, a $15 streaming service there — individually they seem harmless. But they compound fast. The average American household now spends over <strong>$2,600 per year</strong> on subscriptions — and most people underestimate their total by 2-3x.</p>
+
+      <h2>How to Use This Calculator</h2>
+      <ol>
+        <li>Add each subscription you pay for monthly — streaming, apps, gym, cloud storage, everything.</li>
+        <li>Use the quick-add buttons for common services, or type in custom ones.</li>
+        <li>Watch your monthly, yearly, and daily totals update in real time.</li>
+        <li>Remove subscriptions you can live without and see the savings instantly.</li>
+      </ol>
+
+      <h2>Tips for Cutting Subscription Costs</h2>
+      <ul>
+        <li><strong>Cancel what you do not use</strong> — if you have not opened it in 30 days, cancel it.</li>
+        <li><strong>Share family plans</strong> — most streaming services offer family pricing that cuts per-person cost.</li>
+        <li><strong>Downgrade tiers</strong> — do you really need the premium plan?</li>
+        <li><strong>Use annual billing</strong> — most services give 15-20% off for paying yearly.</li>
+        <li><strong>Rotate services</strong> — subscribe to one streaming service at a time and rotate monthly.</li>
+      </ul>
+
+      <h2>Related Resources</h2>
+      <ul>
+        <li><a href="/blog/budgeting-mistakes-to-avoid/">Budgeting Mistakes to Avoid (Including Subscription Creep)</a></li>
+        <li><a href="/blog/monthly-budget-checklist/">Monthly Budget Checklist</a></li>
+        <li><a href="/blog/how-to-track-expenses-in-notion/">How to Track Expenses in Notion</a></li>
+        <li><a href="/blog/50-30-20-budget-rule-notion/">The 50/30/20 Budget Rule Explained</a></li>
+      </ul>
+
+      <h2>Frequently Asked Questions</h2>
+      <details>
+        <summary>What counts as a subscription?</summary>
+        <p>Any recurring charge — streaming (Netflix, Spotify), software (Adobe, Microsoft 365), cloud storage (iCloud, Google One), fitness (gym, Peloton), meal kits, news sites, apps with monthly fees, and even Amazon Prime.</p>
+      </details>
+      <details>
+        <summary>How much does the average person spend on subscriptions?</summary>
+        <p>According to recent surveys, the average American spends about <strong>$219 per month</strong> on subscriptions — that is over $2,600 per year. Many people underestimate their total because individual charges seem small.</p>
+      </details>
+      <details>
+        <summary>How often should I audit my subscriptions?</summary>
+        <p>At least <strong>once every three months</strong>. Set a calendar reminder to review your bank statements. You will almost always find something you forgot about or no longer use.</p>
+      </details>
+      <details>
+        <summary>Should I switch to annual plans?</summary>
+        <p>Only for services you are certain you will use for a full year. Annual plans usually save 15-20%, but you lose money if you cancel early. Start with monthly, then switch to annual for services you have used consistently for 3+ months.</p>
+      </details>
+      <details>
+        <summary>Is my data stored anywhere?</summary>
+        <p>No. This calculator runs entirely in your browser. Nothing is sent to any server. When you close the page, the data is gone.</p>
+      </details>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .tool-hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 4rem 1.5rem 3rem;
+    text-align: center;
+    color: #fff;
+  }
+  .tool-hero-inner {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .tool-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(4px);
+    padding: 0.35rem 1rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+  }
+  .tool-hero h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 800;
+    line-height: 1.15;
+    margin: 0 0 1rem;
+  }
+  .gradient-text {
+    background: linear-gradient(90deg, #ffd6e0, #ffecd2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .tool-subtitle {
+    font-size: 1.1rem;
+    opacity: 0.92;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .tool-app {
+    padding: 2.5rem 1.5rem;
+    background: #f8f9fb;
+  }
+  .tool-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .add-form {
+    background: #fff;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    margin-bottom: 1rem;
+  }
+  .form-row {
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-end;
+  }
+  .form-field label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 0.4rem;
+  }
+  .form-field-name { flex: 2; }
+  .form-field-cost { flex: 1; }
+  .form-field input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    outline: none;
+    font-family: inherit;
+    color: #1a1a2e;
+    transition: border-color 0.2s;
+  }
+  .form-field input:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102,126,234,0.15);
+  }
+  .cost-input-wrap {
+    position: relative;
+  }
+  .currency-symbol {
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: 700;
+    color: #667eea;
+  }
+  .cost-input-wrap input {
+    padding-left: 1.75rem;
+  }
+  .add-btn {
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.15s, box-shadow 0.15s;
+    white-space: nowrap;
+    font-family: inherit;
+  }
+  .add-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(102,126,234,0.3);
+  }
+
+  .quick-add {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  .quick-label {
+    font-size: 0.85rem;
+    color: #888;
+    font-weight: 500;
+  }
+  .quick-btn {
+    background: #fff;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 999px;
+    padding: 0.35rem 0.85rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    color: #555;
+    transition: all 0.15s;
+    font-family: inherit;
+  }
+  .quick-btn:hover {
+    border-color: #667eea;
+    color: #667eea;
+    background: #f0f0ff;
+  }
+
+  .sub-list {
+    margin-bottom: 1.5rem;
+  }
+  .empty-state {
+    text-align: center;
+    padding: 2.5rem 1rem;
+    color: #999;
+  }
+  .empty-icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  .empty-state p {
+    margin: 0;
+    font-size: 0.95rem;
+  }
+
+  .sub-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.04);
+    animation: slideIn 0.2s ease;
+  }
+  @keyframes slideIn {
+    from { opacity: 0; transform: translateY(-8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .sub-item-info {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .sub-item-name {
+    font-weight: 600;
+    color: #1a1a2e;
+  }
+  .sub-item-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .sub-item-cost {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #667eea;
+  }
+  .sub-item-yearly {
+    font-size: 0.8rem;
+    color: #999;
+  }
+  .remove-btn {
+    background: none;
+    border: none;
+    color: #ccc;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0.25rem;
+    border-radius: 6px;
+    transition: all 0.15s;
+    line-height: 1;
+  }
+  .remove-btn:hover {
+    color: #f5576c;
+    background: #fff0f0;
+  }
+
+  .totals-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+  .totals-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  .total-item {
+    text-align: center;
+    padding: 1rem;
+    background: #f8f9fb;
+    border-radius: 12px;
+  }
+  .total-label {
+    display: block;
+    font-size: 0.8rem;
+    color: #888;
+    font-weight: 600;
+    margin-bottom: 0.35rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  .total-value {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #1a1a2e;
+  }
+  .total-yearly {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #fff;
+  }
+  .total-yearly .total-label,
+  .total-yearly .total-value {
+    color: #fff;
+  }
+  .total-value-big {
+    font-size: 1.6rem;
+  }
+
+  .comparison {
+    text-align: center;
+    padding: 1rem;
+    background: #fffbe6;
+    border-radius: 10px;
+    font-size: 0.92rem;
+    color: #665500;
+    line-height: 1.5;
+  }
+
+  .tool-cta {
+    padding: 2.5rem 1.5rem;
+    background: #fff;
+  }
+  .cta-card {
+    max-width: 800px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 20px;
+    padding: 2.5rem;
+    text-align: center;
+    color: #fff;
+  }
+  .cta-card h2 {
+    margin: 0 0 0.75rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+  }
+  .cta-card p {
+    margin: 0 0 1.5rem;
+    opacity: 0.92;
+    line-height: 1.6;
+  }
+  .cta-button {
+    display: inline-block;
+    background: #fff;
+    color: #667eea;
+    font-weight: 700;
+    padding: 0.85rem 2rem;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  }
+
+  .tool-content {
+    padding: 3rem 1.5rem 4rem;
+    background: #f8f9fb;
+  }
+  .content-narrow {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .tool-content h2 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #1a1a2e;
+    margin: 2.5rem 0 0.75rem;
+  }
+  .tool-content h2:first-child { margin-top: 0; }
+  .tool-content p, .tool-content li {
+    font-size: 1.02rem;
+    line-height: 1.7;
+    color: #444;
+  }
+  .tool-content ul, .tool-content ol {
+    padding-left: 1.25rem;
+    margin: 0.5rem 0 1rem;
+  }
+  .tool-content li { margin-bottom: 0.35rem; }
+  .tool-content a {
+    color: #667eea;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .tool-content details {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 0.75rem;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  }
+  .tool-content summary {
+    font-weight: 600;
+    cursor: pointer;
+    color: #1a1a2e;
+    font-size: 1.02rem;
+  }
+  .tool-content details p { margin: 0.75rem 0 0; }
+
+  @media (max-width: 640px) {
+    .form-row {
+      flex-direction: column;
+    }
+    .totals-grid {
+      grid-template-columns: 1fr;
+    }
+    .cta-card {
+      padding: 2rem 1.5rem;
+    }
+  }
+</style>
+
+<script>
+  interface Sub {
+    name: string;
+    cost: number;
+    id: number;
+  }
+
+  let subs: Sub[] = [];
+  let nextId = 0;
+
+  const nameInput = document.getElementById('sub-name') as HTMLInputElement;
+  const costInput = document.getElementById('sub-cost') as HTMLInputElement;
+  const addBtn = document.getElementById('add-btn')!;
+  const subList = document.getElementById('sub-list')!;
+  const emptyState = document.getElementById('empty-state')!;
+  const totalsCard = document.getElementById('totals-card')!;
+  const comparison = document.getElementById('comparison')!;
+
+  function formatCurrency(n: number): string {
+    return '$' + n.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  }
+
+  function addSub(name: string, cost: number) {
+    if (!name || cost <= 0) return;
+    subs.push({ name, cost, id: nextId++ });
+    render();
+  }
+
+  function removeSub(id: number) {
+    subs = subs.filter(s => s.id !== id);
+    render();
+  }
+
+  function render() {
+    // Clear items (keep empty state)
+    subList.querySelectorAll('.sub-item').forEach(el => el.remove());
+
+    if (subs.length === 0) {
+      emptyState.style.display = 'block';
+      totalsCard.style.display = 'none';
+      return;
+    }
+
+    emptyState.style.display = 'none';
+    totalsCard.style.display = 'block';
+
+    subs.forEach(sub => {
+      const el = document.createElement('div');
+      el.className = 'sub-item';
+      el.innerHTML = `
+        <div class="sub-item-info">
+          <span class="sub-item-name">${sub.name}</span>
+        </div>
+        <div class="sub-item-right">
+          <div>
+            <span class="sub-item-cost">${formatCurrency(sub.cost)}/mo</span>
+            <div class="sub-item-yearly">${formatCurrency(sub.cost * 12)}/yr</div>
+          </div>
+          <button class="remove-btn" aria-label="Remove ${sub.name}" data-id="${sub.id}">&times;</button>
+        </div>
+      `;
+      subList.appendChild(el);
+    });
+
+    // Totals
+    const monthly = subs.reduce((sum, s) => sum + s.cost, 0);
+    const yearly = monthly * 12;
+    const daily = monthly / 30;
+
+    document.getElementById('total-monthly')!.textContent = formatCurrency(monthly);
+    document.getElementById('total-yearly')!.textContent = formatCurrency(yearly);
+    document.getElementById('total-daily')!.textContent = formatCurrency(daily);
+
+    // Comparison
+    const avg = 219;
+    if (monthly < avg) {
+      const saved = avg - monthly;
+      comparison.innerHTML = `You spend <strong>${formatCurrency(saved)}/month less</strong> than the average American ($219/mo). That is <strong>${formatCurrency(saved * 12)} saved per year</strong>. Nice work!`;
+    } else if (monthly > avg) {
+      const over = monthly - avg;
+      comparison.innerHTML = `You spend <strong>${formatCurrency(over)}/month more</strong> than the average American ($219/mo). Cutting back could save you <strong>${formatCurrency(over * 12)} per year</strong>.`;
+    } else {
+      comparison.innerHTML = `You spend exactly the average ($219/mo). See if you can trim a few services to get below it!`;
+    }
+
+    // Remove button handlers
+    subList.querySelectorAll('.remove-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const id = parseInt((btn as HTMLElement).dataset.id || '0');
+        removeSub(id);
+      });
+    });
+  }
+
+  addBtn.addEventListener('click', () => {
+    addSub(nameInput.value.trim(), parseFloat(costInput.value) || 0);
+    nameInput.value = '';
+    costInput.value = '';
+    nameInput.focus();
+  });
+
+  // Enter key support
+  [nameInput, costInput].forEach(el => {
+    el.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        addBtn.click();
+      }
+    });
+  });
+
+  // Quick add buttons
+  document.querySelectorAll('.quick-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const name = (btn as HTMLElement).dataset.name || '';
+      const cost = parseFloat((btn as HTMLElement).dataset.cost || '0');
+      addSub(name, cost);
+    });
+  });
+
+  render();
+</script>
