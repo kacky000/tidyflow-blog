@@ -1,6 +1,6 @@
 ---
 title: "Are Notion Templates Worth Paying For? (Honest Answer)"
-description: "With thousands of free Notion templates available, is it ever worth paying for one? Here's when free works and when paid is the smarter choice."
+description: "Paid vs free Notion templates — are they worth it? 5 signs you need a paid template and 3 times free is enough. Real examples inside."
 pubDate: 2026-02-22
 tags: ["notion", "templates", "productivity", "opinion"]
 author: "Tidyflow"

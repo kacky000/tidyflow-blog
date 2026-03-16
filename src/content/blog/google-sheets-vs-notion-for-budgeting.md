@@ -1,6 +1,6 @@
 ---
 title: "Google Sheets vs Notion for Budgeting: Honest Comparison (2026)"
-description: "Google Sheets vs Notion for budgeting — compare formulas, templates, collaboration, and ease of use to find the best tool for your budget."
+description: "Google Sheets vs Notion for budgeting: which is better in 2026? Side-by-side comparison of formulas, templates, mobile apps & real user pros/cons."
 pubDate: "2026-03-17"
 tags: ["budgeting", "notion", "google-sheets", "comparison"]
 ---
