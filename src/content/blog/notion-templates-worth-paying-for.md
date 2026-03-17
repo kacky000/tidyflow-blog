@@ -1,6 +1,6 @@
 ---
 title: "Are Most Notion Templates Generic? Yes — Here's How to Find the Good Ones (2026)"
-description: "80% of Notion templates are generic copy-paste clones. We tested dozens to find what separates quality from junk. Free vs paid comparison + 5 red flags to avoid."
+description: "Yes, most Notion templates are generic clones. We tested dozens and found 5 red flags to avoid. See which free and paid templates actually deliver real value in 2026."
 pubDate: 2026-02-22
 tags: ["notion", "templates", "productivity", "opinion"]
 author: "Tidyflow"
