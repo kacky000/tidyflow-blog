@@ -1,0 +1,1061 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const title = 'Free 1099 Tax Calculator for Freelancers — Estimate Your Quarterly Taxes';
+const description = 'Calculate your estimated quarterly tax payments as a freelancer or gig worker. Includes self-employment tax, federal income tax, and state tax estimates. Free, instant results.';
+---
+
+<BaseLayout title={title} description={description}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "1099 Freelancer Quarterly Tax Calculator",
+      "url": "https://gettidyflow.com/tools/freelancer-tax-calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "description": description
+    })} />
+  </Fragment>
+
+  <section class="tool-hero">
+    <div class="tool-hero-inner">
+      <span class="tool-badge">Free Tool — No Signup Required</span>
+      <h1>1099 Quarterly <span class="gradient-text">Tax Calculator</span></h1>
+      <p class="tool-subtitle">Estimate your quarterly tax payments as a freelancer or gig worker. Covers self-employment tax, federal income tax, and state tax — so you never get surprised at tax time.</p>
+    </div>
+  </section>
+
+  <section class="tool-app">
+    <div class="tool-container">
+      <div class="calc-card">
+        <div class="input-group">
+          <label for="income-input" class="input-label">Expected Annual 1099 Income</label>
+          <div class="input-wrapper">
+            <span class="currency-symbol">$</span>
+            <input
+              type="number"
+              id="income-input"
+              placeholder="e.g. 80,000"
+              min="0"
+              step="1000"
+              aria-label="Expected annual 1099 income in dollars"
+            />
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="expenses-input" class="input-label">Business Expenses / Deductions</label>
+          <div class="input-wrapper">
+            <span class="currency-symbol">$</span>
+            <input
+              type="number"
+              id="expenses-input"
+              placeholder="e.g. 15,000"
+              min="0"
+              step="500"
+              aria-label="Business expenses and deductions in dollars"
+            />
+          </div>
+        </div>
+
+        <div class="input-row">
+          <div class="input-group">
+            <label for="filing-status" class="input-label">Filing Status</label>
+            <select id="filing-status" aria-label="Filing status">
+              <option value="single">Single</option>
+              <option value="mfj">Married Filing Jointly</option>
+              <option value="hoh">Head of Household</option>
+            </select>
+          </div>
+
+          <div class="input-group">
+            <label for="state-select" class="input-label">State</label>
+            <select id="state-select" aria-label="State of residence">
+              <option value="AL">Alabama</option>
+              <option value="AK">Alaska — No State Income Tax</option>
+              <option value="AZ">Arizona</option>
+              <option value="AR">Arkansas</option>
+              <option value="CA">California</option>
+              <option value="CO">Colorado</option>
+              <option value="CT">Connecticut</option>
+              <option value="DE">Delaware</option>
+              <option value="DC">District of Columbia</option>
+              <option value="FL">Florida — No State Income Tax</option>
+              <option value="GA">Georgia</option>
+              <option value="HI">Hawaii</option>
+              <option value="ID">Idaho</option>
+              <option value="IL">Illinois</option>
+              <option value="IN">Indiana</option>
+              <option value="IA">Iowa</option>
+              <option value="KS">Kansas</option>
+              <option value="KY">Kentucky</option>
+              <option value="LA">Louisiana</option>
+              <option value="ME">Maine</option>
+              <option value="MD">Maryland</option>
+              <option value="MA">Massachusetts</option>
+              <option value="MI">Michigan</option>
+              <option value="MN">Minnesota</option>
+              <option value="MS">Mississippi</option>
+              <option value="MO">Missouri</option>
+              <option value="MT">Montana</option>
+              <option value="NE">Nebraska</option>
+              <option value="NV">Nevada — No State Income Tax</option>
+              <option value="NH">New Hampshire — No State Income Tax</option>
+              <option value="NJ">New Jersey</option>
+              <option value="NM">New Mexico</option>
+              <option value="NY">New York</option>
+              <option value="NC">North Carolina</option>
+              <option value="ND">North Dakota</option>
+              <option value="OH">Ohio</option>
+              <option value="OK">Oklahoma</option>
+              <option value="OR">Oregon</option>
+              <option value="PA">Pennsylvania</option>
+              <option value="RI">Rhode Island</option>
+              <option value="SC">South Carolina</option>
+              <option value="SD">South Dakota — No State Income Tax</option>
+              <option value="TN">Tennessee — No State Income Tax</option>
+              <option value="TX">Texas — No State Income Tax</option>
+              <option value="UT">Utah</option>
+              <option value="VT">Vermont</option>
+              <option value="VA">Virginia</option>
+              <option value="WA">Washington — No State Income Tax</option>
+              <option value="WV">West Virginia</option>
+              <option value="WI">Wisconsin</option>
+              <option value="WY">Wyoming — No State Income Tax</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="w2-input" class="input-label">Additional W-2 Income <span class="optional-tag">(optional)</span></label>
+          <div class="input-wrapper">
+            <span class="currency-symbol">$</span>
+            <input
+              type="number"
+              id="w2-input"
+              placeholder="e.g. 40,000"
+              min="0"
+              step="1000"
+              aria-label="Additional W-2 income in dollars, optional"
+            />
+          </div>
+        </div>
+
+        <button id="calc-button" class="calc-button" aria-label="Calculate estimated quarterly taxes">Calculate My Quarterly Taxes</button>
+      </div>
+
+      <!-- Summary Card -->
+      <div class="summary-card" id="summary-card" style="display:none;">
+        <div class="summary-header">
+          <div class="summary-quarterly">
+            <span class="summary-label">Estimated Quarterly Payment</span>
+            <span class="summary-amount" id="quarterly-amount">$0</span>
+          </div>
+          <div class="summary-annual">
+            <span class="summary-label">Total Annual Tax</span>
+            <span class="summary-annual-amount" id="annual-tax">$0</span>
+          </div>
+        </div>
+        <div class="effective-rate">
+          Effective Tax Rate: <strong id="effective-rate">0%</strong>
+        </div>
+      </div>
+
+      <!-- Breakdown Cards -->
+      <div class="results-grid" id="results-grid" style="display:none;">
+        <div class="result-card se-card">
+          <div class="result-header">
+            <span class="result-icon" aria-hidden="true">&#x1F4BC;</span>
+            <div>
+              <h3>Self-Employment Tax</h3>
+              <p class="result-amount" id="se-tax-amount">$0</p>
+            </div>
+          </div>
+          <div class="bar-container">
+            <div class="bar bar-se" id="bar-se" style="width:0%"></div>
+          </div>
+          <div class="se-split">
+            <span>Social Security (12.4%): <strong id="ss-amount">$0</strong></span>
+            <span>Medicare (2.9%): <strong id="medicare-amount">$0</strong></span>
+          </div>
+        </div>
+
+        <div class="result-card federal-card">
+          <div class="result-header">
+            <span class="result-icon" aria-hidden="true">&#x1F3DB;</span>
+            <div>
+              <h3>Federal Income Tax</h3>
+              <p class="result-amount" id="federal-tax-amount">$0</p>
+            </div>
+          </div>
+          <div class="bar-container">
+            <div class="bar bar-federal" id="bar-federal" style="width:0%"></div>
+          </div>
+          <p class="result-tip">Based on 2026 tax brackets after standard deduction and SE tax deduction.</p>
+        </div>
+
+        <div class="result-card state-card">
+          <div class="result-header">
+            <span class="result-icon" aria-hidden="true">&#x1F3E0;</span>
+            <div>
+              <h3>State Income Tax</h3>
+              <p class="result-amount" id="state-tax-amount">$0</p>
+            </div>
+          </div>
+          <div class="bar-container">
+            <div class="bar bar-state" id="bar-state" style="width:0%"></div>
+          </div>
+          <p class="result-tip" id="state-tip">Estimated using your state's approximate effective rate.</p>
+        </div>
+      </div>
+
+      <!-- Bar Chart -->
+      <div class="chart-card" id="chart-card" style="display:none;">
+        <h3>Tax Breakdown</h3>
+        <div class="chart-bars">
+          <div class="chart-row">
+            <span class="chart-label">SE Tax</span>
+            <div class="chart-bar-wrapper">
+              <div class="chart-bar chart-bar-se" id="chart-bar-se"></div>
+            </div>
+            <span class="chart-value" id="chart-val-se">$0</span>
+          </div>
+          <div class="chart-row">
+            <span class="chart-label">Federal</span>
+            <div class="chart-bar-wrapper">
+              <div class="chart-bar chart-bar-federal" id="chart-bar-federal"></div>
+            </div>
+            <span class="chart-value" id="chart-val-federal">$0</span>
+          </div>
+          <div class="chart-row">
+            <span class="chart-label">State</span>
+            <div class="chart-bar-wrapper">
+              <div class="chart-bar chart-bar-state" id="chart-bar-state"></div>
+            </div>
+            <span class="chart-value" id="chart-val-state">$0</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Due Dates -->
+      <div class="due-dates-card" id="due-dates-card" style="display:none;">
+        <h3>2026 Quarterly Tax Due Dates</h3>
+        <div class="due-dates-grid">
+          <div class="due-date-item" id="q1-due">
+            <span class="due-quarter">Q1</span>
+            <span class="due-date">Apr 15, 2026</span>
+            <span class="due-amount" id="q1-amount">$0</span>
+          </div>
+          <div class="due-date-item" id="q2-due">
+            <span class="due-quarter">Q2</span>
+            <span class="due-date">Jun 16, 2026</span>
+            <span class="due-amount" id="q2-amount">$0</span>
+          </div>
+          <div class="due-date-item" id="q3-due">
+            <span class="due-quarter">Q3</span>
+            <span class="due-date">Sep 15, 2026</span>
+            <span class="due-amount" id="q3-amount">$0</span>
+          </div>
+          <div class="due-date-item" id="q4-due">
+            <span class="due-quarter">Q4</span>
+            <span class="due-date">Jan 15, 2027</span>
+            <span class="due-amount" id="q4-amount">$0</span>
+          </div>
+        </div>
+        <p class="next-due" id="next-due"></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool-cta">
+    <div class="tool-container">
+      <div class="cta-card">
+        <h2>Track Every Business Expense Automatically</h2>
+        <p>Knowing your quarterly tax bill is only half the battle. The other half is <strong>maximizing deductions</strong> by tracking every business expense throughout the year. Our Freelancer Expense Tracker does it for you.</p>
+        <a href="https://gettidyflow.gumroad.com/l/freelancer-expense-tracker" target="_blank" rel="noopener" class="cta-button">Get the Freelancer Expense Tracker &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool-content">
+    <div class="tool-container content-narrow">
+      <h2>How Freelancer Taxes Work (Self-Employment Tax Explained)</h2>
+      <p>If you earn money as a freelancer, independent contractor, or gig worker and receive a 1099-NEC form, you are considered self-employed by the IRS. Unlike W-2 employees whose employers split payroll taxes with them, freelancers pay <strong>both</strong> the employer and employee portions — a combined rate known as the self-employment tax.</p>
+      <p>The self-employment (SE) tax rate is <strong>15.3%</strong>. This breaks down into two parts:</p>
+      <ul>
+        <li><strong>12.4% for Social Security</strong> — applies to net earnings up to $168,600 in 2026. Income above this cap is exempt from the Social Security portion.</li>
+        <li><strong>2.9% for Medicare</strong> — applies to <em>all</em> net earnings with no cap. If your income exceeds $200,000 (single) or $250,000 (married filing jointly), an additional 0.9% Medicare surtax kicks in.</li>
+      </ul>
+      <p>The IRS lets you calculate SE tax on 92.35% of your net self-employment income (not 100%) to mirror the fact that employers deduct their share before calculating payroll taxes. On top of that, you can deduct <strong>50% of the SE tax</strong> you paid when figuring your adjusted gross income — this lowers your federal income tax bill.</p>
+      <p>Understanding this two-layer system (SE tax + income tax) is critical because many new freelancers only plan for income tax and get blindsided by the additional 15.3% self-employment tax at filing time.</p>
+
+      <h2>2026 Quarterly Tax Due Dates for Freelancers</h2>
+      <p>The IRS requires freelancers to pay taxes throughout the year via estimated quarterly payments. If you expect to owe $1,000 or more in taxes, you are required to make these payments to avoid penalties. The four due dates for tax year 2026 are:</p>
+      <ul>
+        <li><strong>Q1 (Jan 1 – Mar 31):</strong> Due April 15, 2026</li>
+        <li><strong>Q2 (Apr 1 – May 31):</strong> Due June 16, 2026</li>
+        <li><strong>Q3 (Jun 1 – Aug 31):</strong> Due September 15, 2026</li>
+        <li><strong>Q4 (Sep 1 – Dec 31):</strong> Due January 15, 2027</li>
+      </ul>
+      <p>You make these payments using <strong>IRS Form 1040-ES</strong>. You can pay online through IRS Direct Pay, the Electronic Federal Tax Payment System (EFTPS), or by mailing a check with a payment voucher. Most freelancers find that setting a calendar reminder two weeks before each due date — and transferring the money to a separate tax savings account each month — prevents last-minute scrambles.</p>
+      <p>Note that the quarters are not equal in length. Q2 only covers two months (April and May), while Q3 covers three months (June through August). If your income fluctuates, you can use the annualized installment method (Form 2210, Schedule AI) to adjust payments based on when you actually earned the income.</p>
+
+      <h2>Top Tax Deductions Every Freelancer Should Claim</h2>
+      <p>Deductions reduce your taxable income, which lowers both your income tax and self-employment tax. Here are the most impactful deductions for freelancers:</p>
+      <ul>
+        <li><strong>Home office deduction</strong> — If you use a dedicated space in your home regularly and exclusively for business, you can deduct a portion of your rent, mortgage interest, utilities, and insurance. The simplified method lets you deduct $5 per square foot up to 300 sq ft ($1,500 max).</li>
+        <li><strong>Health insurance premiums</strong> — Self-employed individuals can deduct 100% of health, dental, and long-term care insurance premiums for themselves and their families.</li>
+        <li><strong>Retirement contributions</strong> — Contributions to a SEP-IRA (up to 25% of net earnings, max $69,000 in 2026) or Solo 401(k) reduce your taxable income significantly.</li>
+        <li><strong>Business equipment and software</strong> — Computers, cameras, design software, project management tools, and other items used for business can be deducted, often in full under Section 179.</li>
+        <li><strong>Professional development</strong> — Courses, books, conferences, and certifications related to your freelance work are deductible.</li>
+        <li><strong>Vehicle expenses</strong> — If you drive for business, you can deduct the standard mileage rate (67 cents per mile in 2026) or actual vehicle expenses.</li>
+        <li><strong>Internet and phone</strong> — The business-use percentage of your internet and phone bills is deductible.</li>
+      </ul>
+      <p>The key is to <a href="/blog/how-to-track-expenses-in-notion/">track expenses consistently</a> throughout the year rather than scrambling at tax time. A dedicated expense tracker — whether a spreadsheet, Notion template, or accounting software — pays for itself many times over in deductions you would otherwise miss.</p>
+
+      <h2>How to Avoid Underpayment Penalties</h2>
+      <p>The IRS charges an underpayment penalty if you do not pay enough tax throughout the year. To avoid it, you must meet <strong>one</strong> of these safe harbors:</p>
+      <ul>
+        <li><strong>90% rule:</strong> Pay at least 90% of your current year's total tax liability through estimated payments and withholding.</li>
+        <li><strong>100% rule:</strong> Pay at least 100% of your <em>prior year's</em> total tax liability (110% if your AGI exceeded $150,000). This is the easier target if your income is growing.</li>
+      </ul>
+      <p>If you are a new freelancer with no prior-year tax history, focus on the 90% rule. A practical approach is to transfer 25-30% of every payment you receive into a separate savings account earmarked for taxes. This percentage covers both self-employment tax and federal income tax for most freelancers in the middle tax brackets.</p>
+      <p>If you have both W-2 and 1099 income, you can increase withholding at your W-2 job using Form W-4 to cover some or all of your freelance tax liability — this can simplify things by reducing or eliminating the need for quarterly estimated payments.</p>
+      <p>For freelancers who <a href="/blog/track-multiple-income-streams-notion/">manage multiple income streams</a>, keeping a running total of year-to-date earnings and payments made is essential. Revisit your estimates each quarter and adjust as your income picture becomes clearer.</p>
+
+      <h2>Frequently Asked Questions</h2>
+      <details>
+        <summary>What is the self-employment tax rate in 2026?</summary>
+        <p>The self-employment tax rate is <strong>15.3%</strong>, split into 12.4% for Social Security (on net earnings up to $168,600) and 2.9% for Medicare (on all net earnings, uncapped). If your net SE income exceeds $200,000 as a single filer, an additional 0.9% Medicare surtax applies to the amount over the threshold. You calculate SE tax on 92.35% of your net self-employment income, not the full amount.</p>
+      </details>
+      <details>
+        <summary>Do I need to pay quarterly taxes if I also have a W-2 job?</summary>
+        <p>It depends on whether your W-2 withholding covers your total tax liability (including self-employment tax on your freelance income). If your employer withholds enough to meet the safe harbor thresholds — 90% of current-year tax or 100%/110% of prior-year tax — you may not need to make separate quarterly payments. However, most people with significant freelance income find that W-2 withholding alone falls short. You can either increase W-2 withholding via Form W-4 or make quarterly estimated payments to cover the difference.</p>
+      </details>
+      <details>
+        <summary>What happens if I miss a quarterly payment?</summary>
+        <p>The IRS charges an underpayment penalty calculated as interest on the underpaid amount for the period it was late. The penalty rate is the federal short-term rate plus 3 percentage points, adjusted quarterly. As of early 2026, this rate is approximately 7-8%. The penalty is calculated separately for each quarter, so missing one payment does not affect penalties on other quarters. If you realize you missed a deadline, make the payment as soon as possible to minimize the interest accrual. There is no late filing penalty for estimated payments — only the underpayment interest charge.</p>
+      </details>
+      <details>
+        <summary>Can I deduct my home office?</summary>
+        <p>Yes, if you use a specific area of your home <strong>regularly and exclusively</strong> for business. The space does not need to be a separate room — a dedicated desk area qualifies — but it cannot double as a personal space. You have two methods: the <strong>simplified method</strong> ($5 per square foot, up to 300 sq ft = $1,500 max deduction) or the <strong>regular method</strong> (calculate the actual percentage of your home used for business and apply it to rent/mortgage interest, utilities, insurance, repairs, and depreciation). The simplified method is easier but the regular method often yields a larger deduction for freelancers with expensive housing costs.</p>
+      </details>
+      <details>
+        <summary>How much should I set aside from each payment?</summary>
+        <p>A common rule of thumb is to set aside <strong>25-30%</strong> of your gross freelance income for taxes. This covers both self-employment tax (approximately 15.3%) and federal income tax (which varies by bracket). If you live in a state with income tax, add another 3-10% depending on your state's rate. For example, a California freelancer might set aside 35-40%, while a Texas freelancer (no state income tax) might be comfortable at 25-30%. The safest approach is to use this calculator with your projected annual income, divide the result by your expected annual revenue, and use that custom percentage. Transfer that percentage of every invoice payment into a dedicated tax savings account the day you receive it.</p>
+      </details>
+
+      <h2>Related Resources</h2>
+      <ul>
+        <li><a href="/tools/budget-calculator">Free 50/30/20 Budget Calculator</a></li>
+        <li><a href="/blog/how-to-track-expenses-in-notion/">How to Track Expenses in Notion</a></li>
+        <li><a href="/blog/track-multiple-income-streams-notion/">Track Multiple Income Streams in Notion</a></li>
+      </ul>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .tool-hero {
+    background: linear-gradient(135deg, #0d9488 0%, #0891b2 100%);
+    padding: 4rem 1.5rem 3rem;
+    text-align: center;
+    color: #fff;
+  }
+  .tool-hero-inner {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .tool-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(4px);
+    padding: 0.35rem 1rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+  }
+  .tool-hero h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 800;
+    line-height: 1.15;
+    margin: 0 0 1rem;
+  }
+  .gradient-text {
+    background: linear-gradient(90deg, #a7f3d0, #cffafe);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .tool-subtitle {
+    font-size: 1.1rem;
+    opacity: 0.92;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .tool-app {
+    padding: 2.5rem 1.5rem;
+    background: #f8f9fb;
+  }
+  .tool-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .calc-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    margin-bottom: 2rem;
+  }
+  .input-group {
+    margin-bottom: 1.25rem;
+  }
+  .input-label {
+    display: block;
+    font-weight: 700;
+    font-size: 1.02rem;
+    margin-bottom: 0.5rem;
+    color: #1a1a2e;
+  }
+  .optional-tag {
+    font-weight: 400;
+    font-size: 0.85rem;
+    color: #888;
+  }
+  .input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .currency-symbol {
+    position: absolute;
+    left: 1.25rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #0d9488;
+  }
+  .calc-card input[type="number"] {
+    width: 100%;
+    padding: 0.85rem 1rem 0.85rem 2.75rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    transition: border-color 0.2s;
+    outline: none;
+    font-family: inherit;
+    color: #1a1a2e;
+    -moz-appearance: textfield;
+  }
+  .calc-card input[type="number"]::-webkit-outer-spin-button,
+  .calc-card input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  .calc-card input[type="number"]:focus {
+    border-color: #0d9488;
+    box-shadow: 0 0 0 3px rgba(13,148,136,0.15);
+  }
+  .calc-card input[type="number"]::placeholder {
+    color: #a0aec0;
+    font-weight: 400;
+  }
+
+  .input-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  select {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    outline: none;
+    font-family: inherit;
+    color: #1a1a2e;
+    background: #fff;
+    cursor: pointer;
+    transition: border-color 0.2s;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23666' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+  }
+  select:focus {
+    border-color: #0d9488;
+    box-shadow: 0 0 0 3px rgba(13,148,136,0.15);
+  }
+
+  .calc-button {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    margin-top: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(135deg, #0d9488, #0891b2);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.15s, box-shadow 0.15s;
+    font-family: inherit;
+  }
+  .calc-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(13,148,136,0.3);
+  }
+  .calc-button:active {
+    transform: translateY(0);
+  }
+
+  /* Summary Card */
+  .summary-card {
+    background: linear-gradient(135deg, #0d9488, #0891b2);
+    border-radius: 16px;
+    padding: 2rem;
+    color: #fff;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  .summary-header {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+  }
+  .summary-label {
+    display: block;
+    font-size: 0.9rem;
+    opacity: 0.85;
+    margin-bottom: 0.35rem;
+  }
+  .summary-amount {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+  }
+  .summary-annual-amount {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+  .effective-rate {
+    font-size: 1rem;
+    opacity: 0.9;
+  }
+
+  /* Results Grid */
+  .results-grid {
+    display: grid;
+    gap: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+  .result-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    border-left: 5px solid transparent;
+  }
+  .se-card { border-left-color: #0d9488; }
+  .federal-card { border-left-color: #0891b2; }
+  .state-card { border-left-color: #6366f1; }
+
+  .result-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  .result-icon {
+    font-size: 2rem;
+    line-height: 1;
+  }
+  .result-header h3 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #555;
+  }
+  .result-amount {
+    margin: 0.15rem 0 0;
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #1a1a2e;
+  }
+
+  .bar-container {
+    width: 100%;
+    height: 10px;
+    background: #f0f0f5;
+    border-radius: 999px;
+    overflow: hidden;
+    margin-bottom: 0.75rem;
+  }
+  .bar {
+    height: 100%;
+    border-radius: 999px;
+    transition: width 0.5s ease;
+  }
+  .bar-se { background: linear-gradient(90deg, #0d9488, #14b8a6); }
+  .bar-federal { background: linear-gradient(90deg, #0891b2, #22d3ee); }
+  .bar-state { background: linear-gradient(90deg, #6366f1, #818cf8); }
+
+  .se-split {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.88rem;
+    color: #666;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .result-tip {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.55;
+    margin: 0;
+  }
+
+  /* Chart Card */
+  .chart-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    margin-bottom: 1.5rem;
+  }
+  .chart-card h3 {
+    margin: 0 0 1.25rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1a1a2e;
+  }
+  .chart-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+  .chart-label {
+    width: 60px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #555;
+    flex-shrink: 0;
+  }
+  .chart-bar-wrapper {
+    flex: 1;
+    height: 28px;
+    background: #f0f0f5;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .chart-bar {
+    height: 100%;
+    border-radius: 8px;
+    transition: width 0.6s ease;
+    width: 0;
+  }
+  .chart-bar-se { background: linear-gradient(90deg, #0d9488, #14b8a6); }
+  .chart-bar-federal { background: linear-gradient(90deg, #0891b2, #22d3ee); }
+  .chart-bar-state { background: linear-gradient(90deg, #6366f1, #818cf8); }
+  .chart-value {
+    width: 80px;
+    text-align: right;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #1a1a2e;
+    flex-shrink: 0;
+  }
+
+  /* Due Dates */
+  .due-dates-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    margin-bottom: 1.5rem;
+  }
+  .due-dates-card h3 {
+    margin: 0 0 1.25rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1a1a2e;
+  }
+  .due-dates-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.75rem;
+  }
+  .due-date-item {
+    text-align: center;
+    padding: 1rem 0.5rem;
+    background: #f8f9fb;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+  .due-quarter {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #0d9488;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .due-date {
+    font-size: 0.82rem;
+    color: #666;
+  }
+  .due-amount {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #1a1a2e;
+  }
+  .next-due {
+    margin: 1rem 0 0;
+    padding: 0.75rem 1rem;
+    background: linear-gradient(135deg, #ecfdf5, #f0fdfa);
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #0d9488;
+    text-align: center;
+  }
+
+  /* CTA */
+  .tool-cta {
+    padding: 2.5rem 1.5rem;
+    background: #fff;
+  }
+  .cta-card {
+    max-width: 800px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #0d9488 0%, #0891b2 100%);
+    border-radius: 20px;
+    padding: 2.5rem;
+    text-align: center;
+    color: #fff;
+  }
+  .cta-card h2 {
+    margin: 0 0 0.75rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+  }
+  .cta-card p {
+    margin: 0 0 1.5rem;
+    opacity: 0.92;
+    line-height: 1.6;
+  }
+  .cta-button {
+    display: inline-block;
+    background: #fff;
+    color: #0d9488;
+    font-weight: 700;
+    padding: 0.85rem 2rem;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  }
+
+  /* Content */
+  .tool-content {
+    padding: 3rem 1.5rem 4rem;
+    background: #f8f9fb;
+  }
+  .content-narrow {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .tool-content h2 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #1a1a2e;
+    margin: 2.5rem 0 0.75rem;
+  }
+  .tool-content h2:first-child {
+    margin-top: 0;
+  }
+  .tool-content p,
+  .tool-content li {
+    font-size: 1.02rem;
+    line-height: 1.7;
+    color: #444;
+  }
+  .tool-content ul,
+  .tool-content ol {
+    padding-left: 1.25rem;
+    margin: 0.5rem 0 1rem;
+  }
+  .tool-content li {
+    margin-bottom: 0.35rem;
+  }
+  .tool-content a {
+    color: #0d9488;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .tool-content details {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 0.75rem;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  }
+  .tool-content summary {
+    font-weight: 600;
+    cursor: pointer;
+    color: #1a1a2e;
+    font-size: 1.02rem;
+  }
+  .tool-content details p {
+    margin: 0.75rem 0 0;
+  }
+
+  @media (max-width: 640px) {
+    .input-row {
+      grid-template-columns: 1fr;
+    }
+    .summary-header {
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .summary-amount {
+      font-size: 2rem;
+    }
+    .due-dates-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+    .cta-card {
+      padding: 2rem 1.5rem;
+    }
+    .se-split {
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+  }
+</style>
+
+<script>
+  const STATE_TAX_RATES: Record<string, number> = {
+    AL: 0.05, AK: 0, AZ: 0.025, AR: 0.044, CA: 0.093,
+    CO: 0.044, CT: 0.05, DE: 0.066, DC: 0.0895, FL: 0,
+    GA: 0.055, HI: 0.079, ID: 0.058, IL: 0.0495, IN: 0.0315,
+    IA: 0.044, KS: 0.057, KY: 0.04, LA: 0.0425, ME: 0.0715,
+    MD: 0.0575, MA: 0.05, MI: 0.0425, MN: 0.0785, MS: 0.05,
+    MO: 0.048, MT: 0.059, NE: 0.0564, NV: 0, NH: 0,
+    NJ: 0.0637, NM: 0.049, NY: 0.0685, NC: 0.045, ND: 0.0195,
+    OH: 0.035, OK: 0.0475, OR: 0.09, PA: 0.0307, RI: 0.0599,
+    SC: 0.065, SD: 0, TN: 0, TX: 0, UT: 0.0465,
+    VT: 0.066, VA: 0.0575, WA: 0, WV: 0.055, WI: 0.0653, WY: 0
+  };
+
+  const BRACKETS_SINGLE = [
+    { limit: 11925, rate: 0.10 },
+    { limit: 48475, rate: 0.12 },
+    { limit: 103350, rate: 0.22 },
+    { limit: 197300, rate: 0.24 },
+    { limit: 250525, rate: 0.32 },
+    { limit: 626350, rate: 0.35 },
+    { limit: Infinity, rate: 0.37 }
+  ];
+  const BRACKETS_MFJ = [
+    { limit: 23850, rate: 0.10 },
+    { limit: 96950, rate: 0.12 },
+    { limit: 206700, rate: 0.22 },
+    { limit: 394600, rate: 0.24 },
+    { limit: 501050, rate: 0.32 },
+    { limit: 752800, rate: 0.35 },
+    { limit: Infinity, rate: 0.37 }
+  ];
+  const BRACKETS_HOH = [
+    { limit: 17000, rate: 0.10 },
+    { limit: 64850, rate: 0.12 },
+    { limit: 103350, rate: 0.22 },
+    { limit: 197300, rate: 0.24 },
+    { limit: 250500, rate: 0.32 },
+    { limit: 626350, rate: 0.35 },
+    { limit: Infinity, rate: 0.37 }
+  ];
+
+  const STANDARD_DEDUCTIONS: Record<string, number> = {
+    single: 15000,
+    mfj: 30000,
+    hoh: 22500
+  };
+
+  const SS_WAGE_CAP = 168600;
+
+  function getBrackets(status: string) {
+    if (status === 'mfj') return BRACKETS_MFJ;
+    if (status === 'hoh') return BRACKETS_HOH;
+    return BRACKETS_SINGLE;
+  }
+
+  function calcFederalIncomeTax(taxableIncome: number, status: string): number {
+    if (taxableIncome <= 0) return 0;
+    const brackets = getBrackets(status);
+    let tax = 0;
+    let prev = 0;
+    for (const b of brackets) {
+      if (taxableIncome <= prev) break;
+      const taxable = Math.min(taxableIncome, b.limit) - prev;
+      tax += taxable * b.rate;
+      prev = b.limit;
+    }
+    return tax;
+  }
+
+  function formatCurrency(n: number): string {
+    return '$' + Math.round(n).toLocaleString('en-US');
+  }
+
+  function getNextDueDate(): { label: string; date: string } {
+    const now = new Date();
+    const dues = [
+      { label: 'Q1', date: 'April 15, 2026', d: new Date(2026, 3, 15) },
+      { label: 'Q2', date: 'June 16, 2026', d: new Date(2026, 5, 16) },
+      { label: 'Q3', date: 'September 15, 2026', d: new Date(2026, 8, 15) },
+      { label: 'Q4', date: 'January 15, 2027', d: new Date(2027, 0, 15) }
+    ];
+    for (const due of dues) {
+      if (now <= due.d) return { label: due.label, date: due.date };
+    }
+    return { label: 'Q1 (2027)', date: 'April 15, 2027' };
+  }
+
+  function calculate() {
+    const income1099 = parseFloat((document.getElementById('income-input') as HTMLInputElement).value) || 0;
+    const expenses = parseFloat((document.getElementById('expenses-input') as HTMLInputElement).value) || 0;
+    const filingStatus = (document.getElementById('filing-status') as HTMLSelectElement).value;
+    const state = (document.getElementById('state-select') as HTMLSelectElement).value;
+    const w2Income = parseFloat((document.getElementById('w2-input') as HTMLInputElement).value) || 0;
+
+    if (income1099 <= 0) {
+      document.getElementById('summary-card')!.style.display = 'none';
+      document.getElementById('results-grid')!.style.display = 'none';
+      document.getElementById('chart-card')!.style.display = 'none';
+      document.getElementById('due-dates-card')!.style.display = 'none';
+      return;
+    }
+
+    // Net self-employment income
+    const netSEIncome = Math.max(income1099 - expenses, 0);
+
+    // Self-employment tax
+    const seTaxableIncome = netSEIncome * 0.9235;
+    const ssIncome = Math.min(seTaxableIncome, SS_WAGE_CAP);
+    const ssTax = ssIncome * 0.124;
+    const medicareTax = seTaxableIncome * 0.029;
+    const seTax = ssTax + medicareTax;
+
+    // SE tax deduction (50%)
+    const seTaxDeduction = seTax * 0.5;
+
+    // AGI
+    const agi = netSEIncome - seTaxDeduction + w2Income;
+
+    // Taxable income after standard deduction
+    const standardDeduction = STANDARD_DEDUCTIONS[filingStatus] || 15000;
+    const taxableIncome = Math.max(agi - standardDeduction, 0);
+
+    // Federal income tax
+    const federalTax = calcFederalIncomeTax(taxableIncome, filingStatus);
+
+    // State income tax
+    const stateRate = STATE_TAX_RATES[state] || 0;
+    const stateTax = agi * stateRate;
+
+    // Totals
+    const totalAnnualTax = seTax + federalTax + stateTax;
+    const quarterlyPayment = totalAnnualTax / 4;
+    const effectiveRate = netSEIncome + w2Income > 0 ? (totalAnnualTax / (netSEIncome + w2Income)) * 100 : 0;
+
+    // Show cards
+    document.getElementById('summary-card')!.style.display = 'block';
+    document.getElementById('results-grid')!.style.display = 'grid';
+    document.getElementById('chart-card')!.style.display = 'block';
+    document.getElementById('due-dates-card')!.style.display = 'block';
+
+    // Summary
+    document.getElementById('quarterly-amount')!.textContent = formatCurrency(quarterlyPayment);
+    document.getElementById('annual-tax')!.textContent = formatCurrency(totalAnnualTax);
+    document.getElementById('effective-rate')!.textContent = effectiveRate.toFixed(1) + '%';
+
+    // Breakdown
+    document.getElementById('se-tax-amount')!.textContent = formatCurrency(seTax);
+    document.getElementById('ss-amount')!.textContent = formatCurrency(ssTax);
+    document.getElementById('medicare-amount')!.textContent = formatCurrency(medicareTax);
+    document.getElementById('federal-tax-amount')!.textContent = formatCurrency(federalTax);
+    document.getElementById('state-tax-amount')!.textContent = formatCurrency(stateTax);
+
+    if (stateRate === 0) {
+      document.getElementById('state-tip')!.textContent = 'Your state has no income tax. Lucky you!';
+    } else {
+      document.getElementById('state-tip')!.textContent = `Estimated using ${state}'s approximate effective rate of ${(stateRate * 100).toFixed(1)}%.`;
+    }
+
+    // Bars (proportional to total)
+    const maxTax = Math.max(seTax, federalTax, stateTax, 1);
+    (document.getElementById('bar-se') as HTMLElement).style.width = ((seTax / maxTax) * 100) + '%';
+    (document.getElementById('bar-federal') as HTMLElement).style.width = ((federalTax / maxTax) * 100) + '%';
+    (document.getElementById('bar-state') as HTMLElement).style.width = ((stateTax / maxTax) * 100) + '%';
+
+    // Chart bars
+    const chartMax = Math.max(seTax + federalTax + stateTax, 1);
+    (document.getElementById('chart-bar-se') as HTMLElement).style.width = ((seTax / chartMax) * 100) + '%';
+    (document.getElementById('chart-bar-federal') as HTMLElement).style.width = ((federalTax / chartMax) * 100) + '%';
+    (document.getElementById('chart-bar-state') as HTMLElement).style.width = ((stateTax / chartMax) * 100) + '%';
+    document.getElementById('chart-val-se')!.textContent = formatCurrency(seTax);
+    document.getElementById('chart-val-federal')!.textContent = formatCurrency(federalTax);
+    document.getElementById('chart-val-state')!.textContent = formatCurrency(stateTax);
+
+    // Due dates
+    const qAmt = formatCurrency(quarterlyPayment);
+    document.getElementById('q1-amount')!.textContent = qAmt;
+    document.getElementById('q2-amount')!.textContent = qAmt;
+    document.getElementById('q3-amount')!.textContent = qAmt;
+    document.getElementById('q4-amount')!.textContent = qAmt;
+
+    const nextDue = getNextDueDate();
+    document.getElementById('next-due')!.textContent = `Next quarterly payment due: ${nextDue.date} (${nextDue.label})`;
+
+    // Highlight next due date
+    const qMap: Record<string, string> = { Q1: 'q1-due', Q2: 'q2-due', Q3: 'q3-due', Q4: 'q4-due' };
+    ['q1-due','q2-due','q3-due','q4-due'].forEach(id => {
+      (document.getElementById(id) as HTMLElement).style.background = '#f8f9fb';
+    });
+    const nextId = qMap[nextDue.label];
+    if (nextId) {
+      (document.getElementById(nextId) as HTMLElement).style.background = 'linear-gradient(135deg, #ecfdf5, #f0fdfa)';
+    }
+  }
+
+  document.getElementById('calc-button')!.addEventListener('click', calculate);
+
+  // Also calculate on Enter key
+  document.querySelectorAll('.calc-card input, .calc-card select').forEach(el => {
+    el.addEventListener('keydown', (e: Event) => {
+      if ((e as KeyboardEvent).key === 'Enter') {
+        e.preventDefault();
+        calculate();
+      }
+    });
+  });
+</script>

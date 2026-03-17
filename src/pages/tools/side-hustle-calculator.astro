@@ -1,0 +1,1041 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const title = 'Side Hustle Profit Calculator — What Do You Really Take Home?';
+const description = 'Calculate your actual take-home pay from any side hustle after taxes, expenses, and time invested. See your real hourly rate. Free, no signup.';
+---
+
+<BaseLayout title={title} description={description}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Side Hustle Profit Calculator",
+      "url": "https://gettidyflow.com/tools/side-hustle-calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "description": description
+    })} />
+  </Fragment>
+
+  <section class="tool-hero">
+    <div class="tool-hero-inner">
+      <span class="tool-badge">Free Tool — No Signup Required</span>
+      <h1>Side Hustle <span class="gradient-text">Profit Calculator</span></h1>
+      <p class="tool-subtitle">Find out what you actually take home from your side hustle after self-employment taxes, expenses, and time invested. Know your real hourly rate before you burn out.</p>
+    </div>
+  </section>
+
+  <section class="tool-app">
+    <div class="tool-container">
+      <!-- Revenue -->
+      <div class="calc-card">
+        <label for="revenue-input" class="input-label">Monthly Side Hustle Revenue</label>
+        <div class="input-wrapper">
+          <span class="currency-symbol">$</span>
+          <input
+            type="number"
+            id="revenue-input"
+            placeholder="e.g. 2,000"
+            min="0"
+            step="100"
+            aria-label="Monthly side hustle revenue in dollars"
+          />
+        </div>
+      </div>
+
+      <!-- Expenses -->
+      <div class="calc-card">
+        <label class="input-label">Monthly Side Hustle Expenses</label>
+        <div class="expense-categories">
+          <div class="expense-row">
+            <label for="expense-supplies" class="expense-label">Supplies</label>
+            <div class="input-wrapper input-wrapper-sm">
+              <span class="currency-symbol currency-symbol-sm">$</span>
+              <input type="number" id="expense-supplies" class="expense-input" placeholder="0" min="0" step="10" aria-label="Monthly supplies expense" />
+            </div>
+          </div>
+          <div class="expense-row">
+            <label for="expense-software" class="expense-label">Software / Tools</label>
+            <div class="input-wrapper input-wrapper-sm">
+              <span class="currency-symbol currency-symbol-sm">$</span>
+              <input type="number" id="expense-software" class="expense-input" placeholder="0" min="0" step="10" aria-label="Monthly software and tools expense" />
+            </div>
+          </div>
+          <div class="expense-row">
+            <label for="expense-marketing" class="expense-label">Marketing</label>
+            <div class="input-wrapper input-wrapper-sm">
+              <span class="currency-symbol currency-symbol-sm">$</span>
+              <input type="number" id="expense-marketing" class="expense-input" placeholder="0" min="0" step="10" aria-label="Monthly marketing expense" />
+            </div>
+          </div>
+          <div class="expense-row">
+            <label for="expense-travel" class="expense-label">Gas / Travel</label>
+            <div class="input-wrapper input-wrapper-sm">
+              <span class="currency-symbol currency-symbol-sm">$</span>
+              <input type="number" id="expense-travel" class="expense-input" placeholder="0" min="0" step="10" aria-label="Monthly gas and travel expense" />
+            </div>
+          </div>
+          <div class="expense-row">
+            <label for="expense-other" class="expense-label">Other</label>
+            <div class="input-wrapper input-wrapper-sm">
+              <span class="currency-symbol currency-symbol-sm">$</span>
+              <input type="number" id="expense-other" class="expense-input" placeholder="0" min="0" step="10" aria-label="Other monthly expenses" />
+            </div>
+          </div>
+          <div class="expense-total-row">
+            <span class="expense-label expense-label-total">Total Expenses</span>
+            <span class="expense-total-value" id="total-expenses">$0</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hours -->
+      <div class="calc-card">
+        <label for="hours-input" class="input-label">Hours Per Week on Side Hustle</label>
+        <div class="input-wrapper">
+          <input
+            type="number"
+            id="hours-input"
+            placeholder="e.g. 15"
+            min="0"
+            max="168"
+            step="1"
+            aria-label="Hours per week spent on side hustle"
+          />
+        </div>
+      </div>
+
+      <!-- Tax Info -->
+      <div class="calc-card">
+        <div class="tax-grid">
+          <div>
+            <label for="filing-status" class="input-label">Filing Status</label>
+            <select id="filing-status" aria-label="Tax filing status">
+              <option value="single">Single</option>
+              <option value="married">Married Filing Jointly</option>
+            </select>
+          </div>
+          <div>
+            <label for="primary-income" class="input-label">Primary Job Annual Income</label>
+            <div class="input-wrapper input-wrapper-sm">
+              <span class="currency-symbol currency-symbol-sm">$</span>
+              <input type="number" id="primary-income" placeholder="e.g. 55,000" min="0" step="1000" aria-label="Primary job annual income in dollars" />
+            </div>
+          </div>
+          <div>
+            <label for="state-tax" class="input-label">State Tax Rate (%)</label>
+            <div class="input-wrapper input-wrapper-sm">
+              <input type="number" id="state-tax" placeholder="5" min="0" max="15" step="0.1" value="5" aria-label="State income tax rate percentage" />
+              <span class="percent-symbol">%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button id="calculate-btn" class="calculate-button" aria-label="Calculate side hustle profit">Calculate My Real Profit</button>
+
+      <!-- Results -->
+      <div id="results-section" style="display:none;">
+        <!-- Hero stat -->
+        <div class="hero-stat-card" id="hero-stat-card">
+          <p class="hero-stat-label">Your Real Hourly Rate</p>
+          <p class="hero-stat-value" id="real-hourly-rate">$0/hr</p>
+          <p class="hero-stat-comparison" id="wage-comparison"></p>
+        </div>
+
+        <!-- Monthly Breakdown -->
+        <div class="breakdown-card">
+          <h3>Monthly Breakdown</h3>
+          <div class="breakdown-rows">
+            <div class="breakdown-row">
+              <span>Gross Revenue</span>
+              <span class="breakdown-value" id="res-gross">$0</span>
+            </div>
+            <div class="breakdown-row breakdown-subtract">
+              <span>- Expenses</span>
+              <span class="breakdown-value" id="res-expenses">$0</span>
+            </div>
+            <div class="breakdown-row breakdown-subtotal">
+              <span>= Net Profit</span>
+              <span class="breakdown-value" id="res-net">$0</span>
+            </div>
+            <div class="breakdown-row breakdown-subtract">
+              <span>- Self-Employment Tax (15.3%)</span>
+              <span class="breakdown-value" id="res-se-tax">$0</span>
+            </div>
+            <div class="breakdown-row breakdown-subtract">
+              <span>- Federal Income Tax</span>
+              <span class="breakdown-value" id="res-fed-tax">$0</span>
+            </div>
+            <div class="breakdown-row breakdown-subtract">
+              <span>- State Tax</span>
+              <span class="breakdown-value" id="res-state-tax">$0</span>
+            </div>
+            <div class="breakdown-row breakdown-total">
+              <span>= Take-Home Profit</span>
+              <span class="breakdown-value" id="res-take-home">$0</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Annual Projection -->
+        <div class="annual-card">
+          <h3>Annual Projection</h3>
+          <div class="annual-grid">
+            <div class="annual-item">
+              <span class="annual-label">Gross Revenue</span>
+              <span class="annual-value" id="annual-gross">$0</span>
+            </div>
+            <div class="annual-item">
+              <span class="annual-label">Total Expenses</span>
+              <span class="annual-value" id="annual-expenses">$0</span>
+            </div>
+            <div class="annual-item">
+              <span class="annual-label">Total Taxes</span>
+              <span class="annual-value" id="annual-taxes">$0</span>
+            </div>
+            <div class="annual-item annual-total-item">
+              <span class="annual-label">Annual Take-Home</span>
+              <span class="annual-value" id="annual-take-home">$0</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Is it worth it? -->
+        <div class="worth-card" id="worth-card">
+          <h3>Is It Worth It?</h3>
+          <p id="worth-message"></p>
+        </div>
+
+        <!-- Pie Chart -->
+        <div class="chart-card">
+          <h3>Where Does Your Revenue Go?</h3>
+          <div class="pie-container">
+            <div class="pie-chart" id="pie-chart" role="img" aria-label="Pie chart showing revenue breakdown"></div>
+            <div class="pie-legend" id="pie-legend"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool-cta">
+    <div class="tool-container">
+      <div class="cta-card">
+        <h2>Track Every Dollar of Your Side Hustle</h2>
+        <p>Knowing your profit margin is step one. Staying profitable month after month requires <strong>tracking every expense and income stream</strong>. Our Freelancer Expense Tracker does the heavy lifting for you.</p>
+        <a href="https://gettidyflow.gumroad.com/l/freelancer-expense-tracker" target="_blank" rel="noopener" class="cta-button">Get the Expense Tracker &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool-content">
+    <div class="tool-container content-narrow">
+      <h2>Why You Need to Know Your Real Side Hustle Profit</h2>
+      <p>Most side hustlers focus on the top-line number — "I made $2,000 this month!" — without subtracting the expenses, taxes, and time that eat into their earnings. This is a dangerous blind spot. Without knowing your real take-home profit, you cannot make informed decisions about pricing, time allocation, or whether the hustle is even worth continuing.</p>
+      <p>Your real hourly rate is the single most important number in your side hustle. It tells you whether you are building wealth or just staying busy. If you are earning $8 per hour after taxes on a side project while your day job pays $30 per hour in overtime, you are losing money by side hustling. This calculator strips away the illusions and shows you the hard truth.</p>
+      <p>Knowing your real profit also helps you set better prices. Many freelancers and gig workers undercharge because they forget to account for self-employment taxes, which add 15.3% on top of regular income taxes. Once you see the full picture, you can raise your rates with confidence — or pivot to a more profitable hustle entirely.</p>
+
+      <h2>The Hidden Tax Burden of Side Hustles</h2>
+      <p>When you work a traditional W-2 job, your employer pays half of your Social Security and Medicare taxes. When you are self-employed — even as a side hustler — you pay <strong>both halves</strong>. This is called the self-employment (SE) tax, and it is 15.3% of 92.35% of your net earnings. That is a massive bite that most people do not see coming.</p>
+      <p>Here is how the SE tax breaks down: 12.4% goes to Social Security (on income up to $168,600 in 2025) and 2.9% goes to Medicare (no income limit). On top of that, your side hustle income gets added to your W-2 income for federal and state income tax purposes. If your day job puts you in the 22% federal bracket, every dollar from your side hustle is taxed at that rate — or higher if it pushes you into the next bracket.</p>
+      <p>The good news? You can deduct half of your SE tax from your adjusted gross income, and you can deduct legitimate business expenses to lower your taxable profit. But you need to <a href="/tools/freelancer-tax-calculator">estimate your tax liability</a> proactively so you are not blindsided at filing time. The IRS expects quarterly estimated tax payments if you owe more than $1,000 in taxes for the year.</p>
+
+      <h2>Top Side Hustle Expenses You Can Deduct</h2>
+      <p>Every dollar you deduct reduces your taxable income, which means lower self-employment and income taxes. Here are the most common deductible expenses for side hustlers:</p>
+      <ul>
+        <li><strong>Home office</strong> — If you use a dedicated space exclusively for your side hustle, you can deduct a portion of rent, utilities, and internet. The simplified method allows $5 per square foot, up to 300 square feet ($1,500 max).</li>
+        <li><strong>Software and tools</strong> — Subscriptions to platforms like Canva, QuickBooks, Shopify, or any tool directly used for your hustle.</li>
+        <li><strong>Supplies and materials</strong> — Physical products, packaging, shipping materials, and raw materials for handmade goods.</li>
+        <li><strong>Vehicle and mileage</strong> — If you drive for your side hustle (deliveries, client visits), you can deduct 67 cents per mile (2024 rate) or actual vehicle expenses.</li>
+        <li><strong>Marketing and advertising</strong> — Social media ads, business cards, website hosting, and domain registration.</li>
+        <li><strong>Education and training</strong> — Courses, books, and conferences directly related to improving your side hustle skills.</li>
+        <li><strong>Phone and internet</strong> — The business-use percentage of your cell phone bill and home internet.</li>
+      </ul>
+      <p>Keep receipts and records for everything. A tool like the <a href="https://gettidyflow.gumroad.com/l/freelancer-expense-tracker" target="_blank" rel="noopener">Freelancer Expense Tracker</a> or a <a href="/blog/track-multiple-income-streams-notion/">Notion-based tracking system</a> makes tax time painless instead of panic-inducing.</p>
+
+      <h2>When Does a Side Hustle Become a Business?</h2>
+      <p>The IRS does not have a strict income threshold that converts a hobby into a business. Instead, they look at your <strong>intent to make a profit</strong>. If you are actively trying to earn money, tracking income and expenses, and operating in a businesslike manner, the IRS considers it a business — even if you are not profitable yet.</p>
+      <p>The key factors the IRS evaluates include: whether you depend on the income, whether you keep business records, whether you have expertise in the field, and whether you have made a profit in at least 3 of the last 5 years. If the IRS reclassifies your side hustle as a hobby, you lose the ability to deduct expenses against the income.</p>
+      <p>Once your side hustle consistently earns over $400 per year in net profit, you are required to file a Schedule SE and pay self-employment taxes. At higher income levels, it may be worth forming an LLC or S-Corp for liability protection and potential tax savings. Consult a tax professional when your annual side hustle profit exceeds $20,000 to explore these options.</p>
+      <p>Want to <a href="/tools/budget-calculator">budget your combined income</a> from your day job and side hustle? Use our 50/30/20 calculator to find the right balance between spending, saving, and investing.</p>
+
+      <h2>Frequently Asked Questions</h2>
+      <details>
+        <summary>Do I have to pay taxes on side hustle income under $600?</summary>
+        <p>Yes. The $600 threshold only applies to whether a platform (like Venmo or Etsy) is required to send you a 1099 form. You are legally required to report <strong>all income</strong> regardless of amount. If your net self-employment earnings exceed $400 for the year, you must pay self-employment taxes on it.</p>
+      </details>
+      <details>
+        <summary>What's the self-employment tax rate?</summary>
+        <p>The self-employment tax rate is <strong>15.3%</strong>, applied to 92.35% of your net earnings. This consists of 12.4% for Social Security and 2.9% for Medicare. You can deduct half of this amount from your adjusted gross income when filing your return, but you still need to pay the full amount.</p>
+      </details>
+      <details>
+        <summary>Can I deduct my phone and internet for my side hustle?</summary>
+        <p>Yes, but only the <strong>business-use percentage</strong>. If you use your phone 30% for side hustle activities, you can deduct 30% of your phone bill. Keep a log of business versus personal usage to support your deduction in case of an audit. The same principle applies to home internet.</p>
+      </details>
+      <details>
+        <summary>How do I track side hustle expenses?</summary>
+        <p>Use a dedicated system — either a spreadsheet, accounting software like Wave or QuickBooks Self-Employed, or a <a href="/blog/track-multiple-income-streams-notion/">Notion-based tracker</a>. The key is to record expenses as they happen, categorize them properly, and keep digital copies of receipts. Mixing personal and business finances is the number one mistake side hustlers make.</p>
+      </details>
+      <details>
+        <summary>Should I form an LLC for my side hustle?</summary>
+        <p>An LLC provides <strong>liability protection</strong> — separating your personal assets from business debts. It does not automatically change your tax situation (single-member LLCs are taxed the same as sole proprietors). Consider forming an LLC when your side hustle involves client work, physical products, or significant financial risk. Once you earn consistently over $40,000-$50,000 in profit, talk to a CPA about electing S-Corp status for potential tax savings on the self-employment portion.</p>
+      </details>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .tool-hero {
+    background: linear-gradient(135deg, #d97706 0%, #ea580c 100%);
+    padding: 4rem 1.5rem 3rem;
+    text-align: center;
+    color: #fff;
+  }
+  .tool-hero-inner {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .tool-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(4px);
+    padding: 0.35rem 1rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+  }
+  .tool-hero h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 800;
+    line-height: 1.15;
+    margin: 0 0 1rem;
+  }
+  .gradient-text {
+    background: linear-gradient(90deg, #fef3c7, #ffedd5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .tool-subtitle {
+    font-size: 1.1rem;
+    opacity: 0.92;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .tool-app {
+    padding: 2.5rem 1.5rem;
+    background: #f8f9fb;
+  }
+  .tool-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .calc-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    margin-bottom: 1.25rem;
+  }
+  .input-label {
+    display: block;
+    font-weight: 700;
+    font-size: 1.05rem;
+    margin-bottom: 0.75rem;
+    color: #1a1a2e;
+  }
+  .input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .input-wrapper-sm {
+    max-width: 200px;
+  }
+  .currency-symbol {
+    position: absolute;
+    left: 1rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #d97706;
+  }
+  .currency-symbol-sm {
+    font-size: 1rem;
+    left: 0.75rem;
+  }
+  .percent-symbol {
+    position: absolute;
+    right: 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #d97706;
+  }
+
+  #revenue-input,
+  #hours-input {
+    width: 100%;
+    padding: 1rem 1rem 1rem 2.75rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    transition: border-color 0.2s;
+    outline: none;
+    font-family: inherit;
+    color: #1a1a2e;
+  }
+  #hours-input {
+    padding-left: 1rem;
+  }
+  #revenue-input:focus,
+  #hours-input:focus {
+    border-color: #d97706;
+    box-shadow: 0 0 0 3px rgba(217,119,6,0.15);
+  }
+  #revenue-input::placeholder,
+  #hours-input::placeholder {
+    color: #a0aec0;
+    font-weight: 400;
+  }
+
+  .expense-categories {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .expense-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  .expense-label {
+    font-size: 0.95rem;
+    color: #555;
+    font-weight: 500;
+    min-width: 120px;
+  }
+  .expense-label-total {
+    font-weight: 700;
+    color: #1a1a2e;
+  }
+  .expense-input {
+    width: 100%;
+    padding: 0.65rem 0.65rem 0.65rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    transition: border-color 0.2s;
+    outline: none;
+    font-family: inherit;
+    color: #1a1a2e;
+  }
+  .expense-input:focus {
+    border-color: #d97706;
+    box-shadow: 0 0 0 3px rgba(217,119,6,0.15);
+  }
+  .expense-input::placeholder {
+    color: #a0aec0;
+    font-weight: 400;
+  }
+  .expense-total-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0.75rem;
+    border-top: 2px solid #f0f0f5;
+  }
+  .expense-total-value {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #ea580c;
+  }
+
+  .tax-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+  .tax-grid > div:first-child {
+    grid-column: 1 / -1;
+  }
+  #filing-status {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    outline: none;
+    font-family: inherit;
+    color: #1a1a2e;
+    background: #fff;
+    cursor: pointer;
+  }
+  #filing-status:focus {
+    border-color: #d97706;
+    box-shadow: 0 0 0 3px rgba(217,119,6,0.15);
+  }
+  #primary-income,
+  #state-tax {
+    width: 100%;
+    padding: 0.65rem 0.65rem 0.65rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    transition: border-color 0.2s;
+    outline: none;
+    font-family: inherit;
+    color: #1a1a2e;
+  }
+  #state-tax {
+    padding-left: 0.65rem;
+    padding-right: 2.5rem;
+  }
+  #primary-income:focus,
+  #state-tax:focus {
+    border-color: #d97706;
+    box-shadow: 0 0 0 3px rgba(217,119,6,0.15);
+  }
+  #primary-income::placeholder,
+  #state-tax::placeholder {
+    color: #a0aec0;
+    font-weight: 400;
+  }
+
+  .calculate-button {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(135deg, #d97706 0%, #ea580c 100%);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    font-family: inherit;
+    margin-bottom: 2rem;
+  }
+  .calculate-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(217,119,6,0.3);
+  }
+  .calculate-button:active {
+    transform: translateY(0);
+  }
+
+  /* Results */
+  .hero-stat-card {
+    background: linear-gradient(135deg, #d97706 0%, #ea580c 100%);
+    border-radius: 20px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 1.25rem;
+  }
+  .hero-stat-label {
+    margin: 0 0 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    opacity: 0.9;
+  }
+  .hero-stat-value {
+    margin: 0 0 0.75rem;
+    font-size: clamp(2.5rem, 7vw, 4rem);
+    font-weight: 900;
+    line-height: 1.1;
+  }
+  .hero-stat-comparison {
+    margin: 0;
+    font-size: 1.05rem;
+    font-weight: 600;
+    padding: 0.35rem 1rem;
+    border-radius: 999px;
+    display: inline-block;
+  }
+  .comparison-above {
+    background: rgba(255,255,255,0.25);
+    color: #fff;
+  }
+  .comparison-below {
+    background: rgba(0,0,0,0.2);
+    color: #fef3c7;
+  }
+
+  .breakdown-card,
+  .annual-card,
+  .worth-card,
+  .chart-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    margin-bottom: 1.25rem;
+  }
+  .breakdown-card h3,
+  .annual-card h3,
+  .worth-card h3,
+  .chart-card h3 {
+    margin: 0 0 1.25rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1a1a2e;
+  }
+
+  .breakdown-rows {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .breakdown-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.6rem 0;
+    font-size: 0.95rem;
+    color: #555;
+    border-bottom: 1px solid #f0f0f5;
+  }
+  .breakdown-row:last-child {
+    border-bottom: none;
+  }
+  .breakdown-value {
+    font-weight: 700;
+    color: #1a1a2e;
+  }
+  .breakdown-subtract {
+    color: #999;
+  }
+  .breakdown-subtract .breakdown-value {
+    color: #dc2626;
+  }
+  .breakdown-subtotal {
+    font-weight: 600;
+    color: #1a1a2e;
+    background: #fafafa;
+    padding: 0.6rem 0.5rem;
+    border-radius: 6px;
+  }
+  .breakdown-total {
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: #1a1a2e;
+    background: linear-gradient(135deg, #fffbeb, #fff7ed);
+    padding: 0.75rem 0.5rem;
+    border-radius: 8px;
+    margin-top: 0.25rem;
+  }
+  .breakdown-total .breakdown-value {
+    color: #d97706;
+    font-size: 1.15rem;
+  }
+
+  .annual-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+  .annual-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 1rem;
+    background: #f8f9fb;
+    border-radius: 10px;
+  }
+  .annual-label {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  .annual-value {
+    font-weight: 700;
+    color: #1a1a2e;
+  }
+  .annual-total-item {
+    grid-column: 1 / -1;
+    background: linear-gradient(135deg, #d97706 0%, #ea580c 100%);
+    color: #fff;
+  }
+  .annual-total-item .annual-label,
+  .annual-total-item .annual-value {
+    color: #fff;
+  }
+
+  .worth-card p {
+    margin: 0;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #444;
+  }
+  .worth-positive {
+    border-left: 5px solid #16a34a;
+  }
+  .worth-neutral {
+    border-left: 5px solid #d97706;
+  }
+  .worth-negative {
+    border-left: 5px solid #dc2626;
+  }
+
+  .pie-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .pie-chart {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .pie-legend {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: #555;
+  }
+  .legend-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 4px;
+    flex-shrink: 0;
+  }
+
+  /* CTA */
+  .tool-cta {
+    padding: 2.5rem 1.5rem;
+    background: #fff;
+  }
+  .cta-card {
+    max-width: 800px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #d97706 0%, #ea580c 100%);
+    border-radius: 20px;
+    padding: 2.5rem;
+    text-align: center;
+    color: #fff;
+  }
+  .cta-card h2 {
+    margin: 0 0 0.75rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+  }
+  .cta-card p {
+    margin: 0 0 1.5rem;
+    opacity: 0.92;
+    line-height: 1.6;
+  }
+  .cta-button {
+    display: inline-block;
+    background: #fff;
+    color: #d97706;
+    font-weight: 700;
+    padding: 0.85rem 2rem;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  }
+
+  /* Content */
+  .tool-content {
+    padding: 3rem 1.5rem 4rem;
+    background: #f8f9fb;
+  }
+  .content-narrow {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .tool-content h2 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #1a1a2e;
+    margin: 2.5rem 0 0.75rem;
+  }
+  .tool-content h2:first-child {
+    margin-top: 0;
+  }
+  .tool-content p,
+  .tool-content li {
+    font-size: 1.02rem;
+    line-height: 1.7;
+    color: #444;
+  }
+  .tool-content ul,
+  .tool-content ol {
+    padding-left: 1.25rem;
+    margin: 0.5rem 0 1rem;
+  }
+  .tool-content li {
+    margin-bottom: 0.35rem;
+  }
+  .tool-content a {
+    color: #d97706;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .tool-content details {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 0.75rem;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  }
+  .tool-content summary {
+    font-weight: 600;
+    cursor: pointer;
+    color: #1a1a2e;
+    font-size: 1.02rem;
+  }
+  .tool-content details p {
+    margin: 0.75rem 0 0;
+  }
+
+  @media (max-width: 640px) {
+    .tax-grid {
+      grid-template-columns: 1fr;
+    }
+    .tax-grid > div:first-child {
+      grid-column: auto;
+    }
+    .annual-grid {
+      grid-template-columns: 1fr;
+    }
+    .cta-card {
+      padding: 2rem 1.5rem;
+    }
+    .expense-row {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0.35rem;
+    }
+    .input-wrapper-sm {
+      max-width: 100%;
+    }
+    .pie-container {
+      flex-direction: column;
+    }
+  }
+</style>
+
+<script>
+  const revenueInput = document.getElementById('revenue-input') as HTMLInputElement;
+  const expenseInputs = document.querySelectorAll('.expense-input') as NodeListOf<HTMLInputElement>;
+  const hoursInput = document.getElementById('hours-input') as HTMLInputElement;
+  const filingSelect = document.getElementById('filing-status') as HTMLSelectElement;
+  const primaryIncomeInput = document.getElementById('primary-income') as HTMLInputElement;
+  const stateTaxInput = document.getElementById('state-tax') as HTMLInputElement;
+  const calcBtn = document.getElementById('calculate-btn') as HTMLButtonElement;
+  const resultsSection = document.getElementById('results-section')!;
+
+  function formatCurrency(n: number): string {
+    return '$' + n.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+  }
+
+  function getTotalExpenses(): number {
+    let total = 0;
+    expenseInputs.forEach(input => {
+      total += parseFloat(input.value) || 0;
+    });
+    return total;
+  }
+
+  // Update total expenses display on any expense input change
+  expenseInputs.forEach(input => {
+    input.addEventListener('input', () => {
+      document.getElementById('total-expenses')!.textContent = formatCurrency(getTotalExpenses());
+    });
+  });
+
+  // 2025 federal tax brackets
+  function getFederalMarginalRate(taxableIncome: number, status: string): number {
+    if (status === 'married') {
+      if (taxableIncome <= 23200) return 0.10;
+      if (taxableIncome <= 94300) return 0.12;
+      if (taxableIncome <= 201050) return 0.22;
+      if (taxableIncome <= 383900) return 0.24;
+      if (taxableIncome <= 487450) return 0.32;
+      if (taxableIncome <= 731200) return 0.35;
+      return 0.37;
+    } else {
+      if (taxableIncome <= 11600) return 0.10;
+      if (taxableIncome <= 47150) return 0.12;
+      if (taxableIncome <= 100525) return 0.22;
+      if (taxableIncome <= 191950) return 0.24;
+      if (taxableIncome <= 243725) return 0.32;
+      if (taxableIncome <= 609350) return 0.35;
+      return 0.37;
+    }
+  }
+
+  function calculate(): void {
+    const revenue = parseFloat(revenueInput.value) || 0;
+    const expenses = getTotalExpenses();
+    const hoursPerWeek = parseFloat(hoursInput.value) || 0;
+    const primaryIncome = parseFloat(primaryIncomeInput.value) || 0;
+    const stateTaxRate = (parseFloat(stateTaxInput.value) || 5) / 100;
+    const status = filingSelect.value;
+
+    if (revenue <= 0 || hoursPerWeek <= 0) {
+      resultsSection.style.display = 'none';
+      return;
+    }
+
+    const netMonthlyProfit = revenue - expenses;
+    if (netMonthlyProfit <= 0) {
+      // Still show results even if unprofitable
+    }
+
+    const netAnnualProfit = netMonthlyProfit * 12;
+
+    // Self-employment tax: 15.3% on 92.35% of net profit
+    const seBase = Math.max(0, netAnnualProfit * 0.9235);
+    const seTaxAnnual = seBase * 0.153;
+    const seTaxMonthly = seTaxAnnual / 12;
+
+    // Deduction: half of SE tax from AGI
+    const seDeduction = seTaxAnnual / 2;
+
+    // Federal income tax on side hustle at marginal rate
+    const combinedIncome = primaryIncome + Math.max(0, netAnnualProfit) - seDeduction;
+    const marginalRate = getFederalMarginalRate(combinedIncome, status);
+    const fedTaxAnnual = Math.max(0, netAnnualProfit - seDeduction) * marginalRate;
+    const fedTaxMonthly = fedTaxAnnual / 12;
+
+    // State tax
+    const stateTaxAnnual = Math.max(0, netAnnualProfit) * stateTaxRate;
+    const stateTaxMonthly = stateTaxAnnual / 12;
+
+    // Take-home
+    const totalTaxMonthly = seTaxMonthly + fedTaxMonthly + stateTaxMonthly;
+    const takeHomeMonthly = netMonthlyProfit - totalTaxMonthly;
+    const takeHomeAnnual = takeHomeMonthly * 12;
+
+    // Real hourly rate
+    const monthlyHours = hoursPerWeek * 4.33;
+    const realHourlyRate = monthlyHours > 0 ? takeHomeMonthly / monthlyHours : 0;
+
+    resultsSection.style.display = 'block';
+
+    // Hero stat
+    document.getElementById('real-hourly-rate')!.textContent = formatCurrency(Math.round(realHourlyRate * 100) / 100) + '/hr';
+
+    const comparison = document.getElementById('wage-comparison')!;
+    if (realHourlyRate >= 7.25) {
+      comparison.textContent = `That's ${formatCurrency(Math.round((realHourlyRate - 7.25) * 100) / 100)} above federal minimum wage ($7.25/hr)`;
+      comparison.className = 'hero-stat-comparison comparison-above';
+    } else {
+      comparison.textContent = `That's ${formatCurrency(Math.round((7.25 - realHourlyRate) * 100) / 100)} below federal minimum wage ($7.25/hr)`;
+      comparison.className = 'hero-stat-comparison comparison-below';
+    }
+
+    // Monthly breakdown
+    document.getElementById('res-gross')!.textContent = formatCurrency(revenue);
+    document.getElementById('res-expenses')!.textContent = formatCurrency(expenses);
+    document.getElementById('res-net')!.textContent = formatCurrency(Math.round(netMonthlyProfit));
+    document.getElementById('res-se-tax')!.textContent = formatCurrency(Math.round(seTaxMonthly));
+    document.getElementById('res-fed-tax')!.textContent = formatCurrency(Math.round(fedTaxMonthly));
+    document.getElementById('res-state-tax')!.textContent = formatCurrency(Math.round(stateTaxMonthly));
+    document.getElementById('res-take-home')!.textContent = formatCurrency(Math.round(takeHomeMonthly));
+
+    // Annual
+    document.getElementById('annual-gross')!.textContent = formatCurrency(revenue * 12);
+    document.getElementById('annual-expenses')!.textContent = formatCurrency(expenses * 12);
+    document.getElementById('annual-taxes')!.textContent = formatCurrency(Math.round(seTaxAnnual + fedTaxAnnual + stateTaxAnnual));
+    document.getElementById('annual-take-home')!.textContent = formatCurrency(Math.round(takeHomeAnnual));
+
+    // Worth-it assessment
+    const worthCard = document.getElementById('worth-card')!;
+    const worthMsg = document.getElementById('worth-message')!;
+    worthCard.classList.remove('worth-positive', 'worth-neutral', 'worth-negative');
+
+    if (realHourlyRate >= 25) {
+      worthCard.classList.add('worth-positive');
+      worthMsg.innerHTML = `<strong>Great side hustle!</strong> At ${formatCurrency(Math.round(realHourlyRate * 100) / 100)}/hr after taxes, your time is well-compensated. Consider scaling up — invest in automation, raise your prices, or increase your hours to grow this into a serious income stream.`;
+    } else if (realHourlyRate >= 15) {
+      worthCard.classList.add('worth-neutral');
+      worthMsg.innerHTML = `<strong>Decent earnings.</strong> At ${formatCurrency(Math.round(realHourlyRate * 100) / 100)}/hr after taxes, you are making reasonable money. Look for ways to cut expenses, raise prices, or streamline your workflow to push into the $25+/hr range.`;
+    } else {
+      worthCard.classList.add('worth-negative');
+      worthMsg.innerHTML = `<strong>Time for a reality check.</strong> At ${formatCurrency(Math.round(realHourlyRate * 100) / 100)}/hr after taxes, you may want to consider whether your time could be better invested elsewhere — in a higher-paying hustle, skill development, or overtime at your primary job.`;
+    }
+
+    // Pie chart
+    const takeHomePct = revenue > 0 ? Math.max(0, takeHomeMonthly / revenue * 100) : 0;
+    const expensePct = revenue > 0 ? expenses / revenue * 100 : 0;
+    const seTaxPct = revenue > 0 ? seTaxMonthly / revenue * 100 : 0;
+    const fedTaxPct = revenue > 0 ? fedTaxMonthly / revenue * 100 : 0;
+    const stateTaxPct = revenue > 0 ? stateTaxMonthly / revenue * 100 : 0;
+
+    const pieChart = document.getElementById('pie-chart')!;
+    const segments: string[] = [];
+    let cumulative = 0;
+
+    const colors = [
+      { label: 'Take-Home Profit', color: '#16a34a', pct: takeHomePct },
+      { label: 'Expenses', color: '#6b7280', pct: expensePct },
+      { label: 'SE Tax', color: '#dc2626', pct: seTaxPct },
+      { label: 'Federal Tax', color: '#ea580c', pct: fedTaxPct },
+      { label: 'State Tax', color: '#d97706', pct: stateTaxPct },
+    ];
+
+    colors.forEach(seg => {
+      if (seg.pct > 0) {
+        segments.push(`${seg.color} ${cumulative}% ${cumulative + seg.pct}%`);
+        cumulative += seg.pct;
+      }
+    });
+
+    // Fill remainder if percentages don't add up to 100 (negative profit scenarios)
+    if (cumulative < 100) {
+      segments.push(`#e5e7eb ${cumulative}% 100%`);
+    }
+
+    pieChart.style.background = `conic-gradient(${segments.join(', ')})`;
+
+    // Legend
+    const legend = document.getElementById('pie-legend')!;
+    legend.innerHTML = '';
+    colors.forEach(seg => {
+      if (seg.pct > 0.5) {
+        const item = document.createElement('div');
+        item.className = 'legend-item';
+        item.innerHTML = `<span class="legend-dot" style="background:${seg.color}"></span><span>${seg.label}: ${Math.round(seg.pct)}%</span>`;
+        legend.appendChild(item);
+      }
+    });
+
+    // Smooth scroll to results
+    resultsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  calcBtn.addEventListener('click', calculate);
+
+  // Allow Enter key to trigger calculation
+  document.querySelectorAll('input, select').forEach(el => {
+    el.addEventListener('keydown', (e: Event) => {
+      if ((e as KeyboardEvent).key === 'Enter') {
+        calculate();
+      }
+    });
+  });
+</script>

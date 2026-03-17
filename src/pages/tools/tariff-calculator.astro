@@ -1,0 +1,822 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const title = 'Free 2026 Tariff Impact Calculator — How Much Are Tariffs Costing Your Family?';
+const description = 'See exactly how 2026 U.S. tariffs affect your household budget. Enter your monthly spending and get a personalized tariff cost estimate. Free, no signup.';
+---
+
+<BaseLayout title={title} description={description}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "2026 Tariff Impact Calculator",
+      "url": "https://gettidyflow.com/tools/tariff-calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "description": description
+    })} />
+  </Fragment>
+
+  <section class="tool-hero">
+    <div class="tool-hero-inner">
+      <span class="tool-badge">Free Tool — No Signup Required</span>
+      <h1>2026 Tariff Impact <span class="gradient-text">Calculator</span></h1>
+      <p class="tool-subtitle">How much are new U.S. tariffs <strong>really</strong> costing your family? Enter your monthly spending below and see the hidden tax on your household — backed by Yale Budget Lab &amp; Tax Foundation data.</p>
+    </div>
+  </section>
+
+  <section class="tool-app">
+    <div class="tool-container">
+      <div class="calc-card">
+        <div class="input-row">
+          <div class="input-group">
+            <label for="household-size" class="input-label">Household Size</label>
+            <select id="household-size" aria-label="Number of people in your household">
+              <option value="1">1 person</option>
+              <option value="2" selected>2 people</option>
+              <option value="3">3 people</option>
+              <option value="4">4 people</option>
+              <option value="5">5 people</option>
+              <option value="6">6 people</option>
+              <option value="7">7 people</option>
+              <option value="8">8 people</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label for="annual-income" class="input-label">Annual Household Income</label>
+            <div class="input-wrapper">
+              <span class="currency-symbol">$</span>
+              <input
+                type="number"
+                id="annual-income"
+                placeholder="e.g. 75000"
+                min="0"
+                step="1000"
+                value="75000"
+                aria-label="Annual household income in dollars"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="calc-card">
+        <h2 class="section-heading">Monthly Spending by Category</h2>
+        <p class="section-desc">We pre-filled typical amounts for a 2-person household. Adjust to match your actual spending.</p>
+        <div class="spending-grid">
+          <div class="spending-item">
+            <label for="spend-groceries" class="spend-label">Groceries</label>
+            <div class="input-wrapper">
+              <span class="currency-symbol">$</span>
+              <input type="number" id="spend-groceries" class="spend-input" value="630" min="0" step="10" aria-label="Monthly grocery spending in dollars" />
+            </div>
+            <span class="tariff-rate">+2.6% tariff impact</span>
+          </div>
+          <div class="spending-item">
+            <label for="spend-electronics" class="spend-label">Electronics &amp; Appliances</label>
+            <div class="input-wrapper">
+              <span class="currency-symbol">$</span>
+              <input type="number" id="spend-electronics" class="spend-input" value="150" min="0" step="10" aria-label="Monthly electronics spending in dollars" />
+            </div>
+            <span class="tariff-rate tariff-rate-high">+17.5% tariff impact</span>
+          </div>
+          <div class="spending-item">
+            <label for="spend-clothing" class="spend-label">Clothing &amp; Shoes</label>
+            <div class="input-wrapper">
+              <span class="currency-symbol">$</span>
+              <input type="number" id="spend-clothing" class="spend-input" value="170" min="0" step="10" aria-label="Monthly clothing spending in dollars" />
+            </div>
+            <span class="tariff-rate tariff-rate-high">+14.2% tariff impact</span>
+          </div>
+          <div class="spending-item">
+            <label for="spend-auto" class="spend-label">Automotive (gas, parts, payment)</label>
+            <div class="input-wrapper">
+              <span class="currency-symbol">$</span>
+              <input type="number" id="spend-auto" class="spend-input" value="400" min="0" step="10" aria-label="Monthly automotive spending in dollars" />
+            </div>
+            <span class="tariff-rate">+10.8% tariff impact</span>
+          </div>
+          <div class="spending-item">
+            <label for="spend-home" class="spend-label">Home Goods &amp; Furniture</label>
+            <div class="input-wrapper">
+              <span class="currency-symbol">$</span>
+              <input type="number" id="spend-home" class="spend-input" value="120" min="0" step="10" aria-label="Monthly home goods spending in dollars" />
+            </div>
+            <span class="tariff-rate">+7.5% tariff impact</span>
+          </div>
+          <div class="spending-item">
+            <label for="spend-toys" class="spend-label">Toys &amp; Children's Items</label>
+            <div class="input-wrapper">
+              <span class="currency-symbol">$</span>
+              <input type="number" id="spend-toys" class="spend-input" value="60" min="0" step="10" aria-label="Monthly toys and children items spending in dollars" />
+            </div>
+            <span class="tariff-rate tariff-rate-high">+16.3% tariff impact</span>
+          </div>
+        </div>
+        <button id="calculate-btn" class="calculate-button" aria-label="Calculate your tariff impact">Calculate My Tariff Impact</button>
+      </div>
+
+      <div id="results-section" style="display:none;">
+        <div class="results-headline">
+          <h2>Your 2026 Tariff Impact</h2>
+          <p class="results-subtitle">Based on your spending, here's what tariffs are costing your household:</p>
+        </div>
+
+        <div class="totals-grid">
+          <div class="total-card total-monthly">
+            <span class="total-label">Extra Monthly Cost</span>
+            <span class="total-amount" id="total-monthly">$0</span>
+          </div>
+          <div class="total-card total-yearly">
+            <span class="total-label">Extra Yearly Cost</span>
+            <span class="total-amount" id="total-yearly">$0</span>
+          </div>
+        </div>
+
+        <div class="equivalence-card" id="equivalence-card">
+          <p id="equivalence-text"></p>
+        </div>
+
+        <div class="results-grid">
+          <div class="result-card cat-groceries">
+            <div class="result-header">
+              <span class="result-icon">&#x1F6D2;</span>
+              <div>
+                <h3>Groceries</h3>
+                <p class="result-amount" id="result-groceries">+$0/mo</p>
+              </div>
+            </div>
+            <div class="bar-container"><div class="bar bar-groceries" id="bar-groceries" style="width:0%"></div></div>
+          </div>
+          <div class="result-card cat-electronics">
+            <div class="result-header">
+              <span class="result-icon">&#x1F4BB;</span>
+              <div>
+                <h3>Electronics &amp; Appliances</h3>
+                <p class="result-amount" id="result-electronics">+$0/mo</p>
+              </div>
+            </div>
+            <div class="bar-container"><div class="bar bar-electronics" id="bar-electronics" style="width:0%"></div></div>
+          </div>
+          <div class="result-card cat-clothing">
+            <div class="result-header">
+              <span class="result-icon">&#x1F45F;</span>
+              <div>
+                <h3>Clothing &amp; Shoes</h3>
+                <p class="result-amount" id="result-clothing">+$0/mo</p>
+              </div>
+            </div>
+            <div class="bar-container"><div class="bar bar-clothing" id="bar-clothing" style="width:0%"></div></div>
+          </div>
+          <div class="result-card cat-auto">
+            <div class="result-header">
+              <span class="result-icon">&#x1F697;</span>
+              <div>
+                <h3>Automotive</h3>
+                <p class="result-amount" id="result-auto">+$0/mo</p>
+              </div>
+            </div>
+            <div class="bar-container"><div class="bar bar-auto" id="bar-auto" style="width:0%"></div></div>
+          </div>
+          <div class="result-card cat-home">
+            <div class="result-header">
+              <span class="result-icon">&#x1F6CB;&#xFE0F;</span>
+              <div>
+                <h3>Home Goods &amp; Furniture</h3>
+                <p class="result-amount" id="result-home">+$0/mo</p>
+              </div>
+            </div>
+            <div class="bar-container"><div class="bar bar-home" id="bar-home" style="width:0%"></div></div>
+          </div>
+          <div class="result-card cat-toys">
+            <div class="result-header">
+              <span class="result-icon">&#x1F9F8;</span>
+              <div>
+                <h3>Toys &amp; Children's Items</h3>
+                <p class="result-amount" id="result-toys">+$0/mo</p>
+              </div>
+            </div>
+            <div class="bar-container"><div class="bar bar-toys" id="bar-toys" style="width:0%"></div></div>
+          </div>
+        </div>
+
+        <div class="comparison-card">
+          <h3>How Do You Compare?</h3>
+          <p>The <strong>average U.S. household</strong> (2.5 people, median income) pays an estimated <strong>$1,900 to $2,600 extra per year</strong> due to 2026 tariffs, according to Yale Budget Lab and Tax Foundation analyses.</p>
+          <p>Your estimated annual tariff cost: <strong id="comparison-amount">$0</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool-cta">
+    <div class="tool-container">
+      <div class="cta-card">
+        <h2>Track Your Real Spending to Fight Back Against Rising Prices</h2>
+        <p>Now that you know how much tariffs cost you, the next step is <strong>tracking every dollar</strong> so you can cut waste and redirect money to what matters. Our budget tracker makes it simple.</p>
+        <a href="https://gettidyflow.gumroad.com" target="_blank" rel="noopener" class="cta-button">Get the Budget Tracker &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool-content">
+    <div class="tool-container content-narrow">
+      <h2>What Are Tariffs and Why Do They Affect Your Grocery Bill?</h2>
+      <p>A tariff is a tax imposed by the government on goods imported from other countries. While tariffs are technically paid by importers, the cost is almost always passed down to consumers in the form of higher prices. In 2026, the United States has implemented sweeping new tariffs on goods from China, the European Union, and several other trading partners.</p>
+      <p>You might think tariffs only affect luxury electronics or industrial equipment, but the reality hits much closer to home. A significant portion of the fresh produce, packaged foods, and ingredients on your grocery store shelves either comes from abroad or relies on imported components for packaging and transportation. When a 2.6% tariff is applied across the board to food-related imports, it doesn't sound like much — until you multiply it across every grocery trip for an entire year.</p>
+      <p>For a family of four spending $1,200 per month on groceries, that "small" 2.6% tariff means an extra $374 per year — money that could have gone into a <a href="/blog/monthly-budget-checklist/">savings fund or emergency budget</a>. The impact compounds when you factor in every other category of consumer goods.</p>
+
+      <h2>How We Calculate Your Tariff Impact</h2>
+      <p>Our calculator uses tariff impact rates derived from two of the most respected economic research sources: the <strong>Yale Budget Lab</strong> and the <strong>Tax Foundation</strong>. These organizations analyze the effective tariff rates across product categories and estimate how much of the tariff cost is passed through to retail prices.</p>
+      <p>Here's how the calculation works:</p>
+      <ol>
+        <li><strong>You enter your monthly spending</strong> in six key consumer categories that are most affected by 2026 tariffs.</li>
+        <li><strong>We apply the category-specific tariff pass-through rate</strong> — for example, electronics have a 17.5% price increase because the vast majority of consumer electronics are manufactured overseas, primarily in China and Southeast Asia.</li>
+        <li><strong>We sum the additional costs</strong> across all categories to produce your monthly and annual tariff burden.</li>
+        <li><strong>We contextualize the number</strong> by showing how many weeks of groceries or days of work your tariff cost represents.</li>
+      </ol>
+      <p>These rates represent the estimated <em>effective price increase</em> to consumers, not the raw tariff percentage. Retailers absorb some costs, supply chains adjust, and currency fluctuations play a role — but the net impact on your wallet is what our calculator shows. For deeper budget planning strategies, check out our <a href="/tools/budget-calculator">50/30/20 budget calculator</a>.</p>
+
+      <h2>5 Ways to Reduce Tariff Impact on Your Budget</h2>
+      <p>You can't control trade policy, but you can control how you spend. Here are five actionable strategies to blunt the tariff blow:</p>
+      <ul>
+        <li><strong>Buy American-made alternatives when possible.</strong> Domestically produced goods aren't subject to import tariffs. Look for "Made in USA" labels especially on clothing, furniture, and appliances. While domestic goods sometimes cost more at baseline, they may now be price-competitive with tariff-inflated imports.</li>
+        <li><strong>Time your big purchases strategically.</strong> Electronics and appliances see the biggest tariff hit at 17.5%. If you can wait for sales events (Black Friday, Prime Day, end-of-season clearances), retailers often absorb more of the tariff cost during promotional periods.</li>
+        <li><strong>Switch to store brands for groceries.</strong> Private-label products typically have shorter, more domestic supply chains. You can save 20-30% per item compared to name brands — more than enough to offset the 2.6% tariff on grocery imports.</li>
+        <li><strong>Reduce, reuse, and repair.</strong> The cheapest way to avoid tariff costs is to buy less. Extend the life of clothing, repair electronics instead of replacing them, and buy secondhand furniture. This isn't just frugal — it's the most effective tariff avoidance strategy.</li>
+        <li><strong>Track your spending religiously.</strong> You can't improve what you don't measure. Use a <a href="/blog/budgeting-mistakes-to-avoid/">budget tracking system</a> to monitor exactly where your money goes, and you'll find opportunities to redirect spending away from tariff-heavy categories.</li>
+      </ul>
+
+      <h2>Which Products Are Hit Hardest by 2026 Tariffs?</h2>
+      <p>Not all product categories are affected equally. The tariff impact varies dramatically based on how much of the product's supply chain depends on imports:</p>
+      <ul>
+        <li><strong>Electronics &amp; Appliances (+17.5%)</strong> — The hardest-hit category. Nearly all consumer electronics (smartphones, laptops, TVs, kitchen appliances) are assembled in China or other tariff-affected countries. Even "American" brands like Apple manufacture overseas.</li>
+        <li><strong>Toys &amp; Children's Items (+16.3%)</strong> — Over 80% of toys sold in the U.S. are made in China. From LEGO sets to baby gear, families with children face a disproportionate tariff burden.</li>
+        <li><strong>Clothing &amp; Shoes (+14.2%)</strong> — The fast fashion and footwear industries rely almost entirely on overseas manufacturing in Vietnam, Bangladesh, China, and Indonesia. Even premium brands source materials globally.</li>
+        <li><strong>Automotive (+10.8%)</strong> — Car parts, tires, and even fully assembled vehicles face tariffs. If you drive a car with imported components (which is almost every car), you're paying more at the mechanic and the dealership.</li>
+        <li><strong>Home Goods &amp; Furniture (+7.5%)</strong> — Imported wood, textiles, and hardware all face tariffs, pushing up the cost of everything from bookshelves to bedsheets.</li>
+        <li><strong>Groceries (+2.6%)</strong> — The lowest rate, but applied to the largest spending category for most families. Imported produce, seafood, coffee, spices, and packaged foods all contribute.</li>
+      </ul>
+      <p>Understanding which categories carry the highest tariff load can help you make smarter purchasing decisions and prioritize where to cut or substitute. Use our <a href="/tools/subscription-calculator">subscription cost calculator</a> to find more savings in recurring expenses.</p>
+
+      <h2>Frequently Asked Questions</h2>
+      <details>
+        <summary>Are tariffs a tax on consumers?</summary>
+        <p>Effectively, yes. While tariffs are technically paid by the importing company at the border, extensive economic research — including studies by the Federal Reserve, Yale Budget Lab, and the Tax Foundation — shows that the vast majority of tariff costs (60-100% depending on the product) are passed through to consumers in the form of higher retail prices. This is why economists often refer to tariffs as a "hidden consumption tax." Unlike income tax, it's regressive: lower-income families spend a larger share of their income on goods, so tariffs hit them proportionally harder.</p>
+      </details>
+      <details>
+        <summary>Will tariffs go away in 2027?</summary>
+        <p>There is no guarantee. Tariff policy depends on the administration in power, ongoing trade negotiations, and geopolitical dynamics. Some tariffs from 2018-2019 are still in effect years later. The 2026 tariffs could be reduced, expanded, or restructured depending on trade deals and election outcomes. The safest financial approach is to budget as if current tariff levels will persist and adjust if they decrease. Planning for the worst while hoping for the best is sound fiscal strategy.</p>
+      </details>
+      <details>
+        <summary>How do tariffs affect inflation?</summary>
+        <p>Tariffs are directly inflationary. When import costs rise, businesses raise prices to maintain margins, which increases the Consumer Price Index (CPI). The Federal Reserve estimated that 2018-2019 tariffs added 0.3-0.5 percentage points to core inflation. The broader 2026 tariffs are estimated to add 0.5-1.0 percentage points to annual inflation, making it harder for the Fed to lower interest rates and compounding the cost-of-living increase for every American household.</p>
+      </details>
+      <details>
+        <summary>Which countries' imports are most affected?</summary>
+        <p>China faces the steepest tariff rates (up to 60% on some categories), followed by the European Union, Japan, South Korea, and members of the former NAFTA agreement (now USMCA). Goods from Vietnam, Taiwan, India, and Southeast Asian nations also face increased rates as the U.S. attempts to address trade imbalances across multiple fronts. The broad scope of 2026 tariffs means there are fewer "tariff-free" alternatives than in previous trade actions.</p>
+      </details>
+      <details>
+        <summary>Can I avoid tariff costs by buying American?</summary>
+        <p>Partially. Domestically manufactured goods are not subject to import tariffs, so buying American-made products is one strategy to avoid direct tariff costs. However, even American-made goods often use imported raw materials, components, or machinery — so some tariff pass-through is unavoidable. Additionally, as import prices rise, domestic manufacturers sometimes raise their prices too (because they can). The best approach is a combination: buy American where practical, time purchases strategically, and maintain a detailed <a href="/blog/monthly-budget-checklist/">monthly budget</a> to stay in control.</p>
+      </details>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .tool-hero {
+    background: linear-gradient(135deg, #e53e3e 0%, #ed8936 100%);
+    padding: 4rem 1.5rem 3rem;
+    text-align: center;
+    color: #fff;
+  }
+  .tool-hero-inner {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .tool-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(4px);
+    padding: 0.35rem 1rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+  }
+  .tool-hero h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 800;
+    line-height: 1.15;
+    margin: 0 0 1rem;
+  }
+  .gradient-text {
+    background: linear-gradient(90deg, #fefcbf, #ffd6e0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .tool-subtitle {
+    font-size: 1.1rem;
+    opacity: 0.95;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .tool-app {
+    padding: 2.5rem 1.5rem;
+    background: #f8f9fb;
+  }
+  .tool-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .calc-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    margin-bottom: 2rem;
+  }
+  .section-heading {
+    margin: 0 0 0.25rem;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #1a1a2e;
+  }
+  .section-desc {
+    margin: 0 0 1.5rem;
+    font-size: 0.92rem;
+    color: #666;
+  }
+  .input-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+  .input-group {
+    display: flex;
+    flex-direction: column;
+  }
+  .input-label {
+    display: block;
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #1a1a2e;
+  }
+  .input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .currency-symbol {
+    position: absolute;
+    left: 1rem;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #e53e3e;
+  }
+  select,
+  input[type="number"] {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    transition: border-color 0.2s;
+    outline: none;
+    font-family: inherit;
+    color: #1a1a2e;
+    background: #fff;
+  }
+  input[type="number"] {
+    padding-left: 2.5rem;
+  }
+  select:focus,
+  input[type="number"]:focus {
+    border-color: #e53e3e;
+    box-shadow: 0 0 0 3px rgba(229,62,62,0.12);
+  }
+  input[type="number"]::placeholder {
+    color: #a0aec0;
+    font-weight: 400;
+  }
+
+  .spending-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+  .spending-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+  .spend-label {
+    font-weight: 600;
+    font-size: 0.92rem;
+    color: #1a1a2e;
+  }
+  .spend-input {
+    font-size: 1rem !important;
+    padding: 0.7rem 0.75rem 0.7rem 2.25rem !important;
+  }
+  .tariff-rate {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #ed8936;
+  }
+  .tariff-rate-high {
+    color: #e53e3e;
+  }
+
+  .calculate-button {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(135deg, #e53e3e 0%, #ed8936 100%);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    font-family: inherit;
+  }
+  .calculate-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(229,62,62,0.25);
+  }
+  .calculate-button:active {
+    transform: translateY(0);
+  }
+
+  .results-headline {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  .results-headline h2 {
+    margin: 0 0 0.25rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #1a1a2e;
+  }
+  .results-subtitle {
+    margin: 0;
+    color: #666;
+    font-size: 1rem;
+  }
+
+  .totals-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+  .total-card {
+    border-radius: 16px;
+    padding: 1.75rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+  .total-monthly {
+    background: linear-gradient(135deg, #e53e3e 0%, #ed8936 100%);
+    color: #fff;
+  }
+  .total-yearly {
+    background: linear-gradient(135deg, #9b2c2c 0%, #c05621 100%);
+    color: #fff;
+  }
+  .total-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    opacity: 0.9;
+  }
+  .total-amount {
+    font-size: 2.25rem;
+    font-weight: 800;
+    line-height: 1.1;
+  }
+
+  .equivalence-card {
+    background: #fffbeb;
+    border: 2px solid #f6e05e;
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1.25rem;
+    text-align: center;
+  }
+  .equivalence-card p {
+    margin: 0;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #744210;
+    line-height: 1.5;
+  }
+
+  .results-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .result-card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 1.25rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    border-left: 5px solid transparent;
+  }
+  .cat-groceries { border-left-color: #48bb78; }
+  .cat-electronics { border-left-color: #e53e3e; }
+  .cat-clothing { border-left-color: #ed64a6; }
+  .cat-auto { border-left-color: #ed8936; }
+  .cat-home { border-left-color: #667eea; }
+  .cat-toys { border-left-color: #d69e2e; }
+
+  .result-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+  .result-icon {
+    font-size: 1.75rem;
+    line-height: 1;
+  }
+  .result-header h3 {
+    margin: 0;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #555;
+  }
+  .result-amount {
+    margin: 0.1rem 0 0;
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #e53e3e;
+  }
+
+  .bar-container {
+    width: 100%;
+    height: 8px;
+    background: #f0f0f5;
+    border-radius: 999px;
+    overflow: hidden;
+  }
+  .bar {
+    height: 100%;
+    border-radius: 999px;
+    transition: width 0.5s ease;
+  }
+  .bar-groceries { background: linear-gradient(90deg, #48bb78, #38a169); }
+  .bar-electronics { background: linear-gradient(90deg, #e53e3e, #c53030); }
+  .bar-clothing { background: linear-gradient(90deg, #ed64a6, #d53f8c); }
+  .bar-auto { background: linear-gradient(90deg, #ed8936, #dd6b20); }
+  .bar-home { background: linear-gradient(90deg, #667eea, #5a67d8); }
+  .bar-toys { background: linear-gradient(90deg, #d69e2e, #b7791f); }
+
+  .comparison-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 1.75rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    border-left: 5px solid #e53e3e;
+  }
+  .comparison-card h3 {
+    margin: 0 0 0.75rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1a1a2e;
+  }
+  .comparison-card p {
+    margin: 0 0 0.5rem;
+    font-size: 0.95rem;
+    color: #444;
+    line-height: 1.6;
+  }
+  .comparison-card p:last-child {
+    margin-bottom: 0;
+  }
+
+  .tool-cta {
+    padding: 2.5rem 1.5rem;
+    background: #fff;
+  }
+  .cta-card {
+    max-width: 800px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #e53e3e 0%, #ed8936 100%);
+    border-radius: 20px;
+    padding: 2.5rem;
+    text-align: center;
+    color: #fff;
+  }
+  .cta-card h2 {
+    margin: 0 0 0.75rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+  }
+  .cta-card p {
+    margin: 0 0 1.5rem;
+    opacity: 0.92;
+    line-height: 1.6;
+  }
+  .cta-button {
+    display: inline-block;
+    background: #fff;
+    color: #e53e3e;
+    font-weight: 700;
+    padding: 0.85rem 2rem;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  }
+
+  .tool-content {
+    padding: 3rem 1.5rem 4rem;
+    background: #f8f9fb;
+  }
+  .content-narrow {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .tool-content h2 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #1a1a2e;
+    margin: 2.5rem 0 0.75rem;
+  }
+  .tool-content h2:first-child {
+    margin-top: 0;
+  }
+  .tool-content p,
+  .tool-content li {
+    font-size: 1.02rem;
+    line-height: 1.7;
+    color: #444;
+  }
+  .tool-content ul,
+  .tool-content ol {
+    padding-left: 1.25rem;
+    margin: 0.5rem 0 1rem;
+  }
+  .tool-content li {
+    margin-bottom: 0.35rem;
+  }
+  .tool-content a {
+    color: #e53e3e;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .tool-content details {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 0.75rem;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  }
+  .tool-content summary {
+    font-weight: 600;
+    cursor: pointer;
+    color: #1a1a2e;
+    font-size: 1.02rem;
+  }
+  .tool-content details p {
+    margin: 0.75rem 0 0;
+  }
+
+  @media (max-width: 640px) {
+    .input-row {
+      grid-template-columns: 1fr;
+    }
+    .spending-grid {
+      grid-template-columns: 1fr;
+    }
+    .totals-grid {
+      grid-template-columns: 1fr;
+    }
+    .results-grid {
+      grid-template-columns: 1fr;
+    }
+    .cta-card {
+      padding: 2rem 1.5rem;
+    }
+    .total-amount {
+      font-size: 1.75rem;
+    }
+  }
+</style>
+
+<script>
+  const TARIFF_RATES: Record<string, number> = {
+    groceries: 0.026,
+    electronics: 0.175,
+    clothing: 0.142,
+    auto: 0.108,
+    home: 0.075,
+    toys: 0.163,
+  };
+
+  const CATEGORIES = ['groceries', 'electronics', 'clothing', 'auto', 'home', 'toys'] as const;
+
+  function formatCurrency(n: number): string {
+    return '$' + n.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+  }
+
+  function getInputValue(id: string): number {
+    return parseFloat((document.getElementById(id) as HTMLInputElement).value) || 0;
+  }
+
+  function calculate(): void {
+    const annualIncome = getInputValue('annual-income');
+    const householdSize = parseInt((document.getElementById('household-size') as HTMLSelectElement).value);
+
+    const spending: Record<string, number> = {};
+    const impacts: Record<string, number> = {};
+    let totalMonthly = 0;
+    let maxImpact = 0;
+
+    for (const cat of CATEGORIES) {
+      spending[cat] = getInputValue(`spend-${cat}`);
+      impacts[cat] = spending[cat] * TARIFF_RATES[cat];
+      totalMonthly += impacts[cat];
+      if (impacts[cat] > maxImpact) maxImpact = impacts[cat];
+    }
+
+    const totalYearly = totalMonthly * 12;
+
+    // Show results
+    const resultsSection = document.getElementById('results-section')!;
+    resultsSection.style.display = 'block';
+
+    document.getElementById('total-monthly')!.textContent = formatCurrency(Math.round(totalMonthly));
+    document.getElementById('total-yearly')!.textContent = formatCurrency(Math.round(totalYearly));
+    document.getElementById('comparison-amount')!.textContent = formatCurrency(Math.round(totalYearly));
+
+    // Category results and bars
+    for (const cat of CATEGORIES) {
+      document.getElementById(`result-${cat}`)!.textContent = `+${formatCurrency(Math.round(impacts[cat]))}/mo`;
+      const barWidth = maxImpact > 0 ? (impacts[cat] / maxImpact) * 100 : 0;
+      (document.getElementById(`bar-${cat}`) as HTMLElement).style.width = `${barWidth}%`;
+    }
+
+    // Equivalence text
+    const weeklyGroceries = spending.groceries > 0 ? spending.groceries / 4.33 : 150;
+    const weeksOfGroceries = weeklyGroceries > 0 ? (totalYearly / weeklyGroceries).toFixed(1) : '0';
+
+    let equivalenceHtml = `That's <strong>${weeksOfGroceries} weeks of groceries</strong>`;
+
+    if (annualIncome > 0) {
+      const dailyIncome = annualIncome / 365;
+      const daysOfWork = (totalYearly / dailyIncome).toFixed(1);
+      equivalenceHtml += ` or <strong>${daysOfWork} days of your household income</strong>`;
+    }
+
+    equivalenceHtml += ' lost to tariffs every year.';
+    document.getElementById('equivalence-text')!.innerHTML = equivalenceHtml;
+
+    // Smooth scroll to results
+    resultsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  // Update default spending when household size changes
+  function updateDefaults(): void {
+    const size = parseInt((document.getElementById('household-size') as HTMLSelectElement).value);
+    const defaults: Record<string, number[]> = {
+      // [1, 2, 3, 4, 5, 6, 7, 8] person defaults
+      groceries:   [350, 630, 850, 1050, 1250, 1450, 1600, 1800],
+      electronics: [100, 150, 170, 200, 220, 240, 260, 280],
+      clothing:    [100, 170, 230, 300, 370, 430, 490, 550],
+      auto:        [300, 400, 450, 500, 550, 600, 650, 700],
+      home:        [80, 120, 140, 170, 190, 210, 230, 250],
+      toys:        [0, 60, 100, 140, 180, 210, 240, 270],
+    };
+    for (const cat of CATEGORIES) {
+      (document.getElementById(`spend-${cat}`) as HTMLInputElement).value = String(defaults[cat][size - 1]);
+    }
+  }
+
+  document.getElementById('household-size')!.addEventListener('change', updateDefaults);
+  document.getElementById('calculate-btn')!.addEventListener('click', calculate);
+
+  // Also allow Enter key to trigger calculation
+  document.querySelectorAll('input[type="number"]').forEach((input) => {
+    input.addEventListener('keydown', (e: Event) => {
+      if ((e as KeyboardEvent).key === 'Enter') calculate();
+    });
+  });
+</script>

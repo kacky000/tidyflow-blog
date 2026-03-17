@@ -1,0 +1,882 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const title = 'Inflation-Adjusted Salary Calculator — Is Your Raise Keeping Up?';
+const description = 'Find out if your salary is actually growing or shrinking after inflation. Compare your real purchasing power year over year. Free, instant, no signup.';
+---
+
+<BaseLayout title={title} description={description}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Inflation-Adjusted Salary Calculator",
+      "url": "https://gettidyflow.com/tools/inflation-salary-calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "description": description
+    })} />
+  </Fragment>
+
+  <section class="tool-hero">
+    <div class="tool-hero-inner">
+      <span class="tool-badge">Free Tool — No Signup Required</span>
+      <h1>Inflation-Adjusted <span class="gradient-text">Salary Calculator</span></h1>
+      <p class="tool-subtitle">Is your raise actually a raise — or a hidden pay cut? Enter your salary details below and instantly see your real purchasing power after inflation.</p>
+    </div>
+  </section>
+
+  <section class="tool-app">
+    <div class="tool-container">
+      <div class="calc-card">
+        <div class="input-group">
+          <label for="current-salary" class="input-label">Current Annual Salary</label>
+          <div class="input-wrapper">
+            <span class="currency-symbol">$</span>
+            <input
+              type="number"
+              id="current-salary"
+              placeholder="e.g. 65,000"
+              min="0"
+              step="1000"
+              aria-label="Current annual salary in dollars"
+            />
+          </div>
+        </div>
+
+        <div class="toggle-group" role="radiogroup" aria-label="Input method for previous salary">
+          <button
+            type="button"
+            class="toggle-btn active"
+            id="toggle-salary"
+            role="radio"
+            aria-checked="true"
+          >Enter Last Year's Salary</button>
+          <button
+            type="button"
+            class="toggle-btn"
+            id="toggle-raise"
+            role="radio"
+            aria-checked="false"
+          >Enter Raise Percentage</button>
+        </div>
+
+        <div class="input-group" id="salary-input-group">
+          <label for="last-salary" class="input-label">Annual Salary 1 Year Ago</label>
+          <div class="input-wrapper">
+            <span class="currency-symbol">$</span>
+            <input
+              type="number"
+              id="last-salary"
+              placeholder="e.g. 60,000"
+              min="0"
+              step="1000"
+              aria-label="Annual salary one year ago in dollars"
+            />
+          </div>
+        </div>
+
+        <div class="input-group" id="raise-input-group" style="display:none;">
+          <label for="raise-pct" class="input-label">Raise Percentage You Received</label>
+          <div class="input-wrapper">
+            <input
+              type="number"
+              id="raise-pct"
+              placeholder="e.g. 4"
+              min="0"
+              step="0.1"
+              aria-label="Raise percentage"
+            />
+            <span class="pct-symbol">%</span>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="inflation-rate" class="input-label">Current Inflation Rate</label>
+          <div class="input-wrapper">
+            <input
+              type="number"
+              id="inflation-rate"
+              value="6.18"
+              min="0"
+              step="0.01"
+              aria-label="Current inflation rate percentage"
+            />
+            <span class="pct-symbol">%</span>
+          </div>
+          <p class="input-hint">Pre-filled with the 2026 US inflation rate. You can change this.</p>
+        </div>
+
+        <button type="button" id="calc-btn" class="calc-button" aria-label="Calculate real salary">Calculate My Real Raise</button>
+      </div>
+
+      <div id="results-section" style="display:none;">
+        <div class="headline-result" id="headline-card">
+          <p class="headline-label">Your raise is really</p>
+          <p class="headline-number" id="headline-number">0%</p>
+          <p class="headline-sub" id="headline-sub"></p>
+        </div>
+
+        <div class="comparison-grid">
+          <div class="comparison-card">
+            <span class="comparison-icon">&#128200;</span>
+            <p class="comparison-label">Last year's salary (inflation-adjusted to today)</p>
+            <p class="comparison-value" id="adjusted-last-salary">$0</p>
+          </div>
+          <div class="comparison-card">
+            <span class="comparison-icon">&#128176;</span>
+            <p class="comparison-label">What you earn now</p>
+            <p class="comparison-value" id="current-display">$0</p>
+          </div>
+        </div>
+
+        <div class="detail-card">
+          <h3>Purchasing Power Breakdown</h3>
+          <div class="detail-grid">
+            <div class="detail-item">
+              <span class="detail-label">Nominal Raise</span>
+              <span class="detail-value" id="nominal-raise">0%</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Inflation Rate</span>
+              <span class="detail-value" id="display-inflation">0%</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Real Raise (After Inflation)</span>
+              <span class="detail-value" id="real-raise">0%</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Purchasing Power Change (Yearly)</span>
+              <span class="detail-value" id="pp-yearly">$0</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Purchasing Power Change (Monthly)</span>
+              <span class="detail-value" id="pp-monthly">$0</span>
+            </div>
+            <div class="detail-item highlight-item">
+              <span class="detail-label">Salary Needed to Keep Up With Inflation</span>
+              <span class="detail-value" id="salary-needed">$0</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="bars-card">
+          <h3>Nominal vs. Real Salary</h3>
+          <div class="bar-row">
+            <span class="bar-label">Nominal Salary</span>
+            <div class="bar-track">
+              <div class="bar bar-nominal" id="bar-nominal"></div>
+            </div>
+            <span class="bar-value" id="bar-nominal-val">$0</span>
+          </div>
+          <div class="bar-row">
+            <span class="bar-label">Real Value (Inflation-Adjusted)</span>
+            <div class="bar-track">
+              <div class="bar bar-real" id="bar-real"></div>
+            </div>
+            <span class="bar-value" id="bar-real-val">$0</span>
+          </div>
+        </div>
+
+        <div class="fun-card" id="fun-card">
+          <h3>What Does That Mean in Real Life?</h3>
+          <div class="fun-grid" id="fun-grid"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool-cta">
+    <div class="tool-container">
+      <div class="cta-card">
+        <h2>Take Control of Your Budget</h2>
+        <p>Now that you know your real purchasing power, the next step is <strong>actively managing every dollar</strong>. Our Budget Tracker helps you beat inflation by knowing exactly where your money goes.</p>
+        <a href="https://gettidyflow.gumroad.com" target="_blank" rel="noopener" class="cta-button">Get the Budget Tracker &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool-content">
+    <div class="tool-container content-narrow">
+      <h2>What Is Inflation-Adjusted Salary?</h2>
+      <p>Your inflation-adjusted salary — sometimes called your "real salary" — represents what your paycheck can actually buy in today's economy. While your nominal salary is the number on your pay stub, your real salary accounts for the rising cost of goods and services over time.</p>
+      <p>Think of it this way: if you earned $60,000 last year and now earn $62,000, you got a $2,000 raise on paper. But if inflation was 6%, the things you bought for $60,000 last year now cost $63,600. Your "raise" actually left you $1,600 <em>behind</em> where you started. That is what this calculator reveals.</p>
+      <p>Economists use the Consumer Price Index (CPI) published by the Bureau of Labor Statistics to measure inflation. The CPI tracks the average price change of a basket of consumer goods — food, housing, transportation, medical care, and more. When we say "inflation is 6%," we mean that basket costs 6% more than it did a year ago.</p>
+      <p>Understanding your real salary is critical for making smart career and financial decisions. It tells you whether your standard of living is improving, staying flat, or silently declining — even when your bank deposits look bigger.</p>
+
+      <h2>Why Your 3% Raise Might Actually Be a Pay Cut in 2026</h2>
+      <p>For decades, a 3% annual raise was considered standard — and for good reason. From 2000 to 2020, US inflation averaged about 2.1% per year, so a 3% raise reliably delivered roughly 1% in real growth. Workers could count on gradual improvement.</p>
+      <p>That math no longer works. In 2026, with inflation running at approximately 6.18%, a 3% raise translates to a <strong>real pay cut of about 3%</strong>. In dollar terms, someone earning $70,000 who gets a 3% raise to $72,100 actually needs $74,326 just to maintain the same purchasing power. They are effectively losing over $2,200 per year.</p>
+      <p>This is not an edge case — it is the reality for millions of workers. According to the Federal Reserve Bank of Atlanta's Wage Growth Tracker, median wage growth has consistently lagged behind headline inflation since mid-2021. The workers hit hardest are those in roles with fixed annual increase schedules, public sector employees with legislated cost-of-living adjustments that trail actual CPI, and anyone who has not renegotiated their compensation in the past 18 months.</p>
+      <p>The psychological impact is real too. You see a bigger number on your paycheck and feel like you are progressing. But when groceries, rent, gas, and insurance all cost more, that "raise" evaporates before you notice. This is why tracking your inflation-adjusted salary matters — it cuts through the illusion and shows you the truth.</p>
+
+      <h2>How to Negotiate a Raise That Beats Inflation</h2>
+      <p>Knowing your real salary is step one. Getting it back on track is step two. Here are actionable strategies for negotiating a raise that genuinely improves your financial position:</p>
+      <ul>
+        <li><strong>Lead with data, not feelings.</strong> Print your results from this calculator. Show your manager the gap between your nominal raise and inflation. Frame it as a business discussion: "My compensation has declined X% in real terms over the past year."</li>
+        <li><strong>Benchmark your market value.</strong> Use sites like Glassdoor, Levels.fyi, or Payscale to find what your role pays at other companies. If the market rate has moved up 8% and you only got 3%, you have a compelling case.</li>
+        <li><strong>Quantify your contributions.</strong> Document revenue generated, costs saved, projects completed, and any metrics that show you delivered more value than your current pay reflects.</li>
+        <li><strong>Time it right.</strong> Ask before budget cycles close. For most companies, that means having the conversation in Q3 or early Q4 for the following year's raise.</li>
+        <li><strong>Negotiate total compensation.</strong> If base salary is capped, ask for bonuses, stock options, additional PTO, remote work flexibility, or professional development budgets. These have real monetary value.</li>
+        <li><strong>Be prepared to walk.</strong> The strongest negotiating position is a genuine alternative. If your employer cannot match inflation, a job change is often the fastest path to a real raise — the average salary increase when switching jobs is 10-20%.</li>
+      </ul>
+      <p>Remember: asking for an inflation-matching raise is not asking for more — it is asking to not earn less. Any reasonable employer understands this distinction.</p>
+
+      <h2>Historical US Inflation Rates (2020-2026)</h2>
+      <p>Understanding the recent trajectory of inflation helps put your salary situation in context. Here are the annual inflation rates based on CPI data:</p>
+      <table class="inflation-table">
+        <thead>
+          <tr><th>Year</th><th>Annual Inflation Rate</th><th>Context</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>2020</td><td>1.23%</td><td>Pandemic deflation offset by stimulus</td></tr>
+          <tr><td>2021</td><td>4.70%</td><td>Supply chain disruptions, reopening demand</td></tr>
+          <tr><td>2022</td><td>8.00%</td><td>40-year high; energy and food price spikes</td></tr>
+          <tr><td>2023</td><td>4.12%</td><td>Fed rate hikes begin to cool prices</td></tr>
+          <tr><td>2024</td><td>2.95%</td><td>Gradual normalization continues</td></tr>
+          <tr><td>2025</td><td>3.40%</td><td>Tariff impacts and housing costs</td></tr>
+          <tr><td>2026</td><td>~6.18%</td><td>Tariff escalation, supply chain reshoring costs</td></tr>
+        </tbody>
+      </table>
+      <p>The cumulative effect is staggering. Since 2020, prices have risen roughly 34% in total. That means a salary of $60,000 in 2020 needs to be approximately $80,400 in 2026 just to buy the same things. If your pay has not kept pace, you have been taking an invisible pay cut every single year. Use the <a href="/tools/budget-calculator">50/30/20 Budget Calculator</a> to see how inflation has shifted your spending allocation, or check the <a href="/tools/tariff-calculator">Tariff Impact Calculator</a> to understand how trade policy affects prices you pay.</p>
+
+      <h2>Frequently Asked Questions</h2>
+      <details>
+        <summary>What is the current US inflation rate?</summary>
+        <p>As of early 2026, the US inflation rate is approximately 6.18% year-over-year, based on the Consumer Price Index (CPI) published by the Bureau of Labor Statistics. This reflects the compounding effects of tariff escalation and reshoring costs layered on top of persistent housing and services inflation. The rate can vary month to month, so check the BLS website for the latest figure.</p>
+      </details>
+      <details>
+        <summary>How do I calculate my real salary?</summary>
+        <p>Divide your current salary by (1 + inflation rate). For example, if you earn $65,000 and inflation is 6.18%, your real salary in last year's dollars is $65,000 / 1.0618 = approximately $61,216. Then compare that to what you earned last year. If you earned $62,000 last year, your purchasing power actually <em>decreased</em> by about $784 despite the nominal raise. This calculator does all the math for you instantly.</p>
+      </details>
+      <details>
+        <summary>Is a 5% raise good in 2026?</summary>
+        <p>With inflation at approximately 6.18%, a 5% raise means you are still losing about 1.18% in real purchasing power. It is better than the average raise of 3-4%, but it does not fully keep up with inflation. To maintain your standard of living, you would need at least a 6.18% raise. To actually <em>improve</em> your financial position, you need to exceed that number. A 5% raise is decent relative to what most workers receive, but it is not a real gain in 2026.</p>
+      </details>
+      <details>
+        <summary>Does inflation affect everyone equally?</summary>
+        <p>No. Inflation impacts different people differently depending on their spending patterns. Lower-income households spend a larger share on food and energy — categories that have seen above-average inflation — so they experience a higher effective inflation rate. Renters face different pressures than homeowners with fixed mortgages. People with significant savings lose purchasing power on their cash holdings, while those with fixed-rate debt actually benefit as they repay loans with "cheaper" dollars. Your personal inflation rate depends on your unique spending mix. For a deeper look at managing your specific situation, see our guide on <a href="/blog/budgeting-mistakes-to-avoid/">common budgeting mistakes to avoid</a>.</p>
+      </details>
+      <details>
+        <summary>Should I ask for a raise based on inflation?</summary>
+        <p>Absolutely — but frame it strategically. Do not walk in and say "inflation is high, pay me more." Instead, combine inflation data with your performance record and market benchmarks. Show that your real compensation has declined, then demonstrate the value you deliver. Most employers expect this conversation during high-inflation periods. If they cannot offer a full inflation match, negotiate for other benefits like bonuses, equity, flexible work, or a clear timeline for a larger adjustment. The worst outcome is not asking at all and silently accepting a pay cut.</p>
+      </details>
+
+      <h2>Related Resources</h2>
+      <ul>
+        <li><a href="/tools/budget-calculator">50/30/20 Budget Calculator</a> — see how to allocate your adjusted income</li>
+        <li><a href="/tools/tariff-calculator">Tariff Impact Calculator</a> — understand how tariffs affect the prices you pay</li>
+        <li><a href="/blog/budgeting-mistakes-to-avoid/">Common Budgeting Mistakes to Avoid</a> — protect your purchasing power with smarter habits</li>
+      </ul>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .tool-hero {
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    padding: 4rem 1.5rem 3rem;
+    text-align: center;
+    color: #fff;
+  }
+  .tool-hero-inner {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .tool-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(4px);
+    padding: 0.35rem 1rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+  }
+  .tool-hero h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 800;
+    line-height: 1.15;
+    margin: 0 0 1rem;
+  }
+  .gradient-text {
+    background: linear-gradient(90deg, #c4b5fd, #e9d5ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .tool-subtitle {
+    font-size: 1.1rem;
+    opacity: 0.92;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .tool-app {
+    padding: 2.5rem 1.5rem;
+    background: #f8f9fb;
+  }
+  .tool-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .calc-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    margin-bottom: 2rem;
+  }
+  .input-group {
+    margin-bottom: 1.5rem;
+  }
+  .input-label {
+    display: block;
+    font-weight: 700;
+    font-size: 1.05rem;
+    margin-bottom: 0.75rem;
+    color: #1a1a2e;
+  }
+  .input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .currency-symbol {
+    position: absolute;
+    left: 1.25rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #4f46e5;
+  }
+  .pct-symbol {
+    position: absolute;
+    right: 1.25rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #4f46e5;
+  }
+  .input-hint {
+    font-size: 0.85rem;
+    color: #888;
+    margin: 0.5rem 0 0;
+  }
+  .calc-card input[type="number"] {
+    width: 100%;
+    padding: 1rem 1rem 1rem 2.75rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    transition: border-color 0.2s;
+    outline: none;
+    font-family: inherit;
+    color: #1a1a2e;
+  }
+  .calc-card input[type="number"]:focus {
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 3px rgba(79,70,229,0.15);
+  }
+  .calc-card input[type="number"]::placeholder {
+    color: #a0aec0;
+    font-weight: 400;
+  }
+  #raise-pct,
+  #inflation-rate {
+    padding-left: 1.25rem;
+    padding-right: 2.75rem;
+  }
+
+  .toggle-group {
+    display: flex;
+    gap: 0;
+    margin-bottom: 1.5rem;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 2px solid #e2e8f0;
+  }
+  .toggle-btn {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border: none;
+    background: #f8f9fb;
+    color: #666;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    font-family: inherit;
+  }
+  .toggle-btn.active {
+    background: #4f46e5;
+    color: #fff;
+  }
+  .toggle-btn:hover:not(.active) {
+    background: #eef2ff;
+  }
+
+  .calc-button {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.15rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    font-family: inherit;
+  }
+  .calc-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(79,70,229,0.3);
+  }
+
+  .headline-result {
+    text-align: center;
+    padding: 2.5rem 2rem;
+    border-radius: 16px;
+    margin-bottom: 1.5rem;
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+  .headline-result.positive {
+    background: linear-gradient(135deg, #ecfdf5, #d1fae5);
+    border: 2px solid #6ee7b7;
+  }
+  .headline-result.negative {
+    background: linear-gradient(135deg, #fef2f2, #fee2e2);
+    border: 2px solid #fca5a5;
+  }
+  .headline-label {
+    font-size: 1.1rem;
+    color: #666;
+    margin: 0 0 0.25rem;
+  }
+  .headline-number {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 900;
+    margin: 0 0 0.5rem;
+    line-height: 1.1;
+  }
+  .headline-result.positive .headline-number { color: #059669; }
+  .headline-result.negative .headline-number { color: #dc2626; }
+  .headline-sub {
+    font-size: 1.05rem;
+    color: #555;
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .comparison-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+  .comparison-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    text-align: center;
+  }
+  .comparison-icon {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  .comparison-label {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0 0 0.5rem;
+    line-height: 1.4;
+  }
+  .comparison-value {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #1a1a2e;
+    margin: 0;
+  }
+
+  .detail-card,
+  .bars-card,
+  .fun-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    margin-bottom: 1.5rem;
+  }
+  .detail-card h3,
+  .bars-card h3,
+  .fun-card h3 {
+    margin: 0 0 1.25rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1a1a2e;
+  }
+  .detail-grid {
+    display: grid;
+    gap: 0.75rem;
+  }
+  .detail-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    background: #f8f9fb;
+    border-radius: 10px;
+  }
+  .detail-label {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  .detail-value {
+    font-weight: 700;
+    color: #1a1a2e;
+    font-size: 1rem;
+  }
+  .highlight-item {
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  }
+  .highlight-item .detail-label,
+  .highlight-item .detail-value {
+    color: #fff;
+  }
+
+  .bar-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  .bar-row:last-child {
+    margin-bottom: 0;
+  }
+  .bar-label {
+    font-size: 0.85rem;
+    color: #666;
+    min-width: 140px;
+    flex-shrink: 0;
+  }
+  .bar-track {
+    flex: 1;
+    height: 28px;
+    background: #f0f0f5;
+    border-radius: 999px;
+    overflow: hidden;
+  }
+  .bar {
+    height: 100%;
+    border-radius: 999px;
+    transition: width 0.6s ease;
+    min-width: 0;
+  }
+  .bar-nominal {
+    background: linear-gradient(90deg, #4f46e5, #7c3aed);
+  }
+  .bar-real {
+    background: linear-gradient(90deg, #f59e0b, #ef4444);
+  }
+  .bar-value {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #1a1a2e;
+    min-width: 90px;
+    text-align: right;
+    flex-shrink: 0;
+  }
+
+  .fun-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+  .fun-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    background: #f8f9fb;
+    border-radius: 10px;
+  }
+  .fun-emoji {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+  }
+  .fun-text {
+    font-size: 0.9rem;
+    color: #444;
+    line-height: 1.4;
+  }
+
+  .tool-cta {
+    padding: 2.5rem 1.5rem;
+    background: #fff;
+  }
+  .cta-card {
+    max-width: 800px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    border-radius: 20px;
+    padding: 2.5rem;
+    text-align: center;
+    color: #fff;
+  }
+  .cta-card h2 {
+    margin: 0 0 0.75rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+  }
+  .cta-card p {
+    margin: 0 0 1.5rem;
+    opacity: 0.92;
+    line-height: 1.6;
+  }
+  .cta-button {
+    display: inline-block;
+    background: #fff;
+    color: #4f46e5;
+    font-weight: 700;
+    padding: 0.85rem 2rem;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  }
+
+  .tool-content {
+    padding: 3rem 1.5rem 4rem;
+    background: #f8f9fb;
+  }
+  .content-narrow {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .tool-content h2 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #1a1a2e;
+    margin: 2.5rem 0 0.75rem;
+  }
+  .tool-content h2:first-child {
+    margin-top: 0;
+  }
+  .tool-content p,
+  .tool-content li {
+    font-size: 1.02rem;
+    line-height: 1.7;
+    color: #444;
+  }
+  .tool-content ul,
+  .tool-content ol {
+    padding-left: 1.25rem;
+    margin: 0.5rem 0 1rem;
+  }
+  .tool-content li {
+    margin-bottom: 0.35rem;
+  }
+  .tool-content a {
+    color: #4f46e5;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .tool-content details {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 0.75rem;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  }
+  .tool-content summary {
+    font-weight: 600;
+    cursor: pointer;
+    color: #1a1a2e;
+    font-size: 1.02rem;
+  }
+  .tool-content details p {
+    margin: 0.75rem 0 0;
+  }
+  .inflation-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0 1.5rem;
+    font-size: 0.95rem;
+  }
+  .inflation-table th,
+  .inflation-table td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  .inflation-table th {
+    background: #4f46e5;
+    color: #fff;
+    font-weight: 600;
+  }
+  .inflation-table th:first-child {
+    border-radius: 8px 0 0 0;
+  }
+  .inflation-table th:last-child {
+    border-radius: 0 8px 0 0;
+  }
+  .inflation-table tr:nth-child(even) td {
+    background: #f8f9fb;
+  }
+  .inflation-table td {
+    color: #444;
+  }
+
+  @media (max-width: 640px) {
+    .comparison-grid {
+      grid-template-columns: 1fr;
+    }
+    .fun-grid {
+      grid-template-columns: 1fr;
+    }
+    .bar-row {
+      flex-wrap: wrap;
+    }
+    .bar-label {
+      min-width: 100%;
+    }
+    .bar-value {
+      min-width: auto;
+    }
+    .cta-card {
+      padding: 2rem 1.5rem;
+    }
+    .detail-item {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.25rem;
+    }
+  }
+</style>
+
+<script>
+  const currentSalaryInput = document.getElementById('current-salary') as HTMLInputElement;
+  const lastSalaryInput = document.getElementById('last-salary') as HTMLInputElement;
+  const raisePctInput = document.getElementById('raise-pct') as HTMLInputElement;
+  const inflationInput = document.getElementById('inflation-rate') as HTMLInputElement;
+  const toggleSalary = document.getElementById('toggle-salary') as HTMLButtonElement;
+  const toggleRaise = document.getElementById('toggle-raise') as HTMLButtonElement;
+  const salaryGroup = document.getElementById('salary-input-group') as HTMLElement;
+  const raiseGroup = document.getElementById('raise-input-group') as HTMLElement;
+  const calcBtn = document.getElementById('calc-btn') as HTMLButtonElement;
+  const resultsSection = document.getElementById('results-section') as HTMLElement;
+
+  let mode: 'salary' | 'raise' = 'salary';
+
+  toggleSalary.addEventListener('click', () => {
+    mode = 'salary';
+    toggleSalary.classList.add('active');
+    toggleSalary.setAttribute('aria-checked', 'true');
+    toggleRaise.classList.remove('active');
+    toggleRaise.setAttribute('aria-checked', 'false');
+    salaryGroup.style.display = 'block';
+    raiseGroup.style.display = 'none';
+  });
+
+  toggleRaise.addEventListener('click', () => {
+    mode = 'raise';
+    toggleRaise.classList.add('active');
+    toggleRaise.setAttribute('aria-checked', 'true');
+    toggleSalary.classList.remove('active');
+    toggleSalary.setAttribute('aria-checked', 'false');
+    salaryGroup.style.display = 'none';
+    raiseGroup.style.display = 'block';
+  });
+
+  function fmt(n: number): string {
+    return '$' + Math.round(n).toLocaleString('en-US');
+  }
+
+  function fmtPct(n: number): string {
+    const sign = n >= 0 ? '+' : '';
+    return sign + n.toFixed(2) + '%';
+  }
+
+  calcBtn.addEventListener('click', () => {
+    const currentSalary = parseFloat(currentSalaryInput.value) || 0;
+    const inflationRate = (parseFloat(inflationInput.value) || 0) / 100;
+
+    if (currentSalary <= 0) return;
+
+    let lastSalary: number;
+    if (mode === 'salary') {
+      lastSalary = parseFloat(lastSalaryInput.value) || 0;
+      if (lastSalary <= 0) return;
+    } else {
+      const raisePct = parseFloat(raisePctInput.value) || 0;
+      lastSalary = currentSalary / (1 + raisePct / 100);
+    }
+
+    const nominalRaisePct = ((currentSalary - lastSalary) / lastSalary) * 100;
+    const realRaisePct = nominalRaisePct - (inflationRate * 100);
+    const adjustedLastSalary = lastSalary * (1 + inflationRate);
+    const purchasingPowerChange = currentSalary - adjustedLastSalary;
+    const salaryNeeded = lastSalary * (1 + inflationRate);
+
+    const headlineCard = document.getElementById('headline-card') as HTMLElement;
+    const headlineNumber = document.getElementById('headline-number') as HTMLElement;
+    const headlineSub = document.getElementById('headline-sub') as HTMLElement;
+
+    headlineCard.classList.remove('positive', 'negative');
+    if (realRaisePct >= 0) {
+      headlineCard.classList.add('positive');
+      headlineNumber.textContent = fmtPct(realRaisePct);
+      headlineSub.textContent = 'Your raise beats inflation. Your purchasing power is growing.';
+    } else {
+      headlineCard.classList.add('negative');
+      headlineNumber.textContent = fmtPct(realRaisePct);
+      headlineSub.textContent = `You effectively took a ${Math.abs(realRaisePct).toFixed(2)}% pay cut. You need ${fmt(salaryNeeded)} to keep up.`;
+    }
+
+    (document.getElementById('adjusted-last-salary') as HTMLElement).textContent = fmt(adjustedLastSalary);
+    (document.getElementById('current-display') as HTMLElement).textContent = fmt(currentSalary);
+
+    (document.getElementById('nominal-raise') as HTMLElement).textContent = fmtPct(nominalRaisePct);
+    (document.getElementById('display-inflation') as HTMLElement).textContent = (inflationRate * 100).toFixed(2) + '%';
+    (document.getElementById('real-raise') as HTMLElement).textContent = fmtPct(realRaisePct);
+    (document.getElementById('pp-yearly') as HTMLElement).textContent = (purchasingPowerChange >= 0 ? '+' : '') + fmt(purchasingPowerChange);
+    (document.getElementById('pp-monthly') as HTMLElement).textContent = (purchasingPowerChange >= 0 ? '+' : '') + fmt(purchasingPowerChange / 12);
+    (document.getElementById('salary-needed') as HTMLElement).textContent = fmt(salaryNeeded);
+
+    const realValue = currentSalary / (1 + inflationRate);
+    const maxVal = Math.max(currentSalary, realValue);
+    (document.getElementById('bar-nominal') as HTMLElement).style.width = ((currentSalary / maxVal) * 100) + '%';
+    (document.getElementById('bar-real') as HTMLElement).style.width = ((realValue / maxVal) * 100) + '%';
+    (document.getElementById('bar-nominal-val') as HTMLElement).textContent = fmt(currentSalary);
+    (document.getElementById('bar-real-val') as HTMLElement).textContent = fmt(realValue);
+
+    const monthlyDiff = Math.abs(purchasingPowerChange / 12);
+    const coffeePrice = 5.50;
+    const groceryTrip = 150;
+    const streamingSub = 15;
+    const gasTank = 60;
+
+    const coffees = Math.round(monthlyDiff / coffeePrice);
+    const groceries = (monthlyDiff / groceryTrip).toFixed(1);
+    const streaming = Math.round(monthlyDiff / streamingSub);
+    const gasTanks = (monthlyDiff / gasTank).toFixed(1);
+
+    const direction = purchasingPowerChange >= 0 ? 'extra' : 'fewer';
+    const funGrid = document.getElementById('fun-grid') as HTMLElement;
+    funGrid.innerHTML = `
+      <div class="fun-item"><span class="fun-emoji">&#9749;</span><span class="fun-text">${coffees} ${direction} cups of coffee per month</span></div>
+      <div class="fun-item"><span class="fun-emoji">&#128722;</span><span class="fun-text">${groceries} ${direction} grocery trips per month</span></div>
+      <div class="fun-item"><span class="fun-emoji">&#127909;</span><span class="fun-text">${streaming} ${direction} streaming subscriptions</span></div>
+      <div class="fun-item"><span class="fun-emoji">&#9981;</span><span class="fun-text">${gasTanks} ${direction} gas tank fill-ups per month</span></div>
+    `;
+
+    resultsSection.style.display = 'block';
+    headlineCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+</script>
