@@ -2,6 +2,7 @@
 title: "Study Abroad Budget Checklist: Plan Every Dollar Before You Leave"
 description: "This study abroad budget checklist covers tuition, visa fees, flights, insurance, living costs by country, and emergency funds. Plan smarter before you go."
 pubDate: "2026-03-18"
+heroImage: "/thumbs/thumb-study-abroad-budget-checklist.jpg"
 tags: ["budgeting", "study-abroad", "checklist", "college"]
 ---
 

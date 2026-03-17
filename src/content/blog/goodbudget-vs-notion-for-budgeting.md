@@ -2,6 +2,7 @@
 title: "Goodbudget vs Notion for Budgeting: Envelope System or Full Flexibility?"
 description: "Goodbudget vs Notion for budgeting — compare envelope budgeting with Notion's custom approach. Pricing, sync, visuals, and learning curve compared."
 pubDate: "2026-03-18"
+heroImage: "/thumbs/thumb-goodbudget-vs-notion-for-budgeting.jpg"
 tags: ["budgeting", "goodbudget", "notion", "comparison"]
 ---
 

@@ -2,6 +2,7 @@
 title: "How to Budget on $4,500 a Month (Smart Breakdown + Free Template)"
 description: "Learn how to budget on $4,500 a month with a clear spending breakdown, savings tips, and a free template to manage your money effectively."
 pubDate: "2026-03-17"
+heroImage: "/thumbs/thumb-how-to-budget-on-4500-a-month.jpg"
 tags: ["budgeting", "income", "monthly-budget"]
 ---
 

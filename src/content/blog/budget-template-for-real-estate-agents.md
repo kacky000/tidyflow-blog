@@ -2,6 +2,7 @@
 title: "Budget Template for Real Estate Agents: Manage Commission-Based Income Like a Pro"
 description: "A practical budget template for real estate agents. Handle irregular commissions, business expenses, quarterly taxes, and slow-season savings with one system."
 pubDate: "2026-03-18"
+heroImage: "/thumbs/thumb-budget-template-for-real-estate-agents.jpg"
 tags: ["budgeting", "real-estate", "template", "freelance"]
 ---
 

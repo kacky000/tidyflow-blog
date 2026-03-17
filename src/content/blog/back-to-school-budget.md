@@ -2,6 +2,7 @@
 title: "Back to School Budget: Complete Spending Guide for Every Grade"
 description: "Plan your back to school budget with average costs by grade level, money-saving tips, and a free checklist to avoid overspending this school year."
 pubDate: "2026-03-17"
+heroImage: "/thumbs/thumb-back-to-school-budget.jpg"
 tags: ["budgeting", "back-to-school", "family", "checklist"]
 ---
 

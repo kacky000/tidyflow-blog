@@ -2,6 +2,7 @@
 title: "New Baby Budget Checklist (Everything You Need to Plan For)"
 description: "A complete new baby budget checklist covering pregnancy costs, nursery setup, monthly expenses, and savings tips for new parents."
 pubDate: "2026-03-17"
+heroImage: "/thumbs/thumb-new-baby-budget-checklist.jpg"
 tags: ["budgeting", "baby", "checklist", "family"]
 ---
 

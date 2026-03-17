@@ -2,6 +2,7 @@
 title: "Budget Template for Restaurant Workers: Handle Tips & Irregular Income"
 description: "A budget template for restaurant workers that handles fluctuating tips, cash income tracking, irregular shifts, and seasonal income swings."
 pubDate: "2026-03-18"
+heroImage: "/thumbs/thumb-budget-template-for-restaurant-workers.jpg"
 tags: ["budgeting", "restaurant", "template", "tips"]
 ---
 

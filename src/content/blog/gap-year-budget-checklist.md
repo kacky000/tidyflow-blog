@@ -2,6 +2,7 @@
 title: "Gap Year Budget Checklist: How to Fund Your Year Off Without Going Broke"
 description: "Plan your gap year finances with this budget checklist. Compare costs across Southeast Asia, Europe, and South America plus working holiday income tips."
 pubDate: "2026-03-18"
+heroImage: "/thumbs/thumb-gap-year-budget-checklist.jpg"
 tags: ["budgeting", "gap-year", "checklist", "travel"]
 ---
 

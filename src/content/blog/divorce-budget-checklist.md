@@ -2,6 +2,7 @@
 title: "Divorce Budget Checklist (Financial Survival Guide)"
 description: "A divorce budget checklist to help you plan for legal costs, housing changes, and rebuilding your finances after separation."
 pubDate: "2026-03-17"
+heroImage: "/thumbs/thumb-divorce-budget-checklist.jpg"
 tags: ["budgeting", "divorce", "checklist", "life-event"]
 ---
 

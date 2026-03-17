@@ -2,6 +2,7 @@
 title: "Mint vs Notion for Budgeting: Which One Should You Use in 2026?"
 description: "Mint vs Notion for budgeting — a detailed comparison of features, ease of use, cost, and flexibility to help you pick the best budgeting tool."
 pubDate: "2026-03-17"
+heroImage: "/thumbs/thumb-mint-vs-notion-for-budgeting.jpg"
 tags: ["budgeting", "notion", "mint", "comparison"]
 ---
 

@@ -2,6 +2,7 @@
 title: "Retirement Budget Checklist: Plan Your Finances for a Stress-Free Retirement"
 description: "Use this retirement budget checklist to organize fixed expenses, variable costs, and income sources. Cover Medicare, RMDs, and downsizing decisions."
 pubDate: "2026-03-18"
+heroImage: "/thumbs/thumb-retirement-budget-checklist.jpg"
 tags: ["budgeting", "retirement", "checklist"]
 ---
 

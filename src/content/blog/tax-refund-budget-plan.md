@@ -2,6 +2,7 @@
 title: "Tax Refund Budget Plan: How to Make the Most of Your Money"
 description: "Build a smart tax refund budget plan. Learn the 50/30/20 split for your refund, common mistakes to avoid, and how to plan before the check arrives."
 pubDate: 2026-03-18
+heroImage: "/thumbs/thumb-tax-refund-budget-plan.jpg"
 tags: ["budgeting", "tax-refund", "savings", "planning"]
 author: "Tidyflow"
 ---

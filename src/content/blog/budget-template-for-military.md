@@ -2,6 +2,7 @@
 title: "Budget Template for Military: Manage BAH, BAS & Special Pay"
 description: "A budget template for military members covering base pay, BAH, BAS, special allowances, PCS costs, TSP savings, and deployment strategies."
 pubDate: "2026-03-18"
+heroImage: "/thumbs/thumb-budget-template-for-military.jpg"
 tags: ["budgeting", "military", "template"]
 ---
 

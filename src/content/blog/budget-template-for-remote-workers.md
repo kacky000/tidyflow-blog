@@ -2,6 +2,7 @@
 title: "Budget Template for Remote Workers (Home Office + Tax Deductions)"
 description: "A budget template for remote workers that covers home office costs, tax deductions, irregular expenses, and savings strategies for WFH professionals."
 pubDate: "2026-03-17"
+heroImage: "/thumbs/thumb-budget-template-for-remote-workers.jpg"
 tags: ["budgeting", "remote-work", "template", "freelance"]
 ---
 

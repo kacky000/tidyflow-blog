@@ -2,6 +2,7 @@
 title: "Budget Template for College Students (Free Download + Tips)"
 description: "Get a free budget template for college students. Track tuition, food, rent, and fun money with a simple spreadsheet or Notion tracker."
 pubDate: "2026-03-17"
+heroImage: "/thumbs/thumb-budget-template-for-college-students.jpg"
 tags: ["budgeting", "college", "template", "students"]
 ---
 

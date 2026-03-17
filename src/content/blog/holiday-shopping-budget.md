@@ -2,6 +2,7 @@
 title: "Holiday Shopping Budget: How to Spend Smart and Stress Less"
 description: "Create a holiday shopping budget that keeps your finances on track. Gift lists, Black Friday tips, hidden costs, and a year-round savings plan."
 pubDate: 2026-03-18
+heroImage: "/thumbs/thumb-holiday-shopping-budget.jpg"
 tags: ["budgeting", "holiday", "shopping", "savings"]
 author: "Tidyflow"
 ---

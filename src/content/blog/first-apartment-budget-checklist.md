@@ -2,6 +2,7 @@
 title: "First Apartment Budget Checklist (Complete Move-In Cost Guide)"
 description: "A first apartment budget checklist covering move-in costs, monthly expenses, essential purchases, and tips to avoid overspending on your first place."
 pubDate: "2026-03-17"
+heroImage: "/thumbs/thumb-first-apartment-budget-checklist.jpg"
 tags: ["budgeting", "apartment", "checklist", "first-time"]
 ---
 

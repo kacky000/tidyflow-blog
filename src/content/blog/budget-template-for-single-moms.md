@@ -2,6 +2,7 @@
 title: "Budget Template for Single Moms (Realistic Plan + Free Download)"
 description: "A practical budget template for single moms. Manage childcare, groceries, and bills on one income with a simple spreadsheet or Notion tracker."
 pubDate: "2026-03-17"
+heroImage: "/thumbs/thumb-budget-template-for-single-moms.jpg"
 tags: ["budgeting", "single-parent", "template", "family"]
 ---
 
