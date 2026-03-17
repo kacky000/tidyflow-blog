@@ -1,6 +1,6 @@
 ---
-title: "7 Best Free Budget Spreadsheet Templates 2026 (Updated March) — Excel, Sheets & Notion"
-description: "Best free budget spreadsheet templates for 2026 — 7 tested & ranked picks for Excel, Google Sheets & Notion. Free instant downloads + step-by-step setup guide."
+title: "7 Best Free Budget Spreadsheet Templates 2026 — Excel, Google Sheets & Notion (Tested)"
+description: "Compare the 7 best free budget spreadsheet templates for 2026. Includes Excel, Google Sheets & Notion picks with free downloads. We tested 30+ to find these."
 pubDate: "2026-03-11"
 tags: ["budget", "spreadsheet", "excel", "google-sheets", "notion", "template"]
 author: "Tidyflow"
