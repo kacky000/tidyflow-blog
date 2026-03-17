@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-const title = 'Free Savings Goal Calculator — How Long Until You Reach Your Goal?';
-const description = 'Enter your savings goal, current balance, and monthly contribution to see exactly when you will reach your target. Free calculator with progress bar and timeline.';
+const title = 'Savings Goal Calculator — How Long Until You Reach Your Goal?';
+const description = 'Enter your savings goal, current balance, and monthly contribution. Compare different interest rates and see exactly when you will hit your target. Free, no signup.';
 ---
 
 <BaseLayout title={title} description={description}>
@@ -22,7 +22,7 @@ const description = 'Enter your savings goal, current balance, and monthly contr
     <div class="tool-hero-inner">
       <span class="tool-badge">Free Tool — No Signup Required</span>
       <h1>Savings Goal <span class="gradient-text">Calculator</span></h1>
-      <p class="tool-subtitle">Set a goal, enter what you have today and what you can save each month. We will tell you exactly when you will get there — with a visual timeline to keep you motivated.</p>
+      <p class="tool-subtitle">Set a goal, enter what you have today and what you can save each month. Compare different interest rates to see how much faster your money grows in a high-yield savings account.</p>
     </div>
   </section>
 
@@ -53,6 +53,11 @@ const description = 'Enter your savings goal, current balance, and monthly contr
           </div>
           <span class="input-hint">How much can you save each month?</span>
         </div>
+        <div class="input-card input-card-deadline">
+          <label for="target-date">Target Date (optional)</label>
+          <input type="month" id="target-date" />
+          <span class="input-hint">When do you want to reach your goal?</span>
+        </div>
       </div>
 
       <div class="results-section" id="results-section" style="display:none;">
@@ -72,16 +77,40 @@ const description = 'Enter your savings goal, current balance, and monthly contr
 
         <div class="stats-grid">
           <div class="stat-card stat-primary">
-            <span class="stat-value" id="stat-months">—</span>
+            <span class="stat-value" id="stat-months">&mdash;</span>
             <span class="stat-label">Months to Goal</span>
           </div>
           <div class="stat-card">
-            <span class="stat-value" id="stat-date">—</span>
+            <span class="stat-value" id="stat-date">&mdash;</span>
             <span class="stat-label">Target Date</span>
           </div>
           <div class="stat-card">
-            <span class="stat-value" id="stat-remaining">—</span>
+            <span class="stat-value" id="stat-remaining">&mdash;</span>
             <span class="stat-label">Remaining to Save</span>
+          </div>
+        </div>
+
+        <div class="deadline-card" id="deadline-card" style="display:none;">
+          <p id="deadline-text"></p>
+        </div>
+
+        <!-- Interest rate comparison -->
+        <div class="rate-comparison-card">
+          <h3>Interest Rate Comparison</h3>
+          <p class="rate-subtitle">See how different savings account rates affect your timeline</p>
+          <div class="rate-table-wrapper">
+            <table class="rate-table" id="rate-table">
+              <thead>
+                <tr>
+                  <th>Account Type</th>
+                  <th>APY</th>
+                  <th>Months to Goal</th>
+                  <th>Interest Earned</th>
+                  <th>Total Saved</th>
+                </tr>
+              </thead>
+              <tbody id="rate-tbody"></tbody>
+            </table>
           </div>
         </div>
 
@@ -91,14 +120,14 @@ const description = 'Enter your savings goal, current balance, and monthly contr
         </div>
 
         <div class="tip-card" id="tip-card" style="display:none;">
-          <span class="tip-icon">💡</span>
+          <span class="tip-icon">&#128161;</span>
           <p id="tip-text"></p>
         </div>
       </div>
 
       <div class="already-done" id="already-done" style="display:none;">
         <div class="done-card">
-          <span class="done-icon">🎉</span>
+          <span class="done-icon">&#127881;</span>
           <h3>You have already reached your goal!</h3>
           <p>Your current savings exceed your goal. Time to set a bigger target or start investing the surplus.</p>
         </div>
@@ -109,9 +138,9 @@ const description = 'Enter your savings goal, current balance, and monthly contr
   <section class="tool-cta">
     <div class="tool-container">
       <div class="cta-card">
-        <h2>Track Your Savings Goals Visually</h2>
-        <p>This calculator shows you the plan. Our Personal Finance Dashboard helps you <strong>execute it</strong> — track every goal, every account, and every milestone in one beautiful Notion workspace.</p>
-        <a href="https://gettidyflow.gumroad.com" target="_blank" rel="noopener" class="cta-button">Get the Personal Finance Dashboard &rarr;</a>
+        <h2>Plan Your Savings with Our Budget Template</h2>
+        <p>This calculator shows you the plan. Our Notion Budget Template helps you <strong>execute it</strong> — track every goal, every account, and every milestone in one beautiful workspace.</p>
+        <a href="https://gettidyflow.gumroad.com/l/notion-monthly-budget-tracker" target="_blank" rel="noopener" class="cta-button">Get the Budget Template &rarr;</a>
       </div>
     </div>
   </section>
@@ -124,31 +153,38 @@ const description = 'Enter your savings goal, current balance, and monthly contr
 
       <h2>How to Use This Calculator</h2>
       <ol>
-        <li>Enter your <strong>savings goal</strong> — this could be an emergency fund, vacation, down payment, or anything else.</li>
-        <li>Enter your <strong>current savings</strong> — what you have already set aside for this goal.</li>
-        <li>Enter your <strong>monthly contribution</strong> — how much you can realistically put away each month.</li>
-        <li>The calculator will show your progress, target date, and a visual timeline.</li>
+        <li>Enter your <strong>savings goal</strong> — emergency fund, vacation, down payment, or any target.</li>
+        <li>Enter your <strong>current savings</strong> — what you have already set aside.</li>
+        <li>Enter your <strong>monthly contribution</strong> — how much you can realistically save each month.</li>
+        <li>Optionally set a <strong>target date</strong> to see if you need to increase your contribution.</li>
+        <li>Compare the <strong>interest rate table</strong> to see how a high-yield savings account shortens your timeline.</li>
       </ol>
+
+      <h2>Why Interest Rate Matters</h2>
+      <p>The difference between a traditional savings account (0.01% APY) and a high-yield savings account (4-5% APY) can be significant for longer goals. On a $20,000 goal with $500/month contributions, a 5% APY account earns you over $1,500 in interest — that is 3 months of contributions you did not have to make.</p>
+      <p>For short-term goals (under 1 year), the interest difference is negligible. For goals over 2 years, it is absolutely worth switching to a high-yield account. Check the comparison table above for your specific numbers.</p>
 
       <h2>Tips to Reach Your Goal Faster</h2>
       <ul>
-        <li><strong>Automate transfers</strong> — set up a recurring transfer on payday so saving happens before spending.</li>
+        <li><strong>Automate transfers</strong> — set up a recurring transfer on payday so saving happens before spending. Use our <a href="/blog/how-to-track-expenses-in-notion/">Notion expense tracker</a> to monitor spending.</li>
         <li><strong>Use a high-yield savings account</strong> — earn 4-5% APY instead of 0.01% at a traditional bank.</li>
         <li><strong>Save windfalls</strong> — tax refunds, bonuses, and gifts can supercharge your progress.</li>
-        <li><strong>Cut one expense</strong> — canceling a single $15/month subscription adds $180/year to your goal.</li>
-        <li><strong>Track visually</strong> — seeing a <a href="/blog/how-to-track-expenses-in-notion/">progress bar fill up</a> is deeply motivating.</li>
+        <li><strong>Apply the 50/30/20 rule</strong> — allocate 20% of your income to savings automatically. Use our <a href="/tools/50-30-20-calculator">50/30/20 Calculator</a> to find your number.</li>
+        <li><strong>Track visually</strong> — seeing a progress bar fill up is deeply motivating.</li>
       </ul>
 
       <h2>Common Savings Goals and Timelines</h2>
       <ul>
-        <li><strong>Emergency fund ($10,000)</strong> — saving $500/mo gets you there in 20 months</li>
-        <li><strong>Vacation ($3,000)</strong> — saving $250/mo takes 12 months</li>
-        <li><strong>Down payment ($50,000)</strong> — saving $1,500/mo takes about 2.8 years</li>
-        <li><strong>New car ($25,000)</strong> — saving $800/mo takes about 2.6 years</li>
+        <li><strong>Emergency fund ($10,000)</strong> — $500/mo gets you there in 20 months</li>
+        <li><strong>Vacation ($3,000)</strong> — $250/mo takes 12 months</li>
+        <li><strong>Down payment ($50,000)</strong> — $1,500/mo takes about 2.8 years</li>
+        <li><strong>New car ($25,000)</strong> — $800/mo takes about 2.6 years</li>
       </ul>
 
       <h2>Related Resources</h2>
       <ul>
+        <li><a href="/tools/50-30-20-calculator">50/30/20 Budget Calculator</a> — figure out how much you can save each month</li>
+        <li><a href="/tools/debt-payoff-calculator">Debt Payoff Calculator</a> — pay off debt before saving aggressively</li>
         <li><a href="/blog/how-to-save-money-college-student/">How to Save Money as a College Student</a></li>
         <li><a href="/blog/why-people-fail-at-budgeting/">Why People Fail at Budgeting (and How to Fix It)</a></li>
         <li><a href="/blog/50-30-20-budget-rule-notion/">The 50/30/20 Budget Rule in Notion</a></li>
@@ -157,8 +193,8 @@ const description = 'Enter your savings goal, current balance, and monthly contr
 
       <h2>Frequently Asked Questions</h2>
       <details>
-        <summary>Does this calculator account for interest?</summary>
-        <p>This calculator shows a simple projection based on fixed monthly contributions. If you are using a high-yield savings account (4-5% APY), you will reach your goal slightly faster than shown. For most short-to-medium term goals (under 3 years), the difference is minor.</p>
+        <summary>Does this calculator account for compound interest?</summary>
+        <p>Yes. The interest rate comparison table uses <strong>monthly compound interest</strong> to calculate how much you will earn at each rate. The timeline and months-to-goal figure in the main result use a 0% rate (pure savings), while the comparison table shows you the impact of various APY levels.</p>
       </details>
       <details>
         <summary>What if I cannot save the same amount every month?</summary>
@@ -166,15 +202,15 @@ const description = 'Enter your savings goal, current balance, and monthly contr
       </details>
       <details>
         <summary>How much should I have in an emergency fund?</summary>
-        <p>Most financial advisors recommend <strong>3-6 months of essential expenses</strong>. If you spend $3,000/month on needs, aim for $9,000-$18,000. Start with a $1,000 "starter" emergency fund, then build from there.</p>
+        <p>Most financial advisors recommend <strong>3-6 months of essential expenses</strong>. If you spend $3,000/month on needs, aim for $9,000-$18,000. Start with a $1,000 "starter" emergency fund, then build from there. Learn more about budgeting in our <a href="/blog/monthly-budget-checklist/">monthly budget checklist</a>.</p>
       </details>
       <details>
         <summary>Should I save or pay off debt first?</summary>
-        <p>Build a small emergency fund first ($1,000), then attack high-interest debt (anything above 7-8%). Once high-interest debt is gone, build your full emergency fund and then save for other goals.</p>
+        <p>Build a small emergency fund ($1,000) first, then attack high-interest debt (above 7-8%). Once that is gone, build your full emergency fund and save for other goals. Use our <a href="/tools/debt-payoff-calculator">Debt Payoff Calculator</a> to plan your debt strategy.</p>
       </details>
       <details>
         <summary>How do I stay motivated?</summary>
-        <p>Visual tracking is the most effective motivator. Use a <a href="/blog/how-to-track-expenses-in-notion/">Notion dashboard</a> or savings tracker where you can see your progress bar grow. Celebrate milestones — when you hit 25%, 50%, and 75%, reward yourself with something small.</p>
+        <p>Visual tracking is the most effective motivator. Use a <a href="/blog/how-to-track-expenses-in-notion/">Notion dashboard</a> where you can see your progress bar grow. Celebrate milestones — when you hit 25%, 50%, and 75%, reward yourself with something small.</p>
       </details>
     </div>
   </section>
@@ -182,7 +218,7 @@ const description = 'Enter your savings goal, current balance, and monthly contr
 
 <style>
   .tool-hero {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
     padding: 4rem 1.5rem 3rem;
     text-align: center;
     color: #fff;
@@ -208,7 +244,7 @@ const description = 'Enter your savings goal, current balance, and monthly contr
     margin: 0 0 1rem;
   }
   .gradient-text {
-    background: linear-gradient(90deg, #ffd6e0, #ffecd2);
+    background: linear-gradient(90deg, #fde68a, #fbbf24);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -225,13 +261,13 @@ const description = 'Enter your savings goal, current balance, and monthly contr
     background: #f8f9fb;
   }
   .tool-container {
-    max-width: 800px;
+    max-width: 880px;
     margin: 0 auto;
   }
 
   .inputs-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     margin-bottom: 2rem;
   }
@@ -240,6 +276,9 @@ const description = 'Enter your savings goal, current balance, and monthly contr
     border-radius: 16px;
     padding: 1.5rem;
     box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+  .input-card-deadline {
+    grid-column: 1 / -1;
   }
   .input-card label {
     display: block;
@@ -258,9 +297,9 @@ const description = 'Enter your savings goal, current balance, and monthly contr
     transform: translateY(-50%);
     font-weight: 700;
     font-size: 1.15rem;
-    color: #667eea;
+    color: #7c3aed;
   }
-  .input-card input {
+  .input-card input[type="number"] {
     width: 100%;
     padding: 0.85rem 0.85rem 0.85rem 2rem;
     font-size: 1.25rem;
@@ -272,9 +311,21 @@ const description = 'Enter your savings goal, current balance, and monthly contr
     color: #1a1a2e;
     transition: border-color 0.2s;
   }
+  .input-card input[type="month"] {
+    width: 100%;
+    padding: 0.85rem;
+    font-size: 1.05rem;
+    font-weight: 600;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    outline: none;
+    font-family: inherit;
+    color: #1a1a2e;
+    transition: border-color 0.2s;
+  }
   .input-card input:focus {
-    border-color: #667eea;
-    box-shadow: 0 0 0 3px rgba(102,126,234,0.15);
+    border-color: #7c3aed;
+    box-shadow: 0 0 0 3px rgba(124,58,237,0.15);
   }
   .input-card input::placeholder {
     color: #b0b8c4;
@@ -307,7 +358,7 @@ const description = 'Enter your savings goal, current balance, and monthly contr
   .progress-pct {
     font-size: 1.5rem;
     font-weight: 800;
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    background: linear-gradient(135deg, #7c3aed, #a855f7);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -323,7 +374,7 @@ const description = 'Enter your savings goal, current balance, and monthly contr
   .progress-fill {
     height: 100%;
     border-radius: 999px;
-    background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+    background: linear-gradient(90deg, #7c3aed, #a855f7, #f093fb);
     transition: width 0.5s ease;
   }
   .progress-amounts {
@@ -347,7 +398,7 @@ const description = 'Enter your savings goal, current balance, and monthly contr
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
   }
   .stat-primary {
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    background: linear-gradient(135deg, #7c3aed, #a855f7);
     color: #fff;
   }
   .stat-value {
@@ -370,6 +421,86 @@ const description = 'Enter your savings goal, current balance, and monthly contr
   }
   .stat-primary .stat-label {
     color: rgba(255,255,255,0.85);
+  }
+
+  .deadline-card {
+    background: #fef3c7;
+    border: 2px solid #f59e0b;
+    border-radius: 14px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+  .deadline-card p {
+    margin: 0;
+    font-size: 1rem;
+    color: #92400e;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+
+  .rate-comparison-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    margin-bottom: 1.25rem;
+  }
+  .rate-comparison-card h3 {
+    margin: 0 0 0.25rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1a1a2e;
+  }
+  .rate-subtitle {
+    margin: 0 0 1.25rem;
+    font-size: 0.9rem;
+    color: #888;
+  }
+  .rate-table-wrapper {
+    overflow-x: auto;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+  }
+  .rate-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+  }
+  .rate-table th {
+    background: #f8f9fb;
+    padding: 0.75rem 1rem;
+    text-align: left;
+    font-weight: 700;
+    color: #1a1a2e;
+    white-space: nowrap;
+    border-bottom: 2px solid #e2e8f0;
+  }
+  .rate-table td {
+    padding: 0.65rem 1rem;
+    color: #444;
+    border-bottom: 1px solid #f0f0f5;
+    white-space: nowrap;
+  }
+  .rate-table tr:last-child td {
+    border-bottom: none;
+  }
+  .rate-table .best-row {
+    background: #f5f3ff;
+  }
+  .rate-table .best-row td {
+    color: #7c3aed;
+    font-weight: 600;
+  }
+  .rate-badge {
+    display: inline-block;
+    background: #7c3aed;
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.15rem 0.5rem;
+    border-radius: 999px;
+    margin-left: 0.5rem;
+    vertical-align: middle;
   }
 
   .timeline-card {
@@ -411,7 +542,7 @@ const description = 'Enter your savings goal, current balance, and monthly contr
     flex-shrink: 0;
   }
   .tl-dot.active {
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    background: linear-gradient(135deg, #7c3aed, #a855f7);
   }
   .tl-dot.done {
     background: #43e97b;
@@ -436,12 +567,12 @@ const description = 'Enter your savings goal, current balance, and monthly contr
     color: #1a1a2e;
   }
   .tl-milestone {
-    background: #f0f0ff;
+    background: #f5f3ff;
     padding: 0.35rem 0.7rem;
     border-radius: 6px;
     font-size: 0.8rem;
     font-weight: 600;
-    color: #667eea;
+    color: #7c3aed;
     display: inline-block;
     margin-top: 0.2rem;
   }
@@ -493,9 +624,9 @@ const description = 'Enter your savings goal, current balance, and monthly contr
     background: #fff;
   }
   .cta-card {
-    max-width: 800px;
+    max-width: 880px;
     margin: 0 auto;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
     border-radius: 20px;
     padding: 2.5rem;
     text-align: center;
@@ -514,7 +645,7 @@ const description = 'Enter your savings goal, current balance, and monthly contr
   .cta-button {
     display: inline-block;
     background: #fff;
-    color: #667eea;
+    color: #7c3aed;
     font-weight: 700;
     padding: 0.85rem 2rem;
     border-radius: 999px;
@@ -552,7 +683,7 @@ const description = 'Enter your savings goal, current balance, and monthly contr
   }
   .tool-content li { margin-bottom: 0.35rem; }
   .tool-content a {
-    color: #667eea;
+    color: #7c3aed;
     text-decoration: underline;
     text-underline-offset: 2px;
   }
@@ -575,6 +706,9 @@ const description = 'Enter your savings goal, current balance, and monthly contr
     .inputs-grid {
       grid-template-columns: 1fr;
     }
+    .input-card-deadline {
+      grid-column: auto;
+    }
     .stats-grid {
       grid-template-columns: 1fr;
     }
@@ -588,6 +722,7 @@ const description = 'Enter your savings goal, current balance, and monthly contr
   const goalInput = document.getElementById('goal-amount') as HTMLInputElement;
   const currentInput = document.getElementById('current-savings') as HTMLInputElement;
   const monthlyInput = document.getElementById('monthly-contribution') as HTMLInputElement;
+  const targetDateInput = document.getElementById('target-date') as HTMLInputElement;
   const resultsSection = document.getElementById('results-section')!;
   const alreadyDone = document.getElementById('already-done')!;
 
@@ -598,6 +733,39 @@ const description = 'Enter your savings goal, current balance, and monthly contr
   function formatMonth(date: Date): string {
     return date.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
   }
+
+  // Calculate months to goal with compound interest
+  function monthsWithInterest(goal: number, current: number, monthly: number, annualRate: number): { months: number; interestEarned: number; totalSaved: number } {
+    if (annualRate <= 0) {
+      const remaining = goal - current;
+      const months = Math.ceil(remaining / monthly);
+      return { months, interestEarned: 0, totalSaved: current + monthly * months };
+    }
+
+    const monthlyRate = annualRate / 100 / 12;
+    let balance = current;
+    let totalContributions = current;
+    let months = 0;
+    const maxMonths = 1200; // 100 year cap
+
+    while (balance < goal && months < maxMonths) {
+      months++;
+      balance = balance * (1 + monthlyRate) + monthly;
+      totalContributions += monthly;
+    }
+
+    const interestEarned = balance - totalContributions;
+    return { months, interestEarned: Math.max(0, interestEarned), totalSaved: balance };
+  }
+
+  const rateScenarios = [
+    { name: 'Traditional Savings', rate: 0.01 },
+    { name: 'Online Savings', rate: 1.5 },
+    { name: 'High-Yield Savings', rate: 4.0 },
+    { name: 'High-Yield (Best)', rate: 5.0 },
+    { name: 'CD (12-month)', rate: 4.5 },
+    { name: 'Money Market', rate: 3.5 },
+  ];
 
   function calculate() {
     const goal = parseFloat(goalInput.value) || 0;
@@ -643,6 +811,63 @@ const description = 'Enter your savings goal, current balance, and monthly contr
     document.getElementById('stat-date')!.textContent = formatMonth(targetDate);
     document.getElementById('stat-remaining')!.textContent = formatCurrency(remaining);
 
+    // Deadline check
+    const deadlineCard = document.getElementById('deadline-card')!;
+    const deadlineText = document.getElementById('deadline-text')!;
+    const targetDateVal = targetDateInput.value;
+
+    if (targetDateVal) {
+      const [year, month] = targetDateVal.split('-').map(Number);
+      const deadlineDate = new Date(year, month - 1, 1);
+      const now = new Date();
+      const deadlineMonths = Math.max(0, (deadlineDate.getFullYear() - now.getFullYear()) * 12 + (deadlineDate.getMonth() - now.getMonth()));
+
+      if (deadlineMonths <= 0) {
+        deadlineCard.style.display = 'block';
+        deadlineText.innerHTML = `Your target date has already passed. You need <strong>${formatCurrency(remaining)}</strong> more. Consider setting a new realistic deadline.`;
+      } else if (months <= deadlineMonths) {
+        deadlineCard.style.display = 'block';
+        (deadlineCard as HTMLElement).style.background = '#ecfdf5';
+        (deadlineCard as HTMLElement).style.borderColor = '#10b981';
+        deadlineText.innerHTML = `You are on track! At <strong>${formatCurrency(monthly)}/month</strong>, you will reach your goal <strong>${deadlineMonths - months} month${deadlineMonths - months !== 1 ? 's' : ''} before</strong> your deadline.`;
+        deadlineText.style.color = '#065f46';
+      } else {
+        const neededMonthly = Math.ceil(remaining / deadlineMonths);
+        deadlineCard.style.display = 'block';
+        (deadlineCard as HTMLElement).style.background = '#fef3c7';
+        (deadlineCard as HTMLElement).style.borderColor = '#f59e0b';
+        deadlineText.style.color = '#92400e';
+        deadlineText.innerHTML = `To hit your deadline, you need to save <strong>${formatCurrency(neededMonthly)}/month</strong> (currently ${formatCurrency(monthly)}/month). That is <strong>${formatCurrency(neededMonthly - monthly)} more</strong> per month.`;
+      }
+    } else {
+      deadlineCard.style.display = 'none';
+    }
+
+    // Interest rate comparison table
+    const rateTbody = document.getElementById('rate-tbody')!;
+    let bestRate = rateScenarios[0];
+    let bestMonths = Infinity;
+
+    const rows = rateScenarios.map(scenario => {
+      const result = monthsWithInterest(goal, current, monthly, scenario.rate);
+      if (result.months < bestMonths) {
+        bestMonths = result.months;
+        bestRate = scenario;
+      }
+      return { ...scenario, ...result };
+    });
+
+    rateTbody.innerHTML = rows.map(row => {
+      const isBest = row.name === bestRate.name;
+      return `<tr class="${isBest ? 'best-row' : ''}">
+        <td>${row.name}${isBest ? '<span class="rate-badge">FASTEST</span>' : ''}</td>
+        <td>${row.rate}%</td>
+        <td>${row.months} mo</td>
+        <td>${formatCurrency(Math.round(row.interestEarned))}</td>
+        <td>${formatCurrency(Math.round(row.totalSaved))}</td>
+      </tr>`;
+    }).join('');
+
     // Timeline
     const timelineCard = document.getElementById('timeline-card')!;
     const timeline = document.getElementById('timeline')!;
@@ -651,7 +876,7 @@ const description = 'Enter your savings goal, current balance, and monthly contr
       timelineCard.style.display = 'block';
       timeline.innerHTML = '';
 
-      const milestones: { pct: number; label: string }[] = [
+      const milestones = [
         { pct: 0, label: 'Start' },
         { pct: 25, label: '25% milestone' },
         { pct: 50, label: 'Halfway there!' },
@@ -668,7 +893,7 @@ const description = 'Enter your savings goal, current balance, and monthly contr
         const isDone = current >= msAmount;
         const isLast = idx === milestones.length - 1;
 
-        let html = `<div class="tl-item">
+        const html = `<div class="tl-item">
           <div class="tl-dot-wrap">
             <div class="tl-dot ${isDone ? 'done' : (idx === 0 ? 'active' : '')}"></div>
             ${!isLast ? '<div class="tl-line"></div>' : ''}
@@ -690,11 +915,13 @@ const description = 'Enter your savings goal, current balance, and monthly contr
     const tipText = document.getElementById('tip-text')!;
     tipCard.style.display = 'flex';
 
-    if (months > 60) {
+    const hyResult = monthsWithInterest(goal, current, monthly, 5.0);
+    const monthsSaved = months - hyResult.months;
+
+    if (monthsSaved > 1) {
+      tipText.innerHTML = `Switch to a high-yield savings account (5% APY) and reach your goal <strong>${monthsSaved} month${monthsSaved > 1 ? 's' : ''} sooner</strong>, earning <strong>${formatCurrency(Math.round(hyResult.interestEarned))}</strong> in interest along the way.`;
+    } else if (months > 60) {
       tipText.innerHTML = `At this rate, it will take <strong>${Math.floor(months / 12)} years and ${months % 12} months</strong>. Consider increasing your monthly contribution — even an extra $100/month would save you ${Math.ceil(remaining / (monthly + 100))} months of waiting.`;
-    } else if (months > 24) {
-      const extraMonths = months - Math.ceil(remaining / (monthly * 1.2));
-      tipText.innerHTML = `Great plan! Increasing your contribution by just 20% (to ${formatCurrency(monthly * 1.2)}/month) would get you there <strong>${extraMonths} months sooner</strong>.`;
     } else if (months <= 6) {
       tipText.innerHTML = `You are so close! Just <strong>${months} months</strong> to go. Stay consistent and you will be celebrating before you know it.`;
     } else {
@@ -702,7 +929,8 @@ const description = 'Enter your savings goal, current balance, and monthly contr
     }
   }
 
-  [goalInput, currentInput, monthlyInput].forEach(el => {
+  [goalInput, currentInput, monthlyInput, targetDateInput].forEach(el => {
     el.addEventListener('input', calculate);
+    el.addEventListener('change', calculate);
   });
 </script>

@@ -34,7 +34,6 @@ const description = 'Enter your debts and see exactly when you\'ll be debt-free.
           <button type="button" id="add-debt-btn" class="add-debt-btn" aria-label="Add another debt">+ Add Debt</button>
         </div>
         <div id="debt-list" role="list" aria-label="List of debts">
-          <!-- Debt rows injected by JS -->
         </div>
         <p class="debt-limit-note" id="debt-limit-note" style="display:none;">Maximum 10 debts reached.</p>
       </div>
@@ -79,7 +78,7 @@ const description = 'Enter your debts and see exactly when you\'ll be debt-free.
             </div>
             <div class="method-stat">
               <span class="stat-label">Debt-Free Date</span>
-              <span class="stat-value" id="av-date">—</span>
+              <span class="stat-value" id="av-date">&mdash;</span>
             </div>
             <div class="payoff-order">
               <h4>Payoff Order</h4>
@@ -104,7 +103,7 @@ const description = 'Enter your debts and see exactly when you\'ll be debt-free.
             </div>
             <div class="method-stat">
               <span class="stat-label">Debt-Free Date</span>
-              <span class="stat-value" id="sb-date">—</span>
+              <span class="stat-value" id="sb-date">&mdash;</span>
             </div>
             <div class="payoff-order">
               <h4>Payoff Order</h4>
@@ -138,9 +137,9 @@ const description = 'Enter your debts and see exactly when you\'ll be debt-free.
   <section class="tool-cta">
     <div class="tool-container">
       <div class="cta-card">
-        <h2>Track Your Debt Payoff Journey</h2>
-        <p>Knowing your payoff plan is the first step. The next step is <strong>actually tracking every payment</strong> and watching your balances drop month after month. Our Budget Tracker makes it effortless.</p>
-        <a href="https://gettidyflow.gumroad.com" target="_blank" rel="noopener" class="cta-button">Get the Budget Tracker &rarr;</a>
+        <h2>Download Our Free Debt Tracker Spreadsheet</h2>
+        <p>This calculator shows you the plan. Now <strong>track every payment</strong> and watch your balances drop month after month. Our budget tracker makes it effortless to stay on course.</p>
+        <a href="https://gettidyflow.gumroad.com" target="_blank" rel="noopener" class="cta-button">Download Free Debt Tracker &rarr;</a>
       </div>
     </div>
   </section>
@@ -148,76 +147,69 @@ const description = 'Enter your debts and see exactly when you\'ll be debt-free.
   <section class="tool-content">
     <div class="tool-container content-narrow">
       <h2>Avalanche vs Snowball — Which Debt Payoff Method Is Better?</h2>
-      <p>If you are carrying multiple debts — credit cards, student loans, a car payment — choosing the right payoff strategy can save you thousands of dollars and months of stress. The two most popular approaches are the <strong>Debt Avalanche</strong> and the <strong>Debt Snowball</strong>. Both work. Both will get you to zero. But they take different paths to get there.</p>
-      <p>The Avalanche method is mathematically optimal. It minimizes total interest by targeting the highest-rate debt first. The Snowball method is psychologically optimal. It builds momentum by eliminating the smallest balance first, giving you quick wins that keep you motivated.</p>
-      <p>Which one is "better" depends entirely on you. If you are disciplined and motivated by numbers, Avalanche will save you the most money. If you need visible progress to stay on track, Snowball's early victories can be the difference between sticking with your plan and giving up.</p>
-      <p>The calculator above lets you run both scenarios with your actual debts so you can see exactly how much the difference is. Sometimes the interest gap is only $50. Sometimes it is $5,000. The only way to know is to plug in your numbers.</p>
+      <p>If you are carrying multiple debts — credit cards, student loans, a car payment — choosing the right payoff strategy can save you thousands of dollars and months of stress. The two most popular approaches are the <strong>Debt Avalanche</strong> and the <strong>Debt Snowball</strong>.</p>
+      <p>The Avalanche method is mathematically optimal: it minimizes total interest by targeting the highest-rate debt first. The Snowball method is psychologically optimal: it builds momentum by eliminating the smallest balance first, giving you quick wins that keep you motivated.</p>
+      <p>Which one is "better" depends entirely on you. Run both scenarios above with your actual debts to see exactly how much the difference is.</p>
 
       <h2>How the Debt Avalanche Method Works</h2>
-      <p>The Avalanche method is simple in concept:</p>
       <ol>
         <li><strong>List all your debts</strong> by interest rate, from highest to lowest.</li>
-        <li><strong>Make minimum payments</strong> on every debt, every month — never miss one.</li>
-        <li><strong>Put every extra dollar</strong> toward the debt with the highest interest rate.</li>
-        <li><strong>When that debt is paid off</strong>, roll its entire payment (minimum + extra) into the next highest-rate debt.</li>
+        <li><strong>Make minimum payments</strong> on every debt, every month.</li>
+        <li><strong>Put every extra dollar</strong> toward the highest interest rate debt.</li>
+        <li><strong>When that debt is paid off</strong>, roll its entire payment into the next highest-rate debt.</li>
         <li><strong>Repeat</strong> until you are debt-free.</li>
       </ol>
-      <p>The reason this works is compound interest. A credit card at 22% APR is growing your balance faster than a student loan at 5%. By eliminating the 22% debt first, you stop the fastest-growing balance in its tracks. Over time, this means you pay less total interest than any other ordering.</p>
-      <p>The downside? If your highest-rate debt also has the largest balance, it can take months before you see a debt fully disappear. That waiting period is where many people lose motivation.</p>
+      <p>By eliminating the fastest-growing balance first, you pay less total interest than any other ordering. The downside is that if your highest-rate debt has a large balance, it can take months before you see one disappear completely.</p>
 
       <h2>How the Debt Snowball Method Works</h2>
-      <p>The Snowball method, popularized by Dave Ramsey, flips the priority:</p>
       <ol>
         <li><strong>List all your debts</strong> by balance, from smallest to largest.</li>
         <li><strong>Make minimum payments</strong> on every debt.</li>
-        <li><strong>Put every extra dollar</strong> toward the debt with the smallest balance.</li>
-        <li><strong>When that debt is paid off</strong>, roll its payment into the next smallest balance.</li>
-        <li><strong>Repeat</strong> until you are debt-free.</li>
+        <li><strong>Put every extra dollar</strong> toward the smallest balance.</li>
+        <li><strong>When paid off</strong>, roll its payment into the next smallest balance.</li>
+        <li><strong>Repeat</strong> until debt-free.</li>
       </ol>
-      <p>The magic of the Snowball is the psychological boost. Paying off a $400 medical bill in two months feels amazing. That win gives you energy to attack the next debt. Research published in the <em>Harvard Business Review</em> found that people who pay off small debts first are more likely to eliminate all their debt — even though they pay more interest overall.</p>
-      <p>The downside is cost. Because you are ignoring interest rates, high-rate debts continue compounding while you chip away at smaller, lower-rate balances. The difference can range from negligible to substantial depending on your specific debt profile.</p>
+      <p>Research in the <em>Harvard Business Review</em> found that people who pay off small debts first are more likely to eliminate all their debt — even though they pay more interest overall. The psychological wins matter.</p>
 
       <h2>How to Find Extra Money for Debt Payoff</h2>
-      <p>Both methods require extra money beyond your minimums. Even $50 per month extra can shave months off your payoff timeline. Here are proven ways to free up cash:</p>
       <ul>
-        <li><strong>Audit subscriptions</strong> — cancel anything you have not used in the past 30 days. Most people find $30 to $100 per month in forgotten subscriptions. Try our <a href="/tools/budget-calculator">50/30/20 Budget Calculator</a> to see where your money is going.</li>
-        <li><strong>Negotiate bills</strong> — call your internet, phone, and insurance providers. A 15-minute call can save $20 to $50 per month.</li>
-        <li><strong>Sell unused items</strong> — electronics, clothes, furniture. One weekend of selling can generate $200 to $500 for a lump-sum debt payment.</li>
-        <li><strong>Redirect windfalls</strong> — tax refunds, bonuses, cash gifts. Instead of spending them, apply 100% to your target debt.</li>
-        <li><strong>Start a side hustle</strong> — freelancing, tutoring, delivery driving. Even 5 hours per week at $20/hour adds $400 per month to your payoff power.</li>
-        <li><strong>Use the 50/30/20 rule</strong> — reduce your "Wants" spending by 10% and redirect that to debt. On a $4,000 income, that is an extra $120 per month.</li>
+        <li><strong>Audit subscriptions</strong> — most people find $30 to $100/month in forgotten subscriptions. Use our <a href="/tools/50-30-20-calculator">50/30/20 Budget Calculator</a> to see where your money goes.</li>
+        <li><strong>Negotiate bills</strong> — call your internet, phone, and insurance providers. A 15-minute call can save $20-$50/month.</li>
+        <li><strong>Use the 50/30/20 rule</strong> — reduce "Wants" spending by 10% and redirect that to debt. On a $4,000 income, that is $120/month extra.</li>
+        <li><strong>Redirect windfalls</strong> — tax refunds, bonuses, cash gifts applied 100% to your target debt.</li>
       </ul>
-      <p>The key insight: <strong>consistency beats size</strong>. A steady $100 per month extra payment is more powerful than a one-time $1,000 payment you cannot repeat. Build the extra payment into your budget as a non-negotiable line item.</p>
-      <p>If you are not sure where your money is going each month, <a href="/blog/budgeting-mistakes-to-avoid/">these common budgeting mistakes</a> might be costing you more than you think. And if you have tried budgeting before and failed, you are not alone — <a href="/blog/why-people-fail-at-budgeting/">here is why most people fail at budgeting</a> and how to fix it.</p>
+      <p>If you have tried budgeting before and failed, you are not alone — <a href="/blog/why-people-fail-at-budgeting/">here is why most people fail at budgeting</a> and how to fix it. And check our <a href="/blog/budgeting-mistakes-to-avoid/">budgeting mistakes to avoid</a> for quick wins.</p>
+
+      <h2>Related Resources</h2>
+      <ul>
+        <li><a href="/tools/50-30-20-calculator">50/30/20 Budget Calculator</a> — figure out how much you can put toward debt each month</li>
+        <li><a href="/tools/savings-goal-calculator">Savings Goal Calculator</a> — plan your post-debt savings goals</li>
+        <li><a href="/blog/budgeting-mistakes-to-avoid/">Common Budgeting Mistakes to Avoid</a></li>
+        <li><a href="/blog/why-people-fail-at-budgeting/">Why People Fail at Budgeting (and How to Fix It)</a></li>
+        <li><a href="/blog/how-to-track-expenses-in-notion/">How to Track Expenses in Notion</a></li>
+      </ul>
 
       <h2>Frequently Asked Questions</h2>
       <details>
         <summary>Which method saves the most money?</summary>
-        <p>The <strong>Avalanche method</strong> always saves the most money in total interest paid. By targeting the highest interest rate first, you minimize the amount of compounding that works against you. The savings can range from a few dollars to several thousand dollars depending on your debt balances and rates. Use the calculator above with your actual numbers to see the exact difference.</p>
+        <p>The <strong>Avalanche method</strong> always saves the most in total interest by targeting the highest rate first. The savings can range from a few dollars to several thousand depending on your debts. Use the calculator above with your actual numbers to see the exact difference.</p>
       </details>
       <details>
         <summary>Should I pay off debt or save first?</summary>
-        <p>Financial advisors generally recommend a balanced approach: first, build a small emergency fund of $1,000 to $2,000 so unexpected expenses do not force you into more debt. Then, aggressively pay off high-interest debt (anything above 7-8% APR). Once high-interest debt is gone, split your extra cash between building a full 3-6 month emergency fund and paying off remaining low-interest debt. If your employer offers a 401(k) match, contribute enough to get the full match even while paying off debt — it is a guaranteed 50-100% return.</p>
+        <p>Build a small emergency fund ($1,000-$2,000) first so unexpected expenses don't force you into more debt. Then attack high-interest debt (above 7-8% APR). Once that is gone, build a full 3-6 month emergency fund. If your employer offers a 401(k) match, contribute enough to get the full match even while paying off debt.</p>
       </details>
       <details>
         <summary>Does paying off debt improve credit score?</summary>
-        <p>Yes, paying off debt typically improves your credit score in two ways. First, it lowers your <strong>credit utilization ratio</strong> (the percentage of available credit you are using), which accounts for about 30% of your FICO score. Second, it improves your <strong>payment history</strong> as long as you make every payment on time. Paying off a credit card but keeping the account open is usually better for your score than closing the account, because it keeps your total available credit high.</p>
+        <p>Yes. Paying off debt lowers your <strong>credit utilization ratio</strong> (about 30% of your FICO score) and improves your payment history. Paying off a credit card but keeping the account open is usually better for your score than closing it.</p>
       </details>
       <details>
         <summary>What about debt consolidation?</summary>
-        <p>Debt consolidation combines multiple debts into a single loan, ideally at a lower interest rate. It can be a good strategy if you qualify for a significantly lower rate (for example, consolidating 22% credit card debt into a 10% personal loan). However, consolidation only works if you <strong>stop accumulating new debt</strong> on the original accounts. If you consolidate $10,000 in credit card debt but then run the cards back up, you end up worse off. Consolidation is a tool, not a solution — the behavior change matters more than the financial maneuver.</p>
+        <p>Debt consolidation combines multiple debts into one loan at a lower rate. It works if you qualify for a significantly lower rate and <strong>stop accumulating new debt</strong> on the original accounts. Consolidation is a tool, not a solution — behavior change matters more.</p>
       </details>
       <details>
         <summary>How much extra payment makes a difference?</summary>
-        <p>More than you might think. On $20,000 of credit card debt at 20% APR with $400 minimum payments, adding just <strong>$100 per month</strong> extra cuts your payoff time from 108 months to 61 months — that is nearly 4 years sooner and over $8,000 less in interest. Even $25 extra per month makes a measurable impact. The key is consistency: a small extra payment every single month outperforms occasional large payments. Use the calculator above to see exactly how your extra payment changes the timeline.</p>
+        <p>More than you think. On $20,000 of credit card debt at 20% APR with $400 minimums, adding just <strong>$100/month extra</strong> cuts payoff time from 108 to 61 months — nearly 4 years sooner and over $8,000 less in interest. Use the calculator above to see your numbers.</p>
       </details>
-
-      <h2>Related Resources</h2>
-      <ul>
-        <li><a href="/tools/budget-calculator">50/30/20 Budget Calculator</a> — figure out how much you can put toward debt each month</li>
-        <li><a href="/blog/budgeting-mistakes-to-avoid/">Common Budgeting Mistakes to Avoid</a></li>
-        <li><a href="/blog/why-people-fail-at-budgeting/">Why People Fail at Budgeting (and How to Fix It)</a></li>
-      </ul>
     </div>
   </section>
 </BaseLayout>
@@ -801,7 +793,6 @@ const description = 'Enter your debts and see exactly when you\'ll be debt-free.
     debtCount = rows.length;
     addDebtBtn.disabled = debtCount >= 10;
     limitNote.style.display = debtCount >= 10 ? 'block' : 'none';
-    // Don't allow removing if only 1 debt
     rows.forEach(row => {
       const btn = row.querySelector('.remove-debt-btn') as HTMLButtonElement;
       if (btn) btn.style.display = rows.length <= 1 ? 'none' : 'block';
@@ -818,7 +809,6 @@ const description = 'Enter your debts and see exactly when you\'ll be debt-free.
 
   addDebtBtn.addEventListener('click', createDebtRow);
 
-  // Start with 2 debt rows
   createDebtRow();
   createDebtRow();
 
@@ -852,7 +842,8 @@ const description = 'Enter your debts and see exactly when you\'ll be debt-free.
     let months = 0;
     const payoffOrder: string[] = [];
     const schedule: MonthRow[] = [];
-    const maxMonths = 600; // 50 years safety cap
+    const maxMonths = 600;
+    let currentExtra = extra;
 
     while (simDebts.some(d => d.balance > 0.01) && months < maxMonths) {
       months++;
@@ -860,7 +851,6 @@ const description = 'Enter your debts and see exactly when you\'ll be debt-free.
       let monthPrincipal = 0;
       let monthPayment = 0;
 
-      // 1. Apply interest to all debts
       for (const d of simDebts) {
         if (d.balance <= 0) continue;
         const interest = d.balance * (d.rate / 100 / 12);
@@ -869,7 +859,6 @@ const description = 'Enter your debts and see exactly when you\'ll be debt-free.
         totalInterest += interest;
       }
 
-      // 2. Pay minimums on all debts
       for (const d of simDebts) {
         if (d.balance <= 0) continue;
         const payment = Math.min(d.minPayment, d.balance);
@@ -879,8 +868,7 @@ const description = 'Enter your debts and see exactly when you\'ll be debt-free.
         monthPrincipal += payment;
       }
 
-      // 3. Apply extra payment to target debt
-      let remaining = extra;
+      let remaining = currentExtra;
       while (remaining > 0.01) {
         const active = simDebts.filter(d => d.balance > 0.01);
         if (active.length === 0) break;
@@ -899,7 +887,6 @@ const description = 'Enter your debts and see exactly when you\'ll be debt-free.
         monthPrincipal += payment;
       }
 
-      // 4. Check for paid-off debts and roll over their minimums
       let paidOffThisMonth: string | null = null;
       for (const d of simDebts) {
         if (d.balance <= 0.01 && d.balance >= -0.01 && d.minPayment > 0) {
@@ -908,12 +895,7 @@ const description = 'Enter your debts and see exactly when you\'ll be debt-free.
             payoffOrder.push(d.name);
             paidOffThisMonth = d.name;
           }
-          // Roll freed minimum into extra for next month's active debts
-          // We handle this by just letting the simulation naturally allocate
-          // But we need to increase extra for subsequent iterations
-          // Actually, the freed minimum becomes available as extra going forward
-          // We track it by zeroing the minPayment and adding to extra pool
-          extra += d.minPayment;
+          currentExtra += d.minPayment;
           d.minPayment = 0;
         }
       }
@@ -933,10 +915,6 @@ const description = 'Enter your debts and see exactly when you\'ll be debt-free.
 
   function formatMoney(n: number): string {
     return '$' + n.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-  }
-
-  function formatMoneyWhole(n: number): string {
-    return '$' + n.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
   }
 
   function getPayoffDate(months: number): string {
@@ -966,7 +944,6 @@ const description = 'Enter your debts and see exactly when you\'ll be debt-free.
     sbSchedule = sbResult.schedule;
     debtNames = debts.map(d => d.name);
 
-    // Fill results
     document.getElementById('av-interest')!.textContent = formatMoney(avResult.totalInterest);
     document.getElementById('av-total')!.textContent = formatMoney(avResult.totalPaid);
     document.getElementById('av-months')!.textContent = String(avResult.months);
@@ -977,13 +954,11 @@ const description = 'Enter your debts and see exactly when you\'ll be debt-free.
     document.getElementById('sb-months')!.textContent = String(sbResult.months);
     document.getElementById('sb-date')!.textContent = getPayoffDate(sbResult.months);
 
-    // Payoff order
     const avOrderEl = document.getElementById('av-order')!;
     const sbOrderEl = document.getElementById('sb-order')!;
     avOrderEl.innerHTML = avResult.payoffOrder.map(n => `<li>${n}</li>`).join('');
     sbOrderEl.innerHTML = sbResult.payoffOrder.map(n => `<li>${n}</li>`).join('');
 
-    // Highlight
     const interestDiff = Math.abs(sbResult.totalInterest - avResult.totalInterest);
     const monthsDiff = Math.abs(sbResult.months - avResult.months);
     const highlightEl = document.getElementById('highlight-text')!;
@@ -996,10 +971,8 @@ const description = 'Enter your debts and see exactly when you\'ll be debt-free.
       highlightEl.textContent = `Snowball saves you ${formatMoney(interestDiff)} in interest${monthsDiff > 0 ? ` and ${monthsDiff} month${monthsDiff > 1 ? 's' : ''}` : ''}! Debt-free by ${getPayoffDate(sbResult.months)}.`;
     }
 
-    // Extra payment tip
     const extraTipCard = document.getElementById('extra-tip-card')!;
     if (extra === 0) {
-      // Run a quick sim with $100 extra to show the difference
       const tipResult = simulate(debts, 100, 'avalanche');
       const savedMonths = avResult.months - tipResult.months;
       const savedInterest = avResult.totalInterest - tipResult.totalInterest;
@@ -1015,14 +988,12 @@ const description = 'Enter your debts and see exactly when you\'ll be debt-free.
     }
 
     resultsSection.style.display = 'block';
-    // Hide schedule by default
     document.getElementById('schedule-section')!.style.display = 'none';
     (document.getElementById('toggle-schedule-btn') as HTMLButtonElement).textContent = 'Show Month-by-Month Schedule';
 
     resultsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 
-  // Toggle schedule
   document.getElementById('toggle-schedule-btn')!.addEventListener('click', () => {
     const section = document.getElementById('schedule-section')!;
     const btn = document.getElementById('toggle-schedule-btn')!;
@@ -1036,7 +1007,6 @@ const description = 'Enter your debts and see exactly when you\'ll be debt-free.
     }
   });
 
-  // Schedule tabs
   document.querySelectorAll('.schedule-tab').forEach(tab => {
     tab.addEventListener('click', () => {
       document.querySelectorAll('.schedule-tab').forEach(t => t.classList.remove('active'));
