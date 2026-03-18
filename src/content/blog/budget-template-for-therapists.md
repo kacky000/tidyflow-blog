@@ -3,6 +3,7 @@ title: "Budget Template for Therapists: Insurance, CEUs & Practice Expenses"
 description: "A budget template for therapists covering insurance reimbursement, CEU costs, office rent, marketing, and private practice finances. Build a sustainable therapy career."
 pubDate: "2026-03-19"
 tags: ["budget template", "therapists", "private practice", "personal finance", "self-employed"]
+heroImage: "/thumbs/thumb-budget-template-for-therapists.jpg"
 ---
 
 # Budget Template for Therapists: Insurance, CEUs & Practice Expenses

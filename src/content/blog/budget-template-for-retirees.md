@@ -3,6 +3,7 @@ title: "Budget Template for Retirees: Manage Fixed Income with Confidence"
 description: "A practical budget template for retirees to manage Social Security, pensions, Medicare costs, and daily expenses. Free tips and downloadable tracker included."
 pubDate: "2026-03-19"
 tags: ["budgeting", "retirement", "template", "fixed-income"]
+heroImage: "/thumbs/thumb-budget-template-for-retirees.jpg"
 ---
 
 Finding the right **budget template for retirees** can mean the difference between financial peace and constant worry during your golden years. Unlike your working years when income could grow, retirement demands careful management of fixed income streams like Social Security, pensions, and investment withdrawals. A well-designed template keeps every dollar accounted for — from Medicare premiums to that dream vacation fund.

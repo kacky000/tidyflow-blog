@@ -3,6 +3,7 @@ title: "Budget Template for Artists: Handle Irregular Income & Creative Expenses
 description: "A budget template for artists to manage irregular income, material costs, exhibition fees, and marketing expenses. Build financial stability around your creative career."
 pubDate: "2026-03-19"
 tags: ["budget template", "artists", "irregular income", "personal finance", "creative career"]
+heroImage: "/thumbs/thumb-budget-template-for-artists.jpg"
 ---
 
 # Budget Template for Artists: Handle Irregular Income & Creative Expenses

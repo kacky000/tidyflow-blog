@@ -3,6 +3,7 @@ title: "Budget Template for Software Engineers: Manage RSUs, Bonuses & High Inco
 description: "A budget template for software engineers to manage RSUs, stock options, 401k, ESPP, bonuses, and side project income. Optimize your high-earning potential."
 pubDate: "2026-03-19"
 tags: ["budget template", "software engineers", "personal finance", "RSU", "high income"]
+heroImage: "/thumbs/thumb-budget-template-for-software-engineers.jpg"
 ---
 
 # Budget Template for Software Engineers: Manage RSUs, Bonuses & High Income

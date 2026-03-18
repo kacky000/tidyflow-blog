@@ -3,6 +3,7 @@ title: "Summer Vacation Budget: How to Plan an Amazing Trip Without Overspending
 description: "Plan your summer vacation budget for family trips, solo travel, or couples getaways. Get cost breakdowns for flights, hotels, food, and activities."
 pubDate: "2026-03-19"
 tags: ["budgeting", "vacation", "travel", "summer"]
+heroImage: "/thumbs/thumb-summer-vacation-budget.jpg"
 ---
 
 Creating a **summer vacation budget** before you book anything is the single best way to enjoy your trip without the post-vacation financial hangover. Whether you're planning a family road trip, a solo adventure, or a romantic getaway, knowing your numbers upfront means you can say yes to experiences that matter and skip the ones that don't.

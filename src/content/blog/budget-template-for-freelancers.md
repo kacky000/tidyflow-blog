@@ -3,6 +3,7 @@ title: "Budget Template for Freelancers: Master Irregular Income & Expense Track
 description: "A budget template for freelancers to manage irregular income, quarterly taxes, and business expenses. Separate personal and business finances for financial stability."
 pubDate: "2026-03-19"
 tags: ["budget template", "freelancers", "irregular income", "personal finance", "self-employed"]
+heroImage: "/thumbs/thumb-budget-template-for-freelancers.jpg"
 ---
 
 # Budget Template for Freelancers: Master Irregular Income & Expense Tracking

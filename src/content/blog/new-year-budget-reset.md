@@ -3,6 +3,7 @@ title: "New Year Budget Reset: 10 Steps to Take Control of Your Finances in Janu
 description: "Reset your budget for the new year with this 10-step guide. Review last year, set goals, update categories, and build a financial plan that actually works."
 pubDate: "2026-03-19"
 tags: ["budgeting", "new-year", "financial-planning", "goals"]
+heroImage: "/thumbs/thumb-new-year-budget-reset.jpg"
 ---
 
 A **new year budget reset** is the most impactful financial move you can make in January. Last year's budget — whether it worked perfectly or fell apart by March — is done. Now you have 12 fresh months, updated income numbers, and the clarity that only a year of real spending data can provide.
