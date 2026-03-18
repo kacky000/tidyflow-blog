@@ -1,6 +1,6 @@
 ---
 title: "7 Best Free Budget Spreadsheet Templates 2026 — Excel, Google Sheets & Notion (Tested)"
-description: "7 best free budget spreadsheet templates for 2026 — Excel, Google Sheets & Notion. Includes expense tracker templates with tested formulas. Download free budget tracker templates now."
+description: "Best free budget spreadsheet templates 2026 — Excel, Google Sheets & Notion tested. Free expense tracker templates and budget tracker templates with working formulas. Personal finance spreadsheet categories included."
 pubDate: "2026-03-11"
 tags: ["budget", "spreadsheet", "excel", "google-sheets", "notion", "template"]
 author: "Tidyflow"
