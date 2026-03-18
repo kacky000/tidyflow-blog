@@ -127,7 +127,7 @@ Notion is the better choice if you:
 - **Prefer a [monthly budget checklist](/monthly-budget-checklist/) approach**: Build structured review workflows
 - **Want to avoid subscription costs**: Notion's free plan handles budgeting perfectly
 - **Enjoy building systems**: The process of designing your budget template is rewarding, not frustrating
-- **Share finances with a partner**: Notion's shared workspaces make collaborative budgeting natural
+- **Share finances with a partner**: Notion's shared workspaces make [budgeting for couples](/budgeting-for-couples/) natural
 
 ---
 

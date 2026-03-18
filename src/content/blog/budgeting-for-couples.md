@@ -142,7 +142,7 @@ You can't manage what you don't measure. Use one of these tools to track your bu
 
 - **Notion** – Create a [couple budget template](/best-notion-budget-templates-2026/) with shared database visibility
 - **Excel** – Simple spreadsheet with automatic calculations
-- **Dedicated apps** – YNAB, Mint, Copilot, or EveryDollar for automated tracking
+- **Dedicated apps** – [YNAB, Notion, or other tools](/ynab-vs-notion-for-budgeting/) like Copilot or EveryDollar for automated tracking
 
 Schedule monthly "money dates" (30–60 minutes) where you both review:
 - How much you spent in each category
