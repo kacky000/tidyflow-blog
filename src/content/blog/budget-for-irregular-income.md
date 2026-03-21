@@ -1,5 +1,6 @@
 ---
 title: "How to Budget for Irregular Income: A Step-by-Step System"
+heroImage: "/thumbs/thumb-budget-for-irregular-income.jpg"
 description: "Learn how to budget for irregular income with a baseline method that works for freelancers, commission earners, and seasonal workers. Stop the paycheck-to-paycheck cycle."
 pubDate: "2026-03-20"
 tags: ["budgeting", "irregular income", "freelancers", "personal finance", "commission"]

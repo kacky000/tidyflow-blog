@@ -1,5 +1,6 @@
 ---
 title: "Weekly Budget Template: The Easiest Way to Take Control of Your Money"
+heroImage: "/thumbs/thumb-weekly-budget-template.jpg"
 description: "A weekly budget template breaks your finances into small, manageable chunks. Learn how to set one up and finally stick to your budget."
 pubDate: "2026-03-20"
 tags: ["budgeting", "personal finance", "template", "beginner"]

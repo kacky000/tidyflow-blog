@@ -1,5 +1,6 @@
 ---
 title: "Sinking Fund Tracker Template: Save for Big Expenses Without Breaking Your Budget"
+heroImage: "/thumbs/thumb-sinking-fund-tracker-template.jpg"
 description: "A sinking fund tracker template to save for car repairs, vacations, holidays, and annual bills. Stop letting big expenses derail your budget."
 pubDate: "2026-03-20"
 tags: ["sinking fund", "budget template", "saving money", "personal finance", "expense tracking"]

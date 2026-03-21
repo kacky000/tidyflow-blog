@@ -1,5 +1,6 @@
 ---
 title: "Budget Template for Stay at Home Moms: Stretch One Income Further"
+heroImage: "/thumbs/thumb-budget-template-for-stay-at-home-moms.jpg"
 description: "A budget template for stay at home moms to manage a single-income household. Practical tips for meal planning, saving strategies, and family expense tracking."
 pubDate: "2026-03-20"
 tags: ["budget template", "stay at home moms", "single income", "family budget", "saving money"]

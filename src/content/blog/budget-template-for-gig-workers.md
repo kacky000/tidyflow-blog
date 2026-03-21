@@ -1,5 +1,6 @@
 ---
 title: "Budget Template for Gig Workers: Manage Irregular Income Like a Pro"
+heroImage: "/thumbs/thumb-budget-template-for-gig-workers.jpg"
 description: "A budget template for gig workers driving Uber, delivering for DoorDash, or freelancing on Fiverr. Track expenses, plan for taxes, and stabilize variable income."
 pubDate: "2026-03-20"
 tags: ["budget template", "gig workers", "irregular income", "self-employed", "expense tracking"]

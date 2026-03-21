@@ -1,5 +1,6 @@
 ---
 title: "Cash Stuffing Budget Template: The TikTok-Famous Method That Actually Works"
+heroImage: "/thumbs/thumb-cash-stuffing-budget-template.jpg"
 description: "Learn how to use a cash stuffing budget template to manage your money with envelopes — digitally or with real cash. Step-by-step guide inside."
 pubDate: "2026-03-20"
 tags: ["budgeting", "personal finance", "template", "cash stuffing"]

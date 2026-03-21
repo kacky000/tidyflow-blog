@@ -1,5 +1,6 @@
 ---
 title: "Biweekly Budget Template: How to Budget When You Get Paid Every Two Weeks"
+heroImage: "/thumbs/thumb-biweekly-budget-template.jpg"
 description: "Learn how to use a biweekly budget template to manage your money on a two-paycheck schedule. Includes tips for three-paycheck months."
 pubDate: "2026-03-20"
 tags: ["budgeting", "personal finance", "template", "paycheck"]

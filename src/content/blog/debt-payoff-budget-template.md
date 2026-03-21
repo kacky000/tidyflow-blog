@@ -1,5 +1,6 @@
 ---
 title: "Debt Payoff Budget Template: Snowball vs. Avalanche (Which Wins?)"
+heroImage: "/thumbs/thumb-debt-payoff-budget-template.jpg"
 description: "Use a debt payoff budget template to eliminate debt faster. Compare snowball and avalanche methods with real examples and a step-by-step plan."
 pubDate: "2026-03-20"
 tags: ["budgeting", "debt", "personal finance", "template"]
