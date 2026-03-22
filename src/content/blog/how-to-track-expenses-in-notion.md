@@ -1,15 +1,15 @@
 ---
-title: "How to Track Your Expenses in Notion (Step-by-Step Guide)"
-description: "A beginner-friendly guide to setting up expense tracking in Notion. Learn how to create a simple system that takes less than 2 minutes a day."
+title: "How to Track Expenses in Notion: 5-Minute Setup Guide (2026)"
+description: "Track your expenses in Notion with this step-by-step setup guide. Create a simple Notion expense tracker in 5 minutes that takes less than 2 minutes a day to maintain."
 pubDate: 2026-03-04
-tags: ["notion", "expenses", "tutorial", "budgeting"]
+tags: ["notion expense tracker", "track expenses notion", "expense tracking", "budgeting", "notion tutorial 2026"]
 author: "Tidyflow"
 heroImage: "/thumbs/thumb-track-expenses-notion.jpg"
 ---
 
-You've probably tried tracking your expenses before. Maybe you used a spreadsheet that got messy after a week. Maybe you downloaded an app that wanted access to your bank account (no thanks). Or maybe you just... didn't.
+**Looking for the easiest way to track expenses in Notion?** You've probably tried spreadsheets that got messy after a week, or budgeting apps that wanted access to your bank account (no thanks). Or maybe you just... didn't track expenses at all.
 
-Here's the good news: if you already use Notion, you can set up a dead-simple expense tracker in about 5 minutes. And keeping it updated takes less than 2 minutes a day.
+Here's the good news: you can set up a Notion expense tracker in about 5 minutes. And keeping it updated takes less than 2 minutes a day — no complicated formulas, no bank syncing required.
 
 ## Why Notion for Expense Tracking?
 
