@@ -3,6 +3,7 @@ title: "Budget Template for Small Business Owners: Manage Revenue, Expenses & Ca
 description: "Download a free budget template for small business owners. Track revenue, manage expenses, prepare for taxes, and maintain healthy cash flow all year."
 pubDate: "2026-03-25"
 tags: ["budgeting", "small business", "template", "cash flow"]
+heroImage: "/thumbs/thumb-budget-template-for-small-business-owners.jpg"
 ---
 
 # Budget Template for Small Business Owners

@@ -3,6 +3,7 @@ title: "Emergency Fund Budget Template: Build 3–6 Months of Savings"
 description: "Use this emergency fund budget template to build 3-6 months of savings. Includes goal-setting framework, automated savings strategies, and progress tracking."
 pubDate: "2026-03-25"
 tags: ["budgeting", "emergency fund", "savings", "template"]
+heroImage: "/thumbs/thumb-emergency-fund-budget-template.jpg"
 ---
 
 # Emergency Fund Budget Template: A Step-by-Step Guide to Financial Security

@@ -3,6 +3,7 @@ title: "Budget for Maternity Leave: A Complete Financial Planning Guide"
 description: "Plan your budget for maternity leave with this step-by-step guide. Prepare for reduced income, baby expenses, insurance changes, and return-to-work costs."
 pubDate: "2026-03-25"
 tags: ["budgeting", "maternity leave", "family finance", "planning"]
+heroImage: "/thumbs/thumb-budget-for-maternity-leave.jpg"
 ---
 
 # Budget for Maternity Leave: How to Financially Prepare for Your Time Off

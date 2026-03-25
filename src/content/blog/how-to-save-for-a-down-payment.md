@@ -3,6 +3,7 @@ title: "How to Save for a Down Payment: A Step-by-Step Budget Guide"
 description: "Discover proven strategies to save for a down payment on a house. Set goals, cut expenses, automate savings, and reach homeownership faster."
 pubDate: "2026-03-25"
 tags: ["budgeting", "saving", "homeownership", "down-payment"]
+heroImage: "/thumbs/thumb-how-to-save-for-a-down-payment.jpg"
 ---
 
 # How to Save for a Down Payment: A Step-by-Step Budget Guide

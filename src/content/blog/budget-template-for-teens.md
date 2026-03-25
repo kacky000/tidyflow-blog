@@ -3,6 +3,7 @@ title: "Budget Template for Teens: Your First Step to Financial Freedom"
 description: "Learn how to manage allowance and part-time income with a free budget template for teens. Build smart money habits that last a lifetime."
 pubDate: "2026-03-25"
 tags: ["budgeting", "teens", "template", "saving"]
+heroImage: "/thumbs/thumb-budget-template-for-teens.jpg"
 ---
 
 # Budget Template for Teens: Your First Step to Financial Freedom

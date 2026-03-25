@@ -3,6 +3,7 @@ title: "Budget Template for Part-Time Workers: Manage Variable Income Effectivel
 description: "A practical budget template for part-time workers. Learn how to handle fluctuating paychecks, cover essentials first, and build savings on limited income."
 pubDate: "2026-03-25"
 tags: ["budgeting", "part-time", "template", "variable income"]
+heroImage: "/thumbs/thumb-budget-template-for-part-time-workers.jpg"
 ---
 
 # Budget Template for Part-Time Workers

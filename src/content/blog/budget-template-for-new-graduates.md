@@ -3,6 +3,7 @@ title: "Budget Template for New Graduates: Master Your First Paycheck"
 description: "Get a budget template for new graduates to manage student loans, first salary, and living expenses. Start your career with financial confidence."
 pubDate: "2026-03-25"
 tags: ["budgeting", "new-graduates", "template", "student-loans"]
+heroImage: "/thumbs/thumb-budget-template-for-new-graduates.jpg"
 ---
 
 # Budget Template for New Graduates: Master Your First Paycheck
