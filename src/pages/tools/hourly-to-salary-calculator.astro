@@ -1,0 +1,214 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const title = 'Hourly to Salary Calculator — Convert Your Hourly Wage to Annual Pay';
+const description = 'Free hourly to salary calculator. Enter your hourly rate and see your weekly, biweekly, monthly, and annual salary instantly. Includes overtime and tax estimates.';
+---
+
+<BaseLayout title={title} description={description}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Hourly to Salary Calculator",
+      "url": "https://gettidyflow.com/tools/hourly-to-salary-calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "description": description
+    })} />
+  </Fragment>
+
+  <section class="tool-hero">
+    <div class="tool-hero-inner">
+      <span class="tool-badge">Free Tool — No Signup Required</span>
+      <h1>Hourly to Salary <span class="gradient-text">Calculator</span></h1>
+      <p class="tool-subtitle">Enter your hourly wage and hours per week to instantly see your weekly, biweekly, monthly, and annual income — before and after estimated taxes.</p>
+    </div>
+  </section>
+
+  <section class="tool-app">
+    <div class="tool-container">
+      <div class="calc-card">
+        <div class="input-grid">
+          <div>
+            <label for="rate-input" class="input-label">Hourly Rate</label>
+            <div class="input-wrapper"><span class="currency-symbol">$</span>
+              <input type="number" id="rate-input" placeholder="e.g. 25" min="0" step="0.5" class="calc-input" />
+            </div>
+          </div>
+          <div>
+            <label for="hours-input" class="input-label">Hours Per Week</label>
+            <div class="input-wrapper"><span class="currency-symbol">#</span>
+              <input type="number" id="hours-input" placeholder="40" min="1" max="168" step="1" value="40" class="calc-input" />
+            </div>
+          </div>
+          <div>
+            <label for="weeks-input" class="input-label">Weeks Per Year</label>
+            <div class="input-wrapper"><span class="currency-symbol">#</span>
+              <input type="number" id="weeks-input" placeholder="52" min="1" max="52" step="1" value="52" class="calc-input" />
+            </div>
+          </div>
+          <div>
+            <label for="tax-input" class="input-label">Estimated Tax Rate (%)</label>
+            <div class="input-wrapper"><span class="currency-symbol">%</span>
+              <input type="number" id="tax-input" placeholder="25" min="0" max="60" step="1" value="25" class="calc-input" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="results-grid" id="results-grid" style="display:none;">
+        <div class="result-card" style="border-left-color:#667eea;">
+          <div class="result-header">
+            <span class="result-icon">📅</span>
+            <div><h3>Weekly Pay (Gross)</h3><p class="result-amount" id="weekly-gross">$0</p></div>
+          </div>
+          <p class="result-tip">After tax: <strong id="weekly-net">$0</strong></p>
+        </div>
+        <div class="result-card" style="border-left-color:#f093fb;">
+          <div class="result-header">
+            <span class="result-icon">💳</span>
+            <div><h3>Biweekly Pay (Gross)</h3><p class="result-amount" id="biweekly-gross">$0</p></div>
+          </div>
+          <p class="result-tip">After tax: <strong id="biweekly-net">$0</strong></p>
+        </div>
+        <div class="result-card" style="border-left-color:#43e97b;">
+          <div class="result-header">
+            <span class="result-icon">🗓️</span>
+            <div><h3>Monthly Pay (Gross)</h3><p class="result-amount" id="monthly-gross">$0</p></div>
+          </div>
+          <p class="result-tip">After tax: <strong id="monthly-net">$0</strong></p>
+        </div>
+        <div class="result-card" style="border-left-color:#ffd86e;">
+          <div class="result-header">
+            <span class="result-icon">💰</span>
+            <div><h3>Annual Salary (Gross)</h3><p class="result-amount" id="annual-gross">$0</p></div>
+          </div>
+          <p class="result-tip">After tax: <strong id="annual-net">$0</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool-cta">
+    <div class="tool-container">
+      <div class="cta-card">
+        <h2>Budget Based on Your Real Income</h2>
+        <p>Now that you know your annual salary, create a budget that fits your actual take-home pay. Our free template makes it simple.</p>
+        <a href="https://gettidyflow.gumroad.com" target="_blank" rel="noopener" class="cta-button">Get the Free Budget Template &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool-content">
+    <div class="tool-container content-narrow">
+      <h2>How to Convert Hourly Wage to Annual Salary</h2>
+      <p>The formula is simple: <strong>Hourly Rate x Hours Per Week x Weeks Per Year = Annual Salary</strong>. For example, $25/hour x 40 hours x 52 weeks = $52,000/year.</p>
+      <p>Adjust the weeks per year if you have unpaid time off. For example, 2 weeks unpaid vacation = 50 working weeks.</p>
+
+      <h2>Understanding Your Tax Rate</h2>
+      <p>The default 25% tax estimate includes federal income tax, state tax, Social Security (6.2%), and Medicare (1.45%). Your actual rate depends on your filing status, state, and deductions. Use this as a rough guide — consult a tax professional for exact numbers.</p>
+
+      <h2>Related Resources</h2>
+      <ul>
+        <li><a href="/blog/how-to-create-a-budget/">How to Create a Budget from Scratch</a></li>
+        <li><a href="/blog/track-multiple-income-streams-notion/">Track Multiple Income Streams in Notion</a></li>
+        <li><a href="/blog/paycheck-to-paycheck-budgeting/">Paycheck to Paycheck Budgeting Guide</a></li>
+      </ul>
+
+      <h2>Frequently Asked Questions</h2>
+      <details>
+        <summary>How many work hours are in a year?</summary>
+        <p>A standard full-time work year is <strong>2,080 hours</strong> (40 hours x 52 weeks). After accounting for holidays and vacation, actual working hours are typically 1,920-2,000.</p>
+      </details>
+      <details>
+        <summary>Is $25 an hour a good salary?</summary>
+        <p>At $25/hour and 40 hours/week, you earn <strong>$52,000/year gross</strong>. This is close to the U.S. median individual income. Whether it is "good" depends on your location — it goes further in the Midwest than in San Francisco or New York.</p>
+      </details>
+      <details>
+        <summary>How do I account for overtime?</summary>
+        <p>Federal law requires <strong>1.5x pay for hours over 40 per week</strong>. If you regularly work overtime, increase your hours per week — the calculator will compute based on your total hours. For precise overtime math, multiply extra hours by 1.5x your rate separately.</p>
+      </details>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .tool-hero { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 4rem 1.5rem 3rem; text-align: center; color: #fff; }
+  .tool-hero-inner { max-width: 720px; margin: 0 auto; }
+  .tool-badge { display: inline-block; background: rgba(255,255,255,0.2); backdrop-filter: blur(4px); padding: 0.35rem 1rem; border-radius: 999px; font-size: 0.85rem; font-weight: 600; margin-bottom: 1.25rem; }
+  .tool-hero h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; line-height: 1.15; margin: 0 0 1rem; }
+  .gradient-text { background: linear-gradient(90deg, #ffd6e0, #ffecd2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .tool-subtitle { font-size: 1.1rem; opacity: 0.92; line-height: 1.6; margin: 0; }
+  .tool-app { padding: 2.5rem 1.5rem; background: #f8f9fb; }
+  .tool-container { max-width: 800px; margin: 0 auto; }
+  .calc-card { background: #fff; border-radius: 16px; padding: 2rem; box-shadow: 0 2px 12px rgba(0,0,0,0.06); margin-bottom: 2rem; }
+  .input-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+  .input-label { display: block; font-weight: 700; font-size: 1.05rem; margin-bottom: 0.75rem; color: #1a1a2e; }
+  .input-wrapper { position: relative; display: flex; align-items: center; }
+  .currency-symbol { position: absolute; left: 1.25rem; font-size: 1.2rem; font-weight: 700; color: #667eea; }
+  .calc-input { width: 100%; padding: 0.85rem 0.85rem 0.85rem 2.75rem; font-size: 1.2rem; font-weight: 700; border: 2px solid #e2e8f0; border-radius: 12px; transition: border-color 0.2s; outline: none; font-family: inherit; color: #1a1a2e; }
+  .calc-input:focus { border-color: #667eea; box-shadow: 0 0 0 3px rgba(102,126,234,0.15); }
+  .calc-input::placeholder { color: #a0aec0; font-weight: 400; }
+  .results-grid { display: grid; gap: 1.25rem; margin-bottom: 2rem; }
+  .result-card { background: #fff; border-radius: 16px; padding: 1.5rem; box-shadow: 0 2px 12px rgba(0,0,0,0.06); border-left: 5px solid transparent; }
+  .result-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.5rem; }
+  .result-icon { font-size: 2rem; line-height: 1; }
+  .result-header h3 { margin: 0; font-size: 1rem; font-weight: 600; color: #555; }
+  .result-amount { margin: 0.15rem 0 0; font-size: 1.75rem; font-weight: 800; color: #1a1a2e; }
+  .result-tip { font-size: 0.9rem; color: #666; line-height: 1.55; margin: 0; }
+  .tool-cta { padding: 2.5rem 1.5rem; background: #fff; }
+  .cta-card { max-width: 800px; margin: 0 auto; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 20px; padding: 2.5rem; text-align: center; color: #fff; }
+  .cta-card h2 { margin: 0 0 0.75rem; font-size: 1.5rem; font-weight: 800; }
+  .cta-card p { margin: 0 0 1.5rem; opacity: 0.92; line-height: 1.6; }
+  .cta-button { display: inline-block; background: #fff; color: #667eea; font-weight: 700; padding: 0.85rem 2rem; border-radius: 999px; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; }
+  .cta-button:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
+  .tool-content { padding: 3rem 1.5rem 4rem; background: #f8f9fb; }
+  .content-narrow { max-width: 720px; margin: 0 auto; }
+  .tool-content h2 { font-size: 1.4rem; font-weight: 800; color: #1a1a2e; margin: 2.5rem 0 0.75rem; }
+  .tool-content h2:first-child { margin-top: 0; }
+  .tool-content p, .tool-content li { font-size: 1.02rem; line-height: 1.7; color: #444; }
+  .tool-content ul, .tool-content ol { padding-left: 1.25rem; margin: 0.5rem 0 1rem; }
+  .tool-content li { margin-bottom: 0.35rem; }
+  .tool-content a { color: #667eea; text-decoration: underline; text-underline-offset: 2px; }
+  .tool-content details { background: #fff; border-radius: 12px; padding: 1rem 1.25rem; margin-bottom: 0.75rem; box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
+  .tool-content summary { font-weight: 600; cursor: pointer; color: #1a1a2e; font-size: 1.02rem; }
+  .tool-content details p { margin: 0.75rem 0 0; }
+  @media (max-width: 640px) { .input-grid { grid-template-columns: 1fr; } .cta-card { padding: 2rem 1.5rem; } }
+</style>
+
+<script>
+  const rateInput = document.getElementById('rate-input') as HTMLInputElement;
+  const hoursInput = document.getElementById('hours-input') as HTMLInputElement;
+  const weeksInput = document.getElementById('weeks-input') as HTMLInputElement;
+  const taxInput = document.getElementById('tax-input') as HTMLInputElement;
+  const resultsGrid = document.getElementById('results-grid')!;
+
+  function fmt(n: number): string { return '$' + Math.round(n).toLocaleString('en-US'); }
+
+  function calculate() {
+    const rate = parseFloat(rateInput.value) || 0;
+    if (rate <= 0) { resultsGrid.style.display = 'none'; return; }
+
+    const hours = parseFloat(hoursInput.value) || 40;
+    const weeks = parseFloat(weeksInput.value) || 52;
+    const taxRate = (parseFloat(taxInput.value) || 25) / 100;
+
+    const weekly = rate * hours;
+    const biweekly = weekly * 2;
+    const annual = weekly * weeks;
+    const monthly = annual / 12;
+
+    resultsGrid.style.display = 'grid';
+    document.getElementById('weekly-gross')!.textContent = fmt(weekly);
+    document.getElementById('weekly-net')!.textContent = fmt(weekly * (1 - taxRate));
+    document.getElementById('biweekly-gross')!.textContent = fmt(biweekly);
+    document.getElementById('biweekly-net')!.textContent = fmt(biweekly * (1 - taxRate));
+    document.getElementById('monthly-gross')!.textContent = fmt(monthly);
+    document.getElementById('monthly-net')!.textContent = fmt(monthly * (1 - taxRate));
+    document.getElementById('annual-gross')!.textContent = fmt(annual);
+    document.getElementById('annual-net')!.textContent = fmt(annual * (1 - taxRate));
+  }
+
+  [rateInput, hoursInput, weeksInput, taxInput].forEach(el => el.addEventListener('input', calculate));
+</script>

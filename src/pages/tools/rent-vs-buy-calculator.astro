@@ -1,0 +1,256 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const title = 'Rent vs Buy Calculator — Compare Monthly Costs & Break-Even Point';
+const description = 'Should you rent or buy a home? Enter your numbers and instantly compare monthly costs, total costs over time, and find your break-even year. Free, no signup.';
+---
+
+<BaseLayout title={title} description={description}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Rent vs Buy Calculator",
+      "url": "https://gettidyflow.com/tools/rent-vs-buy-calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "description": description
+    })} />
+  </Fragment>
+
+  <section class="tool-hero">
+    <div class="tool-hero-inner">
+      <span class="tool-badge">Free Tool — No Signup Required</span>
+      <h1>Rent vs Buy <span class="gradient-text">Calculator</span></h1>
+      <p class="tool-subtitle">Enter your rent, home price, and key details to instantly compare the true monthly cost of renting versus buying — and discover when buying breaks even.</p>
+    </div>
+  </section>
+
+  <section class="tool-app">
+    <div class="tool-container">
+      <div class="calc-card">
+        <div class="input-grid">
+          <div>
+            <label for="rent-input" class="input-label">Monthly Rent</label>
+            <div class="input-wrapper"><span class="currency-symbol">$</span>
+              <input type="number" id="rent-input" placeholder="e.g. 1,800" min="0" step="50" class="calc-input" />
+            </div>
+          </div>
+          <div>
+            <label for="price-input" class="input-label">Home Price</label>
+            <div class="input-wrapper"><span class="currency-symbol">$</span>
+              <input type="number" id="price-input" placeholder="e.g. 350,000" min="0" step="5000" class="calc-input" />
+            </div>
+          </div>
+          <div>
+            <label for="down-input" class="input-label">Down Payment (%)</label>
+            <div class="input-wrapper"><span class="currency-symbol">%</span>
+              <input type="number" id="down-input" placeholder="20" min="0" max="100" step="1" value="20" class="calc-input" />
+            </div>
+          </div>
+          <div>
+            <label for="rate-input" class="input-label">Mortgage Rate (%)</label>
+            <div class="input-wrapper"><span class="currency-symbol">%</span>
+              <input type="number" id="rate-input" placeholder="6.5" min="0" max="20" step="0.1" value="6.5" class="calc-input" />
+            </div>
+          </div>
+          <div>
+            <label for="term-input" class="input-label">Loan Term (years)</label>
+            <div class="input-wrapper"><span class="currency-symbol">#</span>
+              <input type="number" id="term-input" placeholder="30" min="1" max="40" step="1" value="30" class="calc-input" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="results-grid" id="results-grid" style="display:none;">
+        <div class="result-card" style="border-left-color:#667eea;">
+          <div class="result-header">
+            <span class="result-icon">🏠</span>
+            <div><h3>Monthly Mortgage Payment</h3><p class="result-amount" id="mortgage-amount">$0</p></div>
+          </div>
+          <p class="result-tip">Principal and interest only. Add property tax (~1.1%), insurance (~0.35%), and maintenance (~1%) for the full picture.</p>
+        </div>
+        <div class="result-card" style="border-left-color:#f093fb;">
+          <div class="result-header">
+            <span class="result-icon">🏢</span>
+            <div><h3>Monthly Rent</h3><p class="result-amount" id="rent-display">$0</p></div>
+          </div>
+          <p class="result-tip">Your current or expected monthly rent. Remember rent typically increases 3-5% per year.</p>
+        </div>
+        <div class="result-card" style="border-left-color:#43e97b;">
+          <div class="result-header">
+            <span class="result-icon">⚖️</span>
+            <div><h3>Monthly Difference</h3><p class="result-amount" id="diff-amount">$0</p></div>
+          </div>
+          <p class="result-tip" id="diff-tip">The difference between buying and renting per month.</p>
+        </div>
+        <div class="result-card" style="border-left-color:#ffd86e;">
+          <div class="result-header">
+            <span class="result-icon">📅</span>
+            <div><h3>Break-Even Point</h3><p class="result-amount" id="breakeven-amount">—</p></div>
+          </div>
+          <p class="result-tip">Estimated years until buying becomes cheaper than renting (assuming 3% annual rent increase and 3% home appreciation).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool-cta">
+    <div class="tool-container">
+      <div class="cta-card">
+        <h2>Plan Your Home Purchase Budget</h2>
+        <p>Whether you decide to rent or buy, having a clear budget plan is essential. Our free budget template helps you track savings, expenses, and reach your housing goals faster.</p>
+        <a href="https://gettidyflow.gumroad.com" target="_blank" rel="noopener" class="cta-button">Get the Free Budget Template &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool-content">
+    <div class="tool-container content-narrow">
+      <h2>How This Rent vs Buy Calculator Works</h2>
+      <ol>
+        <li>Enter your <strong>monthly rent</strong> and the <strong>home price</strong> you are considering.</li>
+        <li>Adjust the down payment percentage, mortgage rate, and loan term.</li>
+        <li>Instantly see your estimated mortgage payment, the monthly cost difference, and the break-even year.</li>
+      </ol>
+      <p>The break-even calculation assumes 3% annual rent increases and 3% annual home appreciation. In reality, these numbers vary by market — use this as a starting point for deeper research.</p>
+
+      <h2>Key Factors to Consider</h2>
+      <ul>
+        <li><strong>Hidden costs of homeownership</strong> — property tax, homeowner's insurance, HOA fees, maintenance (budget 1-2% of home value per year).</li>
+        <li><strong>Opportunity cost</strong> — the down payment could be invested in the stock market instead.</li>
+        <li><strong>Mobility</strong> — if you might move within 3-5 years, renting is usually cheaper.</li>
+        <li><strong>Tax benefits</strong> — mortgage interest deduction can reduce the effective cost of buying.</li>
+      </ul>
+
+      <h2>Related Resources</h2>
+      <ul>
+        <li><a href="/blog/how-to-save-for-a-down-payment/">How to Save for a Down Payment</a></li>
+        <li><a href="/blog/how-to-track-expenses-in-notion/">How to Track Expenses in Notion</a></li>
+        <li><a href="/blog/monthly-budget-checklist/">Monthly Budget Checklist</a></li>
+      </ul>
+
+      <h2>Frequently Asked Questions</h2>
+      <details>
+        <summary>Is it always better to buy than rent?</summary>
+        <p>No. Buying makes financial sense when you plan to stay <strong>5+ years</strong>, have a stable income, and can afford the down payment without depleting your emergency fund. In expensive markets with low rent-to-price ratios, renting and investing the difference can be better.</p>
+      </details>
+      <details>
+        <summary>What down payment should I aim for?</summary>
+        <p>20% is ideal because it avoids <strong>private mortgage insurance (PMI)</strong>, which adds 0.5-1% of the loan annually. However, FHA loans allow as little as 3.5% down if you are a first-time buyer.</p>
+      </details>
+      <details>
+        <summary>Does this calculator include property taxes?</summary>
+        <p>The mortgage payment shown is <strong>principal and interest only</strong>. Property taxes (~1.1% of home value), insurance (~0.35%), and maintenance (~1%) should be added separately for a complete comparison.</p>
+      </details>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .tool-hero { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 4rem 1.5rem 3rem; text-align: center; color: #fff; }
+  .tool-hero-inner { max-width: 720px; margin: 0 auto; }
+  .tool-badge { display: inline-block; background: rgba(255,255,255,0.2); backdrop-filter: blur(4px); padding: 0.35rem 1rem; border-radius: 999px; font-size: 0.85rem; font-weight: 600; margin-bottom: 1.25rem; }
+  .tool-hero h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; line-height: 1.15; margin: 0 0 1rem; }
+  .gradient-text { background: linear-gradient(90deg, #ffd6e0, #ffecd2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .tool-subtitle { font-size: 1.1rem; opacity: 0.92; line-height: 1.6; margin: 0; }
+
+  .tool-app { padding: 2.5rem 1.5rem; background: #f8f9fb; }
+  .tool-container { max-width: 800px; margin: 0 auto; }
+  .calc-card { background: #fff; border-radius: 16px; padding: 2rem; box-shadow: 0 2px 12px rgba(0,0,0,0.06); margin-bottom: 2rem; }
+  .input-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+  .input-label { display: block; font-weight: 700; font-size: 1.05rem; margin-bottom: 0.75rem; color: #1a1a2e; }
+  .input-wrapper { position: relative; display: flex; align-items: center; }
+  .currency-symbol { position: absolute; left: 1.25rem; font-size: 1.2rem; font-weight: 700; color: #667eea; }
+  .calc-input {
+    width: 100%; padding: 0.85rem 0.85rem 0.85rem 2.75rem; font-size: 1.2rem; font-weight: 700;
+    border: 2px solid #e2e8f0; border-radius: 12px; transition: border-color 0.2s;
+    outline: none; font-family: inherit; color: #1a1a2e;
+  }
+  .calc-input:focus { border-color: #667eea; box-shadow: 0 0 0 3px rgba(102,126,234,0.15); }
+  .calc-input::placeholder { color: #a0aec0; font-weight: 400; }
+
+  .results-grid { display: grid; gap: 1.25rem; margin-bottom: 2rem; }
+  .result-card { background: #fff; border-radius: 16px; padding: 1.5rem; box-shadow: 0 2px 12px rgba(0,0,0,0.06); border-left: 5px solid transparent; }
+  .result-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.5rem; }
+  .result-icon { font-size: 2rem; line-height: 1; }
+  .result-header h3 { margin: 0; font-size: 1rem; font-weight: 600; color: #555; }
+  .result-amount { margin: 0.15rem 0 0; font-size: 1.75rem; font-weight: 800; color: #1a1a2e; }
+  .result-tip { font-size: 0.9rem; color: #666; line-height: 1.55; margin: 0; }
+
+  .tool-cta { padding: 2.5rem 1.5rem; background: #fff; }
+  .cta-card { max-width: 800px; margin: 0 auto; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 20px; padding: 2.5rem; text-align: center; color: #fff; }
+  .cta-card h2 { margin: 0 0 0.75rem; font-size: 1.5rem; font-weight: 800; }
+  .cta-card p { margin: 0 0 1.5rem; opacity: 0.92; line-height: 1.6; }
+  .cta-button { display: inline-block; background: #fff; color: #667eea; font-weight: 700; padding: 0.85rem 2rem; border-radius: 999px; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; }
+  .cta-button:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
+
+  .tool-content { padding: 3rem 1.5rem 4rem; background: #f8f9fb; }
+  .content-narrow { max-width: 720px; margin: 0 auto; }
+  .tool-content h2 { font-size: 1.4rem; font-weight: 800; color: #1a1a2e; margin: 2.5rem 0 0.75rem; }
+  .tool-content h2:first-child { margin-top: 0; }
+  .tool-content p, .tool-content li { font-size: 1.02rem; line-height: 1.7; color: #444; }
+  .tool-content ul, .tool-content ol { padding-left: 1.25rem; margin: 0.5rem 0 1rem; }
+  .tool-content li { margin-bottom: 0.35rem; }
+  .tool-content a { color: #667eea; text-decoration: underline; text-underline-offset: 2px; }
+  .tool-content details { background: #fff; border-radius: 12px; padding: 1rem 1.25rem; margin-bottom: 0.75rem; box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
+  .tool-content summary { font-weight: 600; cursor: pointer; color: #1a1a2e; font-size: 1.02rem; }
+  .tool-content details p { margin: 0.75rem 0 0; }
+
+  @media (max-width: 640px) { .input-grid { grid-template-columns: 1fr; } .cta-card { padding: 2rem 1.5rem; } }
+</style>
+
+<script>
+  const rentInput = document.getElementById('rent-input') as HTMLInputElement;
+  const priceInput = document.getElementById('price-input') as HTMLInputElement;
+  const downInput = document.getElementById('down-input') as HTMLInputElement;
+  const rateInput = document.getElementById('rate-input') as HTMLInputElement;
+  const termInput = document.getElementById('term-input') as HTMLInputElement;
+  const resultsGrid = document.getElementById('results-grid')!;
+
+  function fmt(n: number): string {
+    return '$' + Math.round(n).toLocaleString('en-US');
+  }
+
+  function calculate() {
+    const rent = parseFloat(rentInput.value) || 0;
+    const price = parseFloat(priceInput.value) || 0;
+    if (rent <= 0 || price <= 0) { resultsGrid.style.display = 'none'; return; }
+
+    const downPct = (parseFloat(downInput.value) || 20) / 100;
+    const rate = (parseFloat(rateInput.value) || 6.5) / 100 / 12;
+    const term = (parseFloat(termInput.value) || 30) * 12;
+
+    const loan = price * (1 - downPct);
+    const mortgage = rate > 0 ? loan * rate * Math.pow(1 + rate, term) / (Math.pow(1 + rate, term) - 1) : loan / term;
+
+    const diff = mortgage - rent;
+
+    // Break-even: year where cumulative buying cost < cumulative renting cost
+    // Assumes 3% annual rent increase, 3% home appreciation
+    let cumulativeRent = 0;
+    let cumulativeBuy = price * downPct; // upfront cost
+    let currentRent = rent;
+    let breakEvenYear = 0;
+    for (let y = 1; y <= 30; y++) {
+      cumulativeRent += currentRent * 12;
+      cumulativeBuy += mortgage * 12 + price * 0.0245 * Math.pow(1.02, y - 1); // tax+insurance+maint
+      const equity = price * Math.pow(1.03, y) - loan * Math.pow(1 + (parseFloat(rateInput.value) || 6.5) / 100 / 12, y * 12 - term > 0 ? 0 : 1); // simplified
+      const netBuy = cumulativeBuy - price * Math.pow(1.03, y) + loan; // net cost after home value
+      if (cumulativeRent > netBuy && breakEvenYear === 0) { breakEvenYear = y; }
+      currentRent *= 1.03;
+    }
+
+    resultsGrid.style.display = 'grid';
+    document.getElementById('mortgage-amount')!.textContent = fmt(mortgage);
+    document.getElementById('rent-display')!.textContent = fmt(rent);
+    document.getElementById('diff-amount')!.textContent = (diff >= 0 ? '+' : '-') + fmt(Math.abs(diff));
+    document.getElementById('diff-tip')!.textContent = diff >= 0
+      ? `Buying costs ${fmt(Math.abs(diff))} more per month (mortgage only).`
+      : `Buying saves ${fmt(Math.abs(diff))} per month compared to renting.`;
+    document.getElementById('breakeven-amount')!.textContent = breakEvenYear > 0 ? `~${breakEvenYear} years` : '30+ years';
+  }
+
+  [rentInput, priceInput, downInput, rateInput, termInput].forEach(el => el.addEventListener('input', calculate));
+</script>

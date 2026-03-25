@@ -1,0 +1,214 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const title = 'Pay Raise Calculator — See How a Raise Impacts Your Income';
+const description = 'Free pay raise calculator. Enter your current salary and raise percentage to instantly see your new monthly and annual income. Compare before and after taxes.';
+---
+
+<BaseLayout title={title} description={description}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Pay Raise Calculator",
+      "url": "https://gettidyflow.com/tools/pay-raise-calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "description": description
+    })} />
+  </Fragment>
+
+  <section class="tool-hero">
+    <div class="tool-hero-inner">
+      <span class="tool-badge">Free Tool — No Signup Required</span>
+      <h1>Pay Raise <span class="gradient-text">Calculator</span></h1>
+      <p class="tool-subtitle">Enter your current salary and raise percentage to instantly see your new annual salary, monthly increase, and how much extra you will take home after taxes.</p>
+    </div>
+  </section>
+
+  <section class="tool-app">
+    <div class="tool-container">
+      <div class="calc-card">
+        <div class="input-grid">
+          <div>
+            <label for="salary-input" class="input-label">Current Annual Salary</label>
+            <div class="input-wrapper"><span class="currency-symbol">$</span>
+              <input type="number" id="salary-input" placeholder="e.g. 60,000" min="0" step="1000" class="calc-input" />
+            </div>
+          </div>
+          <div>
+            <label for="raise-input" class="input-label">Raise Percentage (%)</label>
+            <div class="input-wrapper"><span class="currency-symbol">%</span>
+              <input type="number" id="raise-input" placeholder="e.g. 5" min="0" max="100" step="0.5" class="calc-input" />
+            </div>
+          </div>
+          <div>
+            <label for="tax-input" class="input-label">Estimated Tax Rate (%)</label>
+            <div class="input-wrapper"><span class="currency-symbol">%</span>
+              <input type="number" id="tax-input" placeholder="25" min="0" max="60" step="1" value="25" class="calc-input" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="results-grid" id="results-grid" style="display:none;">
+        <div class="result-card" style="border-left-color:#43e97b;">
+          <div class="result-header">
+            <span class="result-icon">🎉</span>
+            <div><h3>New Annual Salary</h3><p class="result-amount" id="new-salary">$0</p></div>
+          </div>
+          <p class="result-tip">Previous: <strong id="old-salary-display">$0</strong></p>
+        </div>
+        <div class="result-card" style="border-left-color:#667eea;">
+          <div class="result-header">
+            <span class="result-icon">📈</span>
+            <div><h3>Annual Increase (Gross)</h3><p class="result-amount" id="annual-increase">$0</p></div>
+          </div>
+          <p class="result-tip">After tax: <strong id="annual-increase-net">$0</strong></p>
+        </div>
+        <div class="result-card" style="border-left-color:#f093fb;">
+          <div class="result-header">
+            <span class="result-icon">💵</span>
+            <div><h3>Monthly Increase (Gross)</h3><p class="result-amount" id="monthly-increase">$0</p></div>
+          </div>
+          <p class="result-tip">After tax: <strong id="monthly-increase-net">$0</strong></p>
+        </div>
+        <div class="result-card" style="border-left-color:#ffd86e;">
+          <div class="result-header">
+            <span class="result-icon">💰</span>
+            <div><h3>New Monthly Take-Home</h3><p class="result-amount" id="new-monthly-net">$0</p></div>
+          </div>
+          <p class="result-tip">Previous take-home: <strong id="old-monthly-net">$0</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool-cta">
+    <div class="tool-container">
+      <div class="cta-card">
+        <h2>Budget Your New Income Wisely</h2>
+        <p>A raise is the perfect time to update your budget. Avoid lifestyle creep by allocating the extra income to savings and debt payoff first.</p>
+        <a href="https://gettidyflow.gumroad.com" target="_blank" rel="noopener" class="cta-button">Get the Free Budget Template &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool-content">
+    <div class="tool-container content-narrow">
+      <h2>How to Use Your Raise Wisely</h2>
+      <ul>
+        <li><strong>Increase retirement contributions</strong> — boost your 401k by at least half the raise amount.</li>
+        <li><strong>Build your emergency fund</strong> — aim for 3-6 months of expenses.</li>
+        <li><strong>Pay off high-interest debt</strong> — credit cards first, then student loans.</li>
+        <li><strong>Avoid lifestyle creep</strong> — the #1 reason high earners still feel broke.</li>
+      </ul>
+
+      <h2>Average Raise by Industry (2026)</h2>
+      <ul>
+        <li><strong>Tech</strong> — 4-6% annual raises</li>
+        <li><strong>Healthcare</strong> — 3-5%</li>
+        <li><strong>Finance</strong> — 3-5%</li>
+        <li><strong>Retail/Hospitality</strong> — 2-4%</li>
+        <li><strong>Job switch</strong> — 10-20% (the biggest "raise" strategy)</li>
+      </ul>
+
+      <h2>Related Resources</h2>
+      <ul>
+        <li><a href="/blog/how-to-create-a-budget/">How to Create a Budget from Scratch</a></li>
+        <li><a href="/blog/how-to-track-expenses-in-notion/">How to Track Expenses in Notion</a></li>
+        <li><a href="/blog/why-people-fail-at-budgeting/">Why People Fail at Budgeting</a></li>
+      </ul>
+
+      <h2>Frequently Asked Questions</h2>
+      <details>
+        <summary>What is a good raise percentage?</summary>
+        <p>In 2026, the average annual raise is <strong>3-4% for cost-of-living adjustments</strong> and <strong>5-10% for merit/promotion raises</strong>. If inflation is 3%, a 3% raise just keeps you even — push for 5%+ for real income growth.</p>
+      </details>
+      <details>
+        <summary>How much of my raise should I save?</summary>
+        <p>A common guideline is to <strong>save at least 50% of any raise</strong>. If you get a $5,000 raise, increase your annual savings by $2,500 and enjoy the other half guilt-free.</p>
+      </details>
+      <details>
+        <summary>Will a raise push me into a higher tax bracket?</summary>
+        <p>Tax brackets are <strong>marginal</strong> — only the income above the bracket threshold is taxed at the higher rate. A raise will never result in less take-home pay. The "higher bracket" fear is a common misconception.</p>
+      </details>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .tool-hero { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 4rem 1.5rem 3rem; text-align: center; color: #fff; }
+  .tool-hero-inner { max-width: 720px; margin: 0 auto; }
+  .tool-badge { display: inline-block; background: rgba(255,255,255,0.2); backdrop-filter: blur(4px); padding: 0.35rem 1rem; border-radius: 999px; font-size: 0.85rem; font-weight: 600; margin-bottom: 1.25rem; }
+  .tool-hero h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; line-height: 1.15; margin: 0 0 1rem; }
+  .gradient-text { background: linear-gradient(90deg, #ffd6e0, #ffecd2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .tool-subtitle { font-size: 1.1rem; opacity: 0.92; line-height: 1.6; margin: 0; }
+  .tool-app { padding: 2.5rem 1.5rem; background: #f8f9fb; }
+  .tool-container { max-width: 800px; margin: 0 auto; }
+  .calc-card { background: #fff; border-radius: 16px; padding: 2rem; box-shadow: 0 2px 12px rgba(0,0,0,0.06); margin-bottom: 2rem; }
+  .input-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+  .input-label { display: block; font-weight: 700; font-size: 1.05rem; margin-bottom: 0.75rem; color: #1a1a2e; }
+  .input-wrapper { position: relative; display: flex; align-items: center; }
+  .currency-symbol { position: absolute; left: 1.25rem; font-size: 1.2rem; font-weight: 700; color: #667eea; }
+  .calc-input { width: 100%; padding: 0.85rem 0.85rem 0.85rem 2.75rem; font-size: 1.2rem; font-weight: 700; border: 2px solid #e2e8f0; border-radius: 12px; transition: border-color 0.2s; outline: none; font-family: inherit; color: #1a1a2e; }
+  .calc-input:focus { border-color: #667eea; box-shadow: 0 0 0 3px rgba(102,126,234,0.15); }
+  .calc-input::placeholder { color: #a0aec0; font-weight: 400; }
+  .results-grid { display: grid; gap: 1.25rem; margin-bottom: 2rem; }
+  .result-card { background: #fff; border-radius: 16px; padding: 1.5rem; box-shadow: 0 2px 12px rgba(0,0,0,0.06); border-left: 5px solid transparent; }
+  .result-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.5rem; }
+  .result-icon { font-size: 2rem; line-height: 1; }
+  .result-header h3 { margin: 0; font-size: 1rem; font-weight: 600; color: #555; }
+  .result-amount { margin: 0.15rem 0 0; font-size: 1.75rem; font-weight: 800; color: #1a1a2e; }
+  .result-tip { font-size: 0.9rem; color: #666; line-height: 1.55; margin: 0; }
+  .tool-cta { padding: 2.5rem 1.5rem; background: #fff; }
+  .cta-card { max-width: 800px; margin: 0 auto; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 20px; padding: 2.5rem; text-align: center; color: #fff; }
+  .cta-card h2 { margin: 0 0 0.75rem; font-size: 1.5rem; font-weight: 800; }
+  .cta-card p { margin: 0 0 1.5rem; opacity: 0.92; line-height: 1.6; }
+  .cta-button { display: inline-block; background: #fff; color: #667eea; font-weight: 700; padding: 0.85rem 2rem; border-radius: 999px; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; }
+  .cta-button:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
+  .tool-content { padding: 3rem 1.5rem 4rem; background: #f8f9fb; }
+  .content-narrow { max-width: 720px; margin: 0 auto; }
+  .tool-content h2 { font-size: 1.4rem; font-weight: 800; color: #1a1a2e; margin: 2.5rem 0 0.75rem; }
+  .tool-content h2:first-child { margin-top: 0; }
+  .tool-content p, .tool-content li { font-size: 1.02rem; line-height: 1.7; color: #444; }
+  .tool-content ul, .tool-content ol { padding-left: 1.25rem; margin: 0.5rem 0 1rem; }
+  .tool-content li { margin-bottom: 0.35rem; }
+  .tool-content a { color: #667eea; text-decoration: underline; text-underline-offset: 2px; }
+  .tool-content details { background: #fff; border-radius: 12px; padding: 1rem 1.25rem; margin-bottom: 0.75rem; box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
+  .tool-content summary { font-weight: 600; cursor: pointer; color: #1a1a2e; font-size: 1.02rem; }
+  .tool-content details p { margin: 0.75rem 0 0; }
+  @media (max-width: 640px) { .input-grid { grid-template-columns: 1fr; } .cta-card { padding: 2rem 1.5rem; } }
+</style>
+
+<script>
+  const salaryInput = document.getElementById('salary-input') as HTMLInputElement;
+  const raiseInput = document.getElementById('raise-input') as HTMLInputElement;
+  const taxInput = document.getElementById('tax-input') as HTMLInputElement;
+  const resultsGrid = document.getElementById('results-grid')!;
+
+  function fmt(n: number): string { return '$' + Math.round(n).toLocaleString('en-US'); }
+
+  function calculate() {
+    const salary = parseFloat(salaryInput.value) || 0;
+    const raise = parseFloat(raiseInput.value) || 0;
+    if (salary <= 0 || raise <= 0) { resultsGrid.style.display = 'none'; return; }
+
+    const taxRate = (parseFloat(taxInput.value) || 25) / 100;
+    const annualIncrease = salary * (raise / 100);
+    const newSalary = salary + annualIncrease;
+    const monthlyIncrease = annualIncrease / 12;
+
+    resultsGrid.style.display = 'grid';
+    document.getElementById('new-salary')!.textContent = fmt(newSalary);
+    document.getElementById('old-salary-display')!.textContent = fmt(salary);
+    document.getElementById('annual-increase')!.textContent = fmt(annualIncrease);
+    document.getElementById('annual-increase-net')!.textContent = fmt(annualIncrease * (1 - taxRate));
+    document.getElementById('monthly-increase')!.textContent = fmt(monthlyIncrease);
+    document.getElementById('monthly-increase-net')!.textContent = fmt(monthlyIncrease * (1 - taxRate));
+    document.getElementById('new-monthly-net')!.textContent = fmt(newSalary / 12 * (1 - taxRate));
+    document.getElementById('old-monthly-net')!.textContent = fmt(salary / 12 * (1 - taxRate));
+  }
+
+  [salaryInput, raiseInput, taxInput].forEach(el => el.addEventListener('input', calculate));
+</script>

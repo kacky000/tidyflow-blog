@@ -1,0 +1,242 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const title = 'Retirement Savings Calculator — How Much Do You Need to Retire?';
+const description = 'Free retirement savings calculator. Enter your age, savings, and monthly contributions to see when you can retire. Includes compound interest projections. No signup.';
+---
+
+<BaseLayout title={title} description={description}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Retirement Savings Calculator",
+      "url": "https://gettidyflow.com/tools/retirement-savings-calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "description": description
+    })} />
+  </Fragment>
+
+  <section class="tool-hero">
+    <div class="tool-hero-inner">
+      <span class="tool-badge">Free Tool — No Signup Required</span>
+      <h1>Retirement Savings <span class="gradient-text">Calculator</span></h1>
+      <p class="tool-subtitle">Enter your current age, savings, and monthly contribution to see your projected retirement savings — with the power of compound interest working for you.</p>
+    </div>
+  </section>
+
+  <section class="tool-app">
+    <div class="tool-container">
+      <div class="calc-card">
+        <div class="input-grid">
+          <div>
+            <label for="age-input" class="input-label">Current Age</label>
+            <div class="input-wrapper"><span class="currency-symbol">#</span>
+              <input type="number" id="age-input" placeholder="30" min="18" max="80" step="1" value="30" class="calc-input" />
+            </div>
+          </div>
+          <div>
+            <label for="retire-input" class="input-label">Retirement Age</label>
+            <div class="input-wrapper"><span class="currency-symbol">#</span>
+              <input type="number" id="retire-input" placeholder="65" min="30" max="85" step="1" value="65" class="calc-input" />
+            </div>
+          </div>
+          <div>
+            <label for="savings-input" class="input-label">Current Savings</label>
+            <div class="input-wrapper"><span class="currency-symbol">$</span>
+              <input type="number" id="savings-input" placeholder="e.g. 50,000" min="0" step="1000" class="calc-input" />
+            </div>
+          </div>
+          <div>
+            <label for="monthly-input" class="input-label">Monthly Contribution</label>
+            <div class="input-wrapper"><span class="currency-symbol">$</span>
+              <input type="number" id="monthly-input" placeholder="e.g. 500" min="0" step="50" class="calc-input" />
+            </div>
+          </div>
+          <div>
+            <label for="return-input" class="input-label">Expected Annual Return (%)</label>
+            <div class="input-wrapper"><span class="currency-symbol">%</span>
+              <input type="number" id="return-input" placeholder="7" min="0" max="20" step="0.5" value="7" class="calc-input" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="results-grid" id="results-grid" style="display:none;">
+        <div class="result-card" style="border-left-color:#43e97b;">
+          <div class="result-header">
+            <span class="result-icon">🏖️</span>
+            <div><h3>Projected Retirement Savings</h3><p class="result-amount" id="total-savings">$0</p></div>
+          </div>
+          <p class="result-tip">Total balance at your retirement age, including compound growth.</p>
+        </div>
+        <div class="result-card" style="border-left-color:#667eea;">
+          <div class="result-header">
+            <span class="result-icon">💵</span>
+            <div><h3>Total Contributions</h3><p class="result-amount" id="total-contributions">$0</p></div>
+          </div>
+          <p class="result-tip">The total amount you will contribute out of pocket.</p>
+        </div>
+        <div class="result-card" style="border-left-color:#f093fb;">
+          <div class="result-header">
+            <span class="result-icon">📈</span>
+            <div><h3>Interest Earned</h3><p class="result-amount" id="interest-earned">$0</p></div>
+          </div>
+          <p class="result-tip">The power of compound interest — money your money earned for you.</p>
+        </div>
+        <div class="result-card" style="border-left-color:#ffd86e;">
+          <div class="result-header">
+            <span class="result-icon">📅</span>
+            <div><h3>Monthly Income in Retirement</h3><p class="result-amount" id="monthly-retirement">$0</p></div>
+          </div>
+          <p class="result-tip">Estimated monthly withdrawal using the 4% rule over 25 years.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool-cta">
+    <div class="tool-container">
+      <div class="cta-card">
+        <h2>Start Tracking Your Retirement Savings</h2>
+        <p>Retirement planning starts with tracking. Use our free budget template to monitor your savings rate, investment contributions, and progress toward your goal.</p>
+        <a href="https://gettidyflow.gumroad.com" target="_blank" rel="noopener" class="cta-button">Get the Free Budget Template &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool-content">
+    <div class="tool-container content-narrow">
+      <h2>How This Retirement Calculator Works</h2>
+      <p>This calculator uses the <strong>future value of a series</strong> formula to project your retirement savings. It takes your current savings, adds monthly contributions, and applies compound interest at your expected return rate.</p>
+      <p>The monthly retirement income estimate uses the <strong>4% rule</strong> — a widely-used guideline that suggests withdrawing 4% of your portfolio per year for a 25-30 year retirement.</p>
+
+      <h2>How Much Do You Need to Retire?</h2>
+      <ul>
+        <li><strong>Rule of 25</strong> — multiply your desired annual retirement income by 25. Want $60,000/year? You need $1,500,000.</li>
+        <li><strong>By age 30</strong> — aim to have 1x your annual salary saved.</li>
+        <li><strong>By age 40</strong> — 3x your salary.</li>
+        <li><strong>By age 50</strong> — 6x your salary.</li>
+        <li><strong>By age 60</strong> — 8x your salary.</li>
+        <li><strong>By age 67</strong> — 10x your salary.</li>
+      </ul>
+
+      <h2>Tips for Maximizing Retirement Savings</h2>
+      <ul>
+        <li><strong>Start as early as possible</strong> — someone who starts at 25 needs to save half as much monthly as someone starting at 35.</li>
+        <li><strong>Capture the full employer match</strong> — it is literally free money (typically 3-6% of salary).</li>
+        <li><strong>Increase contributions with raises</strong> — bump your 401k contribution every time you get a raise.</li>
+        <li><strong>Use tax-advantaged accounts</strong> — 401k, IRA, Roth IRA all reduce your tax burden.</li>
+      </ul>
+
+      <h2>Related Resources</h2>
+      <ul>
+        <li><a href="/blog/retirement-budget-checklist/">Retirement Budget Checklist</a></li>
+        <li><a href="/blog/how-to-track-expenses-in-notion/">How to Track Expenses in Notion</a></li>
+        <li><a href="/blog/how-to-save-for-a-down-payment/">How to Save for a Down Payment</a></li>
+      </ul>
+
+      <h2>Frequently Asked Questions</h2>
+      <details>
+        <summary>What return rate should I use?</summary>
+        <p>The S&P 500 has historically returned about <strong>10% annually (7% after inflation)</strong>. Using 7% is a common conservative estimate. If you have a bond-heavy portfolio, use 4-5%. For aggressive stock portfolios, 8-10% is reasonable.</p>
+      </details>
+      <details>
+        <summary>What is the 4% rule?</summary>
+        <p>The 4% rule states that you can <strong>withdraw 4% of your retirement portfolio in the first year</strong>, then adjust for inflation each subsequent year, and your money should last 25-30 years. It is based on historical stock/bond returns.</p>
+      </details>
+      <details>
+        <summary>Is it too late to start saving at 40?</summary>
+        <p><strong>No, but you need to be more aggressive.</strong> At 40, you have 25 years until 65. Maximize your 401k ($23,500/year in 2026), open a Roth IRA ($7,000/year), and aim to save 20-25% of your income. Catch-up contributions are available at 50.</p>
+      </details>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .tool-hero { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 4rem 1.5rem 3rem; text-align: center; color: #fff; }
+  .tool-hero-inner { max-width: 720px; margin: 0 auto; }
+  .tool-badge { display: inline-block; background: rgba(255,255,255,0.2); backdrop-filter: blur(4px); padding: 0.35rem 1rem; border-radius: 999px; font-size: 0.85rem; font-weight: 600; margin-bottom: 1.25rem; }
+  .tool-hero h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; line-height: 1.15; margin: 0 0 1rem; }
+  .gradient-text { background: linear-gradient(90deg, #ffd6e0, #ffecd2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .tool-subtitle { font-size: 1.1rem; opacity: 0.92; line-height: 1.6; margin: 0; }
+  .tool-app { padding: 2.5rem 1.5rem; background: #f8f9fb; }
+  .tool-container { max-width: 800px; margin: 0 auto; }
+  .calc-card { background: #fff; border-radius: 16px; padding: 2rem; box-shadow: 0 2px 12px rgba(0,0,0,0.06); margin-bottom: 2rem; }
+  .input-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+  .input-label { display: block; font-weight: 700; font-size: 1.05rem; margin-bottom: 0.75rem; color: #1a1a2e; }
+  .input-wrapper { position: relative; display: flex; align-items: center; }
+  .currency-symbol { position: absolute; left: 1.25rem; font-size: 1.2rem; font-weight: 700; color: #667eea; }
+  .calc-input { width: 100%; padding: 0.85rem 0.85rem 0.85rem 2.75rem; font-size: 1.2rem; font-weight: 700; border: 2px solid #e2e8f0; border-radius: 12px; transition: border-color 0.2s; outline: none; font-family: inherit; color: #1a1a2e; }
+  .calc-input:focus { border-color: #667eea; box-shadow: 0 0 0 3px rgba(102,126,234,0.15); }
+  .calc-input::placeholder { color: #a0aec0; font-weight: 400; }
+  .results-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom: 2rem; }
+  .result-card { background: #fff; border-radius: 16px; padding: 1.5rem; box-shadow: 0 2px 12px rgba(0,0,0,0.06); border-left: 5px solid transparent; }
+  .result-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.5rem; }
+  .result-icon { font-size: 2rem; line-height: 1; }
+  .result-header h3 { margin: 0; font-size: 1rem; font-weight: 600; color: #555; }
+  .result-amount { margin: 0.15rem 0 0; font-size: 1.75rem; font-weight: 800; color: #1a1a2e; }
+  .result-tip { font-size: 0.9rem; color: #666; line-height: 1.55; margin: 0; }
+  .tool-cta { padding: 2.5rem 1.5rem; background: #fff; }
+  .cta-card { max-width: 800px; margin: 0 auto; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 20px; padding: 2.5rem; text-align: center; color: #fff; }
+  .cta-card h2 { margin: 0 0 0.75rem; font-size: 1.5rem; font-weight: 800; }
+  .cta-card p { margin: 0 0 1.5rem; opacity: 0.92; line-height: 1.6; }
+  .cta-button { display: inline-block; background: #fff; color: #667eea; font-weight: 700; padding: 0.85rem 2rem; border-radius: 999px; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; }
+  .cta-button:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
+  .tool-content { padding: 3rem 1.5rem 4rem; background: #f8f9fb; }
+  .content-narrow { max-width: 720px; margin: 0 auto; }
+  .tool-content h2 { font-size: 1.4rem; font-weight: 800; color: #1a1a2e; margin: 2.5rem 0 0.75rem; }
+  .tool-content h2:first-child { margin-top: 0; }
+  .tool-content p, .tool-content li { font-size: 1.02rem; line-height: 1.7; color: #444; }
+  .tool-content ul, .tool-content ol { padding-left: 1.25rem; margin: 0.5rem 0 1rem; }
+  .tool-content li { margin-bottom: 0.35rem; }
+  .tool-content a { color: #667eea; text-decoration: underline; text-underline-offset: 2px; }
+  .tool-content details { background: #fff; border-radius: 12px; padding: 1rem 1.25rem; margin-bottom: 0.75rem; box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
+  .tool-content summary { font-weight: 600; cursor: pointer; color: #1a1a2e; font-size: 1.02rem; }
+  .tool-content details p { margin: 0.75rem 0 0; }
+  @media (max-width: 640px) { .input-grid { grid-template-columns: 1fr; } .results-grid { grid-template-columns: 1fr; } .cta-card { padding: 2rem 1.5rem; } }
+</style>
+
+<script>
+  const ageInput = document.getElementById('age-input') as HTMLInputElement;
+  const retireInput = document.getElementById('retire-input') as HTMLInputElement;
+  const savingsInput = document.getElementById('savings-input') as HTMLInputElement;
+  const monthlyInput = document.getElementById('monthly-input') as HTMLInputElement;
+  const returnInput = document.getElementById('return-input') as HTMLInputElement;
+  const resultsGrid = document.getElementById('results-grid')!;
+
+  function fmt(n: number): string { return '$' + Math.round(n).toLocaleString('en-US'); }
+
+  function calculate() {
+    const age = parseFloat(ageInput.value) || 30;
+    const retireAge = parseFloat(retireInput.value) || 65;
+    const currentSavings = parseFloat(savingsInput.value) || 0;
+    const monthly = parseFloat(monthlyInput.value) || 0;
+    const annualReturn = (parseFloat(returnInput.value) || 7) / 100;
+
+    if (retireAge <= age) { resultsGrid.style.display = 'none'; return; }
+
+    const years = retireAge - age;
+    const months = years * 12;
+    const monthlyRate = annualReturn / 12;
+
+    // Future value of current savings
+    const fvSavings = currentSavings * Math.pow(1 + monthlyRate, months);
+    // Future value of monthly contributions (annuity)
+    const fvContributions = monthly * ((Math.pow(1 + monthlyRate, months) - 1) / monthlyRate);
+    const totalSavings = fvSavings + fvContributions;
+    const totalContributed = currentSavings + (monthly * months);
+    const interestEarned = totalSavings - totalContributed;
+    // 4% rule: annual withdrawal / 12
+    const monthlyRetirement = (totalSavings * 0.04) / 12;
+
+    resultsGrid.style.display = 'grid';
+    document.getElementById('total-savings')!.textContent = fmt(totalSavings);
+    document.getElementById('total-contributions')!.textContent = fmt(totalContributed);
+    document.getElementById('interest-earned')!.textContent = fmt(interestEarned);
+    document.getElementById('monthly-retirement')!.textContent = fmt(monthlyRetirement);
+  }
+
+  [ageInput, retireInput, savingsInput, monthlyInput, returnInput].forEach(el => el.addEventListener('input', calculate));
+</script>

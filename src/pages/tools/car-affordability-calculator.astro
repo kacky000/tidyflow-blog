@@ -1,0 +1,233 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const title = 'Car Affordability Calculator — How Much Car Can You Afford?';
+const description = 'Free car affordability calculator. Enter your income and expenses to find the maximum car price you can comfortably afford. Includes loan payment estimates.';
+---
+
+<BaseLayout title={title} description={description}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Car Affordability Calculator",
+      "url": "https://gettidyflow.com/tools/car-affordability-calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "description": description
+    })} />
+  </Fragment>
+
+  <section class="tool-hero">
+    <div class="tool-hero-inner">
+      <span class="tool-badge">Free Tool — No Signup Required</span>
+      <h1>Car Affordability <span class="gradient-text">Calculator</span></h1>
+      <p class="tool-subtitle">Enter your annual income and monthly expenses to instantly find out the maximum car price you can afford — based on the 20/4/10 rule used by financial experts.</p>
+    </div>
+  </section>
+
+  <section class="tool-app">
+    <div class="tool-container">
+      <div class="calc-card">
+        <div class="input-grid">
+          <div>
+            <label for="income-input" class="input-label">Annual Gross Income</label>
+            <div class="input-wrapper"><span class="currency-symbol">$</span>
+              <input type="number" id="income-input" placeholder="e.g. 60,000" min="0" step="1000" class="calc-input" />
+            </div>
+          </div>
+          <div>
+            <label for="down-input" class="input-label">Down Payment Available</label>
+            <div class="input-wrapper"><span class="currency-symbol">$</span>
+              <input type="number" id="down-input" placeholder="e.g. 5,000" min="0" step="500" class="calc-input" />
+            </div>
+          </div>
+          <div>
+            <label for="rate-input" class="input-label">Estimated Loan Rate (%)</label>
+            <div class="input-wrapper"><span class="currency-symbol">%</span>
+              <input type="number" id="rate-input" placeholder="6.5" min="0" max="30" step="0.1" value="6.5" class="calc-input" />
+            </div>
+          </div>
+          <div>
+            <label for="term-input" class="input-label">Loan Term (months)</label>
+            <div class="input-wrapper"><span class="currency-symbol">#</span>
+              <input type="number" id="term-input" placeholder="60" min="12" max="84" step="12" value="60" class="calc-input" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="results-grid" id="results-grid" style="display:none;">
+        <div class="result-card" style="border-left-color:#667eea;">
+          <div class="result-header">
+            <span class="result-icon">🚗</span>
+            <div><h3>Maximum Car Price (20/4/10 Rule)</h3><p class="result-amount" id="max-price">$0</p></div>
+          </div>
+          <p class="result-tip">Based on the 20/4/10 rule: 20% down, 4-year loan max, and total car expenses under 10% of gross income.</p>
+        </div>
+        <div class="result-card" style="border-left-color:#43e97b;">
+          <div class="result-header">
+            <span class="result-icon">💵</span>
+            <div><h3>Estimated Monthly Payment</h3><p class="result-amount" id="monthly-payment">$0</p></div>
+          </div>
+          <p class="result-tip">Principal and interest on the loan amount after your down payment.</p>
+        </div>
+        <div class="result-card" style="border-left-color:#f093fb;">
+          <div class="result-header">
+            <span class="result-icon">📊</span>
+            <div><h3>Max Monthly Budget (10% Rule)</h3><p class="result-amount" id="max-monthly">$0</p></div>
+          </div>
+          <p class="result-tip">10% of your gross monthly income — this should cover your car payment, insurance, gas, and maintenance combined.</p>
+        </div>
+        <div class="result-card" style="border-left-color:#ffd86e;">
+          <div class="result-header">
+            <span class="result-icon">💰</span>
+            <div><h3>Total Interest Paid</h3><p class="result-amount" id="total-interest">$0</p></div>
+          </div>
+          <p class="result-tip">The total interest you will pay over the full loan term.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool-cta">
+    <div class="tool-container">
+      <div class="cta-card">
+        <h2>Track Your Car Expenses</h2>
+        <p>After buying your car, track loan payments, insurance, gas, and maintenance in one place. Our free budget template keeps you on top of every dollar.</p>
+        <a href="https://gettidyflow.gumroad.com" target="_blank" rel="noopener" class="cta-button">Get the Free Budget Template &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool-content">
+    <div class="tool-container content-narrow">
+      <h2>What Is the 20/4/10 Rule for Car Buying?</h2>
+      <p>The 20/4/10 rule is a guideline recommended by financial experts:</p>
+      <ul>
+        <li><strong>20% down payment</strong> — reduces your loan amount and avoids being underwater on the loan.</li>
+        <li><strong>4-year (48-month) maximum loan term</strong> — shorter loans mean less interest paid.</li>
+        <li><strong>10% of gross income</strong> — your total car costs (payment + insurance + gas + maintenance) should not exceed 10% of your gross monthly income.</li>
+      </ul>
+
+      <h2>How to Lower Your Car Costs</h2>
+      <ul>
+        <li><strong>Buy used (1-3 years old)</strong> — cars lose 20-30% of value in the first year alone.</li>
+        <li><strong>Increase your down payment</strong> — even an extra $1,000 reduces monthly payments and total interest.</li>
+        <li><strong>Improve your credit score</strong> — a 100-point increase can save 2-3% on your interest rate.</li>
+        <li><strong>Shop multiple lenders</strong> — get pre-approved from banks and credit unions before visiting dealers.</li>
+      </ul>
+
+      <h2>Related Resources</h2>
+      <ul>
+        <li><a href="/blog/how-to-create-a-budget/">How to Create a Budget from Scratch</a></li>
+        <li><a href="/blog/how-to-track-expenses-in-notion/">How to Track Expenses in Notion</a></li>
+        <li><a href="/blog/budgeting-mistakes-to-avoid/">Common Budgeting Mistakes to Avoid</a></li>
+      </ul>
+
+      <h2>Frequently Asked Questions</h2>
+      <details>
+        <summary>How much of my income should go to a car payment?</summary>
+        <p>Financial experts recommend keeping your <strong>total car expenses (payment, insurance, gas, maintenance) under 10-15% of your gross monthly income</strong>. The car payment alone should ideally be under 8%.</p>
+      </details>
+      <details>
+        <summary>Is a 72-month car loan a bad idea?</summary>
+        <p>Longer loans mean <strong>lower monthly payments but significantly more interest paid</strong>. You also risk being "upside down" (owing more than the car is worth). Aim for 48-60 months maximum.</p>
+      </details>
+      <details>
+        <summary>Should I lease or buy?</summary>
+        <p>Leasing offers lower monthly payments but you never build equity. <strong>Buying is usually better long-term</strong> — especially if you plan to keep the car 5+ years. Leasing makes sense if you want a new car every 2-3 years and drive under 12,000 miles/year.</p>
+      </details>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .tool-hero { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 4rem 1.5rem 3rem; text-align: center; color: #fff; }
+  .tool-hero-inner { max-width: 720px; margin: 0 auto; }
+  .tool-badge { display: inline-block; background: rgba(255,255,255,0.2); backdrop-filter: blur(4px); padding: 0.35rem 1rem; border-radius: 999px; font-size: 0.85rem; font-weight: 600; margin-bottom: 1.25rem; }
+  .tool-hero h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; line-height: 1.15; margin: 0 0 1rem; }
+  .gradient-text { background: linear-gradient(90deg, #ffd6e0, #ffecd2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .tool-subtitle { font-size: 1.1rem; opacity: 0.92; line-height: 1.6; margin: 0; }
+  .tool-app { padding: 2.5rem 1.5rem; background: #f8f9fb; }
+  .tool-container { max-width: 800px; margin: 0 auto; }
+  .calc-card { background: #fff; border-radius: 16px; padding: 2rem; box-shadow: 0 2px 12px rgba(0,0,0,0.06); margin-bottom: 2rem; }
+  .input-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+  .input-label { display: block; font-weight: 700; font-size: 1.05rem; margin-bottom: 0.75rem; color: #1a1a2e; }
+  .input-wrapper { position: relative; display: flex; align-items: center; }
+  .currency-symbol { position: absolute; left: 1.25rem; font-size: 1.2rem; font-weight: 700; color: #667eea; }
+  .calc-input { width: 100%; padding: 0.85rem 0.85rem 0.85rem 2.75rem; font-size: 1.2rem; font-weight: 700; border: 2px solid #e2e8f0; border-radius: 12px; transition: border-color 0.2s; outline: none; font-family: inherit; color: #1a1a2e; }
+  .calc-input:focus { border-color: #667eea; box-shadow: 0 0 0 3px rgba(102,126,234,0.15); }
+  .calc-input::placeholder { color: #a0aec0; font-weight: 400; }
+  .results-grid { display: grid; gap: 1.25rem; margin-bottom: 2rem; }
+  .result-card { background: #fff; border-radius: 16px; padding: 1.5rem; box-shadow: 0 2px 12px rgba(0,0,0,0.06); border-left: 5px solid transparent; }
+  .result-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.5rem; }
+  .result-icon { font-size: 2rem; line-height: 1; }
+  .result-header h3 { margin: 0; font-size: 1rem; font-weight: 600; color: #555; }
+  .result-amount { margin: 0.15rem 0 0; font-size: 1.75rem; font-weight: 800; color: #1a1a2e; }
+  .result-tip { font-size: 0.9rem; color: #666; line-height: 1.55; margin: 0; }
+  .tool-cta { padding: 2.5rem 1.5rem; background: #fff; }
+  .cta-card { max-width: 800px; margin: 0 auto; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 20px; padding: 2.5rem; text-align: center; color: #fff; }
+  .cta-card h2 { margin: 0 0 0.75rem; font-size: 1.5rem; font-weight: 800; }
+  .cta-card p { margin: 0 0 1.5rem; opacity: 0.92; line-height: 1.6; }
+  .cta-button { display: inline-block; background: #fff; color: #667eea; font-weight: 700; padding: 0.85rem 2rem; border-radius: 999px; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; }
+  .cta-button:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
+  .tool-content { padding: 3rem 1.5rem 4rem; background: #f8f9fb; }
+  .content-narrow { max-width: 720px; margin: 0 auto; }
+  .tool-content h2 { font-size: 1.4rem; font-weight: 800; color: #1a1a2e; margin: 2.5rem 0 0.75rem; }
+  .tool-content h2:first-child { margin-top: 0; }
+  .tool-content p, .tool-content li { font-size: 1.02rem; line-height: 1.7; color: #444; }
+  .tool-content ul, .tool-content ol { padding-left: 1.25rem; margin: 0.5rem 0 1rem; }
+  .tool-content li { margin-bottom: 0.35rem; }
+  .tool-content a { color: #667eea; text-decoration: underline; text-underline-offset: 2px; }
+  .tool-content details { background: #fff; border-radius: 12px; padding: 1rem 1.25rem; margin-bottom: 0.75rem; box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
+  .tool-content summary { font-weight: 600; cursor: pointer; color: #1a1a2e; font-size: 1.02rem; }
+  .tool-content details p { margin: 0.75rem 0 0; }
+  @media (max-width: 640px) { .input-grid { grid-template-columns: 1fr; } .cta-card { padding: 2rem 1.5rem; } }
+</style>
+
+<script>
+  const incomeInput = document.getElementById('income-input') as HTMLInputElement;
+  const downInput = document.getElementById('down-input') as HTMLInputElement;
+  const rateInput = document.getElementById('rate-input') as HTMLInputElement;
+  const termInput = document.getElementById('term-input') as HTMLInputElement;
+  const resultsGrid = document.getElementById('results-grid')!;
+
+  function fmt(n: number): string { return '$' + Math.round(n).toLocaleString('en-US'); }
+
+  function calculate() {
+    const income = parseFloat(incomeInput.value) || 0;
+    if (income <= 0) { resultsGrid.style.display = 'none'; return; }
+
+    const down = parseFloat(downInput.value) || 0;
+    const rateAnnual = (parseFloat(rateInput.value) || 6.5) / 100;
+    const termMonths = parseFloat(termInput.value) || 60;
+    const monthlyRate = rateAnnual / 12;
+
+    // 10% rule: max total car cost per month
+    const maxMonthly = income / 12 * 0.10;
+    // Subtract estimated insurance+gas+maintenance (~$250/mo)
+    const maxPayment = Math.max(maxMonthly - 250, 0);
+
+    // Max loan from max payment
+    const maxLoan = monthlyRate > 0
+      ? maxPayment * (Math.pow(1 + monthlyRate, termMonths) - 1) / (monthlyRate * Math.pow(1 + monthlyRate, termMonths))
+      : maxPayment * termMonths;
+    const maxPrice = maxLoan + down;
+
+    // Actual monthly payment for max price
+    const loan = maxPrice - down;
+    const monthlyPayment = monthlyRate > 0
+      ? loan * monthlyRate * Math.pow(1 + monthlyRate, termMonths) / (Math.pow(1 + monthlyRate, termMonths) - 1)
+      : loan / termMonths;
+    const totalInterest = monthlyPayment * termMonths - loan;
+
+    resultsGrid.style.display = 'grid';
+    document.getElementById('max-price')!.textContent = fmt(maxPrice);
+    document.getElementById('monthly-payment')!.textContent = fmt(monthlyPayment);
+    document.getElementById('max-monthly')!.textContent = fmt(maxMonthly);
+    document.getElementById('total-interest')!.textContent = fmt(totalInterest);
+  }
+
+  [incomeInput, downInput, rateInput, termInput].forEach(el => el.addEventListener('input', calculate));
+</script>

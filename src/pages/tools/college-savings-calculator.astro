@@ -1,0 +1,256 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const title = 'College Savings Calculator — How Much to Save for Your Child\'s Education';
+const description = 'Free college savings calculator. Enter your child\'s age and target school type to see how much you need to save monthly. Includes 529 plan projections. No signup.';
+---
+
+<BaseLayout title={title} description={description}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "College Savings Calculator",
+      "url": "https://gettidyflow.com/tools/college-savings-calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "description": description
+    })} />
+  </Fragment>
+
+  <section class="tool-hero">
+    <div class="tool-hero-inner">
+      <span class="tool-badge">Free Tool — No Signup Required</span>
+      <h1>College Savings <span class="gradient-text">Calculator</span></h1>
+      <p class="tool-subtitle">Enter your child's age and the type of college you are planning for to instantly see how much you need to save each month — including inflation-adjusted tuition projections.</p>
+    </div>
+  </section>
+
+  <section class="tool-app">
+    <div class="tool-container">
+      <div class="calc-card">
+        <div class="input-grid">
+          <div>
+            <label for="child-age-input" class="input-label">Child's Current Age</label>
+            <div class="input-wrapper"><span class="currency-symbol">#</span>
+              <input type="number" id="child-age-input" placeholder="5" min="0" max="17" step="1" value="5" class="calc-input" />
+            </div>
+          </div>
+          <div>
+            <label for="college-type" class="input-label">College Type</label>
+            <select id="college-type" class="calc-input" style="padding-left:1rem;">
+              <option value="public-in">Public (In-State)</option>
+              <option value="public-out">Public (Out-of-State)</option>
+              <option value="private">Private University</option>
+            </select>
+          </div>
+          <div>
+            <label for="current-savings-input" class="input-label">Current College Savings</label>
+            <div class="input-wrapper"><span class="currency-symbol">$</span>
+              <input type="number" id="current-savings-input" placeholder="e.g. 10,000" min="0" step="500" value="0" class="calc-input" />
+            </div>
+          </div>
+          <div>
+            <label for="coverage-input" class="input-label">% of Cost to Cover</label>
+            <div class="input-wrapper"><span class="currency-symbol">%</span>
+              <input type="number" id="coverage-input" placeholder="100" min="10" max="100" step="5" value="100" class="calc-input" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="results-grid" id="results-grid">
+        <div class="result-card" style="border-left-color:#667eea;">
+          <div class="result-header">
+            <span class="result-icon">🎓</span>
+            <div><h3>Projected 4-Year Cost</h3><p class="result-amount" id="total-cost">$0</p></div>
+          </div>
+          <p class="result-tip">Estimated total cost including tuition, room, board, and fees — adjusted for <strong id="inflation-years">13</strong> years of 5% annual college inflation.</p>
+        </div>
+        <div class="result-card" style="border-left-color:#43e97b;">
+          <div class="result-header">
+            <span class="result-icon">🎯</span>
+            <div><h3>Your Savings Target</h3><p class="result-amount" id="savings-target">$0</p></div>
+          </div>
+          <p class="result-tip">Based on covering <strong id="coverage-display">100%</strong> of the projected cost.</p>
+        </div>
+        <div class="result-card" style="border-left-color:#f093fb;">
+          <div class="result-header">
+            <span class="result-icon">💰</span>
+            <div><h3>Monthly Savings Needed</h3><p class="result-amount" id="monthly-needed">$0</p></div>
+          </div>
+          <p class="result-tip">Assuming 6% annual return in a 529 plan or similar investment account.</p>
+        </div>
+        <div class="result-card" style="border-left-color:#ffd86e;">
+          <div class="result-header">
+            <span class="result-icon">📅</span>
+            <div><h3>Years Until College</h3><p class="result-amount" id="years-until">13</p></div>
+          </div>
+          <p class="result-tip">Time remaining to build your college fund.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool-cta">
+    <div class="tool-container">
+      <div class="cta-card">
+        <h2>Track Your College Savings Progress</h2>
+        <p>Set your monthly savings target and track progress with our free budget template. Watch your college fund grow month by month.</p>
+        <a href="https://gettidyflow.gumroad.com" target="_blank" rel="noopener" class="cta-button">Get the Free Budget Template &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool-content">
+    <div class="tool-container content-narrow">
+      <h2>Current College Costs (2026 Estimates)</h2>
+      <ul>
+        <li><strong>Public university (in-state)</strong> — ~$23,000/year (tuition + room & board)</li>
+        <li><strong>Public university (out-of-state)</strong> — ~$42,000/year</li>
+        <li><strong>Private university</strong> — ~$56,000/year</li>
+      </ul>
+      <p>College costs have been increasing at roughly 5% per year — more than double the general inflation rate. This calculator factors in that growth to give you a realistic savings target.</p>
+
+      <h2>Best Ways to Save for College</h2>
+      <ul>
+        <li><strong>529 Plan</strong> — tax-free growth and withdrawals for education expenses. The best option for most families.</li>
+        <li><strong>Coverdell ESA</strong> — similar tax benefits but lower contribution limits ($2,000/year).</li>
+        <li><strong>Custodial accounts (UGMA/UTMA)</strong> — flexible but counted more heavily in financial aid formulas.</li>
+        <li><strong>Roth IRA</strong> — contributions can be withdrawn penalty-free; a backup strategy.</li>
+      </ul>
+
+      <h2>Reducing College Costs</h2>
+      <ul>
+        <li><strong>Community college first</strong> — 2 years at community college can save $30,000-$60,000.</li>
+        <li><strong>Scholarships and grants</strong> — apply to 20+ scholarships; even small ones add up.</li>
+        <li><strong>AP/dual enrollment credits</strong> — earn college credits in high school for free.</li>
+        <li><strong>In-state tuition</strong> — out-of-state costs nearly double; consider state schools first.</li>
+      </ul>
+
+      <h2>Related Resources</h2>
+      <ul>
+        <li><a href="/blog/how-to-save-money-college-student/">How to Save Money as a College Student</a></li>
+        <li><a href="/blog/how-to-track-expenses-in-notion/">How to Track Expenses in Notion</a></li>
+        <li><a href="/blog/budgeting-mistakes-to-avoid/">Common Budgeting Mistakes to Avoid</a></li>
+      </ul>
+
+      <h2>Frequently Asked Questions</h2>
+      <details>
+        <summary>When should I start saving for college?</summary>
+        <p><strong>As early as possible — ideally at birth.</strong> Starting at birth gives you 18 years of compound growth. Even $200/month from birth can grow to $80,000+ by age 18 in a 529 plan with 6% returns.</p>
+      </details>
+      <details>
+        <summary>Do I need to cover 100% of college costs?</summary>
+        <p><strong>No.</strong> Many families aim to cover 50-75% through savings and cover the rest with scholarships, financial aid, work-study, and modest student loans. Covering even one-third significantly reduces future debt burden.</p>
+      </details>
+      <details>
+        <summary>What if my child gets a scholarship?</summary>
+        <p>529 plan funds can be <strong>transferred to another child, used for graduate school, or withdrawn penalty-free up to the scholarship amount</strong> (you still pay income tax on earnings but no 10% penalty). It is never wasted.</p>
+      </details>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .tool-hero { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 4rem 1.5rem 3rem; text-align: center; color: #fff; }
+  .tool-hero-inner { max-width: 720px; margin: 0 auto; }
+  .tool-badge { display: inline-block; background: rgba(255,255,255,0.2); backdrop-filter: blur(4px); padding: 0.35rem 1rem; border-radius: 999px; font-size: 0.85rem; font-weight: 600; margin-bottom: 1.25rem; }
+  .tool-hero h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; line-height: 1.15; margin: 0 0 1rem; }
+  .gradient-text { background: linear-gradient(90deg, #ffd6e0, #ffecd2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .tool-subtitle { font-size: 1.1rem; opacity: 0.92; line-height: 1.6; margin: 0; }
+  .tool-app { padding: 2.5rem 1.5rem; background: #f8f9fb; }
+  .tool-container { max-width: 800px; margin: 0 auto; }
+  .calc-card { background: #fff; border-radius: 16px; padding: 2rem; box-shadow: 0 2px 12px rgba(0,0,0,0.06); margin-bottom: 2rem; }
+  .input-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+  .input-label { display: block; font-weight: 700; font-size: 1.05rem; margin-bottom: 0.75rem; color: #1a1a2e; }
+  .input-wrapper { position: relative; display: flex; align-items: center; }
+  .currency-symbol { position: absolute; left: 1.25rem; font-size: 1.2rem; font-weight: 700; color: #667eea; }
+  .calc-input { width: 100%; padding: 0.85rem 0.85rem 0.85rem 2.75rem; font-size: 1.2rem; font-weight: 700; border: 2px solid #e2e8f0; border-radius: 12px; transition: border-color 0.2s; outline: none; font-family: inherit; color: #1a1a2e; }
+  .calc-input:focus { border-color: #667eea; box-shadow: 0 0 0 3px rgba(102,126,234,0.15); }
+  .calc-input::placeholder { color: #a0aec0; font-weight: 400; }
+  select.calc-input { cursor: pointer; appearance: auto; }
+  .results-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom: 2rem; }
+  .result-card { background: #fff; border-radius: 16px; padding: 1.5rem; box-shadow: 0 2px 12px rgba(0,0,0,0.06); border-left: 5px solid transparent; }
+  .result-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.5rem; }
+  .result-icon { font-size: 2rem; line-height: 1; }
+  .result-header h3 { margin: 0; font-size: 1rem; font-weight: 600; color: #555; }
+  .result-amount { margin: 0.15rem 0 0; font-size: 1.75rem; font-weight: 800; color: #1a1a2e; }
+  .result-tip { font-size: 0.9rem; color: #666; line-height: 1.55; margin: 0; }
+  .tool-cta { padding: 2.5rem 1.5rem; background: #fff; }
+  .cta-card { max-width: 800px; margin: 0 auto; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 20px; padding: 2.5rem; text-align: center; color: #fff; }
+  .cta-card h2 { margin: 0 0 0.75rem; font-size: 1.5rem; font-weight: 800; }
+  .cta-card p { margin: 0 0 1.5rem; opacity: 0.92; line-height: 1.6; }
+  .cta-button { display: inline-block; background: #fff; color: #667eea; font-weight: 700; padding: 0.85rem 2rem; border-radius: 999px; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; }
+  .cta-button:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
+  .tool-content { padding: 3rem 1.5rem 4rem; background: #f8f9fb; }
+  .content-narrow { max-width: 720px; margin: 0 auto; }
+  .tool-content h2 { font-size: 1.4rem; font-weight: 800; color: #1a1a2e; margin: 2.5rem 0 0.75rem; }
+  .tool-content h2:first-child { margin-top: 0; }
+  .tool-content p, .tool-content li { font-size: 1.02rem; line-height: 1.7; color: #444; }
+  .tool-content ul, .tool-content ol { padding-left: 1.25rem; margin: 0.5rem 0 1rem; }
+  .tool-content li { margin-bottom: 0.35rem; }
+  .tool-content a { color: #667eea; text-decoration: underline; text-underline-offset: 2px; }
+  .tool-content details { background: #fff; border-radius: 12px; padding: 1rem 1.25rem; margin-bottom: 0.75rem; box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
+  .tool-content summary { font-weight: 600; cursor: pointer; color: #1a1a2e; font-size: 1.02rem; }
+  .tool-content details p { margin: 0.75rem 0 0; }
+  @media (max-width: 640px) { .input-grid { grid-template-columns: 1fr; } .results-grid { grid-template-columns: 1fr; } .cta-card { padding: 2rem 1.5rem; } }
+</style>
+
+<script>
+  const childAgeInput = document.getElementById('child-age-input') as HTMLInputElement;
+  const collegeType = document.getElementById('college-type') as HTMLSelectElement;
+  const currentSavingsInput = document.getElementById('current-savings-input') as HTMLInputElement;
+  const coverageInput = document.getElementById('coverage-input') as HTMLInputElement;
+
+  // Annual costs (2026, tuition + room & board)
+  const COSTS: Record<string, number> = {
+    'public-in': 23000,
+    'public-out': 42000,
+    'private': 56000,
+  };
+  const COLLEGE_INFLATION = 0.05;
+  const INVESTMENT_RETURN = 0.06;
+
+  function fmt(n: number): string { return '$' + Math.round(n).toLocaleString('en-US'); }
+
+  function calculate() {
+    const age = Math.max(parseFloat(childAgeInput.value) || 0, 0);
+    const type = collegeType.value;
+    const currentSavings = parseFloat(currentSavingsInput.value) || 0;
+    const coverage = (parseFloat(coverageInput.value) || 100) / 100;
+
+    const yearsUntil = Math.max(18 - age, 1);
+    const annualCostToday = COSTS[type] || COSTS['public-in'];
+
+    // Project 4 years of college costs with inflation
+    let totalCost = 0;
+    for (let y = 0; y < 4; y++) {
+      totalCost += annualCostToday * Math.pow(1 + COLLEGE_INFLATION, yearsUntil + y);
+    }
+
+    const savingsTarget = totalCost * coverage;
+    const months = yearsUntil * 12;
+    const monthlyRate = INVESTMENT_RETURN / 12;
+
+    // How much current savings will grow
+    const fvCurrent = currentSavings * Math.pow(1 + monthlyRate, months);
+    const remaining = Math.max(savingsTarget - fvCurrent, 0);
+
+    // Monthly contribution needed (future value of annuity)
+    const monthlyNeeded = remaining > 0 && months > 0
+      ? remaining * monthlyRate / (Math.pow(1 + monthlyRate, months) - 1)
+      : 0;
+
+    document.getElementById('total-cost')!.textContent = fmt(totalCost);
+    document.getElementById('inflation-years')!.textContent = String(yearsUntil);
+    document.getElementById('savings-target')!.textContent = fmt(savingsTarget);
+    document.getElementById('coverage-display')!.textContent = Math.round(coverage * 100) + '%';
+    document.getElementById('monthly-needed')!.textContent = fmt(monthlyNeeded);
+    document.getElementById('years-until')!.textContent = String(yearsUntil);
+  }
+
+  [childAgeInput, collegeType, currentSavingsInput, coverageInput].forEach(el => el.addEventListener('input', calculate));
+  collegeType.addEventListener('change', calculate);
+  calculate();
+</script>

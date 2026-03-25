@@ -1,0 +1,273 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const title = 'Wedding Budget Calculator — Plan Your Dream Wedding by Category';
+const description = 'Free wedding budget calculator. Break down your total budget into venue, catering, photography, flowers, attire & more. No signup required.';
+---
+
+<BaseLayout title={title} description={description}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Wedding Budget Calculator",
+      "url": "https://gettidyflow.com/tools/wedding-budget-calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "description": description
+    })} />
+  </Fragment>
+
+  <section class="tool-hero">
+    <div class="tool-hero-inner">
+      <span class="tool-badge">Free Tool — No Signup Required</span>
+      <h1>Wedding Budget <span class="gradient-text">Calculator</span></h1>
+      <p class="tool-subtitle">Enter your total wedding budget and instantly see the recommended allocation across every major category — venue, catering, photography, flowers, attire, and more.</p>
+    </div>
+  </section>
+
+  <section class="tool-app">
+    <div class="tool-container">
+      <div class="calc-card">
+        <label for="budget-input" class="input-label">Total Wedding Budget</label>
+        <div class="input-wrapper">
+          <span class="currency-symbol">$</span>
+          <input type="number" id="budget-input" placeholder="e.g. 30,000" min="0" step="500" aria-label="Total wedding budget in dollars" />
+        </div>
+      </div>
+
+      <div class="results-grid" id="results-grid" style="display:none;">
+        <div class="result-card" style="border-left-color:#667eea;">
+          <div class="result-header">
+            <span class="result-icon">🏛️</span>
+            <div><h3>Venue & Rentals — 30%</h3><p class="result-amount" id="venue-amount">$0</p></div>
+          </div>
+          <p class="result-tip">Ceremony site, reception hall, tent/chair rentals, lighting, and setup fees.</p>
+        </div>
+        <div class="result-card" style="border-left-color:#f093fb;">
+          <div class="result-header">
+            <span class="result-icon">🍽️</span>
+            <div><h3>Catering & Drinks — 25%</h3><p class="result-amount" id="catering-amount">$0</p></div>
+          </div>
+          <p class="result-tip">Food, beverages, cake, bartending service, and gratuity for catering staff.</p>
+        </div>
+        <div class="result-card" style="border-left-color:#43e97b;">
+          <div class="result-header">
+            <span class="result-icon">📸</span>
+            <div><h3>Photography & Video — 12%</h3><p class="result-amount" id="photo-amount">$0</p></div>
+          </div>
+          <p class="result-tip">Photographer, videographer, engagement shoot, prints, and albums.</p>
+        </div>
+        <div class="result-card" style="border-left-color:#f5576c;">
+          <div class="result-header">
+            <span class="result-icon">💐</span>
+            <div><h3>Flowers & Decor — 10%</h3><p class="result-amount" id="flowers-amount">$0</p></div>
+          </div>
+          <p class="result-tip">Bouquets, boutonnieres, centerpieces, arch/altar decor, and table settings.</p>
+        </div>
+        <div class="result-card" style="border-left-color:#38f9d7;">
+          <div class="result-header">
+            <span class="result-icon">👗</span>
+            <div><h3>Attire & Beauty — 8%</h3><p class="result-amount" id="attire-amount">$0</p></div>
+          </div>
+          <p class="result-tip">Wedding dress/suit, alterations, accessories, hair, and makeup.</p>
+        </div>
+        <div class="result-card" style="border-left-color:#ffd86e;">
+          <div class="result-header">
+            <span class="result-icon">🎵</span>
+            <div><h3>Music & Entertainment — 8%</h3><p class="result-amount" id="music-amount">$0</p></div>
+          </div>
+          <p class="result-tip">DJ or live band, MC, sound system, photo booth, and special performances.</p>
+        </div>
+        <div class="result-card" style="border-left-color:#a18cd1;">
+          <div class="result-header">
+            <span class="result-icon">📋</span>
+            <div><h3>Stationery & Misc — 7%</h3><p class="result-amount" id="misc-amount">$0</p></div>
+          </div>
+          <p class="result-tip">Invitations, programs, favors, transportation, officiant fee, and marriage license.</p>
+        </div>
+      </div>
+
+      <div class="yearly-summary" id="summary-card" style="display:none;">
+        <h3>Budget Summary</h3>
+        <div class="yearly-grid">
+          <div class="yearly-item"><span class="yearly-label">Venue & Rentals</span><span class="yearly-value" id="sum-venue">$0</span></div>
+          <div class="yearly-item"><span class="yearly-label">Catering & Drinks</span><span class="yearly-value" id="sum-catering">$0</span></div>
+          <div class="yearly-item"><span class="yearly-label">Photography & Video</span><span class="yearly-value" id="sum-photo">$0</span></div>
+          <div class="yearly-item"><span class="yearly-label">Flowers & Decor</span><span class="yearly-value" id="sum-flowers">$0</span></div>
+          <div class="yearly-item"><span class="yearly-label">Attire & Beauty</span><span class="yearly-value" id="sum-attire">$0</span></div>
+          <div class="yearly-item"><span class="yearly-label">Music & Entertainment</span><span class="yearly-value" id="sum-music">$0</span></div>
+          <div class="yearly-item yearly-total"><span class="yearly-label">Total Budget</span><span class="yearly-value" id="sum-total">$0</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool-cta">
+    <div class="tool-container">
+      <div class="cta-card">
+        <h2>Track Every Wedding Expense</h2>
+        <p>Knowing your budget split is step one. Track actual spending vs. your plan with our free budget template — so you never go over budget on your big day.</p>
+        <a href="https://gettidyflow.gumroad.com" target="_blank" rel="noopener" class="cta-button">Get the Free Budget Template &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool-content">
+    <div class="tool-container content-narrow">
+      <h2>How to Use This Wedding Budget Calculator</h2>
+      <ol>
+        <li>Enter your <strong>total wedding budget</strong> — this should include everything you and your families plan to spend.</li>
+        <li>The calculator instantly shows the recommended dollar amount for each category based on industry-standard percentages.</li>
+        <li>Use these numbers as a starting point and adjust based on your priorities (e.g., spend more on photography and less on flowers).</li>
+      </ol>
+
+      <h2>Average Wedding Costs in 2026</h2>
+      <p>The average U.S. wedding costs around $33,000, but costs vary dramatically by location. New York City and San Francisco weddings can exceed $60,000, while weddings in the Midwest or South may cost $20,000-$25,000. This calculator works for any budget size.</p>
+
+      <h2>Tips for Staying on Budget</h2>
+      <ul>
+        <li><strong>Set a hard ceiling</strong> — decide your absolute maximum before you start booking vendors.</li>
+        <li><strong>Track every payment</strong> — deposits, tips, and last-minute additions add up fast.</li>
+        <li><strong>Build in a buffer</strong> — keep 5-10% of your budget unallocated for surprises.</li>
+        <li><strong>Prioritize ruthlessly</strong> — pick 2-3 categories that matter most and allocate more there.</li>
+      </ul>
+
+      <h2>Related Resources</h2>
+      <ul>
+        <li><a href="/blog/wedding-budget-planning-guide/">Complete Wedding Budget Planning Guide</a></li>
+        <li><a href="/blog/how-to-track-expenses-in-notion/">How to Track Expenses in Notion</a></li>
+        <li><a href="/blog/budgeting-mistakes-to-avoid/">Common Budgeting Mistakes to Avoid</a></li>
+      </ul>
+
+      <h2>Frequently Asked Questions</h2>
+      <details>
+        <summary>What percentage of the budget should go to the venue?</summary>
+        <p>Industry guidelines suggest <strong>30% for venue and rentals</strong>, making it the single largest expense. However, if you choose an all-inclusive venue that bundles catering, the venue percentage may be higher while catering drops.</p>
+      </details>
+      <details>
+        <summary>How much should I budget for a wedding photographer?</summary>
+        <p>Plan for about <strong>12% of your total budget</strong> for photography and videography combined. For a $30,000 wedding, that is roughly $3,600. Quality photography is one of the few things you cannot redo after the day.</p>
+      </details>
+      <details>
+        <summary>Should I include the honeymoon in my wedding budget?</summary>
+        <p>Most planners recommend keeping the honeymoon as a <strong>separate budget</strong>. Mixing the two makes it harder to track wedding-specific costs and can lead to overspending in both areas.</p>
+      </details>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .tool-hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 4rem 1.5rem 3rem;
+    text-align: center;
+    color: #fff;
+  }
+  .tool-hero-inner { max-width: 720px; margin: 0 auto; }
+  .tool-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(4px);
+    padding: 0.35rem 1rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+  }
+  .tool-hero h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; line-height: 1.15; margin: 0 0 1rem; }
+  .gradient-text { background: linear-gradient(90deg, #ffd6e0, #ffecd2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .tool-subtitle { font-size: 1.1rem; opacity: 0.92; line-height: 1.6; margin: 0; }
+
+  .tool-app { padding: 2.5rem 1.5rem; background: #f8f9fb; }
+  .tool-container { max-width: 800px; margin: 0 auto; }
+  .calc-card { background: #fff; border-radius: 16px; padding: 2rem; box-shadow: 0 2px 12px rgba(0,0,0,0.06); margin-bottom: 2rem; }
+  .input-label { display: block; font-weight: 700; font-size: 1.05rem; margin-bottom: 0.75rem; color: #1a1a2e; }
+  .input-wrapper { position: relative; display: flex; align-items: center; }
+  .currency-symbol { position: absolute; left: 1.25rem; font-size: 1.5rem; font-weight: 700; color: #667eea; }
+  #budget-input {
+    width: 100%; padding: 1rem 1rem 1rem 2.75rem; font-size: 1.5rem; font-weight: 700;
+    border: 2px solid #e2e8f0; border-radius: 12px; transition: border-color 0.2s;
+    outline: none; font-family: inherit; color: #1a1a2e;
+  }
+  #budget-input:focus { border-color: #667eea; box-shadow: 0 0 0 3px rgba(102,126,234,0.15); }
+  #budget-input::placeholder { color: #a0aec0; font-weight: 400; }
+
+  .results-grid { display: grid; gap: 1.25rem; margin-bottom: 2rem; }
+  .result-card { background: #fff; border-radius: 16px; padding: 1.5rem; box-shadow: 0 2px 12px rgba(0,0,0,0.06); border-left: 5px solid transparent; }
+  .result-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.5rem; }
+  .result-icon { font-size: 2rem; line-height: 1; }
+  .result-header h3 { margin: 0; font-size: 1rem; font-weight: 600; color: #555; }
+  .result-amount { margin: 0.15rem 0 0; font-size: 1.75rem; font-weight: 800; color: #1a1a2e; }
+  .result-tip { font-size: 0.9rem; color: #666; line-height: 1.55; margin: 0; }
+
+  .yearly-summary { background: #fff; border-radius: 16px; padding: 2rem; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+  .yearly-summary h3 { margin: 0 0 1rem; font-size: 1.1rem; font-weight: 700; color: #1a1a2e; }
+  .yearly-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+  .yearly-item { display: flex; justify-content: space-between; padding: 0.75rem 1rem; background: #f8f9fb; border-radius: 10px; }
+  .yearly-label { font-size: 0.9rem; color: #666; }
+  .yearly-value { font-weight: 700; color: #1a1a2e; }
+  .yearly-total { grid-column: 1 / -1; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: #fff; }
+  .yearly-total .yearly-label, .yearly-total .yearly-value { color: #fff; }
+
+  .tool-cta { padding: 2.5rem 1.5rem; background: #fff; }
+  .cta-card { max-width: 800px; margin: 0 auto; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 20px; padding: 2.5rem; text-align: center; color: #fff; }
+  .cta-card h2 { margin: 0 0 0.75rem; font-size: 1.5rem; font-weight: 800; }
+  .cta-card p { margin: 0 0 1.5rem; opacity: 0.92; line-height: 1.6; }
+  .cta-button { display: inline-block; background: #fff; color: #667eea; font-weight: 700; padding: 0.85rem 2rem; border-radius: 999px; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; }
+  .cta-button:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
+
+  .tool-content { padding: 3rem 1.5rem 4rem; background: #f8f9fb; }
+  .content-narrow { max-width: 720px; margin: 0 auto; }
+  .tool-content h2 { font-size: 1.4rem; font-weight: 800; color: #1a1a2e; margin: 2.5rem 0 0.75rem; }
+  .tool-content h2:first-child { margin-top: 0; }
+  .tool-content p, .tool-content li { font-size: 1.02rem; line-height: 1.7; color: #444; }
+  .tool-content ul, .tool-content ol { padding-left: 1.25rem; margin: 0.5rem 0 1rem; }
+  .tool-content li { margin-bottom: 0.35rem; }
+  .tool-content a { color: #667eea; text-decoration: underline; text-underline-offset: 2px; }
+  .tool-content details { background: #fff; border-radius: 12px; padding: 1rem 1.25rem; margin-bottom: 0.75rem; box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
+  .tool-content summary { font-weight: 600; cursor: pointer; color: #1a1a2e; font-size: 1.02rem; }
+  .tool-content details p { margin: 0.75rem 0 0; }
+
+  @media (max-width: 640px) { .yearly-grid { grid-template-columns: 1fr; } .cta-card { padding: 2rem 1.5rem; } }
+</style>
+
+<script>
+  const input = document.getElementById('budget-input') as HTMLInputElement;
+  const resultsGrid = document.getElementById('results-grid')!;
+  const summaryCard = document.getElementById('summary-card')!;
+
+  function fmt(n: number): string {
+    return '$' + n.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+  }
+
+  const cats = [
+    { id: 'venue', pct: 0.30 },
+    { id: 'catering', pct: 0.25 },
+    { id: 'photo', pct: 0.12 },
+    { id: 'flowers', pct: 0.10 },
+    { id: 'attire', pct: 0.08 },
+    { id: 'music', pct: 0.08 },
+    { id: 'misc', pct: 0.07 },
+  ];
+
+  function calculate() {
+    const budget = parseFloat(input.value) || 0;
+    if (budget <= 0) { resultsGrid.style.display = 'none'; summaryCard.style.display = 'none'; return; }
+    resultsGrid.style.display = 'grid';
+    summaryCard.style.display = 'block';
+    cats.forEach(c => {
+      const val = budget * c.pct;
+      document.getElementById(c.id + '-amount')!.textContent = fmt(val);
+    });
+    document.getElementById('sum-venue')!.textContent = fmt(budget * 0.30);
+    document.getElementById('sum-catering')!.textContent = fmt(budget * 0.25);
+    document.getElementById('sum-photo')!.textContent = fmt(budget * 0.12);
+    document.getElementById('sum-flowers')!.textContent = fmt(budget * 0.10);
+    document.getElementById('sum-attire')!.textContent = fmt(budget * 0.08);
+    document.getElementById('sum-music')!.textContent = fmt(budget * 0.08);
+    document.getElementById('sum-total')!.textContent = fmt(budget);
+  }
+
+  input.addEventListener('input', calculate);
+</script>

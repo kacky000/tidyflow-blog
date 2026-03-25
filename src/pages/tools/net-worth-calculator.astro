@@ -1,0 +1,262 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const title = 'Net Worth Calculator — Calculate Your Total Assets Minus Liabilities';
+const description = 'Free net worth calculator. Add up your assets and subtract your debts to find your true net worth. Track your financial progress over time. No signup required.';
+---
+
+<BaseLayout title={title} description={description}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Net Worth Calculator",
+      "url": "https://gettidyflow.com/tools/net-worth-calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "description": description
+    })} />
+  </Fragment>
+
+  <section class="tool-hero">
+    <div class="tool-hero-inner">
+      <span class="tool-badge">Free Tool — No Signup Required</span>
+      <h1>Net Worth <span class="gradient-text">Calculator</span></h1>
+      <p class="tool-subtitle">Enter your assets and liabilities to instantly calculate your net worth — the single most important number for measuring your financial health.</p>
+    </div>
+  </section>
+
+  <section class="tool-app">
+    <div class="tool-container">
+      <div class="calc-card">
+        <h3 class="section-title">Assets (What You Own)</h3>
+        <div class="input-grid">
+          <div>
+            <label for="cash-input" class="input-label">Cash & Savings</label>
+            <div class="input-wrapper"><span class="currency-symbol">$</span>
+              <input type="number" id="cash-input" placeholder="e.g. 15,000" min="0" step="500" class="calc-input" />
+            </div>
+          </div>
+          <div>
+            <label for="invest-input" class="input-label">Investments (401k, IRA, stocks)</label>
+            <div class="input-wrapper"><span class="currency-symbol">$</span>
+              <input type="number" id="invest-input" placeholder="e.g. 50,000" min="0" step="1000" class="calc-input" />
+            </div>
+          </div>
+          <div>
+            <label for="property-input" class="input-label">Real Estate Value</label>
+            <div class="input-wrapper"><span class="currency-symbol">$</span>
+              <input type="number" id="property-input" placeholder="e.g. 300,000" min="0" step="5000" class="calc-input" />
+            </div>
+          </div>
+          <div>
+            <label for="vehicle-input" class="input-label">Vehicles</label>
+            <div class="input-wrapper"><span class="currency-symbol">$</span>
+              <input type="number" id="vehicle-input" placeholder="e.g. 20,000" min="0" step="1000" class="calc-input" />
+            </div>
+          </div>
+          <div>
+            <label for="other-assets-input" class="input-label">Other Assets</label>
+            <div class="input-wrapper"><span class="currency-symbol">$</span>
+              <input type="number" id="other-assets-input" placeholder="e.g. 5,000" min="0" step="500" class="calc-input" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="calc-card">
+        <h3 class="section-title">Liabilities (What You Owe)</h3>
+        <div class="input-grid">
+          <div>
+            <label for="mortgage-input" class="input-label">Mortgage Balance</label>
+            <div class="input-wrapper"><span class="currency-symbol">$</span>
+              <input type="number" id="mortgage-input" placeholder="e.g. 250,000" min="0" step="5000" class="calc-input" />
+            </div>
+          </div>
+          <div>
+            <label for="student-input" class="input-label">Student Loans</label>
+            <div class="input-wrapper"><span class="currency-symbol">$</span>
+              <input type="number" id="student-input" placeholder="e.g. 30,000" min="0" step="1000" class="calc-input" />
+            </div>
+          </div>
+          <div>
+            <label for="car-loan-input" class="input-label">Auto Loans</label>
+            <div class="input-wrapper"><span class="currency-symbol">$</span>
+              <input type="number" id="car-loan-input" placeholder="e.g. 15,000" min="0" step="500" class="calc-input" />
+            </div>
+          </div>
+          <div>
+            <label for="credit-input" class="input-label">Credit Card Debt</label>
+            <div class="input-wrapper"><span class="currency-symbol">$</span>
+              <input type="number" id="credit-input" placeholder="e.g. 5,000" min="0" step="100" class="calc-input" />
+            </div>
+          </div>
+          <div>
+            <label for="other-debt-input" class="input-label">Other Debts</label>
+            <div class="input-wrapper"><span class="currency-symbol">$</span>
+              <input type="number" id="other-debt-input" placeholder="e.g. 2,000" min="0" step="100" class="calc-input" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="results-grid" id="results-grid">
+        <div class="result-card" style="border-left-color:#43e97b;">
+          <div class="result-header">
+            <span class="result-icon">📈</span>
+            <div><h3>Total Assets</h3><p class="result-amount" id="total-assets">$0</p></div>
+          </div>
+        </div>
+        <div class="result-card" style="border-left-color:#f5576c;">
+          <div class="result-header">
+            <span class="result-icon">📉</span>
+            <div><h3>Total Liabilities</h3><p class="result-amount" id="total-liabilities">$0</p></div>
+          </div>
+        </div>
+        <div class="result-card" id="networth-card" style="border-left-color:#667eea;">
+          <div class="result-header">
+            <span class="result-icon">💎</span>
+            <div><h3>Net Worth</h3><p class="result-amount" id="net-worth">$0</p></div>
+          </div>
+          <p class="result-tip" id="networth-tip">Your net worth = total assets minus total liabilities.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool-cta">
+    <div class="tool-container">
+      <div class="cta-card">
+        <h2>Track Your Net Worth Over Time</h2>
+        <p>Calculate your net worth monthly to see real progress. Our free budget template helps you track assets, debts, and spending so your net worth keeps growing.</p>
+        <a href="https://gettidyflow.gumroad.com" target="_blank" rel="noopener" class="cta-button">Get the Free Budget Template &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool-content">
+    <div class="tool-container content-narrow">
+      <h2>What Is Net Worth and Why Does It Matter?</h2>
+      <p>Net worth is the simplest measure of your financial health: <strong>everything you own minus everything you owe</strong>. Unlike income, which shows how much money flows in, net worth shows how much wealth you have actually built.</p>
+      <p>Tracking net worth monthly gives you a clear picture of whether you are moving forward or backward financially — regardless of how much you earn.</p>
+
+      <h2>Average Net Worth by Age (U.S.)</h2>
+      <ul>
+        <li><strong>Under 35</strong> — Median: $39,000 / Average: $183,000</li>
+        <li><strong>35-44</strong> — Median: $135,000 / Average: $549,000</li>
+        <li><strong>45-54</strong> — Median: $247,000 / Average: $975,000</li>
+        <li><strong>55-64</strong> — Median: $364,000 / Average: $1,566,000</li>
+        <li><strong>65+</strong> — Median: $409,000 / Average: $1,794,000</li>
+      </ul>
+
+      <h2>How to Increase Your Net Worth</h2>
+      <ul>
+        <li><strong>Pay down high-interest debt first</strong> — credit card debt costs 20%+ per year.</li>
+        <li><strong>Maximize retirement contributions</strong> — employer matches are free money.</li>
+        <li><strong>Build an emergency fund</strong> — prevents going into debt for surprises.</li>
+        <li><strong>Invest consistently</strong> — even $200/month grows to $100,000+ in 20 years.</li>
+      </ul>
+
+      <h2>Related Resources</h2>
+      <ul>
+        <li><a href="/blog/personal-finance-dashboard-guide/">Personal Finance Dashboard Guide</a></li>
+        <li><a href="/blog/how-to-track-expenses-in-notion/">How to Track Expenses in Notion</a></li>
+        <li><a href="/blog/how-to-save-for-a-down-payment/">How to Save for a Down Payment</a></li>
+      </ul>
+
+      <h2>Frequently Asked Questions</h2>
+      <details>
+        <summary>Is a negative net worth normal?</summary>
+        <p>Yes, especially for young adults with student loans or a new mortgage. A <strong>negative net worth is temporary</strong> as long as you are paying down debt and building assets. Most people under 30 have a negative net worth.</p>
+      </details>
+      <details>
+        <summary>Should I include my car as an asset?</summary>
+        <p>Yes, include the <strong>current market value</strong> (not what you paid). Cars depreciate quickly — check Kelley Blue Book for an accurate estimate. Subtract any remaining auto loan balance on the liabilities side.</p>
+      </details>
+      <details>
+        <summary>How often should I calculate my net worth?</summary>
+        <p>Monthly is ideal. It takes 5 minutes and gives you the clearest picture of financial progress. Quarterly is the minimum frequency to catch trends early.</p>
+      </details>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .tool-hero { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 4rem 1.5rem 3rem; text-align: center; color: #fff; }
+  .tool-hero-inner { max-width: 720px; margin: 0 auto; }
+  .tool-badge { display: inline-block; background: rgba(255,255,255,0.2); backdrop-filter: blur(4px); padding: 0.35rem 1rem; border-radius: 999px; font-size: 0.85rem; font-weight: 600; margin-bottom: 1.25rem; }
+  .tool-hero h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; line-height: 1.15; margin: 0 0 1rem; }
+  .gradient-text { background: linear-gradient(90deg, #ffd6e0, #ffecd2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .tool-subtitle { font-size: 1.1rem; opacity: 0.92; line-height: 1.6; margin: 0; }
+  .tool-app { padding: 2.5rem 1.5rem; background: #f8f9fb; }
+  .tool-container { max-width: 800px; margin: 0 auto; }
+  .calc-card { background: #fff; border-radius: 16px; padding: 2rem; box-shadow: 0 2px 12px rgba(0,0,0,0.06); margin-bottom: 2rem; }
+  .section-title { margin: 0 0 1.25rem; font-size: 1.15rem; font-weight: 700; color: #1a1a2e; }
+  .input-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+  .input-label { display: block; font-weight: 700; font-size: 0.95rem; margin-bottom: 0.5rem; color: #1a1a2e; }
+  .input-wrapper { position: relative; display: flex; align-items: center; }
+  .currency-symbol { position: absolute; left: 1.25rem; font-size: 1.2rem; font-weight: 700; color: #667eea; }
+  .calc-input { width: 100%; padding: 0.85rem 0.85rem 0.85rem 2.75rem; font-size: 1.1rem; font-weight: 700; border: 2px solid #e2e8f0; border-radius: 12px; transition: border-color 0.2s; outline: none; font-family: inherit; color: #1a1a2e; }
+  .calc-input:focus { border-color: #667eea; box-shadow: 0 0 0 3px rgba(102,126,234,0.15); }
+  .calc-input::placeholder { color: #a0aec0; font-weight: 400; }
+  .results-grid { display: grid; gap: 1.25rem; margin-bottom: 2rem; }
+  .result-card { background: #fff; border-radius: 16px; padding: 1.5rem; box-shadow: 0 2px 12px rgba(0,0,0,0.06); border-left: 5px solid transparent; }
+  .result-header { display: flex; align-items: center; gap: 1rem; }
+  .result-icon { font-size: 2rem; line-height: 1; }
+  .result-header h3 { margin: 0; font-size: 1rem; font-weight: 600; color: #555; }
+  .result-amount { margin: 0.15rem 0 0; font-size: 1.75rem; font-weight: 800; color: #1a1a2e; }
+  .result-tip { font-size: 0.9rem; color: #666; line-height: 1.55; margin: 0.75rem 0 0; }
+  .tool-cta { padding: 2.5rem 1.5rem; background: #fff; }
+  .cta-card { max-width: 800px; margin: 0 auto; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 20px; padding: 2.5rem; text-align: center; color: #fff; }
+  .cta-card h2 { margin: 0 0 0.75rem; font-size: 1.5rem; font-weight: 800; }
+  .cta-card p { margin: 0 0 1.5rem; opacity: 0.92; line-height: 1.6; }
+  .cta-button { display: inline-block; background: #fff; color: #667eea; font-weight: 700; padding: 0.85rem 2rem; border-radius: 999px; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; }
+  .cta-button:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
+  .tool-content { padding: 3rem 1.5rem 4rem; background: #f8f9fb; }
+  .content-narrow { max-width: 720px; margin: 0 auto; }
+  .tool-content h2 { font-size: 1.4rem; font-weight: 800; color: #1a1a2e; margin: 2.5rem 0 0.75rem; }
+  .tool-content h2:first-child { margin-top: 0; }
+  .tool-content p, .tool-content li { font-size: 1.02rem; line-height: 1.7; color: #444; }
+  .tool-content ul, .tool-content ol { padding-left: 1.25rem; margin: 0.5rem 0 1rem; }
+  .tool-content li { margin-bottom: 0.35rem; }
+  .tool-content a { color: #667eea; text-decoration: underline; text-underline-offset: 2px; }
+  .tool-content details { background: #fff; border-radius: 12px; padding: 1rem 1.25rem; margin-bottom: 0.75rem; box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
+  .tool-content summary { font-weight: 600; cursor: pointer; color: #1a1a2e; font-size: 1.02rem; }
+  .tool-content details p { margin: 0.75rem 0 0; }
+  @media (max-width: 640px) { .input-grid { grid-template-columns: 1fr; } .cta-card { padding: 2rem 1.5rem; } }
+</style>
+
+<script>
+  const assetIds = ['cash-input', 'invest-input', 'property-input', 'vehicle-input', 'other-assets-input'];
+  const debtIds = ['mortgage-input', 'student-input', 'car-loan-input', 'credit-input', 'other-debt-input'];
+
+  function fmt(n: number): string {
+    const sign = n < 0 ? '-' : '';
+    return sign + '$' + Math.abs(Math.round(n)).toLocaleString('en-US');
+  }
+
+  function calculate() {
+    let assets = 0, liabilities = 0;
+    assetIds.forEach(id => { assets += parseFloat((document.getElementById(id) as HTMLInputElement).value) || 0; });
+    debtIds.forEach(id => { liabilities += parseFloat((document.getElementById(id) as HTMLInputElement).value) || 0; });
+    const netWorth = assets - liabilities;
+
+    document.getElementById('total-assets')!.textContent = fmt(assets);
+    document.getElementById('total-liabilities')!.textContent = fmt(liabilities);
+    document.getElementById('net-worth')!.textContent = fmt(netWorth);
+
+    const card = document.getElementById('networth-card')!;
+    const tip = document.getElementById('networth-tip')!;
+    if (netWorth >= 0) {
+      card.style.borderLeftColor = '#43e97b';
+      tip.textContent = 'Your assets exceed your debts. Keep building!';
+    } else {
+      card.style.borderLeftColor = '#f5576c';
+      tip.textContent = 'Your debts exceed your assets. Focus on paying down high-interest debt first.';
+    }
+  }
+
+  [...assetIds, ...debtIds].forEach(id => {
+    document.getElementById(id)!.addEventListener('input', calculate);
+  });
+</script>

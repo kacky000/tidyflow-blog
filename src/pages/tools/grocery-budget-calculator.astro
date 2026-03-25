@@ -1,0 +1,222 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const title = 'Grocery Budget Calculator — How Much Should You Spend on Food?';
+const description = 'Free grocery budget calculator based on family size and spending level. Get USDA-based estimates for thrifty, moderate, and liberal food budgets. No signup required.';
+---
+
+<BaseLayout title={title} description={description}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Grocery Budget Calculator",
+      "url": "https://gettidyflow.com/tools/grocery-budget-calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "description": description
+    })} />
+  </Fragment>
+
+  <section class="tool-hero">
+    <div class="tool-hero-inner">
+      <span class="tool-badge">Free Tool — No Signup Required</span>
+      <h1>Grocery Budget <span class="gradient-text">Calculator</span></h1>
+      <p class="tool-subtitle">Enter your household size and see recommended monthly grocery budgets at three spending levels — thrifty, moderate, and liberal — based on USDA food cost data.</p>
+    </div>
+  </section>
+
+  <section class="tool-app">
+    <div class="tool-container">
+      <div class="calc-card">
+        <div class="input-grid">
+          <div>
+            <label for="adults-input" class="input-label">Number of Adults</label>
+            <div class="input-wrapper"><span class="currency-symbol">#</span>
+              <input type="number" id="adults-input" placeholder="2" min="1" max="10" step="1" value="2" class="calc-input" />
+            </div>
+          </div>
+          <div>
+            <label for="kids-input" class="input-label">Number of Children</label>
+            <div class="input-wrapper"><span class="currency-symbol">#</span>
+              <input type="number" id="kids-input" placeholder="0" min="0" max="10" step="1" value="0" class="calc-input" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="results-grid" id="results-grid">
+        <div class="result-card" style="border-left-color:#43e97b;">
+          <div class="result-header">
+            <span class="result-icon">🥦</span>
+            <div><h3>Thrifty Plan</h3><p class="result-amount" id="thrifty-amount">$0</p></div>
+          </div>
+          <p class="result-tip">Mostly home-cooked meals, store brands, seasonal produce, and meal planning. Great for aggressive savers.</p>
+        </div>
+        <div class="result-card" style="border-left-color:#667eea;">
+          <div class="result-header">
+            <span class="result-icon">🛒</span>
+            <div><h3>Moderate Plan</h3><p class="result-amount" id="moderate-amount">$0</p></div>
+          </div>
+          <p class="result-tip">Mix of home cooking and some convenience items. Allows for brand preferences and occasional treats.</p>
+        </div>
+        <div class="result-card" style="border-left-color:#f093fb;">
+          <div class="result-header">
+            <span class="result-icon">🥩</span>
+            <div><h3>Liberal Plan</h3><p class="result-amount" id="liberal-amount">$0</p></div>
+          </div>
+          <p class="result-tip">Premium ingredients, organic options, specialty items, and more dining flexibility. No significant restrictions.</p>
+        </div>
+      </div>
+
+      <div class="yearly-summary" id="yearly-summary">
+        <h3>Annual Grocery Costs</h3>
+        <div class="yearly-grid">
+          <div class="yearly-item"><span class="yearly-label">Thrifty (yearly)</span><span class="yearly-value" id="yearly-thrifty">$0</span></div>
+          <div class="yearly-item"><span class="yearly-label">Moderate (yearly)</span><span class="yearly-value" id="yearly-moderate">$0</span></div>
+          <div class="yearly-item"><span class="yearly-label">Liberal (yearly)</span><span class="yearly-value" id="yearly-liberal">$0</span></div>
+          <div class="yearly-item yearly-total"><span class="yearly-label">Per Person/Month (Moderate)</span><span class="yearly-value" id="per-person">$0</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool-cta">
+    <div class="tool-container">
+      <div class="cta-card">
+        <h2>Track Your Grocery Spending</h2>
+        <p>Knowing your target is step one. Track actual grocery expenses week by week with our free budget template and see exactly where your food dollars go.</p>
+        <a href="https://gettidyflow.gumroad.com" target="_blank" rel="noopener" class="cta-button">Get the Free Budget Template &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool-content">
+    <div class="tool-container content-narrow">
+      <h2>How This Grocery Budget Calculator Works</h2>
+      <p>This calculator uses estimates based on USDA food cost data, adjusted for 2026 food prices. The three spending levels reflect different shopping and eating styles:</p>
+      <ul>
+        <li><strong>Thrifty</strong> — ~$250/month per adult. Requires meal planning and cooking from scratch.</li>
+        <li><strong>Moderate</strong> — ~$350/month per adult. Balanced approach with some convenience.</li>
+        <li><strong>Liberal</strong> — ~$450/month per adult. Premium choices and minimal restrictions.</li>
+      </ul>
+      <p>Children are estimated at 60% of adult costs. Actual costs vary by location — cities like New York and San Francisco typically cost 20-30% more than the national average.</p>
+
+      <h2>Tips for Reducing Your Grocery Bill</h2>
+      <ul>
+        <li><strong>Meal plan weekly</strong> — reduces impulse purchases by 30-40%.</li>
+        <li><strong>Buy store brands</strong> — often 20-30% cheaper with identical quality.</li>
+        <li><strong>Shop seasonal produce</strong> — in-season fruits and vegetables cost 50% less.</li>
+        <li><strong>Use a list</strong> — shoppers with lists spend 23% less on average.</li>
+        <li><strong>Buy in bulk</strong> — staples like rice, oats, and frozen vegetables are cheaper per unit.</li>
+      </ul>
+
+      <h2>Related Resources</h2>
+      <ul>
+        <li><a href="/blog/grocery-budget-tips/">Grocery Budget Tips That Actually Work</a></li>
+        <li><a href="/blog/how-to-track-expenses-in-notion/">How to Track Expenses in Notion</a></li>
+        <li><a href="/blog/monthly-budget-checklist/">Monthly Budget Checklist</a></li>
+      </ul>
+
+      <h2>Frequently Asked Questions</h2>
+      <details>
+        <summary>How much should a family of 4 spend on groceries?</summary>
+        <p>Based on USDA guidelines, a family of 4 (2 adults, 2 children) should budget approximately <strong>$800-$1,200 per month</strong> depending on spending level. The thrifty plan targets $800, moderate around $1,000, and liberal up to $1,200.</p>
+      </details>
+      <details>
+        <summary>Does this include dining out?</summary>
+        <p><strong>No</strong> — this calculator covers grocery/food-at-home costs only. The average American spends an additional $300-$400/month on dining out and takeout. Budget for restaurants separately.</p>
+      </details>
+      <details>
+        <summary>Why is my actual spending higher than these estimates?</summary>
+        <p>Common reasons include: frequent dining out mixed into grocery totals, buying pre-made meals, impulse purchases, food waste (the average household throws away 30% of food), and living in a high-cost area.</p>
+      </details>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .tool-hero { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 4rem 1.5rem 3rem; text-align: center; color: #fff; }
+  .tool-hero-inner { max-width: 720px; margin: 0 auto; }
+  .tool-badge { display: inline-block; background: rgba(255,255,255,0.2); backdrop-filter: blur(4px); padding: 0.35rem 1rem; border-radius: 999px; font-size: 0.85rem; font-weight: 600; margin-bottom: 1.25rem; }
+  .tool-hero h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; line-height: 1.15; margin: 0 0 1rem; }
+  .gradient-text { background: linear-gradient(90deg, #ffd6e0, #ffecd2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .tool-subtitle { font-size: 1.1rem; opacity: 0.92; line-height: 1.6; margin: 0; }
+  .tool-app { padding: 2.5rem 1.5rem; background: #f8f9fb; }
+  .tool-container { max-width: 800px; margin: 0 auto; }
+  .calc-card { background: #fff; border-radius: 16px; padding: 2rem; box-shadow: 0 2px 12px rgba(0,0,0,0.06); margin-bottom: 2rem; }
+  .input-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+  .input-label { display: block; font-weight: 700; font-size: 1.05rem; margin-bottom: 0.75rem; color: #1a1a2e; }
+  .input-wrapper { position: relative; display: flex; align-items: center; }
+  .currency-symbol { position: absolute; left: 1.25rem; font-size: 1.2rem; font-weight: 700; color: #667eea; }
+  .calc-input { width: 100%; padding: 0.85rem 0.85rem 0.85rem 2.75rem; font-size: 1.2rem; font-weight: 700; border: 2px solid #e2e8f0; border-radius: 12px; transition: border-color 0.2s; outline: none; font-family: inherit; color: #1a1a2e; }
+  .calc-input:focus { border-color: #667eea; box-shadow: 0 0 0 3px rgba(102,126,234,0.15); }
+  .calc-input::placeholder { color: #a0aec0; font-weight: 400; }
+  .results-grid { display: grid; gap: 1.25rem; margin-bottom: 2rem; }
+  .result-card { background: #fff; border-radius: 16px; padding: 1.5rem; box-shadow: 0 2px 12px rgba(0,0,0,0.06); border-left: 5px solid transparent; }
+  .result-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.5rem; }
+  .result-icon { font-size: 2rem; line-height: 1; }
+  .result-header h3 { margin: 0; font-size: 1rem; font-weight: 600; color: #555; }
+  .result-amount { margin: 0.15rem 0 0; font-size: 1.75rem; font-weight: 800; color: #1a1a2e; }
+  .result-tip { font-size: 0.9rem; color: #666; line-height: 1.55; margin: 0; }
+  .yearly-summary { background: #fff; border-radius: 16px; padding: 2rem; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+  .yearly-summary h3 { margin: 0 0 1rem; font-size: 1.1rem; font-weight: 700; color: #1a1a2e; }
+  .yearly-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+  .yearly-item { display: flex; justify-content: space-between; padding: 0.75rem 1rem; background: #f8f9fb; border-radius: 10px; }
+  .yearly-label { font-size: 0.9rem; color: #666; }
+  .yearly-value { font-weight: 700; color: #1a1a2e; }
+  .yearly-total { grid-column: 1 / -1; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: #fff; }
+  .yearly-total .yearly-label, .yearly-total .yearly-value { color: #fff; }
+  .tool-cta { padding: 2.5rem 1.5rem; background: #fff; }
+  .cta-card { max-width: 800px; margin: 0 auto; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 20px; padding: 2.5rem; text-align: center; color: #fff; }
+  .cta-card h2 { margin: 0 0 0.75rem; font-size: 1.5rem; font-weight: 800; }
+  .cta-card p { margin: 0 0 1.5rem; opacity: 0.92; line-height: 1.6; }
+  .cta-button { display: inline-block; background: #fff; color: #667eea; font-weight: 700; padding: 0.85rem 2rem; border-radius: 999px; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; }
+  .cta-button:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
+  .tool-content { padding: 3rem 1.5rem 4rem; background: #f8f9fb; }
+  .content-narrow { max-width: 720px; margin: 0 auto; }
+  .tool-content h2 { font-size: 1.4rem; font-weight: 800; color: #1a1a2e; margin: 2.5rem 0 0.75rem; }
+  .tool-content h2:first-child { margin-top: 0; }
+  .tool-content p, .tool-content li { font-size: 1.02rem; line-height: 1.7; color: #444; }
+  .tool-content ul, .tool-content ol { padding-left: 1.25rem; margin: 0.5rem 0 1rem; }
+  .tool-content li { margin-bottom: 0.35rem; }
+  .tool-content a { color: #667eea; text-decoration: underline; text-underline-offset: 2px; }
+  .tool-content details { background: #fff; border-radius: 12px; padding: 1rem 1.25rem; margin-bottom: 0.75rem; box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
+  .tool-content summary { font-weight: 600; cursor: pointer; color: #1a1a2e; font-size: 1.02rem; }
+  .tool-content details p { margin: 0.75rem 0 0; }
+  @media (max-width: 640px) { .input-grid { grid-template-columns: 1fr; } .yearly-grid { grid-template-columns: 1fr; } .cta-card { padding: 2rem 1.5rem; } }
+</style>
+
+<script>
+  const adultsInput = document.getElementById('adults-input') as HTMLInputElement;
+  const kidsInput = document.getElementById('kids-input') as HTMLInputElement;
+
+  // USDA-based estimates per adult per month (2026 adjusted)
+  const THRIFTY_PER_ADULT = 250;
+  const MODERATE_PER_ADULT = 350;
+  const LIBERAL_PER_ADULT = 450;
+  const CHILD_FACTOR = 0.6;
+
+  function fmt(n: number): string { return '$' + Math.round(n).toLocaleString('en-US'); }
+
+  function calculate() {
+    const adults = Math.max(parseFloat(adultsInput.value) || 1, 1);
+    const kids = Math.max(parseFloat(kidsInput.value) || 0, 0);
+
+    const thrifty = adults * THRIFTY_PER_ADULT + kids * THRIFTY_PER_ADULT * CHILD_FACTOR;
+    const moderate = adults * MODERATE_PER_ADULT + kids * MODERATE_PER_ADULT * CHILD_FACTOR;
+    const liberal = adults * LIBERAL_PER_ADULT + kids * LIBERAL_PER_ADULT * CHILD_FACTOR;
+    const totalPeople = adults + kids;
+
+    document.getElementById('thrifty-amount')!.textContent = fmt(thrifty) + '/mo';
+    document.getElementById('moderate-amount')!.textContent = fmt(moderate) + '/mo';
+    document.getElementById('liberal-amount')!.textContent = fmt(liberal) + '/mo';
+    document.getElementById('yearly-thrifty')!.textContent = fmt(thrifty * 12);
+    document.getElementById('yearly-moderate')!.textContent = fmt(moderate * 12);
+    document.getElementById('yearly-liberal')!.textContent = fmt(liberal * 12);
+    document.getElementById('per-person')!.textContent = fmt(moderate / totalPeople);
+  }
+
+  [adultsInput, kidsInput].forEach(el => el.addEventListener('input', calculate));
+  calculate();
+</script>

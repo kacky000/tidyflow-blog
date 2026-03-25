@@ -1,0 +1,241 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const title = 'Tip Calculator — Calculate Tips & Split Bills Instantly';
+const description = 'Free tip calculator with bill splitting. Enter your bill amount, tip percentage, and number of people to instantly see tip amount and per-person cost. No signup.';
+---
+
+<BaseLayout title={title} description={description}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Tip Calculator",
+      "url": "https://gettidyflow.com/tools/tip-calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "description": description
+    })} />
+  </Fragment>
+
+  <section class="tool-hero">
+    <div class="tool-hero-inner">
+      <span class="tool-badge">Free Tool — No Signup Required</span>
+      <h1>Tip <span class="gradient-text">Calculator</span></h1>
+      <p class="tool-subtitle">Enter your bill amount, choose a tip percentage, and split the total among your group — instantly see how much each person pays.</p>
+    </div>
+  </section>
+
+  <section class="tool-app">
+    <div class="tool-container">
+      <div class="calc-card">
+        <div class="input-grid">
+          <div>
+            <label for="bill-input" class="input-label">Bill Amount</label>
+            <div class="input-wrapper"><span class="currency-symbol">$</span>
+              <input type="number" id="bill-input" placeholder="e.g. 85.50" min="0" step="0.01" class="calc-input" />
+            </div>
+          </div>
+          <div>
+            <label for="tip-input" class="input-label">Tip Percentage (%)</label>
+            <div class="input-wrapper"><span class="currency-symbol">%</span>
+              <input type="number" id="tip-input" placeholder="18" min="0" max="100" step="1" value="18" class="calc-input" />
+            </div>
+          </div>
+          <div>
+            <label for="people-input" class="input-label">Number of People</label>
+            <div class="input-wrapper"><span class="currency-symbol">#</span>
+              <input type="number" id="people-input" placeholder="2" min="1" max="50" step="1" value="1" class="calc-input" />
+            </div>
+          </div>
+        </div>
+        <div class="tip-presets" id="tip-presets">
+          <button class="tip-btn" data-tip="15">15%</button>
+          <button class="tip-btn active" data-tip="18">18%</button>
+          <button class="tip-btn" data-tip="20">20%</button>
+          <button class="tip-btn" data-tip="25">25%</button>
+        </div>
+      </div>
+
+      <div class="results-grid" id="results-grid" style="display:none;">
+        <div class="result-card" style="border-left-color:#667eea;">
+          <div class="result-header">
+            <span class="result-icon">💵</span>
+            <div><h3>Tip Amount</h3><p class="result-amount" id="tip-amount">$0</p></div>
+          </div>
+          <p class="result-tip">Based on <strong id="tip-pct-display">18%</strong> of the bill.</p>
+        </div>
+        <div class="result-card" style="border-left-color:#43e97b;">
+          <div class="result-header">
+            <span class="result-icon">🧾</span>
+            <div><h3>Total (Bill + Tip)</h3><p class="result-amount" id="total-amount">$0</p></div>
+          </div>
+          <p class="result-tip">The full amount including tip.</p>
+        </div>
+        <div class="result-card" style="border-left-color:#f093fb;">
+          <div class="result-header">
+            <span class="result-icon">👥</span>
+            <div><h3>Per Person</h3><p class="result-amount" id="per-person">$0</p></div>
+          </div>
+          <p class="result-tip" id="split-tip">Split equally among your group.</p>
+        </div>
+        <div class="result-card" style="border-left-color:#ffd86e;">
+          <div class="result-header">
+            <span class="result-icon">💰</span>
+            <div><h3>Tip Per Person</h3><p class="result-amount" id="tip-per-person">$0</p></div>
+          </div>
+          <p class="result-tip">Each person's share of the tip.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool-cta">
+    <div class="tool-container">
+      <div class="cta-card">
+        <h2>Track Your Dining Expenses</h2>
+        <p>Restaurant spending is one of the biggest budget leaks. Track every meal out with our free budget template and see where your dining dollars really go.</p>
+        <a href="https://gettidyflow.gumroad.com" target="_blank" rel="noopener" class="cta-button">Get the Free Budget Template &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool-content">
+    <div class="tool-container content-narrow">
+      <h2>Tipping Guide by Service Type</h2>
+      <ul>
+        <li><strong>Sit-down restaurants</strong> — 15-20% (18-20% for good service)</li>
+        <li><strong>Buffet</strong> — 10%</li>
+        <li><strong>Takeout/counter service</strong> — 0-10% (optional but appreciated)</li>
+        <li><strong>Delivery</strong> — 15-20% or at least $3-5</li>
+        <li><strong>Hair salon/barber</strong> — 15-20%</li>
+        <li><strong>Taxi/rideshare</strong> — 15-20%</li>
+        <li><strong>Hotel housekeeping</strong> — $2-5 per night</li>
+      </ul>
+
+      <h2>When to Tip More or Less</h2>
+      <ul>
+        <li><strong>Large groups (6+)</strong> — many restaurants add an automatic 18-20% gratuity.</li>
+        <li><strong>Exceptional service</strong> — 25%+ shows genuine appreciation.</li>
+        <li><strong>Poor service</strong> — 10-15%. Speak to a manager if there is a serious problem rather than leaving no tip.</li>
+        <li><strong>Happy hour/discounts</strong> — tip on the pre-discount amount.</li>
+      </ul>
+
+      <h2>Related Resources</h2>
+      <ul>
+        <li><a href="/blog/how-to-create-a-budget/">How to Create a Budget from Scratch</a></li>
+        <li><a href="/blog/monthly-budget-checklist/">Monthly Budget Checklist</a></li>
+        <li><a href="/blog/budgeting-mistakes-to-avoid/">Common Budgeting Mistakes to Avoid</a></li>
+      </ul>
+
+      <h2>Frequently Asked Questions</h2>
+      <details>
+        <summary>Should I tip on tax or pre-tax amount?</summary>
+        <p>Etiquette experts recommend tipping on the <strong>pre-tax subtotal</strong>. However, the difference is small — tipping on the total bill (including tax) is fine and simpler to calculate.</p>
+      </details>
+      <details>
+        <summary>Is 15% still an acceptable tip?</summary>
+        <p>15% used to be standard but <strong>18-20% is now the norm</strong> for sit-down dining in the U.S. 15% is acceptable for average service, but servers depend heavily on tips — 20% is the kind standard.</p>
+      </details>
+      <details>
+        <summary>How do I split the bill fairly when people ordered different amounts?</summary>
+        <p>The simplest approach: <strong>split evenly and round up</strong>. If orders are very different, use separate checks. For mixed groups, have higher spenders chip in a few extra dollars rather than calculating to the penny.</p>
+      </details>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .tool-hero { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 4rem 1.5rem 3rem; text-align: center; color: #fff; }
+  .tool-hero-inner { max-width: 720px; margin: 0 auto; }
+  .tool-badge { display: inline-block; background: rgba(255,255,255,0.2); backdrop-filter: blur(4px); padding: 0.35rem 1rem; border-radius: 999px; font-size: 0.85rem; font-weight: 600; margin-bottom: 1.25rem; }
+  .tool-hero h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; line-height: 1.15; margin: 0 0 1rem; }
+  .gradient-text { background: linear-gradient(90deg, #ffd6e0, #ffecd2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .tool-subtitle { font-size: 1.1rem; opacity: 0.92; line-height: 1.6; margin: 0; }
+  .tool-app { padding: 2.5rem 1.5rem; background: #f8f9fb; }
+  .tool-container { max-width: 800px; margin: 0 auto; }
+  .calc-card { background: #fff; border-radius: 16px; padding: 2rem; box-shadow: 0 2px 12px rgba(0,0,0,0.06); margin-bottom: 2rem; }
+  .input-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+  .input-label { display: block; font-weight: 700; font-size: 1.05rem; margin-bottom: 0.75rem; color: #1a1a2e; }
+  .input-wrapper { position: relative; display: flex; align-items: center; }
+  .currency-symbol { position: absolute; left: 1.25rem; font-size: 1.2rem; font-weight: 700; color: #667eea; }
+  .calc-input { width: 100%; padding: 0.85rem 0.85rem 0.85rem 2.75rem; font-size: 1.2rem; font-weight: 700; border: 2px solid #e2e8f0; border-radius: 12px; transition: border-color 0.2s; outline: none; font-family: inherit; color: #1a1a2e; }
+  .calc-input:focus { border-color: #667eea; box-shadow: 0 0 0 3px rgba(102,126,234,0.15); }
+  .calc-input::placeholder { color: #a0aec0; font-weight: 400; }
+  .tip-presets { display: flex; gap: 0.75rem; margin-top: 1.25rem; flex-wrap: wrap; }
+  .tip-btn { padding: 0.6rem 1.25rem; border: 2px solid #e2e8f0; border-radius: 999px; background: #fff; font-weight: 700; font-size: 1rem; cursor: pointer; transition: all 0.2s; color: #667eea; font-family: inherit; }
+  .tip-btn:hover { border-color: #667eea; background: #f0f3ff; }
+  .tip-btn.active { background: #667eea; color: #fff; border-color: #667eea; }
+  .results-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom: 2rem; }
+  .result-card { background: #fff; border-radius: 16px; padding: 1.5rem; box-shadow: 0 2px 12px rgba(0,0,0,0.06); border-left: 5px solid transparent; }
+  .result-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.5rem; }
+  .result-icon { font-size: 2rem; line-height: 1; }
+  .result-header h3 { margin: 0; font-size: 1rem; font-weight: 600; color: #555; }
+  .result-amount { margin: 0.15rem 0 0; font-size: 1.75rem; font-weight: 800; color: #1a1a2e; }
+  .result-tip { font-size: 0.9rem; color: #666; line-height: 1.55; margin: 0; }
+  .tool-cta { padding: 2.5rem 1.5rem; background: #fff; }
+  .cta-card { max-width: 800px; margin: 0 auto; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 20px; padding: 2.5rem; text-align: center; color: #fff; }
+  .cta-card h2 { margin: 0 0 0.75rem; font-size: 1.5rem; font-weight: 800; }
+  .cta-card p { margin: 0 0 1.5rem; opacity: 0.92; line-height: 1.6; }
+  .cta-button { display: inline-block; background: #fff; color: #667eea; font-weight: 700; padding: 0.85rem 2rem; border-radius: 999px; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; }
+  .cta-button:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
+  .tool-content { padding: 3rem 1.5rem 4rem; background: #f8f9fb; }
+  .content-narrow { max-width: 720px; margin: 0 auto; }
+  .tool-content h2 { font-size: 1.4rem; font-weight: 800; color: #1a1a2e; margin: 2.5rem 0 0.75rem; }
+  .tool-content h2:first-child { margin-top: 0; }
+  .tool-content p, .tool-content li { font-size: 1.02rem; line-height: 1.7; color: #444; }
+  .tool-content ul, .tool-content ol { padding-left: 1.25rem; margin: 0.5rem 0 1rem; }
+  .tool-content li { margin-bottom: 0.35rem; }
+  .tool-content a { color: #667eea; text-decoration: underline; text-underline-offset: 2px; }
+  .tool-content details { background: #fff; border-radius: 12px; padding: 1rem 1.25rem; margin-bottom: 0.75rem; box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
+  .tool-content summary { font-weight: 600; cursor: pointer; color: #1a1a2e; font-size: 1.02rem; }
+  .tool-content details p { margin: 0.75rem 0 0; }
+  @media (max-width: 640px) { .input-grid { grid-template-columns: 1fr; } .results-grid { grid-template-columns: 1fr; } .cta-card { padding: 2rem 1.5rem; } }
+</style>
+
+<script>
+  const billInput = document.getElementById('bill-input') as HTMLInputElement;
+  const tipInput = document.getElementById('tip-input') as HTMLInputElement;
+  const peopleInput = document.getElementById('people-input') as HTMLInputElement;
+  const resultsGrid = document.getElementById('results-grid')!;
+
+  function fmt(n: number): string { return '$' + n.toFixed(2); }
+
+  // Tip preset buttons
+  document.querySelectorAll('.tip-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.tip-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      tipInput.value = (btn as HTMLElement).dataset.tip!;
+      calculate();
+    });
+  });
+
+  function calculate() {
+    const bill = parseFloat(billInput.value) || 0;
+    if (bill <= 0) { resultsGrid.style.display = 'none'; return; }
+
+    const tipPct = parseFloat(tipInput.value) || 18;
+    const people = Math.max(parseFloat(peopleInput.value) || 1, 1);
+
+    const tipAmount = bill * (tipPct / 100);
+    const total = bill + tipAmount;
+    const perPerson = total / people;
+    const tipPerPerson = tipAmount / people;
+
+    // Update preset button states
+    document.querySelectorAll('.tip-btn').forEach(btn => {
+      btn.classList.toggle('active', (btn as HTMLElement).dataset.tip === String(tipPct));
+    });
+
+    resultsGrid.style.display = 'grid';
+    document.getElementById('tip-amount')!.textContent = fmt(tipAmount);
+    document.getElementById('tip-pct-display')!.textContent = tipPct + '%';
+    document.getElementById('total-amount')!.textContent = fmt(total);
+    document.getElementById('per-person')!.textContent = fmt(perPerson);
+    document.getElementById('split-tip')!.textContent = `Split equally among ${people} ${people === 1 ? 'person' : 'people'}.`;
+    document.getElementById('tip-per-person')!.textContent = fmt(tipPerPerson);
+  }
+
+  [billInput, tipInput, peopleInput].forEach(el => el.addEventListener('input', calculate));
+</script>
