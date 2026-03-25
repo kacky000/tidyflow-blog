@@ -85,3 +85,7 @@ Yes. If your employer deducts retirement contributions before your paycheck, you
 Use your average monthly income over the last 3-6 months. Or apply the percentages to each paycheck as it comes in.
 
 The 50/30/20 rule isn't magic. It's just math with training wheels. But sometimes, training wheels are exactly what you need to get moving.
+
+---
+
+**Try our free tools:** [50/30/20 Budget Calculator](/tools/budget-calculator/) | [50/30/20 Calculator with Spending Examples](/tools/50-30-20-calculator/) — enter your income and see exactly how to split it, instantly.

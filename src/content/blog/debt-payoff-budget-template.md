@@ -207,3 +207,7 @@ Consolidation can help if you get a lower interest rate and won't run up new deb
 The hardest part of debt payoff is starting. Print out your debt inventory, pick your method (snowball or avalanche), and calculate your Debt Crusher amount. That's it — you've got a plan.
 
 For a complete expense tracking system to pair with your debt payoff plan, check out the [Freelancer Expense Tracker](https://gettidyflow.gumroad.com/l/freelancer-expense-tracker) — it helps you find every dollar you can redirect toward becoming debt-free.
+
+---
+
+**Try our free tool:** [Debt Payoff Calculator](/tools/debt-payoff-calculator/) — compare Avalanche vs Snowball methods side by side and see exactly when you will be debt-free.

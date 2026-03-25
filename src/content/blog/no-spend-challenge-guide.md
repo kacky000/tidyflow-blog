@@ -3,6 +3,7 @@ title: "No-Spend Challenge: How to Save $500+ in 30 Days"
 description: "Complete guide to the no-spend challenge. Learn the rules, get a free tracker, and save $500 or more in just one month."
 pubDate: "2026-03-23"
 tags: ["budgeting", "saving money", "personal finance", "challenge"]
+heroImage: "/thumbs/thumb-no-spend-challenge-guide.jpg"
 ---
 
 A **no-spend challenge** is one of the fastest ways to reset your finances and break bad spending habits. The concept is simple: for a set period, you only spend money on true necessities. Everything else — dining out, shopping, subscriptions, impulse buys — gets cut completely.

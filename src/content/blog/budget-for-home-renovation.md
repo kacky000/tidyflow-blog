@@ -3,6 +3,7 @@ title: "Home Renovation Budget Template: Plan Every Dollar of Your Remodel"
 description: "Use this home renovation budget template to plan your remodel without overspending. Includes cost breakdowns, contingency tips, and a free tracker."
 pubDate: "2026-03-23"
 tags: ["budgeting", "personal finance", "home renovation", "template"]
+heroImage: "/thumbs/thumb-budget-for-home-renovation.jpg"
 ---
 
 A **home renovation budget** is the difference between a successful remodel and a financial disaster. The average homeowner goes 10–20% over budget on renovations — and many go far beyond that. With a solid **remodel budget template** and realistic planning, you can avoid joining that statistic.

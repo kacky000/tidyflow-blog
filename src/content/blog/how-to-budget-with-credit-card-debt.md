@@ -3,6 +3,7 @@ title: "How to Budget When You Have Credit Card Debt"
 description: "Learn how to budget with credit card debt using proven strategies. Stop the cycle, pay down balances, and take control of your finances."
 pubDate: "2026-03-23"
 tags: ["budgeting", "personal finance", "debt", "credit cards"]
+heroImage: "/thumbs/thumb-how-to-budget-with-credit-card-debt.jpg"
 ---
 
 Trying to **budget with credit card debt** feels like running on a treadmill — you're putting in effort but not getting anywhere. Interest keeps piling up, minimum payments barely touch the principal, and it's hard to see a way out.

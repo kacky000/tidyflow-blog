@@ -94,3 +94,7 @@ Most people fail at budgeting because of unrealistic expectations, not lack of d
 - [Best Free Budget Spreadsheet Templates for 2026](/best-budget-spreadsheet-templates/) — Start with the right template
 
 [Start tracking with a simple Notion Budget Tracker →](https://gettidyflow.gumroad.com/l/notion-monthly-budget-tracker)
+
+---
+
+**Try our free tool:** [50/30/20 Budget Calculator](/tools/50-30-20-calculator/) — enter your income and see exactly how to split it across needs, wants, and savings.

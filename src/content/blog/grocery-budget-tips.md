@@ -3,6 +3,7 @@ title: "How to Cut Your Grocery Budget in Half: 15 Proven Tips"
 description: "Discover 15 actionable grocery budget tips to save money on food without sacrificing quality. Start cutting costs this week."
 pubDate: "2026-03-23"
 tags: ["budgeting", "personal finance", "groceries", "saving money"]
+heroImage: "/thumbs/thumb-grocery-budget-tips.jpg"
 ---
 
 If you're wondering **how to save money on groceries**, you're not alone. The average American household spends $475 per month on food at home — and most families waste 30–40% of what they buy. These **grocery budget tips** can realistically cut your spending by 40–50% without eating ramen every night.

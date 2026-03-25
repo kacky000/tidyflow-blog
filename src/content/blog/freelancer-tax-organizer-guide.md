@@ -213,3 +213,7 @@ Tax season becomes routine instead of stressful. You file on time, you claim eve
 That's worth more than just money. That's freedom.
 
 Related reading: [How to track expenses in Notion](/how-to-track-expenses-in-notion/) for a detailed walkthrough. Also check our guide on [budgeting mistakes to avoid](/budgeting-mistakes-to-avoid/) to stay on top of your finances year-round.
+
+---
+
+**Try our free tool:** [Freelancer Tax Calculator](/tools/freelancer-tax-calculator/) — calculate your estimated quarterly tax payments as a 1099 worker, including self-employment tax and deductions.

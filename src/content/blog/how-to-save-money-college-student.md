@@ -94,3 +94,7 @@ The biggest money-wasting habits for college students are food delivery fees (av
 - [The Monthly Budget Checklist You Actually Need](/monthly-budget-checklist/) — a simple monthly routine to stay on track
 - [The 50/30/20 Budget Rule](/50-30-20-budget-rule-notion/) — the simplest framework for splitting your income
 - [Why People Fail at Budgeting](/why-people-fail-at-budgeting/) — avoid common pitfalls from the start
+
+---
+
+**Try our free tool:** [Savings Goal Calculator](/tools/savings-goal-calculator/) — set a target, enter what you can save each month, and see exactly when you will reach your goal.

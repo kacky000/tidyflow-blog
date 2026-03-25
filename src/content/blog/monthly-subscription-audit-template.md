@@ -3,6 +3,7 @@ title: "Monthly Subscription Audit: Find $200+ in Hidden Costs"
 description: "Use this subscription audit template to find and cancel forgotten subscriptions. Most people save $200+ per month with a simple review."
 pubDate: "2026-03-23"
 tags: ["budgeting", "personal finance", "subscriptions", "saving money"]
+heroImage: "/thumbs/thumb-monthly-subscription-audit-template.jpg"
 ---
 
 The average American spends $273 per month on subscriptions — and most people estimate they spend only $100. That gap is $2,000+ per year in money you don't realize you're losing. A **subscription audit** takes 30 minutes and consistently saves people $100–$300 every single month.
@@ -145,3 +146,7 @@ Do a thorough audit quarterly (every 3 months). Between audits, do a quick weekl
 Open your bank statement right now. You'll find at least one subscription you forgot about — probably more. That 30-minute investment pays for itself every month for the rest of your life.
 
 Want a complete system to track all your recurring expenses alongside your full budget? Browse our [budget templates on Gumroad](https://gettidyflow.gumroad.com/) — designed to make every dollar visible and every subscription accountable.
+
+---
+
+**Try our free tool:** [Subscription Cost Calculator](/tools/subscription-calculator/) — add all your subscriptions and instantly see your monthly total, yearly cost, and daily spend.

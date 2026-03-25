@@ -1,6 +1,6 @@
 ---
-title: "5 Best Notion Budget Templates in 2026 (Free & Paid)"
-description: "Looking for a simple way to track your money in Notion? Here are the best budget templates that actually work — from free options to premium picks."
+title: "5 Best Budget Templates for Notion 2026 (Free & Paid)"
+description: "The best budget templates for 2026 — tested and ranked. Find the perfect Notion budget template from free to premium, with setup guides and comparison table."
 pubDate: 2026-03-05
 tags: ["notion", "budgeting", "personal finance", "templates"]
 author: "Tidyflow"

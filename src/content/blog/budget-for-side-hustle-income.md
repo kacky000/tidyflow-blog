@@ -3,6 +3,7 @@ title: "How to Budget Side Hustle Income: A Freelancer's Guide"
 description: "Learn how to budget side hustle income with a clear system for irregular earnings, taxes, and savings. Practical tips for freelancers and gig workers."
 pubDate: "2026-03-23"
 tags: ["budgeting", "personal finance", "side hustle", "freelancing"]
+heroImage: "/thumbs/thumb-budget-for-side-hustle-income.jpg"
 ---
 
 You started a side hustle to make extra money — but now you're wondering where it all goes. **Budgeting side hustle income** is trickier than budgeting a regular paycheck because the amounts are unpredictable, taxes aren't withheld, and the temptation to spend it all is real.
@@ -155,3 +156,7 @@ Budget based on your lowest earning month from the past six months. Any income a
 Your side hustle income has massive potential — but only if you manage it intentionally. Separate accounts, automatic tax savings, and a clear allocation formula turn irregular income into consistent financial progress.
 
 Looking for a ready-made system to track side hustle income and expenses? Check out our [budget templates on Gumroad](https://gettidyflow.gumroad.com/) — designed for freelancers and side hustlers who want simplicity and structure.
+
+---
+
+**Try our free tool:** [Side Hustle Profit Calculator](/tools/side-hustle-calculator/) — find out what you actually take home after taxes, expenses, and time invested.

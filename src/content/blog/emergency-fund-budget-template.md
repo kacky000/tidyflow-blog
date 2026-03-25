@@ -213,3 +213,7 @@ Technically, yes. Money sitting in a savings account beyond 6 months of expenses
 Every day without an emergency fund is a day you're gambling that nothing will go wrong. Our [Personal Finance Dashboard](https://gettidyflow.gumroad.com) includes a dedicated emergency fund tracker with visual progress bars, automated calculations, and milestone celebrations to keep you motivated throughout your savings journey.
 
 Your financial security starts with one automated transfer. Set it up today.
+
+---
+
+**Try our free tool:** [Emergency Fund Calculator](/tools/emergency-fund-calculator/) — find out exactly how much you need and how long it will take to build your safety net.

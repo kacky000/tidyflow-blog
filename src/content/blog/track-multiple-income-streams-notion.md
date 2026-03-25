@@ -105,3 +105,7 @@ In Notion, create a view grouped by month and use the Sum calculation on your Am
 [Get the Tidyflow Budget Tracker →](https://gettidyflow.gumroad.com/l/notion-monthly-budget-tracker)
 
 Your future self — especially tax-season future self — will thank you.
+
+---
+
+**Try our free tool:** [Side Hustle Profit Calculator](/tools/side-hustle-calculator/) — calculate your real take-home pay from any side hustle after taxes, expenses, and time invested.
