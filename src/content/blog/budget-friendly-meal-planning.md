@@ -3,6 +3,7 @@ title: "Budget Friendly Meal Planning: Eat Well for $200–$300 a Month"
 description: "Master budget friendly meal planning with weekly menu strategies, bulk buying tips, food waste reduction, and a real $250/month meal plan example."
 pubDate: "2026-03-26"
 tags: ["meal-planning", "grocery", "budgeting"]
+heroImage: "/thumbs/thumb-budget-friendly-meal-planning.jpg"
 ---
 
 # Budget Friendly Meal Planning: Eat Well for $200–$300 a Month

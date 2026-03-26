@@ -3,6 +3,7 @@ title: "Financial Planning for Newlyweds: Build a Strong Money Foundation Togeth
 description: "A complete financial planning guide for newlyweds. Learn how to merge finances, create a joint budget, build an emergency fund, and set long-term goals as a couple."
 pubDate: "2026-03-26"
 tags: ["budgeting", "couples", "financial-planning"]
+heroImage: "/thumbs/thumb-financial-planning-for-newlyweds.jpg"
 ---
 
 # Financial Planning for Newlyweds: Build a Strong Money Foundation Together

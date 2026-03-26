@@ -3,6 +3,7 @@ title: "Budget for Living Alone: A Complete Guide to Managing Your Finances Solo
 description: "A practical budget guide for people living alone. Learn the 30% rent rule, essential expense breakdown, money-saving tips, and how to use a budget template to stay on track."
 pubDate: "2026-03-26"
 tags: ["budgeting", "apartment", "living-alone"]
+heroImage: "/thumbs/thumb-budget-for-living-alone.jpg"
 ---
 
 # Budget for Living Alone: A Complete Guide to Managing Your Finances Solo

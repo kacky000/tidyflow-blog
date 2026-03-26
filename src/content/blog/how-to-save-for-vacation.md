@@ -3,6 +3,7 @@ title: "How to Save for Vacation: Build Your Travel Fund Without Stress"
 description: "Learn how to save for vacation with a sinking fund strategy, automated savings, travel cost-cutting tips, and a simple system to reach your travel goals faster."
 pubDate: "2026-03-26"
 tags: ["saving", "vacation", "budgeting"]
+heroImage: "/thumbs/thumb-how-to-save-for-vacation.jpg"
 ---
 
 # How to Save for Vacation: Build Your Travel Fund Without Stress
