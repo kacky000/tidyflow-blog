@@ -1,6 +1,6 @@
 ---
-title: "Zero-Based Budgeting: A Complete Beginner's Guide (With Free Templates)"
-description: "Learn how zero-based budgeting works, why it's one of the most effective budgeting methods, and how to start with free templates in Notion, Excel, and Google Sheets."
+title: "Zero-Based Budgeting: Complete Guide With Examples and Free Templates (2026)"
+description: "See a real zero-based budgeting example, learn the step-by-step method, and grab free templates for Notion, Excel, and Google Sheets to start today."
 pubDate: "2026-03-11"
 tags: ["budgeting", "zero-based-budgeting", "personal-finance", "notion", "excel"]
 author: "Tidyflow"
@@ -70,6 +70,44 @@ This is where tools like [expense tracking in Notion](/how-to-track-expenses-in-
 At the end of each month, review what worked and what didn't. Did you consistently overspend on groceries? Adjust next month's allocation. Did you barely touch your entertainment budget? Maybe redirect some of that toward your savings goals.
 
 Each month you do this, your budget gets more accurate and easier to manage. Most people find their sweet spot after two to three months of zero-based budgeting.
+
+## Zero-Based Budgeting Example: A Real Monthly Budget
+
+Let's walk through a concrete zero-based budgeting example. Meet Sarah — she earns $3,500/month after taxes and wants to pay off $8,000 in credit card debt while covering all her essentials.
+
+**Sarah's Zero-Based Budget:**
+
+| Category | Amount | % of Income |
+|----------|--------|-------------|
+| Rent | $1,050 | 30% |
+| Groceries | $300 | 8.6% |
+| Car Payment + Insurance | $350 | 10% |
+| Utilities (electric, water, internet) | $180 | 5.1% |
+| Gas / Transportation | $120 | 3.4% |
+| Minimum Debt Payments | $200 | 5.7% |
+| Extra Debt Payment | $400 | 11.4% |
+| Emergency Fund | $200 | 5.7% |
+| Phone Bill | $60 | 1.7% |
+| Personal Care | $50 | 1.4% |
+| Fun Money | $100 | 2.9% |
+| Subscriptions (Netflix, Spotify) | $25 | 0.7% |
+| Clothing | $40 | 1.1% |
+| Medical Co-pay Fund | $50 | 1.4% |
+| Household Supplies | $40 | 1.1% |
+| Gifts / Donations | $35 | 1% |
+| **Total** | **$3,200** | **91.4%** |
+| **Remaining → Sinking Fund** | **$300** | **8.6%** |
+| **Income − All Allocations** | **$0** | **0%** |
+
+Notice how every dollar is accounted for — that's the zero-based budgeting method in action. Sarah's $400 extra debt payment means she'll pay off her $8,000 debt in about 16 months instead of 40+ months making only minimum payments.
+
+**What happens when Sarah gets a $200 bonus?** She doesn't just spend it. She runs it through her priority list:
+1. Emergency fund (if under $1,000) → add $100
+2. Extra debt payment → add $100
+
+This zero-based budgeting example shows why the method is so powerful — every dollar has a clear purpose, and financial goals get reached faster.
+
+If your income is different from Sarah's, our free [budget calculator](/tools/budget-calculator/) can help you build your own zero-based budget in minutes.
 
 ## Benefits of Zero-Based Budgeting
 
