@@ -1,6 +1,7 @@
 ---
 title: "Budget After Job Loss: How to Manage Your Money During Unemployment"
 description: "Lost your job? Here's how to create an emergency budget, stretch your savings, and stay financially stable while job hunting."
+heroImage: "/thumbs/thumb-budget-after-job-loss.jpg"
 pubDate: "2026-03-27"
 tags: ["budgeting", "emergency-fund", "unemployment", "personal-finance"]
 ---

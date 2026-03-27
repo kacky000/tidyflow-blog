@@ -1,6 +1,7 @@
 ---
 title: "Budget Template for Healthcare Workers: Managing Shift Pay and Overtime"
 description: "A budgeting guide designed for healthcare workers dealing with irregular shifts, overtime pay, and high-stress spending. Includes free template tips."
+heroImage: "/thumbs/thumb-budget-template-for-healthcare-workers.jpg"
 pubDate: "2026-03-27"
 tags: ["budgeting", "healthcare", "template", "shift-work"]
 ---

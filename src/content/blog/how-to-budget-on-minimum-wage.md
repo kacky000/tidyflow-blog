@@ -1,6 +1,7 @@
 ---
 title: "How to Budget on Minimum Wage: A Realistic Guide That Actually Works"
 description: "Learn practical budgeting strategies for minimum wage earners. Step-by-step tips to cover essentials, save money, and build financial stability on a tight income."
+heroImage: "/thumbs/thumb-how-to-budget-on-minimum-wage.jpg"
 pubDate: "2026-03-27"
 tags: ["budgeting", "minimum-wage", "saving-money", "personal-finance"]
 ---

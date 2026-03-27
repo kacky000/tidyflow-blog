@@ -1,6 +1,7 @@
 ---
 title: "How to Save $1,000 in 30 Days: A Day-by-Day Action Plan"
 description: "A practical 30-day savings challenge to help you save $1,000. Includes daily tips, expense cuts, and income boosters that actually work."
+heroImage: "/thumbs/thumb-how-to-save-1000-in-30-days.jpg"
 pubDate: "2026-03-27"
 tags: ["saving-money", "budgeting", "challenge", "personal-finance"]
 ---

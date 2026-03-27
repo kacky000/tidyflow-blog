@@ -1,6 +1,7 @@
 ---
 title: "Budget Template for International Students: Managing Money Abroad"
 description: "Complete budgeting guide for international students covering tuition, housing, food, and travel expenses with practical templates and tips."
+heroImage: "/thumbs/thumb-budget-for-international-students.jpg"
 pubDate: "2026-03-27"
 tags: ["budgeting", "students", "international", "template"]
 ---

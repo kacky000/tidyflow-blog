@@ -1,6 +1,7 @@
 ---
 title: "Budget Template for Empty Nesters: Redesigning Your Finances After Kids Leave"
 description: "Kids moved out? Learn how to restructure your budget, maximize savings, and plan for retirement as an empty nester."
+heroImage: "/thumbs/thumb-budget-for-empty-nesters.jpg"
 pubDate: "2026-03-27"
 tags: ["budgeting", "retirement", "empty-nesters", "template"]
 ---
