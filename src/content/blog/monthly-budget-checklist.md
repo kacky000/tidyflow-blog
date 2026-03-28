@@ -101,7 +101,7 @@ One sentence is enough: "Spent too much on takeout" or "Bills checklist was pret
 
 ### Set Next Month's Budget and Bills Checklist
 
-Based on what you learned, set next month's numbers. Small adjustments, not dramatic changes. Copy your bills checklist forward and update any amounts that changed.
+Based on what you learned, set next month's numbers. Small adjustments, not dramatic changes. Copy your bills checklist forward and update any amounts that changed. If you're looking for a digital tool to streamline this process, see our [best Notion budget templates for 2026](/best-notion-budget-templates-2026/) — they handle categories, tracking, and monthly reviews in one workspace.
 
 ---
 

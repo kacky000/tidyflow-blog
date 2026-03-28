@@ -83,6 +83,7 @@ If you don't want to build a Notion income tracker from scratch, our Budget Trac
 - [Personal Finance Dashboard Guide](/personal-finance-dashboard-guide/) — An all-in-one Notion dashboard for income, expenses, and savings
 - [Freelancer Tax Organizer Guide](/freelancer-tax-organizer-guide/) — Organize your freelance finances for tax season
 - [Notion vs Excel for Budgeting](/notion-vs-excel-budgeting/) — Which tool handles multiple income streams better?
+- [Best Notion Personal Finance & Budget Templates 2026](/best-notion-budget-templates-2026/) — Top 5 templates tested and ranked
 
 ## Frequently Asked Questions
 

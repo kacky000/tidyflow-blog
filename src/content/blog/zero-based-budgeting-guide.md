@@ -137,7 +137,7 @@ You don't need an expensive app to start zero-based budgeting. Here are the best
 Traditional spreadsheet templates give you maximum customization. Look for templates that include income tracking, expense categories, a running balance calculator, and month-over-month comparison. Microsoft's template gallery and Vertex42 both offer solid free options.
 
 ### Notion Templates
-If you want something more visual and interactive, Notion templates combine the structure of a spreadsheet with the flexibility of a database. You can track expenses with tags, create automatic summaries, and even link your budget to your financial goals — all in one workspace. Check out our [Notion vs Excel budgeting comparison](/notion-vs-excel-budgeting/) to see which tool fits your style.
+If you want something more visual and interactive, Notion templates combine the structure of a spreadsheet with the flexibility of a database. You can track expenses with tags, create automatic summaries, and even link your budget to your financial goals — all in one workspace. Check out our [Notion vs Excel budgeting comparison](/notion-vs-excel-budgeting/) to see which tool fits your style, or browse our [best Notion budget templates for 2026](/best-notion-budget-templates-2026/) for tested and ranked options.
 
 ### Budgeting Apps
 Apps like Goodbudget (envelope-based but works great for ZBB), YNAB (specifically designed for zero-based budgeting), and EveryDollar (Ramsey's free zero-based budget app) offer guided experiences with automatic bank syncing.
