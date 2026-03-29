@@ -2,6 +2,7 @@
 title: "Budget for Expecting Parents: How to Financially Prepare for a Baby"
 description: "Create a budget for expecting parents covering medical costs, baby gear, childcare, and income changes. Plan your finances before baby arrives."
 pubDate: "2026-03-29"
+heroImage: "/thumbs/thumb-budget-for-expecting-parents.jpg"
 tags: ["budgeting", "baby", "parenting", "savings"]
 ---
 

@@ -2,6 +2,7 @@
 title: "Budget Template for Construction Workers: Handle Irregular Pay Like a Pro"
 description: "A practical budget template for construction workers covering seasonal income swings, tool costs, safety gear, vehicle expenses, and retirement planning. Take control of your finances year-round."
 pubDate: "2026-03-29"
+heroImage: "/thumbs/thumb-budget-template-for-construction-workers.jpg"
 tags: ["budgeting", "construction workers", "irregular income", "budget template", "personal finance"]
 ---
 

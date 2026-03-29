@@ -2,6 +2,7 @@
 title: "Budget for First Time Homebuyers: A Complete Step-by-Step Guide"
 description: "Learn how to create a budget for first time homebuyers. Cover down payments, closing costs, hidden expenses, and monthly homeownership costs."
 pubDate: "2026-03-29"
+heroImage: "/thumbs/thumb-budget-for-first-time-homebuyers.jpg"
 tags: ["budgeting", "homebuying", "savings", "first-time-buyer"]
 ---
 

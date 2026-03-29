@@ -2,6 +2,7 @@
 title: "Annual Budget Template: Plan Your Entire Year's Finances in One Place"
 description: "Use this annual budget template to plan yearly income, expenses, savings goals, and irregular costs. Includes step-by-step setup guide."
 pubDate: "2026-03-29"
+heroImage: "/thumbs/thumb-annual-budget-template.jpg"
 tags: ["budgeting", "template", "annual-planning", "financial-planning"]
 ---
 

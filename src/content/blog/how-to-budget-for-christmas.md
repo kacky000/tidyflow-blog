@@ -2,6 +2,7 @@
 title: "How to Budget for Christmas: Save More and Stress Less This Holiday"
 description: "Learn how to budget for Christmas with a 12-month savings plan, gift tracking tips, and strategies to avoid holiday debt."
 pubDate: "2026-03-29"
+heroImage: "/thumbs/thumb-how-to-budget-for-christmas.jpg"
 tags: ["budgeting", "christmas", "holiday", "savings"]
 ---
 

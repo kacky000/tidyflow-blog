@@ -2,6 +2,7 @@
 title: "Budget Template for Uber Drivers: Track Gas, Maintenance & Taxes"
 description: "Free budget template for Uber and Lyft drivers. Manage variable income, gas costs, car maintenance, insurance, and self-employment taxes in one place."
 pubDate: "2026-03-29"
+heroImage: "/thumbs/thumb-budget-template-for-uber-drivers.jpg"
 tags: ["budget", "uber", "gig economy", "self-employed", "tax"]
 ---
 
