@@ -3,6 +3,7 @@ title: "How to Stop Impulse Spending: 10 Proven Strategies That Work"
 description: "Learn how to stop impulse spending with practical strategies. Break the habit, save more money, and take control of your budget today."
 pubDate: "2026-03-31"
 tags: ["budgeting", "impulse-spending", "saving", "money-habits"]
+heroImage: "/thumbs/thumb-how-to-stop-impulse-spending.jpg"
 ---
 
 # How to Stop Impulse Spending: 10 Proven Strategies That Work

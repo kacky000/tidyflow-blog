@@ -3,6 +3,7 @@ title: "Budget Template for Social Workers: Stretch Your Salary Further"
 description: "Free budget template for social workers. Manage student loans, self-care costs, and build an emergency fund on a modest income."
 pubDate: "2026-03-31"
 tags: ["budgeting", "social-workers", "salary", "student-loans"]
+heroImage: "/thumbs/thumb-budget-template-for-social-workers.jpg"
 ---
 
 # Budget Template for Social Workers: Stretch Your Salary Further

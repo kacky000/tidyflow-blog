@@ -3,6 +3,7 @@ title: "Budget Template for Warehouse Workers: Track Overtime and Shift Pay"
 description: "Free budget template for warehouse workers. Manage overtime pay, shift differentials, and physical job expenses with an easy spreadsheet."
 pubDate: "2026-03-31"
 tags: ["budgeting", "warehouse-workers", "overtime", "shift-work"]
+heroImage: "/thumbs/thumb-budget-template-for-warehouse-workers.jpg"
 ---
 
 # Budget Template for Warehouse Workers: Track Overtime and Shift Pay

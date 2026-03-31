@@ -3,6 +3,7 @@ title: "Budget Template for Bartenders: Manage Tips and Irregular Income"
 description: "Free budget template designed for bartenders. Track tips, irregular shifts, and seasonal income swings with a simple spreadsheet system."
 pubDate: "2026-03-31"
 tags: ["budgeting", "bartenders", "irregular-income", "tips"]
+heroImage: "/thumbs/thumb-budget-template-for-bartenders.jpg"
 ---
 
 # Budget Template for Bartenders: Manage Tips and Irregular Income

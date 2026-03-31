@@ -3,6 +3,7 @@ title: "How to Budget for Medical Bills: A Step-by-Step Guide"
 description: "Learn how to budget for medical bills without going into debt. Includes negotiation tips, payment plan strategies, and a free tracking template."
 pubDate: "2026-03-31"
 tags: ["budgeting", "medical-bills", "healthcare", "debt"]
+heroImage: "/thumbs/thumb-budget-for-medical-bills.jpg"
 ---
 
 # How to Budget for Medical Bills: A Step-by-Step Guide

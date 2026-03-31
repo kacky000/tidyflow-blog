@@ -3,6 +3,7 @@ title: "Budget for Commuters: How to Cut Transportation Costs and Save"
 description: "Create a commuter budget to track gas, transit passes, parking, and car maintenance. Free template and money-saving tips included."
 pubDate: "2026-03-31"
 tags: ["budgeting", "commuting", "transportation", "saving"]
+heroImage: "/thumbs/thumb-budget-for-commuters.jpg"
 ---
 
 # Budget for Commuters: How to Cut Transportation Costs and Save

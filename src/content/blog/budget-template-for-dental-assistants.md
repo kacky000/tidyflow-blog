@@ -3,6 +3,7 @@ title: "Budget Template for Dental Assistants: Plan Your Finances on a Fixed Sal
 description: "Free budget template for dental assistants. Manage student loans, CE costs, and build savings on a healthcare salary."
 pubDate: "2026-03-31"
 tags: ["budgeting", "dental-assistants", "healthcare", "salary"]
+heroImage: "/thumbs/thumb-budget-template-for-dental-assistants.jpg"
 ---
 
 # Budget Template for Dental Assistants: Plan Your Finances on a Fixed Salary
