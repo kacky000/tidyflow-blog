@@ -4,6 +4,7 @@ description: "A practical budget template for veterinary technicians. Handle stu
 pubDate: "2026-04-01"
 tags: ["budgeting", "veterinary-techs", "template", "student-loans"]
 author: "Tidyflow"
+heroImage: "/thumbs/thumb-budget-template-for-veterinary-techs.jpg"
 ---
 
 Veterinary technicians are some of the most passionate professionals in healthcare — and some of the most financially squeezed. If you're looking for a **budget template for veterinary techs**, it's probably because you've realized that generic budgeting advice doesn't address the unique financial challenges of vet tech life: modest pay, significant student loan debt, and ongoing continuing education costs that never stop.

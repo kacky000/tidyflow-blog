@@ -3,6 +3,7 @@ title: "Budget for Seasonal Workers: Survive the Off-Season & Thrive Year-Round 
 description: "A complete budget guide for seasonal workers in agriculture, tourism, and holiday industries. Plan for off-season gaps and build year-round financial stability."
 pubDate: "2026-04-01"
 tags: ["budgeting", "seasonal-work", "template", "off-season"]
+heroImage: "/thumbs/thumb-budget-for-seasonal-workers.jpg"
 ---
 
 # Budget for Seasonal Workers: Survive the Off-Season & Thrive Year-Round

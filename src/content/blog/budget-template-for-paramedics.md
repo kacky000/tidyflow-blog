@@ -4,6 +4,7 @@ description: "A simple budget template designed for paramedics and EMTs. Track s
 pubDate: "2026-04-01"
 tags: ["budgeting", "paramedics", "template", "shift-work"]
 author: "Tidyflow"
+heroImage: "/thumbs/thumb-budget-template-for-paramedics.jpg"
 ---
 
 Managing money as a paramedic is nothing like a typical 9-to-5. If you've been searching for a **budget template for paramedics**, you already know the struggle: your paycheck changes every two weeks thanks to overtime, shift differentials, and holiday pay. A generic spreadsheet won't cut it. You need a system built for the way EMS professionals actually earn and spend money.

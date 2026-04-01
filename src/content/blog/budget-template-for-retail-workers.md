@@ -3,6 +3,7 @@ title: "Free Budget Template for Retail Workers: Manage Variable Hours & Pay (20
 description: "A practical budget template for retail employees. Handle fluctuating hours, hourly wages, and employee discounts with this step-by-step guide."
 pubDate: "2026-04-01"
 tags: ["budgeting", "retail", "template", "hourly-wages"]
+heroImage: "/thumbs/thumb-budget-template-for-retail-workers.jpg"
 ---
 
 # Free Budget Template for Retail Workers: Manage Variable Hours & Pay

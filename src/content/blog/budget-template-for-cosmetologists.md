@@ -3,6 +3,7 @@ title: "Budget Template for Cosmetologists: Track Booth Rent, Supplies & Tips (2
 description: "A budget template for cosmetologists covering booth rental costs, product expenses, tip tracking, and building a sustainable income as a beauty professional."
 pubDate: "2026-04-01"
 tags: ["budgeting", "cosmetology", "template", "self-employed"]
+heroImage: "/thumbs/thumb-budget-template-for-cosmetologists.jpg"
 ---
 
 # Budget Template for Cosmetologists: Track Booth Rent, Supplies & Tips
