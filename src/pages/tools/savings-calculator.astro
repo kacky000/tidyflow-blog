@@ -1,0 +1,655 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const title = 'Free Savings Goal Calculator 2026 | How Long to Save';
+const description = 'Calculate exactly how many months to reach your savings goal. Free online calculator with interest compound estimates.';
+---
+
+<BaseLayout title={title} description={description}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Savings Goal Calculator",
+      "url": "https://gettidyflow.com/tools/savings-calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "description": description
+    })} />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much should I save each month?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A common guideline is to save at least 20% of your after-tax income (the 50/30/20 rule). However, the right amount depends on your goals, timeline, and expenses. Use this calculator to find the monthly contribution that matches your target date."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does compound interest really make a big difference?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Even a modest annual interest rate of 4-5% in a high-yield savings account can shave months off your timeline and add hundreds or thousands of dollars to your total. The longer your timeline, the bigger the impact of compounding."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if I can't save the same amount every month?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This calculator assumes a fixed monthly contribution for simplicity. In reality, you can adjust month to month. The key is consistency — even saving a smaller amount regularly beats sporadic large deposits. Set up automatic transfers to stay on track."
+          }
+        }
+      ]
+    })} />
+  </Fragment>
+
+  <section class="tool-hero">
+    <div class="tool-hero-inner">
+      <span class="tool-badge">Free Tool — No Signup Required</span>
+      <h1>Savings Goal <span class="gradient-text">Calculator</span></h1>
+      <p class="tool-subtitle">Enter your savings goal, current balance, and monthly contribution to see exactly how many months it will take to reach your target — with or without compound interest.</p>
+    </div>
+  </section>
+
+  <section class="tool-app">
+    <div class="tool-container">
+      <div class="calc-card">
+        <div class="input-group">
+          <label for="goal-input" class="input-label">Savings Goal</label>
+          <div class="input-wrapper">
+            <span class="currency-symbol">$</span>
+            <input type="number" id="goal-input" placeholder="e.g. 10,000" min="0" step="100" aria-label="Savings goal amount in dollars" />
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="current-input" class="input-label">Current Savings</label>
+          <div class="input-wrapper">
+            <span class="currency-symbol">$</span>
+            <input type="number" id="current-input" placeholder="e.g. 1,000" min="0" step="100" value="0" aria-label="Current savings balance in dollars" />
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="monthly-input" class="input-label">Monthly Contribution</label>
+          <div class="input-wrapper">
+            <span class="currency-symbol">$</span>
+            <input type="number" id="monthly-input" placeholder="e.g. 500" min="0" step="50" aria-label="Monthly savings contribution in dollars" />
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="rate-input" class="input-label">Annual Interest Rate (optional)</label>
+          <div class="input-wrapper">
+            <span class="currency-symbol">%</span>
+            <input type="number" id="rate-input" placeholder="e.g. 4.5" min="0" max="30" step="0.1" value="0" aria-label="Annual interest rate in percent" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Results -->
+      <div id="results-section" style="display:none;">
+        <div class="results-grid">
+          <div class="result-card months-card">
+            <div class="result-header">
+              <span class="result-icon">📅</span>
+              <div>
+                <h3>Months to Goal</h3>
+                <p class="result-amount" id="months-result">0</p>
+              </div>
+            </div>
+            <p class="result-tip" id="months-tip">That's about 0 years and 0 months.</p>
+          </div>
+
+          <div class="result-card total-card">
+            <div class="result-header">
+              <span class="result-icon">💰</span>
+              <div>
+                <h3>Total with Interest</h3>
+                <p class="result-amount" id="total-result">$0</p>
+              </div>
+            </div>
+            <p class="result-tip" id="interest-earned">Interest earned: $0</p>
+          </div>
+
+          <div class="result-card date-card">
+            <div class="result-header">
+              <span class="result-icon">🎯</span>
+              <div>
+                <h3>Target Date</h3>
+                <p class="result-amount" id="date-result">—</p>
+              </div>
+            </div>
+            <p class="result-tip">Estimated date you'll reach your goal.</p>
+          </div>
+        </div>
+
+        <!-- Progress Chart -->
+        <div class="chart-card">
+          <h3>Monthly Progress</h3>
+          <div class="chart-container" id="chart-container"></div>
+          <div class="chart-legend">
+            <span class="legend-item"><span class="legend-dot contributions-dot"></span> Contributions</span>
+            <span class="legend-item"><span class="legend-dot interest-dot"></span> Interest</span>
+            <span class="legend-goal">— Goal: <span id="chart-goal-label">$0</span></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- No-interest warning -->
+      <div id="no-progress-warning" style="display:none;" class="warning-card">
+        <p>Your monthly contribution must be greater than $0 to reach your goal.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool-cta">
+    <div class="tool-container">
+      <div class="cta-card">
+        <h2>Track Your Savings Automatically</h2>
+        <p>Knowing when you'll hit your goal is the first step. Track your actual progress every month with our <strong>Notion Budget Tracker</strong> — see your savings grow in real time.</p>
+        <a href="https://gettidyflow.gumroad.com" target="_blank" rel="noopener" class="cta-button">Get the Notion Budget Tracker &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool-content">
+    <div class="tool-container content-narrow">
+      <h2>How This Savings Calculator Works</h2>
+      <p>This calculator uses a simple compound interest formula to project your savings growth month by month. Enter your target amount, what you've already saved, how much you can contribute each month, and an optional interest rate (use your savings account's APY). The calculator instantly shows how many months you need, the total interest earned, and a visual progress chart.</p>
+
+      <h2>Tips for Reaching Your Savings Goal Faster</h2>
+      <ul>
+        <li><strong>Automate transfers</strong> — set up automatic deposits on payday so you never forget.</li>
+        <li><strong>Use a high-yield savings account</strong> — even 4-5% APY adds up significantly over 12+ months.</li>
+        <li><strong>Cut one subscription</strong> — redirect that $10-15/month into savings. Over a year, it's $120-180 extra.</li>
+        <li><strong>Track your progress</strong> — use a <a href="/blog/how-to-track-expenses-in-notion/">Notion budget tracker</a> to stay motivated.</li>
+      </ul>
+
+      <h2>Related Resources</h2>
+      <ul>
+        <li><a href="/blog/how-to-save-money-college-student/">How to Save Money as a College Student</a></li>
+        <li><a href="/blog/monthly-budget-checklist/">Monthly Budget Checklist</a></li>
+        <li><a href="/tools/budget-calculator">50/30/20 Budget Calculator</a></li>
+        <li><a href="/tools/emergency-fund-calculator">Emergency Fund Calculator</a></li>
+      </ul>
+
+      <h2>Frequently Asked Questions</h2>
+      <details>
+        <summary>How much should I save each month?</summary>
+        <p>A common guideline is to save at least 20% of your after-tax income (the 50/30/20 rule). However, the right amount depends on your goals, timeline, and expenses. Use this calculator to find the monthly contribution that matches your target date.</p>
+      </details>
+      <details>
+        <summary>Does compound interest really make a big difference?</summary>
+        <p>Yes. Even a modest annual interest rate of 4-5% in a high-yield savings account can shave months off your timeline and add hundreds or thousands of dollars to your total. The longer your timeline, the bigger the impact of compounding.</p>
+      </details>
+      <details>
+        <summary>What if I can't save the same amount every month?</summary>
+        <p>This calculator assumes a fixed monthly contribution for simplicity. In reality, you can adjust month to month. The key is consistency — even saving a smaller amount regularly beats sporadic large deposits. Set up automatic transfers to stay on track.</p>
+      </details>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .tool-hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 4rem 1.5rem 3rem;
+    text-align: center;
+    color: #fff;
+  }
+  .tool-hero-inner {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .tool-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(4px);
+    padding: 0.35rem 1rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+  }
+  .tool-hero h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 800;
+    line-height: 1.15;
+    margin: 0 0 1rem;
+  }
+  .gradient-text {
+    background: linear-gradient(90deg, #ffd6e0, #ffecd2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .tool-subtitle {
+    font-size: 1.1rem;
+    opacity: 0.92;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .tool-app {
+    padding: 2.5rem 1.5rem;
+    background: #f8f9fb;
+  }
+  .tool-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .calc-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    margin-bottom: 2rem;
+  }
+  .input-group {
+    margin-bottom: 1.25rem;
+  }
+  .input-group:last-child {
+    margin-bottom: 0;
+  }
+  .input-label {
+    display: block;
+    font-weight: 700;
+    font-size: 1.05rem;
+    margin-bottom: 0.5rem;
+    color: #1a1a2e;
+  }
+  .input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .currency-symbol {
+    position: absolute;
+    left: 1.25rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #667eea;
+  }
+  .calc-card input[type="number"] {
+    width: 100%;
+    padding: 0.85rem 1rem 0.85rem 2.75rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    transition: border-color 0.2s;
+    outline: none;
+    font-family: inherit;
+    color: #1a1a2e;
+  }
+  .calc-card input[type="number"]:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102,126,234,0.15);
+  }
+  .calc-card input[type="number"]::placeholder {
+    color: #a0aec0;
+    font-weight: 400;
+  }
+
+  .results-grid {
+    display: grid;
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+  }
+  .result-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    border-left: 5px solid transparent;
+  }
+  .months-card { border-left-color: #667eea; }
+  .total-card { border-left-color: #43e97b; }
+  .date-card { border-left-color: #f093fb; }
+
+  .result-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .result-icon {
+    font-size: 2rem;
+    line-height: 1;
+  }
+  .result-header h3 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #555;
+  }
+  .result-amount {
+    margin: 0.15rem 0 0;
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #1a1a2e;
+  }
+  .result-tip {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.55;
+    margin: 0;
+  }
+
+  .chart-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    margin-bottom: 2rem;
+  }
+  .chart-card h3 {
+    margin: 0 0 1rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1a1a2e;
+  }
+  .chart-container {
+    display: flex;
+    align-items: flex-end;
+    gap: 2px;
+    height: 200px;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 4px;
+    overflow-x: auto;
+  }
+  .chart-bar {
+    flex: 1;
+    min-width: 6px;
+    max-width: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-radius: 3px 3px 0 0;
+    overflow: hidden;
+    position: relative;
+  }
+  .bar-contribution {
+    background: linear-gradient(180deg, #667eea, #764ba2);
+    width: 100%;
+  }
+  .bar-interest {
+    background: linear-gradient(180deg, #43e97b, #38f9d7);
+    width: 100%;
+  }
+  .chart-legend {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 0.75rem;
+    font-size: 0.85rem;
+    color: #666;
+    flex-wrap: wrap;
+  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+  .legend-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .contributions-dot { background: #667eea; }
+  .interest-dot { background: #43e97b; }
+  .legend-goal {
+    margin-left: auto;
+    font-weight: 600;
+    color: #1a1a2e;
+  }
+
+  .warning-card {
+    background: #fff3cd;
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    border-left: 5px solid #ffc107;
+  }
+  .warning-card p {
+    margin: 0;
+    color: #856404;
+    font-weight: 600;
+  }
+
+  .tool-cta {
+    padding: 2.5rem 1.5rem;
+    background: #fff;
+  }
+  .cta-card {
+    max-width: 800px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 20px;
+    padding: 2.5rem;
+    text-align: center;
+    color: #fff;
+  }
+  .cta-card h2 {
+    margin: 0 0 0.75rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+  }
+  .cta-card p {
+    margin: 0 0 1.5rem;
+    opacity: 0.92;
+    line-height: 1.6;
+  }
+  .cta-button {
+    display: inline-block;
+    background: #fff;
+    color: #667eea;
+    font-weight: 700;
+    padding: 0.85rem 2rem;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  }
+
+  .tool-content {
+    padding: 3rem 1.5rem 4rem;
+    background: #f8f9fb;
+  }
+  .content-narrow {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .tool-content h2 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #1a1a2e;
+    margin: 2.5rem 0 0.75rem;
+  }
+  .tool-content h2:first-child {
+    margin-top: 0;
+  }
+  .tool-content p,
+  .tool-content li {
+    font-size: 1.02rem;
+    line-height: 1.7;
+    color: #444;
+  }
+  .tool-content ul,
+  .tool-content ol {
+    padding-left: 1.25rem;
+    margin: 0.5rem 0 1rem;
+  }
+  .tool-content li {
+    margin-bottom: 0.35rem;
+  }
+  .tool-content a {
+    color: #667eea;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .tool-content details {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 0.75rem;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  }
+  .tool-content summary {
+    font-weight: 600;
+    cursor: pointer;
+    color: #1a1a2e;
+    font-size: 1.02rem;
+  }
+  .tool-content details p {
+    margin: 0.75rem 0 0;
+  }
+
+  @media (max-width: 640px) {
+    .cta-card {
+      padding: 2rem 1.5rem;
+    }
+    .chart-container {
+      height: 150px;
+    }
+  }
+</style>
+
+<script>
+  const goalInput = document.getElementById('goal-input') as HTMLInputElement;
+  const currentInput = document.getElementById('current-input') as HTMLInputElement;
+  const monthlyInput = document.getElementById('monthly-input') as HTMLInputElement;
+  const rateInput = document.getElementById('rate-input') as HTMLInputElement;
+  const resultsSection = document.getElementById('results-section')!;
+  const warningCard = document.getElementById('no-progress-warning')!;
+
+  function formatCurrency(n: number): string {
+    return '$' + n.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+  }
+
+  function calculate() {
+    const goal = parseFloat(goalInput.value) || 0;
+    const current = parseFloat(currentInput.value) || 0;
+    const monthly = parseFloat(monthlyInput.value) || 0;
+    const annualRate = parseFloat(rateInput.value) || 0;
+    const monthlyRate = annualRate / 100 / 12;
+
+    if (goal <= 0) {
+      resultsSection.style.display = 'none';
+      warningCard.style.display = 'none';
+      return;
+    }
+
+    if (current >= goal) {
+      resultsSection.style.display = 'none';
+      warningCard.style.display = 'none';
+      document.getElementById('months-result')!.textContent = '0';
+      resultsSection.style.display = 'block';
+      document.getElementById('months-tip')!.textContent = "You've already reached your goal!";
+      document.getElementById('total-result')!.textContent = formatCurrency(current);
+      document.getElementById('interest-earned')!.textContent = 'Interest earned: $0';
+      document.getElementById('date-result')!.textContent = 'Now';
+      document.getElementById('chart-container')!.innerHTML = '';
+      document.getElementById('chart-goal-label')!.textContent = formatCurrency(goal);
+      return;
+    }
+
+    if (monthly <= 0 && monthlyRate <= 0) {
+      resultsSection.style.display = 'none';
+      warningCard.style.display = 'block';
+      return;
+    }
+
+    warningCard.style.display = 'none';
+
+    // Calculate month by month
+    let balance = current;
+    let totalContributions = current;
+    let totalInterest = 0;
+    let months = 0;
+    const maxMonths = 1200; // 100 years cap
+    const monthlyData: { contributions: number; interest: number; total: number }[] = [];
+
+    while (balance < goal && months < maxMonths) {
+      const interestThisMonth = balance * monthlyRate;
+      balance += interestThisMonth + monthly;
+      totalInterest += interestThisMonth;
+      totalContributions += monthly;
+      months++;
+      monthlyData.push({
+        contributions: totalContributions,
+        interest: totalInterest,
+        total: balance
+      });
+    }
+
+    if (months >= maxMonths) {
+      resultsSection.style.display = 'none';
+      warningCard.style.display = 'block';
+      warningCard.querySelector('p')!.textContent = 'At this rate, it would take over 100 years. Try increasing your monthly contribution.';
+      return;
+    }
+
+    // Show results
+    resultsSection.style.display = 'block';
+
+    document.getElementById('months-result')!.textContent = months.toString();
+    const years = Math.floor(months / 12);
+    const remainingMonths = months % 12;
+    let timeText = '';
+    if (years > 0) timeText += `${years} year${years > 1 ? 's' : ''}`;
+    if (years > 0 && remainingMonths > 0) timeText += ' and ';
+    if (remainingMonths > 0 || years === 0) timeText += `${remainingMonths} month${remainingMonths !== 1 ? 's' : ''}`;
+    document.getElementById('months-tip')!.textContent = `That's about ${timeText}.`;
+
+    document.getElementById('total-result')!.textContent = formatCurrency(Math.round(balance));
+    document.getElementById('interest-earned')!.textContent = `Interest earned: ${formatCurrency(Math.round(totalInterest))}`;
+
+    const targetDate = new Date();
+    targetDate.setMonth(targetDate.getMonth() + months);
+    document.getElementById('date-result')!.textContent = targetDate.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+
+    document.getElementById('chart-goal-label')!.textContent = formatCurrency(goal);
+
+    // Draw chart (show up to 60 bars, sample if more)
+    const chartContainer = document.getElementById('chart-container')!;
+    chartContainer.innerHTML = '';
+    const maxBars = 60;
+    const step = months <= maxBars ? 1 : Math.ceil(months / maxBars);
+    const displayData = monthlyData.filter((_, i) => (i + 1) % step === 0 || i === months - 1);
+    const maxVal = Math.max(goal, balance);
+
+    displayData.forEach(d => {
+      const bar = document.createElement('div');
+      bar.className = 'chart-bar';
+      const totalHeight = (d.total / maxVal) * 100;
+      const interestHeight = (d.interest / maxVal) * 100;
+      const contribHeight = totalHeight - interestHeight;
+
+      const interestDiv = document.createElement('div');
+      interestDiv.className = 'bar-interest';
+      interestDiv.style.height = `${interestHeight}%`;
+
+      const contribDiv = document.createElement('div');
+      contribDiv.className = 'bar-contribution';
+      contribDiv.style.height = `${contribHeight}%`;
+
+      bar.appendChild(interestDiv);
+      bar.appendChild(contribDiv);
+      chartContainer.appendChild(bar);
+    });
+  }
+
+  [goalInput, currentInput, monthlyInput, rateInput].forEach(el => {
+    el.addEventListener('input', calculate);
+  });
+</script>
