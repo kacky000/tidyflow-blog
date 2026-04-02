@@ -3,6 +3,7 @@ title: "Free Photographer Budget Template 2026 | Track Income & Expenses"
 description: "Download a free budget template for photographers. Plan for gear investments, seasonal income swings, editing software costs, and tax obligations with a proven system."
 pubDate: "2026-04-02"
 tags: ["budgeting", "career-specific", "template"]
+heroImage: "/thumbs/thumb-budget-template-for-photographers.jpg"
 ---
 
 # Free Budget Template for Photographers 2026: Manage Gear, Seasons & Taxes

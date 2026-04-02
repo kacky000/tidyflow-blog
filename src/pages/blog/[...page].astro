@@ -1,0 +1,161 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import type { GetStaticPaths } from 'astro';
+
+export const getStaticPaths = (async ({ paginate }) => {
+  const posts = (await getCollection('blog')).sort(
+    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+  );
+  return paginate(posts, { pageSize: 12 });
+}) satisfies GetStaticPaths;
+
+const { page } = Astro.props;
+---
+
+<BaseLayout
+  title={page.currentPage === 1 ? "Blog" : `Blog — Page ${page.currentPage}`}
+  description="Productivity tips, Notion guides, and budgeting advice to help you get organized and stay on track."
+>
+
+  <div class="page-header">
+    <h1>Blog</h1>
+    <p>Practical guides on budgeting, productivity, and making the most of Notion.</p>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="post-grid">
+        {page.data.map((post) => (
+          <a href={`/blog/${post.id}`} class={`post-card ${post.data.heroImage ? 'post-card--has-thumb' : ''}`} style="text-decoration: none; color: inherit;">
+            {post.data.heroImage && (
+              <div class="post-card__thumb">
+                <img src={post.data.heroImage} alt={post.data.title} loading="lazy" />
+              </div>
+            )}
+            <div class="post-card__body">
+              <div class="post-meta">
+                <span class="post-date">
+                  {post.data.pubDate.toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'short',
+                    day: 'numeric',
+                  })}
+                </span>
+              </div>
+              <h2>{post.data.title}</h2>
+              <p class="post-desc">{post.data.description}</p>
+              {post.data.tags.length > 0 && (
+                <div class="post-tags">
+                  {post.data.tags.map((tag: string) => (
+                    <span class="tag">{tag}</span>
+                  ))}
+                </div>
+              )}
+              <span class="read-more">Read more</span>
+            </div>
+          </a>
+        ))}
+      </div>
+
+      <nav class="pagination" aria-label="Blog pages">
+        {page.url.prev && (
+          <a href={page.url.prev} class="pagination__link pagination__prev">
+            ← Previous
+          </a>
+        )}
+
+        <div class="pagination__pages">
+          {Array.from({ length: page.lastPage }, (_, i) => i + 1).map((num) => (
+            <a
+              href={num === 1 ? '/blog/' : `/blog/${num}/`}
+              class={`pagination__page ${num === page.currentPage ? 'pagination__page--active' : ''}`}
+              aria-current={num === page.currentPage ? 'page' : undefined}
+            >
+              {num}
+            </a>
+          ))}
+        </div>
+
+        {page.url.next && (
+          <a href={page.url.next} class="pagination__link pagination__next">
+            Next →
+          </a>
+        )}
+      </nav>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 3rem;
+    padding: 1.5rem 0;
+  }
+
+  .pagination__link {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    background: var(--color-primary, #0d9488);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background 0.2s;
+  }
+
+  .pagination__link:hover {
+    background: var(--color-primary-dark, #0f766e);
+  }
+
+  .pagination__pages {
+    display: flex;
+    gap: 0.25rem;
+  }
+
+  .pagination__page {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: #374151;
+    background: #f3f4f6;
+    transition: all 0.2s;
+  }
+
+  .pagination__page:hover {
+    background: #e5e7eb;
+  }
+
+  .pagination__page--active {
+    background: var(--color-primary, #0d9488);
+    color: #fff;
+    font-weight: 700;
+  }
+
+  .pagination__page--active:hover {
+    background: var(--color-primary, #0d9488);
+  }
+
+  @media (max-width: 640px) {
+    .pagination {
+      flex-wrap: wrap;
+    }
+    .pagination__pages {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+</style>

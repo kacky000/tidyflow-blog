@@ -3,6 +3,7 @@ title: "Free Flight Attendant Budget Template 2026 | Track Income & Expenses"
 description: "Download a free budget template for flight attendants. Manage per diem, irregular schedules, layover expenses, and variable flight hours with a proven budgeting system."
 pubDate: "2026-04-02"
 tags: ["budgeting", "career-specific", "template"]
+heroImage: "/thumbs/thumb-budget-template-for-flight-attendants.jpg"
 ---
 
 # Free Budget Template for Flight Attendants 2026: Master Your Irregular Income

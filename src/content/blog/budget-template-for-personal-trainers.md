@@ -3,6 +3,7 @@ title: "Free Personal Trainer Budget Template 2026 | Track Income & Expenses"
 description: "Download a free budget template for personal trainers. Manage client income, gym rent, certification costs, and equipment investments with a system built for fitness professionals."
 pubDate: "2026-04-02"
 tags: ["budgeting", "career-specific", "template"]
+heroImage: "/thumbs/thumb-budget-template-for-personal-trainers.jpg"
 ---
 
 # Free Budget Template for Personal Trainers 2026: Track Every Dollar
