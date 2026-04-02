@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-const title = 'Free Subscription Cost Calculator — See Your True Yearly Spend';
-const description = 'Add all your subscriptions and instantly see your monthly total, yearly cost, and daily spend. The average American pays $219/month — how do you compare? Free, no signup.';
+const title = 'Free Subscription Cost Calculator - Track Monthly Subscriptions';
+const description = 'Add all your subscriptions and instantly see monthly/yearly totals, income ratio, and savings from cutting services. The average American pays $219/month — audit yours now. Free, no signup.';
 ---
 
 <BaseLayout title={title} description={description}>
@@ -22,22 +22,34 @@ const description = 'Add all your subscriptions and instantly see your monthly t
     <div class="tool-hero-inner">
       <span class="tool-badge">Free Tool — No Signup Required</span>
       <h1>Subscription Cost <span class="gradient-text">Calculator</span></h1>
-      <p class="tool-subtitle">Add your subscriptions below and see the real cost — monthly, yearly, and per day. The average American spends <strong>$219/month</strong> on subscriptions. How do you compare?</p>
+      <p class="tool-subtitle">Add your subscriptions below and see the real cost — monthly, yearly, and per day. See what percentage of your income goes to subscriptions and simulate how much you would save by cutting services. The average American spends <strong>$219/month</strong> on subscriptions.</p>
     </div>
   </section>
 
   <section class="tool-app">
     <div class="tool-container">
-      <div class="add-form" id="add-form">
-        <div class="form-row">
+      <!-- Income input for ratio calculation -->
+      <div class="calc-card">
+        <h2 class="section-title">Your Monthly Income (Optional)</h2>
+        <p class="section-desc">Enter your after-tax monthly income to see what percentage goes to subscriptions.</p>
+        <div class="input-wrapper">
+          <span class="currency-symbol">$</span>
+          <input type="number" id="income-input" placeholder="e.g. 4,000" min="0" step="100" aria-label="Monthly after-tax income" />
+        </div>
+      </div>
+
+      <!-- Add subscription form -->
+      <div class="calc-card">
+        <h2 class="section-title">Add Your Subscriptions</h2>
+        <div class="form-row" id="add-form">
           <div class="form-field form-field-name">
-            <label for="sub-name">Subscription Name</label>
+            <label for="sub-name">Service Name</label>
             <input type="text" id="sub-name" placeholder="e.g. Netflix" />
           </div>
           <div class="form-field form-field-cost">
             <label for="sub-cost">Monthly Cost ($)</label>
             <div class="cost-input-wrap">
-              <span class="currency-symbol">$</span>
+              <span class="currency-sm">$</span>
               <input type="number" id="sub-cost" placeholder="15.99" min="0" step="0.01" />
             </div>
           </div>
@@ -45,6 +57,7 @@ const description = 'Add all your subscriptions and instantly see your monthly t
         </div>
       </div>
 
+      <!-- Quick add -->
       <div class="quick-add">
         <span class="quick-label">Quick add:</span>
         <button class="quick-btn" data-name="Netflix" data-cost="15.49">Netflix</button>
@@ -53,18 +66,25 @@ const description = 'Add all your subscriptions and instantly see your monthly t
         <button class="quick-btn" data-name="iCloud+" data-cost="2.99">iCloud+</button>
         <button class="quick-btn" data-name="ChatGPT Plus" data-cost="20.00">ChatGPT</button>
         <button class="quick-btn" data-name="Amazon Prime" data-cost="14.99">Prime</button>
-        <button class="quick-btn" data-name="Adobe Creative Cloud" data-cost="59.99">Adobe CC</button>
+        <button class="quick-btn" data-name="Adobe CC" data-cost="59.99">Adobe CC</button>
         <button class="quick-btn" data-name="Disney+" data-cost="13.99">Disney+</button>
+        <button class="quick-btn" data-name="Gym Membership" data-cost="40.00">Gym</button>
+        <button class="quick-btn" data-name="Hulu" data-cost="17.99">Hulu</button>
+        <button class="quick-btn" data-name="Apple Music" data-cost="10.99">Apple Music</button>
+        <button class="quick-btn" data-name="Microsoft 365" data-cost="9.99">MS 365</button>
       </div>
 
+      <!-- Subscription list -->
       <div class="sub-list" id="sub-list">
         <div class="empty-state" id="empty-state">
-          <span class="empty-icon">📋</span>
-          <p>No subscriptions added yet. Add your first one above.</p>
+          <span class="empty-icon">&#128203;</span>
+          <p>No subscriptions added yet. Add your first one above or use quick-add buttons.</p>
         </div>
       </div>
 
+      <!-- Totals -->
       <div class="totals-card" id="totals-card" style="display:none;">
+        <h3 class="totals-title">Your Subscription Summary</h3>
         <div class="totals-grid">
           <div class="total-item">
             <span class="total-label">Monthly Total</span>
@@ -79,7 +99,47 @@ const description = 'Add all your subscriptions and instantly see your monthly t
             <span class="total-value" id="total-daily">$0</span>
           </div>
         </div>
+
+        <!-- Income ratio -->
+        <div class="income-ratio" id="income-ratio" style="display:none;">
+          <div class="ratio-header">
+            <span class="ratio-label">Subscription-to-Income Ratio</span>
+            <span class="ratio-pct" id="ratio-pct">0%</span>
+          </div>
+          <div class="ratio-track">
+            <div class="ratio-fill" id="ratio-fill" style="width:0%"></div>
+            <div class="ratio-marker" id="ratio-marker-10" style="left:10%"><span>10%</span></div>
+            <div class="ratio-marker" id="ratio-marker-20" style="left:20%"><span>20%</span></div>
+          </div>
+          <p class="ratio-verdict" id="ratio-verdict"></p>
+        </div>
+
+        <!-- Comparison -->
         <div class="comparison" id="comparison"></div>
+      </div>
+
+      <!-- Savings simulator -->
+      <div class="simulator-card" id="simulator-card" style="display:none;">
+        <h3 class="simulator-title">&#9889; Savings Simulator — What If You Cut?</h3>
+        <p class="simulator-desc">Check the subscriptions you could live without and see how much you would save.</p>
+        <div class="simulator-list" id="simulator-list"></div>
+        <div class="simulator-results" id="simulator-results" style="display:none;">
+          <div class="sim-grid">
+            <div class="sim-item">
+              <span class="sim-label">Monthly Savings</span>
+              <span class="sim-value" id="sim-monthly">$0</span>
+            </div>
+            <div class="sim-item sim-highlight">
+              <span class="sim-label">Yearly Savings</span>
+              <span class="sim-value sim-value-big" id="sim-yearly">$0</span>
+            </div>
+            <div class="sim-item">
+              <span class="sim-label">5-Year Savings</span>
+              <span class="sim-value" id="sim-5year">$0</span>
+            </div>
+          </div>
+          <p class="sim-invest" id="sim-invest"></p>
+        </div>
       </div>
     </div>
   </section>
@@ -98,27 +158,40 @@ const description = 'Add all your subscriptions and instantly see your monthly t
     <div class="tool-container content-narrow">
       <h2>Why You Should Audit Your Subscriptions</h2>
       <p>Subscription creep is one of the biggest silent budget killers. A $10 app here, a $15 streaming service there — individually they seem harmless. But they compound fast. The average American household now spends over <strong>$2,600 per year</strong> on subscriptions — and most people underestimate their total by 2-3x.</p>
+      <p>This calculator helps you see the real picture: your total monthly and yearly spend, what percentage of your income goes to subscriptions, and exactly how much you would save by cutting specific services.</p>
 
       <h2>How to Use This Calculator</h2>
       <ol>
-        <li>Add each subscription you pay for monthly — streaming, apps, gym, cloud storage, everything.</li>
-        <li>Use the quick-add buttons for common services, or type in custom ones.</li>
+        <li><strong>Enter your income</strong> (optional) to see what percentage of your earnings goes to subscriptions.</li>
+        <li><strong>Add each subscription</strong> — streaming, apps, gym, cloud storage, meal kits, everything with a monthly charge.</li>
+        <li>Use the <strong>quick-add buttons</strong> for common services, or type in custom ones.</li>
         <li>Watch your monthly, yearly, and daily totals update in real time.</li>
-        <li>Remove subscriptions you can live without and see the savings instantly.</li>
+        <li>Use the <strong>Savings Simulator</strong> to check services you could cut and see the impact over 1 and 5 years.</li>
       </ol>
+
+      <h2>What Is a Healthy Subscription-to-Income Ratio?</h2>
+      <p>Financial experts generally recommend keeping subscriptions under <strong>5-10% of your after-tax income</strong>. Here is a general guide:</p>
+      <ul>
+        <li><strong>Under 5%</strong> — Excellent. You are well within a healthy range.</li>
+        <li><strong>5-10%</strong> — Moderate. Reasonable for most incomes, but keep an eye on creep.</li>
+        <li><strong>10-15%</strong> — High. Consider auditing and cutting services you rarely use.</li>
+        <li><strong>Over 15%</strong> — Danger zone. Your subscriptions are eating into savings and essential spending.</li>
+      </ul>
 
       <h2>Tips for Cutting Subscription Costs</h2>
       <ul>
         <li><strong>Cancel what you do not use</strong> — if you have not opened it in 30 days, cancel it.</li>
-        <li><strong>Share family plans</strong> — most streaming services offer family pricing that cuts per-person cost.</li>
-        <li><strong>Downgrade tiers</strong> — do you really need the premium plan?</li>
-        <li><strong>Use annual billing</strong> — most services give 15-20% off for paying yearly.</li>
-        <li><strong>Rotate services</strong> — subscribe to one streaming service at a time and rotate monthly.</li>
+        <li><strong>Share family plans</strong> — most streaming services offer family pricing that cuts per-person cost by 30-50%.</li>
+        <li><strong>Downgrade tiers</strong> — do you really need the premium plan? The ad-supported tier is often fine.</li>
+        <li><strong>Use annual billing</strong> — most services give 15-20% off for paying yearly (only for services you know you will keep).</li>
+        <li><strong>Rotate services</strong> — subscribe to one streaming service at a time and rotate monthly. You will never run out of content.</li>
+        <li><strong>Set calendar reminders</strong> — add a "subscription audit" reminder every 3 months to catch creep before it grows.</li>
       </ul>
 
       <h2>Related Resources</h2>
       <ul>
-        <li><a href="/blog/monthly-subscription-audit-template/">Monthly Subscription Audit Template</a> — track and cut every recurring charge</li>
+        <li><a href="/tools/budget-calculator">50/30/20 Budget Calculator</a> — allocate your income across needs, wants, and savings</li>
+        <li><a href="/tools/savings-goal-calculator">Savings Goal Calculator</a> — see when you will reach your savings target</li>
         <li><a href="/blog/budgeting-mistakes-to-avoid/">Budgeting Mistakes to Avoid (Including Subscription Creep)</a></li>
         <li><a href="/blog/monthly-budget-checklist/">Monthly Budget Checklist</a></li>
         <li><a href="/blog/how-to-track-expenses-in-notion/">How to Track Expenses in Notion</a></li>
@@ -128,19 +201,19 @@ const description = 'Add all your subscriptions and instantly see your monthly t
       <h2>Frequently Asked Questions</h2>
       <details>
         <summary>What counts as a subscription?</summary>
-        <p>Any recurring charge — streaming (Netflix, Spotify), software (Adobe, Microsoft 365), cloud storage (iCloud, Google One), fitness (gym, Peloton), meal kits, news sites, apps with monthly fees, and even Amazon Prime.</p>
+        <p>Any recurring charge — streaming (Netflix, Spotify), software (Adobe, Microsoft 365), cloud storage (iCloud, Google One), fitness (gym, Peloton), meal kits, news sites, apps with monthly fees, and even Amazon Prime. If it charges you every month or year, it is a subscription.</p>
       </details>
       <details>
         <summary>How much does the average person spend on subscriptions?</summary>
         <p>According to recent surveys, the average American spends about <strong>$219 per month</strong> on subscriptions — that is over $2,600 per year. Many people underestimate their total because individual charges seem small.</p>
       </details>
       <details>
-        <summary>How often should I audit my subscriptions?</summary>
-        <p>At least <strong>once every three months</strong>. Set a calendar reminder to review your bank statements. You will almost always find something you forgot about or no longer use.</p>
+        <summary>What percentage of income should go to subscriptions?</summary>
+        <p>Financial advisors recommend keeping subscriptions under <strong>5-10%</strong> of your after-tax income. If you are spending more than 15%, it is time for a serious audit. Enter your income in the calculator above to see your exact ratio.</p>
       </details>
       <details>
-        <summary>Should I switch to annual plans?</summary>
-        <p>Only for services you are certain you will use for a full year. Annual plans usually save 15-20%, but you lose money if you cancel early. Start with monthly, then switch to annual for services you have used consistently for 3+ months.</p>
+        <summary>How often should I audit my subscriptions?</summary>
+        <p>At least <strong>once every three months</strong>. Set a calendar reminder to review your bank statements. You will almost always find something you forgot about or no longer use.</p>
       </details>
       <details>
         <summary>Is my data stored anywhere?</summary>
@@ -199,13 +272,57 @@ const description = 'Add all your subscriptions and instantly see your monthly t
     margin: 0 auto;
   }
 
-  .add-form {
+  .calc-card {
     background: #fff;
     border-radius: 16px;
-    padding: 1.5rem;
+    padding: 1.5rem 2rem;
     box-shadow: 0 2px 12px rgba(0,0,0,0.06);
     margin-bottom: 1rem;
   }
+  .section-title {
+    margin: 0 0 0.25rem;
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #1a1a2e;
+  }
+  .section-desc {
+    margin: 0 0 1rem;
+    font-size: 0.88rem;
+    color: #888;
+  }
+  .input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .currency-symbol {
+    position: absolute;
+    left: 1.25rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #667eea;
+  }
+  #income-input {
+    width: 100%;
+    padding: 0.85rem 1rem 0.85rem 2.5rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    transition: border-color 0.2s;
+    outline: none;
+    font-family: inherit;
+    color: #1a1a2e;
+  }
+  #income-input:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102,126,234,0.15);
+  }
+  #income-input::placeholder {
+    color: #a0aec0;
+    font-weight: 400;
+  }
+
   .form-row {
     display: flex;
     gap: 0.75rem;
@@ -238,7 +355,7 @@ const description = 'Add all your subscriptions and instantly see your monthly t
   .cost-input-wrap {
     position: relative;
   }
-  .currency-symbol {
+  .currency-sm {
     position: absolute;
     left: 0.75rem;
     top: 50%;
@@ -295,6 +412,12 @@ const description = 'Add all your subscriptions and instantly see your monthly t
     border-color: #667eea;
     color: #667eea;
     background: #f0f0ff;
+  }
+  .quick-btn.added {
+    background: #667eea;
+    color: #fff;
+    border-color: #667eea;
+    pointer-events: none;
   }
 
   .sub-list {
@@ -369,17 +492,25 @@ const description = 'Add all your subscriptions and instantly see your monthly t
     background: #fff0f0;
   }
 
+  /* Totals */
   .totals-card {
     background: #fff;
     border-radius: 16px;
     padding: 2rem;
     box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    margin-bottom: 1.5rem;
+  }
+  .totals-title {
+    margin: 0 0 1.25rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1a1a2e;
   }
   .totals-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.25rem;
   }
   .total-item {
     text-align: center;
@@ -414,6 +545,68 @@ const description = 'Add all your subscriptions and instantly see your monthly t
     font-size: 1.6rem;
   }
 
+  /* Income ratio */
+  .income-ratio {
+    background: #f8f9fb;
+    border-radius: 14px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+  .ratio-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+  }
+  .ratio-label {
+    font-weight: 700;
+    font-size: 0.92rem;
+    color: #1a1a2e;
+  }
+  .ratio-pct {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #667eea;
+  }
+  .ratio-track {
+    position: relative;
+    width: 100%;
+    height: 14px;
+    background: #e8eaf0;
+    border-radius: 999px;
+    overflow: visible;
+    margin-bottom: 0.75rem;
+  }
+  .ratio-fill {
+    height: 100%;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #43e97b, #f5d020, #f5576c);
+    transition: width 0.5s ease;
+    max-width: 100%;
+  }
+  .ratio-marker {
+    position: absolute;
+    top: -2px;
+    width: 2px;
+    height: 18px;
+    background: rgba(0,0,0,0.25);
+  }
+  .ratio-marker span {
+    position: absolute;
+    top: 22px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.7rem;
+    color: #999;
+    white-space: nowrap;
+  }
+  .ratio-verdict {
+    margin: 0;
+    font-size: 0.92rem;
+    line-height: 1.55;
+    color: #555;
+  }
+
   .comparison {
     text-align: center;
     padding: 1rem;
@@ -424,6 +617,115 @@ const description = 'Add all your subscriptions and instantly see your monthly t
     line-height: 1.5;
   }
 
+  /* Savings Simulator */
+  .simulator-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    border: 2px solid #f0e6ff;
+  }
+  .simulator-title {
+    margin: 0 0 0.25rem;
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #1a1a2e;
+  }
+  .simulator-desc {
+    margin: 0 0 1.25rem;
+    font-size: 0.88rem;
+    color: #888;
+  }
+  .sim-check-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    background: #f8f9fb;
+    border-radius: 10px;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  .sim-check-item:hover {
+    background: #f0f0ff;
+  }
+  .sim-check-item.checked {
+    background: #fef2f2;
+  }
+  .sim-check-item input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #f5576c;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+  .sim-check-name {
+    flex: 1;
+    font-weight: 600;
+    color: #1a1a2e;
+    font-size: 0.95rem;
+  }
+  .sim-check-cost {
+    font-weight: 700;
+    color: #667eea;
+    font-size: 0.95rem;
+  }
+
+  .simulator-results {
+    margin-top: 1.25rem;
+    padding-top: 1.25rem;
+    border-top: 2px solid #f0e6ff;
+  }
+  .sim-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+  .sim-item {
+    text-align: center;
+    padding: 1rem;
+    background: #f8f9fb;
+    border-radius: 12px;
+  }
+  .sim-label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    margin-bottom: 0.3rem;
+  }
+  .sim-value {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #22c55e;
+  }
+  .sim-highlight {
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+  }
+  .sim-highlight .sim-label,
+  .sim-highlight .sim-value {
+    color: #fff;
+  }
+  .sim-value-big {
+    font-size: 1.5rem;
+  }
+  .sim-invest {
+    margin: 0;
+    text-align: center;
+    font-size: 0.88rem;
+    color: #666;
+    line-height: 1.55;
+    background: #f0fdf4;
+    padding: 0.85rem;
+    border-radius: 10px;
+  }
+
+  /* CTA */
   .tool-cta {
     padding: 2.5rem 1.5rem;
     background: #fff;
@@ -462,6 +764,7 @@ const description = 'Add all your subscriptions and instantly see your monthly t
     box-shadow: 0 6px 20px rgba(0,0,0,0.15);
   }
 
+  /* Content */
   .tool-content {
     padding: 3rem 1.5rem 4rem;
     background: #f8f9fb;
@@ -511,7 +814,7 @@ const description = 'Add all your subscriptions and instantly see your monthly t
     .form-row {
       flex-direction: column;
     }
-    .totals-grid {
+    .totals-grid, .sim-grid {
       grid-template-columns: 1fr;
     }
     .cta-card {
@@ -532,14 +835,21 @@ const description = 'Add all your subscriptions and instantly see your monthly t
 
   const nameInput = document.getElementById('sub-name') as HTMLInputElement;
   const costInput = document.getElementById('sub-cost') as HTMLInputElement;
+  const incomeInput = document.getElementById('income-input') as HTMLInputElement;
   const addBtn = document.getElementById('add-btn')!;
   const subList = document.getElementById('sub-list')!;
   const emptyState = document.getElementById('empty-state')!;
   const totalsCard = document.getElementById('totals-card')!;
   const comparison = document.getElementById('comparison')!;
+  const simulatorCard = document.getElementById('simulator-card')!;
+  const simulatorList = document.getElementById('simulator-list')!;
+  const incomeRatioSection = document.getElementById('income-ratio')!;
 
-  function formatCurrency(n: number): string {
+  function fmt(n: number): string {
     return '$' + n.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  }
+  function fmtInt(n: number): string {
+    return '$' + n.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
   }
 
   function addSub(name: string, cost: number) {
@@ -554,17 +864,18 @@ const description = 'Add all your subscriptions and instantly see your monthly t
   }
 
   function render() {
-    // Clear items (keep empty state)
     subList.querySelectorAll('.sub-item').forEach(el => el.remove());
 
     if (subs.length === 0) {
       emptyState.style.display = 'block';
       totalsCard.style.display = 'none';
+      simulatorCard.style.display = 'none';
       return;
     }
 
     emptyState.style.display = 'none';
     totalsCard.style.display = 'block';
+    simulatorCard.style.display = 'block';
 
     subs.forEach(sub => {
       const el = document.createElement('div');
@@ -575,8 +886,8 @@ const description = 'Add all your subscriptions and instantly see your monthly t
         </div>
         <div class="sub-item-right">
           <div>
-            <span class="sub-item-cost">${formatCurrency(sub.cost)}/mo</span>
-            <div class="sub-item-yearly">${formatCurrency(sub.cost * 12)}/yr</div>
+            <span class="sub-item-cost">${fmt(sub.cost)}/mo</span>
+            <div class="sub-item-yearly">${fmt(sub.cost * 12)}/yr</div>
           </div>
           <button class="remove-btn" aria-label="Remove ${sub.name}" data-id="${sub.id}">&times;</button>
         </div>
@@ -584,26 +895,51 @@ const description = 'Add all your subscriptions and instantly see your monthly t
       subList.appendChild(el);
     });
 
-    // Totals
     const monthly = subs.reduce((sum, s) => sum + s.cost, 0);
     const yearly = monthly * 12;
     const daily = monthly / 30;
 
-    document.getElementById('total-monthly')!.textContent = formatCurrency(monthly);
-    document.getElementById('total-yearly')!.textContent = formatCurrency(yearly);
-    document.getElementById('total-daily')!.textContent = formatCurrency(daily);
+    document.getElementById('total-monthly')!.textContent = fmt(monthly);
+    document.getElementById('total-yearly')!.textContent = fmt(yearly);
+    document.getElementById('total-daily')!.textContent = fmt(daily);
 
-    // Comparison
+    // Income ratio
+    const income = parseFloat(incomeInput.value) || 0;
+    if (income > 0) {
+      incomeRatioSection.style.display = 'block';
+      const ratio = (monthly / income) * 100;
+      document.getElementById('ratio-pct')!.textContent = ratio.toFixed(1) + '%';
+      const fillWidth = Math.min(ratio, 30);
+      (document.getElementById('ratio-fill') as HTMLElement).style.width = (fillWidth / 30 * 100) + '%';
+
+      const verdictEl = document.getElementById('ratio-verdict')!;
+      if (ratio < 5) {
+        verdictEl.innerHTML = '<strong style="color:#22c55e;">Excellent.</strong> Your subscription spending is well under control. You have plenty of room in your budget.';
+      } else if (ratio < 10) {
+        verdictEl.innerHTML = '<strong style="color:#667eea;">Moderate.</strong> Your subscription spending is reasonable. Keep an eye on it to prevent creep.';
+      } else if (ratio < 15) {
+        verdictEl.innerHTML = '<strong style="color:#f59e0b;">High.</strong> Subscriptions are taking a significant portion of your income. Consider auditing services you rarely use.';
+      } else {
+        verdictEl.innerHTML = '<strong style="color:#ef4444;">Danger zone.</strong> Over 15% of your income goes to subscriptions. This is cutting into savings and essentials. Time for a serious audit.';
+      }
+    } else {
+      incomeRatioSection.style.display = 'none';
+    }
+
+    // Comparison vs average
     const avg = 219;
     if (monthly < avg) {
       const saved = avg - monthly;
-      comparison.innerHTML = `You spend <strong>${formatCurrency(saved)}/month less</strong> than the average American ($219/mo). That is <strong>${formatCurrency(saved * 12)} saved per year</strong>. Nice work!`;
+      comparison.innerHTML = `You spend <strong>${fmt(saved)}/month less</strong> than the average American ($219/mo). That is <strong>${fmt(saved * 12)} saved per year</strong>. Nice work!`;
     } else if (monthly > avg) {
       const over = monthly - avg;
-      comparison.innerHTML = `You spend <strong>${formatCurrency(over)}/month more</strong> than the average American ($219/mo). Cutting back could save you <strong>${formatCurrency(over * 12)} per year</strong>.`;
+      comparison.innerHTML = `You spend <strong>${fmt(over)}/month more</strong> than the average American ($219/mo). Cutting back could save you <strong>${fmt(over * 12)} per year</strong>.`;
     } else {
       comparison.innerHTML = `You spend exactly the average ($219/mo). See if you can trim a few services to get below it!`;
     }
+
+    // Savings simulator
+    renderSimulator();
 
     // Remove button handlers
     subList.querySelectorAll('.remove-btn').forEach(btn => {
@@ -612,8 +948,76 @@ const description = 'Add all your subscriptions and instantly see your monthly t
         removeSub(id);
       });
     });
+
+    // Mark quick-add buttons as added
+    document.querySelectorAll('.quick-btn').forEach(btn => {
+      const name = (btn as HTMLElement).dataset.name || '';
+      if (subs.some(s => s.name === name)) {
+        btn.classList.add('added');
+      } else {
+        btn.classList.remove('added');
+      }
+    });
   }
 
+  function renderSimulator() {
+    simulatorList.innerHTML = '';
+    subs.forEach(sub => {
+      const item = document.createElement('label');
+      item.className = 'sim-check-item';
+      item.innerHTML = `
+        <input type="checkbox" data-id="${sub.id}" data-cost="${sub.cost}" />
+        <span class="sim-check-name">${sub.name}</span>
+        <span class="sim-check-cost">${fmt(sub.cost)}/mo</span>
+      `;
+      simulatorList.appendChild(item);
+    });
+
+    simulatorList.querySelectorAll('input[type="checkbox"]').forEach(cb => {
+      cb.addEventListener('change', updateSimulator);
+    });
+    updateSimulator();
+  }
+
+  function updateSimulator() {
+    const checkboxes = simulatorList.querySelectorAll('input[type="checkbox"]');
+    let cutTotal = 0;
+    checkboxes.forEach(cb => {
+      const input = cb as HTMLInputElement;
+      const parent = input.closest('.sim-check-item')!;
+      if (input.checked) {
+        cutTotal += parseFloat(input.dataset.cost || '0');
+        parent.classList.add('checked');
+      } else {
+        parent.classList.remove('checked');
+      }
+    });
+
+    const resultsEl = document.getElementById('simulator-results')!;
+    if (cutTotal > 0) {
+      resultsEl.style.display = 'block';
+      const monthlySavings = cutTotal;
+      const yearlySavings = cutTotal * 12;
+      const fiveYearSavings = cutTotal * 60;
+
+      document.getElementById('sim-monthly')!.textContent = fmt(monthlySavings);
+      document.getElementById('sim-yearly')!.textContent = fmt(yearlySavings);
+      document.getElementById('sim-5year')!.textContent = fmtInt(fiveYearSavings);
+
+      // Investment growth estimate (7% annual return, compounding monthly)
+      const monthlyRate = 0.07 / 12;
+      let invested = 0;
+      for (let i = 0; i < 60; i++) {
+        invested = (invested + monthlySavings) * (1 + monthlyRate);
+      }
+      document.getElementById('sim-invest')!.innerHTML =
+        `If you invested this ${fmt(monthlySavings)}/mo at 7% annual return, you would have approximately <strong>${fmtInt(Math.round(invested))}</strong> in 5 years.`;
+    } else {
+      resultsEl.style.display = 'none';
+    }
+  }
+
+  // Event listeners
   addBtn.addEventListener('click', () => {
     addSub(nameInput.value.trim(), parseFloat(costInput.value) || 0);
     nameInput.value = '';
@@ -621,7 +1025,6 @@ const description = 'Add all your subscriptions and instantly see your monthly t
     nameInput.focus();
   });
 
-  // Enter key support
   [nameInput, costInput].forEach(el => {
     el.addEventListener('keydown', (e) => {
       if (e.key === 'Enter') {
@@ -631,12 +1034,15 @@ const description = 'Add all your subscriptions and instantly see your monthly t
     });
   });
 
-  // Quick add buttons
+  incomeInput.addEventListener('input', render);
+
   document.querySelectorAll('.quick-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       const name = (btn as HTMLElement).dataset.name || '';
       const cost = parseFloat((btn as HTMLElement).dataset.cost || '0');
-      addSub(name, cost);
+      if (!subs.some(s => s.name === name)) {
+        addSub(name, cost);
+      }
     });
   });
 
