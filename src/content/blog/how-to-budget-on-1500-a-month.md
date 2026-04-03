@@ -3,6 +3,7 @@ title: "How to Budget on $1,500 a Month (Realistic Plan + Free Template)"
 description: "Learn how to budget on $1,500 a month with a realistic spending plan. Covers rent, food, bills, and saving tips for tight budgets."
 pubDate: "2026-04-03"
 tags: ["budgeting", "low income", "budget plan", "saving money"]
+heroImage: "/thumbs/thumb-how-to-budget-on-1500-a-month.jpg"
 ---
 
 # How to Budget on $1,500 a Month (Realistic Plan + Free Template)

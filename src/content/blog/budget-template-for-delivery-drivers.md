@@ -3,6 +3,7 @@ title: "Free Budget Template for Delivery Drivers (DoorDash, UberEats, Instacart
 description: "Download a free budget template designed for delivery drivers. Track variable income, gas costs, and vehicle maintenance with this easy spreadsheet."
 pubDate: "2026-04-03"
 tags: ["budgeting", "delivery drivers", "gig economy", "template"]
+heroImage: "/thumbs/thumb-budget-template-for-delivery-drivers.jpg"
 ---
 
 # Free Budget Template for Delivery Drivers (DoorDash, UberEats, Instacart)

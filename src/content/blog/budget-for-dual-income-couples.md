@@ -3,6 +3,7 @@ title: "How to Create a Budget for Dual-Income Couples (3 Methods That Work)"
 description: "Struggling to budget as a couple with two incomes? Learn 3 proven methods to manage shared finances, split expenses, and save together."
 pubDate: "2026-04-03"
 tags: ["budgeting", "couples", "dual income", "shared finances"]
+heroImage: "/thumbs/thumb-budget-for-dual-income-couples.jpg"
 ---
 
 # How to Create a Budget for Dual-Income Couples (3 Methods That Work)
