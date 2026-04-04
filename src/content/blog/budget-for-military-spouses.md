@@ -3,6 +3,7 @@ title: "Budget for Military Spouses: Handle PCS Moves, BAH Changes & Deployments
 description: "A complete budget guide for military spouses. Manage PCS moving costs, fluctuating BAH, deployment finances, and build stability despite constant change."
 pubDate: "2026-04-04"
 tags: ["budgeting", "military", "family budget", "template"]
+heroImage: "/thumbs/thumb-budget-for-military-spouses.jpg"
 ---
 
 # Budget for Military Spouses: Financial Stability in a Life of Constant Change

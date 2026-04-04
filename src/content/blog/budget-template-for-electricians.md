@@ -3,6 +3,7 @@ title: "Budget Template for Electricians: Manage Seasonal Income & Tool Costs (2
 description: "A practical budget template for electricians. Track seasonal income swings, tool investments, licensing fees, and vehicle costs to build financial stability."
 pubDate: "2026-04-04"
 tags: ["budgeting", "electrician", "trade workers", "template"]
+heroImage: "/thumbs/thumb-budget-template-for-electricians.jpg"
 ---
 
 # Budget Template for Electricians: Take Control of Your Trade Income

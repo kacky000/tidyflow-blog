@@ -3,6 +3,7 @@ title: "Budget for Single Dads: Manage Child Costs, Time & Money on One Income (
 description: "A practical budget guide for single dads. Balance child support, activity costs, and household expenses while building financial stability on a single income."
 pubDate: "2026-04-04"
 tags: ["budgeting", "single parent", "family budget", "template"]
+heroImage: "/thumbs/thumb-budget-for-single-dads.jpg"
 ---
 
 # Budget for Single Dads: Financial Strategies That Actually Work

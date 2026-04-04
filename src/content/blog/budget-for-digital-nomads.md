@@ -3,6 +3,7 @@ title: "Budget for Digital Nomads: Manage Multi-Currency Income & Travel Costs (
 description: "A complete budget guide for digital nomads. Learn how to manage variable income, multiple currencies, and travel expenses while working remotely from anywhere."
 pubDate: "2026-04-04"
 tags: ["budgeting", "digital nomad", "freelance", "remote work"]
+heroImage: "/thumbs/thumb-budget-for-digital-nomads.jpg"
 ---
 
 # Budget for Digital Nomads: Master Your Finances While Working From Anywhere

@@ -3,6 +3,7 @@ title: "Budget Template for Plumbers: Track Tool Costs, Emergency Income & Seaso
 description: "A specialized budget template for plumbers. Manage tool investments, seasonal demand swings, emergency call income, and vehicle costs for long-term financial success."
 pubDate: "2026-04-04"
 tags: ["budgeting", "plumber", "trade workers", "template"]
+heroImage: "/thumbs/thumb-budget-template-for-plumbers.jpg"
 ---
 
 # Budget Template for Plumbers: Build Wealth in the Plumbing Trade
