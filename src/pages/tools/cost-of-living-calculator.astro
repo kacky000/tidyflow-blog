@@ -1,0 +1,728 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const title = 'Cost of Living Calculator — Compare Cities & Plan Your Budget';
+const description = 'Compare cost of living between US cities. Enter your income, pick two cities, and see how housing, food, transportation, healthcare, and utilities stack up. Free, no signup.';
+---
+
+<BaseLayout title={title} description={description}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Cost of Living Calculator",
+      "url": "https://gettidyflow.com/tools/cost-of-living-calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "description": description
+    })} />
+  </Fragment>
+
+  <section class="tool-hero">
+    <div class="tool-hero-inner">
+      <span class="tool-badge">Free Tool — No Signup Required</span>
+      <h1>Cost of Living <span class="gradient-text">Calculator</span></h1>
+      <p class="tool-subtitle">Moving to a new city? Enter your current income, pick your current and target city, and instantly see how your budget needs to change across housing, food, transportation, healthcare, and utilities.</p>
+    </div>
+  </section>
+
+  <section class="tool-app">
+    <div class="tool-container">
+      <div class="inputs-grid">
+        <div class="input-card">
+          <label for="monthly-income">Monthly Income (after tax)</label>
+          <div class="input-wrap">
+            <span class="symbol">$</span>
+            <input type="number" id="monthly-income" placeholder="5,000" min="0" step="100" />
+          </div>
+          <span class="input-hint">Your current take-home pay per month</span>
+        </div>
+        <div class="input-card">
+          <label for="current-city">Current City</label>
+          <select id="current-city"></select>
+          <span class="input-hint">Where you live now</span>
+        </div>
+        <div class="input-card">
+          <label for="target-city">Target City</label>
+          <select id="target-city"></select>
+          <span class="input-hint">Where you are thinking of moving</span>
+        </div>
+      </div>
+
+      <div class="results-section" id="results-section" style="display:none;">
+        <div class="stats-grid">
+          <div class="stat-card stat-primary">
+            <span class="stat-value" id="stat-needed">&mdash;</span>
+            <span class="stat-label">Income Needed</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-value" id="stat-diff">&mdash;</span>
+            <span class="stat-label">Monthly Difference</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-value" id="stat-index">&mdash;</span>
+            <span class="stat-label">Cost Index Ratio</span>
+          </div>
+        </div>
+
+        <div class="comparison-card">
+          <h3>Category Breakdown</h3>
+          <p class="rate-subtitle">How each spending category compares between the two cities</p>
+          <div class="rate-table-wrapper">
+            <table class="rate-table" id="category-table">
+              <thead>
+                <tr>
+                  <th>Category</th>
+                  <th id="th-current">Current City</th>
+                  <th id="th-target">Target City</th>
+                  <th>Difference</th>
+                </tr>
+              </thead>
+              <tbody id="category-tbody"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="bar-chart-card">
+          <h3>Visual Comparison</h3>
+          <div id="bar-chart"></div>
+        </div>
+
+        <div class="tip-card" id="tip-card" style="display:none;">
+          <span class="tip-icon">&#128161;</span>
+          <p id="tip-text"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool-cta">
+    <div class="tool-container">
+      <div class="cta-card">
+        <h2>Planning a Big Move? Stay on Budget</h2>
+        <p>Our New Life Starter Kit Notion template helps you plan every detail of your move — budget tracking, checklists, timeline, and more — all in one beautiful workspace.</p>
+        <a href="https://gettidyflow.gumroad.com/l/new-life-starter-kit" target="_blank" rel="noopener" class="cta-button">Get the New Life Starter Kit &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool-content">
+    <div class="tool-container content-narrow">
+      <h2>How Cost of Living Differs Across US Cities</h2>
+      <p>The cost of living in the United States varies dramatically by city. A $60,000 salary in Austin, Texas gives you a very different lifestyle than the same salary in San Francisco. Housing alone can swing your budget by 50-200% between cities.</p>
+      <p>This calculator uses a composite cost of living index based on publicly available data from the Bureau of Labor Statistics, Council for Community and Economic Research, and housing market reports. Each city is indexed relative to the national average (100).</p>
+
+      <h2>How to Use This Calculator</h2>
+      <ol>
+        <li>Enter your <strong>monthly take-home income</strong> — your paycheck after taxes.</li>
+        <li>Select your <strong>current city</strong> from the dropdown.</li>
+        <li>Select the <strong>city you are considering</strong> moving to.</li>
+        <li>Review the <strong>category breakdown</strong> to see exactly where costs differ.</li>
+        <li>Check the <strong>income needed</strong> to maintain your current standard of living.</li>
+      </ol>
+
+      <h2>What the Numbers Mean</h2>
+      <ul>
+        <li><strong>Income Needed</strong> — the monthly income you would need in the target city to match your current purchasing power.</li>
+        <li><strong>Monthly Difference</strong> — how much more (or less) you would spend each month.</li>
+        <li><strong>Cost Index Ratio</strong> — a quick multiplier. If it says 1.25x, the target city is roughly 25% more expensive overall.</li>
+      </ul>
+
+      <h2>Tips for Moving to a More Expensive City</h2>
+      <ul>
+        <li><strong>Negotiate a higher salary</strong> — use this calculator's data as leverage in salary discussions.</li>
+        <li><strong>Reduce housing costs</strong> — consider roommates, a smaller apartment, or neighborhoods slightly outside the city center.</li>
+        <li><strong>Adjust your budget</strong> — use the <a href="/blog/how-to-budget-on-3000-a-month/">$3,000/month budget guide</a> to find areas where you can cut back.</li>
+        <li><strong>Build an emergency fund first</strong> — moving is expensive. Have 3-6 months of expenses saved before you go.</li>
+        <li><strong>Track everything</strong> — your first 3 months in a new city are crucial. Use a <a href="/blog/budget-for-digital-nomads/">digital nomad budget system</a> to stay on track.</li>
+      </ul>
+
+      <h2>Related Resources</h2>
+      <ul>
+        <li><a href="/tools/budget-calculator">Budget Calculator</a> — build a full monthly budget for your new city</li>
+        <li><a href="/tools/50-30-20-calculator">50/30/20 Calculator</a> — split your income into needs, wants, and savings</li>
+        <li><a href="/blog/how-to-budget-on-3000-a-month/">How to Budget on $3,000 a Month</a></li>
+        <li><a href="/blog/budget-for-digital-nomads/">Budget Guide for Digital Nomads</a></li>
+      </ul>
+
+      <h2>Frequently Asked Questions</h2>
+      <details>
+        <summary>How accurate is this calculator?</summary>
+        <p>The cost of living indexes are based on composite data from the BLS, C2ER, and housing market reports. They represent averages — your actual costs depend on your lifestyle, neighborhood, and spending habits. Use the results as a directional guide, not an exact prediction.</p>
+      </details>
+      <details>
+        <summary>Does this include taxes?</summary>
+        <p>The index values reflect consumer prices (housing, food, transport, etc.) but do <strong>not</strong> account for differences in state and local income taxes. If you are moving from Texas (no state income tax) to California (up to 13.3%), factor that in separately.</p>
+      </details>
+      <details>
+        <summary>Why are only 20 cities listed?</summary>
+        <p>We selected the 20 most-searched US metro areas for relocation. We plan to add more cities and international comparisons in future updates.</p>
+      </details>
+      <details>
+        <summary>What if I work remotely?</summary>
+        <p>Remote workers have a huge advantage — you can keep a high-cost-of-living salary while moving to a lower-cost city. This calculator shows you exactly how much further your money goes. Check out our <a href="/blog/budget-for-digital-nomads/">digital nomad budget guide</a> for more tips.</p>
+      </details>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .tool-hero {
+    background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+    padding: 4rem 1.5rem 3rem;
+    text-align: center;
+    color: #fff;
+  }
+  .tool-hero-inner {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .tool-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(4px);
+    padding: 0.35rem 1rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+  }
+  .tool-hero h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 800;
+    line-height: 1.15;
+    margin: 0 0 1rem;
+  }
+  .gradient-text {
+    background: linear-gradient(90deg, #fde68a, #fbbf24);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .tool-subtitle {
+    font-size: 1.1rem;
+    opacity: 0.92;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .tool-app {
+    padding: 2.5rem 1.5rem;
+    background: #f8f9fb;
+  }
+  .tool-container {
+    max-width: 880px;
+    margin: 0 auto;
+  }
+
+  .inputs-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  .input-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+  .input-card:first-child {
+    grid-column: 1 / -1;
+  }
+  .input-card label {
+    display: block;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #1a1a2e;
+    margin-bottom: 0.5rem;
+  }
+  .input-wrap {
+    position: relative;
+  }
+  .symbol {
+    position: absolute;
+    left: 0.85rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: #7c3aed;
+  }
+  .input-card input[type="number"] {
+    width: 100%;
+    padding: 0.85rem 0.85rem 0.85rem 2rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    outline: none;
+    font-family: inherit;
+    color: #1a1a2e;
+    transition: border-color 0.2s;
+  }
+  .input-card select {
+    width: 100%;
+    padding: 0.85rem;
+    font-size: 1.05rem;
+    font-weight: 600;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    outline: none;
+    font-family: inherit;
+    color: #1a1a2e;
+    background: #fff;
+    transition: border-color 0.2s;
+    cursor: pointer;
+  }
+  .input-card input:focus,
+  .input-card select:focus {
+    border-color: #7c3aed;
+    box-shadow: 0 0 0 3px rgba(124,58,237,0.15);
+  }
+  .input-card input::placeholder {
+    color: #b0b8c4;
+    font-weight: 400;
+  }
+  .input-hint {
+    display: block;
+    font-size: 0.78rem;
+    color: #999;
+    margin-top: 0.4rem;
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+  }
+  .stat-card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 1.25rem;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  }
+  .stat-primary {
+    background: linear-gradient(135deg, #7c3aed, #a855f7);
+    color: #fff;
+  }
+  .stat-value {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin-bottom: 0.25rem;
+    color: #1a1a2e;
+  }
+  .stat-primary .stat-value {
+    color: #fff;
+    font-size: 2rem;
+  }
+  .stat-label {
+    font-size: 0.78rem;
+    color: #888;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  .stat-primary .stat-label {
+    color: rgba(255,255,255,0.85);
+  }
+
+  .comparison-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    margin-bottom: 1.25rem;
+  }
+  .comparison-card h3 {
+    margin: 0 0 0.25rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1a1a2e;
+  }
+  .rate-subtitle {
+    margin: 0 0 1.25rem;
+    font-size: 0.9rem;
+    color: #888;
+  }
+  .rate-table-wrapper {
+    overflow-x: auto;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+  }
+  .rate-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+  }
+  .rate-table th {
+    background: #f8f9fb;
+    padding: 0.75rem 1rem;
+    text-align: left;
+    font-weight: 700;
+    color: #1a1a2e;
+    white-space: nowrap;
+    border-bottom: 2px solid #e2e8f0;
+  }
+  .rate-table td {
+    padding: 0.65rem 1rem;
+    color: #444;
+    border-bottom: 1px solid #f0f0f5;
+    white-space: nowrap;
+  }
+  .rate-table tr:last-child td {
+    border-bottom: none;
+  }
+  .diff-positive { color: #dc2626; font-weight: 600; }
+  .diff-negative { color: #16a34a; font-weight: 600; }
+
+  .bar-chart-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    margin-bottom: 1.25rem;
+  }
+  .bar-chart-card h3 {
+    margin: 0 0 1.25rem;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #1a1a2e;
+  }
+  .bar-row {
+    margin-bottom: 1rem;
+  }
+  .bar-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #1a1a2e;
+    margin-bottom: 0.35rem;
+  }
+  .bar-pair {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .bar-track {
+    height: 22px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    padding: 0 0.6rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #fff;
+    min-width: 40px;
+    transition: width 0.4s ease;
+  }
+  .bar-current {
+    background: linear-gradient(90deg, #7c3aed, #a855f7);
+  }
+  .bar-target {
+    background: linear-gradient(90deg, #f59e0b, #fbbf24);
+  }
+
+  .tip-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    background: #fffbe6;
+    border-radius: 14px;
+    padding: 1.25rem 1.5rem;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.04);
+  }
+  .tip-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+  }
+  .tip-card p {
+    margin: 0;
+    font-size: 0.92rem;
+    color: #665500;
+    line-height: 1.55;
+  }
+
+  .tool-cta {
+    padding: 2.5rem 1.5rem;
+    background: #fff;
+  }
+  .cta-card {
+    max-width: 880px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+    border-radius: 20px;
+    padding: 2.5rem;
+    text-align: center;
+    color: #fff;
+  }
+  .cta-card h2 {
+    margin: 0 0 0.75rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+  }
+  .cta-card p {
+    margin: 0 0 1.5rem;
+    opacity: 0.92;
+    line-height: 1.6;
+  }
+  .cta-button {
+    display: inline-block;
+    background: #fff;
+    color: #7c3aed;
+    font-weight: 700;
+    padding: 0.85rem 2rem;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  }
+
+  .tool-content {
+    padding: 3rem 1.5rem 4rem;
+    background: #f8f9fb;
+  }
+  .content-narrow {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .tool-content h2 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #1a1a2e;
+    margin: 2.5rem 0 0.75rem;
+  }
+  .tool-content h2:first-child { margin-top: 0; }
+  .tool-content p, .tool-content li {
+    font-size: 1.02rem;
+    line-height: 1.7;
+    color: #444;
+  }
+  .tool-content ul, .tool-content ol {
+    padding-left: 1.25rem;
+    margin: 0.5rem 0 1rem;
+  }
+  .tool-content li { margin-bottom: 0.35rem; }
+  .tool-content a {
+    color: #7c3aed;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .tool-content details {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 0.75rem;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  }
+  .tool-content summary {
+    font-weight: 600;
+    cursor: pointer;
+    color: #1a1a2e;
+    font-size: 1.02rem;
+  }
+  .tool-content details p { margin: 0.75rem 0 0; }
+
+  @media (max-width: 640px) {
+    .inputs-grid {
+      grid-template-columns: 1fr;
+    }
+    .input-card:first-child {
+      grid-column: auto;
+    }
+    .stats-grid {
+      grid-template-columns: 1fr;
+    }
+    .cta-card {
+      padding: 2rem 1.5rem;
+    }
+  }
+</style>
+
+<script>
+  // Cost of living index data (national average = 100)
+  // Sources: C2ER, BLS, Numbeo composite
+  interface CityData {
+    name: string;
+    overall: number;
+    housing: number;
+    food: number;
+    transportation: number;
+    healthcare: number;
+    utilities: number;
+  }
+
+  const cities: CityData[] = [
+    { name: 'New York, NY',        overall: 187, housing: 282, food: 116, transportation: 130, healthcare: 118, utilities: 115 },
+    { name: 'San Francisco, CA',   overall: 179, housing: 272, food: 113, transportation: 128, healthcare: 120, utilities: 109 },
+    { name: 'Los Angeles, CA',     overall: 166, housing: 248, food: 108, transportation: 126, healthcare: 112, utilities: 105 },
+    { name: 'Seattle, WA',         overall: 156, housing: 228, food: 110, transportation: 122, healthcare: 115, utilities: 98 },
+    { name: 'Boston, MA',          overall: 152, housing: 218, food: 109, transportation: 118, healthcare: 122, utilities: 112 },
+    { name: 'Washington, DC',      overall: 150, housing: 214, food: 107, transportation: 116, healthcare: 110, utilities: 108 },
+    { name: 'San Diego, CA',       overall: 146, housing: 210, food: 106, transportation: 120, healthcare: 111, utilities: 104 },
+    { name: 'Miami, FL',           overall: 138, housing: 188, food: 105, transportation: 112, healthcare: 108, utilities: 102 },
+    { name: 'Denver, CO',          overall: 128, housing: 162, food: 103, transportation: 106, healthcare: 108, utilities: 96 },
+    { name: 'Portland, OR',        overall: 126, housing: 158, food: 104, transportation: 110, healthcare: 106, utilities: 94 },
+    { name: 'Chicago, IL',         overall: 120, housing: 140, food: 103, transportation: 112, healthcare: 106, utilities: 102 },
+    { name: 'Austin, TX',          overall: 114, housing: 130, food: 98, transportation: 102, healthcare: 100, utilities: 99 },
+    { name: 'Nashville, TN',       overall: 110, housing: 122, food: 97, transportation: 100, healthcare: 98, utilities: 96 },
+    { name: 'Atlanta, GA',         overall: 108, housing: 116, food: 99, transportation: 104, healthcare: 102, utilities: 98 },
+    { name: 'Phoenix, AZ',         overall: 106, housing: 112, food: 98, transportation: 102, healthcare: 100, utilities: 102 },
+    { name: 'Dallas, TX',          overall: 104, housing: 108, food: 97, transportation: 100, healthcare: 100, utilities: 101 },
+    { name: 'Houston, TX',         overall: 100, housing: 98, food: 96, transportation: 98, healthcare: 98, utilities: 100 },
+    { name: 'Charlotte, NC',       overall: 98,  housing: 94, food: 97, transportation: 98, healthcare: 98, utilities: 96 },
+    { name: 'San Antonio, TX',     overall: 94,  housing: 82, food: 94, transportation: 96, healthcare: 96, utilities: 98 },
+    { name: 'Columbus, OH',        overall: 92,  housing: 78, food: 96, transportation: 96, healthcare: 96, utilities: 94 },
+  ];
+
+  // Budget allocation weights (typical US household)
+  const weights = {
+    housing: 0.33,
+    food: 0.15,
+    transportation: 0.17,
+    healthcare: 0.10,
+    utilities: 0.10,
+  };
+  // Remaining 15% is "other" and assumed equal across cities
+
+  const incomeInput = document.getElementById('monthly-income') as HTMLInputElement;
+  const currentCitySelect = document.getElementById('current-city') as HTMLSelectElement;
+  const targetCitySelect = document.getElementById('target-city') as HTMLSelectElement;
+  const resultsSection = document.getElementById('results-section')!;
+
+  // Populate dropdowns
+  function populateSelect(sel: HTMLSelectElement, defaultIdx: number) {
+    sel.innerHTML = '<option value="">— Select a city —</option>';
+    cities.forEach((city, idx) => {
+      const opt = document.createElement('option');
+      opt.value = idx.toString();
+      opt.textContent = city.name;
+      if (idx === defaultIdx) opt.selected = true;
+      sel.appendChild(opt);
+    });
+  }
+
+  populateSelect(currentCitySelect, -1);
+  populateSelect(targetCitySelect, -1);
+
+  function formatCurrency(n: number): string {
+    return '$' + Math.round(n).toLocaleString('en-US');
+  }
+
+  function calculate() {
+    const income = parseFloat(incomeInput.value) || 0;
+    const currentIdx = currentCitySelect.value;
+    const targetIdx = targetCitySelect.value;
+
+    if (income <= 0 || currentIdx === '' || targetIdx === '' || currentIdx === targetIdx) {
+      resultsSection.style.display = 'none';
+      return;
+    }
+
+    const current = cities[parseInt(currentIdx)];
+    const target = cities[parseInt(targetIdx)];
+
+    resultsSection.style.display = 'block';
+
+    // Update table headers
+    document.getElementById('th-current')!.textContent = current.name;
+    document.getElementById('th-target')!.textContent = target.name;
+
+    // Calculate weighted cost ratio
+    const ratio = target.overall / current.overall;
+    const neededIncome = income * ratio;
+    const diff = neededIncome - income;
+
+    // Stats
+    document.getElementById('stat-needed')!.textContent = formatCurrency(neededIncome);
+    const diffEl = document.getElementById('stat-diff')!;
+    diffEl.textContent = (diff >= 0 ? '+' : '') + formatCurrency(diff);
+    document.getElementById('stat-index')!.textContent = ratio.toFixed(2) + 'x';
+
+    // Category breakdown table
+    const categories: { key: keyof typeof weights; label: string }[] = [
+      { key: 'housing', label: 'Housing' },
+      { key: 'food', label: 'Food & Groceries' },
+      { key: 'transportation', label: 'Transportation' },
+      { key: 'healthcare', label: 'Healthcare' },
+      { key: 'utilities', label: 'Utilities' },
+    ];
+
+    const tbody = document.getElementById('category-tbody')!;
+    tbody.innerHTML = categories.map(cat => {
+      const currentCost = income * weights[cat.key] * (current[cat.key] / 100);
+      const targetCost = income * weights[cat.key] * (target[cat.key] / 100);
+      const catDiff = targetCost - currentCost;
+      const diffClass = catDiff > 0 ? 'diff-positive' : catDiff < 0 ? 'diff-negative' : '';
+      return `<tr>
+        <td><strong>${cat.label}</strong></td>
+        <td>${formatCurrency(currentCost)}/mo</td>
+        <td>${formatCurrency(targetCost)}/mo</td>
+        <td class="${diffClass}">${catDiff >= 0 ? '+' : ''}${formatCurrency(catDiff)}</td>
+      </tr>`;
+    }).join('');
+
+    // Add total row
+    const totalCurrent = categories.reduce((sum, cat) => sum + income * weights[cat.key] * (current[cat.key] / 100), 0);
+    const totalTarget = categories.reduce((sum, cat) => sum + income * weights[cat.key] * (target[cat.key] / 100), 0);
+    const totalDiff = totalTarget - totalCurrent;
+    const totalDiffClass = totalDiff > 0 ? 'diff-positive' : totalDiff < 0 ? 'diff-negative' : '';
+    tbody.innerHTML += `<tr style="border-top:2px solid #e2e8f0;font-weight:700;">
+      <td><strong>Total (tracked)</strong></td>
+      <td>${formatCurrency(totalCurrent)}/mo</td>
+      <td>${formatCurrency(totalTarget)}/mo</td>
+      <td class="${totalDiffClass}">${totalDiff >= 0 ? '+' : ''}${formatCurrency(totalDiff)}</td>
+    </tr>`;
+
+    // Bar chart
+    const barChart = document.getElementById('bar-chart')!;
+    const maxVal = Math.max(
+      ...categories.map(cat => Math.max(
+        income * weights[cat.key] * (current[cat.key] / 100),
+        income * weights[cat.key] * (target[cat.key] / 100)
+      ))
+    );
+
+    barChart.innerHTML = categories.map(cat => {
+      const cVal = income * weights[cat.key] * (current[cat.key] / 100);
+      const tVal = income * weights[cat.key] * (target[cat.key] / 100);
+      const cPct = (cVal / maxVal) * 100;
+      const tPct = (tVal / maxVal) * 100;
+      return `<div class="bar-row">
+        <div class="bar-label">${cat.label}</div>
+        <div class="bar-pair">
+          <div class="bar-track bar-current" style="width:${cPct}%">${formatCurrency(cVal)}</div>
+          <div class="bar-track bar-target" style="width:${tPct}%">${formatCurrency(tVal)}</div>
+        </div>
+      </div>`;
+    }).join('') + `<div style="display:flex;gap:1.5rem;margin-top:0.75rem;font-size:0.8rem;color:#666;">
+      <span><span style="display:inline-block;width:12px;height:12px;border-radius:3px;background:#7c3aed;vertical-align:middle;margin-right:4px;"></span>${current.name}</span>
+      <span><span style="display:inline-block;width:12px;height:12px;border-radius:3px;background:#f59e0b;vertical-align:middle;margin-right:4px;"></span>${target.name}</span>
+    </div>`;
+
+    // Tip
+    const tipCard = document.getElementById('tip-card')!;
+    const tipText = document.getElementById('tip-text')!;
+    tipCard.style.display = 'flex';
+
+    if (diff > 500) {
+      tipText.innerHTML = `Moving from ${current.name} to ${target.name} could cost you an extra <strong>${formatCurrency(diff)}/month</strong>. Housing is usually the biggest factor — consider roommates or neighborhoods just outside the city core to save 20-30% on rent.`;
+    } else if (diff > 0) {
+      tipText.innerHTML = `The cost difference is manageable at <strong>${formatCurrency(diff)}/month</strong>. Small adjustments to your food and transportation budget could absorb the increase entirely.`;
+    } else if (diff < -500) {
+      tipText.innerHTML = `Great news — you could save <strong>${formatCurrency(Math.abs(diff))}/month</strong> by moving to ${target.name}. Consider putting that extra money into savings or investments to build wealth faster.`;
+    } else {
+      tipText.innerHTML = `The cost of living is very similar between these two cities. Your budget should transfer almost directly — focus on any housing differences when apartment hunting.`;
+    }
+  }
+
+  [incomeInput, currentCitySelect, targetCitySelect].forEach(el => {
+    el.addEventListener('input', calculate);
+    el.addEventListener('change', calculate);
+  });
+</script>

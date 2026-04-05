@@ -76,11 +76,11 @@ The magic happens at the end of the month when you sort by category and see exac
 
 ## Related Articles
 
-- [5 Best Notion Budget Templates in 2026](/best-notion-budget-templates-2026/) — Compare the top budget templates side by side
+- [5 Best Notion Budget Templates in 2026](/blog/best-notion-budget-templates-2026/) — Compare the top budget templates side by side
 - [The 50/30/20 Budget Rule in Notion](/50-30-20-budget-rule-notion/) — A proven framework for allocating your income
-- [7 Budgeting Mistakes That Keep You Broke](/budgeting-mistakes-to-avoid/) — Common pitfalls to avoid when tracking expenses
-- [Track Multiple Income Streams in Notion](/track-multiple-income-streams-notion/) — For freelancers with more than one income source
-- [Why People Fail at Budgeting](/why-people-fail-at-budgeting/) — Understanding the habits that make or break budgeting
+- [7 Budgeting Mistakes That Keep You Broke](/blog/budgeting-mistakes-to-avoid/) — Common pitfalls to avoid when tracking expenses
+- [Track Multiple Income Streams in Notion](/blog/track-multiple-income-streams-notion/) — For freelancers with more than one income source
+- [Why People Fail at Budgeting](/blog/why-people-fail-at-budgeting/) — Understanding the habits that make or break budgeting
 
 ## Frequently Asked Questions
 

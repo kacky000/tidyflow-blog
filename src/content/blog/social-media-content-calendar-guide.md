@@ -208,7 +208,7 @@ A content calendar transforms social media from chaotic guessing into strategic 
 
 Building a content calendar is the first step. The next step is making it *sustainable*. [Get the Social Media Content Calendar →](https://gettidyflow.gumroad.com)—a Notion + Excel combo that handles planning, scheduling, and analytics tracking for you. Stop winging it. Start strategizing.
 
-Also explore our guide on [Notion templates worth paying for](/notion-templates-worth-paying-for/) to discover other productivity tools that complement your social media workflow. And if you're managing multiple projects alongside your content calendar, [our best Notion budget templates review](/best-notion-budget-templates-2026/) has you covered.
+Also explore our guide on [Notion templates worth paying for](/blog/notion-templates-worth-paying-for/) to discover other productivity tools that complement your social media workflow. And if you're managing multiple projects alongside your content calendar, [our best Notion budget templates review](/blog/best-notion-budget-templates-2026/) has you covered.
 
 ## Frequently Asked Questions
 

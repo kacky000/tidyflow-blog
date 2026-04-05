@@ -48,7 +48,7 @@ Before you can budget, you need to know exactly when money comes in and how much
 - **Net pay**: Your take-home amount after taxes and deductions
 - **Pay dates**: The specific dates you get paid each month
 
-If your income is irregular (freelance, gig work, tips), use your lowest monthly income from the past 3 months as your baseline. You can [track multiple income streams in Notion](/track-multiple-income-streams-notion/) to get a clear picture.
+If your income is irregular (freelance, gig work, tips), use your lowest monthly income from the past 3 months as your baseline. You can [track multiple income streams in Notion](/blog/track-multiple-income-streams-notion/) to get a clear picture.
 
 ### Step 2: List Every Bill with Its Due Date
 
@@ -155,8 +155,8 @@ Notion is perfect for paycheck budgeting because you can create a custom view fo
 - Create a database with columns for bill name, amount, due date, and paycheck assignment
 - Use views to filter by Paycheck 1 or Paycheck 2
 - Track actual vs. planned spending in real time
-- [Learn how to track expenses in Notion](/how-to-track-expenses-in-notion/)
-- [See the best Notion budget templates for 2026](/best-notion-budget-templates-2026/)
+- [Learn how to track expenses in Notion](/blog/how-to-track-expenses-in-notion/)
+- [See the best Notion budget templates for 2026](/blog/best-notion-budget-templates-2026/)
 
 ### Excel/Google Sheets
 
@@ -165,12 +165,12 @@ Spreadsheets work great for paycheck budgeting:
 - Create separate tabs for each pay period
 - Use formulas to auto-calculate remaining money after bills
 - Color-code cells to show when you're approaching limits
-- [Check out free budget spreadsheet templates](/best-budget-spreadsheet-templates/)
+- [Check out free budget spreadsheet templates](/blog/best-budget-spreadsheet-templates/)
 
 ### Budgeting Apps
 
 - **EveryDollar**: Best for zero-based budgeting on a tight budget (free version available)
-- **Goodbudget**: Digital [envelope budgeting](/envelope-budgeting-method/) — great for visual budgeters
+- **Goodbudget**: Digital [envelope budgeting](/blog/envelope-budgeting-method/) — great for visual budgeters
 - **Copilot Money**: AI-powered expense tracking with automatic categorization
 
 ## Common Mistakes to Avoid
@@ -193,7 +193,7 @@ A $3 app here, a $12 subscription there — these add up to $50-100/month that c
 
 ### 4. Giving Up After One Bad Paycheck
 
-One bad pay period doesn't mean the system is broken. [Budgeting mistakes are normal](/budgeting-mistakes-to-avoid/) — what matters is getting back on track with the next paycheck.
+One bad pay period doesn't mean the system is broken. [Budgeting mistakes are normal](/blog/budgeting-mistakes-to-avoid/) — what matters is getting back on track with the next paycheck.
 
 ## How to Break the Paycheck-to-Paycheck Cycle
 

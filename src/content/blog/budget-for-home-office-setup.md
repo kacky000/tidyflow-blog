@@ -77,7 +77,7 @@ A workspace that rivals any corporate office.
 | UPS Battery Backup | $80–$200 | Power protection during outages |
 | **Total** | **$1,620–$3,850** | |
 
-For remote workers looking to track this spending alongside their overall financial plan, a [remote worker budget template](/budget-template-for-remote-workers/) can help integrate home office costs into your monthly budget.
+For remote workers looking to track this spending alongside their overall financial plan, a [remote worker budget template](/blog/budget-template-for-remote-workers/) can help integrate home office costs into your monthly budget.
 
 ---
 
@@ -134,7 +134,7 @@ Before thinking your home office is expensive, compare it to commuting:
 | Time cost (unpaid hours) | 40–80 hrs/month | 0 |
 | **Total** | **$430–$1,180** | **$75–$230** |
 
-Even a $3,000 home office pays for itself in 3–7 months compared to commuting costs. Track these savings in your budget so you can see the real financial benefit of remote work, similar to how professionals in our [software engineer budget guide](/budget-template-for-software-engineers/) calculate their total compensation including WFH benefits.
+Even a $3,000 home office pays for itself in 3–7 months compared to commuting costs. Track these savings in your budget so you can see the real financial benefit of remote work, similar to how professionals in our [software engineer budget guide](/blog/budget-template-for-software-engineers/) calculate their total compensation including WFH benefits.
 
 ---
 

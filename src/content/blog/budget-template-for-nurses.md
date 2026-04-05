@@ -106,7 +106,7 @@ These costs are predictable — but only if you plan for them. Add these as mont
 | Stethoscope / equipment | $50–$200 | $5–$20 |
 | Professional membership (ANA, etc.) | $50–$200 | $5–$20 |
 
-Adding these as sinking funds prevents them from feeling like surprises. Set aside a small amount each month, and the expense is already covered when the bill arrives. A [monthly budget checklist](/monthly-budget-checklist/) can help you track when each of these is due.
+Adding these as sinking funds prevents them from feeling like surprises. Set aside a small amount each month, and the expense is already covered when the bill arrives. A [monthly budget checklist](/blog/monthly-budget-checklist/) can help you track when each of these is due.
 
 ---
 
@@ -132,7 +132,7 @@ At the start of each month:
 3. **At month end, calculate actual income** — add up base + any overtime/differentials
 4. **Assign the variable portion using the three-bucket system** before it hits your checking account
 
-For a deeper look at managing fluctuating income in your budget, the strategies in [how to track expenses in Notion](/how-to-track-expenses-in-notion/) work particularly well for variable-income earners.
+For a deeper look at managing fluctuating income in your budget, the strategies in [how to track expenses in Notion](/blog/how-to-track-expenses-in-notion/) work particularly well for variable-income earners.
 
 ---
 

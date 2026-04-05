@@ -127,7 +127,7 @@ Choosing the right template depends on your specific situation. Here's a decisio
 **Will you use this on mobile?**
 - All options are mobile-compatible, but Tidyflow and Notion's built-in are fastest for quick expense entry.
 
-**The golden rule**: The most important thing isn't which template you pick — it's that you actually use it. A simple system you stick with beats a complex system you abandon after a week. [Learn how to stick to a budget](/how-to-stick-to-a-budget/) once you've chosen your tool.
+**The golden rule**: The most important thing isn't which template you pick — it's that you actually use it. A simple system you stick with beats a complex system you abandon after a week. [Learn how to stick to a budget](/blog/how-to-stick-to-a-budget/) once you've chosen your tool.
 
 ## Quick Comparison Table
 
@@ -220,9 +220,9 @@ Getting started takes just a few minutes:
 5. **Set a daily reminder** — 2 minutes before bed is all you need to log the day's spending
 6. **Review monthly** — sort by category to see where your money goes and adjust next month's plan
 
-If you're struggling with the setup, our [step-by-step expense tracking guide](/how-to-track-expenses-in-notion/) walks you through the process in detail. We also have guides on [how to create a budget](/how-to-create-a-budget/) from scratch if you're starting from zero.
+If you're struggling with the setup, our [step-by-step expense tracking guide](/blog/how-to-track-expenses-in-notion/) walks you through the process in detail. We also have guides on [how to create a budget](/blog/how-to-create-a-budget/) from scratch if you're starting from zero.
 
-Looking to try a specific budgeting method? Check out our guide on the [envelope budgeting method](/envelope-budgeting-method/), which works great in Notion.
+Looking to try a specific budgeting method? Check out our guide on the [envelope budgeting method](/blog/envelope-budgeting-method/), which works great in Notion.
 
 ## Related Articles
 
@@ -270,7 +270,7 @@ Customizing a Notion budget template is simpler than you might think. Here's wha
 
 ### Can I share a Notion budget template with my partner?
 
-Yes, absolutely. Sharing a budget with a partner in Notion is straightforward and solves a major pain point in [budgeting for couples](/budgeting-for-couples/). Click the "Share" button in the top right of your template, add your partner's email, and give them "Can edit" access so they can log their own expenses. Both of you see the same budget in real-time — when one person logs an expense, it immediately updates for the other. Some couples create separate "My Expenses" and "Partner Expenses" categories to track who spent what, while others merge everything into shared categories. You can also create filtered views so each person only sees certain categories or time periods. Just make sure you discuss budget limits and spending priorities beforehand, since seeing each other's spending in detail requires trust and communication.
+Yes, absolutely. Sharing a budget with a partner in Notion is straightforward and solves a major pain point in [budgeting for couples](/blog/budgeting-for-couples/). Click the "Share" button in the top right of your template, add your partner's email, and give them "Can edit" access so they can log their own expenses. Both of you see the same budget in real-time — when one person logs an expense, it immediately updates for the other. Some couples create separate "My Expenses" and "Partner Expenses" categories to track who spent what, while others merge everything into shared categories. You can also create filtered views so each person only sees certain categories or time periods. Just make sure you discuss budget limits and spending priorities beforehand, since seeing each other's spending in detail requires trust and communication.
 
 ## Start Tracking Today
 

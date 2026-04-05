@@ -24,7 +24,7 @@ Most photographers are excellent at their craft and terrible at financial planni
 - **Invisible business expenses**: Second shooters, editing outsourcing, props, insurance, website hosting, and marketing costs that don't feel like "real" expenses until tax time
 - **Delayed payment cycles**: Many photographers don't receive full payment until weeks or months after the shoot, creating cash flow gaps
 
-If you're using a generic monthly budget, you're almost certainly underestimating your business costs and overestimating your available income. The [freelancer budget template](/budget-template-for-freelancers/) covers foundational self-employment budgeting, and this guide adds photography-specific layers on top.
+If you're using a generic monthly budget, you're almost certainly underestimating your business costs and overestimating your available income. The [freelancer budget template](/blog/budget-template-for-freelancers/) covers foundational self-employment budgeting, and this guide adds photography-specific layers on top.
 
 ---
 
@@ -128,7 +128,7 @@ Every dollar of legitimate business expense reduces your tax bill. Common photog
 
 If you owe more than $1,000 in taxes annually, the IRS expects quarterly payments (April 15, June 15, September 15, January 15). Missing these triggers penalties. Set calendar reminders and automate the transfers.
 
-For artists managing similar financial complexity, the [budget template for artists](/budget-template-for-artists/) covers additional creative-profession tax strategies.
+For artists managing similar financial complexity, the [budget template for artists](/blog/budget-template-for-artists/) covers additional creative-profession tax strategies.
 
 ---
 

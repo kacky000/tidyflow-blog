@@ -28,7 +28,7 @@ Free templates work well when:
 
 - **You just want to try something.** Testing whether Notion works for project management? Grab a free template, play with it for a week.
 - **Your needs are basic.** A simple to-do list or reading tracker doesn't need premium features.
-- **You enjoy customizing.** If tinkering with databases and properties is fun for you, a basic free template is a starting point for your own creation. Our [how to track expenses in Notion](/how-to-track-expenses-in-notion/) guide shows you how to build one from scratch.
+- **You enjoy customizing.** If tinkering with databases and properties is fun for you, a basic free template is a starting point for your own creation. Our [how to track expenses in Notion](/blog/how-to-track-expenses-in-notion/) guide shows you how to build one from scratch.
 - **You're learning Notion.** Free templates are great for understanding how databases, relations, and views work.
 
 For casual use, free is perfectly fine. Don't pay for something you'll use twice and forget.
@@ -92,9 +92,9 @@ Watch out for:
 
 Based on our testing, these categories benefit most from paid templates:
 
-1. **Finance & Budgeting** — Formulas, rollup properties, and linked databases make DIY setup painful. A pre-built [budget tracker](/best-notion-budget-templates-2026/) saves hours.
-2. **Content Calendars** — Managing multi-platform posting schedules with status tracking, deadlines, and linked assets. See our [social media content calendar guide](/social-media-content-calendar-guide/).
-3. **Freelancer Business Systems** — Invoice tracking, client CRM, project pipelines, and [expense tracking](/how-to-track-expenses-in-notion/) need interconnected databases that take expertise to design.
+1. **Finance & Budgeting** — Formulas, rollup properties, and linked databases make DIY setup painful. A pre-built [budget tracker](/blog/best-notion-budget-templates-2026/) saves hours.
+2. **Content Calendars** — Managing multi-platform posting schedules with status tracking, deadlines, and linked assets. See our [social media content calendar guide](/blog/social-media-content-calendar-guide/).
+3. **Freelancer Business Systems** — Invoice tracking, client CRM, project pipelines, and [expense tracking](/blog/how-to-track-expenses-in-notion/) need interconnected databases that take expertise to design.
 4. **Student Planners** — Course schedules, assignment trackers, and GPA calculators with proper formula properties.
 
 Templates for simple use cases (reading lists, habit trackers, to-do lists) are almost never worth paying for.
@@ -103,16 +103,16 @@ Templates for simple use cases (reading lists, habit trackers, to-do lists) are 
 
 Free templates are fine for basic needs and experimentation. Paid templates are worth it when they save you time, solve a specific problem well, and include thoughtful design decisions.
 
-The real question isn't "should I pay for a template?" — it's "will I actually use this template?" A $5 template you use daily is worth infinitely more than a free one you duplicate and never open. If you're comparing Notion against spreadsheet alternatives, read our [Notion vs Excel](/notion-vs-excel-budgeting/) and [Google Sheets vs Notion](/google-sheets-vs-notion-for-budgeting/) comparisons first.
+The real question isn't "should I pay for a template?" — it's "will I actually use this template?" A $5 template you use daily is worth infinitely more than a free one you duplicate and never open. If you're comparing Notion against spreadsheet alternatives, read our [Notion vs Excel](/blog/notion-vs-excel-budgeting/) and [Google Sheets vs Notion](/blog/google-sheets-vs-notion-for-budgeting/) comparisons first.
 
 ## Related Articles
 
-- [5 Best Notion Budget Templates in 2026](/best-notion-budget-templates-2026/) — See our top paid and free template picks
-- [How to Track Your Expenses in Notion](/how-to-track-expenses-in-notion/) — Build your own or use a template
-- [Notion vs Excel for Budgeting](/notion-vs-excel-budgeting/) — Is Notion the right tool for you?
-- [Google Sheets vs Notion for Budgeting](/google-sheets-vs-notion-for-budgeting/) — Side-by-side comparison
-- [Personal Finance Dashboard Guide](/personal-finance-dashboard-guide/) — An example of a well-designed paid template
-- [Best Free Budget Spreadsheet Templates 2026](/best-budget-spreadsheet-templates/) — If you prefer spreadsheets
+- [5 Best Notion Budget Templates in 2026](/blog/best-notion-budget-templates-2026/) — See our top paid and free template picks
+- [How to Track Your Expenses in Notion](/blog/how-to-track-expenses-in-notion/) — Build your own or use a template
+- [Notion vs Excel for Budgeting](/blog/notion-vs-excel-budgeting/) — Is Notion the right tool for you?
+- [Google Sheets vs Notion for Budgeting](/blog/google-sheets-vs-notion-for-budgeting/) — Side-by-side comparison
+- [Personal Finance Dashboard Guide](/blog/personal-finance-dashboard-guide/) — An example of a well-designed paid template
+- [Best Free Budget Spreadsheet Templates 2026](/blog/best-budget-spreadsheet-templates/) — If you prefer spreadsheets
 - [50/30/20 Budget Rule in Notion](/50-30-20-budget-rule-notion/) — Popular budgeting method with Notion
 
 ## Frequently Asked Questions
@@ -126,15 +126,15 @@ Yes — roughly 80% of Notion templates available online are generic. They recyc
 - **Copy-paste categories**: identical expense categories, habit labels, or project statuses across dozens of templates.
 - **No documentation**: no setup guide, no explanation of formulas, no best-practice tips.
 
-The key to finding non-generic templates: look for sample data, specific use cases (not "life dashboards"), and creators who clearly use their own templates daily. Niche templates for specific professions like [teachers](/budget-template-for-teachers/), [nurses](/budget-template-for-nurses/), or [freelancers](/freelancer-tax-organizer-guide/) tend to be much more tailored than one-size-fits-all options. If you're specifically looking for budgeting templates, our [best Notion budget templates for 2026](/best-notion-budget-templates-2026/) ranks only non-generic picks.
+The key to finding non-generic templates: look for sample data, specific use cases (not "life dashboards"), and creators who clearly use their own templates daily. Niche templates for specific professions like [teachers](/blog/budget-template-for-teachers/), [nurses](/blog/budget-template-for-nurses/), or [freelancers](/blog/freelancer-tax-organizer-guide/) tend to be much more tailored than one-size-fits-all options. If you're specifically looking for budgeting templates, our [best Notion budget templates for 2026](/blog/best-notion-budget-templates-2026/) ranks only non-generic picks.
 
 ### Why are so many Notion templates generic?
 
-Three reasons drive the generic template problem: (1) **low barrier to entry** — anyone can duplicate a template, change the colors, and re-upload it; (2) **no review system** on most platforms, so quality templates and clones sit side-by-side; and (3) **creators optimize for downloads, not daily use** — a flashy screenshot gets clicks, but an empty template gets abandoned within a week. This is why templates built around specific workflows — like [tracking expenses in Notion](/how-to-track-expenses-in-notion/) or [budgeting for couples](/budgeting-for-couples/) — outperform generic "all-in-one" alternatives.
+Three reasons drive the generic template problem: (1) **low barrier to entry** — anyone can duplicate a template, change the colors, and re-upload it; (2) **no review system** on most platforms, so quality templates and clones sit side-by-side; and (3) **creators optimize for downloads, not daily use** — a flashy screenshot gets clicks, but an empty template gets abandoned within a week. This is why templates built around specific workflows — like [tracking expenses in Notion](/blog/how-to-track-expenses-in-notion/) or [budgeting for couples](/blog/budgeting-for-couples/) — outperform generic "all-in-one" alternatives.
 
 ### Are free Notion templates good enough?
 
-Free Notion templates are good enough for basic needs like simple to-do lists, reading trackers, or learning how Notion works. For more complex use cases like comprehensive budgeting, project management, or content calendars, paid templates typically offer better category structures, sample data, and tested workflows that save hours of setup time. Check our [budgeting mistakes to avoid](/budgeting-mistakes-to-avoid/) to see common pitfalls that well-designed templates help you sidestep.
+Free Notion templates are good enough for basic needs like simple to-do lists, reading trackers, or learning how Notion works. For more complex use cases like comprehensive budgeting, project management, or content calendars, paid templates typically offer better category structures, sample data, and tested workflows that save hours of setup time. Check our [budgeting mistakes to avoid](/blog/budgeting-mistakes-to-avoid/) to see common pitfalls that well-designed templates help you sidestep.
 
 ### How much should a Notion template cost?
 
@@ -150,7 +150,7 @@ The best places to buy Notion templates are the official Notion Template Gallery
 
 ### How do I avoid generic Notion templates?
 
-The fastest way to avoid generic Notion templates is to apply a 5-point quality filter before downloading or buying: (1) **Check for sample data** — if the template is empty, it's almost certainly generic. (2) **Look for a specific use case** — "Budget Tracker for Freelancers" beats "Life Dashboard" every time. (3) **Read the creator's description** — quality creators explain *why* they made specific design decisions, not just *what* the template includes. (4) **Test the free version first** — many paid template creators offer a lite version so you can evaluate workflow fit. (5) **Check for updates** — templates last updated 2+ years ago likely don't reflect Notion's current features. For budget-specific templates, our [best Notion budget templates for 2026](/best-notion-budget-templates-2026/) only lists non-generic picks that passed all 5 filters.
+The fastest way to avoid generic Notion templates is to apply a 5-point quality filter before downloading or buying: (1) **Check for sample data** — if the template is empty, it's almost certainly generic. (2) **Look for a specific use case** — "Budget Tracker for Freelancers" beats "Life Dashboard" every time. (3) **Read the creator's description** — quality creators explain *why* they made specific design decisions, not just *what* the template includes. (4) **Test the free version first** — many paid template creators offer a lite version so you can evaluate workflow fit. (5) **Check for updates** — templates last updated 2+ years ago likely don't reflect Notion's current features. For budget-specific templates, our [best Notion budget templates for 2026](/blog/best-notion-budget-templates-2026/) only lists non-generic picks that passed all 5 filters.
 
 ### Can I customize a paid Notion template?
 

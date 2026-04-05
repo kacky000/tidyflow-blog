@@ -119,7 +119,7 @@ Here is how it works:
 
 **If you are an owner-operator**: You claim the per diem deduction on Schedule C or as a deduction against your self-employment income.
 
-**Tracking tip**: Log every night you spend away from your tax home. A simple spreadsheet or [expense tracking system](/how-to-track-expenses-in-notion/) that records date, location, and overnight status is all you need — but you need it consistently for tax time.
+**Tracking tip**: Log every night you spend away from your tax home. A simple spreadsheet or [expense tracking system](/blog/how-to-track-expenses-in-notion/) that records date, location, and overnight status is all you need — but you need it consistently for tax time.
 
 ---
 
@@ -148,7 +148,7 @@ Avoid these traps that catch even experienced drivers:
 - **Eating out for every meal on the road**: At $15–$25 per meal, three daily restaurant meals cost $1,350–$2,250/month. A cab-mounted cooler and microwave can cut this to $400–$600
 - **Failing to track per diem days**: Lost per diem documentation means lost tax deductions worth $1,000+ per year
 
-For more budgeting pitfalls and how to avoid them, read our guide on [common budgeting mistakes](/budgeting-mistakes-to-avoid/).
+For more budgeting pitfalls and how to avoid them, read our guide on [common budgeting mistakes](/blog/budgeting-mistakes-to-avoid/).
 
 ---
 

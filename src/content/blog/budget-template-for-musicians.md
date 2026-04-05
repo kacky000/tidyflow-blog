@@ -85,7 +85,7 @@ Placement fees for TV, film, commercials, and video games. Irregular but potenti
 ### Stream 5: Merch & Physical Sales
 Album sales, merchandise at shows, online store revenue. Track costs of goods sold separately.
 
-For a deeper look at managing multiple income sources, the strategies in [how to budget for irregular income](/budget-for-irregular-income/) apply directly to musicians.
+For a deeper look at managing multiple income sources, the strategies in [how to budget for irregular income](/blog/budget-for-irregular-income/) apply directly to musicians.
 
 ---
 
@@ -145,7 +145,7 @@ As a self-employed musician, taxes don't get withheld automatically. Budget for 
 - **Track every deductible expense**: gear, studio time, travel, home office, music education
 - **Make quarterly estimated tax payments** to avoid penalties
 
-Many freelance musicians benefit from the strategies in our [freelancer budget template](/budget-template-for-freelancers/) for structuring tax savings alongside regular expenses.
+Many freelance musicians benefit from the strategies in our [freelancer budget template](/blog/budget-template-for-freelancers/) for structuring tax savings alongside regular expenses.
 
 ---
 

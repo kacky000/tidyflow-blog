@@ -79,11 +79,11 @@ If you don't want to build a Notion income tracker from scratch, our Budget Trac
 
 ## Related Articles
 
-- [How to Track Your Expenses in Notion](/how-to-track-expenses-in-notion/) — Complete the picture by tracking expenses alongside income
-- [Personal Finance Dashboard Guide](/personal-finance-dashboard-guide/) — An all-in-one Notion dashboard for income, expenses, and savings
-- [Freelancer Tax Organizer Guide](/freelancer-tax-organizer-guide/) — Organize your freelance finances for tax season
-- [Notion vs Excel for Budgeting](/notion-vs-excel-budgeting/) — Which tool handles multiple income streams better?
-- [Best Notion Personal Finance & Budget Templates 2026](/best-notion-budget-templates-2026/) — Top 5 templates tested and ranked
+- [How to Track Your Expenses in Notion](/blog/how-to-track-expenses-in-notion/) — Complete the picture by tracking expenses alongside income
+- [Personal Finance Dashboard Guide](/blog/personal-finance-dashboard-guide/) — An all-in-one Notion dashboard for income, expenses, and savings
+- [Freelancer Tax Organizer Guide](/blog/freelancer-tax-organizer-guide/) — Organize your freelance finances for tax season
+- [Notion vs Excel for Budgeting](/blog/notion-vs-excel-budgeting/) — Which tool handles multiple income streams better?
+- [Best Notion Personal Finance & Budget Templates 2026](/blog/best-notion-budget-templates-2026/) — Top 5 templates tested and ranked
 
 ## Frequently Asked Questions
 
@@ -93,7 +93,7 @@ Track every income stream, no matter how small. A typical freelancer has 3-7 sou
 
 ### What's the best way to track freelance income for taxes?
 
-Create a Notion database with these fields: Date, Source, Amount, Category, Invoice Number, and Tax-Deductible (checkbox). At the end of each quarter, filter by date range to calculate estimated tax payments. Export to CSV for your accountant. Our [Freelancer Tax Organizer](/freelancer-tax-organizer-guide/) template automates this process.
+Create a Notion database with these fields: Date, Source, Amount, Category, Invoice Number, and Tax-Deductible (checkbox). At the end of each quarter, filter by date range to calculate estimated tax payments. Export to CSV for your accountant. Our [Freelancer Tax Organizer](/blog/freelancer-tax-organizer-guide/) template automates this process.
 
 ### Can I use Notion to track income and expenses together?
 

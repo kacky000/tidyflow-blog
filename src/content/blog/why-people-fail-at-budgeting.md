@@ -67,13 +67,13 @@ A simple expense tracker that takes 30 seconds to update, reviewed once a week, 
 
 ## Related Articles
 
-- [Budgeting for Couples](/budgeting-for-couples/) — Why shared finances need a different approach
-- [How to Stick to a Budget: 15 Proven Tips](/how-to-stick-to-a-budget/) — Practical strategies for staying on track once your budget is set
-- [How to Budget When You Live Paycheck to Paycheck](/paycheck-to-paycheck-budgeting/) — A budgeting system designed for tight finances
-- [7 Budgeting Mistakes That Keep You Broke](/budgeting-mistakes-to-avoid/) — Specific mistakes and actionable fixes
-- [How to Track Your Expenses in Notion](/how-to-track-expenses-in-notion/) — Build the simple system described above
+- [Budgeting for Couples](/blog/budgeting-for-couples/) — Why shared finances need a different approach
+- [How to Stick to a Budget: 15 Proven Tips](/blog/how-to-stick-to-a-budget/) — Practical strategies for staying on track once your budget is set
+- [How to Budget When You Live Paycheck to Paycheck](/blog/paycheck-to-paycheck-budgeting/) — A budgeting system designed for tight finances
+- [7 Budgeting Mistakes That Keep You Broke](/blog/budgeting-mistakes-to-avoid/) — Specific mistakes and actionable fixes
+- [How to Track Your Expenses in Notion](/blog/how-to-track-expenses-in-notion/) — Build the simple system described above
 - [The 50/30/20 Budget Rule in Notion](/50-30-20-budget-rule-notion/) — The simplest budgeting framework
-- [5 Best Notion Budget Templates in 2026](/best-notion-budget-templates-2026/) — Find a system that removes friction
+- [5 Best Notion Budget Templates in 2026](/blog/best-notion-budget-templates-2026/) — Find a system that removes friction
 
 ## Frequently Asked Questions
 
@@ -94,7 +94,7 @@ Start by removing friction from the process. Use a tool you already open daily, 
 A paid budget template ($5-30) saves significant setup time and provides pre-built categories, sample data, and tested workflows. If you've failed at budgeting before, the reduction in setup friction alone makes it worthwhile. Free templates work fine for people who enjoy customizing, but paid templates remove the "I'll set it up later" excuse that kills most budgeting attempts.
 
 *Related reading:*
-- [Zero-Based Budgeting: A Complete Beginner's Guide](/zero-based-budgeting-guide/) — A structured method that gives every dollar a purpose
-- [Best Free Budget Spreadsheet Templates for 2026](/best-budget-spreadsheet-templates/) — Find the right template to make budgeting easy
+- [Zero-Based Budgeting: A Complete Beginner's Guide](/blog/zero-based-budgeting-guide/) — A structured method that gives every dollar a purpose
+- [Best Free Budget Spreadsheet Templates for 2026](/blog/best-budget-spreadsheet-templates/) — Find the right template to make budgeting easy
 
 [Start with a simple system — Get the Tidyflow Budget Tracker →](https://gettidyflow.gumroad.com/l/notion-monthly-budget-tracker)

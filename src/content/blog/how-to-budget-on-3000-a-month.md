@@ -65,7 +65,7 @@ This is where $3,000/month genuinely feels different from $2,000:
 - **Travel fund**: $100–$150 (saving $100/month creates $1,200 for an annual trip)
 - **Miscellaneous & fun**: $100–$150
 
-The key is still using a [monthly budget checklist](/monthly-budget-checklist/) to review these categories before the month starts — not just spending freely because there is more room.
+The key is still using a [monthly budget checklist](/blog/monthly-budget-checklist/) to review these categories before the month starts — not just spending freely because there is more room.
 
 ### Savings & Debt — $600+
 

@@ -64,7 +64,7 @@ Here's a realistic budget for a first-year BigLaw associate in a major city earn
 | **Remaining to Loans/Savings** | **$1,920** | **18%** | Bonus acceleration |
 | **Total** | **$10,500** | **100%** | |
 
-At $3,500+/month toward student loans (plus the $1,920 surplus), a $200,000 loan balance can be eliminated in approximately 4 years instead of 10. For a comprehensive approach to accelerating loan payoff, see our guide on [how to pay off student loans fast](/how-to-pay-off-student-loans-fast/).
+At $3,500+/month toward student loans (plus the $1,920 surplus), a $200,000 loan balance can be eliminated in approximately 4 years instead of 10. For a comprehensive approach to accelerating loan payoff, see our guide on [how to pay off student loans fast](/blog/how-to-pay-off-student-loans-fast/).
 
 ---
 
@@ -120,7 +120,7 @@ Lawyers have recurring costs that other professions don't. Prorate these as mont
 | Professional wardrobe maintenance | $500–$1,200 | $42–$100 |
 | Legal research tools (if solo) | $100–$400/month | $100–$400 |
 
-If your firm covers some of these, great — redirect that budget line to debt repayment. Building a clear picture of all your expenses is the foundation of any effective budget, as outlined in our [how to create a budget](/how-to-create-a-budget/) guide.
+If your firm covers some of these, great — redirect that budget line to debt repayment. Building a clear picture of all your expenses is the foundation of any effective budget, as outlined in our [how to create a budget](/blog/how-to-create-a-budget/) guide.
 
 ---
 

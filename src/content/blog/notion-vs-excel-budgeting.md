@@ -73,10 +73,10 @@ The hardest part of budgeting isn't choosing the right tool — it's showing up 
 
 ## Related Articles
 
-- [5 Best Notion Budget Templates in 2026](/best-notion-budget-templates-2026/) — If you choose Notion, here are the best templates
-- [How to Track Your Expenses in Notion](/how-to-track-expenses-in-notion/) — Step-by-step Notion expense tracking setup
-- [Track Multiple Income Streams in Notion](/track-multiple-income-streams-notion/) — Notion's advantage for freelancers with complex income
-- [Are Notion Templates Worth Paying For?](/notion-templates-worth-paying-for/) — When to invest in a template vs building from scratch
+- [5 Best Notion Budget Templates in 2026](/blog/best-notion-budget-templates-2026/) — If you choose Notion, here are the best templates
+- [How to Track Your Expenses in Notion](/blog/how-to-track-expenses-in-notion/) — Step-by-step Notion expense tracking setup
+- [Track Multiple Income Streams in Notion](/blog/track-multiple-income-streams-notion/) — Notion's advantage for freelancers with complex income
+- [Are Notion Templates Worth Paying For?](/blog/notion-templates-worth-paying-for/) — When to invest in a template vs building from scratch
 
 ## Frequently Asked Questions
 
@@ -97,7 +97,7 @@ Notion has a formula property type that supports basic calculations like sum, av
 Yes, Notion supports CSV import, so you can export your Excel budget as a CSV file and import it directly into a Notion database. The import process maps columns to Notion properties automatically. However, Excel formulas won't transfer — you'll need to recreate any calculations using Notion's formula properties or rollup features.
 
 *Related reading:*
-- [Best Free Budget Spreadsheet Templates for 2026](/best-budget-spreadsheet-templates/) — Full comparison of free templates
-- [Zero-Based Budgeting: A Complete Beginner's Guide](/zero-based-budgeting-guide/) — Master the most detailed budgeting method
+- [Best Free Budget Spreadsheet Templates for 2026](/blog/best-budget-spreadsheet-templates/) — Full comparison of free templates
+- [Zero-Based Budgeting: A Complete Beginner's Guide](/blog/zero-based-budgeting-guide/) — Master the most detailed budgeting method
 
 [Get a ready-made Notion Budget Tracker →](https://gettidyflow.gumroad.com/l/notion-monthly-budget-tracker)

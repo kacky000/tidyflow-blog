@@ -124,11 +124,11 @@ Set up a finance dashboard in Notion by creating four linked databases: Expenses
 
 ### What's the difference between a budget tracker and a finance dashboard?
 
-A budget tracker focuses on comparing planned spending vs actual spending in predefined categories. A personal finance dashboard is more comprehensive — it tracks expenses, income from all sources, savings goal progress, and subscription costs in one unified view. A dashboard gives you a complete financial picture, while a tracker focuses specifically on spending limits. Our [Budget Templates guide](/best-notion-budget-templates-2026/) covers simpler tracking options.
+A budget tracker focuses on comparing planned spending vs actual spending in predefined categories. A personal finance dashboard is more comprehensive — it tracks expenses, income from all sources, savings goal progress, and subscription costs in one unified view. A dashboard gives you a complete financial picture, while a tracker focuses specifically on spending limits. Our [Budget Templates guide](/blog/best-notion-budget-templates-2026/) covers simpler tracking options.
 
 **Related articles:**
-- [How to Track Expenses in Notion](/how-to-track-expenses-in-notion/)
-- [Best Notion Budget Templates 2026](/best-notion-budget-templates-2026/)
-- [Notion vs Excel for Budgeting](/notion-vs-excel-budgeting/)
-- [Track Multiple Income Streams in Notion](/track-multiple-income-streams-notion/)
+- [How to Track Expenses in Notion](/blog/how-to-track-expenses-in-notion/)
+- [Best Notion Budget Templates 2026](/blog/best-notion-budget-templates-2026/)
+- [Notion vs Excel for Budgeting](/blog/notion-vs-excel-budgeting/)
+- [Track Multiple Income Streams in Notion](/blog/track-multiple-income-streams-notion/)
 - [The 50/30/20 Budget Rule](/50-30-20-budget-rule-notion/)

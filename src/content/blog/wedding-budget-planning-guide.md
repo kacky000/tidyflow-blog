@@ -126,7 +126,7 @@ Many couples make these spending errors:
 - **Making major purchases early**: Shop around and compare before committing to expensive items
 - **Ignoring the contingency fund**: Budget surprises always happen—keep 5-10% reserved
 
-You can avoid these mistakes with proper planning. For more details on [budgeting mistakes to avoid](/budgeting-mistakes-to-avoid/), read our complete guide.
+You can avoid these mistakes with proper planning. For more details on [budgeting mistakes to avoid](/blog/budgeting-mistakes-to-avoid/), read our complete guide.
 
 ## Tools to Simplify Wedding Budget Planning
 
@@ -182,7 +182,7 @@ Every couple's financial situation is unique. While the average wedding costs $3
 - Your guest count and desired celebration style
 - Your timeline and flexibility
 
-Use the **[monthly budget checklist](/monthly-budget-checklist/)** to stay organized throughout your planning journey.
+Use the **[monthly budget checklist](/blog/monthly-budget-checklist/)** to stay organized throughout your planning journey.
 
 ## Final Thoughts: Your Wedding, Your Budget
 
@@ -220,4 +220,4 @@ Your future spouse will thank you for the organized approach—and your bank acc
 
 ---
 
-**Want more budgeting resources?** Check out our complete guides on [budgeting mistakes to avoid](/budgeting-mistakes-to-avoid/) and the [monthly budget checklist](/monthly-budget-checklist/) for additional financial planning strategies.
+**Want more budgeting resources?** Check out our complete guides on [budgeting mistakes to avoid](/blog/budgeting-mistakes-to-avoid/) and the [monthly budget checklist](/blog/monthly-budget-checklist/) for additional financial planning strategies.

@@ -97,7 +97,7 @@ When you earn above your base guarantee, use this split:
 - **30% → Debt payoff** (student loans, credit cards)
 - **20% → Lifestyle reward** (travel on your days off, hobbies)
 
-If you're already managing side income alongside your flying career, the strategies in [tracking multiple income streams in Notion](/track-multiple-income-streams-notion/) pair perfectly with this system.
+If you're already managing side income alongside your flying career, the strategies in [tracking multiple income streams in Notion](/blog/track-multiple-income-streams-notion/) pair perfectly with this system.
 
 ---
 
@@ -116,7 +116,7 @@ Flight attendants often have 2–4 consecutive days off between trips. Designate
 If you're on reserve, your income may drop to guarantee minimums. Having one month of expenses saved specifically for reserve periods prevents the stress spiral of low-income months.
 
 ### Track Layover Spending Separately
-The biggest budget leak for flight attendants is layover spending. Track it separately from your home expenses. When you can see that you're spending $40/day in New York layovers vs. $15/day in smaller cities, you can make smarter choices. For a structured approach to budgeting with unpredictable pay, check out our [budget guide for irregular income](/budget-for-irregular-income/).
+The biggest budget leak for flight attendants is layover spending. Track it separately from your home expenses. When you can see that you're spending $40/day in New York layovers vs. $15/day in smaller cities, you can make smarter choices. For a structured approach to budgeting with unpredictable pay, check out our [budget guide for irregular income](/blog/budget-for-irregular-income/).
 
 ---
 

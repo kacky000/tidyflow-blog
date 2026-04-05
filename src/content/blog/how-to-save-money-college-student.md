@@ -65,7 +65,7 @@ Whether you use a spreadsheet, a budgeting app, or a Notion template, the tool d
 
 The best financial decision you can make in college isn't picking the right stock or finding the perfect side hustle. It's learning where your money goes. Everything else follows from that.
 
-If you want to avoid the most common [budgeting mistakes](/budgeting-mistakes-to-avoid/), start by tracking your spending — even $20/month in savings compounds over time.
+If you want to avoid the most common [budgeting mistakes](/blog/budgeting-mistakes-to-avoid/), start by tracking your spending — even $20/month in savings compounds over time.
 
 Need a simple system to get started? A Notion template can turn expense tracking into a 2-minute daily habit.
 
@@ -90,11 +90,11 @@ The easiest way to track expenses as a college student is to use a tool you alre
 The biggest money-wasting habits for college students are food delivery fees (averaging $5-10 per order), unused subscriptions (streaming services, gym memberships), impulse online shopping, and buying new textbooks instead of renting or buying used. Tracking these expenses for just one month typically reveals $100-200/month in savings opportunities.
 
 **Related reading:**
-- [How to Track Expenses in Notion](/how-to-track-expenses-in-notion/) — set up a complete tracking system in under 10 minutes
-- [Best Notion Budget Templates 2026](/best-notion-budget-templates-2026/) — free and paid templates tested and ranked
-- [The Monthly Budget Checklist You Actually Need](/monthly-budget-checklist/) — a simple monthly routine to stay on track
+- [How to Track Expenses in Notion](/blog/how-to-track-expenses-in-notion/) — set up a complete tracking system in under 10 minutes
+- [Best Notion Budget Templates 2026](/blog/best-notion-budget-templates-2026/) — free and paid templates tested and ranked
+- [The Monthly Budget Checklist You Actually Need](/blog/monthly-budget-checklist/) — a simple monthly routine to stay on track
 - [The 50/30/20 Budget Rule](/50-30-20-budget-rule-notion/) — the simplest framework for splitting your income
-- [Why People Fail at Budgeting](/why-people-fail-at-budgeting/) — avoid common pitfalls from the start
+- [Why People Fail at Budgeting](/blog/why-people-fail-at-budgeting/) — avoid common pitfalls from the start
 
 ---
 

@@ -108,7 +108,7 @@ The specific traps at this income level:
 
 ## Optimizing Savings at $4,000/Month: The Right Order
 
-Use this priority order to avoid [common budgeting mistakes](/budgeting-mistakes-to-avoid/):
+Use this priority order to avoid [common budgeting mistakes](/blog/budgeting-mistakes-to-avoid/):
 
 1. **Cover all needs** first — housing, food, transport, utilities
 2. **Capture the 401(k) employer match** — this is a 50–100% instant return
@@ -133,7 +133,7 @@ This order maximizes long-term wealth and minimizes the chance of a financial em
 | Retirement investing | 401(k) match only | Roth IRA begins | Roth IRA + more |
 | Lifestyle flexibility | Tight | Moderate | Comfortable with discipline |
 
-You can also check out the zero-based budgeting approach in the [zero-based budgeting guide](/zero-based-budgeting-guide/) if you want a more granular method for allocating every dollar.
+You can also check out the zero-based budgeting approach in the [zero-based budgeting guide](/blog/zero-based-budgeting-guide/) if you want a more granular method for allocating every dollar.
 
 ---
 

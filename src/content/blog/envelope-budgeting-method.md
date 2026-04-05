@@ -99,7 +99,7 @@ Our [Freelancer Expense Tracker](https://gettidyflow.gumroad.com/l/freelancer-ex
 
 Notion's database features make it an excellent platform for digital envelope budgeting. You can create a database with properties for category, budgeted amount, spent amount, and remaining balance. Filtered views let you see individual envelopes or a dashboard overview.
 
-Check out our guide on [how to track expenses in Notion](/how-to-track-expenses-in-notion/) for a detailed walkthrough of setting up expense tracking in your Notion workspace.
+Check out our guide on [how to track expenses in Notion](/blog/how-to-track-expenses-in-notion/) for a detailed walkthrough of setting up expense tracking in your Notion workspace.
 
 ### Using Budgeting Apps
 
@@ -115,7 +115,7 @@ How does the envelope method stack up against other popular budgeting approaches
 
 The [50/30/20 rule](/50-30-20-budget-rule-notion/) divides income into three broad categories (needs, wants, savings) without tracking individual expenses. It is simpler but offers less spending control. The envelope method is more granular and better for people who need firm category limits.
 
-[Zero-based budgeting](/zero-based-budgeting-guide/) assigns every dollar a purpose, similar to the envelope method. The main difference is that zero-based budgeting can work with any tracking system, while the envelope method specifically uses the "spend until empty" mechanic to enforce limits.
+[Zero-based budgeting](/blog/zero-based-budgeting-guide/) assigns every dollar a purpose, similar to the envelope method. The main difference is that zero-based budgeting can work with any tracking system, while the envelope method specifically uses the "spend until empty" mechanic to enforce limits.
 
 You can actually combine methods. Many budgeters use the 50/30/20 framework to set their high-level allocation, then apply envelope budgeting within the "wants" category where overspending is most likely.
 
@@ -125,7 +125,7 @@ You can actually combine methods. Many budgeters use the 50/30/20 framework to s
 
 **Include a "miscellaneous" envelope.** Unexpected small expenses happen every month. A catch-all envelope of $50 to $100 prevents these from derailing your other categories.
 
-**Review weekly, not just monthly.** A quick five-minute check on your envelope balances every Sunday prevents surprises at the end of the month. This is one habit that separates successful budgeters from those who give up — learn more about [common budgeting mistakes](/budgeting-mistakes-to-avoid/) to avoid.
+**Review weekly, not just monthly.** A quick five-minute check on your envelope balances every Sunday prevents surprises at the end of the month. This is one habit that separates successful budgeters from those who give up — learn more about [common budgeting mistakes](/blog/budgeting-mistakes-to-avoid/) to avoid.
 
 **Do not borrow from savings.** If your dining-out envelope runs dry, it is tempting to dip into your savings. Do not. The whole point is to feel the constraint and adjust your behavior. Transfer from another variable envelope if you must, but never from savings.
 
@@ -141,7 +141,7 @@ The envelope budgeting method works especially well for:
 - **Variable income earners** who need to stretch limited funds carefully
 - **Budgeting beginners** who want a concrete, easy-to-understand system
 
-It may not be the best fit if you prefer automated tracking, rarely use cash, or find category-level management too time-consuming. In that case, the [50/30/20 rule](/50-30-20-budget-rule-notion/) or a simple [monthly budget checklist](/monthly-budget-checklist/) might be a better starting point.
+It may not be the best fit if you prefer automated tracking, rarely use cash, or find category-level management too time-consuming. In that case, the [50/30/20 rule](/50-30-20-budget-rule-notion/) or a simple [monthly budget checklist](/blog/monthly-budget-checklist/) might be a better starting point.
 
 ## Frequently Asked Questions
 
@@ -171,4 +171,4 @@ The envelope method works because it makes spending limits tangible and conseque
 
 Pick three categories, set your limits, and give it one full month. Most people who try envelope budgeting for 30 days never go back to their old spending habits.
 
-**Need a tracking tool?** Our [Freelancer Expense Tracker](https://gettidyflow.gumroad.com/l/freelancer-expense-tracker) makes it easy to set up digital envelopes with built-in category tracking, charts, and a spending dashboard. Or explore our [Notion budget templates](/best-notion-budget-templates-2026/) for an all-in-one digital workspace approach.
+**Need a tracking tool?** Our [Freelancer Expense Tracker](https://gettidyflow.gumroad.com/l/freelancer-expense-tracker) makes it easy to set up digital envelopes with built-in category tracking, charts, and a spending dashboard. Or explore our [Notion budget templates](/blog/best-notion-budget-templates-2026/) for an all-in-one digital workspace approach.

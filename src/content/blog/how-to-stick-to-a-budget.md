@@ -16,7 +16,7 @@ In this guide, you'll discover 15 actionable tips to help you stay on budget con
 
 ## Why Most People Fail at Budgeting
 
-Before diving into solutions, it helps to understand [why people fail at budgeting](/why-people-fail-at-budgeting/) in the first place:
+Before diving into solutions, it helps to understand [why people fail at budgeting](/blog/why-people-fail-at-budgeting/) in the first place:
 
 - **Unrealistic expectations**: Setting overly strict spending limits leads to burnout
 - **No tracking system**: Without a way to monitor spending in real time, it's easy to overshoot
@@ -32,8 +32,8 @@ Understanding these pitfalls is the first step toward building a budget you can 
 Not all budgeting methods work for everyone. The key is finding one that matches your personality and financial situation:
 
 - **[50/30/20 Rule](/50-30-20-budget-rule-notion/)**: Simple and flexible — allocate 50% to needs, 30% to wants, and 20% to savings
-- **[Zero-Based Budgeting](/zero-based-budgeting-guide/)**: Give every dollar a job — perfect for detail-oriented planners
-- **[Envelope Budgeting](/envelope-budgeting-method/)**: Use physical or digital "envelopes" to control spending categories
+- **[Zero-Based Budgeting](/blog/zero-based-budgeting-guide/)**: Give every dollar a job — perfect for detail-oriented planners
+- **[Envelope Budgeting](/blog/envelope-budgeting-method/)**: Use physical or digital "envelopes" to control spending categories
 
 If you're not sure which method to pick, start with the 50/30/20 rule. It's forgiving enough for beginners while still providing structure.
 
@@ -43,7 +43,7 @@ You can't manage what you don't measure. Tracking your spending is the single mo
 
 **How to track effectively:**
 - Use an app like Copilot Money or EveryDollar for automatic tracking
-- Set up a [Notion expense tracker](/how-to-track-expenses-in-notion/) for manual but detailed tracking
+- Set up a [Notion expense tracker](/blog/how-to-track-expenses-in-notion/) for manual but detailed tracking
 - Review your spending at least once a week
 
 The goal isn't perfection — it's awareness. Once you see where your money goes, you naturally start making better decisions.
@@ -97,7 +97,7 @@ Weekly budgets give you more frequent checkpoints and make overspending harder t
 
 Seeing your progress visually makes budgeting feel more rewarding. Options include:
 
-- **Notion dashboards** with progress bars and charts — [see the best Notion budget templates](/best-notion-budget-templates-2026/)
+- **Notion dashboards** with progress bars and charts — [see the best Notion budget templates](/blog/best-notion-budget-templates-2026/)
 - **Excel spreadsheets** with conditional formatting that turns red when you overspend
 - **Physical trackers** like a savings thermometer on your fridge
 
@@ -110,7 +110,7 @@ Food is the #1 budget buster for most households. Meal planning can save $200-30
 - Plan meals for the week every Sunday
 - Make a shopping list and stick to it
 - Cook in batches to reduce the temptation to eat out
-- Use a [monthly budget checklist](/monthly-budget-checklist/) to stay organized
+- Use a [monthly budget checklist](/blog/monthly-budget-checklist/) to stay organized
 
 ### 9. Find an Accountability Partner
 
@@ -133,7 +133,7 @@ A budget isn't a "set it and forget it" document. Schedule a weekly 15-minute bu
 - [ ] Check upcoming expenses for the next week
 - [ ] Celebrate wins (even small ones!)
 
-Notion and Excel make this review process quick — [compare Notion vs Excel for budgeting](/notion-vs-excel-budgeting/) to find the best tool for you.
+Notion and Excel make this review process quick — [compare Notion vs Excel for budgeting](/blog/notion-vs-excel-budgeting/) to find the best tool for you.
 
 ### 11. Build an Emergency Fund First
 
@@ -151,7 +151,7 @@ If you consistently overspend in certain categories (dining out, shopping, enter
 
 - Withdraw your weekly budget in cash at the start of each week
 - When the cash is gone, you're done spending in that category
-- This is the physical version of [envelope budgeting](/envelope-budgeting-method/)
+- This is the physical version of [envelope budgeting](/blog/envelope-budgeting-method/)
 
 The psychological pain of handing over physical cash makes you think twice about every purchase.
 
@@ -187,11 +187,11 @@ The best budget is the one you'll actually use. Here are the top tools for 2026:
 **For Notion users:**
 - Build a custom budget dashboard with databases, formulas, and views
 - Track expenses, income, and savings goals in one workspace
-- [Learn how to track expenses in Notion](/how-to-track-expenses-in-notion/)
+- [Learn how to track expenses in Notion](/blog/how-to-track-expenses-in-notion/)
 
 **For Excel/spreadsheet lovers:**
 - Use pre-built templates with charts and conditional formatting
-- [Check out the best budget spreadsheet templates](/best-budget-spreadsheet-templates/)
+- [Check out the best budget spreadsheet templates](/blog/best-budget-spreadsheet-templates/)
 - Perfect for detailed analysis and custom formulas
 
 **For app users:**
@@ -234,15 +234,15 @@ Most people need 2-3 months to build a comfortable budgeting habit. The first mo
 
 ### What's the easiest budgeting method for beginners?
 
-The [50/30/20 rule](/50-30-20-budget-rule-notion/) is widely considered the easiest method for beginners. It only requires three categories — needs (50%), wants (30%), and savings (20%) — so there's less to track and more flexibility. Once you're comfortable, you can move to more detailed methods like [zero-based budgeting](/zero-based-budgeting-guide/).
+The [50/30/20 rule](/50-30-20-budget-rule-notion/) is widely considered the easiest method for beginners. It only requires three categories — needs (50%), wants (30%), and savings (20%) — so there's less to track and more flexibility. Once you're comfortable, you can move to more detailed methods like [zero-based budgeting](/blog/zero-based-budgeting-guide/).
 
 ### How do I stick to a budget with irregular income?
 
-Budget based on your lowest expected monthly income. When you earn more than the baseline, put the extra toward savings or debt. Freelancers and gig workers should also [track multiple income streams](/track-multiple-income-streams-notion/) to get a clear picture of their earnings over time.
+Budget based on your lowest expected monthly income. When you earn more than the baseline, put the extra toward savings or debt. Freelancers and gig workers should also [track multiple income streams](/blog/track-multiple-income-streams-notion/) to get a clear picture of their earnings over time.
 
 ### Is it better to use an app or a spreadsheet for budgeting?
 
-It depends on your style. Apps are better for automatic tracking and on-the-go monitoring. Spreadsheets (Excel or Notion) offer more customization and detailed analysis. Many people use both — an app for daily tracking and a spreadsheet for monthly reviews. [Compare Notion vs Excel for budgeting](/notion-vs-excel-budgeting/) to decide which fits your needs.
+It depends on your style. Apps are better for automatic tracking and on-the-go monitoring. Spreadsheets (Excel or Notion) offer more customization and detailed analysis. Many people use both — an app for daily tracking and a spreadsheet for monthly reviews. [Compare Notion vs Excel for budgeting](/blog/notion-vs-excel-budgeting/) to decide which fits your needs.
 
 ### What should I do if my partner won't stick to the budget?
 
@@ -250,12 +250,12 @@ Start by having an open, judgment-free conversation about financial goals. Focus
 
 ## Related Articles
 
-- [Budgeting for Couples](/budgeting-for-couples/) — Tips for sticking to a budget when two people are involved
-- [How to Create a Budget: Step-by-Step Guide](/how-to-create-a-budget/) — Start from scratch with this complete beginner's guide
-- [Why People Fail at Budgeting](/why-people-fail-at-budgeting/) — Understand the psychology behind budgeting failure
-- [7 Budgeting Mistakes That Keep You Broke](/budgeting-mistakes-to-avoid/) — Common mistakes and how to fix them
+- [Budgeting for Couples](/blog/budgeting-for-couples/) — Tips for sticking to a budget when two people are involved
+- [How to Create a Budget: Step-by-Step Guide](/blog/how-to-create-a-budget/) — Start from scratch with this complete beginner's guide
+- [Why People Fail at Budgeting](/blog/why-people-fail-at-budgeting/) — Understand the psychology behind budgeting failure
+- [7 Budgeting Mistakes That Keep You Broke](/blog/budgeting-mistakes-to-avoid/) — Common mistakes and how to fix them
 - [The 50/30/20 Budget Rule in Notion](/50-30-20-budget-rule-notion/) — The simplest budgeting framework
-- [5 Best Notion Budget Templates in 2026](/best-notion-budget-templates-2026/) — Find the right template for you
+- [5 Best Notion Budget Templates in 2026](/blog/best-notion-budget-templates-2026/) — Find the right template for you
 
 ---
 

@@ -177,9 +177,9 @@ If you'd rather not build your own freelancer tax organizer from scratch, we've 
 
 ## Related Articles
 
-- [Track Multiple Income Streams in Notion](/track-multiple-income-streams-notion/) — Organize all your freelance revenue in one place
-- [How to Track Your Expenses in Notion](/how-to-track-expenses-in-notion/) — Daily expense tracking made simple
-- [Monthly Budget Checklist](/monthly-budget-checklist/) — The monthly routine that keeps finances organized
+- [Track Multiple Income Streams in Notion](/blog/track-multiple-income-streams-notion/) — Organize all your freelance revenue in one place
+- [How to Track Your Expenses in Notion](/blog/how-to-track-expenses-in-notion/) — Daily expense tracking made simple
+- [Monthly Budget Checklist](/blog/monthly-budget-checklist/) — The monthly routine that keeps finances organized
 - [The 50/30/20 Budget Rule](/50-30-20-budget-rule-notion/) — Budget your freelance income effectively
 
 ## Frequently Asked Questions
@@ -212,7 +212,7 @@ Tax season becomes routine instead of stressful. You file on time, you claim eve
 
 That's worth more than just money. That's freedom.
 
-Related reading: [How to track expenses in Notion](/how-to-track-expenses-in-notion/) for a detailed walkthrough. Also check our guide on [budgeting mistakes to avoid](/budgeting-mistakes-to-avoid/) to stay on top of your finances year-round.
+Related reading: [How to track expenses in Notion](/blog/how-to-track-expenses-in-notion/) for a detailed walkthrough. Also check our guide on [budgeting mistakes to avoid](/blog/budgeting-mistakes-to-avoid/) to stay on top of your finances year-round.
 
 ---
 

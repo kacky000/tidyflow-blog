@@ -108,7 +108,7 @@ If you go the Google Sheets route, here are the best free templates to start wit
 3. **Tiller Foundation Template** — Free trial with automated bank transaction imports. After the trial, keep the template structure and update manually.
 4. **Reddit r/personalfinance templates** — Community-tested, practical features like debt snowball calculators.
 
-For a complete roundup with Excel and Notion options too, see our [best free budget spreadsheet templates](/best-budget-spreadsheet-templates/).
+For a complete roundup with Excel and Notion options too, see our [best free budget spreadsheet templates](/blog/best-budget-spreadsheet-templates/).
 
 ## The Hybrid Approach
 
@@ -116,30 +116,30 @@ Some budgeters use both — and it's actually the smartest strategy for many peo
 - **Google Sheets** for the master budget with formulas, projections, and charts
 - **Notion** for daily expense logging (easier on mobile) and financial planning pages
 
-You can embed Google Sheets in Notion pages for the best of both worlds. This works especially well if you're [budgeting as a couple](/budgeting-for-couples/) — one partner may prefer spreadsheets while the other likes Notion's visual approach.
+You can embed Google Sheets in Notion pages for the best of both worlds. This works especially well if you're [budgeting as a couple](/blog/budgeting-for-couples/) — one partner may prefer spreadsheets while the other likes Notion's visual approach.
 
 ## Budgeting Methods That Work With Both Tools
 
 Both Google Sheets and Notion support popular budgeting frameworks:
 
 - **[50/30/20 Rule](/50-30-20-budget-rule-notion/)** — Allocate 50% needs, 30% wants, 20% savings. Easy to set up in either tool with category grouping.
-- **[Zero-Based Budgeting](/zero-based-budgeting-guide/)** — Assign every dollar a job. Spreadsheets are slightly better here due to formula power.
-- **[Envelope Method](/envelope-budgeting-method/)** — Virtual envelopes for spending categories. Notion's board view naturally mimics envelopes.
-- **[Paycheck-to-Paycheck Method](/paycheck-to-paycheck-budgeting/)** — Budget per paycheck instead of monthly. Both tools handle this well.
+- **[Zero-Based Budgeting](/blog/zero-based-budgeting-guide/)** — Assign every dollar a job. Spreadsheets are slightly better here due to formula power.
+- **[Envelope Method](/blog/envelope-budgeting-method/)** — Virtual envelopes for spending categories. Notion's board view naturally mimics envelopes.
+- **[Paycheck-to-Paycheck Method](/blog/paycheck-to-paycheck-budgeting/)** — Budget per paycheck instead of monthly. Both tools handle this well.
 
 ## Frequently Asked Questions
 
 ### Which is easier for beginners — Google Sheets or Notion?
-Google Sheets if you've used Excel before. Notion if you haven't — its database approach is more intuitive than formulas for many people. If you're completely new to budgeting, start with our [how to create a budget](/how-to-create-a-budget/) guide regardless of which tool you choose.
+Google Sheets if you've used Excel before. Notion if you haven't — its database approach is more intuitive than formulas for many people. If you're completely new to budgeting, start with our [how to create a budget](/blog/how-to-create-a-budget/) guide regardless of which tool you choose.
 
 ### Can Notion replace Google Sheets for budgeting?
-For most people, yes. The main things you'd miss are advanced formulas (QUERY, VLOOKUP) and built-in charts. For basic to intermediate budgeting, Notion handles everything. Read our [Notion vs Excel comparison](/notion-vs-excel-budgeting/) for the full breakdown.
+For most people, yes. The main things you'd miss are advanced formulas (QUERY, VLOOKUP) and built-in charts. For basic to intermediate budgeting, Notion handles everything. Read our [Notion vs Excel comparison](/blog/notion-vs-excel-budgeting/) for the full breakdown.
 
 ### Is one more secure than the other?
 Both use encryption and are equally secure for personal budgeting. Google has the edge for enterprise security features, but for individual use, they're comparable.
 
 ### What's the best free Google Sheets expense tracker template in 2026?
-Google's own built-in Monthly Budget template (found in the Template Gallery) is the best starting point — it's free, requires zero downloads, and includes income/expense categories with automatic totals. For more advanced tracking with bank imports, try Tiller's free trial. See all our picks in [best free budget spreadsheet templates 2026](/best-budget-spreadsheet-templates/).
+Google's own built-in Monthly Budget template (found in the Template Gallery) is the best starting point — it's free, requires zero downloads, and includes income/expense categories with automatic totals. For more advanced tracking with bank imports, try Tiller's free trial. See all our picks in [best free budget spreadsheet templates 2026](/blog/best-budget-spreadsheet-templates/).
 
 ### Can I switch from Google Sheets to Notion (or vice versa)?
 Yes. You can export Google Sheets data as CSV and import it into a Notion database. Going the other way, Notion lets you export any database as CSV for import into Google Sheets. The transition takes about 15 minutes for most budgets.
@@ -148,22 +148,22 @@ Yes. You can export Google Sheets data as CSV and import it into a Notion databa
 No. Both Google Sheets and Notion are 100% free for personal budgeting. Google Sheets has no premium tier for individual use. Notion's free plan includes unlimited pages and databases — more than enough for budgeting. Premium Notion templates are available but optional.
 
 ### How do Google Sheets and Notion compare to dedicated budgeting apps?
-Dedicated apps like YNAB, Mint, or EveryDollar offer automatic bank syncing and mobile-first design. But they come with subscriptions ($5-15/month) and less customization. Google Sheets and Notion are free and infinitely customizable. For comparisons with specific apps, see our guides on [YNAB vs Notion](/ynab-vs-notion-for-budgeting/), [Mint vs Notion](/mint-vs-notion-for-budgeting/), and [EveryDollar vs Notion](/everydollar-vs-notion-for-budgeting/).
+Dedicated apps like YNAB, Mint, or EveryDollar offer automatic bank syncing and mobile-first design. But they come with subscriptions ($5-15/month) and less customization. Google Sheets and Notion are free and infinitely customizable. For comparisons with specific apps, see our guides on [YNAB vs Notion](/blog/ynab-vs-notion-for-budgeting/), [Mint vs Notion](/blog/mint-vs-notion-for-budgeting/), and [EveryDollar vs Notion](/blog/everydollar-vs-notion-for-budgeting/).
 
 ## Try Both — Start for Free
 
-If you want a spreadsheet approach, check out our [best free budget spreadsheet templates for 2026](/best-budget-spreadsheet-templates/). If you prefer the Notion approach, grab our [Budget Tracker Template](https://gettidyflow.gumroad.com/l/budget-tracker) and start in minutes.
+If you want a spreadsheet approach, check out our [best free budget spreadsheet templates for 2026](/blog/best-budget-spreadsheet-templates/). If you prefer the Notion approach, grab our [Budget Tracker Template](https://gettidyflow.gumroad.com/l/budget-tracker) and start in minutes.
 
 Need a professional-grade expense tracker ready to go? Our [Freelancer Expense Tracker](https://gettidyflow.gumroad.com/l/freelancer-expense-tracker) for Excel includes automated calculations, category breakdowns, and a visual dashboard.
 
 ---
 
 *Related reading:*
-- [Best Free Budget Spreadsheet Templates 2026](/best-budget-spreadsheet-templates/)
-- [Notion vs Excel for Budgeting](/notion-vs-excel-budgeting/)
-- [How to Track Expenses in Notion](/how-to-track-expenses-in-notion/)
-- [5 Best Notion Budget Templates 2026](/best-notion-budget-templates-2026/)
-- [Are Notion Templates Worth Paying For?](/notion-templates-worth-paying-for/)
-- [Monthly Budget Checklist](/monthly-budget-checklist/)
-- [How to Save Money as a College Student](/how-to-save-money-college-student/)
-- [Budgeting Mistakes to Avoid](/budgeting-mistakes-to-avoid/)
+- [Best Free Budget Spreadsheet Templates 2026](/blog/best-budget-spreadsheet-templates/)
+- [Notion vs Excel for Budgeting](/blog/notion-vs-excel-budgeting/)
+- [How to Track Expenses in Notion](/blog/how-to-track-expenses-in-notion/)
+- [5 Best Notion Budget Templates 2026](/blog/best-notion-budget-templates-2026/)
+- [Are Notion Templates Worth Paying For?](/blog/notion-templates-worth-paying-for/)
+- [Monthly Budget Checklist](/blog/monthly-budget-checklist/)
+- [How to Save Money as a College Student](/blog/how-to-save-money-college-student/)
+- [Budgeting Mistakes to Avoid](/blog/budgeting-mistakes-to-avoid/)

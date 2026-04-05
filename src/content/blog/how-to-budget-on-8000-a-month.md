@@ -47,7 +47,7 @@ At this income, you can afford a comfortable one-bedroom or a modest two-bedroom
 Electric, water, internet, renters or homeowners insurance, and phone.
 
 **Groceries: $400–$500**
-Quality food without extravagance. Meal planning still matters at every income level — check our [monthly budget checklist](/monthly-budget-checklist/) for a food planning template.
+Quality food without extravagance. Meal planning still matters at every income level — check our [monthly budget checklist](/blog/monthly-budget-checklist/) for a food planning template.
 
 **Transportation: $300–$500**
 Car payment, insurance, gas, or public transit. Consider whether a car payment is truly necessary or if a paid-off reliable vehicle saves you $400/month that could be invested.
@@ -126,7 +126,7 @@ The math is straightforward: $3,200/month invested at 8% average annual return g
 
 ## Common Mistakes to Avoid at $8,000/Month
 
-Earning $8,000 does not make you immune to [common budgeting mistakes](/budgeting-mistakes-to-avoid/). Watch for these traps:
+Earning $8,000 does not make you immune to [common budgeting mistakes](/blog/budgeting-mistakes-to-avoid/). Watch for these traps:
 
 - **Lifestyle inflation**: Upgrading everything — car, apartment, wardrobe — the moment income rises
 - **Ignoring taxes**: Not adjusting withholding or making estimated payments for side income

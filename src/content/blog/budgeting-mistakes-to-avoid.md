@@ -61,13 +61,13 @@ Start with a simple system, be consistent, and give yourself grace when you slip
 
 ## Related Articles
 
-- [Budgeting for Couples](/budgeting-for-couples/) — Avoid common money conflicts with your partner
-- [How to Stick to a Budget: 15 Proven Tips](/how-to-stick-to-a-budget/) — Avoid these mistakes and stay on track with your budget
-- [How to Budget When You Live Paycheck to Paycheck](/paycheck-to-paycheck-budgeting/) — Budgeting strategies when every dollar counts
-- [How to Track Your Expenses in Notion](/how-to-track-expenses-in-notion/) — A step-by-step guide to simple expense tracking
+- [Budgeting for Couples](/blog/budgeting-for-couples/) — Avoid common money conflicts with your partner
+- [How to Stick to a Budget: 15 Proven Tips](/blog/how-to-stick-to-a-budget/) — Avoid these mistakes and stay on track with your budget
+- [How to Budget When You Live Paycheck to Paycheck](/blog/paycheck-to-paycheck-budgeting/) — Budgeting strategies when every dollar counts
+- [How to Track Your Expenses in Notion](/blog/how-to-track-expenses-in-notion/) — A step-by-step guide to simple expense tracking
 - [The 50/30/20 Budget Rule in Notion](/50-30-20-budget-rule-notion/) — A framework that prevents the "too strict" mistake
-- [Why People Fail at Budgeting](/why-people-fail-at-budgeting/) — The psychology behind budgeting failure
-- [5 Best Notion Budget Templates in 2026](/best-notion-budget-templates-2026/) — Find a template that fits your style
+- [Why People Fail at Budgeting](/blog/why-people-fail-at-budgeting/) — The psychology behind budgeting failure
+- [5 Best Notion Budget Templates in 2026](/blog/best-notion-budget-templates-2026/) — Find a template that fits your style
 
 ## Frequently Asked Questions
 
@@ -88,10 +88,10 @@ The 50/30/20 rule is one of the most effective budgeting methods for beginners. 
 Most people fail at budgeting because of unrealistic expectations, not lack of discipline. They set $0 budgets for entertainment, try to track every penny, and use complicated tools. Successful budgeting requires a simple system, regular reviews, and self-forgiveness when you slip up. The goal is progress, not perfection.
 
 *Related reading:*
-- [How to Create a Budget: Step-by-Step Guide](/how-to-create-a-budget/) — Start from scratch with this complete beginner's guide
-- [Envelope Budgeting Method: Complete Guide](/envelope-budgeting-method/) — Prevent overspending with the cash stuffing system
-- [Zero-Based Budgeting: A Complete Beginner's Guide](/zero-based-budgeting-guide/) — The most detailed budgeting method to prevent these mistakes
-- [Best Free Budget Spreadsheet Templates for 2026](/best-budget-spreadsheet-templates/) — Start with the right template
+- [How to Create a Budget: Step-by-Step Guide](/blog/how-to-create-a-budget/) — Start from scratch with this complete beginner's guide
+- [Envelope Budgeting Method: Complete Guide](/blog/envelope-budgeting-method/) — Prevent overspending with the cash stuffing system
+- [Zero-Based Budgeting: A Complete Beginner's Guide](/blog/zero-based-budgeting-guide/) — The most detailed budgeting method to prevent these mistakes
+- [Best Free Budget Spreadsheet Templates for 2026](/blog/best-budget-spreadsheet-templates/) — Start with the right template
 
 [Start tracking with a simple Notion Budget Tracker →](https://gettidyflow.gumroad.com/l/notion-monthly-budget-tracker)
 

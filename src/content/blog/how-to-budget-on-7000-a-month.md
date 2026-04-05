@@ -138,9 +138,9 @@ It sounds counterintuitive, but here is how it happens:
 
 Total lifestyle inflation: $16,200/year. That is almost exactly the amount they could have invested. After ten years at 8% returns, that lost investment would have been worth nearly $250,000.
 
-Avoid these [common budgeting mistakes](/budgeting-mistakes-to-avoid/) by tracking your actual spending against your budget every month. The gap between what you think you spend and what you actually spend is where wealth goes to die.
+Avoid these [common budgeting mistakes](/blog/budgeting-mistakes-to-avoid/) by tracking your actual spending against your budget every month. The gap between what you think you spend and what you actually spend is where wealth goes to die.
 
-Use an [expense tracking system](/how-to-track-expenses-in-notion/) to make this review automatic and painless.
+Use an [expense tracking system](/blog/how-to-track-expenses-in-notion/) to make this review automatic and painless.
 
 ---
 

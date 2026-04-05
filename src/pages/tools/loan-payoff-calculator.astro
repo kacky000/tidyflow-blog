@@ -1,0 +1,860 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const title = 'Loan Payoff Calculator — See Your Debt-Free Date';
+const description = 'Enter your loan balance, interest rate, and monthly payment. See your payoff date, total interest, and how extra payments can save you thousands. Free, no signup.';
+---
+
+<BaseLayout title={title} description={description}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Loan Payoff Calculator",
+      "url": "https://gettidyflow.com/tools/loan-payoff-calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "description": description
+    })} />
+  </Fragment>
+
+  <section class="tool-hero">
+    <div class="tool-hero-inner">
+      <span class="tool-badge">Free Tool — No Signup Required</span>
+      <h1>Loan Payoff <span class="gradient-text">Calculator</span></h1>
+      <p class="tool-subtitle">Enter your loan details and see exactly when you will be debt-free. Add extra payments to discover how much time and money you can save.</p>
+    </div>
+  </section>
+
+  <section class="tool-app">
+    <div class="tool-container">
+      <div class="inputs-grid">
+        <div class="input-card">
+          <label for="loan-balance">Loan Balance</label>
+          <div class="input-wrap">
+            <span class="symbol">$</span>
+            <input type="number" id="loan-balance" placeholder="25,000" min="0" step="100" />
+          </div>
+          <span class="input-hint">Total remaining balance on your loan</span>
+        </div>
+        <div class="input-card">
+          <label for="interest-rate">Annual Interest Rate</label>
+          <div class="input-wrap">
+            <span class="symbol">%</span>
+            <input type="number" id="interest-rate" placeholder="6.5" min="0" max="50" step="0.1" />
+          </div>
+          <span class="input-hint">Your loan's APR</span>
+        </div>
+        <div class="input-card">
+          <label for="monthly-payment">Monthly Payment</label>
+          <div class="input-wrap">
+            <span class="symbol">$</span>
+            <input type="number" id="monthly-payment" placeholder="500" min="0" step="10" />
+          </div>
+          <span class="input-hint">Your current monthly payment</span>
+        </div>
+        <div class="input-card">
+          <label for="extra-payment">Extra Monthly Payment (optional)</label>
+          <div class="input-wrap">
+            <span class="symbol">$</span>
+            <input type="number" id="extra-payment" placeholder="0" min="0" step="10" />
+          </div>
+          <span class="input-hint">Additional amount to pay each month</span>
+        </div>
+      </div>
+
+      <div class="error-card" id="error-card" style="display:none;">
+        <p id="error-text"></p>
+      </div>
+
+      <div class="results-section" id="results-section" style="display:none;">
+        <div class="stats-grid stats-grid-4">
+          <div class="stat-card stat-primary">
+            <span class="stat-value" id="stat-payoff-date">&mdash;</span>
+            <span class="stat-label">Debt-Free Date</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-value" id="stat-months">&mdash;</span>
+            <span class="stat-label">Months Remaining</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-value" id="stat-total-interest">&mdash;</span>
+            <span class="stat-label">Total Interest</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-value" id="stat-total-paid">&mdash;</span>
+            <span class="stat-label">Total Amount Paid</span>
+          </div>
+        </div>
+
+        <div class="savings-card" id="savings-card" style="display:none;">
+          <h3>Extra Payment Impact</h3>
+          <div class="savings-grid">
+            <div class="savings-item">
+              <span class="savings-label">Time Saved</span>
+              <span class="savings-value" id="savings-months">&mdash;</span>
+            </div>
+            <div class="savings-item">
+              <span class="savings-label">Interest Saved</span>
+              <span class="savings-value savings-highlight" id="savings-interest">&mdash;</span>
+            </div>
+            <div class="savings-item">
+              <span class="savings-label">Original Payoff</span>
+              <span class="savings-value" id="savings-original-date">&mdash;</span>
+            </div>
+            <div class="savings-item">
+              <span class="savings-label">New Payoff</span>
+              <span class="savings-value savings-highlight" id="savings-new-date">&mdash;</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="progress-card">
+          <div class="progress-header">
+            <span class="progress-label">Principal vs Interest</span>
+          </div>
+          <div class="pie-bar">
+            <div class="pie-bar-principal" id="pie-bar-principal" style="width:0%"></div>
+          </div>
+          <div class="pie-legend">
+            <span><span class="legend-dot" style="background:#7c3aed;"></span>Principal: <strong id="legend-principal">$0</strong></span>
+            <span><span class="legend-dot" style="background:#f59e0b;"></span>Interest: <strong id="legend-interest">$0</strong></span>
+          </div>
+        </div>
+
+        <div class="amortization-card">
+          <div class="amortization-header">
+            <h3>Amortization Schedule</h3>
+            <button class="toggle-btn" id="toggle-schedule">Show Full Schedule</button>
+          </div>
+          <div class="rate-table-wrapper">
+            <table class="rate-table" id="amort-table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Payment</th>
+                  <th>Principal</th>
+                  <th>Interest</th>
+                  <th>Balance</th>
+                </tr>
+              </thead>
+              <tbody id="amort-tbody"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="tip-card" id="tip-card" style="display:none;">
+          <span class="tip-icon">&#128161;</span>
+          <p id="tip-text"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool-cta">
+    <div class="tool-container">
+      <div class="cta-card">
+        <h2>Track Every Payment & Stay on Course</h2>
+        <p>Our Freelancer Expense Tracker makes it dead simple to track loan payments, see progress, and stay motivated on your debt-free journey.</p>
+        <a href="https://gettidyflow.gumroad.com/l/freelancer-expense-tracker" target="_blank" rel="noopener" class="cta-button">Get the Expense Tracker &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool-content">
+    <div class="tool-container content-narrow">
+      <h2>How Loan Payoff Works</h2>
+      <p>Every monthly payment you make is split between interest and principal. In the early months, most of your payment goes toward interest. As the balance shrinks, more goes to principal. This is called <strong>amortization</strong>, and the schedule above shows you exactly how it plays out month by month.</p>
+      <p>Extra payments go directly to principal, which reduces the balance faster — and since interest is calculated on the remaining balance, you pay less interest going forward. Even $50-$100 extra per month can save thousands over the life of a loan.</p>
+
+      <h2>How to Use This Calculator</h2>
+      <ol>
+        <li>Enter your <strong>remaining loan balance</strong> — check your latest statement.</li>
+        <li>Enter the <strong>annual interest rate (APR)</strong> — this is on your loan agreement.</li>
+        <li>Enter your <strong>current monthly payment</strong>.</li>
+        <li>Optionally enter an <strong>extra monthly payment</strong> to see the impact.</li>
+        <li>Review the <strong>amortization schedule</strong> to understand where every dollar goes.</li>
+      </ol>
+
+      <h2>Strategies to Pay Off Loans Faster</h2>
+      <ul>
+        <li><strong>Round up payments</strong> — if your payment is $437, round to $500. The extra $63 goes straight to principal.</li>
+        <li><strong>Biweekly payments</strong> — pay half your monthly amount every 2 weeks. You end up making 26 half-payments (13 full payments) per year instead of 12.</li>
+        <li><strong>Debt avalanche method</strong> — if you have multiple loans, put extra money toward the highest-rate loan first. Use our <a href="/blog/debt-payoff-budget-template/">debt payoff template</a> to track progress.</li>
+        <li><strong>Refinance</strong> — if rates have dropped since you took the loan, refinancing could lower your rate and save thousands.</li>
+        <li><strong>Windfalls to principal</strong> — tax refunds, bonuses, and side hustle income can knock months off your timeline.</li>
+      </ul>
+
+      <h2>Types of Loans This Calculator Works For</h2>
+      <ul>
+        <li>Student loans (federal and private)</li>
+        <li>Auto loans</li>
+        <li>Personal loans</li>
+        <li>Mortgages</li>
+        <li>Credit card debt (use the minimum payment as your monthly amount)</li>
+      </ul>
+
+      <h2>Related Resources</h2>
+      <ul>
+        <li><a href="/tools/debt-payoff-calculator">Debt Payoff Calculator (Multiple Debts)</a> — plan your strategy for multiple loans</li>
+        <li><a href="/tools/savings-goal-calculator">Savings Goal Calculator</a> — once debt-free, start building wealth</li>
+        <li><a href="/tools/budget-calculator">Budget Calculator</a> — find room in your budget for extra payments</li>
+        <li><a href="/blog/debt-payoff-budget-template/">Debt Payoff Budget Template</a></li>
+        <li><a href="/blog/how-to-pay-off-student-loans-fast/">How to Pay Off Student Loans Fast</a></li>
+      </ul>
+
+      <h2>Frequently Asked Questions</h2>
+      <details>
+        <summary>Does making extra payments actually save that much?</summary>
+        <p>Yes. On a $30,000 loan at 7% with $500/month payments, adding just $100 extra per month saves you <strong>$3,400 in interest</strong> and pays off the loan <strong>18 months early</strong>. The higher your interest rate, the more dramatic the savings.</p>
+      </details>
+      <details>
+        <summary>Should I pay off my loan early or invest?</summary>
+        <p>As a general rule, if your loan rate is above 6-7%, pay it off first. If it is below 4-5% (like many mortgages), you may earn more by investing in index funds. Between 4-7% is a gray area — paying off debt is a guaranteed "return" equal to your interest rate.</p>
+      </details>
+      <details>
+        <summary>Does this calculator account for variable rates?</summary>
+        <p>No, this assumes a fixed interest rate. If you have a variable rate loan, use your current rate for a snapshot. Re-run the calculator if your rate changes.</p>
+      </details>
+      <details>
+        <summary>What if my payment does not cover the interest?</summary>
+        <p>If your monthly payment is less than the monthly interest charge, your balance will grow over time (negative amortization). The calculator will warn you if this happens. You need to increase your payment to at least cover the interest.</p>
+      </details>
+      <details>
+        <summary>Is there a penalty for paying off loans early?</summary>
+        <p>Some loans (especially mortgages and auto loans) have prepayment penalties. Check your loan agreement. Federal student loans never have prepayment penalties. If your loan does, factor in the penalty cost when deciding whether to make extra payments.</p>
+      </details>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .tool-hero {
+    background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+    padding: 4rem 1.5rem 3rem;
+    text-align: center;
+    color: #fff;
+  }
+  .tool-hero-inner {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .tool-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(4px);
+    padding: 0.35rem 1rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+  }
+  .tool-hero h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 800;
+    line-height: 1.15;
+    margin: 0 0 1rem;
+  }
+  .gradient-text {
+    background: linear-gradient(90deg, #fde68a, #fbbf24);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .tool-subtitle {
+    font-size: 1.1rem;
+    opacity: 0.92;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .tool-app {
+    padding: 2.5rem 1.5rem;
+    background: #f8f9fb;
+  }
+  .tool-container {
+    max-width: 880px;
+    margin: 0 auto;
+  }
+
+  .inputs-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  .input-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+  .input-card label {
+    display: block;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #1a1a2e;
+    margin-bottom: 0.5rem;
+  }
+  .input-wrap {
+    position: relative;
+  }
+  .symbol {
+    position: absolute;
+    left: 0.85rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: #7c3aed;
+  }
+  .input-card input[type="number"] {
+    width: 100%;
+    padding: 0.85rem 0.85rem 0.85rem 2rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    outline: none;
+    font-family: inherit;
+    color: #1a1a2e;
+    transition: border-color 0.2s;
+  }
+  .input-card input:focus {
+    border-color: #7c3aed;
+    box-shadow: 0 0 0 3px rgba(124,58,237,0.15);
+  }
+  .input-card input::placeholder {
+    color: #b0b8c4;
+    font-weight: 400;
+  }
+  .input-hint {
+    display: block;
+    font-size: 0.78rem;
+    color: #999;
+    margin-top: 0.4rem;
+  }
+
+  .error-card {
+    background: #fef2f2;
+    border: 2px solid #ef4444;
+    border-radius: 14px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+  .error-card p {
+    margin: 0;
+    font-size: 1rem;
+    color: #991b1b;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+  }
+  .stats-grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .stat-card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 1.25rem;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  }
+  .stat-primary {
+    background: linear-gradient(135deg, #7c3aed, #a855f7);
+    color: #fff;
+  }
+  .stat-value {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin-bottom: 0.25rem;
+    color: #1a1a2e;
+  }
+  .stat-primary .stat-value {
+    color: #fff;
+    font-size: 1.6rem;
+  }
+  .stat-label {
+    font-size: 0.78rem;
+    color: #888;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  .stat-primary .stat-label {
+    color: rgba(255,255,255,0.85);
+  }
+
+  .savings-card {
+    background: #ecfdf5;
+    border: 2px solid #10b981;
+    border-radius: 16px;
+    padding: 2rem;
+    margin-bottom: 1.25rem;
+  }
+  .savings-card h3 {
+    margin: 0 0 1rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #065f46;
+  }
+  .savings-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .savings-item {
+    text-align: center;
+  }
+  .savings-label {
+    display: block;
+    font-size: 0.78rem;
+    color: #065f46;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    margin-bottom: 0.25rem;
+  }
+  .savings-value {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #065f46;
+  }
+  .savings-highlight {
+    color: #059669;
+  }
+
+  .progress-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    margin-bottom: 1.25rem;
+  }
+  .progress-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+  }
+  .progress-label {
+    font-weight: 700;
+    color: #1a1a2e;
+  }
+  .pie-bar {
+    width: 100%;
+    height: 28px;
+    background: linear-gradient(90deg, #f59e0b, #fbbf24);
+    border-radius: 999px;
+    overflow: hidden;
+    margin-bottom: 0.75rem;
+  }
+  .pie-bar-principal {
+    height: 100%;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #7c3aed, #a855f7);
+    transition: width 0.5s ease;
+  }
+  .pie-legend {
+    display: flex;
+    gap: 2rem;
+    font-size: 0.9rem;
+    color: #666;
+  }
+  .legend-dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 6px;
+  }
+
+  .amortization-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    margin-bottom: 1.25rem;
+  }
+  .amortization-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  .amortization-header h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1a1a2e;
+  }
+  .toggle-btn {
+    background: #f5f3ff;
+    color: #7c3aed;
+    border: 1px solid #e2e8f0;
+    padding: 0.45rem 1rem;
+    border-radius: 8px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .toggle-btn:hover {
+    background: #ede9fe;
+  }
+
+  .rate-table-wrapper {
+    overflow-x: auto;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    max-height: 400px;
+    overflow-y: auto;
+  }
+  .rate-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+  }
+  .rate-table th {
+    background: #f8f9fb;
+    padding: 0.75rem 1rem;
+    text-align: left;
+    font-weight: 700;
+    color: #1a1a2e;
+    white-space: nowrap;
+    border-bottom: 2px solid #e2e8f0;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+  .rate-table td {
+    padding: 0.55rem 1rem;
+    color: #444;
+    border-bottom: 1px solid #f0f0f5;
+    white-space: nowrap;
+    font-size: 0.85rem;
+  }
+  .rate-table tr:last-child td {
+    border-bottom: none;
+  }
+
+  .tip-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    background: #fffbe6;
+    border-radius: 14px;
+    padding: 1.25rem 1.5rem;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.04);
+  }
+  .tip-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+  }
+  .tip-card p {
+    margin: 0;
+    font-size: 0.92rem;
+    color: #665500;
+    line-height: 1.55;
+  }
+
+  .tool-cta {
+    padding: 2.5rem 1.5rem;
+    background: #fff;
+  }
+  .cta-card {
+    max-width: 880px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+    border-radius: 20px;
+    padding: 2.5rem;
+    text-align: center;
+    color: #fff;
+  }
+  .cta-card h2 {
+    margin: 0 0 0.75rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+  }
+  .cta-card p {
+    margin: 0 0 1.5rem;
+    opacity: 0.92;
+    line-height: 1.6;
+  }
+  .cta-button {
+    display: inline-block;
+    background: #fff;
+    color: #7c3aed;
+    font-weight: 700;
+    padding: 0.85rem 2rem;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  }
+
+  .tool-content {
+    padding: 3rem 1.5rem 4rem;
+    background: #f8f9fb;
+  }
+  .content-narrow {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .tool-content h2 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #1a1a2e;
+    margin: 2.5rem 0 0.75rem;
+  }
+  .tool-content h2:first-child { margin-top: 0; }
+  .tool-content p, .tool-content li {
+    font-size: 1.02rem;
+    line-height: 1.7;
+    color: #444;
+  }
+  .tool-content ul, .tool-content ol {
+    padding-left: 1.25rem;
+    margin: 0.5rem 0 1rem;
+  }
+  .tool-content li { margin-bottom: 0.35rem; }
+  .tool-content a {
+    color: #7c3aed;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .tool-content details {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 0.75rem;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  }
+  .tool-content summary {
+    font-weight: 600;
+    cursor: pointer;
+    color: #1a1a2e;
+    font-size: 1.02rem;
+  }
+  .tool-content details p { margin: 0.75rem 0 0; }
+
+  @media (max-width: 640px) {
+    .inputs-grid {
+      grid-template-columns: 1fr;
+    }
+    .stats-grid-4 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .savings-grid {
+      grid-template-columns: 1fr;
+    }
+    .cta-card {
+      padding: 2rem 1.5rem;
+    }
+    .amortization-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+  }
+</style>
+
+<script>
+  const balanceInput = document.getElementById('loan-balance') as HTMLInputElement;
+  const rateInput = document.getElementById('interest-rate') as HTMLInputElement;
+  const paymentInput = document.getElementById('monthly-payment') as HTMLInputElement;
+  const extraInput = document.getElementById('extra-payment') as HTMLInputElement;
+  const resultsSection = document.getElementById('results-section')!;
+  const errorCard = document.getElementById('error-card')!;
+  const errorText = document.getElementById('error-text')!;
+
+  let showFullSchedule = false;
+  document.getElementById('toggle-schedule')!.addEventListener('click', () => {
+    showFullSchedule = !showFullSchedule;
+    document.getElementById('toggle-schedule')!.textContent = showFullSchedule ? 'Show Summary' : 'Show Full Schedule';
+    calculate();
+  });
+
+  function formatCurrency(n: number): string {
+    return '$' + n.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+  }
+
+  function formatCurrencyCents(n: number): string {
+    return '$' + n.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  }
+
+  function formatMonth(date: Date): string {
+    return date.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+  }
+
+  interface AmortRow {
+    month: number;
+    payment: number;
+    principal: number;
+    interest: number;
+    balance: number;
+  }
+
+  function amortize(balance: number, annualRate: number, monthlyPayment: number): AmortRow[] {
+    const monthlyRate = annualRate / 100 / 12;
+    const rows: AmortRow[] = [];
+    let remaining = balance;
+    let month = 0;
+    const maxMonths = 600; // 50 year cap
+
+    while (remaining > 0.01 && month < maxMonths) {
+      month++;
+      const interestCharge = remaining * monthlyRate;
+      let payment = Math.min(monthlyPayment, remaining + interestCharge);
+      let principal = payment - interestCharge;
+
+      if (principal < 0) {
+        // Payment doesn't cover interest
+        remaining += (interestCharge - payment);
+        rows.push({ month, payment, principal: -(interestCharge - payment), interest: interestCharge, balance: remaining });
+        if (month >= maxMonths) break;
+        continue;
+      }
+
+      remaining -= principal;
+      if (remaining < 0.01) remaining = 0;
+
+      rows.push({ month, payment, principal, interest: interestCharge, balance: remaining });
+    }
+
+    return rows;
+  }
+
+  function calculate() {
+    const balance = parseFloat(balanceInput.value) || 0;
+    const rate = parseFloat(rateInput.value) || 0;
+    const payment = parseFloat(paymentInput.value) || 0;
+    const extra = parseFloat(extraInput.value) || 0;
+
+    if (balance <= 0) {
+      resultsSection.style.display = 'none';
+      errorCard.style.display = 'none';
+      return;
+    }
+
+    if (payment <= 0) {
+      resultsSection.style.display = 'none';
+      errorCard.style.display = 'none';
+      return;
+    }
+
+    // Check if payment covers interest
+    const monthlyInterest = balance * (rate / 100 / 12);
+    if (payment <= monthlyInterest && rate > 0) {
+      resultsSection.style.display = 'none';
+      errorCard.style.display = 'block';
+      errorText.innerHTML = `Your monthly payment of <strong>${formatCurrency(payment)}</strong> does not cover the monthly interest of <strong>${formatCurrencyCents(monthlyInterest)}</strong>. Your balance will grow over time. Increase your payment to at least <strong>${formatCurrencyCents(monthlyInterest + 1)}</strong>.`;
+      return;
+    }
+
+    errorCard.style.display = 'none';
+    resultsSection.style.display = 'block';
+
+    // Without extra payment
+    const baseRows = amortize(balance, rate, payment);
+    const baseTotalInterest = baseRows.reduce((s, r) => s + r.interest, 0);
+    const baseTotalPaid = baseRows.reduce((s, r) => s + r.payment, 0);
+    const baseMonths = baseRows.length;
+
+    // With extra payment
+    const totalPayment = payment + extra;
+    const rows = amortize(balance, rate, totalPayment);
+    const totalInterest = rows.reduce((s, r) => s + r.interest, 0);
+    const totalPaid = rows.reduce((s, r) => s + r.payment, 0);
+    const months = rows.length;
+
+    // Stats
+    const payoffDate = new Date();
+    payoffDate.setMonth(payoffDate.getMonth() + months);
+    document.getElementById('stat-payoff-date')!.textContent = formatMonth(payoffDate);
+    document.getElementById('stat-months')!.textContent = months.toString();
+    document.getElementById('stat-total-interest')!.textContent = formatCurrency(totalInterest);
+    document.getElementById('stat-total-paid')!.textContent = formatCurrency(totalPaid);
+
+    // Extra payment savings
+    const savingsCard = document.getElementById('savings-card')!;
+    if (extra > 0) {
+      savingsCard.style.display = 'block';
+      const monthsSaved = baseMonths - months;
+      const interestSaved = baseTotalInterest - totalInterest;
+
+      document.getElementById('savings-months')!.textContent = monthsSaved + ' months';
+      document.getElementById('savings-interest')!.textContent = formatCurrency(interestSaved);
+
+      const basePayoffDate = new Date();
+      basePayoffDate.setMonth(basePayoffDate.getMonth() + baseMonths);
+      document.getElementById('savings-original-date')!.textContent = formatMonth(basePayoffDate);
+      document.getElementById('savings-new-date')!.textContent = formatMonth(payoffDate);
+    } else {
+      savingsCard.style.display = 'none';
+    }
+
+    // Principal vs Interest bar
+    const principalPct = (balance / totalPaid) * 100;
+    (document.getElementById('pie-bar-principal') as HTMLElement).style.width = principalPct + '%';
+    document.getElementById('legend-principal')!.textContent = formatCurrency(balance);
+    document.getElementById('legend-interest')!.textContent = formatCurrency(totalInterest);
+
+    // Amortization table
+    const tbody = document.getElementById('amort-tbody')!;
+    let displayRows = rows;
+
+    if (!showFullSchedule && rows.length > 12) {
+      // Show first 6, ellipsis, last 6
+      const first = rows.slice(0, 6);
+      const last = rows.slice(-6);
+      tbody.innerHTML = first.map(r =>
+        `<tr><td>${r.month}</td><td>${formatCurrencyCents(r.payment)}</td><td>${formatCurrencyCents(r.principal)}</td><td>${formatCurrencyCents(r.interest)}</td><td>${formatCurrencyCents(r.balance)}</td></tr>`
+      ).join('') +
+      `<tr><td colspan="5" style="text-align:center;color:#999;font-style:italic;padding:0.75rem;">... ${rows.length - 12} more months ...</td></tr>` +
+      last.map(r =>
+        `<tr><td>${r.month}</td><td>${formatCurrencyCents(r.payment)}</td><td>${formatCurrencyCents(r.principal)}</td><td>${formatCurrencyCents(r.interest)}</td><td>${formatCurrencyCents(r.balance)}</td></tr>`
+      ).join('');
+    } else {
+      tbody.innerHTML = displayRows.map(r =>
+        `<tr><td>${r.month}</td><td>${formatCurrencyCents(r.payment)}</td><td>${formatCurrencyCents(r.principal)}</td><td>${formatCurrencyCents(r.interest)}</td><td>${formatCurrencyCents(r.balance)}</td></tr>`
+      ).join('');
+    }
+
+    // Tip
+    const tipCard = document.getElementById('tip-card')!;
+    const tipText = document.getElementById('tip-text')!;
+    tipCard.style.display = 'flex';
+
+    if (extra === 0 && rate >= 5) {
+      const testRows = amortize(balance, rate, payment + 100);
+      const testInterest = testRows.reduce((s, r) => s + r.interest, 0);
+      const saved = baseTotalInterest - testInterest;
+      const monthsSaved = baseMonths - testRows.length;
+      tipText.innerHTML = `Try adding just <strong>$100/month</strong> in extra payments. You would save <strong>${formatCurrency(saved)}</strong> in interest and pay off your loan <strong>${monthsSaved} months earlier</strong>. Enter it above to see the full impact.`;
+    } else if (extra > 0) {
+      const interestSaved = baseTotalInterest - totalInterest;
+      tipText.innerHTML = `Your extra payment of <strong>${formatCurrency(extra)}/month</strong> saves you <strong>${formatCurrency(interestSaved)}</strong> in interest. That is a guaranteed return of ${rate}% on every extra dollar — better than most investments at this rate.`;
+    } else if (months <= 12) {
+      tipText.innerHTML = `You are almost there — just <strong>${months} months</strong> until you are debt-free. Stay the course and start planning what to do with that freed-up ${formatCurrency(payment)}/month.`;
+    } else {
+      tipText.innerHTML = `At your current rate, you will be debt-free in <strong>${Math.floor(months / 12)} years and ${months % 12} months</strong>. Consider increasing your payment to accelerate the process — even small amounts help.`;
+    }
+  }
+
+  [balanceInput, rateInput, paymentInput, extraInput].forEach(el => {
+    el.addEventListener('input', calculate);
+    el.addEventListener('change', calculate);
+  });
+</script>

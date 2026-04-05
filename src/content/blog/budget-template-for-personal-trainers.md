@@ -92,7 +92,7 @@ Here's a realistic monthly budget framework for a personal trainer earning appro
 
 This leaves a $200–$300 buffer from base income. During high-season months (January, spring), surplus income should go directly to your emergency fund or certification sinking fund.
 
-If you're running your training business as a freelancer, the [freelancer budget template guide](/budget-template-for-freelancers/) covers additional self-employment budgeting strategies that apply directly.
+If you're running your training business as a freelancer, the [freelancer budget template guide](/blog/budget-template-for-freelancers/) covers additional self-employment budgeting strategies that apply directly.
 
 ---
 
@@ -128,7 +128,7 @@ Relying solely on 1-on-1 sessions caps your income at your available hours. Budg
 - Group fitness classes (higher hourly rate per hour worked)
 - Digital products (workout plans, nutrition guides)
 
-For managing multiple revenue streams effectively, see our guide on [budgeting for side hustle income](/budget-for-side-hustle-income/).
+For managing multiple revenue streams effectively, see our guide on [budgeting for side hustle income](/blog/budget-for-side-hustle-income/).
 
 ---
 

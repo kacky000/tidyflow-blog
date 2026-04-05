@@ -34,7 +34,7 @@ If you have a regular salary, check your most recent pay stub. If your income va
 
 **Quick formula:** Total deposits into your bank account over the past 3 months ÷ 3 = your monthly income baseline.
 
-For freelancers managing irregular income, a dedicated [expense tracker](/how-to-track-expenses-in-notion/) can help you see patterns and plan ahead.
+For freelancers managing irregular income, a dedicated [expense tracker](/blog/how-to-track-expenses-in-notion/) can help you see patterns and plan ahead.
 
 ### Step 2: Track Your Current Spending
 
@@ -42,7 +42,7 @@ Before you can budget, you need to know where your money is actually going. Pull
 
 Most people are surprised by what they find. Subscriptions you forgot about, impulse purchases that add up, and dining expenses that are twice what you estimated are common discoveries.
 
-You can track spending manually with a spreadsheet, use a [budget spreadsheet template](/best-budget-spreadsheet-templates/), or set up a digital tracker in Notion or Excel.
+You can track spending manually with a spreadsheet, use a [budget spreadsheet template](/blog/best-budget-spreadsheet-templates/), or set up a digital tracker in Notion or Excel.
 
 ### Step 3: Categorize Your Expenses
 
@@ -77,7 +77,7 @@ Here are the three most popular budgeting methods:
 | **Zero-Based Budget** | Every dollar is assigned a job until income minus expenses equals zero | Detail-oriented planners |
 | **Envelope System** | Cash is divided into category envelopes; when an envelope is empty, spending stops | People who struggle with overspending |
 
-The [50/30/20 budget rule](/50-30-20-budget-rule-notion/) is the easiest starting point for most beginners. If you want more granular control, try [zero-based budgeting](/zero-based-budgeting-guide/). And if overspending on specific categories is your challenge, the [envelope budgeting method](/envelope-budgeting-method/) adds a powerful layer of spending discipline.
+The [50/30/20 budget rule](/50-30-20-budget-rule-notion/) is the easiest starting point for most beginners. If you want more granular control, try [zero-based budgeting](/blog/zero-based-budgeting-guide/). And if overspending on specific categories is your challenge, the [envelope budgeting method](/blog/envelope-budgeting-method/) adds a powerful layer of spending discipline.
 
 ### Step 5: Set Specific Financial Goals
 
@@ -106,7 +106,7 @@ Take your after-tax income and multiply:
 **If using zero-based budgeting:**
 List every expense category and assign a specific dollar amount until your income minus all allocations equals exactly zero.
 
-You can build your budget in a notebook, a spreadsheet, or a digital tool. For a ready-made solution, check out our [monthly budget checklist](/monthly-budget-checklist/) or grab a [free budget template](/best-notion-budget-templates-2026/) to get started in minutes.
+You can build your budget in a notebook, a spreadsheet, or a digital tool. For a ready-made solution, check out our [monthly budget checklist](/blog/monthly-budget-checklist/) or grab a [free budget template](/blog/best-notion-budget-templates-2026/) to get started in minutes.
 
 ### Step 7: Review and Adjust Monthly
 
@@ -118,7 +118,7 @@ Ask yourself:
 - Were there unexpected expenses I need to plan for next month?
 - Am I making progress toward my financial goals?
 
-Many people who try budgeting give up within two months. The most common [budgeting mistakes](/budgeting-mistakes-to-avoid/) include setting unrealistic limits, forgetting irregular expenses, and not reviewing regularly. Knowing these pitfalls in advance helps you avoid them.
+Many people who try budgeting give up within two months. The most common [budgeting mistakes](/blog/budgeting-mistakes-to-avoid/) include setting unrealistic limits, forgetting irregular expenses, and not reviewing regularly. Knowing these pitfalls in advance helps you avoid them.
 
 ## Best Tools for Budgeting in 2026
 
@@ -126,11 +126,11 @@ You do not need expensive software to budget effectively. Here are the most popu
 
 **Spreadsheets (Excel / Google Sheets):** Maximum flexibility and control. Our [Freelancer Expense Tracker](https://gettidyflow.gumroad.com/l/freelancer-expense-tracker) is a ready-made Excel template with built-in formulas, charts, and a dashboard.
 
-**Notion:** Perfect for people who want an all-in-one workspace. You can combine your budget with habit tracking, goal setting, and project management. See our guide on [how to track expenses in Notion](/how-to-track-expenses-in-notion/).
+**Notion:** Perfect for people who want an all-in-one workspace. You can combine your budget with habit tracking, goal setting, and project management. See our guide on [how to track expenses in Notion](/blog/how-to-track-expenses-in-notion/).
 
 **Budgeting apps:** YNAB, Monarch Money, and Goodbudget are popular options that sync with your bank accounts for automatic tracking.
 
-**Pen and paper:** Sometimes the simplest approach works best, especially when paired with the [envelope budgeting method](/envelope-budgeting-method/).
+**Pen and paper:** Sometimes the simplest approach works best, especially when paired with the [envelope budgeting method](/blog/envelope-budgeting-method/).
 
 ## Common Budgeting Mistakes to Avoid
 
@@ -142,7 +142,7 @@ Even with a solid plan, these mistakes can derail your budget:
 4. **Not having an emergency fund** — Without savings for unexpected expenses, one car repair can destroy your entire budget. Start with $500 and grow from there.
 5. **Giving up after one bad month** — Every month is a fresh start. Adjust and keep going.
 
-Learn more about [why people fail at budgeting](/why-people-fail-at-budgeting/) and how to break the cycle. Once your budget is set, check out our guide on [how to stick to a budget](/how-to-stick-to-a-budget/) with 15 proven strategies.
+Learn more about [why people fail at budgeting](/blog/why-people-fail-at-budgeting/) and how to break the cycle. Once your budget is set, check out our guide on [how to stick to a budget](/blog/how-to-stick-to-a-budget/) with 15 proven strategies.
 
 ## How Much Should You Save Each Month?
 
@@ -150,7 +150,7 @@ A widely recommended starting point is the 20% savings rule from the [50/30/20 f
 
 If 20% feels impossible right now, start with 5% or even 1%. The habit of saving consistently matters more than the amount. As you reduce expenses and increase income, gradually increase your savings rate.
 
-For those managing [multiple income streams](/track-multiple-income-streams-notion/), a tracking system becomes essential to ensure each source contributes to your overall financial plan.
+For those managing [multiple income streams](/blog/track-multiple-income-streams-notion/), a tracking system becomes essential to ensure each source contributes to your overall financial plan.
 
 ## Frequently Asked Questions
 
@@ -180,13 +180,13 @@ The best time to start budgeting was yesterday. The second best time is right no
 
 Pick one method from this guide, set up a simple tracking system, and commit to reviewing your numbers once a week. Within a month, you will have a clearer picture of your finances than most people ever achieve.
 
-If you are currently [living paycheck to paycheck](/paycheck-to-paycheck-budgeting/), our dedicated guide shows you how to budget around your pay dates and start building savings even on a tight income.
+If you are currently [living paycheck to paycheck](/blog/paycheck-to-paycheck-budgeting/), our dedicated guide shows you how to budget around your pay dates and start building savings even on a tight income.
 
 **Ready to get started?** Grab our [New Life Starter Kit](https://gettidyflow.gumroad.com/l/new-life-starter-kit) — a Notion template that combines budget tracking, habit building, and goal setting in one workspace. Or download the [Freelancer Expense Tracker](https://gettidyflow.gumroad.com/l/freelancer-expense-tracker) for a powerful Excel-based budgeting solution with built-in charts and dashboards.
 
 ## Related Articles
 
-- [Budgeting for Couples](/budgeting-for-couples/) — How to manage money together as a team
-- [How to Stick to a Budget: 15 Proven Tips](/how-to-stick-to-a-budget/) — Strategies for staying on track with your budget
-- [Why People Fail at Budgeting](/why-people-fail-at-budgeting/) — The psychology behind budgeting failure
-- [7 Budgeting Mistakes That Keep You Broke](/budgeting-mistakes-to-avoid/) — Common mistakes and how to fix them
+- [Budgeting for Couples](/blog/budgeting-for-couples/) — How to manage money together as a team
+- [How to Stick to a Budget: 15 Proven Tips](/blog/how-to-stick-to-a-budget/) — Strategies for staying on track with your budget
+- [Why People Fail at Budgeting](/blog/why-people-fail-at-budgeting/) — The psychology behind budgeting failure
+- [7 Budgeting Mistakes That Keep You Broke](/blog/budgeting-mistakes-to-avoid/) — Common mistakes and how to fix them

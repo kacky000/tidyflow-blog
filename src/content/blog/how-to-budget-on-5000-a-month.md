@@ -88,7 +88,7 @@ Automate savings transfers on payday. The money you never see is money you never
 
 ### Strategy 2: Trim the "Invisible" Expenses
 
-Log every subscription and recurring charge. Most people are surprised to find $100–$200/month in forgotten services. Use a [monthly budget checklist](/monthly-budget-checklist/) to audit these every 30 days.
+Log every subscription and recurring charge. Most people are surprised to find $100–$200/month in forgotten services. Use a [monthly budget checklist](/blog/monthly-budget-checklist/) to audit these every 30 days.
 
 ### Strategy 3: Lifestyle Calibration (Not Restriction)
 
@@ -130,7 +130,7 @@ A budget only works if you track it. Consider:
 - **Excel spreadsheet**: Formula-driven, ideal for those who want precision
 - **Budgeting apps**: Automated but less customizable
 
-For a deep dive on the right tool for you, check out this breakdown of [Notion vs Excel for budgeting](/notion-vs-excel-budgeting/).
+For a deep dive on the right tool for you, check out this breakdown of [Notion vs Excel for budgeting](/blog/notion-vs-excel-budgeting/).
 
 ---
 

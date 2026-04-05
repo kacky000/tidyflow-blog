@@ -97,13 +97,13 @@ Prepare three to four meals for the week in one cooking session. This eliminates
 Call your internet provider, insurance company, and phone carrier once a year and ask for a lower rate. Most companies have retention offers they do not advertise.
 
 **5. Track every dollar for one full month.**
-Before you can optimize your budget, you need to see where money actually goes. Use a [simple expense tracker](/how-to-track-expenses-in-notion/) and log every transaction for 30 days. The results will surprise you.
+Before you can optimize your budget, you need to see where money actually goes. Use a [simple expense tracker](/blog/how-to-track-expenses-in-notion/) and log every transaction for 30 days. The results will surprise you.
 
 ---
 
 ## Common Mistakes to Avoid at This Income
 
-Budgeting at $2,500 leaves little margin for the [common mistakes that derail most budgets](/budgeting-mistakes-to-avoid/). The biggest ones at this income level:
+Budgeting at $2,500 leaves little margin for the [common mistakes that derail most budgets](/blog/budgeting-mistakes-to-avoid/). The biggest ones at this income level:
 
 - **Not having an emergency fund.** Without one, a single unexpected expense forces you into debt.
 - **Treating rent as the only flexible expense.** Food, transportation, and subscriptions are where most savings hide.
@@ -123,7 +123,7 @@ Aim for 15–20% ($375–$500). If you have high-interest debt, prioritize payin
 
 ### Should I use the 50/30/20 rule or zero-based budgeting?
 
-Either works. The 50/30/20 rule is simpler and great for beginners. If you want more control over every dollar, [zero-based budgeting](/zero-based-budgeting-guide/) assigns a job to every cent of your income. Try the 50/30/20 rule first and switch if you need tighter control.
+Either works. The 50/30/20 rule is simpler and great for beginners. If you want more control over every dollar, [zero-based budgeting](/blog/zero-based-budgeting-guide/) assigns a job to every cent of your income. Try the 50/30/20 rule first and switch if you need tighter control.
 
 ---
 

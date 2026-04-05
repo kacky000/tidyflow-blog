@@ -179,6 +179,6 @@ Once you have your estimates, you need a place to track actuals against them. A 
 
 **[Download a budget tracking template on Tidyflow →](https://gettidyflow.gumroad.com/)**
 
-For building a broader financial plan around your move, our [guide to creating a budget from scratch](/how-to-create-a-budget/) covers how to integrate one-time costs like moving into your regular monthly budget.
+For building a broader financial plan around your move, our [guide to creating a budget from scratch](/blog/how-to-create-a-budget/) covers how to integrate one-time costs like moving into your regular monthly budget.
 
 Moving is expensive, but it's rarely unpredictably expensive — as long as you use a checklist that captures the real costs upfront. Build your budget before you sign the lease, not after you've already committed.

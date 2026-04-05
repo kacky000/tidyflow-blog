@@ -80,7 +80,7 @@ Design tools aren't optional — they're the cost of doing business. Budget for 
 | Cloud storage (Dropbox, Google) | $10–$20 | $120–$240 |
 | **Total** | **$105–$235** | **$1,260–$2,820** |
 
-Review your subscriptions quarterly. Cancel anything you haven't used in 60 days. For tracking all these subscriptions alongside your other expenses, a [Notion-based expense tracker](/how-to-track-expenses-in-notion/) keeps everything visible in one dashboard.
+Review your subscriptions quarterly. Cancel anything you haven't used in 60 days. For tracking all these subscriptions alongside your other expenses, a [Notion-based expense tracker](/blog/how-to-track-expenses-in-notion/) keeps everything visible in one dashboard.
 
 ---
 
@@ -137,7 +137,7 @@ Self-employment tax hits hard. Here's the system:
 3. **Pay quarterly estimated taxes** (April 15, June 15, September 15, January 15)
 4. **Track all deductible expenses**: software, hardware, home office, client meals, mileage, professional development
 
-Designers who also have a structured approach to their freelance finances can benefit from our [freelancer budget template](/budget-template-for-freelancers/) which includes built-in tax tracking categories.
+Designers who also have a structured approach to their freelance finances can benefit from our [freelancer budget template](/blog/budget-template-for-freelancers/) which includes built-in tax tracking categories.
 
 ---
 

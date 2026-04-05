@@ -43,7 +43,7 @@ The best approach for accountants is **annual income averaging with seasonal adj
 4. **During off-season**, your budget stays identical to busy season months
 5. **The banked overtime becomes your CPE fund, vacation fund, and investment accelerator**
 
-This approach works for both salaried accountants with overtime and sole practitioners with seasonal billing patterns. For a detailed framework on handling seasonal income, see our guide on [budgeting for seasonal workers](/budget-for-seasonal-workers/).
+This approach works for both salaried accountants with overtime and sole practitioners with seasonal billing patterns. For a detailed framework on handling seasonal income, see our guide on [budgeting for seasonal workers](/blog/budget-for-seasonal-workers/).
 
 ---
 
@@ -138,7 +138,7 @@ Accountants have an unfair advantage in personal tax planning — use it. Build 
 - Mileage for client visits
 - Professional liability insurance
 
-For a structured approach to maximizing deductions, the principles in our [zero-based budgeting guide](/zero-based-budgeting-guide/) help ensure every dollar has a purpose — including tax-advantaged ones.
+For a structured approach to maximizing deductions, the principles in our [zero-based budgeting guide](/blog/zero-based-budgeting-guide/) help ensure every dollar has a purpose — including tax-advantaged ones.
 
 ---
 

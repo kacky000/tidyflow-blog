@@ -36,7 +36,7 @@ This guide compares YNAB and Notion across every dimension that matters: pricing
 ### What YNAB Does Well
 
 **Zero-Based Budgeting Made Simple**
-YNAB is built entirely around the [envelope budgeting method](/envelope-budgeting-method/). Every dollar gets assigned a job before you spend it. The software enforces this discipline automatically — you cannot allocate more than you have.
+YNAB is built entirely around the [envelope budgeting method](/blog/envelope-budgeting-method/). Every dollar gets assigned a job before you spend it. The software enforces this discipline automatically — you cannot allocate more than you have.
 
 **Automatic Bank Syncing**
 Connect your bank accounts and credit cards. Transactions import automatically, and you categorize them with a tap. This dramatically reduces the friction of tracking expenses.
@@ -71,7 +71,7 @@ You can create custom categories, but you cannot change the fundamental layout, 
 ### What Notion Does Well
 
 **Unlimited Customization**
-Notion lets you build any budgeting system you can imagine. Want a zero-based budget? Build it. Prefer 50/30/20? Create a dashboard. Need to [track expenses with custom categories](/how-to-track-expenses-in-notion/)? Design your own database with exactly the fields you need.
+Notion lets you build any budgeting system you can imagine. Want a zero-based budget? Build it. Prefer 50/30/20? Create a dashboard. Need to [track expenses with custom categories](/blog/how-to-track-expenses-in-notion/)? Design your own database with exactly the fields you need.
 
 **All-in-One Workspace**
 Your budget can live alongside your goals, meal plans, investment tracker, debt payoff plan, and life dashboard. No switching between apps. Everything connects through Notion's relational databases.
@@ -91,7 +91,7 @@ Tables, calendars, kanban boards, galleries, charts — Notion lets you view you
 This is the biggest practical gap. Notion has no way to automatically import bank transactions. Every expense must be entered manually. For some people, this is a feature (forced awareness of spending). For others, it is a dealbreaker.
 
 **Manual Data Entry**
-Without automation, you are responsible for logging every transaction. This requires discipline. Many people start strong but abandon manual tracking within a few weeks — one of the most common [budgeting mistakes](/budgeting-mistakes-to-avoid/) regardless of tool.
+Without automation, you are responsible for logging every transaction. This requires discipline. Many people start strong but abandon manual tracking within a few weeks — one of the most common [budgeting mistakes](/blog/budgeting-mistakes-to-avoid/) regardless of tool.
 
 **No Built-In Financial Reports**
 YNAB generates spending reports, trend charts, and net worth graphs automatically. In Notion, you need to build these yourself or use templates that include them. Notion's native chart features have improved but still do not match a dedicated finance app.
@@ -124,10 +124,10 @@ Notion is the better choice if you:
 - **Want full control over your system**: Custom categories, dashboards, formulas, and views
 - **Already use Notion**: Adding budgeting to an existing workspace is seamless
 - **Track more than just spending**: Investments, net worth, goals, debt payoff, and financial planning in one place
-- **Prefer a [monthly budget checklist](/monthly-budget-checklist/) approach**: Build structured review workflows
+- **Prefer a [monthly budget checklist](/blog/monthly-budget-checklist/) approach**: Build structured review workflows
 - **Want to avoid subscription costs**: Notion's free plan handles budgeting perfectly
 - **Enjoy building systems**: The process of designing your budget template is rewarding, not frustrating
-- **Share finances with a partner**: Notion's shared workspaces make [budgeting for couples](/budgeting-for-couples/) natural
+- **Share finances with a partner**: Notion's shared workspaces make [budgeting for couples](/blog/budgeting-for-couples/) natural
 
 ---
 

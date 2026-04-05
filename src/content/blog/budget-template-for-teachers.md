@@ -153,7 +153,7 @@ A budget template is only useful if you check in regularly. Here's a minimal tea
 - **After each paycheck (5 min):** Transfer summer savings contribution, log classroom spending so far
 - **End of each month (10 min):** Review actual vs. budget, note any classroom receipts to save for taxes
 
-For a step-by-step monthly routine, see our [monthly budget checklist](/monthly-budget-checklist/).
+For a step-by-step monthly routine, see our [monthly budget checklist](/blog/monthly-budget-checklist/).
 
 ---
 
@@ -176,6 +176,6 @@ Building a budget from scratch takes time you probably don't have. A pre-built t
 
 **[Browse budget templates on Tidyflow →](https://gettidyflow.gumroad.com/)**
 
-For more on choosing between spreadsheet and app-based tracking, check out our [Notion vs Excel budgeting comparison](/notion-vs-excel-budgeting/).
+For more on choosing between spreadsheet and app-based tracking, check out our [Notion vs Excel budgeting comparison](/blog/notion-vs-excel-budgeting/).
 
 The teacher's budget isn't complicated — it just requires a few extra categories that most generic templates leave out. Add those in, stay consistent, and the summer income gap stops being a crisis and starts being just another thing you planned for.

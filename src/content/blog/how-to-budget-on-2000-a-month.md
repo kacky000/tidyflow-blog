@@ -90,7 +90,7 @@ Give every dollar a job before the month starts. This prevents "where did my mon
 Set up an automatic transfer to your savings account the day you get paid. Even $50 adds up to $600 a year. Out of sight, out of mind.
 
 **3. Track every expense for 30 days**
-Most people are surprised by how much they spend on small daily purchases. Use your bank app or a [simple expense tracker in Notion](/how-to-track-expenses-in-notion/) to see exactly where your money goes.
+Most people are surprised by how much they spend on small daily purchases. Use your bank app or a [simple expense tracker in Notion](/blog/how-to-track-expenses-in-notion/) to see exactly where your money goes.
 
 **4. Find one major expense to reduce**
 Housing, car, and food typically make up 70–80% of a tight budget. Finding a cheaper living situation or eliminating a car payment can change your financial picture overnight.

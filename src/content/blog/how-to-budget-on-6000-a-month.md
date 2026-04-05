@@ -108,7 +108,7 @@ Review your total annual spending once a year. Monthly reviews catch small issue
 **4. Avoid recurring cost upgrades.**
 A one-time purchase of $200 costs $200. A $200/month increase in rent costs $2,400/year, every year, forever. Be extremely cautious about any decision that raises your fixed monthly costs.
 
-**5. Use [expense tracking](/how-to-track-expenses-in-notion/) to find invisible spending.**
+**5. Use [expense tracking](/blog/how-to-track-expenses-in-notion/) to find invisible spending.**
 Most people at this income level have $200–$400/month in spending they cannot account for. Track every dollar for three months and the leaks become obvious.
 
 ---
@@ -136,7 +136,7 @@ Watch for these red flags that indicate your spending is expanding faster than y
 - You have upgraded your car, apartment, or wardrobe in the last year but your net worth has not grown proportionally.
 - You feel like $6,000/month "is not that much" despite it being well above the national median.
 
-If any of these apply, it is time to revisit your [monthly budget checklist](/monthly-budget-checklist/) and realign your spending with your goals.
+If any of these apply, it is time to revisit your [monthly budget checklist](/blog/monthly-budget-checklist/) and realign your spending with your goals.
 
 ---
 

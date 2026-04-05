@@ -124,7 +124,7 @@ At $10,000/month, your investment approach should balance growth with protection
 The hardest part of family budgeting is not the math — it is the conversation. Two people with different spending habits, plus kids who want everything, creates ongoing tension. Here is how to manage it:
 
 **1. Monthly Budget Meetings (30 minutes)**
-Review last month's spending together. No blame. Just data. Use a [budget tracking system](/how-to-track-expenses-in-notion/) that both partners can access in real time.
+Review last month's spending together. No blame. Just data. Use a [budget tracking system](/blog/how-to-track-expenses-in-notion/) that both partners can access in real time.
 
 **2. Individual Discretionary Budgets**
 Each partner gets $200–$300/month of no-questions-asked spending money. This eliminates most spending conflicts.
@@ -139,7 +139,7 @@ Give children age-appropriate allowances and let them make spending mistakes wit
 
 ## Common Mistakes Families Make at $10,000/Month
 
-Even at this income level, families fall into [classic budgeting traps](/budgeting-mistakes-to-avoid/):
+Even at this income level, families fall into [classic budgeting traps](/blog/budgeting-mistakes-to-avoid/):
 
 - **Keeping up with the neighborhood**: Private school, luxury cars, and expensive vacations because everyone else seems to have them
 - **No separate savings for irregular expenses**: Car repairs, medical bills, and home maintenance should have dedicated sinking funds

@@ -140,13 +140,13 @@ Setting vague goals like "save more" does not work. Here is a concrete timeline:
 
 The trick is picking one primary goal at a time. Trying to fund everything simultaneously means nothing gets funded fast enough to feel motivating.
 
-Use a [monthly budget checklist](/monthly-budget-checklist/) to review your progress at the end of each month. The five minutes it takes to check your numbers prevents months of drift.
+Use a [monthly budget checklist](/blog/monthly-budget-checklist/) to review your progress at the end of each month. The five minutes it takes to check your numbers prevents months of drift.
 
 ---
 
 ## Common Mistakes at $3,500
 
-The [budgeting mistakes that sabotage most people](/budgeting-mistakes-to-avoid/) hit especially hard at this income because you have just enough money to make expensive errors feel affordable:
+The [budgeting mistakes that sabotage most people](/blog/budgeting-mistakes-to-avoid/) hit especially hard at this income because you have just enough money to make expensive errors feel affordable:
 
 - **Upgrading housing too fast.** Moving from $800 to $1,200 rent because you "can afford it" costs you $4,800/year in lost savings.
 - **Not tracking wants spending.** $1,050 in wants sounds generous until you realize it is only $35/day.

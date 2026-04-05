@@ -140,9 +140,9 @@ The [50/30/20 budget rule](/50-30-20-budget-rule-notion/) (50% needs, 30% wants,
 
 You can't manage what you don't measure. Use one of these tools to track your budget:
 
-- **Notion** – Create a [couple budget template](/best-notion-budget-templates-2026/) with shared database visibility
+- **Notion** – Create a [couple budget template](/blog/best-notion-budget-templates-2026/) with shared database visibility
 - **Excel** – Simple spreadsheet with automatic calculations
-- **Dedicated apps** – [YNAB, Notion, or other tools](/ynab-vs-notion-for-budgeting/) like Copilot or EveryDollar for automated tracking
+- **Dedicated apps** – [YNAB, Notion, or other tools](/blog/ynab-vs-notion-for-budgeting/) like Copilot or EveryDollar for automated tracking
 
 Schedule monthly "money dates" (30–60 minutes) where you both review:
 - How much you spent in each category
@@ -150,12 +150,12 @@ Schedule monthly "money dates" (30–60 minutes) where you both review:
 - Wins to celebrate (stayed under budget, hit savings goal)
 - Adjustments needed for next month
 
-Read our guide on [how to track expenses in Notion](/how-to-track-expenses-in-notion/) to get started with Notion-based tracking, or see [Notion vs Excel for budgeting](/notion-vs-excel-budgeting/) to compare your options.
+Read our guide on [how to track expenses in Notion](/blog/how-to-track-expenses-in-notion/) to get started with Notion-based tracking, or see [Notion vs Excel for budgeting](/blog/notion-vs-excel-budgeting/) to compare your options.
 
 ## Best Tools for Budgeting as a Couple
 
 ### Notion Templates
-Notion is ideal for couples because both partners can access the same dashboard in real-time. You can see spending, savings progress, and shared goals without constant syncing. Look for a [couple budget template](/best-notion-budget-templates-2026/) that includes:
+Notion is ideal for couples because both partners can access the same dashboard in real-time. You can see spending, savings progress, and shared goals without constant syncing. Look for a [couple budget template](/blog/best-notion-budget-templates-2026/) that includes:
 - Monthly expense tracker
 - Shared goals dashboard
 - Income vs. expenses comparison
@@ -190,7 +190,7 @@ Some couples choose "fully combined" because they think that's what marriage req
 
 ### Mistake #4: Skipping the Monthly Money Dates
 
-Life gets busy, and "we'll review the budget later" turns into "we never reviewed the budget." Without feedback, spending drifts and resentment builds. **Solution:** Schedule money dates like any other recurring appointment. Even 20 minutes monthly is better than nothing. Read [why people fail at budgeting](/why-people-fail-at-budgeting/) for deeper insight into common pitfalls.
+Life gets busy, and "we'll review the budget later" turns into "we never reviewed the budget." Without feedback, spending drifts and resentment builds. **Solution:** Schedule money dates like any other recurring appointment. Even 20 minutes monthly is better than nothing. Read [why people fail at budgeting](/blog/why-people-fail-at-budgeting/) for deeper insight into common pitfalls.
 
 ## Frequently Asked Questions
 
@@ -200,7 +200,7 @@ Open a joint account specifically for shared expenses in both partners' names. T
 
 ### What if one partner is terrible with money?
 
-This isn't a character flaw—it's a skills gap. Work together through a structured budget tool (Notion or Excel) where spending is transparent. Consider letting the more financially disciplined partner handle the tracking initially, while the other partner focuses on awareness. Over time, behavior improves with visibility. See [how to stick to a budget](/how-to-stick-to-a-budget/) for techniques both partners can use.
+This isn't a character flaw—it's a skills gap. Work together through a structured budget tool (Notion or Excel) where spending is transparent. Consider letting the more financially disciplined partner handle the tracking initially, while the other partner focuses on awareness. Over time, behavior improves with visibility. See [how to stick to a budget](/blog/how-to-stick-to-a-budget/) for techniques both partners can use.
 
 ### Should couples have separate savings accounts?
 
@@ -216,7 +216,7 @@ Revisit your budget structure. If one partner loses their job or gets a major ra
 
 ## Start Budgeting Together This Week
 
-The most important step isn't picking the perfect budget structure or tool—it's **having the first real conversation about money.** Sit down together this week with no distractions, commit to one of the three structures above, and use our [budgeting mistakes to avoid](/budgeting-mistakes-to-avoid/) guide as a reference.
+The most important step isn't picking the perfect budget structure or tool—it's **having the first real conversation about money.** Sit down together this week with no distractions, commit to one of the three structures above, and use our [budgeting mistakes to avoid](/blog/budgeting-mistakes-to-avoid/) guide as a reference.
 
 If you want a head start, grab our **[Social Media Content Calendar](/search?q=notion+template)** to track both shared and personal goals in one place, or use our **couple budget templates** built for Notion and Excel.
 
@@ -226,4 +226,4 @@ The couples who succeed financially aren't the ones with the highest incomes—t
 
 **Ready to take control of your finances as a couple?**
 
-Explore our **[Notion Budget Templates](/best-notion-budget-templates-2026/)** for couples, or download our **[Freelancer Expense Tracker](/)** if you're both self-employed. Both tools make monthly money dates effortless and transparent.
+Explore our **[Notion Budget Templates](/blog/best-notion-budget-templates-2026/)** for couples, or download our **[Freelancer Expense Tracker](/)** if you're both self-employed. Both tools make monthly money dates effortless and transparent.
