@@ -2,6 +2,7 @@
 title: "Budget for Graduate Students: How to Manage TA Pay, Loans, and Living Costs"
 description: "A practical budget for graduate students covering stipends, TA/RA pay, student loans, and scholarships. Free tips to stretch every dollar in grad school."
 pubDate: "2026-04-06"
+heroImage: "/thumbs/thumb-budget-for-graduate-students.jpg"
 tags: ["budgeting", "students", "graduate-school", "student-loans"]
 ---
 

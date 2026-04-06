@@ -2,6 +2,7 @@
 title: "How to Budget After a Raise: 7 Steps to Avoid Lifestyle Creep"
 description: "Learn how to budget after a raise so you can build wealth instead of inflating your lifestyle. Practical steps to allocate extra income wisely."
 pubDate: "2026-04-06"
+heroImage: "/thumbs/thumb-how-to-budget-after-a-raise.jpg"
 tags: ["budgeting", "salary", "lifestyle-creep", "saving"]
 ---
 

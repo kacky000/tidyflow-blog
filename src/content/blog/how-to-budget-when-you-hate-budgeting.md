@@ -2,6 +2,7 @@
 title: "How to Budget When You Hate Budgeting: 6 Painless Strategies"
 description: "Discover how to budget when you hate budgeting. Simple, low-effort strategies for people who find traditional budgeting tedious or stressful."
 pubDate: "2026-04-06"
+heroImage: "/thumbs/thumb-how-to-budget-when-you-hate-budgeting.jpg"
 tags: ["budgeting", "personal-finance", "habits", "psychology"]
 ---
 

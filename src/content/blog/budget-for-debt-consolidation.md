@@ -2,6 +2,7 @@
 title: "Budget for Debt Consolidation: How to Manage Your Money During Payoff"
 description: "Create a budget for debt consolidation that accelerates your payoff. Covers snowball vs avalanche methods, expense cutting, and avoiding new debt."
 pubDate: "2026-04-06"
+heroImage: "/thumbs/thumb-budget-for-debt-consolidation.jpg"
 tags: ["budgeting", "debt", "debt-consolidation", "debt-payoff"]
 ---
 

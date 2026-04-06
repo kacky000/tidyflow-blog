@@ -2,6 +2,7 @@
 title: "Financial Independence Budget Plan: How to Design a FIRE-Ready Budget"
 description: "Build a financial independence budget plan with 50%+ savings rates. Covers FIRE strategies, expense optimization, and investment allocation for early retirement."
 pubDate: "2026-04-06"
+heroImage: "/thumbs/thumb-financial-independence-budget-plan.jpg"
 tags: ["budgeting", "financial-independence", "FIRE", "saving", "investing"]
 ---
 
