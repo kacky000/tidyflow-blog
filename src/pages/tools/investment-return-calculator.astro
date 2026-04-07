@@ -1,0 +1,682 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const title = 'Investment Return Calculator — See How Your Money Grows Over Time';
+const description = 'Enter your initial investment, monthly contributions, expected return rate, and time horizon. See compound growth projections with a year-by-year breakdown. Free, no signup.';
+---
+
+<BaseLayout title={title} description={description}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Investment Return Calculator",
+      "url": "https://gettidyflow.com/tools/investment-return-calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "description": description
+    })} />
+  </Fragment>
+
+  <section class="tool-hero">
+    <div class="tool-hero-inner">
+      <span class="tool-badge">Free Tool — No Signup Required</span>
+      <h1>Investment Return <span class="gradient-text">Calculator</span></h1>
+      <p class="tool-subtitle">Enter your starting balance, monthly contributions, expected annual return, and investment period. Watch compound interest turn consistent investing into serious wealth.</p>
+    </div>
+  </section>
+
+  <section class="tool-app">
+    <div class="tool-container">
+      <div class="inputs-grid">
+        <div class="input-card">
+          <label for="initial-investment">Initial Investment</label>
+          <div class="input-wrap">
+            <span class="symbol">$</span>
+            <input type="number" id="initial-investment" placeholder="10,000" min="0" step="100" />
+          </div>
+          <span class="input-hint">How much are you investing today?</span>
+        </div>
+        <div class="input-card">
+          <label for="monthly-contribution">Monthly Contribution</label>
+          <div class="input-wrap">
+            <span class="symbol">$</span>
+            <input type="number" id="monthly-contribution" placeholder="500" min="0" step="50" />
+          </div>
+          <span class="input-hint">How much will you add each month?</span>
+        </div>
+        <div class="input-card">
+          <label for="annual-return">Annual Return Rate</label>
+          <div class="input-wrap">
+            <span class="symbol">%</span>
+            <input type="number" id="annual-return" placeholder="7" min="0" max="50" step="0.1" />
+          </div>
+          <span class="input-hint">S&amp;P 500 historical average is ~10%</span>
+        </div>
+        <div class="input-card">
+          <label for="invest-years">Investment Period (years)</label>
+          <div class="input-wrap">
+            <span class="symbol">yr</span>
+            <input type="number" id="invest-years" placeholder="20" min="1" max="60" step="1" />
+          </div>
+          <span class="input-hint">How long will you stay invested?</span>
+        </div>
+      </div>
+
+      <div class="results-section" id="results-section" style="display:none;">
+        <div class="stats-grid">
+          <div class="stat-card stat-primary">
+            <span class="stat-value" id="stat-total">&mdash;</span>
+            <span class="stat-label">Total Value</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-value" id="stat-contributions">&mdash;</span>
+            <span class="stat-label">Total Contributions</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-value" id="stat-returns">&mdash;</span>
+            <span class="stat-label">Total Returns</span>
+          </div>
+        </div>
+
+        <div class="growth-bar-card">
+          <h3>Contributions vs. Returns</h3>
+          <div class="growth-bar-wrap">
+            <div class="growth-bar-contrib" id="growth-bar-contrib" style="width:50%">
+              <span class="growth-bar-label" id="growth-bar-contrib-label">Contributions</span>
+            </div>
+            <div class="growth-bar-return" id="growth-bar-return" style="width:50%">
+              <span class="growth-bar-label" id="growth-bar-return-label">Returns</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="table-card">
+          <h3>Year-by-Year Breakdown</h3>
+          <div class="rate-table-wrapper">
+            <table class="rate-table" id="year-table">
+              <thead>
+                <tr>
+                  <th>Year</th>
+                  <th>Starting Balance</th>
+                  <th>Contributions</th>
+                  <th>Interest Earned</th>
+                  <th>Ending Balance</th>
+                </tr>
+              </thead>
+              <tbody id="year-tbody"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="tip-card" id="tip-card" style="display:none;">
+          <span class="tip-icon">&#128161;</span>
+          <p id="tip-text"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool-cta">
+    <div class="tool-container">
+      <div class="cta-card">
+        <h2>Track Your Investments with Our Budget Template</h2>
+        <p>This calculator shows you the potential. Our Notion Budget Template helps you <strong>track contributions, monitor growth, and stay on target</strong> — all in one workspace.</p>
+        <a href="https://gettidyflow.gumroad.com/l/notion-monthly-budget-tracker" target="_blank" rel="noopener" class="cta-button">Get the Budget Template &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool-content">
+    <div class="tool-container content-narrow">
+      <h2>How Compound Interest Works for Investors</h2>
+      <p>Compound interest is what turns small, consistent contributions into life-changing wealth. When your investments earn returns, those returns also earn returns the next year. Over decades, this snowball effect is enormous — Albert Einstein reportedly called it the "eighth wonder of the world."</p>
+      <p>The key factors are <strong>time</strong> and <strong>consistency</strong>. Someone who invests $500/month starting at age 25 will have far more at 65 than someone who invests $1,000/month starting at 45, even though the late starter contributes more total money.</p>
+
+      <h2>How to Use This Calculator</h2>
+      <ol>
+        <li>Enter your <strong>initial investment</strong> — the lump sum you are starting with today.</li>
+        <li>Enter your <strong>monthly contribution</strong> — the amount you will add each month.</li>
+        <li>Set your <strong>annual return rate</strong> — the S&amp;P 500 has averaged ~10% since 1926 (7% after inflation).</li>
+        <li>Set your <strong>investment period</strong> — the longer you stay invested, the more compound growth works in your favor.</li>
+        <li>Review the <strong>year-by-year table</strong> to see exactly how your balance grows.</li>
+      </ol>
+
+      <h2>What Return Rate Should I Use?</h2>
+      <ul>
+        <li><strong>Conservative (4-5%)</strong> — Bond-heavy portfolios, high-yield savings</li>
+        <li><strong>Moderate (6-7%)</strong> — Balanced stock/bond portfolio, inflation-adjusted stock returns</li>
+        <li><strong>Aggressive (8-10%)</strong> — All-stock portfolio, historical S&amp;P 500 nominal returns</li>
+        <li><strong>Very aggressive (10-12%)</strong> — Growth stocks or leveraged strategies (higher risk)</li>
+      </ul>
+      <p>For long-term retirement planning, most financial advisors suggest using <strong>7%</strong> (inflation-adjusted stock market return) for a realistic projection.</p>
+
+      <h2>The Power of Starting Early</h2>
+      <p>Consider two investors who both target age 65:</p>
+      <ul>
+        <li><strong>Investor A</strong> starts at 25, invests $300/month for 40 years = $144,000 total contributions → ~$720,000 at 7%</li>
+        <li><strong>Investor B</strong> starts at 35, invests $300/month for 30 years = $108,000 total contributions → ~$340,000 at 7%</li>
+      </ul>
+      <p>Investor A contributed only $36,000 more but ends up with <strong>more than double</strong> the final balance. That is the power of an extra decade of compounding.</p>
+
+      <h2>Tips to Maximize Investment Returns</h2>
+      <ul>
+        <li><strong>Start now</strong> — Even small amounts benefit massively from time in the market. Build a solid <a href="/blog/financial-independence-budget-plan/">financial independence budget plan</a> to free up investment capital.</li>
+        <li><strong>Automate contributions</strong> — set up automatic monthly transfers to your brokerage account.</li>
+        <li><strong>Increase contributions annually</strong> — raise your monthly amount by at least 1-2% each year.</li>
+        <li><strong>Keep fees low</strong> — choose low-cost index funds (0.03-0.10% expense ratio).</li>
+        <li><strong>Stay invested</strong> — timing the market almost always underperforms staying in the market.</li>
+        <li><strong>Plan for retirement systematically</strong> — use our <a href="/blog/retirement-budget-checklist/">retirement budget checklist</a> to make sure you are covering all bases.</li>
+      </ul>
+
+      <h2>Related Resources</h2>
+      <ul>
+        <li><a href="/tools/retirement-savings-calculator">Retirement Savings Calculator</a> — plan specifically for retirement</li>
+        <li><a href="/tools/savings-goal-calculator">Savings Goal Calculator</a> — set and track specific savings goals</li>
+        <li><a href="/tools/net-worth-calculator">Net Worth Calculator</a> — see your complete financial picture</li>
+        <li><a href="/blog/financial-independence-budget-plan/">Financial Independence Budget Plan</a></li>
+        <li><a href="/blog/retirement-budget-checklist/">Retirement Budget Checklist</a></li>
+        <li><a href="/blog/how-to-track-expenses-in-notion/">How to Track Expenses in Notion</a></li>
+      </ul>
+
+      <h2>Frequently Asked Questions</h2>
+      <details>
+        <summary>Does this calculator account for taxes?</summary>
+        <p>No. This calculator shows <strong>pre-tax</strong> projections. Actual returns depend on your account type (401k, Roth IRA, taxable brokerage) and your tax bracket. Tax-advantaged accounts like a Roth IRA allow your investments to grow tax-free, which means the numbers here would be close to your actual take-home amount.</p>
+      </details>
+      <details>
+        <summary>Is the return rate guaranteed?</summary>
+        <p>No. Stock market returns are <strong>not guaranteed</strong> and vary significantly year to year. The rate you enter represents an average annual return over your full investment period. In reality, some years will be up 20% and others down 15%. The long-term average smooths these fluctuations.</p>
+      </details>
+      <details>
+        <summary>How does compound frequency affect results?</summary>
+        <p>This calculator uses <strong>monthly compounding</strong>, which is how most investment accounts work in practice (dividends and growth compound continuously, but monthly is the closest simple approximation). The difference between monthly and annual compounding is relatively small for typical return rates.</p>
+      </details>
+      <details>
+        <summary>Should I invest or pay off debt first?</summary>
+        <p>Generally, pay off high-interest debt (above 7-8%) first, as the guaranteed "return" from eliminating debt interest usually beats investment returns. Keep investing enough to get any employer 401k match, then attack the debt. Use our <a href="/tools/debt-payoff-calculator">Debt Payoff Calculator</a> to plan your strategy.</p>
+      </details>
+      <details>
+        <summary>What about inflation?</summary>
+        <p>To see inflation-adjusted projections, use a return rate that subtracts inflation. If you expect 10% nominal returns and 3% inflation, enter 7% for a "real" purchasing-power projection. This gives you a more realistic picture of what your money will actually buy in the future.</p>
+      </details>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .tool-hero {
+    background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+    padding: 4rem 1.5rem 3rem;
+    text-align: center;
+    color: #fff;
+  }
+  .tool-hero-inner {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .tool-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(4px);
+    padding: 0.35rem 1rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+  }
+  .tool-hero h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 800;
+    line-height: 1.15;
+    margin: 0 0 1rem;
+  }
+  .gradient-text {
+    background: linear-gradient(90deg, #fde68a, #fbbf24);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .tool-subtitle {
+    font-size: 1.1rem;
+    opacity: 0.92;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .tool-app {
+    padding: 2.5rem 1.5rem;
+    background: #f8f9fb;
+  }
+  .tool-container {
+    max-width: 880px;
+    margin: 0 auto;
+  }
+
+  .inputs-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  .input-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+  .input-card label {
+    display: block;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #1a1a2e;
+    margin-bottom: 0.5rem;
+  }
+  .input-wrap {
+    position: relative;
+  }
+  .symbol {
+    position: absolute;
+    left: 0.85rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: #7c3aed;
+  }
+  .input-card input[type="number"] {
+    width: 100%;
+    padding: 0.85rem 0.85rem 0.85rem 2.5rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    outline: none;
+    font-family: inherit;
+    color: #1a1a2e;
+    transition: border-color 0.2s;
+  }
+  .input-card input:focus {
+    border-color: #7c3aed;
+    box-shadow: 0 0 0 3px rgba(124,58,237,0.15);
+  }
+  .input-card input::placeholder {
+    color: #b0b8c4;
+    font-weight: 400;
+  }
+  .input-hint {
+    display: block;
+    font-size: 0.78rem;
+    color: #999;
+    margin-top: 0.4rem;
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+  }
+  .stat-card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 1.25rem;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  }
+  .stat-primary {
+    background: linear-gradient(135deg, #7c3aed, #a855f7);
+    color: #fff;
+  }
+  .stat-value {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin-bottom: 0.25rem;
+    color: #1a1a2e;
+  }
+  .stat-primary .stat-value {
+    color: #fff;
+    font-size: 2rem;
+  }
+  .stat-label {
+    font-size: 0.78rem;
+    color: #888;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  .stat-primary .stat-label {
+    color: rgba(255,255,255,0.85);
+  }
+
+  .growth-bar-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    margin-bottom: 1.25rem;
+  }
+  .growth-bar-card h3 {
+    margin: 0 0 1rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1a1a2e;
+  }
+  .growth-bar-wrap {
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 48px;
+  }
+  .growth-bar-contrib {
+    background: linear-gradient(90deg, #7c3aed, #a855f7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: width 0.5s ease;
+    min-width: 60px;
+  }
+  .growth-bar-return {
+    background: linear-gradient(90deg, #fbbf24, #f59e0b);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: width 0.5s ease;
+    min-width: 60px;
+  }
+  .growth-bar-label {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #fff;
+    white-space: nowrap;
+    padding: 0 0.5rem;
+  }
+
+  .table-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    margin-bottom: 1.25rem;
+  }
+  .table-card h3 {
+    margin: 0 0 1rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1a1a2e;
+  }
+  .rate-table-wrapper {
+    overflow-x: auto;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+  }
+  .rate-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+  }
+  .rate-table th {
+    background: #f8f9fb;
+    padding: 0.75rem 1rem;
+    text-align: left;
+    font-weight: 700;
+    color: #1a1a2e;
+    white-space: nowrap;
+    border-bottom: 2px solid #e2e8f0;
+  }
+  .rate-table td {
+    padding: 0.65rem 1rem;
+    color: #444;
+    border-bottom: 1px solid #f0f0f5;
+    white-space: nowrap;
+  }
+  .rate-table tr:last-child td {
+    border-bottom: none;
+  }
+  .rate-table .highlight-row {
+    background: #f5f3ff;
+  }
+  .rate-table .highlight-row td {
+    color: #7c3aed;
+    font-weight: 600;
+  }
+
+  .tip-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    background: #fffbe6;
+    border-radius: 14px;
+    padding: 1.25rem 1.5rem;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.04);
+  }
+  .tip-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+  }
+  .tip-card p {
+    margin: 0;
+    font-size: 0.92rem;
+    color: #665500;
+    line-height: 1.55;
+  }
+
+  .tool-cta {
+    padding: 2.5rem 1.5rem;
+    background: #fff;
+  }
+  .cta-card {
+    max-width: 880px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+    border-radius: 20px;
+    padding: 2.5rem;
+    text-align: center;
+    color: #fff;
+  }
+  .cta-card h2 {
+    margin: 0 0 0.75rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+  }
+  .cta-card p {
+    margin: 0 0 1.5rem;
+    opacity: 0.92;
+    line-height: 1.6;
+  }
+  .cta-button {
+    display: inline-block;
+    background: #fff;
+    color: #7c3aed;
+    font-weight: 700;
+    padding: 0.85rem 2rem;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  }
+
+  .tool-content {
+    padding: 3rem 1.5rem 4rem;
+    background: #f8f9fb;
+  }
+  .content-narrow {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .tool-content h2 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #1a1a2e;
+    margin: 2.5rem 0 0.75rem;
+  }
+  .tool-content h2:first-child { margin-top: 0; }
+  .tool-content p, .tool-content li {
+    font-size: 1.02rem;
+    line-height: 1.7;
+    color: #444;
+  }
+  .tool-content ul, .tool-content ol {
+    padding-left: 1.25rem;
+    margin: 0.5rem 0 1rem;
+  }
+  .tool-content li { margin-bottom: 0.35rem; }
+  .tool-content a {
+    color: #7c3aed;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .tool-content details {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 0.75rem;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  }
+  .tool-content summary {
+    font-weight: 600;
+    cursor: pointer;
+    color: #1a1a2e;
+    font-size: 1.02rem;
+  }
+  .tool-content details p { margin: 0.75rem 0 0; }
+
+  @media (max-width: 640px) {
+    .inputs-grid {
+      grid-template-columns: 1fr;
+    }
+    .stats-grid {
+      grid-template-columns: 1fr;
+    }
+    .cta-card {
+      padding: 2rem 1.5rem;
+    }
+  }
+</style>
+
+<script>
+  const initialInput = document.getElementById('initial-investment') as HTMLInputElement;
+  const monthlyInput = document.getElementById('monthly-contribution') as HTMLInputElement;
+  const returnInput = document.getElementById('annual-return') as HTMLInputElement;
+  const yearsInput = document.getElementById('invest-years') as HTMLInputElement;
+  const resultsSection = document.getElementById('results-section')!;
+
+  function formatCurrency(n: number): string {
+    return '$' + n.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+  }
+
+  function calculate() {
+    const initial = parseFloat(initialInput.value) || 0;
+    const monthly = parseFloat(monthlyInput.value) || 0;
+    const annualReturn = parseFloat(returnInput.value) || 0;
+    const years = parseInt(yearsInput.value) || 0;
+
+    if (years <= 0 || (initial <= 0 && monthly <= 0)) {
+      resultsSection.style.display = 'none';
+      return;
+    }
+
+    resultsSection.style.display = 'block';
+
+    const monthlyRate = annualReturn / 100 / 12;
+    const totalMonths = years * 12;
+
+    // Build year-by-year data
+    const yearData: { year: number; startBalance: number; contributions: number; interest: number; endBalance: number }[] = [];
+    let balance = initial;
+    let totalContributions = initial;
+    let totalInterest = 0;
+
+    for (let y = 1; y <= years; y++) {
+      const startBalance = balance;
+      let yearContributions = 0;
+      let yearInterest = 0;
+
+      for (let m = 0; m < 12; m++) {
+        const interest = balance * monthlyRate;
+        yearInterest += interest;
+        balance += interest + monthly;
+        yearContributions += monthly;
+      }
+
+      totalContributions += yearContributions;
+      totalInterest += yearInterest;
+
+      yearData.push({
+        year: y,
+        startBalance: startBalance,
+        contributions: yearContributions,
+        interest: yearInterest,
+        endBalance: balance
+      });
+    }
+
+    const totalValue = balance;
+    const contribTotal = initial + monthly * totalMonths;
+    const returnsTotal = totalValue - contribTotal;
+
+    // Stats
+    document.getElementById('stat-total')!.textContent = formatCurrency(Math.round(totalValue));
+    document.getElementById('stat-contributions')!.textContent = formatCurrency(Math.round(contribTotal));
+    document.getElementById('stat-returns')!.textContent = formatCurrency(Math.round(returnsTotal));
+
+    // Growth bar
+    const contribPct = totalValue > 0 ? (contribTotal / totalValue) * 100 : 50;
+    const returnPct = 100 - contribPct;
+    const contribBar = document.getElementById('growth-bar-contrib') as HTMLElement;
+    const returnBar = document.getElementById('growth-bar-return') as HTMLElement;
+    contribBar.style.width = Math.max(contribPct, 8) + '%';
+    returnBar.style.width = Math.max(returnPct, 8) + '%';
+    document.getElementById('growth-bar-contrib-label')!.textContent = 'Contributions ' + formatCurrency(Math.round(contribTotal));
+    document.getElementById('growth-bar-return-label')!.textContent = 'Returns ' + formatCurrency(Math.round(returnsTotal));
+
+    // Year-by-year table
+    const tbody = document.getElementById('year-tbody')!;
+    const isMilestone = (y: number) => y === 1 || y === years || y === Math.round(years / 2) || y % 10 === 0;
+
+    tbody.innerHTML = yearData.map(row => {
+      const highlight = isMilestone(row.year) ? 'highlight-row' : '';
+      return `<tr class="${highlight}">
+        <td>${row.year}</td>
+        <td>${formatCurrency(Math.round(row.startBalance))}</td>
+        <td>${formatCurrency(Math.round(row.contributions))}</td>
+        <td>${formatCurrency(Math.round(row.interest))}</td>
+        <td>${formatCurrency(Math.round(row.endBalance))}</td>
+      </tr>`;
+    }).join('');
+
+    // Tip
+    const tipCard = document.getElementById('tip-card')!;
+    const tipText = document.getElementById('tip-text')!;
+    tipCard.style.display = 'flex';
+
+    if (returnsTotal > contribTotal) {
+      tipText.innerHTML = `Your investment returns (<strong>${formatCurrency(Math.round(returnsTotal))}</strong>) exceed your total contributions (<strong>${formatCurrency(Math.round(contribTotal))}</strong>). This is the power of compound interest — your money is working harder than you are.`;
+    } else if (years < 10) {
+      const extraYears = 10;
+      let extraBalance = balance;
+      for (let m = 0; m < extraYears * 12; m++) {
+        extraBalance = extraBalance * (1 + monthlyRate) + monthly;
+      }
+      tipText.innerHTML = `If you extend your investment period by ${extraYears} more years, your balance could grow to <strong>${formatCurrency(Math.round(extraBalance))}</strong>. Time is your greatest asset in investing.`;
+    } else if (monthly > 0) {
+      const doubleMonthly = monthly * 2;
+      let doubleBalance = initial;
+      for (let m = 0; m < totalMonths; m++) {
+        doubleBalance = doubleBalance * (1 + monthlyRate) + doubleMonthly;
+      }
+      tipText.innerHTML = `Doubling your monthly contribution to <strong>${formatCurrency(doubleMonthly)}</strong> would grow your portfolio to <strong>${formatCurrency(Math.round(doubleBalance))}</strong> — that is <strong>${formatCurrency(Math.round(doubleBalance - totalValue))}</strong> more.`;
+    } else {
+      tipText.innerHTML = `Even adding <strong>$100/month</strong> in contributions would significantly boost your returns thanks to compound growth. Start small and increase over time.`;
+    }
+  }
+
+  [initialInput, monthlyInput, returnInput, yearsInput].forEach(el => {
+    el.addEventListener('input', calculate);
+    el.addEventListener('change', calculate);
+  });
+</script>

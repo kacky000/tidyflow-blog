@@ -1,0 +1,936 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const title = 'Money Saving Challenge Calculator — Pick a Challenge, See Your Savings';
+const description = 'Choose from the 52-week challenge, 365-day penny challenge, no-spend challenge, or round-up challenge. See exactly how much you will save with a detailed week-by-week breakdown. Free, no signup.';
+---
+
+<BaseLayout title={title} description={description}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Money Saving Challenge Calculator",
+      "url": "https://gettidyflow.com/tools/money-saving-challenge-calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "description": description
+    })} />
+  </Fragment>
+
+  <section class="tool-hero">
+    <div class="tool-hero-inner">
+      <span class="tool-badge">Free Tool — No Signup Required</span>
+      <h1>Money Saving Challenge <span class="gradient-text">Calculator</span></h1>
+      <p class="tool-subtitle">Pick a saving challenge, customize the amounts, and see exactly how much you will save. Get a week-by-week or month-by-month breakdown to stay on track.</p>
+    </div>
+  </section>
+
+  <section class="tool-app">
+    <div class="tool-container">
+      <div class="inputs-grid">
+        <div class="input-card input-card-full">
+          <label for="challenge-type">Challenge Type</label>
+          <select id="challenge-type">
+            <option value="52-week">52-Week Challenge — Save $1 more each week</option>
+            <option value="52-week-reverse">52-Week Reverse — Start big, decrease weekly</option>
+            <option value="365-penny">365-Day Penny Challenge — Save 1 cent more each day</option>
+            <option value="no-spend">No-Spend Challenge — Save a fixed amount on no-spend days</option>
+            <option value="round-up">Round-Up Challenge — Save spare change daily</option>
+            <option value="biweekly">Bi-Weekly Challenge — Fixed amount every 2 weeks</option>
+          </select>
+          <span class="input-hint">Choose a challenge that fits your lifestyle</span>
+        </div>
+        <div class="input-card">
+          <label for="starting-amount">Starting Amount</label>
+          <div class="input-wrap">
+            <span class="symbol">$</span>
+            <input type="number" id="starting-amount" placeholder="1" min="0" step="0.5" />
+          </div>
+          <span class="input-hint" id="starting-hint">Amount you save in week 1</span>
+        </div>
+        <div class="input-card">
+          <label for="increment" id="increment-label">Weekly Increment</label>
+          <div class="input-wrap">
+            <span class="symbol">$</span>
+            <input type="number" id="increment" placeholder="1" min="0" step="0.5" />
+          </div>
+          <span class="input-hint" id="increment-hint">How much more you save each week</span>
+        </div>
+      </div>
+
+      <div class="challenge-info" id="challenge-info">
+        <div class="info-icon">&#128218;</div>
+        <div class="info-text" id="info-text"></div>
+      </div>
+
+      <div class="results-section" id="results-section" style="display:none;">
+        <div class="stats-grid">
+          <div class="stat-card stat-primary">
+            <span class="stat-value" id="stat-total">&mdash;</span>
+            <span class="stat-label">Total Savings</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-value" id="stat-duration">&mdash;</span>
+            <span class="stat-label">Duration</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-value" id="stat-avg">&mdash;</span>
+            <span class="stat-label">Average per Week</span>
+          </div>
+        </div>
+
+        <div class="progress-card">
+          <div class="progress-header">
+            <span class="progress-label">Savings Progress</span>
+            <span class="progress-pct" id="month-progress">Month-by-month</span>
+          </div>
+          <div class="month-bars" id="month-bars"></div>
+        </div>
+
+        <div class="table-card">
+          <h3 id="breakdown-title">Week-by-Week Breakdown</h3>
+          <div class="table-toggle">
+            <button class="toggle-btn active" id="btn-summary">Summary</button>
+            <button class="toggle-btn" id="btn-full">Full Breakdown</button>
+          </div>
+          <div class="rate-table-wrapper" id="table-wrapper">
+            <table class="rate-table" id="breakdown-table">
+              <thead id="breakdown-thead"></thead>
+              <tbody id="breakdown-tbody"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="tip-card" id="tip-card" style="display:none;">
+          <span class="tip-icon">&#128161;</span>
+          <p id="tip-text"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool-cta">
+    <div class="tool-container">
+      <div class="cta-card">
+        <h2>Track Your Saving Challenge with Our Budget Template</h2>
+        <p>This calculator shows you the plan. Our Notion Budget Template gives you a <strong>built-in challenge tracker</strong> — check off each week, see your progress bar fill up, and celebrate every milestone.</p>
+        <a href="https://gettidyflow.gumroad.com/l/notion-monthly-budget-tracker" target="_blank" rel="noopener" class="cta-button">Get the Budget Template &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool-content">
+    <div class="tool-container content-narrow">
+      <h2>What Is a Money Saving Challenge?</h2>
+      <p>A money saving challenge is a structured plan that gamifies the act of saving. Instead of vaguely telling yourself to "save more," you follow a specific rule — save $1 more each week, save your spare change, or go an entire day without spending. The structure creates accountability and momentum.</p>
+      <p>Research shows that people who follow a structured saving plan are <strong>2.5x more likely</strong> to hit their savings target compared to those who just "try to save." The key is making it easy to start and hard to quit.</p>
+
+      <h2>Challenge Types Explained</h2>
+      <h3>52-Week Challenge</h3>
+      <p>Save $1 in week 1, $2 in week 2, $3 in week 3 ... up to $52 in week 52. Total: <strong>$1,378</strong> with default amounts. The beauty is that it starts so easy you cannot say no, and by the time the amounts get larger, saving has become a habit.</p>
+
+      <h3>52-Week Reverse Challenge</h3>
+      <p>Start with the biggest amount ($52 in week 1) and decrease each week. Many people prefer this because the hardest weeks are at the start when motivation is highest, and the holiday season (weeks 48-52) has the smallest amounts.</p>
+
+      <h3>365-Day Penny Challenge</h3>
+      <p>Save 1 cent on day 1, 2 cents on day 2, all the way to $3.65 on day 365. Total: <strong>$667.95</strong>. This is a great starter challenge because the daily amounts feel effortless.</p>
+
+      <h3>No-Spend Challenge</h3>
+      <p>Pick a set number of no-spend days per week (typically 2-3) where you do not spend anything outside of essentials. Transfer a fixed amount to savings on each no-spend day. A common approach is saving $10-20 per no-spend day. Learn more in our <a href="/blog/no-spend-challenge-guide/">no-spend challenge guide</a>.</p>
+
+      <h3>Round-Up Challenge</h3>
+      <p>Every time you make a purchase, round up to the nearest dollar and save the difference. If your coffee costs $4.35, you save $0.65. With an average of 3-5 transactions per day, this adds up to $500-1,200 per year without feeling it.</p>
+
+      <h3>Bi-Weekly Challenge</h3>
+      <p>Save a fixed amount every two weeks, aligned with your paycheck. This is the most practical approach for people on a biweekly pay schedule — automate the transfer and forget about it.</p>
+
+      <h2>How to Succeed at Any Saving Challenge</h2>
+      <ul>
+        <li><strong>Automate what you can</strong> — set up automatic transfers for fixed-amount challenges.</li>
+        <li><strong>Track visually</strong> — print a chart or use a <a href="/blog/how-to-track-expenses-in-notion/">Notion tracker</a> to check off each week.</li>
+        <li><strong>Start on payday</strong> — align your challenge with your income schedule.</li>
+        <li><strong>Have a goal</strong> — saving is easier when you know what it is for (vacation, emergency fund, etc.).</li>
+        <li><strong>Pair with a no-spend challenge</strong> — combine strategies to accelerate results. Our <a href="/blog/how-to-save-1000-in-30-days/">guide to saving $1,000 in 30 days</a> shows how to stack challenges.</li>
+        <li><strong>Forgive missed weeks</strong> — if you miss one, double up the next week. Do not quit over one slip.</li>
+      </ul>
+
+      <h2>Related Resources</h2>
+      <ul>
+        <li><a href="/tools/savings-goal-calculator">Savings Goal Calculator</a> — set a target and see how long it takes</li>
+        <li><a href="/tools/50-30-20-calculator">50/30/20 Budget Calculator</a> — find how much you should save each month</li>
+        <li><a href="/tools/emergency-fund-calculator">Emergency Fund Calculator</a> — build your safety net</li>
+        <li><a href="/blog/how-to-save-1000-in-30-days/">How to Save $1,000 in 30 Days</a></li>
+        <li><a href="/blog/no-spend-challenge-guide/">No-Spend Challenge Guide</a></li>
+        <li><a href="/blog/why-people-fail-at-budgeting/">Why People Fail at Budgeting</a></li>
+      </ul>
+
+      <h2>Frequently Asked Questions</h2>
+      <details>
+        <summary>Which challenge saves the most money?</summary>
+        <p>With default settings, the <strong>52-week challenge</strong> saves $1,378 and the <strong>365-day penny challenge</strong> saves $668. But you can customize the starting amount and increment to make any challenge save more. The "best" challenge is the one you will actually complete.</p>
+      </details>
+      <details>
+        <summary>Can I modify the amounts?</summary>
+        <p>Absolutely. Use the starting amount and increment fields to customize. For example, start the 52-week challenge at $5 with a $2 increment to save <strong>$3,770</strong> in a year. Scale to your income level.</p>
+      </details>
+      <details>
+        <summary>What if I miss a week?</summary>
+        <p>Do not quit. Either double up the next week, swap a high week with a low week, or simply skip it and continue. Saving 48 out of 52 weeks is still an excellent outcome. Consistency matters more than perfection.</p>
+      </details>
+      <details>
+        <summary>Where should I put the money?</summary>
+        <p>A <strong>high-yield savings account</strong> (4-5% APY) is ideal for challenge savings. Keep it separate from your checking account so you are not tempted to spend it. Some people use a dedicated "challenge" account or even a physical jar for cash challenges.</p>
+      </details>
+      <details>
+        <summary>Can I combine multiple challenges?</summary>
+        <p>Yes! Many people run a 52-week challenge alongside a round-up challenge or no-spend challenge. Stacking challenges is one of the fastest ways to build savings. Just make sure the total is realistic for your budget.</p>
+      </details>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .tool-hero {
+    background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+    padding: 4rem 1.5rem 3rem;
+    text-align: center;
+    color: #fff;
+  }
+  .tool-hero-inner {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .tool-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(4px);
+    padding: 0.35rem 1rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+  }
+  .tool-hero h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 800;
+    line-height: 1.15;
+    margin: 0 0 1rem;
+  }
+  .gradient-text {
+    background: linear-gradient(90deg, #fde68a, #fbbf24);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .tool-subtitle {
+    font-size: 1.1rem;
+    opacity: 0.92;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .tool-app {
+    padding: 2.5rem 1.5rem;
+    background: #f8f9fb;
+  }
+  .tool-container {
+    max-width: 880px;
+    margin: 0 auto;
+  }
+
+  .inputs-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .input-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+  .input-card-full {
+    grid-column: 1 / -1;
+  }
+  .input-card label {
+    display: block;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #1a1a2e;
+    margin-bottom: 0.5rem;
+  }
+  .input-card select {
+    width: 100%;
+    padding: 0.85rem;
+    font-size: 1.05rem;
+    font-weight: 600;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    outline: none;
+    font-family: inherit;
+    color: #1a1a2e;
+    background: #fff;
+    cursor: pointer;
+    transition: border-color 0.2s;
+  }
+  .input-card select:focus {
+    border-color: #7c3aed;
+    box-shadow: 0 0 0 3px rgba(124,58,237,0.15);
+  }
+  .input-wrap {
+    position: relative;
+  }
+  .symbol {
+    position: absolute;
+    left: 0.85rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: #7c3aed;
+  }
+  .input-card input[type="number"] {
+    width: 100%;
+    padding: 0.85rem 0.85rem 0.85rem 2rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    outline: none;
+    font-family: inherit;
+    color: #1a1a2e;
+    transition: border-color 0.2s;
+  }
+  .input-card input:focus {
+    border-color: #7c3aed;
+    box-shadow: 0 0 0 3px rgba(124,58,237,0.15);
+  }
+  .input-card input::placeholder {
+    color: #b0b8c4;
+    font-weight: 400;
+  }
+  .input-hint {
+    display: block;
+    font-size: 0.78rem;
+    color: #999;
+    margin-top: 0.4rem;
+  }
+
+  .challenge-info {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    background: #f0ebff;
+    border-radius: 14px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .info-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+  }
+  .info-text {
+    font-size: 0.92rem;
+    color: #4c1d95;
+    line-height: 1.55;
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+  }
+  .stat-card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 1.25rem;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  }
+  .stat-primary {
+    background: linear-gradient(135deg, #7c3aed, #a855f7);
+    color: #fff;
+  }
+  .stat-value {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin-bottom: 0.25rem;
+    color: #1a1a2e;
+  }
+  .stat-primary .stat-value {
+    color: #fff;
+    font-size: 2rem;
+  }
+  .stat-label {
+    font-size: 0.78rem;
+    color: #888;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  .stat-primary .stat-label {
+    color: rgba(255,255,255,0.85);
+  }
+
+  .progress-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    margin-bottom: 1.25rem;
+  }
+  .progress-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  .progress-label {
+    font-weight: 700;
+    color: #1a1a2e;
+  }
+  .progress-pct {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #7c3aed;
+  }
+  .month-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .month-bar-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .month-bar-label {
+    width: 55px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #888;
+    text-align: right;
+    flex-shrink: 0;
+  }
+  .month-bar-track {
+    flex: 1;
+    height: 24px;
+    background: #f0f0f5;
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+  }
+  .month-bar-fill {
+    height: 100%;
+    border-radius: 6px;
+    background: linear-gradient(90deg, #7c3aed, #a855f7);
+    transition: width 0.5s ease;
+    min-width: 2px;
+  }
+  .month-bar-amount {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #1a1a2e;
+    width: 60px;
+    flex-shrink: 0;
+  }
+
+  .table-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    margin-bottom: 1.25rem;
+  }
+  .table-card h3 {
+    margin: 0 0 1rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1a1a2e;
+  }
+  .table-toggle {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  .toggle-btn {
+    padding: 0.5rem 1.25rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 999px;
+    background: #fff;
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: inherit;
+  }
+  .toggle-btn.active {
+    background: #7c3aed;
+    border-color: #7c3aed;
+    color: #fff;
+  }
+  .rate-table-wrapper {
+    overflow-x: auto;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    max-height: 400px;
+    overflow-y: auto;
+  }
+  .rate-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+  }
+  .rate-table th {
+    background: #f8f9fb;
+    padding: 0.75rem 1rem;
+    text-align: left;
+    font-weight: 700;
+    color: #1a1a2e;
+    white-space: nowrap;
+    border-bottom: 2px solid #e2e8f0;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+  .rate-table td {
+    padding: 0.65rem 1rem;
+    color: #444;
+    border-bottom: 1px solid #f0f0f5;
+    white-space: nowrap;
+  }
+  .rate-table tr:last-child td {
+    border-bottom: none;
+  }
+  .rate-table .highlight-row {
+    background: #f5f3ff;
+  }
+  .rate-table .highlight-row td {
+    color: #7c3aed;
+    font-weight: 600;
+  }
+
+  .tip-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    background: #fffbe6;
+    border-radius: 14px;
+    padding: 1.25rem 1.5rem;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.04);
+  }
+  .tip-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+  }
+  .tip-card p {
+    margin: 0;
+    font-size: 0.92rem;
+    color: #665500;
+    line-height: 1.55;
+  }
+
+  .tool-cta {
+    padding: 2.5rem 1.5rem;
+    background: #fff;
+  }
+  .cta-card {
+    max-width: 880px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+    border-radius: 20px;
+    padding: 2.5rem;
+    text-align: center;
+    color: #fff;
+  }
+  .cta-card h2 {
+    margin: 0 0 0.75rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+  }
+  .cta-card p {
+    margin: 0 0 1.5rem;
+    opacity: 0.92;
+    line-height: 1.6;
+  }
+  .cta-button {
+    display: inline-block;
+    background: #fff;
+    color: #7c3aed;
+    font-weight: 700;
+    padding: 0.85rem 2rem;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  }
+
+  .tool-content {
+    padding: 3rem 1.5rem 4rem;
+    background: #f8f9fb;
+  }
+  .content-narrow {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .tool-content h2 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #1a1a2e;
+    margin: 2.5rem 0 0.75rem;
+  }
+  .tool-content h2:first-child { margin-top: 0; }
+  .tool-content h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin: 1.5rem 0 0.5rem;
+  }
+  .tool-content p, .tool-content li {
+    font-size: 1.02rem;
+    line-height: 1.7;
+    color: #444;
+  }
+  .tool-content ul, .tool-content ol {
+    padding-left: 1.25rem;
+    margin: 0.5rem 0 1rem;
+  }
+  .tool-content li { margin-bottom: 0.35rem; }
+  .tool-content a {
+    color: #7c3aed;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .tool-content details {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 0.75rem;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  }
+  .tool-content summary {
+    font-weight: 600;
+    cursor: pointer;
+    color: #1a1a2e;
+    font-size: 1.02rem;
+  }
+  .tool-content details p { margin: 0.75rem 0 0; }
+
+  @media (max-width: 640px) {
+    .inputs-grid {
+      grid-template-columns: 1fr;
+    }
+    .input-card-full {
+      grid-column: auto;
+    }
+    .stats-grid {
+      grid-template-columns: 1fr;
+    }
+    .cta-card {
+      padding: 2rem 1.5rem;
+    }
+    .month-bar-label {
+      width: 40px;
+      font-size: 0.7rem;
+    }
+    .month-bar-amount {
+      width: 50px;
+      font-size: 0.7rem;
+    }
+  }
+</style>
+
+<script>
+  const challengeSelect = document.getElementById('challenge-type') as HTMLSelectElement;
+  const startingInput = document.getElementById('starting-amount') as HTMLInputElement;
+  const incrementInput = document.getElementById('increment') as HTMLInputElement;
+  const incrementLabel = document.getElementById('increment-label')!;
+  const startingHint = document.getElementById('starting-hint')!;
+  const incrementHint = document.getElementById('increment-hint')!;
+  const infoText = document.getElementById('info-text')!;
+  const resultsSection = document.getElementById('results-section')!;
+
+  let showFull = false;
+
+  function formatCurrency(n: number): string {
+    return '$' + n.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  }
+  function formatCurrencyShort(n: number): string {
+    return '$' + n.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+  }
+
+  interface PeriodData {
+    period: number;
+    label: string;
+    amount: number;
+    cumulative: number;
+  }
+
+  const challengeConfig: Record<string, { defaultStart: number; defaultIncrement: number; startLabel: string; startHint: string; incLabel: string; incHint: string; info: string }> = {
+    '52-week': {
+      defaultStart: 1, defaultIncrement: 1,
+      startLabel: 'Week 1 Amount', startHint: 'Amount you save in week 1',
+      incLabel: 'Weekly Increment', incHint: 'How much more you save each week',
+      info: '<strong>52-Week Challenge:</strong> Start by saving $1 in week 1, then $2 in week 2, increasing by $1 each week. By week 52 you save $52. Total with defaults: <strong>$1,378</strong>. Simple, effective, and builds the habit gradually.'
+    },
+    '52-week-reverse': {
+      defaultStart: 52, defaultIncrement: 1,
+      startLabel: 'Week 1 Amount', startHint: 'Start with the biggest amount',
+      incLabel: 'Weekly Decrease', incHint: 'How much less you save each week',
+      info: '<strong>52-Week Reverse:</strong> Save the biggest amount first ($52 in week 1) and decrease by $1 each week. Same $1,378 total, but front-loads the hard part when motivation is highest. Holiday season becomes easy.'
+    },
+    '365-penny': {
+      defaultStart: 0.01, defaultIncrement: 0.01,
+      startLabel: 'Day 1 Amount', startHint: 'Amount you save on day 1',
+      incLabel: 'Daily Increment', incHint: 'How much more you save each day',
+      info: '<strong>365-Day Penny Challenge:</strong> Save 1 cent on day 1, 2 cents on day 2, up to $3.65 on day 365. Total with defaults: <strong>$667.95</strong>. Ultra-low barrier to start — perfect for beginners.'
+    },
+    'no-spend': {
+      defaultStart: 15, defaultIncrement: 0,
+      startLabel: 'Per No-Spend Day', startHint: 'Amount saved each no-spend day',
+      incLabel: 'No-Spend Days/Week', incHint: 'How many no-spend days per week (1-7)',
+      info: '<strong>No-Spend Challenge:</strong> Choose 2-3 days per week where you spend nothing beyond essentials. Transfer a fixed amount to savings on each no-spend day. 3 days/week at $15/day = <strong>$2,340/year</strong>.'
+    },
+    'round-up': {
+      defaultStart: 1.50, defaultIncrement: 0,
+      startLabel: 'Avg. Daily Round-Up', startHint: 'Average spare change per day',
+      incLabel: 'Transactions/Day', incHint: 'Average number of daily purchases',
+      info: '<strong>Round-Up Challenge:</strong> Round every purchase to the next dollar and save the difference. With 3-5 transactions/day and an average round-up of $0.50, you save <strong>$550-900/year</strong> without even noticing.'
+    },
+    'biweekly': {
+      defaultStart: 100, defaultIncrement: 0,
+      startLabel: 'Bi-Weekly Amount', startHint: 'Fixed amount every 2 weeks',
+      incLabel: 'Increase per Period', incHint: 'Optional: raise amount each period',
+      info: '<strong>Bi-Weekly Challenge:</strong> Save a fixed amount every 2 weeks (26 pay periods/year). At $100 per period, you save <strong>$2,600/year</strong>. Aligns perfectly with most paycheck schedules.'
+    }
+  };
+
+  function updateUI() {
+    const type = challengeSelect.value;
+    const config = challengeConfig[type];
+    startingInput.placeholder = String(config.defaultStart);
+    incrementInput.placeholder = String(config.defaultIncrement);
+    startingHint.textContent = config.startHint;
+    incrementLabel.textContent = config.incLabel;
+    incrementHint.textContent = config.incHint;
+    infoText.innerHTML = config.info;
+  }
+
+  function generateData(type: string, start: number, increment: number): PeriodData[] {
+    const data: PeriodData[] = [];
+    let cumulative = 0;
+
+    if (type === '52-week') {
+      for (let w = 1; w <= 52; w++) {
+        const amount = start + (w - 1) * increment;
+        cumulative += amount;
+        data.push({ period: w, label: `Week ${w}`, amount, cumulative });
+      }
+    } else if (type === '52-week-reverse') {
+      for (let w = 1; w <= 52; w++) {
+        const amount = Math.max(start - (w - 1) * increment, 0);
+        cumulative += amount;
+        data.push({ period: w, label: `Week ${w}`, amount, cumulative });
+      }
+    } else if (type === '365-penny') {
+      for (let d = 1; d <= 365; d++) {
+        const amount = start + (d - 1) * increment;
+        cumulative += amount;
+        data.push({ period: d, label: `Day ${d}`, amount, cumulative });
+      }
+    } else if (type === 'no-spend') {
+      const daysPerWeek = Math.min(Math.max(increment || 3, 1), 7);
+      for (let w = 1; w <= 52; w++) {
+        const amount = start * daysPerWeek;
+        cumulative += amount;
+        data.push({ period: w, label: `Week ${w}`, amount, cumulative });
+      }
+    } else if (type === 'round-up') {
+      const txPerDay = Math.max(increment || 3, 1);
+      const dailyAmount = start * txPerDay;
+      for (let w = 1; w <= 52; w++) {
+        const amount = dailyAmount * 7;
+        cumulative += amount;
+        data.push({ period: w, label: `Week ${w}`, amount, cumulative });
+      }
+    } else if (type === 'biweekly') {
+      for (let p = 1; p <= 26; p++) {
+        const amount = start + (p - 1) * increment;
+        cumulative += amount;
+        data.push({ period: p, label: `Period ${p}`, amount, cumulative });
+      }
+    }
+
+    return data;
+  }
+
+  function calculate() {
+    const type = challengeSelect.value;
+    const config = challengeConfig[type];
+    const start = parseFloat(startingInput.value) || config.defaultStart;
+    const increment = parseFloat(incrementInput.value) || config.defaultIncrement;
+
+    const data = generateData(type, start, increment);
+
+    if (data.length === 0) {
+      resultsSection.style.display = 'none';
+      return;
+    }
+
+    resultsSection.style.display = 'block';
+
+    const total = data[data.length - 1].cumulative;
+    const weeks = type === '365-penny' ? 52 : (type === 'biweekly' ? 52 : data.length);
+    const avgPerWeek = total / weeks;
+
+    let durationText = '';
+    if (type === '365-penny') durationText = '365 days';
+    else if (type === 'biweekly') durationText = '26 periods';
+    else durationText = `${data.length} weeks`;
+
+    document.getElementById('stat-total')!.textContent = formatCurrencyShort(Math.round(total));
+    document.getElementById('stat-duration')!.textContent = durationText;
+    document.getElementById('stat-avg')!.textContent = formatCurrency(avgPerWeek);
+
+    // Monthly bar chart
+    const monthBars = document.getElementById('month-bars')!;
+    const monthlyTotals: { label: string; amount: number }[] = [];
+
+    if (type === '365-penny') {
+      for (let m = 0; m < 12; m++) {
+        const startDay = m * 30 + 1;
+        const endDay = Math.min((m + 1) * 30, 365);
+        let monthTotal = 0;
+        for (let d = startDay; d <= endDay; d++) {
+          if (d <= data.length) monthTotal += data[d - 1].amount;
+        }
+        monthlyTotals.push({ label: `Month ${m + 1}`, amount: monthTotal });
+      }
+      // Remaining days
+      let remaining = 0;
+      for (let d = 361; d <= 365; d++) {
+        if (d <= data.length) remaining += data[d - 1].amount;
+      }
+      if (monthlyTotals.length === 12) monthlyTotals[11].amount += remaining;
+    } else {
+      const weeksPerMonth = type === 'biweekly' ? 2 : 4;
+      const periods = data.length;
+      const months = type === 'biweekly' ? 13 : 12;
+      for (let m = 0; m < months; m++) {
+        const startIdx = m * weeksPerMonth;
+        const endIdx = Math.min((m + 1) * weeksPerMonth, periods);
+        let monthTotal = 0;
+        for (let i = startIdx; i < endIdx; i++) {
+          monthTotal += data[i].amount;
+        }
+        if (monthTotal > 0) {
+          monthlyTotals.push({ label: `Month ${m + 1}`, amount: monthTotal });
+        }
+      }
+    }
+
+    const maxMonthly = Math.max(...monthlyTotals.map(m => m.amount), 1);
+    monthBars.innerHTML = monthlyTotals.map(m => {
+      const pct = (m.amount / maxMonthly) * 100;
+      return `<div class="month-bar-row">
+        <span class="month-bar-label">${m.label}</span>
+        <div class="month-bar-track">
+          <div class="month-bar-fill" style="width:${pct}%"></div>
+        </div>
+        <span class="month-bar-amount">${formatCurrencyShort(Math.round(m.amount))}</span>
+      </div>`;
+    }).join('');
+
+    // Table
+    renderTable(data, type);
+
+    // Tip
+    const tipCard = document.getElementById('tip-card')!;
+    const tipText = document.getElementById('tip-text')!;
+    tipCard.style.display = 'flex';
+
+    if (total > 2000) {
+      tipText.innerHTML = `This challenge will save you <strong>${formatCurrencyShort(Math.round(total))}</strong> — that is enough for an emergency fund starter, a vacation, or a serious dent in your debt. Put it in a high-yield savings account to earn an extra 4-5% on top.`;
+    } else if (total > 1000) {
+      tipText.innerHTML = `<strong>${formatCurrencyShort(Math.round(total))}</strong> in savings is a solid emergency fund starter. Want to save more? Try increasing the starting amount or combining this with a no-spend challenge.`;
+    } else {
+      tipText.innerHTML = `Every dollar counts. <strong>${formatCurrencyShort(Math.round(total))}</strong> is a great start. Once you complete this challenge, level up to a higher starting amount or try stacking multiple challenges together.`;
+    }
+  }
+
+  function renderTable(data: PeriodData[], type: string) {
+    const thead = document.getElementById('breakdown-thead')!;
+    const tbody = document.getElementById('breakdown-tbody')!;
+
+    thead.innerHTML = `<tr><th>${type === '365-penny' ? 'Day' : (type === 'biweekly' ? 'Period' : 'Week')}</th><th>Amount</th><th>Cumulative</th></tr>`;
+
+    let rows = data;
+    if (!showFull) {
+      // Show summary: first 4, ... , last 4, plus milestones
+      if (data.length > 16) {
+        const milestoneIndices = new Set<number>();
+        milestoneIndices.add(0);
+        milestoneIndices.add(1);
+        milestoneIndices.add(2);
+        milestoneIndices.add(3);
+        milestoneIndices.add(Math.floor(data.length * 0.25));
+        milestoneIndices.add(Math.floor(data.length * 0.5));
+        milestoneIndices.add(Math.floor(data.length * 0.75));
+        milestoneIndices.add(data.length - 4);
+        milestoneIndices.add(data.length - 3);
+        milestoneIndices.add(data.length - 2);
+        milestoneIndices.add(data.length - 1);
+
+        const sorted = Array.from(milestoneIndices).sort((a, b) => a - b);
+        rows = sorted.map(i => data[i]);
+      }
+    }
+
+    tbody.innerHTML = rows.map((row, idx) => {
+      const isLast = row.period === data[data.length - 1].period;
+      const highlight = isLast ? 'highlight-row' : '';
+      return `<tr class="${highlight}">
+        <td>${row.label}</td>
+        <td>${formatCurrency(row.amount)}</td>
+        <td>${formatCurrency(row.cumulative)}</td>
+      </tr>`;
+    }).join('');
+  }
+
+  // Toggle buttons
+  document.getElementById('btn-summary')!.addEventListener('click', () => {
+    showFull = false;
+    document.getElementById('btn-summary')!.classList.add('active');
+    document.getElementById('btn-full')!.classList.remove('active');
+    calculate();
+  });
+
+  document.getElementById('btn-full')!.addEventListener('click', () => {
+    showFull = true;
+    document.getElementById('btn-full')!.classList.add('active');
+    document.getElementById('btn-summary')!.classList.remove('active');
+    calculate();
+  });
+
+  challengeSelect.addEventListener('change', () => {
+    updateUI();
+    calculate();
+  });
+
+  [startingInput, incrementInput].forEach(el => {
+    el.addEventListener('input', calculate);
+    el.addEventListener('change', calculate);
+  });
+
+  // Initial
+  updateUI();
+  calculate();
+</script>
