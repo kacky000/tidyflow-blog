@@ -4,6 +4,7 @@ description: "Learn how the anti-budget method works, who it's for, and how to s
 pubDate: "2026-04-07"
 tags: ["budgeting", "personal finance", "beginner", "anti-budget"]
 author: "Tidyflow"
+heroImage: "/thumbs/thumb-anti-budget-method-guide.jpg"
 ---
 
 The **anti-budget method** is exactly what it sounds like: a budgeting system for people who don't want to budget. Instead of tracking every dollar across a dozen categories, you automate your savings first and spend the rest guilt-free.

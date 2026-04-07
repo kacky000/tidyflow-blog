@@ -4,6 +4,7 @@ description: "Learn values based budgeting — align your money with your priori
 pubDate: "2026-04-07"
 tags: ["budgeting", "personal finance", "mindful spending", "values"]
 author: "Tidyflow"
+heroImage: "/thumbs/thumb-values-based-budgeting.jpg"
 ---
 
 **Values based budgeting** is a money management approach where spending decisions are guided by your personal values — not arbitrary rules or percentage splits. Instead of asking "Can I afford this?" you ask "Does this align with what matters most to me?" It's the difference between budgeting from restriction and budgeting from intention.

@@ -4,6 +4,7 @@ description: "Discover the kakeibo budgeting method from Japan. Learn the 4 spen
 pubDate: "2026-04-07"
 tags: ["budgeting", "personal finance", "kakeibo", "mindful spending"]
 author: "Tidyflow"
+heroImage: "/thumbs/thumb-kakeibo-budgeting-method.jpg"
 ---
 
 The **kakeibo budgeting method** is a Japanese household financial system created in 1904 by journalist Hani Motoko. Unlike app-based budgeting tools, kakeibo is intentionally analog — it forces you to slow down, write by hand, and think carefully about every purchase. Over a century later, it remains one of the most effective ways to build mindful spending habits.

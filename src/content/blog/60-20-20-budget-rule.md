@@ -4,6 +4,7 @@ description: "Learn how the 60/20/20 budget rule works, how it compares to 50/30
 pubDate: "2026-04-07"
 tags: ["budgeting", "personal finance", "budget rule", "beginner"]
 author: "Tidyflow"
+heroImage: "/thumbs/thumb-60-20-20-budget-rule.jpg"
 ---
 
 The **60/20/20 budget rule** is a budgeting framework that allocates 60% of your after-tax income to needs, 20% to savings, and 20% to wants. If the popular 50/30/20 rule feels too loose on spending, this method gives you tighter guardrails while staying simple.

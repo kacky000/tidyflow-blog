@@ -4,6 +4,7 @@ description: "Learn how reverse budgeting works, why it beats traditional method
 pubDate: "2026-04-07"
 tags: ["budgeting", "personal finance", "savings", "automation"]
 author: "Tidyflow"
+heroImage: "/thumbs/thumb-reverse-budgeting-guide.jpg"
 ---
 
 **Reverse budgeting** flips traditional budgeting on its head. Instead of tracking every expense and saving whatever's left over, you save first and spend the rest guilt-free. If you've tried detailed budgets and failed, this approach might be exactly what you need.

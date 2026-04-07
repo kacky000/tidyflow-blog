@@ -4,6 +4,7 @@ description: "Learn how the 80/20 budget rule works, how it compares to 50/30/20
 pubDate: "2026-04-07"
 tags: ["budgeting", "personal finance", "beginner", "80-20 rule"]
 author: "Tidyflow"
+heroImage: "/thumbs/thumb-80-20-budget-rule.jpg"
 ---
 
 The **80/20 budget rule** is the most minimalist budgeting method that exists: save 20% of your income, spend the other 80% however you want. No categories, no spreadsheets, no guilt. If the 50/30/20 rule feels like too much work, this is your method.
