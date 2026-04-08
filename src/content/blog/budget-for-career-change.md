@@ -2,6 +2,7 @@
 title: "Budget for Career Change: How to Financially Prepare for a New Path"
 description: "Learn how to create a budget for career change. Plan for income gaps, retraining costs, and build a transition fund so you can switch careers without financial stress."
 pubDate: 2026-04-08
+heroImage: "/thumbs/thumb-budget-for-career-change.jpg"
 tags: ["budgeting", "career change", "financial planning"]
 author: "Tidyflow"
 ---

@@ -2,6 +2,7 @@
 title: "Budget in Your 30s: How to Manage Money During Life's Biggest Changes"
 description: "Master budgeting in your 30s with strategies for homeownership, growing families, career growth, and fighting lifestyle creep while building long-term wealth."
 pubDate: "2026-04-08"
+heroImage: "/thumbs/thumb-budget-in-your-30s.jpg"
 tags: ["budgeting", "30s", "family finance", "money management"]
 ---
 

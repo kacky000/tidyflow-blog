@@ -2,6 +2,7 @@
 title: "Budget in Your 20s: A Complete Guide to Managing Money After College"
 description: "Learn how to budget in your 20s with practical tips for student loan repayment, building an emergency fund, and starting retirement savings early."
 pubDate: "2026-04-08"
+heroImage: "/thumbs/thumb-budget-in-your-20s.jpg"
 tags: ["budgeting", "20s", "young adults", "money management"]
 ---
 

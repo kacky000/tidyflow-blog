@@ -2,6 +2,7 @@
 title: "Budget for Starting a Business: How to Plan Your Startup Finances"
 description: "Learn how to create a budget for starting a business, including startup costs, runway calculation, and separating personal from business expenses."
 pubDate: "2026-04-08"
+heroImage: "/thumbs/thumb-budget-for-starting-a-business.jpg"
 tags: ["budgeting", "business", "startup", "entrepreneurship"]
 ---
 

@@ -2,6 +2,7 @@
 title: "How to Save for Kids College: A Parent's Complete Guide"
 description: "Learn how to save for kids college with 529 plans, ESAs, and age-based strategies. Calculate how much to save monthly and avoid common mistakes."
 pubDate: "2026-04-08"
+heroImage: "/thumbs/thumb-how-to-save-for-kids-college.jpg"
 tags: ["saving", "college", "education", "family finance"]
 ---
 

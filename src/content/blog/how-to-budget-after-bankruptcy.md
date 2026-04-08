@@ -2,6 +2,7 @@
 title: "How to Budget After Bankruptcy: A Complete Financial Recovery Guide"
 description: "Learn how to budget after bankruptcy with this step-by-step guide. Rebuild your finances, restore credit, and create a budget that prevents future financial crisis."
 pubDate: 2026-04-08
+heroImage: "/thumbs/thumb-how-to-budget-after-bankruptcy.jpg"
 tags: ["budgeting", "bankruptcy", "financial recovery", "debt"]
 author: "Tidyflow"
 ---

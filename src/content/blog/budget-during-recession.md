@@ -2,6 +2,7 @@
 title: "Budget During Recession: How to Protect Your Finances in an Economic Downturn"
 description: "Learn how to budget during recession with defensive strategies for job security, cash reserves, and smart spending cuts. Recession-proof your finances starting today."
 pubDate: 2026-04-08
+heroImage: "/thumbs/thumb-budget-during-recession.jpg"
 tags: ["budgeting", "recession", "emergency planning", "saving"]
 author: "Tidyflow"
 ---
