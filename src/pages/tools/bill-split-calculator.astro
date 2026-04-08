@@ -1,0 +1,369 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const title = 'Bill Split Calculator — Split Expenses Fairly';
+const description = 'Free bill split calculator. Enter total bill, add individual items per person, and instantly see how much each person owes including tip. No signup required.';
+---
+
+<BaseLayout title={title} description={description}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Bill Split Calculator",
+      "url": "https://gettidyflow.com/tools/bill-split-calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "description": description
+    })} />
+  </Fragment>
+
+  <section class="tool-hero">
+    <div class="tool-hero-inner">
+      <span class="tool-badge">Free Tool — No Signup Required</span>
+      <h1>Bill Split <span class="gradient-text">Calculator</span></h1>
+      <p class="tool-subtitle">Split the bill equally or by individual items. Add tip, see what each person owes, and settle up without the awkward math.</p>
+    </div>
+  </section>
+
+  <section class="tool-app">
+    <div class="tool-container">
+      <div class="calc-card">
+        <div class="input-grid">
+          <div>
+            <label for="total-bill" class="input-label">Total Bill</label>
+            <div class="input-wrapper"><span class="currency-symbol">$</span>
+              <input type="number" id="total-bill" placeholder="e.g. 124.50" min="0" step="0.01" class="calc-input" />
+            </div>
+          </div>
+          <div>
+            <label for="tip-pct" class="input-label">Tip Percentage (%)</label>
+            <div class="input-wrapper"><span class="currency-symbol">%</span>
+              <input type="number" id="tip-pct" placeholder="18" min="0" max="100" step="1" value="18" class="calc-input" />
+            </div>
+          </div>
+          <div>
+            <label for="num-people" class="input-label">Number of People</label>
+            <div class="input-wrapper"><span class="currency-symbol">#</span>
+              <input type="number" id="num-people" placeholder="4" min="1" max="50" step="1" value="2" class="calc-input" />
+            </div>
+          </div>
+          <div>
+            <label for="tax-amount" class="input-label">Tax Amount (optional)</label>
+            <div class="input-wrapper"><span class="currency-symbol">$</span>
+              <input type="number" id="tax-amount" placeholder="0.00" min="0" step="0.01" value="" class="calc-input" />
+            </div>
+          </div>
+        </div>
+
+        <div class="split-mode-toggle">
+          <button class="mode-btn active" data-mode="equal" id="btn-equal">Split Equally</button>
+          <button class="mode-btn" data-mode="custom" id="btn-custom">By Person</button>
+        </div>
+      </div>
+
+      <!-- Custom split section -->
+      <div class="calc-card" id="custom-section" style="display:none;">
+        <h3 class="section-title">Individual Items</h3>
+        <p class="section-desc">Add what each person ordered. Shared items (like appetizers) can be split by adding them to multiple people.</p>
+        <div id="people-list"></div>
+        <button class="add-person-btn" id="add-person-btn">+ Add Person</button>
+      </div>
+
+      <!-- Results -->
+      <div class="results-grid" id="results-grid" style="display:none;">
+        <div class="result-card" style="border-left-color:#667eea;">
+          <div class="result-header">
+            <span class="result-icon">🧾</span>
+            <div><h3>Subtotal</h3><p class="result-amount" id="res-subtotal">$0</p></div>
+          </div>
+          <p class="result-tip">Bill amount before tip and tax.</p>
+        </div>
+        <div class="result-card" style="border-left-color:#43e97b;">
+          <div class="result-header">
+            <span class="result-icon">💵</span>
+            <div><h3>Tip Amount</h3><p class="result-amount" id="res-tip">$0</p></div>
+          </div>
+          <p class="result-tip" id="res-tip-desc">Based on 18% of the bill.</p>
+        </div>
+        <div class="result-card" style="border-left-color:#f093fb;">
+          <div class="result-header">
+            <span class="result-icon">💰</span>
+            <div><h3>Grand Total</h3><p class="result-amount" id="res-total">$0</p></div>
+          </div>
+          <p class="result-tip">Bill + tip + tax combined.</p>
+        </div>
+        <div class="result-card" style="border-left-color:#ffd86e;">
+          <div class="result-header">
+            <span class="result-icon">👥</span>
+            <div><h3>Per Person</h3><p class="result-amount" id="res-per-person">$0</p></div>
+          </div>
+          <p class="result-tip" id="res-split-desc">Split equally among the group.</p>
+        </div>
+      </div>
+
+      <!-- Custom breakdown results -->
+      <div id="custom-results" style="display:none;">
+        <h3 class="section-title" style="text-align:center;margin-bottom:1rem;">Breakdown by Person</h3>
+        <div class="results-grid" id="custom-results-grid"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool-cta">
+    <div class="tool-container">
+      <div class="cta-card">
+        <h2>Track Shared Expenses Effortlessly</h2>
+        <p>Whether it's dinners, trips, or household bills — track every shared expense and keep your budget on target with our free template.</p>
+        <a href="https://gettidyflow.gumroad.com" target="_blank" rel="noopener" class="cta-button">Get the Free Budget Template &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool-content">
+    <div class="tool-container content-narrow">
+      <h2>Tips for Splitting Bills Fairly</h2>
+      <ul>
+        <li><strong>Agree on the method before ordering</strong> — decide upfront whether you're splitting equally or by item to avoid awkward conversations later.</li>
+        <li><strong>Use the "round up" rule</strong> — when splitting equally, each person rounds up to the nearest dollar. The extra covers rounding gaps and makes math simpler.</li>
+        <li><strong>Split tip on the total, not per person</strong> — calculate tip on the full pre-tax bill, then divide. This ensures the server gets a fair tip.</li>
+        <li><strong>Handle big-ticket differences gracefully</strong> — if one person ordered a $60 steak and everyone else had $15 salads, splitting equally isn't fair. Use the "by person" mode above.</li>
+        <li><strong>Don't forget tax</strong> — in many places, tax isn't included in menu prices. Add it to the total before splitting.</li>
+      </ul>
+
+      <h2>When to Split Equally vs. By Item</h2>
+      <p><strong>Split equally</strong> when everyone ordered similar-priced items, or when the group has an understanding that it all evens out over time. This is faster and avoids penny-counting.</p>
+      <p><strong>Split by item</strong> when there's a big price gap between orders (someone had water while others had cocktails), when some people are on a tight budget, or when the group includes people who don't drink alcohol.</p>
+
+      <h2>Related Resources</h2>
+      <ul>
+        <li><a href="/blog/monthly-budget-checklist">Monthly Budget Checklist</a></li>
+        <li><a href="/blog/budgeting-mistakes-to-avoid">Common Budgeting Mistakes to Avoid</a></li>
+        <li><a href="/blog/how-to-track-expenses-in-notion">How to Track Expenses in Notion</a></li>
+        <li><a href="/tools/budget-calculator">Budget Calculator</a></li>
+      </ul>
+
+      <h2>Frequently Asked Questions</h2>
+      <details>
+        <summary>How do you handle unequal orders when splitting the bill?</summary>
+        <p>The fairest approach is to <strong>split by item</strong>. Each person pays for what they ordered, then shared items (appetizers, pitchers) are divided equally among those who shared them. Tip and tax are then split proportionally based on each person's subtotal.</p>
+      </details>
+      <details>
+        <summary>Should you split tax and tip equally or proportionally?</summary>
+        <p>If splitting by item, <strong>split tax and tip proportionally</strong> — the person who spent more pays a larger share of the tip and tax. If splitting equally, tax and tip are simply divided by the number of people. This calculator handles both methods automatically.</p>
+      </details>
+      <details>
+        <summary>What's the etiquette for splitting the bill when one person didn't drink?</summary>
+        <p>The fair approach is to split food equally and have drinkers split the bar tab separately. Alternatively, use the "by person" mode to assign drinks only to those who ordered them. Never pressure someone into paying for drinks they didn't have.</p>
+      </details>
+      <details>
+        <summary>How do you split the bill with a large group?</summary>
+        <p>For groups of 6+, <strong>splitting equally is usually easiest</strong> — the differences tend to average out. Many restaurants also add an automatic 18-20% gratuity for large parties, so check the bill before adding extra tip. If orders vary wildly, assign a "bill captain" who enters everything into this calculator.</p>
+      </details>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .tool-hero { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 4rem 1.5rem 3rem; text-align: center; color: #fff; }
+  .tool-hero-inner { max-width: 720px; margin: 0 auto; }
+  .tool-badge { display: inline-block; background: rgba(255,255,255,0.2); backdrop-filter: blur(4px); padding: 0.35rem 1rem; border-radius: 999px; font-size: 0.85rem; font-weight: 600; margin-bottom: 1.25rem; }
+  .tool-hero h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; line-height: 1.15; margin: 0 0 1rem; }
+  .gradient-text { background: linear-gradient(90deg, #ffd6e0, #ffecd2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .tool-subtitle { font-size: 1.1rem; opacity: 0.92; line-height: 1.6; margin: 0; }
+  .tool-app { padding: 2.5rem 1.5rem; background: #f8f9fb; }
+  .tool-container { max-width: 800px; margin: 0 auto; }
+  .calc-card { background: #fff; border-radius: 16px; padding: 2rem; box-shadow: 0 2px 12px rgba(0,0,0,0.06); margin-bottom: 2rem; }
+  .input-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+  .input-label { display: block; font-weight: 700; font-size: 1.05rem; margin-bottom: 0.75rem; color: #1a1a2e; }
+  .input-wrapper { position: relative; display: flex; align-items: center; }
+  .currency-symbol { position: absolute; left: 1.25rem; font-size: 1.2rem; font-weight: 700; color: #667eea; }
+  .calc-input { width: 100%; padding: 0.85rem 0.85rem 0.85rem 2.75rem; font-size: 1.2rem; font-weight: 700; border: 2px solid #e2e8f0; border-radius: 12px; transition: border-color 0.2s; outline: none; font-family: inherit; color: #1a1a2e; }
+  .calc-input:focus { border-color: #667eea; box-shadow: 0 0 0 3px rgba(102,126,234,0.15); }
+  .calc-input::placeholder { color: #a0aec0; font-weight: 400; }
+  .split-mode-toggle { display: flex; gap: 0.75rem; margin-top: 1.5rem; }
+  .mode-btn { flex: 1; padding: 0.75rem 1.25rem; border: 2px solid #e2e8f0; border-radius: 999px; background: #fff; font-weight: 700; font-size: 1rem; cursor: pointer; transition: all 0.2s; color: #667eea; font-family: inherit; }
+  .mode-btn:hover { border-color: #667eea; background: #f0f3ff; }
+  .mode-btn.active { background: #667eea; color: #fff; border-color: #667eea; }
+  .section-title { font-size: 1.15rem; font-weight: 800; color: #1a1a2e; margin: 0 0 0.5rem; }
+  .section-desc { font-size: 0.95rem; color: #666; margin: 0 0 1.25rem; line-height: 1.5; }
+  .person-row { display: flex; gap: 0.75rem; align-items: center; margin-bottom: 0.75rem; flex-wrap: wrap; }
+  .person-name { flex: 1; min-width: 120px; padding: 0.65rem 1rem; font-size: 1rem; font-weight: 600; border: 2px solid #e2e8f0; border-radius: 10px; outline: none; font-family: inherit; color: #1a1a2e; }
+  .person-name:focus { border-color: #667eea; }
+  .person-amount { width: 130px; padding: 0.65rem 0.65rem 0.65rem 2rem; font-size: 1rem; font-weight: 700; border: 2px solid #e2e8f0; border-radius: 10px; outline: none; font-family: inherit; color: #1a1a2e; }
+  .person-amount:focus { border-color: #667eea; }
+  .person-amount-wrap { position: relative; }
+  .person-amount-wrap .currency-symbol { left: 0.75rem; font-size: 1rem; }
+  .remove-person { width: 36px; height: 36px; border: none; background: #fee2e2; color: #ef4444; border-radius: 50%; font-size: 1.2rem; cursor: pointer; font-weight: 700; display: flex; align-items: center; justify-content: center; transition: background 0.2s; }
+  .remove-person:hover { background: #fecaca; }
+  .add-person-btn { display: block; width: 100%; padding: 0.75rem; border: 2px dashed #d1d5db; border-radius: 12px; background: transparent; color: #667eea; font-weight: 700; font-size: 1rem; cursor: pointer; transition: all 0.2s; font-family: inherit; margin-top: 0.5rem; }
+  .add-person-btn:hover { border-color: #667eea; background: #f0f3ff; }
+  .results-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom: 2rem; }
+  .result-card { background: #fff; border-radius: 16px; padding: 1.5rem; box-shadow: 0 2px 12px rgba(0,0,0,0.06); border-left: 5px solid transparent; }
+  .result-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.5rem; }
+  .result-icon { font-size: 2rem; line-height: 1; }
+  .result-header h3 { margin: 0; font-size: 1rem; font-weight: 600; color: #555; }
+  .result-amount { margin: 0.15rem 0 0; font-size: 1.75rem; font-weight: 800; color: #1a1a2e; }
+  .result-tip { font-size: 0.9rem; color: #666; line-height: 1.55; margin: 0; }
+  .tool-cta { padding: 2.5rem 1.5rem; background: #fff; }
+  .cta-card { max-width: 800px; margin: 0 auto; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 20px; padding: 2.5rem; text-align: center; color: #fff; }
+  .cta-card h2 { margin: 0 0 0.75rem; font-size: 1.5rem; font-weight: 800; }
+  .cta-card p { margin: 0 0 1.5rem; opacity: 0.92; line-height: 1.6; }
+  .cta-button { display: inline-block; background: #fff; color: #667eea; font-weight: 700; padding: 0.85rem 2rem; border-radius: 999px; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; }
+  .cta-button:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
+  .tool-content { padding: 3rem 1.5rem 4rem; background: #f8f9fb; }
+  .content-narrow { max-width: 720px; margin: 0 auto; }
+  .tool-content h2 { font-size: 1.4rem; font-weight: 800; color: #1a1a2e; margin: 2.5rem 0 0.75rem; }
+  .tool-content h2:first-child { margin-top: 0; }
+  .tool-content p, .tool-content li { font-size: 1.02rem; line-height: 1.7; color: #444; }
+  .tool-content ul, .tool-content ol { padding-left: 1.25rem; margin: 0.5rem 0 1rem; }
+  .tool-content li { margin-bottom: 0.35rem; }
+  .tool-content a { color: #667eea; text-decoration: underline; text-underline-offset: 2px; }
+  .tool-content details { background: #fff; border-radius: 12px; padding: 1rem 1.25rem; margin-bottom: 0.75rem; box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
+  .tool-content summary { font-weight: 600; cursor: pointer; color: #1a1a2e; font-size: 1.02rem; }
+  .tool-content details p { margin: 0.75rem 0 0; }
+  @media (max-width: 640px) { .input-grid { grid-template-columns: 1fr; } .results-grid { grid-template-columns: 1fr; } .cta-card { padding: 2rem 1.5rem; } .person-row { flex-direction: column; align-items: stretch; } .person-amount { width: 100%; } .remove-person { align-self: flex-end; } }
+</style>
+
+<script>
+  const totalBillInput = document.getElementById('total-bill') as HTMLInputElement;
+  const tipPctInput = document.getElementById('tip-pct') as HTMLInputElement;
+  const numPeopleInput = document.getElementById('num-people') as HTMLInputElement;
+  const taxAmountInput = document.getElementById('tax-amount') as HTMLInputElement;
+  const resultsGrid = document.getElementById('results-grid')!;
+  const customSection = document.getElementById('custom-section')!;
+  const customResults = document.getElementById('custom-results')!;
+  const customResultsGrid = document.getElementById('custom-results-grid')!;
+  const btnEqual = document.getElementById('btn-equal')!;
+  const btnCustom = document.getElementById('btn-custom')!;
+  const peopleList = document.getElementById('people-list')!;
+  const addPersonBtn = document.getElementById('add-person-btn')!;
+
+  let mode: 'equal' | 'custom' = 'equal';
+  let personCount = 0;
+
+  function fmt(n: number): string { return '$' + n.toFixed(2); }
+
+  // Mode toggle
+  btnEqual.addEventListener('click', () => {
+    mode = 'equal';
+    btnEqual.classList.add('active');
+    btnCustom.classList.remove('active');
+    customSection.style.display = 'none';
+    customResults.style.display = 'none';
+    calculate();
+  });
+
+  btnCustom.addEventListener('click', () => {
+    mode = 'custom';
+    btnCustom.classList.add('active');
+    btnEqual.classList.remove('active');
+    customSection.style.display = 'block';
+    if (peopleList.children.length === 0) {
+      addPerson('Person 1');
+      addPerson('Person 2');
+    }
+    calculate();
+  });
+
+  function addPerson(name?: string) {
+    personCount++;
+    const row = document.createElement('div');
+    row.className = 'person-row';
+    row.innerHTML = `
+      <input type="text" class="person-name" placeholder="Name" value="${name || 'Person ' + personCount}" />
+      <div class="person-amount-wrap input-wrapper">
+        <span class="currency-symbol">$</span>
+        <input type="number" class="person-amount" placeholder="0.00" min="0" step="0.01" value="" />
+      </div>
+      <button class="remove-person" title="Remove">&times;</button>
+    `;
+    row.querySelector('.remove-person')!.addEventListener('click', () => {
+      row.remove();
+      calculate();
+    });
+    row.querySelector('.person-amount')!.addEventListener('input', calculate);
+    row.querySelector('.person-name')!.addEventListener('input', calculate);
+    peopleList.appendChild(row);
+    calculate();
+  }
+
+  addPersonBtn.addEventListener('click', () => addPerson());
+
+  function calculate() {
+    const bill = parseFloat(totalBillInput.value) || 0;
+    const tipPct = parseFloat(tipPctInput.value) || 0;
+    const people = Math.max(parseInt(numPeopleInput.value) || 1, 1);
+    const tax = parseFloat(taxAmountInput.value) || 0;
+
+    if (bill <= 0 && mode === 'equal') { resultsGrid.style.display = 'none'; return; }
+
+    const tipAmount = bill * (tipPct / 100);
+    const grandTotal = bill + tipAmount + tax;
+
+    if (mode === 'equal') {
+      const perPerson = grandTotal / people;
+      resultsGrid.style.display = 'grid';
+      customResults.style.display = 'none';
+      document.getElementById('res-subtotal')!.textContent = fmt(bill);
+      document.getElementById('res-tip')!.textContent = fmt(tipAmount);
+      document.getElementById('res-tip-desc')!.textContent = `Based on ${tipPct}% of the bill.`;
+      document.getElementById('res-total')!.textContent = fmt(grandTotal);
+      document.getElementById('res-per-person')!.textContent = fmt(perPerson);
+      document.getElementById('res-split-desc')!.textContent = `Split equally among ${people} ${people === 1 ? 'person' : 'people'}.`;
+    } else {
+      // Custom split mode
+      const rows = peopleList.querySelectorAll('.person-row');
+      if (rows.length === 0) { customResults.style.display = 'none'; resultsGrid.style.display = 'none'; return; }
+
+      let totalItems = 0;
+      const personData: { name: string; amount: number }[] = [];
+
+      rows.forEach(row => {
+        const name = (row.querySelector('.person-name') as HTMLInputElement).value || 'Someone';
+        const amount = parseFloat((row.querySelector('.person-amount') as HTMLInputElement).value) || 0;
+        totalItems += amount;
+        personData.push({ name, amount });
+      });
+
+      // Show equal split results with custom totals
+      const customBill = totalItems > 0 ? totalItems : bill;
+      const customTip = customBill * (tipPct / 100);
+      const customGrandTotal = customBill + customTip + tax;
+
+      resultsGrid.style.display = 'grid';
+      document.getElementById('res-subtotal')!.textContent = fmt(customBill);
+      document.getElementById('res-tip')!.textContent = fmt(customTip);
+      document.getElementById('res-tip-desc')!.textContent = `Based on ${tipPct}% of the subtotal.`;
+      document.getElementById('res-total')!.textContent = fmt(customGrandTotal);
+      document.getElementById('res-per-person')!.textContent = fmt(customGrandTotal / personData.length);
+      document.getElementById('res-split-desc')!.textContent = `Average across ${personData.length} people.`;
+
+      // Per-person breakdown
+      customResults.style.display = 'block';
+      const colors = ['#667eea', '#43e97b', '#f093fb', '#ffd86e', '#ff6b6b', '#4ecdc4', '#a8e6cf', '#ff9a9e'];
+      const icons = ['👤', '👤', '👤', '👤', '👤', '👤', '👤', '👤'];
+
+      customResultsGrid.innerHTML = personData.map((p, i) => {
+        const share = totalItems > 0 ? (p.amount / totalItems) : (1 / personData.length);
+        const personTip = customTip * share;
+        const personTax = tax * share;
+        const personTotal = p.amount + personTip + personTax;
+
+        return `
+          <div class="result-card" style="border-left-color:${colors[i % colors.length]};">
+            <div class="result-header">
+              <span class="result-icon">${icons[i % icons.length]}</span>
+              <div><h3>${p.name}</h3><p class="result-amount">${fmt(personTotal)}</p></div>
+            </div>
+            <p class="result-tip">Items: ${fmt(p.amount)} + Tip: ${fmt(personTip)}${tax > 0 ? ' + Tax: ' + fmt(personTax) : ''}</p>
+          </div>
+        `;
+      }).join('');
+    }
+  }
+
+  [totalBillInput, tipPctInput, numPeopleInput, taxAmountInput].forEach(el =>
+    el.addEventListener('input', calculate)
+  );
+</script>
