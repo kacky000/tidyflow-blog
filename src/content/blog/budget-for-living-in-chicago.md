@@ -3,6 +3,7 @@ title: "How to Budget for Living in Chicago: Complete Cost Guide"
 description: "Budget for living in Chicago with cost breakdowns for rent, CTA transit, winter utilities, and groceries at $40K, $60K, and $80K incomes."
 pubDate: "2026-04-09"
 tags: ["budgeting", "chicago", "city budget", "cost of living", "illinois"]
+heroImage: "/thumbs/thumb-budget-for-living-in-chicago.jpg"
 ---
 
 # How to Budget for Living in Chicago: Complete Cost Guide

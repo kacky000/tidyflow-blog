@@ -3,6 +3,7 @@ title: "How to Budget for Living in Houston: Low Cost of Living Guide"
 description: "Budget for living in Houston with no state income tax, affordable rent, and real cost breakdowns at $35K, $50K, and $75K income levels."
 pubDate: "2026-04-09"
 tags: ["budgeting", "houston", "city budget", "cost of living", "texas"]
+heroImage: "/thumbs/thumb-budget-for-living-in-houston.jpg"
 ---
 
 # How to Budget for Living in Houston: Low Cost of Living Guide

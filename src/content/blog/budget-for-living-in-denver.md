@@ -3,6 +3,7 @@ title: "How to Budget for Living in Denver: Mountain City on a Budget"
 description: "Complete Denver budget guide with cost breakdowns for $40K, $60K, and $80K salaries. Rent, transit, outdoor lifestyle costs, and money-saving tips."
 pubDate: "2026-04-09"
 tags: ["budgeting", "cost of living", "denver", "city budget"]
+heroImage: "/thumbs/thumb-budget-for-living-in-denver.jpg"
 ---
 
 # How to Budget for Living in Denver: Mountain City on a Budget

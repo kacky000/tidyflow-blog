@@ -3,6 +3,7 @@ title: "Budgeting Tips for Canada: How to Manage Your Money in the Great White N
 description: "Canadian budgeting guide with monthly breakdowns for $40K, $60K, and $80K CAD salaries. Covers TFSA, RRSP, heating costs, and province-specific tips."
 pubDate: "2026-04-09"
 tags: ["budgeting", "canada", "cost of living", "personal finance"]
+heroImage: "/thumbs/thumb-budgeting-tips-for-canada.jpg"
 ---
 
 # Budgeting Tips for Canada: How to Manage Your Money in the Great White North

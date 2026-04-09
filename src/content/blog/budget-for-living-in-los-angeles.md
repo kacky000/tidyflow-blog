@@ -3,6 +3,7 @@ title: "How to Budget for Living in Los Angeles: Costs & Tips"
 description: "Budget for living in Los Angeles with real cost breakdowns for rent, car expenses, groceries, and taxes at $50K, $75K, and $100K incomes."
 pubDate: "2026-04-09"
 tags: ["budgeting", "los angeles", "city budget", "cost of living", "california"]
+heroImage: "/thumbs/thumb-budget-for-living-in-los-angeles.jpg"
 ---
 
 # How to Budget for Living in Los Angeles: Costs & Tips

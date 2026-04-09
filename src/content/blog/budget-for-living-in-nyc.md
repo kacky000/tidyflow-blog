@@ -3,6 +3,7 @@ title: "How to Budget for Living in NYC: A Complete Guide"
 description: "Learn how to budget for living in NYC with real cost breakdowns for rent, food, transit, and taxes at $50K, $75K, and $100K income levels."
 pubDate: "2026-04-09"
 tags: ["budgeting", "nyc", "city budget", "cost of living", "new york"]
+heroImage: "/thumbs/thumb-budget-for-living-in-nyc.jpg"
 ---
 
 # How to Budget for Living in NYC: A Complete Guide
