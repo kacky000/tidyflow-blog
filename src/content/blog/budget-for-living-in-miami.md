@@ -2,6 +2,7 @@
 title: "How to Budget for Living in Miami (2026 Cost Breakdown)"
 description: "Build a realistic Miami budget with our complete cost breakdown. Covers rent, food, insurance, and tips to save in South Florida."
 pubDate: "2026-04-10"
+heroImage: "/thumbs/thumb-budget-for-living-in-miami.jpg"
 tags: ["budgeting", "miami", "cost-of-living", "florida"]
 ---
 

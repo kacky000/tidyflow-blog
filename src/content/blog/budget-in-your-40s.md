@@ -2,6 +2,7 @@
 title: "How to Budget in Your 40s (Practical Guide for 2026)"
 description: "Master budgeting in your 40s with strategies for peak earning years, college savings, retirement catch-up, and lifestyle balance."
 pubDate: "2026-04-10"
+heroImage: "/thumbs/thumb-budget-in-your-40s.jpg"
 tags: ["budgeting", "40s", "personal-finance", "retirement-planning"]
 ---
 

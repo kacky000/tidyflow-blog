@@ -2,6 +2,7 @@
 title: "How to Budget for Living in Seattle (2026 Cost Breakdown)"
 description: "Create a realistic Seattle budget with our cost breakdown for rent, food, transport, and more. Free templates and tools included."
 pubDate: "2026-04-10"
+heroImage: "/thumbs/thumb-budget-for-living-in-seattle.jpg"
 tags: ["budgeting", "seattle", "cost-of-living", "city-budget"]
 ---
 

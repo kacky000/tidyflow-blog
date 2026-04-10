@@ -2,6 +2,7 @@
 title: "How to Budget for Living in Atlanta (2026 Cost Breakdown)"
 description: "Create a realistic Atlanta budget with our cost guide covering rent, transportation, food, and more. Tips for every income level."
 pubDate: "2026-04-10"
+heroImage: "/thumbs/thumb-budget-for-living-in-atlanta.jpg"
 tags: ["budgeting", "atlanta", "cost-of-living", "georgia"]
 ---
 

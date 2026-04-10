@@ -2,6 +2,7 @@
 title: "How to Budget in Your 50s (Retirement Countdown Guide)"
 description: "Master budgeting in your 50s with strategies for catch-up savings, healthcare planning, downsizing, and retirement transition."
 pubDate: "2026-04-10"
+heroImage: "/thumbs/thumb-budget-in-your-50s.jpg"
 tags: ["budgeting", "50s", "retirement", "personal-finance"]
 ---
 

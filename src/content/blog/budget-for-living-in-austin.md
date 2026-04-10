@@ -2,6 +2,7 @@
 title: "How to Budget for Living in Austin, Texas (2026 Guide)"
 description: "Plan your Austin budget with a detailed cost breakdown for housing, food, transport, and entertainment. Templates and tips included."
 pubDate: "2026-04-10"
+heroImage: "/thumbs/thumb-budget-for-living-in-austin.jpg"
 tags: ["budgeting", "austin", "cost-of-living", "texas"]
 ---
 

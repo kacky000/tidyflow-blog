@@ -2,6 +2,7 @@
 title: "How to Budget for Living in Boston (2026 Cost Guide)"
 description: "Plan your Boston budget with a real cost breakdown for rent, transit, groceries, and more. Templates and neighborhood comparisons included."
 pubDate: "2026-04-10"
+heroImage: "/thumbs/thumb-budget-for-living-in-boston.jpg"
 tags: ["budgeting", "boston", "cost-of-living", "massachusetts"]
 ---
 
