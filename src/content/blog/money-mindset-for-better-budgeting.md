@@ -3,6 +3,7 @@ title: "Money Mindset for Better Budgeting: How Your Beliefs Shape Your Finances
 description: "Your money mindset determines whether your budget succeeds or fails. Learn how to shift from scarcity to abundance thinking with 5 practical exercises."
 pubDate: 2026-04-11
 tags: ["budgeting", "money-mindset", "financial-wellness", "personal-growth"]
+heroImage: "/thumbs/thumb-money-mindset-for-better-budgeting.jpg"
 author: "Tidyflow"
 ---
 

@@ -3,6 +3,7 @@ title: "Budget for Living in Phoenix: Real Costs, AC Bills, and Savings Tips for
 description: "Plan your budget for living in Phoenix with accurate data on rent, summer utility costs, car expenses, and strategies to thrive in Arizona's booming metro."
 pubDate: "2026-04-11"
 tags: ["budgeting", "phoenix", "cost-of-living", "city-budget"]
+heroImage: "/thumbs/thumb-budget-for-living-in-phoenix.jpg"
 ---
 
 # Budget for Living in Phoenix: What to Expect in 2026

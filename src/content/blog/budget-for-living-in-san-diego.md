@@ -3,6 +3,7 @@ title: "Budget for Living in San Diego: Cost of Beach Life, Taxes, and How to Sa
 description: "Create a budget for living in San Diego with real numbers on rent, California taxes, military economy, and smart strategies to afford America's Finest City."
 pubDate: "2026-04-11"
 tags: ["budgeting", "san-diego", "cost-of-living", "city-budget"]
+heroImage: "/thumbs/thumb-budget-for-living-in-san-diego.jpg"
 ---
 
 # Budget for Living in San Diego: The Full 2026 Financial Picture

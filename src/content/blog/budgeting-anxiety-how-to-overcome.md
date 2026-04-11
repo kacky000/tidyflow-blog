@@ -3,6 +3,7 @@ title: "Budgeting Anxiety: 5 Proven Ways to Overcome Financial Stress"
 description: "Budgeting anxiety affects millions of people. Learn the psychology behind money stress and 5 actionable strategies to overcome it for good."
 pubDate: 2026-04-11
 tags: ["budgeting", "mental-health", "financial-wellness", "anxiety"]
+heroImage: "/thumbs/thumb-budgeting-anxiety-how-to-overcome.jpg"
 author: "Tidyflow"
 ---
 

@@ -3,6 +3,7 @@ title: "Budget for Living in Portland: Cost Breakdown and Money-Saving Tips for 
 description: "Build a smart budget for living in Portland, Oregon. Real data on rent, groceries, transit, taxes, and how to make the most of Portland's unique lifestyle on any income."
 pubDate: "2026-04-11"
 tags: ["budgeting", "portland", "cost-of-living", "city-budget"]
+heroImage: "/thumbs/thumb-budget-for-living-in-portland.jpg"
 ---
 
 # Budget for Living in Portland: Your Complete 2026 Guide
