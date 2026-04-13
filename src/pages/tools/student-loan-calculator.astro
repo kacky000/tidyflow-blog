@@ -1,0 +1,781 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const title = 'Free Student Loan Calculator — Plan Your Repayment';
+const description = 'Calculate your monthly student loan payment, total interest, and payoff timeline. Compare repayment plans and see how extra payments save you money.';
+---
+
+<BaseLayout title={title} description={description}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Student Loan Calculator",
+      "url": "https://gettidyflow.com/tools/student-loan-calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "description": description
+    })} />
+  </Fragment>
+
+  <section class="tool-hero">
+    <div class="tool-hero-inner">
+      <span class="tool-badge">Free Tool — No Signup Required</span>
+      <h1>Student Loan <span class="gradient-text">Calculator</span></h1>
+      <p class="tool-subtitle">Enter your loan balance, interest rate, and repayment term to instantly see your monthly payment, total interest, and payoff date — plus how much extra payments can save you.</p>
+    </div>
+  </section>
+
+  <section class="tool-app">
+    <div class="tool-container">
+      <div class="calc-card">
+        <div class="input-group">
+          <label for="loan-balance" class="input-label">Loan Balance</label>
+          <div class="input-wrapper">
+            <span class="currency-symbol">$</span>
+            <input type="number" id="loan-balance" placeholder="e.g. 35,000" min="0" step="500" aria-label="Total loan balance in dollars" />
+          </div>
+        </div>
+
+        <div class="input-row">
+          <div class="input-group input-group-half">
+            <label for="interest-rate" class="input-label">Interest Rate (%)</label>
+            <div class="input-wrapper">
+              <span class="currency-symbol">%</span>
+              <input type="number" id="interest-rate" placeholder="e.g. 5.5" min="0" max="30" step="0.1" aria-label="Annual interest rate" />
+            </div>
+          </div>
+          <div class="input-group input-group-half">
+            <label for="loan-term" class="input-label">Loan Term</label>
+            <select id="loan-term" aria-label="Loan term in years">
+              <option value="10">10 years</option>
+              <option value="15">15 years</option>
+              <option value="20">20 years</option>
+              <option value="25">25 years</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="extra-payment" class="input-label">Extra Monthly Payment (optional)</label>
+          <div class="input-wrapper">
+            <span class="currency-symbol">$</span>
+            <input type="number" id="extra-payment" placeholder="e.g. 100" min="0" step="10" value="0" aria-label="Extra monthly payment in dollars" />
+          </div>
+        </div>
+      </div>
+
+      <div class="results-grid" id="results-grid" style="display:none;">
+        <div class="result-card payment-card">
+          <div class="result-header">
+            <span class="result-icon">📅</span>
+            <div>
+              <h3>Monthly Payment</h3>
+              <p class="result-amount" id="monthly-payment">$0</p>
+            </div>
+          </div>
+          <div class="bar-container">
+            <div class="bar bar-payment" id="bar-payment" style="width:0%"></div>
+          </div>
+          <p class="result-tip">Your required monthly payment based on loan balance, rate, and term. Extra payments are added on top of this amount.</p>
+        </div>
+
+        <div class="result-card interest-card">
+          <div class="result-header">
+            <span class="result-icon">💰</span>
+            <div>
+              <h3>Total Interest Paid</h3>
+              <p class="result-amount" id="total-interest">$0</p>
+            </div>
+          </div>
+          <div class="bar-container">
+            <div class="bar bar-interest" id="bar-interest" style="width:0%"></div>
+          </div>
+          <p class="result-tip">The total amount of interest you will pay over the life of the loan.</p>
+        </div>
+
+        <div class="result-card total-card">
+          <div class="result-header">
+            <span class="result-icon">📊</span>
+            <div>
+              <h3>Total Cost</h3>
+              <p class="result-amount" id="total-cost">$0</p>
+            </div>
+          </div>
+          <div class="bar-container">
+            <div class="bar bar-total" id="bar-total" style="width:0%"></div>
+          </div>
+          <p class="result-tip">Total amount paid over the life of the loan — principal plus all interest.</p>
+        </div>
+
+        <div class="result-card payoff-card">
+          <div class="result-header">
+            <span class="result-icon">🎯</span>
+            <div>
+              <h3>Payoff Date</h3>
+              <p class="result-amount" id="payoff-date">—</p>
+            </div>
+          </div>
+          <div class="bar-container">
+            <div class="bar bar-payoff" id="bar-payoff" style="width:0%"></div>
+          </div>
+          <p class="result-tip">The estimated date you will make your final payment.</p>
+        </div>
+      </div>
+
+      <div class="extra-savings" id="extra-savings" style="display:none;">
+        <h3>Extra Payment Savings</h3>
+        <div class="savings-grid">
+          <div class="savings-item">
+            <span class="savings-icon">⏱️</span>
+            <div>
+              <span class="savings-label">Time Saved</span>
+              <span class="savings-value" id="time-saved">0 months</span>
+            </div>
+          </div>
+          <div class="savings-item">
+            <span class="savings-icon">💵</span>
+            <div>
+              <span class="savings-label">Interest Saved</span>
+              <span class="savings-value" id="interest-saved">$0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="amortization-summary" id="amortization-summary" style="display:none;">
+        <h3>Repayment Schedule (Yearly)</h3>
+        <div class="table-wrapper">
+          <table class="amort-table">
+            <thead>
+              <tr>
+                <th>Year</th>
+                <th>Principal Paid</th>
+                <th>Interest Paid</th>
+                <th>Remaining Balance</th>
+              </tr>
+            </thead>
+            <tbody id="amort-tbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool-cta">
+    <div class="tool-container">
+      <div class="cta-card">
+        <h2>Get Your Budget Under Control</h2>
+        <p>Knowing your student loan payment is step one. The next step is building a budget that balances loan payments, living expenses, and savings. Our Notion Budget Tracker makes it simple.</p>
+        <a href="https://gettidyflow.gumroad.com" target="_blank" rel="noopener" class="cta-button">Get the Notion Budget Tracker &rarr;</a>
+        <p class="cta-sub-link"><a href="/tools/budget-calculator">Try our 50/30/20 Budget Calculator &rarr;</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool-content">
+    <div class="tool-container content-narrow">
+      <h2>How Student Loan Repayment Works</h2>
+      <p>Student loan repayment uses an <strong>amortization schedule</strong> — each monthly payment covers interest first, then the remainder goes to principal. In early years, most of your payment goes toward interest. Over time, the split shifts and more goes toward paying down the balance.</p>
+      <p>The standard formula for your monthly payment is the same as any amortizing loan:</p>
+      <p><strong>M = P &times; [r(1+r)<sup>n</sup>] / [(1+r)<sup>n</sup> &minus; 1]</strong></p>
+      <ul>
+        <li><strong>M</strong> = monthly payment</li>
+        <li><strong>P</strong> = loan balance</li>
+        <li><strong>r</strong> = monthly interest rate (annual rate &divide; 12)</li>
+        <li><strong>n</strong> = total number of payments (years &times; 12)</li>
+      </ul>
+      <p>Extra payments go directly to principal, which reduces the balance faster and saves you money on interest.</p>
+
+      <h2>Tips to Pay Off Student Loans Faster</h2>
+      <ul>
+        <li><strong>Make extra payments</strong> — Even $50/month extra can save thousands in interest and cut years off your loan. Use the calculator above to see the impact.</li>
+        <li><strong>Target the highest-rate loan first</strong> — If you have multiple loans, pay minimums on all but throw extra money at the highest interest rate (the "avalanche method").</li>
+        <li><strong>Set up autopay</strong> — Most servicers offer a 0.25% rate discount for enrolling in automatic payments.</li>
+        <li><strong>Use windfalls wisely</strong> — Tax refunds, bonuses, and gifts can make a big dent when applied to principal.</li>
+        <li><strong>Refinance if rates drop</strong> — If your credit has improved since school, you may qualify for a lower rate. Run the numbers before refinancing federal loans (you lose income-driven repayment options).</li>
+        <li><strong>Track your budget</strong> — Use a <a href="/tools/budget-calculator">budget calculator</a> or <a href="https://gettidyflow.gumroad.com">budget tracker</a> to find extra money in your spending.</li>
+      </ul>
+
+      <h2>Related Tools & Resources</h2>
+      <ul>
+        <li><a href="/tools/budget-calculator">50/30/20 Budget Calculator</a> — See how your loan payment fits into your overall budget</li>
+        <li><a href="/tools/debt-payoff-calculator">Debt Payoff Calculator</a> — Plan a strategy for all your debts, not just student loans</li>
+        <li><a href="/blog/how-to-pay-off-student-loans-fast">How to Pay Off Student Loans Fast</a> — Proven strategies from people who did it</li>
+      </ul>
+
+      <h2>Frequently Asked Questions</h2>
+      <details>
+        <summary>What is the standard repayment plan?</summary>
+        <p>The standard federal repayment plan is <strong>10 years (120 payments)</strong> with fixed monthly payments. This is the default plan when you enter repayment and typically results in the least total interest paid among federal options.</p>
+      </details>
+      <details>
+        <summary>How do extra payments help?</summary>
+        <p>Extra payments go directly toward your principal balance, which means less interest accrues in future months. This creates a snowball effect — each extra payment makes the next month's interest charge slightly smaller. Even $50-100/month extra can save thousands of dollars and shave years off your payoff date.</p>
+      </details>
+      <details>
+        <summary>Should I refinance my student loans?</summary>
+        <p>Refinancing makes sense if you can get a <strong>significantly lower interest rate</strong> and you do not need federal protections like income-driven repayment, Public Service Loan Forgiveness, or deferment options. Private loans are generally safe to refinance; federal loans require more careful consideration. Always run the numbers with this calculator first.</p>
+      </details>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .tool-hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 4rem 1.5rem 3rem;
+    text-align: center;
+    color: #fff;
+  }
+  .tool-hero-inner {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .tool-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(4px);
+    padding: 0.35rem 1rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+  }
+  .tool-hero h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 800;
+    line-height: 1.15;
+    margin: 0 0 1rem;
+  }
+  .gradient-text {
+    background: linear-gradient(90deg, #ffd6e0, #ffecd2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .tool-subtitle {
+    font-size: 1.1rem;
+    opacity: 0.92;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .tool-app {
+    padding: 2.5rem 1.5rem;
+    background: #f8f9fb;
+  }
+  .tool-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .calc-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    margin-bottom: 2rem;
+  }
+  .input-group {
+    margin-bottom: 1.25rem;
+  }
+  .input-group:last-child {
+    margin-bottom: 0;
+  }
+  .input-row {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+  }
+  .input-row:last-child {
+    margin-bottom: 0;
+  }
+  .input-group-half {
+    flex: 1;
+    margin-bottom: 0;
+  }
+  .input-label {
+    display: block;
+    font-weight: 700;
+    font-size: 1.05rem;
+    margin-bottom: 0.75rem;
+    color: #1a1a2e;
+  }
+  .input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .currency-symbol {
+    position: absolute;
+    left: 1.25rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #667eea;
+  }
+  .calc-card input[type="number"] {
+    width: 100%;
+    padding: 1rem 1rem 1rem 2.75rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    transition: border-color 0.2s;
+    outline: none;
+    font-family: inherit;
+    color: #1a1a2e;
+  }
+  .calc-card input[type="number"]:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102,126,234,0.15);
+  }
+  .calc-card input[type="number"]::placeholder {
+    color: #a0aec0;
+    font-weight: 400;
+  }
+  .calc-card select {
+    width: 100%;
+    padding: 1rem 1.25rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    transition: border-color 0.2s;
+    outline: none;
+    font-family: inherit;
+    color: #1a1a2e;
+    background: #fff;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23667eea' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1.25rem center;
+  }
+  .calc-card select:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102,126,234,0.15);
+  }
+
+  .results-grid {
+    display: grid;
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+  }
+  .result-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    border-left: 5px solid transparent;
+  }
+  .payment-card { border-left-color: #667eea; }
+  .interest-card { border-left-color: #f093fb; }
+  .total-card { border-left-color: #43e97b; }
+  .payoff-card { border-left-color: #fbbf24; }
+
+  .result-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  .result-icon {
+    font-size: 2rem;
+    line-height: 1;
+  }
+  .result-header h3 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #555;
+  }
+  .result-amount {
+    margin: 0.15rem 0 0;
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #1a1a2e;
+  }
+
+  .bar-container {
+    width: 100%;
+    height: 10px;
+    background: #f0f0f5;
+    border-radius: 999px;
+    overflow: hidden;
+    margin-bottom: 0.75rem;
+  }
+  .bar {
+    height: 100%;
+    border-radius: 999px;
+    transition: width 0.5s ease;
+  }
+  .bar-payment { background: linear-gradient(90deg, #667eea, #764ba2); }
+  .bar-interest { background: linear-gradient(90deg, #f093fb, #f5576c); }
+  .bar-total { background: linear-gradient(90deg, #43e97b, #38f9d7); }
+  .bar-payoff { background: linear-gradient(90deg, #fbbf24, #f59e0b); }
+
+  .result-tip {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.55;
+    margin: 0;
+  }
+
+  .extra-savings {
+    background: #fff;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    margin-bottom: 2rem;
+    border: 2px solid #43e97b;
+  }
+  .extra-savings h3 {
+    margin: 0 0 1rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1a1a2e;
+  }
+  .savings-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .savings-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    background: #f0fdf4;
+    border-radius: 12px;
+  }
+  .savings-icon {
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+  .savings-label {
+    display: block;
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 0.15rem;
+  }
+  .savings-value {
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #16a34a;
+  }
+
+  .amortization-summary {
+    background: #fff;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+  .amortization-summary h3 {
+    margin: 0 0 1rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1a1a2e;
+  }
+  .table-wrapper {
+    overflow-x: auto;
+  }
+  .amort-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+  }
+  .amort-table th {
+    text-align: left;
+    padding: 0.75rem 1rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    font-weight: 600;
+  }
+  .amort-table th:first-child {
+    border-radius: 10px 0 0 0;
+  }
+  .amort-table th:last-child {
+    border-radius: 0 10px 0 0;
+  }
+  .amort-table td {
+    padding: 0.65rem 1rem;
+    color: #444;
+    border-bottom: 1px solid #f0f0f5;
+  }
+  .amort-table tr:nth-child(even) td {
+    background: #f8f9fb;
+  }
+  .amort-table tr:last-child td:first-child {
+    border-radius: 0 0 0 10px;
+  }
+  .amort-table tr:last-child td:last-child {
+    border-radius: 0 0 10px 0;
+  }
+
+  .tool-cta {
+    padding: 2.5rem 1.5rem;
+    background: #fff;
+  }
+  .cta-card {
+    max-width: 800px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 20px;
+    padding: 2.5rem;
+    text-align: center;
+    color: #fff;
+  }
+  .cta-card h2 {
+    margin: 0 0 0.75rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+  }
+  .cta-card p {
+    margin: 0 0 1.5rem;
+    opacity: 0.92;
+    line-height: 1.6;
+  }
+  .cta-button {
+    display: inline-block;
+    background: #fff;
+    color: #667eea;
+    font-weight: 700;
+    padding: 0.85rem 2rem;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  }
+  .cta-sub-link {
+    margin-top: 0.5rem !important;
+    margin-bottom: 0 !important;
+  }
+  .cta-sub-link a {
+    color: #fff;
+    opacity: 0.85;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    font-size: 0.95rem;
+  }
+
+  .tool-content {
+    padding: 3rem 1.5rem 4rem;
+    background: #f8f9fb;
+  }
+  .content-narrow {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .tool-content h2 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #1a1a2e;
+    margin: 2.5rem 0 0.75rem;
+  }
+  .tool-content h2:first-child {
+    margin-top: 0;
+  }
+  .tool-content p,
+  .tool-content li {
+    font-size: 1.02rem;
+    line-height: 1.7;
+    color: #444;
+  }
+  .tool-content ul,
+  .tool-content ol {
+    padding-left: 1.25rem;
+    margin: 0.5rem 0 1rem;
+  }
+  .tool-content li {
+    margin-bottom: 0.35rem;
+  }
+  .tool-content a {
+    color: #667eea;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .tool-content details {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 0.75rem;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  }
+  .tool-content summary {
+    font-weight: 600;
+    cursor: pointer;
+    color: #1a1a2e;
+    font-size: 1.02rem;
+  }
+  .tool-content details p {
+    margin: 0.75rem 0 0;
+  }
+
+  @media (max-width: 640px) {
+    .input-row {
+      flex-direction: column;
+      gap: 0;
+    }
+    .input-group-half {
+      margin-bottom: 1.25rem;
+    }
+    .savings-grid {
+      grid-template-columns: 1fr;
+    }
+    .cta-card {
+      padding: 2rem 1.5rem;
+    }
+  }
+</style>
+
+<script>
+  const loanBalance = document.getElementById('loan-balance') as HTMLInputElement;
+  const interestRate = document.getElementById('interest-rate') as HTMLInputElement;
+  const loanTerm = document.getElementById('loan-term') as HTMLSelectElement;
+  const extraPayment = document.getElementById('extra-payment') as HTMLInputElement;
+  const resultsGrid = document.getElementById('results-grid')!;
+  const extraSavings = document.getElementById('extra-savings')!;
+  const amortSummary = document.getElementById('amortization-summary')!;
+
+  function formatCurrency(n: number): string {
+    return '$' + n.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+  }
+
+  function formatCurrencyCents(n: number): string {
+    return '$' + n.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  }
+
+  function formatDate(date: Date): string {
+    return date.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+  }
+
+  function calcMonthlyPayment(principal: number, monthlyRate: number, totalPayments: number): number {
+    if (monthlyRate === 0) return principal / totalPayments;
+    const factor = Math.pow(1 + monthlyRate, totalPayments);
+    return principal * (monthlyRate * factor) / (factor - 1);
+  }
+
+  function simulateLoan(principal: number, monthlyRate: number, basePayment: number, extra: number) {
+    let balance = principal;
+    let totalInterest = 0;
+    let months = 0;
+    const yearlyData: { principal: number; interest: number; balance: number }[] = [];
+    let yearPrincipal = 0;
+    let yearInterest = 0;
+
+    while (balance > 0.01 && months < 600) {
+      const interestCharge = balance * monthlyRate;
+      const totalMonthlyPayment = Math.min(basePayment + extra, balance + interestCharge);
+      const principalPayment = totalMonthlyPayment - interestCharge;
+
+      balance -= principalPayment;
+      if (balance < 0) balance = 0;
+      totalInterest += interestCharge;
+      yearPrincipal += principalPayment;
+      yearInterest += interestCharge;
+      months++;
+
+      if (months % 12 === 0 || balance <= 0.01) {
+        yearlyData.push({
+          principal: yearPrincipal,
+          interest: yearInterest,
+          balance: Math.max(balance, 0)
+        });
+        yearPrincipal = 0;
+        yearInterest = 0;
+      }
+    }
+
+    return { totalInterest, months, yearlyData };
+  }
+
+  function calculate() {
+    const principal = parseFloat(loanBalance.value) || 0;
+    const annualRate = parseFloat(interestRate.value) || 0;
+    const years = parseInt(loanTerm.value) || 10;
+    const extra = parseFloat(extraPayment.value) || 0;
+
+    if (principal <= 0 || annualRate <= 0) {
+      resultsGrid.style.display = 'none';
+      extraSavings.style.display = 'none';
+      amortSummary.style.display = 'none';
+      return;
+    }
+
+    const r = annualRate / 100 / 12;
+    const n = years * 12;
+    const basePayment = calcMonthlyPayment(principal, r, n);
+
+    // Simulate with extra payment
+    const result = simulateLoan(principal, r, basePayment, extra);
+    const totalCost = principal + result.totalInterest;
+
+    // Payoff date
+    const now = new Date();
+    const payoffDate = new Date(now.getFullYear(), now.getMonth() + result.months, 1);
+
+    resultsGrid.style.display = 'grid';
+    amortSummary.style.display = 'block';
+
+    document.getElementById('monthly-payment')!.textContent = formatCurrencyCents(basePayment);
+    document.getElementById('total-interest')!.textContent = formatCurrency(Math.round(result.totalInterest));
+    document.getElementById('total-cost')!.textContent = formatCurrency(Math.round(totalCost));
+    document.getElementById('payoff-date')!.textContent = formatDate(payoffDate);
+
+    // Bar widths
+    const interestRatio = result.totalInterest / totalCost * 100;
+    (document.getElementById('bar-payment') as HTMLElement).style.width = '100%';
+    (document.getElementById('bar-interest') as HTMLElement).style.width = interestRatio.toFixed(1) + '%';
+    (document.getElementById('bar-total') as HTMLElement).style.width = '100%';
+    const timeRatio = (result.months / n) * 100;
+    (document.getElementById('bar-payoff') as HTMLElement).style.width = timeRatio.toFixed(1) + '%';
+
+    // Extra payment savings
+    if (extra > 0) {
+      const baseResult = simulateLoan(principal, r, basePayment, 0);
+      const monthsSaved = baseResult.months - result.months;
+      const interestSaved = baseResult.totalInterest - result.totalInterest;
+
+      extraSavings.style.display = 'block';
+
+      if (monthsSaved >= 12) {
+        const yearsSaved = Math.floor(monthsSaved / 12);
+        const remainingMonths = monthsSaved % 12;
+        let timeStr = yearsSaved + (yearsSaved === 1 ? ' year' : ' years');
+        if (remainingMonths > 0) {
+          timeStr += ' ' + remainingMonths + (remainingMonths === 1 ? ' month' : ' months');
+        }
+        document.getElementById('time-saved')!.textContent = timeStr;
+      } else {
+        document.getElementById('time-saved')!.textContent = monthsSaved + (monthsSaved === 1 ? ' month' : ' months');
+      }
+      document.getElementById('interest-saved')!.textContent = formatCurrency(Math.round(interestSaved));
+    } else {
+      extraSavings.style.display = 'none';
+    }
+
+    // Amortization table
+    const tbody = document.getElementById('amort-tbody')!;
+    tbody.innerHTML = '';
+    result.yearlyData.forEach((row, i) => {
+      const tr = document.createElement('tr');
+      tr.innerHTML =
+        '<td>' + (i + 1) + '</td>' +
+        '<td>' + formatCurrency(Math.round(row.principal)) + '</td>' +
+        '<td>' + formatCurrency(Math.round(row.interest)) + '</td>' +
+        '<td>' + formatCurrency(Math.round(row.balance)) + '</td>';
+      tbody.appendChild(tr);
+    });
+  }
+
+  loanBalance.addEventListener('input', calculate);
+  interestRate.addEventListener('input', calculate);
+  loanTerm.addEventListener('change', calculate);
+  extraPayment.addEventListener('input', calculate);
+</script>
