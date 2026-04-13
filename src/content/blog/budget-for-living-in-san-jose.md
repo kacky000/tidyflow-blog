@@ -3,6 +3,7 @@ title: "How to Budget for Living in San Jose (2026 Cost Breakdown)"
 description: "Budget for San Jose's high cost of living with real 2026 data on rent, taxes, food, and transport. Free tools to manage your Silicon Valley paycheck."
 pubDate: "2026-04-13"
 tags: ["budgeting", "san-jose", "cost-of-living", "city-budget"]
+heroImage: "/thumbs/thumb-budget-for-living-in-san-jose.jpg"
 ---
 
 # How to Budget for Living in San Jose

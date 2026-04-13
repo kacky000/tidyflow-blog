@@ -3,6 +3,7 @@ title: "How to Budget for Living in Columbus, Ohio (2026 Cost Breakdown)"
 description: "Build your Columbus budget with real cost data for rent, utilities, food, and transport. Covers OSU area living, tech job growth, and seasonal costs."
 pubDate: "2026-04-13"
 tags: ["budgeting", "columbus", "cost-of-living", "city-budget"]
+heroImage: "/thumbs/thumb-budget-for-living-in-columbus.jpg"
 ---
 
 # How to Budget for Living in Columbus, Ohio

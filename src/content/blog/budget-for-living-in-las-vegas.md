@@ -3,6 +3,7 @@ title: "How to Budget for Living in Las Vegas (2026 Cost Breakdown)"
 description: "Plan your Las Vegas budget with real cost breakdowns for housing, utilities, food, and entertainment. Tips for the desert city's unique expenses."
 pubDate: "2026-04-13"
 tags: ["budgeting", "las-vegas", "cost-of-living", "city-budget"]
+heroImage: "/thumbs/thumb-budget-for-living-in-las-vegas.jpg"
 ---
 
 # How to Budget for Living in Las Vegas

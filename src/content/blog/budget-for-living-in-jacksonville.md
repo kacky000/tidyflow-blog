@@ -3,6 +3,7 @@ title: "How to Budget for Living in Jacksonville (2026 Cost Breakdown)"
 description: "Master your Jacksonville budget with real 2026 cost data for rent, food, transport, and more. Free tools and templates to stretch your paycheck further."
 pubDate: "2026-04-13"
 tags: ["budgeting", "jacksonville", "cost-of-living", "city-budget"]
+heroImage: "/thumbs/thumb-budget-for-living-in-jacksonville.jpg"
 ---
 
 # How to Budget for Living in Jacksonville

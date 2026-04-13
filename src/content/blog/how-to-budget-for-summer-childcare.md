@@ -4,6 +4,7 @@ description: "Learn how to budget for summer childcare costs including camps, da
 pubDate: "2026-04-13"
 tags: ["budgeting", "childcare", "summer", "family-budget"]
 author: "Tidyflow"
+heroImage: "/thumbs/thumb-how-to-budget-for-summer-childcare.jpg"
 ---
 
 School ends in late May or early June. For working parents, that date isn't just a calendar event — it's a financial cliff. The childcare arrangements that worked during the school year vanish overnight, replaced by summer programs that can cost $200 to $600 per week per child.

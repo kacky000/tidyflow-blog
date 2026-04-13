@@ -3,6 +3,7 @@ title: "How to Budget for Living in Washington DC (2026 Cost Breakdown)"
 description: "Master your DC budget with cost breakdowns for housing, Metro, food, and more. Covers GS pay scales, DMV commuting options, and federal worker tips."
 pubDate: "2026-04-13"
 tags: ["budgeting", "washington-dc", "cost-of-living", "city-budget"]
+heroImage: "/thumbs/thumb-budget-for-living-in-washington-dc.jpg"
 ---
 
 # How to Budget for Living in Washington DC
