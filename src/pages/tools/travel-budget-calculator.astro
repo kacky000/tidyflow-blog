@@ -1,0 +1,528 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const title = 'Free Travel Budget Calculator — Plan Your Trip Costs Instantly';
+const description = 'Estimate your total trip cost including flights, hotel, food, activities, and more. Free travel budget planner — no signup required.';
+---
+
+<BaseLayout title={title} description={description}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Travel Budget Calculator",
+      "url": "https://gettidyflow.com/tools/travel-budget-calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "description": description
+    })} />
+  </Fragment>
+
+  <section class="tool-hero">
+    <div class="tool-hero-inner">
+      <span class="tool-badge">Free Tool — No Signup Required</span>
+      <h1>Travel Budget <span class="gradient-text">Calculator</span></h1>
+      <p class="tool-subtitle">Plan your next trip without the financial stress. Enter your travel details below and get an instant cost estimate for flights, accommodation, food, activities, and more.</p>
+    </div>
+  </section>
+
+  <section class="tool-app">
+    <div class="tool-container">
+      <div class="calc-card">
+        <h2 class="section-title">Trip Details</h2>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="destination" class="input-label">Destination Type</label>
+            <select id="destination" class="form-select">
+              <option value="domestic-budget">Domestic — Budget</option>
+              <option value="domestic-mid" selected>Domestic — Mid-Range</option>
+              <option value="domestic-luxury">Domestic — Luxury</option>
+              <option value="international-budget">International — Budget</option>
+              <option value="international-mid">International — Mid-Range</option>
+              <option value="international-luxury">International — Luxury</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="days" class="input-label">Number of Days</label>
+            <input type="number" id="days" value="5" min="1" max="90" class="form-input" />
+          </div>
+          <div class="form-group">
+            <label for="travelers" class="input-label">Number of Travelers</label>
+            <input type="number" id="travelers" value="2" min="1" max="20" class="form-input" />
+          </div>
+        </div>
+      </div>
+
+      <div class="calc-card">
+        <h2 class="section-title">Custom Costs (Optional — Override Estimates)</h2>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="flight" class="input-label">Round-Trip Flight / Person ($)</label>
+            <input type="number" id="flight" placeholder="Auto-estimated" min="0" class="form-input" />
+          </div>
+          <div class="form-group">
+            <label for="hotel" class="input-label">Accommodation / Night ($)</label>
+            <input type="number" id="hotel" placeholder="Auto-estimated" min="0" class="form-input" />
+          </div>
+          <div class="form-group">
+            <label for="food" class="input-label">Food / Person / Day ($)</label>
+            <input type="number" id="food" placeholder="Auto-estimated" min="0" class="form-input" />
+          </div>
+          <div class="form-group">
+            <label for="transport" class="input-label">Local Transport / Day ($)</label>
+            <input type="number" id="transport" placeholder="Auto-estimated" min="0" class="form-input" />
+          </div>
+          <div class="form-group">
+            <label for="activities" class="input-label">Activities / Person / Day ($)</label>
+            <input type="number" id="activities" placeholder="Auto-estimated" min="0" class="form-input" />
+          </div>
+          <div class="form-group">
+            <label for="misc" class="input-label">Miscellaneous / Day ($)</label>
+            <input type="number" id="misc" placeholder="Auto-estimated" min="0" class="form-input" />
+          </div>
+        </div>
+      </div>
+
+      <div class="results-section" id="results-section">
+        <div class="results-grid">
+          <div class="result-card flight-card">
+            <div class="result-header">
+              <span class="result-icon">✈️</span>
+              <div>
+                <h3>Flights</h3>
+                <p class="result-amount" id="flight-total">$0</p>
+              </div>
+            </div>
+            <p class="result-detail" id="flight-detail"></p>
+          </div>
+          <div class="result-card hotel-card">
+            <div class="result-header">
+              <span class="result-icon">🏨</span>
+              <div>
+                <h3>Accommodation</h3>
+                <p class="result-amount" id="hotel-total">$0</p>
+              </div>
+            </div>
+            <p class="result-detail" id="hotel-detail"></p>
+          </div>
+          <div class="result-card food-card">
+            <div class="result-header">
+              <span class="result-icon">🍽️</span>
+              <div>
+                <h3>Food & Dining</h3>
+                <p class="result-amount" id="food-total">$0</p>
+              </div>
+            </div>
+            <p class="result-detail" id="food-detail"></p>
+          </div>
+          <div class="result-card transport-card">
+            <div class="result-header">
+              <span class="result-icon">🚕</span>
+              <div>
+                <h3>Local Transport</h3>
+                <p class="result-amount" id="transport-total">$0</p>
+              </div>
+            </div>
+            <p class="result-detail" id="transport-detail"></p>
+          </div>
+          <div class="result-card activities-card">
+            <div class="result-header">
+              <span class="result-icon">🎯</span>
+              <div>
+                <h3>Activities & Tours</h3>
+                <p class="result-amount" id="activities-total">$0</p>
+              </div>
+            </div>
+            <p class="result-detail" id="activities-detail"></p>
+          </div>
+          <div class="result-card misc-card">
+            <div class="result-header">
+              <span class="result-icon">🛍️</span>
+              <div>
+                <h3>Miscellaneous</h3>
+                <p class="result-amount" id="misc-total">$0</p>
+              </div>
+            </div>
+            <p class="result-detail" id="misc-detail"></p>
+          </div>
+        </div>
+
+        <div class="grand-total-card">
+          <div class="grand-total-row">
+            <span>Estimated Total Trip Cost</span>
+            <span class="grand-total-amount" id="grand-total">$0</span>
+          </div>
+          <div class="grand-total-row sub">
+            <span>Cost Per Person</span>
+            <span id="per-person">$0</span>
+          </div>
+          <div class="grand-total-row sub">
+            <span>Cost Per Day (total)</span>
+            <span id="per-day">$0</span>
+          </div>
+        </div>
+
+        <div class="tip-card">
+          <h3>💡 Money-Saving Tips</h3>
+          <ul id="tips-list"></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool-cta">
+    <div class="tool-container">
+      <div class="cta-card">
+        <h2>Track Every Travel Expense</h2>
+        <p>Planning is step one. Tracking your actual spending during the trip keeps you on budget. Our budget tracker makes it effortless.</p>
+        <a href="https://gettidyflow.gumroad.com" target="_blank" rel="noopener" class="cta-button">Get the Budget Tracker &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool-content">
+    <div class="tool-container content-narrow">
+      <h2>How to Budget for a Trip</h2>
+      <p>Travel budgeting does not have to be complicated. The key is breaking your trip into predictable cost categories — flights, accommodation, food, transport, activities, and miscellaneous — then estimating each one based on your destination and travel style.</p>
+      <p>This calculator uses average cost data for domestic and international travel at three spending tiers (budget, mid-range, luxury) to give you a realistic starting estimate. You can override any category with your own numbers for a more accurate picture.</p>
+
+      <h2>Tips for Cutting Travel Costs</h2>
+      <ul>
+        <li><strong>Book flights 6-8 weeks early</strong> — this is the sweet spot for domestic flights. International flights benefit from 2-3 months lead time.</li>
+        <li><strong>Travel mid-week</strong> — Tuesday and Wednesday flights are typically 15-25% cheaper than weekend departures.</li>
+        <li><strong>Use credit card points</strong> — if you have travel rewards cards, flights and hotels can be partially or fully covered.</li>
+        <li><strong>Cook some meals</strong> — booking accommodation with a kitchen can cut food costs by 30-40%.</li>
+        <li><strong>Free activities first</strong> — museums, parks, walking tours, and markets are often free and among the best travel experiences.</li>
+      </ul>
+
+      <h2>Related Tools</h2>
+      <ul>
+        <li><a href="/tools/budget-calculator">50/30/20 Budget Calculator</a> — split your income before planning a trip</li>
+        <li><a href="/tools/savings-goal-calculator">Savings Goal Calculator</a> — set and track a trip savings target</li>
+        <li><a href="/tools/subscription-calculator">Subscription Calculator</a> — find money to redirect toward travel</li>
+      </ul>
+
+      <h2>Frequently Asked Questions</h2>
+      <details>
+        <summary>How accurate are the auto-estimates?</summary>
+        <p>The estimates are based on median costs for US travelers. They give you a solid ballpark, but actual prices vary by specific destination, season, and booking timing. Override any field with your own research for better accuracy.</p>
+      </details>
+      <details>
+        <summary>Should I budget extra for emergencies?</summary>
+        <p>Yes. A good rule of thumb is to add 10-15% on top of your estimated total as an emergency buffer. This covers unexpected expenses like medical needs, lost items, or last-minute plan changes.</p>
+      </details>
+      <details>
+        <summary>Does this include travel insurance?</summary>
+        <p>No. Travel insurance typically costs 5-10% of your total trip cost. We recommend getting it for international trips or any trip over $2,000. Add it to the miscellaneous field if you want to include it in your estimate.</p>
+      </details>
+      <details>
+        <summary>How do I budget for a group trip?</summary>
+        <p>Set the number of travelers to your group size. Flights, food, and activities scale per person. Accommodation is per room, so sharing a hotel splits that cost. The calculator handles this automatically.</p>
+      </details>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .tool-hero {
+    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+    padding: 4rem 1.5rem 3rem;
+    text-align: center;
+    color: #fff;
+  }
+  .tool-hero-inner { max-width: 720px; margin: 0 auto; }
+  .tool-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(4px);
+    padding: 0.35rem 1rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+  }
+  .tool-hero h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 800;
+    line-height: 1.15;
+    margin: 0 0 1rem;
+  }
+  .gradient-text {
+    background: linear-gradient(90deg, #ffd6e0, #ffecd2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .tool-subtitle {
+    font-size: 1.1rem;
+    opacity: 0.92;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .tool-app { padding: 2.5rem 1.5rem; background: #f8f9fb; }
+  .tool-container { max-width: 800px; margin: 0 auto; }
+
+  .calc-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    margin-bottom: 1.5rem;
+  }
+  .section-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin: 0 0 1.25rem;
+  }
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .form-group { display: flex; flex-direction: column; }
+  .input-label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+    color: #1a1a2e;
+  }
+  .form-input, .form-select {
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    outline: none;
+    font-family: inherit;
+    color: #1a1a2e;
+    transition: border-color 0.2s;
+  }
+  .form-input:focus, .form-select:focus {
+    border-color: #11998e;
+    box-shadow: 0 0 0 3px rgba(17,153,142,0.15);
+  }
+  .form-input::placeholder { color: #a0aec0; }
+
+  .results-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .result-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 1.25rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    border-left: 4px solid #11998e;
+  }
+  .flight-card { border-left-color: #667eea; }
+  .hotel-card { border-left-color: #f093fb; }
+  .food-card { border-left-color: #f5576c; }
+  .transport-card { border-left-color: #ffa726; }
+  .activities-card { border-left-color: #43e97b; }
+  .misc-card { border-left-color: #a0aec0; }
+
+  .result-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .result-icon { font-size: 1.75rem; line-height: 1; }
+  .result-header h3 {
+    margin: 0;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #666;
+  }
+  .result-amount {
+    margin: 0.1rem 0 0;
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #1a1a2e;
+  }
+  .result-detail {
+    font-size: 0.8rem;
+    color: #888;
+    margin: 0.5rem 0 0;
+  }
+
+  .grand-total-card {
+    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+    border-radius: 16px;
+    padding: 1.75rem;
+    color: #fff;
+    margin-bottom: 1.5rem;
+  }
+  .grand-total-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1rem;
+    font-weight: 700;
+  }
+  .grand-total-row.sub {
+    font-size: 0.95rem;
+    font-weight: 500;
+    opacity: 0.9;
+    margin-top: 0.5rem;
+  }
+  .grand-total-amount {
+    font-size: 1.75rem;
+    font-weight: 800;
+  }
+
+  .tip-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+  .tip-card h3 {
+    margin: 0 0 0.75rem;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #1a1a2e;
+  }
+  .tip-card ul {
+    margin: 0;
+    padding-left: 1.25rem;
+  }
+  .tip-card li {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 0.35rem;
+  }
+
+  .tool-cta { padding: 2.5rem 1.5rem; background: #fff; }
+  .cta-card {
+    max-width: 800px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+    border-radius: 20px;
+    padding: 2.5rem;
+    text-align: center;
+    color: #fff;
+  }
+  .cta-card h2 { margin: 0 0 0.75rem; font-size: 1.5rem; font-weight: 800; }
+  .cta-card p { margin: 0 0 1.5rem; opacity: 0.92; line-height: 1.6; }
+  .cta-button {
+    display: inline-block;
+    background: #fff;
+    color: #11998e;
+    font-weight: 700;
+    padding: 0.85rem 2rem;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  }
+
+  .tool-content { padding: 3rem 1.5rem 4rem; background: #f8f9fb; }
+  .content-narrow { max-width: 720px; margin: 0 auto; }
+  .tool-content h2 {
+    font-size: 1.4rem; font-weight: 800; color: #1a1a2e;
+    margin: 2.5rem 0 0.75rem;
+  }
+  .tool-content h2:first-child { margin-top: 0; }
+  .tool-content p, .tool-content li {
+    font-size: 1.02rem; line-height: 1.7; color: #444;
+  }
+  .tool-content ul, .tool-content ol { padding-left: 1.25rem; margin: 0.5rem 0 1rem; }
+  .tool-content li { margin-bottom: 0.35rem; }
+  .tool-content a {
+    color: #11998e; text-decoration: underline; text-underline-offset: 2px;
+  }
+  .tool-content details {
+    background: #fff; border-radius: 12px;
+    padding: 1rem 1.25rem; margin-bottom: 0.75rem;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  }
+  .tool-content summary {
+    font-weight: 600; cursor: pointer; color: #1a1a2e; font-size: 1.02rem;
+  }
+  .tool-content details p { margin: 0.75rem 0 0; }
+
+  @media (max-width: 640px) {
+    .form-grid { grid-template-columns: 1fr; }
+    .results-grid { grid-template-columns: 1fr; }
+    .cta-card { padding: 2rem 1.5rem; }
+  }
+</style>
+
+<script>
+  const PRESETS: Record<string, {flight:number; hotel:number; food:number; transport:number; activities:number; misc:number}> = {
+    'domestic-budget':       { flight: 150,  hotel: 60,  food: 25, transport: 10, activities: 10, misc: 10 },
+    'domestic-mid':          { flight: 300,  hotel: 150, food: 50, transport: 25, activities: 30, misc: 20 },
+    'domestic-luxury':       { flight: 600,  hotel: 350, food: 100, transport: 50, activities: 75, misc: 40 },
+    'international-budget':  { flight: 500,  hotel: 40,  food: 20, transport: 10, activities: 15, misc: 15 },
+    'international-mid':     { flight: 900,  hotel: 120, food: 50, transport: 25, activities: 40, misc: 25 },
+    'international-luxury':  { flight: 2500, hotel: 350, food: 120, transport: 60, activities: 100, misc: 50 },
+  };
+
+  const $ = (id: string) => document.getElementById(id) as HTMLElement;
+  const $v = (id: string) => (document.getElementById(id) as HTMLInputElement).value;
+  const fmt = (n: number) => '$' + Math.round(n).toLocaleString('en-US');
+
+  function calculate() {
+    const dest = $v('destination');
+    const days = Math.max(1, parseInt($v('days')) || 1);
+    const travelers = Math.max(1, parseInt($v('travelers')) || 1);
+    const preset = PRESETS[dest] || PRESETS['domestic-mid'];
+
+    const flight = (parseFloat($v('flight')) || preset.flight);
+    const hotel = (parseFloat($v('hotel')) || preset.hotel);
+    const food = (parseFloat($v('food')) || preset.food);
+    const transport = (parseFloat($v('transport')) || preset.transport);
+    const activities = (parseFloat($v('activities')) || preset.activities);
+    const misc = (parseFloat($v('misc')) || preset.misc);
+
+    const flightTotal = flight * travelers;
+    const hotelTotal = hotel * days;
+    const foodTotal = food * travelers * days;
+    const transportTotal = transport * days;
+    const activitiesTotal = activities * travelers * days;
+    const miscTotal = misc * days;
+    const grandTotal = flightTotal + hotelTotal + foodTotal + transportTotal + activitiesTotal + miscTotal;
+
+    $('flight-total').textContent = fmt(flightTotal);
+    $('flight-detail').textContent = `${fmt(flight)} × ${travelers} traveler${travelers > 1 ? 's' : ''}`;
+    $('hotel-total').textContent = fmt(hotelTotal);
+    $('hotel-detail').textContent = `${fmt(hotel)}/night × ${days} nights`;
+    $('food-total').textContent = fmt(foodTotal);
+    $('food-detail').textContent = `${fmt(food)}/person/day × ${travelers} × ${days} days`;
+    $('transport-total').textContent = fmt(transportTotal);
+    $('transport-detail').textContent = `${fmt(transport)}/day × ${days} days`;
+    $('activities-total').textContent = fmt(activitiesTotal);
+    $('activities-detail').textContent = `${fmt(activities)}/person/day × ${travelers} × ${days} days`;
+    $('misc-total').textContent = fmt(miscTotal);
+    $('misc-detail').textContent = `${fmt(misc)}/day × ${days} days`;
+
+    $('grand-total').textContent = fmt(grandTotal);
+    $('per-person').textContent = fmt(grandTotal / travelers);
+    $('per-day').textContent = fmt(grandTotal / days);
+
+    const tips: string[] = [];
+    if (flight > 500) tips.push('Consider booking flights 6-8 weeks in advance to save 15-20% on airfare.');
+    if (hotel > 150) tips.push('Look into vacation rentals (Airbnb) — splitting a house with your group can cut accommodation costs in half.');
+    if (food > 60) tips.push('Mix restaurant meals with grocery runs. Breakfast and lunch from a supermarket saves $20-30/day per person.');
+    if (days > 7) tips.push('For longer trips, weekly hotel rates or monthly Airbnb discounts can save 20-40%.');
+    if (travelers >= 4) tips.push('Group of 4+? Shared rides and family passes for attractions offer significant savings.');
+    if (dest.includes('international')) tips.push('Check if your credit card waives foreign transaction fees — that alone saves 3% on every purchase.');
+    if (tips.length === 0) tips.push('You are traveling smart! Keep costs down by booking early and being flexible with dates.');
+    $('tips-list').innerHTML = tips.map(t => `<li>${t}</li>`).join('');
+  }
+
+  document.querySelectorAll('#destination, #days, #travelers, #flight, #hotel, #food, #transport, #activities, #misc').forEach(el => {
+    el.addEventListener('input', calculate);
+    el.addEventListener('change', calculate);
+  });
+
+  calculate();
+</script>
+</BaseLayout>

@@ -1,0 +1,866 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const title = 'Home Affordability Calculator — How Much House Can You Afford?';
+const description = 'Use the 28/36 rule to find out how much house you can afford based on your income, debts, and down payment. Free, instant results, no signup required.';
+---
+
+<BaseLayout title={title} description={description}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Home Affordability Calculator",
+      "url": "https://gettidyflow.com/tools/home-affordability-calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "description": description
+    })} />
+  </Fragment>
+
+  <section class="tool-hero">
+    <div class="tool-hero-inner">
+      <span class="tool-badge">Free Tool — No Signup Required</span>
+      <h1>Home Affordability <span class="gradient-text">Calculator</span></h1>
+      <p class="tool-subtitle">How much house can you afford? Enter your income, debts, and down payment to get an instant estimate based on the 28/36 rule — the industry-standard guideline lenders use to determine your borrowing power.</p>
+    </div>
+  </section>
+
+  <section class="tool-app">
+    <div class="tool-container">
+      <div class="calc-card">
+        <div class="input-grid">
+          <div class="input-group">
+            <label for="annual-income" class="input-label">Annual Gross Income</label>
+            <div class="input-wrapper">
+              <span class="currency-symbol">$</span>
+              <input
+                type="number"
+                id="annual-income"
+                placeholder="e.g. 75,000"
+                min="0"
+                step="1000"
+                value="75000"
+                aria-label="Annual gross income in dollars"
+              />
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="monthly-debts" class="input-label">Monthly Debt Payments</label>
+            <div class="input-wrapper">
+              <span class="currency-symbol">$</span>
+              <input
+                type="number"
+                id="monthly-debts"
+                placeholder="e.g. 500"
+                min="0"
+                step="50"
+                value="300"
+                aria-label="Monthly debt payments in dollars"
+              />
+            </div>
+            <span class="input-hint">Car loans, student loans, credit cards, etc.</span>
+          </div>
+
+          <div class="input-group">
+            <label for="down-payment" class="input-label">Down Payment</label>
+            <div class="input-wrapper">
+              <span class="currency-symbol">$</span>
+              <input
+                type="number"
+                id="down-payment"
+                placeholder="e.g. 40,000"
+                min="0"
+                step="1000"
+                value="40000"
+                aria-label="Down payment in dollars"
+              />
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="interest-rate" class="input-label">Interest Rate</label>
+            <div class="input-wrapper">
+              <span class="currency-symbol">%</span>
+              <input
+                type="number"
+                id="interest-rate"
+                placeholder="e.g. 6.5"
+                min="0"
+                max="25"
+                step="0.1"
+                value="6.5"
+                aria-label="Annual mortgage interest rate"
+              />
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="loan-term" class="input-label">Loan Term</label>
+            <select id="loan-term" aria-label="Loan term in years">
+              <option value="30" selected>30 years</option>
+              <option value="15">15 years</option>
+            </select>
+          </div>
+
+          <div class="input-group">
+            <label for="property-tax-rate" class="input-label">Property Tax Rate</label>
+            <div class="input-wrapper">
+              <span class="currency-symbol">%</span>
+              <input
+                type="number"
+                id="property-tax-rate"
+                placeholder="e.g. 1.2"
+                min="0"
+                max="10"
+                step="0.1"
+                value="1.2"
+                aria-label="Annual property tax rate"
+              />
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="home-insurance" class="input-label">Home Insurance / Year</label>
+            <div class="input-wrapper">
+              <span class="currency-symbol">$</span>
+              <input
+                type="number"
+                id="home-insurance"
+                placeholder="e.g. 1,500"
+                min="0"
+                step="100"
+                value="1500"
+                aria-label="Annual home insurance cost"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Result -->
+      <div class="main-result" id="main-result">
+        <div class="main-result-label">Maximum Home Price You Can Afford</div>
+        <div class="main-result-value" id="max-home-price">$0</div>
+        <div class="main-result-sub" id="result-note">Based on the 28/36 rule</div>
+      </div>
+
+      <!-- Breakdown Grid -->
+      <div class="results-grid" id="results-grid">
+        <div class="result-card mortgage-card">
+          <div class="result-header">
+            <span class="result-icon">🏠</span>
+            <div>
+              <h3>Monthly Mortgage (P&I)</h3>
+              <p class="result-amount" id="monthly-mortgage">$0</p>
+            </div>
+          </div>
+          <p class="result-tip">Principal and interest payment on your loan.</p>
+        </div>
+
+        <div class="result-card tax-card">
+          <div class="result-header">
+            <span class="result-icon">🏛️</span>
+            <div>
+              <h3>Monthly Property Tax</h3>
+              <p class="result-amount" id="monthly-tax">$0</p>
+            </div>
+          </div>
+          <p class="result-tip">Estimated based on the property tax rate you entered.</p>
+        </div>
+
+        <div class="result-card insurance-card">
+          <div class="result-header">
+            <span class="result-icon">🛡️</span>
+            <div>
+              <h3>Monthly Insurance</h3>
+              <p class="result-amount" id="monthly-insurance">$0</p>
+            </div>
+          </div>
+          <p class="result-tip">Homeowners insurance premium spread monthly.</p>
+        </div>
+
+        <div class="result-card total-card">
+          <div class="result-header">
+            <span class="result-icon">💵</span>
+            <div>
+              <h3>Total Monthly Housing Cost</h3>
+              <p class="result-amount" id="total-monthly">$0</p>
+            </div>
+          </div>
+          <p class="result-tip">Your complete PITI payment (Principal, Interest, Taxes, Insurance).</p>
+        </div>
+      </div>
+
+      <!-- DTI Section -->
+      <div class="dti-section" id="dti-section">
+        <h3>Your Debt-to-Income Ratios</h3>
+        <div class="dti-grid">
+          <div class="dti-item">
+            <div class="dti-label">Front-End DTI (Housing Only)</div>
+            <div class="dti-bar-container">
+              <div class="dti-bar dti-bar-front" id="dti-bar-front" style="width:0%"></div>
+            </div>
+            <div class="dti-value" id="dti-front">0%</div>
+          </div>
+          <div class="dti-item">
+            <div class="dti-label">Back-End DTI (All Debts)</div>
+            <div class="dti-bar-container">
+              <div class="dti-bar dti-bar-back" id="dti-bar-back" style="width:0%"></div>
+            </div>
+            <div class="dti-value" id="dti-back">0%</div>
+          </div>
+        </div>
+        <div class="dti-legend">
+          <span class="legend-item legend-conservative">Conservative (&lt;28%/&lt;33%)</span>
+          <span class="legend-item legend-moderate">Moderate (28-33%/33-36%)</span>
+          <span class="legend-item legend-aggressive">Aggressive (&gt;33%/&gt;36%)</span>
+        </div>
+        <p class="dti-note" id="dti-note"></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool-cta">
+    <div class="tool-container">
+      <div class="cta-card">
+        <h2>Ready to Start Saving for Your Home?</h2>
+        <p>Knowing what you can afford is the first step. Track your savings, budget, and down payment progress with our Notion Budget Tracker — designed to help you reach your home-buying goals faster.</p>
+        <a href="https://gettidyflow.gumroad.com" target="_blank" rel="noopener" class="cta-button">Get the Notion Budget Tracker &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool-content">
+    <div class="tool-container content-narrow">
+      <h2>What Is the 28/36 Rule?</h2>
+      <p>The 28/36 rule is a widely used guideline that lenders use to determine how much mortgage you can qualify for. It consists of two ratios:</p>
+      <ul>
+        <li><strong>28% Rule (Front-End Ratio)</strong> — Your total monthly housing costs (mortgage payment, property taxes, and insurance) should not exceed 28% of your gross monthly income.</li>
+        <li><strong>36% Rule (Back-End Ratio)</strong> — Your total monthly debt payments (housing costs plus all other debts like car loans, student loans, and credit cards) should not exceed 36% of your gross monthly income.</li>
+      </ul>
+      <p>This calculator uses the more conservative of these two limits to ensure the recommended home price is realistic and sustainable for your budget.</p>
+
+      <h2>How This Calculator Works</h2>
+      <ol>
+        <li><strong>Enter your financial details</strong> — annual income, existing debts, down payment, and loan preferences.</li>
+        <li><strong>We calculate your maximum monthly housing budget</strong> — using the 28/36 rule to find the lower of the two limits.</li>
+        <li><strong>We subtract taxes and insurance</strong> — to find how much is available for your actual mortgage payment (principal + interest).</li>
+        <li><strong>We reverse-calculate the loan amount</strong> — using the mortgage payment formula to determine the maximum loan you can support.</li>
+        <li><strong>We add your down payment</strong> — to give you the total home price you can afford.</li>
+      </ol>
+
+      <h2>Tips for First-Time Home Buyers</h2>
+      <ul>
+        <li><strong>Save at least 20% for a down payment</strong> — this avoids Private Mortgage Insurance (PMI), which adds $100-$300/month to your costs.</li>
+        <li><strong>Factor in closing costs</strong> — typically 2-5% of the home price. Do not spend your entire savings on the down payment.</li>
+        <li><strong>Get pre-approved before shopping</strong> — a pre-approval letter from a lender shows sellers you are a serious buyer and locks in your rate.</li>
+        <li><strong>Keep an emergency fund</strong> — homeownership comes with unexpected expenses. Aim for 3-6 months of housing costs in savings.</li>
+        <li><strong>Consider all costs of ownership</strong> — HOA fees, maintenance (1% of home value/year), utilities, and potential repairs are not included in PITI.</li>
+        <li><strong>Do not max out your budget</strong> — just because you <em>can</em> afford a certain price does not mean you should. Leave room for other financial goals.</li>
+      </ul>
+
+      <h2>Related Tools</h2>
+      <ul>
+        <li><a href="/tools/budget-calculator">50/30/20 Budget Calculator</a> — Split your income into needs, wants, and savings</li>
+        <li><a href="/tools/savings-goal-calculator">Savings Goal Calculator</a> — Plan how long it takes to save for your down payment</li>
+        <li><a href="/tools/debt-payoff-calculator">Debt Payoff Calculator</a> — See how fast you can eliminate debts before buying</li>
+        <li><a href="/tools/rent-vs-buy-calculator">Rent vs. Buy Calculator</a> — Compare the true cost of renting versus buying</li>
+      </ul>
+
+      <h2>Frequently Asked Questions</h2>
+      <details>
+        <summary>What income should I use — gross or net?</summary>
+        <p>Use your <strong>gross (pre-tax) income</strong> for this calculator. Lenders use gross income when calculating debt-to-income ratios. This is different from the 50/30/20 budget calculator, which uses net income.</p>
+      </details>
+      <details>
+        <summary>Does this include PMI (Private Mortgage Insurance)?</summary>
+        <p>This calculator does not include PMI. If your down payment is less than 20% of the home price, most lenders require PMI, which typically costs 0.5%-1% of the loan amount per year. This would reduce the home price you can actually afford.</p>
+      </details>
+      <details>
+        <summary>Why are there two DTI ratios?</summary>
+        <p>The <strong>front-end ratio</strong> (28%) looks only at housing costs to ensure your home is affordable on its own. The <strong>back-end ratio</strong> (36%) considers all debts to make sure your total financial obligations remain manageable. Lenders check both — you must pass both limits to qualify.</p>
+      </details>
+      <details>
+        <summary>Can I afford more than this calculator says?</summary>
+        <p>Some lenders allow DTI ratios up to 43% or even 50% for qualified borrowers. However, the 28/36 rule is considered the safe standard. Stretching beyond it increases your risk of financial stress, especially if interest rates rise or your income changes.</p>
+      </details>
+      <details>
+        <summary>How does the interest rate affect affordability?</summary>
+        <p>Interest rates have a massive impact. For example, on a $300,000 loan over 30 years, going from 6% to 7% increases your monthly payment by about $200. Even a 0.5% rate difference can change your maximum affordable home price by $20,000-$30,000.</p>
+      </details>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .tool-hero {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    padding: 4rem 1.5rem 3rem;
+    text-align: center;
+    color: #fff;
+  }
+  .tool-hero-inner {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .tool-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(4px);
+    padding: 0.35rem 1rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+  }
+  .tool-hero h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 800;
+    line-height: 1.15;
+    margin: 0 0 1rem;
+  }
+  .gradient-text {
+    background: linear-gradient(90deg, #ffd6e0, #ffecd2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .tool-subtitle {
+    font-size: 1.1rem;
+    opacity: 0.92;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .tool-app {
+    padding: 2.5rem 1.5rem;
+    background: #f8f9fb;
+  }
+  .tool-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .calc-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    margin-bottom: 2rem;
+  }
+
+  .input-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .input-group {
+    display: flex;
+    flex-direction: column;
+  }
+  .input-label {
+    display: block;
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    color: #1a1a2e;
+  }
+  .input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .currency-symbol {
+    position: absolute;
+    left: 1rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #4facfe;
+  }
+  .input-wrapper input {
+    width: 100%;
+    padding: 0.85rem 0.85rem 0.85rem 2.25rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    transition: border-color 0.2s;
+    outline: none;
+    font-family: inherit;
+    color: #1a1a2e;
+  }
+  .input-wrapper input:focus {
+    border-color: #4facfe;
+    box-shadow: 0 0 0 3px rgba(79,172,254,0.15);
+  }
+  .input-wrapper input::placeholder {
+    color: #a0aec0;
+    font-weight: 400;
+  }
+  .input-hint {
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: 0.35rem;
+  }
+
+  select {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    outline: none;
+    font-family: inherit;
+    color: #1a1a2e;
+    background: #fff;
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23666' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+  }
+  select:focus {
+    border-color: #4facfe;
+    box-shadow: 0 0 0 3px rgba(79,172,254,0.15);
+  }
+
+  /* Main Result */
+  .main-result {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    border-radius: 20px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 32px rgba(79,172,254,0.25);
+  }
+  .main-result-label {
+    font-size: 1rem;
+    font-weight: 600;
+    opacity: 0.9;
+    margin-bottom: 0.5rem;
+  }
+  .main-result-value {
+    font-size: clamp(2.5rem, 7vw, 3.5rem);
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+  }
+  .main-result-sub {
+    font-size: 0.9rem;
+    opacity: 0.8;
+  }
+
+  /* Results Grid */
+  .results-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+  }
+  .result-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    border-left: 5px solid transparent;
+  }
+  .mortgage-card { border-left-color: #4facfe; }
+  .tax-card { border-left-color: #f6d365; }
+  .insurance-card { border-left-color: #a8edea; }
+  .total-card { border-left-color: #667eea; grid-column: 1 / -1; }
+
+  .result-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+  }
+  .result-icon {
+    font-size: 1.75rem;
+    line-height: 1;
+  }
+  .result-header h3 {
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #555;
+  }
+  .result-amount {
+    margin: 0.15rem 0 0;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #1a1a2e;
+  }
+  .result-tip {
+    font-size: 0.85rem;
+    color: #666;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  /* DTI Section */
+  .dti-section {
+    background: #fff;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+  .dti-section h3 {
+    margin: 0 0 1.25rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1a1a2e;
+  }
+  .dti-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  .dti-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .dti-label {
+    font-size: 0.88rem;
+    color: #555;
+    min-width: 200px;
+    font-weight: 600;
+  }
+  .dti-bar-container {
+    flex: 1;
+    height: 14px;
+    background: #f0f0f5;
+    border-radius: 999px;
+    overflow: hidden;
+  }
+  .dti-bar {
+    height: 100%;
+    border-radius: 999px;
+    transition: width 0.5s ease, background 0.3s ease;
+  }
+  .dti-bar-front { background: linear-gradient(90deg, #4facfe, #00f2fe); }
+  .dti-bar-back { background: linear-gradient(90deg, #667eea, #764ba2); }
+  .dti-value {
+    font-size: 1rem;
+    font-weight: 800;
+    color: #1a1a2e;
+    min-width: 50px;
+    text-align: right;
+  }
+
+  .dti-legend {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.75rem;
+  }
+  .legend-item {
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+  }
+  .legend-conservative {
+    background: #e6f9ee;
+    color: #1a8a4a;
+  }
+  .legend-moderate {
+    background: #fff8e6;
+    color: #b8860b;
+  }
+  .legend-aggressive {
+    background: #fde8e8;
+    color: #c0392b;
+  }
+
+  .dti-note {
+    font-size: 0.88rem;
+    color: #666;
+    margin: 0;
+    line-height: 1.55;
+  }
+
+  /* CTA */
+  .tool-cta {
+    padding: 2.5rem 1.5rem;
+    background: #fff;
+  }
+  .cta-card {
+    max-width: 800px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    border-radius: 20px;
+    padding: 2.5rem;
+    text-align: center;
+    color: #fff;
+  }
+  .cta-card h2 {
+    margin: 0 0 0.75rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+  }
+  .cta-card p {
+    margin: 0 0 1.5rem;
+    opacity: 0.92;
+    line-height: 1.6;
+  }
+  .cta-button {
+    display: inline-block;
+    background: #fff;
+    color: #4facfe;
+    font-weight: 700;
+    padding: 0.85rem 2rem;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  }
+
+  /* SEO Content */
+  .tool-content {
+    padding: 3rem 1.5rem 4rem;
+    background: #f8f9fb;
+  }
+  .content-narrow {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .tool-content h2 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #1a1a2e;
+    margin: 2.5rem 0 0.75rem;
+  }
+  .tool-content h2:first-child {
+    margin-top: 0;
+  }
+  .tool-content p,
+  .tool-content li {
+    font-size: 1.02rem;
+    line-height: 1.7;
+    color: #444;
+  }
+  .tool-content ul,
+  .tool-content ol {
+    padding-left: 1.25rem;
+    margin: 0.5rem 0 1rem;
+  }
+  .tool-content li {
+    margin-bottom: 0.35rem;
+  }
+  .tool-content a {
+    color: #4facfe;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .tool-content details {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 0.75rem;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  }
+  .tool-content summary {
+    font-weight: 600;
+    cursor: pointer;
+    color: #1a1a2e;
+    font-size: 1.02rem;
+  }
+  .tool-content details p {
+    margin: 0.75rem 0 0;
+  }
+
+  /* Responsive */
+  @media (max-width: 640px) {
+    .input-grid {
+      grid-template-columns: 1fr;
+    }
+    .results-grid {
+      grid-template-columns: 1fr;
+    }
+    .total-card {
+      grid-column: auto;
+    }
+    .dti-item {
+      flex-wrap: wrap;
+    }
+    .dti-label {
+      min-width: 100%;
+    }
+    .dti-legend {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .legend-item {
+      text-align: center;
+    }
+    .cta-card {
+      padding: 2rem 1.5rem;
+    }
+  }
+</style>
+
+<script>
+  const annualIncomeEl = document.getElementById('annual-income') as HTMLInputElement;
+  const monthlyDebtsEl = document.getElementById('monthly-debts') as HTMLInputElement;
+  const downPaymentEl = document.getElementById('down-payment') as HTMLInputElement;
+  const interestRateEl = document.getElementById('interest-rate') as HTMLInputElement;
+  const loanTermEl = document.getElementById('loan-term') as HTMLSelectElement;
+  const propertyTaxRateEl = document.getElementById('property-tax-rate') as HTMLInputElement;
+  const homeInsuranceEl = document.getElementById('home-insurance') as HTMLInputElement;
+
+  function formatCurrency(n: number): string {
+    return '$' + n.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+  }
+
+  function calculate() {
+    const annualIncome = parseFloat(annualIncomeEl.value) || 0;
+    const monthlyDebts = parseFloat(monthlyDebtsEl.value) || 0;
+    const downPayment = parseFloat(downPaymentEl.value) || 0;
+    const annualRate = (parseFloat(interestRateEl.value) || 0) / 100;
+    const loanTermYears = parseInt(loanTermEl.value) || 30;
+    const propertyTaxRate = (parseFloat(propertyTaxRateEl.value) || 0) / 100;
+    const annualInsurance = parseFloat(homeInsuranceEl.value) || 0;
+
+    const monthlyGrossIncome = annualIncome / 12;
+
+    // 28/36 rule
+    const maxHousingBy28 = monthlyGrossIncome * 0.28;
+    const maxHousingBy36 = monthlyGrossIncome * 0.36 - monthlyDebts;
+    const maxMonthlyHousing = Math.max(0, Math.min(maxHousingBy28, maxHousingBy36));
+
+    // We need to solve for homePrice where:
+    // maxMonthlyHousing = mortgagePayment + monthlyTax + monthlyIns
+    // monthlyTax = homePrice * propertyTaxRate / 12
+    // monthlyIns = annualInsurance / 12
+    // mortgagePayment = (homePrice - downPayment) * [r(1+r)^n] / [(1+r)^n - 1]
+    // where r = monthly rate, n = total months
+
+    const monthlyRate = annualRate / 12;
+    const totalMonths = loanTermYears * 12;
+    const monthlyInsurance = annualInsurance / 12;
+
+    // Available for mortgage + tax after subtracting insurance
+    const availableForMortgageAndTax = maxMonthlyHousing - monthlyInsurance;
+
+    let maxHomePrice = 0;
+    let monthlyMortgage = 0;
+    let monthlyTax = 0;
+
+    if (availableForMortgageAndTax > 0 && annualIncome > 0) {
+      if (monthlyRate > 0) {
+        // mortgagePayment = loanAmount * factor
+        // where factor = r(1+r)^n / ((1+r)^n - 1)
+        const compounded = Math.pow(1 + monthlyRate, totalMonths);
+        const factor = (monthlyRate * compounded) / (compounded - 1);
+
+        // availableForMortgageAndTax = (homePrice - downPayment) * factor + homePrice * propertyTaxRate / 12
+        // availableForMortgageAndTax = homePrice * factor - downPayment * factor + homePrice * propertyTaxRate / 12
+        // availableForMortgageAndTax + downPayment * factor = homePrice * (factor + propertyTaxRate / 12)
+        // homePrice = (availableForMortgageAndTax + downPayment * factor) / (factor + propertyTaxRate / 12)
+
+        const denominator = factor + propertyTaxRate / 12;
+        if (denominator > 0) {
+          maxHomePrice = (availableForMortgageAndTax + downPayment * factor) / denominator;
+        }
+      } else {
+        // 0% interest: mortgagePayment = loanAmount / totalMonths
+        // availableForMortgageAndTax = (homePrice - downPayment) / totalMonths + homePrice * propertyTaxRate / 12
+        // availableForMortgageAndTax = homePrice / totalMonths - downPayment / totalMonths + homePrice * propertyTaxRate / 12
+        // availableForMortgageAndTax + downPayment / totalMonths = homePrice * (1/totalMonths + propertyTaxRate / 12)
+        const denominator = 1 / totalMonths + propertyTaxRate / 12;
+        if (denominator > 0) {
+          maxHomePrice = (availableForMortgageAndTax + downPayment / totalMonths) / denominator;
+        }
+      }
+
+      // Ensure home price is at least the down payment (loan >= 0)
+      maxHomePrice = Math.max(maxHomePrice, 0);
+
+      const loanAmount = Math.max(maxHomePrice - downPayment, 0);
+
+      if (monthlyRate > 0) {
+        const compounded = Math.pow(1 + monthlyRate, totalMonths);
+        monthlyMortgage = loanAmount * (monthlyRate * compounded) / (compounded - 1);
+      } else {
+        monthlyMortgage = totalMonths > 0 ? loanAmount / totalMonths : 0;
+      }
+
+      monthlyTax = maxHomePrice * propertyTaxRate / 12;
+    }
+
+    const totalMonthlyHousing = monthlyMortgage + monthlyTax + monthlyInsurance;
+
+    // Update DOM
+    document.getElementById('max-home-price')!.textContent = formatCurrency(Math.round(maxHomePrice));
+    document.getElementById('monthly-mortgage')!.textContent = formatCurrency(Math.round(monthlyMortgage));
+    document.getElementById('monthly-tax')!.textContent = formatCurrency(Math.round(monthlyTax));
+    document.getElementById('monthly-insurance')!.textContent = formatCurrency(Math.round(monthlyInsurance));
+    document.getElementById('total-monthly')!.textContent = formatCurrency(Math.round(totalMonthlyHousing));
+
+    // DTI ratios
+    const frontEndDTI = monthlyGrossIncome > 0 ? (totalMonthlyHousing / monthlyGrossIncome) * 100 : 0;
+    const backEndDTI = monthlyGrossIncome > 0 ? ((totalMonthlyHousing + monthlyDebts) / monthlyGrossIncome) * 100 : 0;
+
+    document.getElementById('dti-front')!.textContent = frontEndDTI.toFixed(1) + '%';
+    document.getElementById('dti-back')!.textContent = backEndDTI.toFixed(1) + '%';
+
+    const frontBar = document.getElementById('dti-bar-front') as HTMLElement;
+    const backBar = document.getElementById('dti-bar-back') as HTMLElement;
+    frontBar.style.width = Math.min(frontEndDTI, 50) * 2 + '%';
+    backBar.style.width = Math.min(backEndDTI, 50) * 2 + '%';
+
+    // Color the bars based on level
+    if (frontEndDTI <= 28) {
+      frontBar.style.background = 'linear-gradient(90deg, #43e97b, #38f9d7)';
+    } else if (frontEndDTI <= 33) {
+      frontBar.style.background = 'linear-gradient(90deg, #f6d365, #fda085)';
+    } else {
+      frontBar.style.background = 'linear-gradient(90deg, #f5576c, #ff6b6b)';
+    }
+
+    if (backEndDTI <= 33) {
+      backBar.style.background = 'linear-gradient(90deg, #43e97b, #38f9d7)';
+    } else if (backEndDTI <= 36) {
+      backBar.style.background = 'linear-gradient(90deg, #f6d365, #fda085)';
+    } else {
+      backBar.style.background = 'linear-gradient(90deg, #f5576c, #ff6b6b)';
+    }
+
+    // DTI note
+    const noteEl = document.getElementById('dti-note')!;
+    if (backEndDTI <= 33) {
+      noteEl.textContent = 'Your debt levels are conservative. You are in a strong position to qualify for a mortgage with favorable terms.';
+    } else if (backEndDTI <= 36) {
+      noteEl.textContent = 'Your debt levels are moderate. Most lenders will approve you, but consider paying down some debt for better rates.';
+    } else {
+      noteEl.textContent = 'Your debt levels are aggressive. Some lenders may still approve you, but this leaves little room for financial flexibility. Consider reducing debts first.';
+    }
+
+    // Result note
+    const resultNote = document.getElementById('result-note')!;
+    if (maxHousingBy36 < maxHousingBy28 && monthlyDebts > 0) {
+      resultNote.textContent = 'Limited by the 36% total debt rule (your existing debts reduce borrowing power)';
+    } else {
+      resultNote.textContent = 'Based on the 28% housing cost rule';
+    }
+  }
+
+  // Attach listeners to all inputs
+  const allInputs = [annualIncomeEl, monthlyDebtsEl, downPaymentEl, interestRateEl, propertyTaxRateEl, homeInsuranceEl];
+  allInputs.forEach(el => el.addEventListener('input', calculate));
+  loanTermEl.addEventListener('change', calculate);
+
+  // Calculate on page load
+  calculate();
+</script>
