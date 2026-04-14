@@ -1,0 +1,459 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const title = 'Budget Health Check — Free Financial Diagnostic Tool';
+const description = 'Get your budget health score instantly. Enter 6 key financial metrics and receive a personalized diagnosis with letter grade, color-coded ratings, and an action plan to improve.';
+---
+
+<BaseLayout title={title} description={description}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Budget Health Check",
+      "url": "https://gettidyflow.com/tools/budget-health-check",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "description": description
+    })} />
+  </Fragment>
+
+  <section class="tool-hero">
+    <div class="tool-hero-inner">
+      <span class="tool-badge">Free Tool — No Signup Required</span>
+      <h1>Budget <span class="gradient-text">Health Check</span></h1>
+      <p class="tool-subtitle">Enter 6 key financial metrics and get an instant diagnosis of your budget health — with a letter grade, color-coded ratings for each area, and a personalized action plan.</p>
+    </div>
+  </section>
+
+  <section class="tool-app">
+    <div class="tool-container">
+      <div class="calc-card">
+        <h2 class="section-title">Your Financial Metrics</h2>
+        <p class="section-desc">Enter your monthly figures below. All fields are required for an accurate diagnosis.</p>
+
+        <div class="input-row">
+          <label for="income" class="input-label">Monthly After-Tax Income</label>
+          <div class="input-wrapper"><span class="currency-symbol">$</span>
+            <input type="number" id="income" placeholder="e.g. 5,000" min="0" step="100" /></div>
+        </div>
+        <div class="input-row">
+          <label for="housing" class="input-label">Monthly Housing Cost (Rent / Mortgage)</label>
+          <div class="input-wrapper"><span class="currency-symbol">$</span>
+            <input type="number" id="housing" placeholder="e.g. 1,400" min="0" step="50" /></div>
+        </div>
+        <div class="input-row">
+          <label for="debt" class="input-label">Monthly Total Debt Payments</label>
+          <div class="input-wrapper"><span class="currency-symbol">$</span>
+            <input type="number" id="debt" placeholder="e.g. 600" min="0" step="50" /></div>
+          <p class="input-hint">Car loans, student loans, credit cards, personal loans — all minimum payments.</p>
+        </div>
+        <div class="input-row">
+          <label for="savings" class="input-label">Monthly Savings Amount</label>
+          <div class="input-wrapper"><span class="currency-symbol">$</span>
+            <input type="number" id="savings" placeholder="e.g. 800" min="0" step="50" /></div>
+          <p class="input-hint">401k, IRA, brokerage, bank savings — everything you set aside each month.</p>
+        </div>
+        <div class="input-row">
+          <label for="emergency" class="input-label">Emergency Fund Balance</label>
+          <div class="input-wrapper"><span class="currency-symbol">$</span>
+            <input type="number" id="emergency" placeholder="e.g. 10,000" min="0" step="500" /></div>
+          <p class="input-hint">Total cash you could access within a week if you lost your job.</p>
+        </div>
+        <div class="input-row">
+          <label for="discretionary" class="input-label">Monthly Discretionary Spending</label>
+          <div class="input-wrapper"><span class="currency-symbol">$</span>
+            <input type="number" id="discretionary" placeholder="e.g. 1,000" min="0" step="50" /></div>
+          <p class="input-hint">Dining out, entertainment, shopping, subscriptions — everything non-essential.</p>
+        </div>
+
+        <button type="button" class="check-btn" id="check-btn">Check My Budget Health</button>
+      </div>
+
+      <div class="results-panel" id="results-panel" style="display:none;">
+        <div class="score-card">
+          <div class="score-gauge" id="score-gauge">
+            <svg viewBox="0 0 200 200" class="gauge-svg">
+              <circle cx="100" cy="100" r="85" fill="none" stroke="#e2e8f0" stroke-width="14" stroke-dasharray="534" stroke-dashoffset="0" transform="rotate(-90 100 100)" />
+              <circle cx="100" cy="100" r="85" fill="none" stroke="#22c55e" stroke-width="14" stroke-dasharray="534" stroke-dashoffset="534" stroke-linecap="round" transform="rotate(-90 100 100)" id="gauge-arc" />
+            </svg>
+            <div class="gauge-center">
+              <span class="gauge-score" id="gauge-score">0</span>
+              <span class="gauge-grade" id="gauge-grade">—</span>
+            </div>
+          </div>
+          <div class="score-summary">
+            <h3 id="score-title">Your Budget Health</h3>
+            <p id="score-desc" class="score-desc"></p>
+          </div>
+        </div>
+
+        <div class="metrics-grid" id="metrics-grid">
+          <div class="metric-card" id="metric-housing">
+            <div class="metric-header"><span class="metric-icon">🏠</span><span class="metric-name">Housing Ratio</span><span class="metric-value" id="val-housing"></span></div>
+            <div class="metric-bar"><div class="metric-fill" id="fill-housing"></div></div>
+            <p class="metric-target">Target: under 30% of income</p>
+            <p class="metric-advice" id="advice-housing"></p>
+          </div>
+          <div class="metric-card" id="metric-debt">
+            <div class="metric-header"><span class="metric-icon">💳</span><span class="metric-name">Debt-to-Income</span><span class="metric-value" id="val-debt"></span></div>
+            <div class="metric-bar"><div class="metric-fill" id="fill-debt"></div></div>
+            <p class="metric-target">Target: under 20% of income</p>
+            <p class="metric-advice" id="advice-debt"></p>
+          </div>
+          <div class="metric-card" id="metric-savings">
+            <div class="metric-header"><span class="metric-icon">💰</span><span class="metric-name">Savings Rate</span><span class="metric-value" id="val-savings"></span></div>
+            <div class="metric-bar"><div class="metric-fill" id="fill-savings"></div></div>
+            <p class="metric-target">Target: over 20% of income</p>
+            <p class="metric-advice" id="advice-savings"></p>
+          </div>
+          <div class="metric-card" id="metric-emergency">
+            <div class="metric-header"><span class="metric-icon">🛡️</span><span class="metric-name">Emergency Fund</span><span class="metric-value" id="val-emergency"></span></div>
+            <div class="metric-bar"><div class="metric-fill" id="fill-emergency"></div></div>
+            <p class="metric-target">Target: 3–6 months of expenses</p>
+            <p class="metric-advice" id="advice-emergency"></p>
+          </div>
+          <div class="metric-card" id="metric-discretionary">
+            <div class="metric-header"><span class="metric-icon">🛍️</span><span class="metric-name">Discretionary Ratio</span><span class="metric-value" id="val-discretionary"></span></div>
+            <div class="metric-bar"><div class="metric-fill" id="fill-discretionary"></div></div>
+            <p class="metric-target">Target: under 30% of income</p>
+            <p class="metric-advice" id="advice-discretionary"></p>
+          </div>
+        </div>
+
+        <div class="action-plan-card" id="action-plan-card">
+          <h3>Your Personalized Action Plan</h3>
+          <ol id="action-list"></ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool-cta">
+    <div class="tool-container">
+      <div class="cta-card">
+        <h2>Take Control of Your Budget</h2>
+        <p>Now that you know your budget health score, take the next step with our Notion Budget Tracker to monitor your spending automatically.</p>
+        <a href="https://gettidyflow.gumroad.com" target="_blank" rel="noopener" class="cta-button">Get the Notion Budget Tracker &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool-content">
+    <div class="tool-container content-narrow">
+      <h2>What Is a Budget Health Check?</h2>
+      <p>A budget health check is a quick diagnostic that evaluates how well your money is working for you. Instead of tracking every dollar, it focuses on <strong>5 key ratios</strong> that financial advisors use to assess overall financial wellness. Think of it as a blood pressure check — but for your wallet.</p>
+
+      <h2>How Scores Are Calculated</h2>
+      <p>Each of the 5 metrics is scored on a 0–20 scale, then combined for a total out of 100:</p>
+      <ul>
+        <li><strong>Housing Ratio</strong> — Rent or mortgage as a percentage of take-home pay. Under 30% is healthy; below 25% earns a perfect score.</li>
+        <li><strong>Debt-to-Income</strong> — Total debt payments divided by income. Under 20% is ideal; zero debt earns full marks.</li>
+        <li><strong>Savings Rate</strong> — Percentage of income saved each month. 20%+ is recommended; above 25% is excellent.</li>
+        <li><strong>Emergency Fund</strong> — Liquid savings divided by monthly expenses. 6 months is gold standard; 3+ months is solid.</li>
+        <li><strong>Discretionary Ratio</strong> — Non-essential spending as a share of income. Under 30% is good; under 20% is excellent.</li>
+      </ul>
+
+      <h2>How to Improve Your Score</h2>
+      <ul>
+        <li><strong>Start with the reddest metric.</strong> Fixing your worst area gives the biggest score jump.</li>
+        <li><strong>Automate savings first.</strong> Set up automatic transfers on payday so saving happens before spending.</li>
+        <li><strong>Negotiate housing costs.</strong> Refinance, get a roommate, or move to a lower-cost area.</li>
+        <li><strong>Attack high-interest debt.</strong> Pay minimums on everything, then throw extra at the highest-rate balance.</li>
+        <li><strong>Audit subscriptions.</strong> Most people can cut 10–20% of discretionary spending by canceling unused subscriptions.</li>
+        <li><strong>Build emergency fund in stages.</strong> Aim for $1,000 first, then 1 month, then 3 months.</li>
+      </ul>
+
+      <h2>Related Tools</h2>
+      <ul>
+        <li><a href="/tools/budget-calculator">50/30/20 Budget Calculator</a> — Split your income using the popular budgeting rule</li>
+        <li><a href="/tools/50-30-20-calculator">50/30/20 Rule Breakdown</a> — Detailed allocation with custom percentages</li>
+        <li><a href="/tools/debt-payoff-calculator">Debt Payoff Calculator</a> — See when you will be debt-free</li>
+        <li><a href="/tools/emergency-fund-calculator">Emergency Fund Calculator</a> — Find your ideal emergency fund target</li>
+        <li><a href="/tools/savings-rate-calculator">Savings Rate Calculator</a> — Calculate your savings rate and FIRE timeline</li>
+      </ul>
+
+      <h2>Frequently Asked Questions</h2>
+      <details>
+        <summary>What is a good budget health score?</summary>
+        <p>A score of 80–100 (A grade) means your budget is in excellent shape. 60–79 (B) is good but has room for improvement. Below 60 means one or more areas need attention. Most Americans would score in the 40–65 range.</p>
+      </details>
+      <details>
+        <summary>How often should I check my budget health?</summary>
+        <p>Once a month is ideal — run this check after you close out each month's spending so you can track trends over time. Quarterly at minimum.</p>
+      </details>
+      <details>
+        <summary>Does this replace a full budget?</summary>
+        <p>No. This is a diagnostic tool — it tells you <em>where</em> the problems are, not <em>how</em> to track every dollar. Pair it with a budget tracker (like the <a href="/tools/budget-calculator">50/30/20 calculator</a>) for a complete system.</p>
+      </details>
+      <details>
+        <summary>Should I include my partner's income?</summary>
+        <p>If you share expenses, yes — combine both incomes and all shared costs for the most accurate picture. If you keep finances separate, run individual checks.</p>
+      </details>
+      <details>
+        <summary>What if my score is below 40?</summary>
+        <p>Do not panic. A low score highlights the areas that need the most work. Focus on the single reddest metric first — improving one area at a time is more sustainable than trying to fix everything at once.</p>
+      </details>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .tool-hero { background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); padding: 4rem 1.5rem 3rem; text-align: center; color: #fff; }
+  .tool-hero-inner { max-width: 720px; margin: 0 auto; }
+  .tool-badge { display: inline-block; background: rgba(255,255,255,0.2); backdrop-filter: blur(4px); padding: 0.35rem 1rem; border-radius: 999px; font-size: 0.85rem; font-weight: 600; margin-bottom: 1.25rem; }
+  .tool-hero h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; line-height: 1.15; margin: 0 0 1rem; }
+  .gradient-text { background: linear-gradient(90deg, #a7f3d0, #d1fae5); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .tool-subtitle { font-size: 1.08rem; line-height: 1.6; opacity: 0.93; max-width: 600px; margin: 0 auto; }
+
+  .tool-app { padding: 2.5rem 1.5rem; background: #f8f9fb; }
+  .tool-container { max-width: 720px; margin: 0 auto; }
+
+  .calc-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 2rem; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+  .section-title { font-size: 1.15rem; font-weight: 700; color: #1e293b; margin: 0 0 0.25rem; }
+  .section-desc { font-size: 0.9rem; color: #64748b; margin: 0 0 1.5rem; }
+
+  .input-row { margin-bottom: 1.25rem; }
+  .input-label { display: block; font-size: 0.88rem; font-weight: 600; color: #334155; margin-bottom: 0.4rem; }
+  .input-wrapper { position: relative; display: flex; align-items: center; }
+  .currency-symbol { position: absolute; left: 0.85rem; color: #64748b; font-weight: 700; font-size: 1rem; }
+  input[type="number"] { width: 100%; padding: 0.7rem 0.85rem 0.7rem 2.1rem; border: 1.5px solid #cbd5e1; border-radius: 10px; font-size: 1rem; transition: border-color 0.2s; box-sizing: border-box; background: #fff; }
+  input[type="number"]:focus { outline: none; border-color: #11998e; box-shadow: 0 0 0 3px rgba(17,153,142,0.12); }
+  .input-hint { font-size: 0.78rem; color: #94a3b8; margin: 0.3rem 0 0; }
+
+  .check-btn { width: 100%; padding: 0.85rem; background: linear-gradient(135deg, #11998e, #38ef7d); color: #fff; border: none; border-radius: 10px; font-size: 1.05rem; font-weight: 700; cursor: pointer; margin-top: 0.5rem; transition: opacity 0.2s; }
+  .check-btn:hover { opacity: 0.92; }
+
+  .results-panel { display: flex; flex-direction: column; gap: 1.5rem; margin-top: 1.5rem; }
+
+  .score-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 2rem; display: flex; gap: 2rem; align-items: center; flex-wrap: wrap; }
+  .score-gauge { position: relative; width: 160px; height: 160px; flex-shrink: 0; }
+  .gauge-svg { width: 100%; height: 100%; }
+  .gauge-center { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; }
+  .gauge-score { display: block; font-size: 2.4rem; font-weight: 800; color: #1e293b; line-height: 1; }
+  .gauge-grade { display: block; font-size: 1.1rem; font-weight: 700; color: #64748b; margin-top: 0.2rem; }
+  .score-summary { flex: 1; min-width: 200px; }
+  .score-summary h3 { font-size: 1.15rem; font-weight: 700; color: #1e293b; margin: 0 0 0.5rem; }
+  .score-desc { font-size: 0.92rem; line-height: 1.6; color: #475569; margin: 0; }
+
+  .metrics-grid { display: flex; flex-direction: column; gap: 1rem; }
+  .metric-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.25rem 1.5rem; border-left: 4px solid #e2e8f0; transition: border-color 0.3s; }
+  .metric-card.green { border-left-color: #22c55e; }
+  .metric-card.yellow { border-left-color: #eab308; }
+  .metric-card.red { border-left-color: #ef4444; }
+  .metric-header { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; }
+  .metric-icon { font-size: 1.2rem; }
+  .metric-name { font-weight: 700; font-size: 0.92rem; color: #1e293b; flex: 1; }
+  .metric-value { font-weight: 800; font-size: 1rem; }
+  .metric-value.green { color: #16a34a; }
+  .metric-value.yellow { color: #ca8a04; }
+  .metric-value.red { color: #dc2626; }
+  .metric-bar { height: 6px; background: #f1f5f9; border-radius: 3px; overflow: hidden; margin-bottom: 0.5rem; }
+  .metric-fill { height: 100%; border-radius: 3px; width: 0%; transition: width 0.6s ease; }
+  .metric-fill.green { background: #22c55e; }
+  .metric-fill.yellow { background: #eab308; }
+  .metric-fill.red { background: #ef4444; }
+  .metric-target { font-size: 0.78rem; color: #94a3b8; margin: 0 0 0.25rem; }
+  .metric-advice { font-size: 0.85rem; color: #475569; margin: 0; line-height: 1.5; }
+
+  .action-plan-card { background: linear-gradient(135deg, #064e3b, #065f46); border-radius: 16px; padding: 1.5rem 2rem; color: #fff; }
+  .action-plan-card h3 { font-size: 1.1rem; font-weight: 700; margin: 0 0 1rem; color: #a7f3d0; }
+  .action-plan-card ol { margin: 0; padding-left: 1.25rem; }
+  .action-plan-card li { font-size: 0.9rem; line-height: 1.6; margin-bottom: 0.6rem; color: #d1fae5; }
+
+  .tool-cta { padding: 2.5rem 1.5rem; background: #fff; }
+  .cta-card { max-width: 800px; margin: 0 auto; background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); border-radius: 16px; padding: 2.5rem 2rem; text-align: center; color: #fff; }
+  .cta-card h2 { margin: 0 0 0.75rem; font-size: 1.5rem; font-weight: 800; }
+  .cta-card p { margin: 0 0 1.5rem; opacity: 0.92; line-height: 1.6; }
+  .cta-button { display: inline-block; background: #fff; color: #065f46; padding: 0.75rem 2rem; border-radius: 10px; font-weight: 700; font-size: 1rem; text-decoration: none; transition: transform 0.15s, box-shadow 0.15s; }
+  .cta-button:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
+
+  .tool-content { padding: 3rem 1.5rem 4rem; background: #f8f9fb; }
+  .content-narrow { max-width: 720px; margin: 0 auto; }
+  .tool-content h2 { font-size: 1.4rem; font-weight: 800; color: #1a1a2e; margin: 2.5rem 0 0.75rem; }
+  .tool-content h2:first-child { margin-top: 0; }
+  .tool-content p, .tool-content li { font-size: 1.02rem; line-height: 1.7; color: #444; }
+  .tool-content ul, .tool-content ol { padding-left: 1.25rem; margin: 0.5rem 0 1rem; }
+  .tool-content li { margin-bottom: 0.35rem; }
+  .tool-content a { color: #11998e; text-decoration: underline; text-underline-offset: 2px; }
+  .tool-content details { background: #fff; border-radius: 12px; padding: 1rem 1.25rem; margin-bottom: 0.75rem; box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
+  .tool-content summary { font-weight: 600; cursor: pointer; color: #1a1a2e; font-size: 1.02rem; }
+  .tool-content details p { margin: 0.75rem 0 0; }
+
+  @media (max-width: 640px) {
+    .tool-hero { padding: 2.5rem 1rem 2rem; }
+    .calc-card { padding: 1.25rem; }
+    .score-card { flex-direction: column; align-items: center; text-align: center; padding: 1.5rem; }
+    .score-gauge { width: 140px; height: 140px; }
+    .gauge-score { font-size: 2rem; }
+    .cta-card { padding: 2rem 1.5rem; }
+    .action-plan-card { padding: 1.25rem 1.5rem; }
+  }
+</style>
+
+<script>
+  const incomeInput = document.getElementById('income') as HTMLInputElement;
+  const housingInput = document.getElementById('housing') as HTMLInputElement;
+  const debtInput = document.getElementById('debt') as HTMLInputElement;
+  const savingsInput = document.getElementById('savings') as HTMLInputElement;
+  const emergencyInput = document.getElementById('emergency') as HTMLInputElement;
+  const discretionaryInput = document.getElementById('discretionary') as HTMLInputElement;
+  const checkBtn = document.getElementById('check-btn') as HTMLButtonElement;
+  const resultsPanel = document.getElementById('results-panel') as HTMLElement;
+
+  function pct(n: number): string { return n.toFixed(1) + '%'; }
+
+  interface MetricResult { ratio: number; score: number; color: 'green' | 'yellow' | 'red'; advice: string; }
+
+  function evalHousing(housing: number, income: number): MetricResult {
+    const ratio = (housing / income) * 100;
+    if (ratio <= 25) return { ratio, score: 20, color: 'green', advice: 'Excellent! Housing is well within range, leaving plenty of room for savings.' };
+    if (ratio <= 30) return { ratio, score: 16, color: 'green', advice: 'Good — right at the 30% threshold. Look for small ways to trim costs.' };
+    if (ratio <= 40) return { ratio, score: 10, color: 'yellow', advice: 'Housing exceeds 30% of income. Consider refinancing, a roommate, or reducing utilities.' };
+    return { ratio, score: 4, color: 'red', advice: 'Housing is consuming too much income. Consider downsizing or relocating to free up cash.' };
+  }
+
+  function evalDebt(debt: number, income: number): MetricResult {
+    const ratio = (debt / income) * 100;
+    if (ratio <= 5) return { ratio, score: 20, color: 'green', advice: 'Outstanding! Very low debt gives you maximum financial flexibility.' };
+    if (ratio <= 20) return { ratio, score: 16, color: 'green', advice: 'Healthy debt level. Keep paying on time and avoid unnecessary new debt.' };
+    if (ratio <= 35) return { ratio, score: 10, color: 'yellow', advice: 'Debt is getting heavy. Focus on paying off high-interest balances first (avalanche method).' };
+    return { ratio, score: 4, color: 'red', advice: 'Dangerous debt level. Consider consolidation, balance transfers, or credit counseling.' };
+  }
+
+  function evalSavings(savings: number, income: number): MetricResult {
+    const ratio = (savings / income) * 100;
+    if (ratio >= 25) return { ratio, score: 20, color: 'green', advice: 'Incredible discipline! You are building wealth rapidly toward financial independence.' };
+    if (ratio >= 20) return { ratio, score: 16, color: 'green', advice: 'Solid — you meet the 20% target. Try increasing by 1% each year.' };
+    if (ratio >= 10) return { ratio, score: 10, color: 'yellow', advice: 'Below the 20% target. Automate an extra transfer on payday to close the gap.' };
+    return { ratio, score: 4, color: 'red', advice: 'Critically low savings. Start with $50/month auto-transfer — the habit matters most.' };
+  }
+
+  function evalEmergency(fund: number, income: number, savings: number): MetricResult {
+    const expenses = income - savings;
+    const months = expenses > 0 ? fund / expenses : 0;
+    if (months >= 6) return { ratio: months, score: 20, color: 'green', advice: `${months.toFixed(1)} months covered. Excellent safety net — consider investing surplus beyond 6 months.` };
+    if (months >= 3) return { ratio: months, score: 14, color: 'green', advice: `${months.toFixed(1)} months covered. Good foundation — keep building toward 6 months.` };
+    if (months >= 1) return { ratio: months, score: 8, color: 'yellow', advice: `Only ${months.toFixed(1)} months of runway. Prioritize building this to 3 months.` };
+    return { ratio: months, score: 3, color: 'red', advice: 'Almost no emergency cushion. Even $500 saved can prevent a debt spiral from one surprise bill.' };
+  }
+
+  function evalDiscretionary(disc: number, income: number): MetricResult {
+    const ratio = (disc / income) * 100;
+    if (ratio <= 20) return { ratio, score: 20, color: 'green', advice: 'Very disciplined spending. You are living well within your means.' };
+    if (ratio <= 30) return { ratio, score: 15, color: 'green', advice: 'Reasonable lifestyle spending. Room to optimize, but not a red flag.' };
+    if (ratio <= 40) return { ratio, score: 9, color: 'yellow', advice: 'Spending is creeping up. Audit subscriptions and dining-out habits — small cuts add up.' };
+    return { ratio, score: 3, color: 'red', advice: 'Lifestyle spending is too high. Try a 30-day spending freeze on one category to reset.' };
+  }
+
+  function getGrade(score: number): { letter: string; title: string; desc: string } {
+    if (score >= 90) return { letter: 'A+', title: 'Exceptional Budget Health', desc: 'Your finances are in outstanding shape across all areas. Stay the course and optimize investments.' };
+    if (score >= 80) return { letter: 'A', title: 'Excellent Budget Health', desc: 'Well-balanced budget with smart financial decisions. Look for small optimizations to maintain momentum.' };
+    if (score >= 70) return { letter: 'B+', title: 'Good Budget Health', desc: 'Mostly healthy with a few areas to improve. Fixing one weak area can push you into excellent territory.' };
+    if (score >= 60) return { letter: 'B', title: 'Decent Budget Health', desc: 'Doing OK but with clear room for improvement. The action plan below targets your weakest areas.' };
+    if (score >= 50) return { letter: 'C', title: 'Fair Budget Health', desc: 'Some concerning areas need attention. Targeted fixes can improve your score quickly.' };
+    if (score >= 40) return { letter: 'D', title: 'Below Average', desc: 'Multiple areas are strained. Focus on the action plan — even one improvement creates momentum.' };
+    return { letter: 'F', title: 'Needs Urgent Attention', desc: 'Several critical issues. Start with the single most urgent action below and build from there.' };
+  }
+
+  function getGaugeColor(score: number): string {
+    if (score >= 80) return '#22c55e';
+    if (score >= 60) return '#84cc16';
+    if (score >= 40) return '#eab308';
+    if (score >= 20) return '#f97316';
+    return '#ef4444';
+  }
+
+  function applyMetric(id: string, result: MetricResult, isMonths: boolean = false) {
+    const card = document.getElementById(`metric-${id}`)!;
+    const val = document.getElementById(`val-${id}`)!;
+    const fill = document.getElementById(`fill-${id}`) as HTMLElement;
+    const advice = document.getElementById(`advice-${id}`)!;
+    card.className = `metric-card ${result.color}`;
+    val.textContent = isMonths ? result.ratio.toFixed(1) + ' mo' : pct(result.ratio);
+    val.className = `metric-value ${result.color}`;
+    const fillPct = isMonths ? Math.min(result.ratio / 6 * 100, 100) : Math.min(result.ratio, 100);
+    fill.className = `metric-fill ${result.color}`;
+    setTimeout(() => { fill.style.width = fillPct + '%'; }, 50);
+    advice.textContent = result.advice;
+  }
+
+  function buildActionPlan(items: { name: string; result: MetricResult }[]): string[] {
+    const actions: string[] = [];
+    const sorted = [...items].sort((a, b) => a.result.score - b.result.score);
+    const tips: Record<string, Record<string, string>> = {
+      housing: { red: 'URGENT: Reduce housing costs — explore refinancing, downsizing, or finding a roommate.', yellow: 'IMPROVE: Trim housing costs at renewal — negotiate rent, refinance, or cut utility bills.' },
+      debt: { red: 'URGENT: Attack debt now. List balances by interest rate and throw extra money at the highest one.', yellow: 'IMPROVE: Accelerate payoff with the snowball method or a 0% balance transfer card.' },
+      savings: { red: 'URGENT: Set up a $100 auto-transfer to savings on your next payday — start the habit now.', yellow: 'IMPROVE: Increase savings rate by 2–3% this month. Automate so it happens without willpower.' },
+      emergency: { red: 'URGENT: Open a high-yield savings account and target $1,000 as your first milestone.', yellow: 'IMPROVE: Keep building toward 3–6 months. Redirect windfalls (tax refunds, bonuses) here.' },
+      discretionary: { red: 'URGENT: Cancel unused subscriptions and implement a 48-hour rule before purchases over $50.', yellow: 'IMPROVE: Review last 3 months of spending and set a cap for your top 3 categories.' },
+    };
+    for (const item of sorted) {
+      if (item.result.color === 'red' || item.result.color === 'yellow') {
+        actions.push(tips[item.name][item.result.color]);
+      }
+    }
+    if (actions.length === 0) {
+      actions.push('Your budget is in great shape! Focus on optimizing investments and increasing savings by 1% each quarter.');
+      actions.push('Consider maxing out tax-advantaged accounts (401k, IRA, HSA) if you have not already.');
+    }
+    return actions;
+  }
+
+  function animateScore(target: number) {
+    const scoreEl = document.getElementById('gauge-score')!;
+    const arc = document.getElementById('gauge-arc') as unknown as SVGCircleElement;
+    const totalDash = 534;
+    const duration = 800;
+    const startTime = performance.now();
+    arc.style.stroke = getGaugeColor(target);
+    function step(now: number) {
+      const progress = Math.min((now - startTime) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      scoreEl.textContent = String(Math.round(eased * target));
+      arc.setAttribute('stroke-dashoffset', String(totalDash - (eased * target / 100) * totalDash));
+      if (progress < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  function calculate() {
+    const income = parseFloat(incomeInput.value) || 0;
+    if (income <= 0) { resultsPanel.style.display = 'none'; return; }
+    const housing = parseFloat(housingInput.value) || 0;
+    const debt = parseFloat(debtInput.value) || 0;
+    const savings = parseFloat(savingsInput.value) || 0;
+    const emergency = parseFloat(emergencyInput.value) || 0;
+    const discretionary = parseFloat(discretionaryInput.value) || 0;
+
+    const h = evalHousing(housing, income);
+    const d = evalDebt(debt, income);
+    const s = evalSavings(savings, income);
+    const e = evalEmergency(emergency, income, savings);
+    const disc = evalDiscretionary(discretionary, income);
+
+    const totalScore = h.score + d.score + s.score + e.score + disc.score;
+    const grade = getGrade(totalScore);
+    document.getElementById('gauge-grade')!.textContent = grade.letter;
+    document.getElementById('score-title')!.textContent = grade.title;
+    document.getElementById('score-desc')!.textContent = grade.desc;
+
+    applyMetric('housing', h);
+    applyMetric('debt', d);
+    applyMetric('savings', s);
+    applyMetric('emergency', e, true);
+    applyMetric('discretionary', disc);
+
+    const actions = buildActionPlan([
+      { name: 'housing', result: h }, { name: 'debt', result: d },
+      { name: 'savings', result: s }, { name: 'emergency', result: e },
+      { name: 'discretionary', result: disc },
+    ]);
+    (document.getElementById('action-list') as HTMLOListElement).innerHTML = actions.map(a => `<li>${a}</li>`).join('');
+
+    resultsPanel.style.display = 'flex';
+    animateScore(totalScore);
+  }
+
+  checkBtn.addEventListener('click', calculate);
+</script>
