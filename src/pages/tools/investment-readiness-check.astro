@@ -1,0 +1,364 @@
+---
+title: "Investment Readiness Check | Are You Ready to Start Investing?"
+description: "Take this free 10-question quiz to find out if you're financially ready to start investing. Get a personalized readiness score and action plan."
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Investment Readiness Check | Are You Ready to Start Investing?</title>
+  <meta name="description" content="Take this free 10-question quiz to find out if you're financially ready to start investing. Get a personalized readiness score and action plan." />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f0f4f8; color: #1a202c; min-height: 100vh; }
+    .hero { background: linear-gradient(135deg, #1a365d 0%, #2b6cb0 100%); color: white; padding: 40px 20px; text-align: center; }
+    .hero h1 { font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 800; margin-bottom: 12px; }
+    .hero p { font-size: 1.05rem; opacity: 0.9; max-width: 560px; margin: 0 auto; }
+    .container { max-width: 680px; margin: 0 auto; padding: 32px 20px 60px; }
+    .progress-bar { background: #e2e8f0; border-radius: 8px; height: 10px; margin-bottom: 28px; }
+    .progress-fill { background: linear-gradient(90deg, #2b6cb0, #4299e1); height: 100%; border-radius: 8px; transition: width 0.4s; }
+    .progress-label { text-align: right; font-size: 0.8rem; color: #718096; margin-top: 4px; margin-bottom: 20px; }
+    .question-card { background: white; border-radius: 16px; padding: 32px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); margin-bottom: 24px; display: none; }
+    .question-card.active { display: block; }
+    .q-number { font-size: 0.8rem; font-weight: 700; color: #2b6cb0; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 10px; }
+    .q-text { font-size: 1.15rem; font-weight: 700; color: #1a202c; margin-bottom: 24px; line-height: 1.5; }
+    .options { display: flex; flex-direction: column; gap: 10px; }
+    .option-btn { display: flex; align-items: center; gap: 14px; padding: 14px 18px; border: 2px solid #e2e8f0; border-radius: 10px; background: white; cursor: pointer; text-align: left; font-size: 0.95rem; color: #2d3748; transition: all 0.2s; }
+    .option-btn:hover { border-color: #2b6cb0; background: #ebf8ff; }
+    .option-btn.selected { border-color: #2b6cb0; background: #ebf8ff; color: #1a365d; font-weight: 600; }
+    .option-icon { font-size: 1.3rem; }
+    .nav-row { display: flex; justify-content: space-between; align-items: center; margin-top: 24px; gap: 12px; }
+    .btn { padding: 12px 28px; border-radius: 10px; font-size: 1rem; font-weight: 700; cursor: pointer; border: none; transition: all 0.2s; }
+    .btn-next { background: #2b6cb0; color: white; flex: 1; }
+    .btn-next:hover { background: #1a365d; }
+    .btn-next:disabled { background: #a0aec0; cursor: not-allowed; }
+    .btn-back { background: #e2e8f0; color: #4a5568; }
+    .btn-back:hover { background: #cbd5e0; }
+    /* Result */
+    .result-card { background: white; border-radius: 16px; padding: 36px 32px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); display: none; text-align: center; }
+    .result-card.active { display: block; }
+    .score-circle { width: 130px; height: 130px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 2.2rem; font-weight: 900; color: white; }
+    .result-label { font-size: 1.5rem; font-weight: 800; margin-bottom: 8px; }
+    .result-sub { color: #718096; font-size: 0.95rem; margin-bottom: 28px; }
+    .breakdown { text-align: left; background: #f7fafc; border-radius: 12px; padding: 20px; margin-bottom: 24px; }
+    .breakdown h3 { font-size: 0.85rem; font-weight: 700; color: #4a5568; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 14px; }
+    .breakdown-item { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid #e2e8f0; font-size: 0.9rem; }
+    .breakdown-item:last-child { border-bottom: none; }
+    .dot { width: 10px; height: 10px; border-radius: 50%; margin-left: 8px; }
+    .action-list { text-align: left; background: #fff5f5; border-left: 4px solid #fc8181; border-radius: 0 12px 12px 0; padding: 18px 20px; margin-bottom: 24px; }
+    .action-list.green { background: #f0fff4; border-left-color: #48bb78; }
+    .action-list.yellow { background: #fffff0; border-left-color: #ecc94b; }
+    .action-list h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 10px; }
+    .action-list ul { list-style: none; display: flex; flex-direction: column; gap: 7px; }
+    .action-list ul li::before { content: "→ "; color: inherit; font-weight: 700; }
+    .action-list ul li { font-size: 0.9rem; color: #4a5568; }
+    .cta-box { background: linear-gradient(135deg, #1a365d, #2b6cb0); color: white; border-radius: 14px; padding: 28px 24px; text-align: center; }
+    .cta-box h3 { font-size: 1.15rem; font-weight: 800; margin-bottom: 8px; }
+    .cta-box p { font-size: 0.9rem; opacity: 0.9; margin-bottom: 18px; }
+    .cta-box a { display: inline-block; background: white; color: #1a365d; font-weight: 700; padding: 12px 28px; border-radius: 8px; text-decoration: none; font-size: 0.95rem; }
+    .cta-box a:hover { background: #ebf8ff; }
+    .restart-btn { background: #e2e8f0; color: #4a5568; border: none; padding: 10px 22px; border-radius: 8px; font-size: 0.9rem; font-weight: 600; cursor: pointer; margin-top: 16px; }
+    .restart-btn:hover { background: #cbd5e0; }
+  </style>
+</head>
+<body>
+<div class="hero">
+  <h1>📊 Investment Readiness Check</h1>
+  <p>10 questions to find out if you're financially ready to start investing — and what to do next.</p>
+</div>
+<div class="container">
+  <div class="progress-bar"><div class="progress-fill" id="progress" style="width:10%"></div></div>
+  <div class="progress-label" id="progress-label">Question 1 of 10</div>
+
+  <!-- Q1 -->
+  <div class="question-card active" data-q="0">
+    <div class="q-number">Question 1 of 10</div>
+    <div class="q-text">Do you have an emergency fund covering 3–6 months of expenses?</div>
+    <div class="options">
+      <button class="option-btn" data-score="3"><span class="option-icon">✅</span> Yes, fully funded (3–6+ months)</button>
+      <button class="option-btn" data-score="2"><span class="option-icon">🔄</span> Partially — I have 1–2 months saved</button>
+      <button class="option-btn" data-score="1"><span class="option-icon">⚠️</span> Small amount, less than 1 month</button>
+      <button class="option-btn" data-score="0"><span class="option-icon">❌</span> No emergency fund at all</button>
+    </div>
+    <div class="nav-row">
+      <button class="btn btn-next" id="next-0" disabled onclick="nextQ(0)">Next →</button>
+    </div>
+  </div>
+
+  <!-- Q2 -->
+  <div class="question-card" data-q="1">
+    <div class="q-number">Question 2 of 10</div>
+    <div class="q-text">How is your high-interest debt situation? (credit cards, payday loans, etc.)</div>
+    <div class="options">
+      <button class="option-btn" data-score="3"><span class="option-icon">✅</span> No high-interest debt at all</button>
+      <button class="option-btn" data-score="2"><span class="option-icon">🔄</span> Some, but I'm actively paying it down</button>
+      <button class="option-btn" data-score="1"><span class="option-icon">⚠️</span> Significant debt (15%+ interest)</button>
+      <button class="option-btn" data-score="0"><span class="option-icon">❌</span> Struggling to make minimum payments</button>
+    </div>
+    <div class="nav-row">
+      <button class="btn btn-back" onclick="prevQ(1)">← Back</button>
+      <button class="btn btn-next" id="next-1" disabled onclick="nextQ(1)">Next →</button>
+    </div>
+  </div>
+
+  <!-- Q3 -->
+  <div class="question-card" data-q="2">
+    <div class="q-number">Question 3 of 10</div>
+    <div class="q-text">How stable is your income right now?</div>
+    <div class="options">
+      <button class="option-btn" data-score="3"><span class="option-icon">✅</span> Very stable — steady job or reliable income</button>
+      <button class="option-btn" data-score="2"><span class="option-icon">🔄</span> Mostly stable with occasional variation</button>
+      <button class="option-btn" data-score="1"><span class="option-icon">⚠️</span> Variable — freelance or irregular income</button>
+      <button class="option-btn" data-score="0"><span class="option-icon">❌</span> Currently unemployed or income is very uncertain</button>
+    </div>
+    <div class="nav-row">
+      <button class="btn btn-back" onclick="prevQ(2)">← Back</button>
+      <button class="btn btn-next" id="next-2" disabled onclick="nextQ(2)">Next →</button>
+    </div>
+  </div>
+
+  <!-- Q4 -->
+  <div class="question-card" data-q="3">
+    <div class="q-number">Question 4 of 10</div>
+    <div class="q-text">Do you have a monthly budget and track your spending?</div>
+    <div class="options">
+      <button class="option-btn" data-score="3"><span class="option-icon">✅</span> Yes — I budget and review monthly</button>
+      <button class="option-btn" data-score="2"><span class="option-icon">🔄</span> Loosely — I have a general sense of spending</button>
+      <button class="option-btn" data-score="1"><span class="option-icon">⚠️</span> I've tried but don't stick with it</button>
+      <button class="option-btn" data-score="0"><span class="option-icon">❌</span> No budget — I rarely track money</button>
+    </div>
+    <div class="nav-row">
+      <button class="btn btn-back" onclick="prevQ(3)">← Back</button>
+      <button class="btn btn-next" id="next-3" disabled onclick="nextQ(3)">Next →</button>
+    </div>
+  </div>
+
+  <!-- Q5 -->
+  <div class="question-card" data-q="4">
+    <div class="q-number">Question 5 of 10</div>
+    <div class="q-text">What is your investment time horizon?</div>
+    <div class="options">
+      <button class="option-btn" data-score="3"><span class="option-icon">🚀</span> 10+ years (long-term wealth building)</button>
+      <button class="option-btn" data-score="2"><span class="option-icon">📈</span> 5–10 years (medium-term goal)</button>
+      <button class="option-btn" data-score="1"><span class="option-icon">⏳</span> 3–5 years (shorter goal)</button>
+      <button class="option-btn" data-score="0"><span class="option-icon">⚡</span> Under 3 years (I need this money soon)</button>
+    </div>
+    <div class="nav-row">
+      <button class="btn btn-back" onclick="prevQ(4)">← Back</button>
+      <button class="btn btn-next" id="next-4" disabled onclick="nextQ(4)">Next →</button>
+    </div>
+  </div>
+
+  <!-- Q6 -->
+  <div class="question-card" data-q="5">
+    <div class="q-number">Question 6 of 10</div>
+    <div class="q-text">How would you react if your investment dropped 20% in one month?</div>
+    <div class="options">
+      <button class="option-btn" data-score="3"><span class="option-icon">😎</span> Stay the course — I know it's long-term</button>
+      <button class="option-btn" data-score="2"><span class="option-icon">😬</span> Nervous, but I'd hold and not sell</button>
+      <button class="option-btn" data-score="1"><span class="option-icon">😰</span> Probably sell some to reduce stress</button>
+      <button class="option-btn" data-score="0"><span class="option-icon">😱</span> Sell everything immediately</button>
+    </div>
+    <div class="nav-row">
+      <button class="btn btn-back" onclick="prevQ(5)">← Back</button>
+      <button class="btn btn-next" id="next-5" disabled onclick="nextQ(5)">Next →</button>
+    </div>
+  </div>
+
+  <!-- Q7 -->
+  <div class="question-card" data-q="6">
+    <div class="q-number">Question 7 of 10</div>
+    <div class="q-text">Do you have access to an employer 401(k) match or similar program?</div>
+    <div class="options">
+      <button class="option-btn" data-score="3"><span class="option-icon">✅</span> Yes — and I'm contributing enough to get the full match</button>
+      <button class="option-btn" data-score="2"><span class="option-icon">🔄</span> Yes, but I'm not maximizing the match yet</button>
+      <button class="option-btn" data-score="1"><span class="option-icon">⚠️</span> No employer match available</button>
+      <button class="option-btn" data-score="0"><span class="option-icon">❌</span> Self-employed / no retirement benefits</button>
+    </div>
+    <div class="nav-row">
+      <button class="btn btn-back" onclick="prevQ(6)">← Back</button>
+      <button class="btn btn-next" id="next-6" disabled onclick="nextQ(6)">Next →</button>
+    </div>
+  </div>
+
+  <!-- Q8 -->
+  <div class="question-card" data-q="7">
+    <div class="q-number">Question 8 of 10</div>
+    <div class="q-text">How much do you know about basic investing concepts?</div>
+    <div class="options">
+      <button class="option-btn" data-score="3"><span class="option-icon">📚</span> Confident — I understand index funds, ETFs, diversification</button>
+      <button class="option-btn" data-score="2"><span class="option-icon">🔄</span> Some basics — heard of stocks, bonds, index funds</button>
+      <button class="option-btn" data-score="1"><span class="option-icon">⚠️</span> Very little — mostly unfamiliar territory</button>
+      <button class="option-btn" data-score="0"><span class="option-icon">❌</span> Complete beginner, no investment knowledge</button>
+    </div>
+    <div class="nav-row">
+      <button class="btn btn-back" onclick="prevQ(7)">← Back</button>
+      <button class="btn btn-next" id="next-7" disabled onclick="nextQ(7)">Next →</button>
+    </div>
+  </div>
+
+  <!-- Q9 -->
+  <div class="question-card" data-q="8">
+    <div class="q-number">Question 9 of 10</div>
+    <div class="q-text">How much can you realistically invest per month right now?</div>
+    <div class="options">
+      <button class="option-btn" data-score="3"><span class="option-icon">💰</span> $300+ per month comfortably</button>
+      <button class="option-btn" data-score="2"><span class="option-icon">💵</span> $50–$300 per month</button>
+      <button class="option-btn" data-score="1"><span class="option-icon">💸</span> Less than $50 per month</button>
+      <button class="option-btn" data-score="0"><span class="option-icon">🔴</span> Nothing right now — budget is too tight</button>
+    </div>
+    <div class="nav-row">
+      <button class="btn btn-back" onclick="prevQ(8)">← Back</button>
+      <button class="btn btn-next" id="next-8" disabled onclick="nextQ(8)">Next →</button>
+    </div>
+  </div>
+
+  <!-- Q10 -->
+  <div class="question-card" data-q="9">
+    <div class="q-number">Question 10 of 10</div>
+    <div class="q-text">What best describes your primary financial goal right now?</div>
+    <div class="options">
+      <button class="option-btn" data-score="3"><span class="option-icon">🏆</span> Build long-term wealth / retirement</button>
+      <button class="option-btn" data-score="2"><span class="option-icon">🎯</span> Save for a major goal (house, education)</button>
+      <button class="option-btn" data-score="1"><span class="option-icon">🛡️</span> Get financially stable first</button>
+      <button class="option-btn" data-score="0"><span class="option-icon">🆘</span> Just survive month to month right now</button>
+    </div>
+    <div class="nav-row">
+      <button class="btn btn-back" onclick="prevQ(9)">← Back</button>
+      <button class="btn btn-next" id="next-9" disabled onclick="showResult()">See My Results →</button>
+    </div>
+  </div>
+
+  <!-- Result -->
+  <div class="result-card" id="result-card">
+    <div class="score-circle" id="score-circle"></div>
+    <div class="result-label" id="result-label"></div>
+    <div class="result-sub" id="result-sub"></div>
+    <div class="breakdown">
+      <h3>Your Score Breakdown</h3>
+      <div class="breakdown-item"><span>Emergency Fund</span><div style="display:flex;align-items:center"><span id="bd-0"></span><div class="dot" id="dot-0"></div></div></div>
+      <div class="breakdown-item"><span>Debt Situation</span><div style="display:flex;align-items:center"><span id="bd-1"></span><div class="dot" id="dot-1"></div></div></div>
+      <div class="breakdown-item"><span>Income Stability</span><div style="display:flex;align-items:center"><span id="bd-2"></span><div class="dot" id="dot-2"></div></div></div>
+      <div class="breakdown-item"><span>Budgeting</span><div style="display:flex;align-items:center"><span id="bd-3"></span><div class="dot" id="dot-3"></div></div></div>
+      <div class="breakdown-item"><span>Time Horizon</span><div style="display:flex;align-items:center"><span id="bd-4"></span><div class="dot" id="dot-4"></div></div></div>
+      <div class="breakdown-item"><span>Risk Tolerance</span><div style="display:flex;align-items:center"><span id="bd-5"></span><div class="dot" id="dot-5"></div></div></div>
+      <div class="breakdown-item"><span>Investable Amount</span><div style="display:flex;align-items:center"><span id="bd-6"></span><div class="dot" id="dot-6"></div></div></div>
+    </div>
+    <div class="action-list" id="action-list">
+      <h3 id="action-title"></h3>
+      <ul id="action-items"></ul>
+    </div>
+    <div class="cta-box">
+      <h3>📊 Ready to Build Your Budget Foundation?</h3>
+      <p>Get the free Freelancer Expense Tracker or Personal Finance Dashboard — built to help you reach investment-ready faster.</p>
+      <a href="https://gettidyflow.gumroad.com" target="_blank">Browse Free Tools on Gumroad →</a>
+    </div>
+    <button class="restart-btn" onclick="restart()">🔄 Take the Quiz Again</button>
+  </div>
+</div>
+
+<script>
+  const scores = new Array(10).fill(null);
+  let current = 0;
+
+  document.querySelectorAll('.question-card').forEach((card, qi) => {
+    card.querySelectorAll('.option-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        card.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
+        btn.classList.add('selected');
+        scores[qi] = parseInt(btn.dataset.score);
+        const nextBtn = document.getElementById('next-' + qi);
+        if (nextBtn) nextBtn.disabled = false;
+      });
+    });
+  });
+
+  function nextQ(qi) {
+    if (scores[qi] === null) return;
+    document.querySelector('[data-q="'+qi+'"]').classList.remove('active');
+    current = qi + 1;
+    document.querySelector('[data-q="'+current+'"]').classList.add('active');
+    updateProgress();
+  }
+
+  function prevQ(qi) {
+    document.querySelector('[data-q="'+qi+'"]').classList.remove('active');
+    current = qi - 1;
+    document.querySelector('[data-q="'+current+'"]').classList.add('active');
+    updateProgress();
+  }
+
+  function updateProgress() {
+    const pct = ((current + 1) / 10) * 100;
+    document.getElementById('progress').style.width = pct + '%';
+    document.getElementById('progress-label').textContent = 'Question ' + (current + 1) + ' of 10';
+  }
+
+  function showResult() {
+    document.querySelector('[data-q="9"]').classList.remove('active');
+    document.getElementById('progress').style.width = '100%';
+    document.getElementById('progress-label').textContent = 'Complete!';
+
+    const total = scores.reduce((a, b) => a + (b || 0), 0);
+    const max = 30;
+    const pct = Math.round((total / max) * 100);
+
+    const circle = document.getElementById('score-circle');
+    const label = document.getElementById('result-label');
+    const sub = document.getElementById('result-sub');
+    const actionList = document.getElementById('action-list');
+    const actionTitle = document.getElementById('action-title');
+    const actionItems = document.getElementById('action-items');
+
+    let color, resultText, resultDesc, actions, actionClass;
+    if (pct >= 75) {
+      color = '#38a169'; resultText = '🚀 Ready to Invest!'; resultDesc = 'Your financial foundation is solid. You\'re in a great position to start building wealth through investing.';
+      actions = ['Open a brokerage or Roth IRA account this week', 'Start with low-cost index funds (e.g., VTSAX, VTI)', 'Automate monthly contributions', 'Consider maxing out your IRA ($7,000/year limit)', 'Keep learning — read "The Simple Path to Wealth"'];
+      actionClass = 'green'; actionTitle.textContent = '✅ Your Next Steps:';
+    } else if (pct >= 50) {
+      color = '#d69e2e'; resultText = '⚡ Almost Ready'; resultDesc = 'You have a decent foundation but a few gaps to address. Resolve these and you\'ll be investing within 3–6 months.';
+      actions = ['Boost your emergency fund to 3 months of expenses', 'Attack any high-interest debt aggressively', 'Set a firm monthly "investing savings" goal', 'Research index fund basics (ETFs, compound interest)', 'Use a budget app to track spending consistently'];
+      actionClass = 'yellow'; actionTitle.textContent = '📋 Priority Actions:';
+    } else {
+      color = '#e53e3e'; resultText = '🛡️ Build Foundation First'; resultDesc = 'Investing now would be premature. Focus on financial stability first — you\'ll be in a much stronger position soon.';
+      actions = ['Create a written budget and track all expenses', 'Build a starter emergency fund ($500–$1,000)', 'Stop taking on new debt and make minimum payments', 'Look for ways to increase income or cut expenses', 'Revisit this quiz in 3 months after making progress'];
+      actionClass = ''; actionTitle.textContent = '🎯 Focus Here First:';
+    }
+
+    circle.style.background = color;
+    circle.textContent = pct + '%';
+    label.textContent = resultText;
+    label.style.color = color;
+    sub.textContent = resultDesc;
+    actionList.className = 'action-list ' + actionClass;
+    actionItems.innerHTML = actions.map(a => '<li>' + a + '</li>').join('');
+
+    const labels = ['Strong', 'Good', 'Fair', 'Weak'];
+    const dotColors = ['#38a169', '#68d391', '#ecc94b', '#fc8181'];
+    [0,1,2,3,4,5,8].forEach((qi, i) => {
+      const s = scores[qi] || 0;
+      document.getElementById('bd-'+i).textContent = labels[3-s];
+      document.getElementById('dot-'+i).style.background = dotColors[3-s];
+    });
+
+    document.getElementById('result-card').classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function restart() {
+    scores.fill(null);
+    current = 0;
+    document.getElementById('result-card').classList.remove('active');
+    document.querySelectorAll('.question-card').forEach((c, i) => {
+      c.classList.toggle('active', i === 0);
+      c.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
+    });
+    document.querySelectorAll('.btn-next').forEach(b => b.disabled = true);
+    document.getElementById('progress').style.width = '10%';
+    document.getElementById('progress-label').textContent = 'Question 1 of 10';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+</body>
+</html>

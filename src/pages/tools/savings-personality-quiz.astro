@@ -1,0 +1,814 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const title = "What's Your Savings Personality? — Free Savings Type Quiz";
+const description = 'Take this free 10-question quiz to discover your savings personality type. Are you a Safety Builder, Goal Chaser, Wealth Grower, or Free Spirit? Find out and get a personalized savings plan.';
+---
+
+<BaseLayout title={title} description={description}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Savings Personality Quiz",
+      "url": "https://gettidyflow.com/tools/savings-personality-quiz",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "description": description
+    })} />
+  </Fragment>
+
+  <section class="tool-hero">
+    <div class="tool-hero-inner">
+      <span class="tool-badge">Free Quiz — No Signup Required</span>
+      <h1>What's Your <span class="gradient-text">Savings Personality</span>?</h1>
+      <p class="tool-subtitle">Answer 10 quick questions to discover how you naturally save money. Get a personalized savings strategy that matches who you actually are — not who you think you should be.</p>
+    </div>
+  </section>
+
+  <section class="tool-app">
+    <div class="tool-container">
+      <!-- Quiz Card -->
+      <div class="quiz-card" id="quiz-card">
+        <div class="progress-bar-container">
+          <div class="progress-bar" id="progress-bar"></div>
+        </div>
+        <p class="progress-text" id="progress-text">Question 1 of 10</p>
+        <h2 class="question-text" id="question-text"></h2>
+        <div class="options-container" id="options-container"></div>
+      </div>
+
+      <!-- Results Card (hidden initially) -->
+      <div class="result-card-main" id="result-card" style="display:none;">
+        <div class="result-type-icon" id="result-icon"></div>
+        <h2 class="result-type-name" id="result-type-name"></h2>
+        <p class="result-type-tagline" id="result-type-tagline"></p>
+        <p class="result-description" id="result-description"></p>
+
+        <div class="result-section">
+          <h3>💪 Your Savings Strengths</h3>
+          <ul id="result-strengths"></ul>
+        </div>
+
+        <div class="result-section">
+          <h3>⚠️ Watch Out For</h3>
+          <ul id="result-blindspots"></ul>
+        </div>
+
+        <div class="result-section">
+          <h3>🎯 Your Personalized Savings Strategy</h3>
+          <ul id="result-strategy"></ul>
+        </div>
+
+        <div class="result-section">
+          <h3>🛠️ Recommended Tools</h3>
+          <div class="recommended-tools" id="result-tools"></div>
+        </div>
+
+        <button class="retake-button" id="retake-button">Retake Quiz</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool-cta">
+    <div class="tool-container">
+      <div class="cta-card">
+        <h2>Build a Savings System That Actually Works</h2>
+        <p>Knowing your savings personality is just the start. Track your savings progress, set goals, and stay on track with our free budget tools — no subscription required.</p>
+        <a href="https://gettidyflow.gumroad.com" target="_blank" rel="noopener" class="cta-button">Get Free Budget Tools &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool-content">
+    <div class="tool-container content-narrow">
+      <h2>Why Your Savings Personality Matters</h2>
+      <p>Most savings advice fails because it ignores personality. Telling a Free Spirit to automate 20% of their paycheck works about as well as telling a Safety Builder to "stop worrying and just invest." Understanding your natural savings style lets you design a system that feels sustainable — not like punishment.</p>
+      <p>This quiz identifies which of four savings personalities best describes your natural approach to building financial reserves. Each type has real strengths to lean into and specific blind spots to watch.</p>
+
+      <h2>The 4 Savings Personality Types</h2>
+      <ul>
+        <li><strong>The Safety Builder</strong> — Your savings are built on security first. Emergency funds, insurance, and stable reserves make you feel in control. You may be leaving investment returns on the table by staying too conservative, but your financial foundation is rock-solid.</li>
+        <li><strong>The Goal Chaser</strong> — You save best when you have a specific target. A vacation, a car, a down payment — concrete goals ignite your motivation. Without a clear goal, your savings tend to drift. With one, you're unstoppable.</li>
+        <li><strong>The Wealth Grower</strong> — Long-term wealth creation drives you. You think in decades, not months. You automate contributions, understand compound interest, and view your savings as an investment portfolio rather than a safety net.</li>
+        <li><strong>The Free Spirit</strong> — Saving is something you'll do when you have "extra" money — which never quite seems to arrive. You value experiences and spontaneity over future planning. Small, automatic wins can transform your savings without feeling restrictive.</li>
+      </ul>
+
+      <h2>How to Use Your Results</h2>
+      <ul>
+        <li><strong>Safety Builder</strong>: Once your emergency fund hits 6 months, shift 50% of new savings into index funds. Your security base is earned — now grow it.</li>
+        <li><strong>Goal Chaser</strong>: Always have one active savings goal with a named account. "Vacation Fund" works better than "Savings." When one goal is reached, immediately set the next.</li>
+        <li><strong>Wealth Grower</strong>: Make sure you have 3-6 months emergency fund before pouring everything into investments. Maximize your 401k match first, then add taxable accounts.</li>
+        <li><strong>Free Spirit</strong>: Automate a small, painless amount first — even $25/paycheck. Increase it by $25 every 3 months. You'll build wealth without a lifestyle change you'll resist.</li>
+      </ul>
+
+      <h2>Related Tools</h2>
+      <ul>
+        <li><a href="/tools/savings-goal-calculator">Savings Goal Calculator</a> — Calculate exactly how long to reach your savings target</li>
+        <li><a href="/tools/emergency-fund-calculator">Emergency Fund Calculator</a> — Find your ideal safety net size</li>
+        <li><a href="/tools/investment-return-calculator">Investment Return Calculator</a> — See compound growth in action</li>
+        <li><a href="/tools/savings-rate-calculator">Savings Rate Calculator</a> — Discover what percentage of income you're actually saving</li>
+        <li><a href="/tools/budget-health-check">Budget Health Check</a> — Get a full financial health score in 60 seconds</li>
+      </ul>
+
+      <h2>Frequently Asked Questions</h2>
+      <details>
+        <summary>Is one savings personality better than another?</summary>
+        <p>No single type is best — each has genuine advantages. Safety Builders build resilient financial foundations. Goal Chasers accomplish big things quickly. Wealth Growers build long-term prosperity. Even Free Spirits often have rich, fulfilling lives with experiences that money can't buy. The goal is to use your natural tendencies strategically.</p>
+      </details>
+      <details>
+        <summary>Can I be more than one type?</summary>
+        <p>Yes. Most people have a primary type with secondary tendencies. You might be a Goal Chaser who also has Wealth Grower instincts. The quiz shows your dominant pattern, but read all four types to find elements that resonate with you.</p>
+      </details>
+      <details>
+        <summary>How much should I actually be saving?</summary>
+        <p>A common starting point is the 50/30/20 rule: 50% needs, 30% wants, 20% savings. But the "right" amount depends on your goals. Use our <a href="/tools/savings-rate-calculator">Savings Rate Calculator</a> to find what works for your income and goals.</p>
+      </details>
+      <details>
+        <summary>I'm a Free Spirit. Is it too late to start saving?</summary>
+        <p>It's never too late. Someone starting to save at 40 still has 25 years of compound growth ahead if they invest until 65. The key is starting with an amount so small you won't resist it. $50/month at 7% average return grows to over $65,000 in 25 years.</p>
+      </details>
+      <details>
+        <summary>How often should I retake this quiz?</summary>
+        <p>Retake it after major life events — a raise, a new job, marriage, having kids, paying off debt. These changes often shift your savings personality. Most people naturally move toward Safety Builder or Wealth Grower as their income grows.</p>
+      </details>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .tool-hero {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+    padding: 4rem 1.5rem 3rem;
+    text-align: center;
+    color: #fff;
+  }
+  .tool-hero-inner {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .tool-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.25);
+    backdrop-filter: blur(4px);
+    padding: 0.35rem 1rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+    color: #fff;
+  }
+  .tool-hero h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 800;
+    line-height: 1.15;
+    margin: 0 0 1rem;
+  }
+  .gradient-text {
+    background: linear-gradient(90deg, #d4f7e8, #b8ffe8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .tool-subtitle {
+    font-size: 1.1rem;
+    opacity: 0.93;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .tool-app {
+    padding: 2.5rem 1.5rem;
+    background: #f0fdf4;
+  }
+  .tool-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  /* Quiz Card */
+  .quiz-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+  .progress-bar-container {
+    width: 100%;
+    height: 8px;
+    background: #dcfce7;
+    border-radius: 999px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+  }
+  .progress-bar {
+    height: 100%;
+    width: 10%;
+    background: linear-gradient(90deg, #43e97b, #38f9d7);
+    border-radius: 999px;
+    transition: width 0.4s ease;
+  }
+  .progress-text {
+    font-size: 0.85rem;
+    color: #999;
+    font-weight: 600;
+    margin: 0 0 1.5rem;
+    text-align: center;
+  }
+  .question-text {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin: 0 0 1.5rem;
+    line-height: 1.4;
+    text-align: center;
+  }
+  .options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .option-button {
+    display: block;
+    width: 100%;
+    padding: 1rem 1.25rem;
+    background: #f8fffe;
+    border: 2px solid #d1fae5;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #1a1a2e;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.2s ease;
+    font-family: inherit;
+    line-height: 1.5;
+  }
+  .option-button:hover {
+    border-color: #43e97b;
+    background: #f0fdf4;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(67,233,123,0.15);
+  }
+  .option-button:active {
+    transform: translateY(0);
+  }
+  .option-button .option-label {
+    display: inline-block;
+    width: 1.75rem;
+    height: 1.75rem;
+    line-height: 1.75rem;
+    text-align: center;
+    background: linear-gradient(135deg, #43e97b, #38f9d7);
+    color: #fff;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    margin-right: 0.75rem;
+    vertical-align: middle;
+  }
+
+  /* Results Card */
+  .result-card-main {
+    background: #fff;
+    border-radius: 16px;
+    padding: 2.5rem 2rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    text-align: center;
+  }
+  .result-type-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    line-height: 1;
+  }
+  .result-type-name {
+    font-size: 1.75rem;
+    font-weight: 800;
+    margin: 0 0 0.5rem;
+    background: linear-gradient(135deg, #43e97b, #38f9d7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .result-type-tagline {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #16a34a;
+    margin: 0 0 1.25rem;
+    letter-spacing: 0.01em;
+  }
+  .result-description {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #555;
+    margin: 0 0 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .result-section {
+    text-align: left;
+    margin-bottom: 1.75rem;
+    background: #f0fdf4;
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+  }
+  .result-section h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin: 0 0 0.75rem;
+  }
+  .result-section ul {
+    margin: 0;
+    padding-left: 1.25rem;
+  }
+  .result-section li {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 0.35rem;
+  }
+  .recommended-tools {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .recommended-tools a {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: #fff;
+    border: 1px solid #d1fae5;
+    border-radius: 10px;
+    color: #16a34a;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s;
+    font-size: 0.95rem;
+  }
+  .recommended-tools a:hover {
+    border-color: #43e97b;
+    background: #f0fdf4;
+    transform: translateX(4px);
+  }
+  .retake-button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.85rem 2.5rem;
+    background: linear-gradient(135deg, #43e97b, #38f9d7);
+    color: #fff;
+    font-weight: 700;
+    font-size: 1rem;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    font-family: inherit;
+  }
+  .retake-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(67,233,123,0.35);
+  }
+
+  /* CTA */
+  .tool-cta {
+    padding: 2.5rem 1.5rem;
+    background: #fff;
+  }
+  .cta-card {
+    max-width: 800px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+    border-radius: 20px;
+    padding: 2.5rem;
+    text-align: center;
+    color: #fff;
+  }
+  .cta-card h2 {
+    margin: 0 0 0.75rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+  }
+  .cta-card p {
+    margin: 0 0 1.5rem;
+    opacity: 0.93;
+    line-height: 1.6;
+  }
+  .cta-button {
+    display: inline-block;
+    background: #fff;
+    color: #16a34a;
+    font-weight: 700;
+    padding: 0.85rem 2rem;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  }
+
+  /* Content */
+  .tool-content {
+    padding: 3rem 1.5rem 4rem;
+    background: #f0fdf4;
+  }
+  .content-narrow {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .tool-content h2 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #1a1a2e;
+    margin: 2.5rem 0 0.75rem;
+  }
+  .tool-content h2:first-child {
+    margin-top: 0;
+  }
+  .tool-content p,
+  .tool-content li {
+    font-size: 1.02rem;
+    line-height: 1.7;
+    color: #444;
+  }
+  .tool-content ul,
+  .tool-content ol {
+    padding-left: 1.25rem;
+    margin: 0.5rem 0 1rem;
+  }
+  .tool-content li {
+    margin-bottom: 0.35rem;
+  }
+  .tool-content a {
+    color: #16a34a;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .tool-content details {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 0.75rem;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  }
+  .tool-content summary {
+    font-weight: 600;
+    cursor: pointer;
+    color: #1a1a2e;
+    font-size: 1.02rem;
+  }
+  .tool-content details p {
+    margin: 0.75rem 0 0;
+  }
+
+  @media (max-width: 640px) {
+    .quiz-card {
+      padding: 1.5rem 1rem;
+    }
+    .question-text {
+      font-size: 1.1rem;
+    }
+    .result-card-main {
+      padding: 2rem 1.25rem;
+    }
+    .result-section {
+      padding: 1rem;
+    }
+    .cta-card {
+      padding: 2rem 1.5rem;
+    }
+  }
+</style>
+
+<script>
+  interface Question {
+    text: string;
+    options: { label: string; text: string; type: string }[];
+  }
+
+  interface SavingsType {
+    name: string;
+    icon: string;
+    tagline: string;
+    description: string;
+    strengths: string[];
+    blindspots: string[];
+    strategy: string[];
+    tools: { name: string; url: string }[];
+  }
+
+  const questions: Question[] = [
+    {
+      text: "When you think about saving money, what motivates you most?",
+      options: [
+        { label: "A", text: "Knowing I'm protected if something goes wrong — security matters most", type: "safety" },
+        { label: "B", text: "Getting to that specific thing I really want — a vacation, a house", type: "goal" },
+        { label: "C", text: "Watching my investments grow over the next 20-30 years", type: "wealth" },
+        { label: "D", text: "Honestly, nothing much — I save when I remember to", type: "spirit" }
+      ]
+    },
+    {
+      text: "How do you decide how much to save each month?",
+      options: [
+        { label: "A", text: "I aim to keep at least 3-6 months of expenses in cash at all times", type: "safety" },
+        { label: "B", text: "I set a target amount for my current goal and work backward", type: "goal" },
+        { label: "C", text: "I max out my tax-advantaged accounts first, then invest the rest", type: "wealth" },
+        { label: "D", text: "Whatever's left after I've spent what I want that month", type: "spirit" }
+      ]
+    },
+    {
+      text: "Your emergency fund currently looks like...",
+      options: [
+        { label: "A", text: "Fully funded — 6+ months of expenses in a high-yield savings account", type: "safety" },
+        { label: "B", text: "Some savings, but I'd rather put it toward my savings goal right now", type: "goal" },
+        { label: "C", text: "Solid 3-month fund — beyond that, I invest for better returns", type: "wealth" },
+        { label: "D", text: "Under $1,000 — I keep meaning to build it up", type: "spirit" }
+      ]
+    },
+    {
+      text: "You get an unexpected $2,000 windfall. What do you do?",
+      options: [
+        { label: "A", text: "Add it straight to my emergency fund or savings buffer", type: "safety" },
+        { label: "B", text: "It goes directly to my current savings goal — huge boost!", type: "goal" },
+        { label: "C", text: "Invest it in my index fund portfolio immediately", type: "wealth" },
+        { label: "D", text: "Fun first, then maybe save whatever's left at the end of the month", type: "spirit" }
+      ]
+    },
+    {
+      text: "How many savings accounts or buckets do you have?",
+      options: [
+        { label: "A", text: "Several — emergency fund, home repair fund, health fund, plus more just in case", type: "safety" },
+        { label: "B", text: "One for each active goal — vacation, car, down payment etc.", type: "goal" },
+        { label: "C", text: "Checking, HYSA for emergency fund, and investment accounts — clean and lean", type: "wealth" },
+        { label: "D", text: "Just my regular savings account, if I even have that", type: "spirit" }
+      ]
+    },
+    {
+      text: "When do you feel best about your finances?",
+      options: [
+        { label: "A", text: "When my cash reserves are full and I'm well-insured against risks", type: "safety" },
+        { label: "B", text: "When the progress bar on my savings goal is almost full", type: "goal" },
+        { label: "C", text: "When I check my investment portfolio and see it growing steadily", type: "wealth" },
+        { label: "D", text: "When I've had a great month of experiences and didn't stress about money", type: "spirit" }
+      ]
+    },
+    {
+      text: "How do you feel about investing in the stock market?",
+      options: [
+        { label: "A", text: "It's too risky — I prefer the certainty of cash savings", type: "safety" },
+        { label: "B", text: "I invest a little, but I'm focused on my current savings goal first", type: "goal" },
+        { label: "C", text: "It's essential — time in market beats timing the market every time", type: "wealth" },
+        { label: "D", text: "I know I probably should but haven't gotten around to it yet", type: "spirit" }
+      ]
+    },
+    {
+      text: "What's your savings time horizon?",
+      options: [
+        { label: "A", text: "Ongoing — I never want my savings to drop below a certain level", type: "safety" },
+        { label: "B", text: "Short to medium term — I have a goal date in mind (6 months to 3 years)", type: "goal" },
+        { label: "C", text: "Long term — I'm thinking about who I'll be in 20-30 years", type: "wealth" },
+        { label: "D", text: "I try not to think too far ahead — I just deal with things as they come", type: "spirit" }
+      ]
+    },
+    {
+      text: "A friend asks you how to start saving. What's your advice?",
+      options: [
+        { label: "A", text: "Build your emergency fund first — 6 months of expenses before anything else", type: "safety" },
+        { label: "B", text: "Pick a concrete goal, open a dedicated account, and automate transfers", type: "goal" },
+        { label: "C", text: "Open a Roth IRA, invest in an S&P 500 index fund, and never stop", type: "wealth" },
+        { label: "D", text: "I'd probably ask them how they figured it out — I'm still working on this myself", type: "spirit" }
+      ]
+    },
+    {
+      text: "What would make you dip into your savings?",
+      options: [
+        { label: "A", text: "Only a true emergency — job loss, medical crisis, major home repair", type: "safety" },
+        { label: "B", text: "When I've hit my goal — that's literally what the savings are for!", type: "goal" },
+        { label: "C", text: "Almost never — that's invested money. I keep a separate emergency fund for crises", type: "wealth" },
+        { label: "D", text: "When something comes up that feels worth it — dinner, a trip, a new gadget", type: "spirit" }
+      ]
+    }
+  ];
+
+  const savingsTypes: Record<string, SavingsType> = {
+    safety: {
+      name: "The Safety Builder",
+      icon: "🛡️",
+      tagline: "Security is your superpower — and your savings show it.",
+      description: "You sleep better knowing your financial foundation is solid. Emergency funds, insurance, and cash reserves make you feel genuinely in control. You prioritize protection over growth, which means your financial base is stronger than most people's — but you may be leaving significant investment returns on the table by keeping too much in low-yield savings accounts.",
+      strengths: [
+        "Your financial foundation is resilient — you can handle job loss, medical bills, and surprises without panic",
+        "You never need to go into debt for an emergency because you're always prepared",
+        "Your risk management instincts protect you from financial catastrophe"
+      ],
+      blindspots: [
+        "Excess cash in savings accounts loses purchasing power to inflation over time",
+        "Beyond 6 months of expenses, cash savings are often not the optimal strategy",
+        "Fear of loss may be keeping you from the wealth-building power of investing"
+      ],
+      strategy: [
+        "Keep your 6-month emergency fund fully funded in a high-yield savings account (4%+ APY)",
+        "Once emergency fund is complete, invest extra savings in low-cost index funds (e.g., VTSAX or VOO)",
+        "Consider splitting future savings: 50% to investments, 50% to a secondary safety buffer",
+        "Automate your investments so they happen without requiring a decision each time"
+      ],
+      tools: [
+        { name: "Emergency Fund Calculator — Right-size your safety net", url: "/tools/emergency-fund-calculator" },
+        { name: "Investment Return Calculator — See what investing your excess cash could earn", url: "/tools/investment-return-calculator" },
+        { name: "Budget Health Check — Full financial health assessment", url: "/tools/budget-health-check" }
+      ]
+    },
+    goal: {
+      name: "The Goal Chaser",
+      icon: "🎯",
+      tagline: "Give yourself a target and nothing can stop you.",
+      description: "You are a highly motivated saver — as long as you have a concrete goal to chase. A vacation fund, a down payment, a new car: name the target and you'll hit it. Without a clear goal though, your savings motivation evaporates. The key insight for you is to always have at least one active goal account, and to chain goals so you never have a gap where you're saving for 'nothing in particular.'",
+      strengths: [
+        "When motivated by a goal, you save faster and more consistently than almost anyone",
+        "Your goal-oriented mindset makes you excellent at short and medium-term savings",
+        "You're great at researching and optimizing for the specific thing you want"
+      ],
+      blindspots: [
+        "Between goals, your savings rate often crashes — the 'gap problem'",
+        "Long-term goals like retirement can feel too abstract to motivate you day-to-day",
+        "You may neglect investing in favor of saving cash toward tangible goals"
+      ],
+      strategy: [
+        "Always have at least two active goal accounts: one short-term (< 1 year) and one long-term (retirement)",
+        "When you hit a goal, immediately set the next one before the motivation fades",
+        "Name your accounts literally — 'Japan Trip 2027' beats 'Savings Account 2'",
+        "Add your retirement fund as a permanent background goal with automatic monthly contributions"
+      ],
+      tools: [
+        { name: "Savings Goal Calculator — Calculate your exact monthly savings needed", url: "/tools/savings-goal-calculator" },
+        { name: "Savings Rate Calculator — Track your overall savings percentage", url: "/tools/savings-rate-calculator" },
+        { name: "Retirement Savings Calculator — Make retirement feel real and concrete", url: "/tools/retirement-savings-calculator" }
+      ]
+    },
+    wealth: {
+      name: "The Wealth Grower",
+      icon: "📈",
+      tagline: "You think in decades — and compound interest rewards you for it.",
+      description: "You view savings as a wealth-building tool, not just a safety net. You understand compound interest deeply, automate your contributions, and think in 10-30 year time horizons. Your portfolio is probably ahead of your peers. The main risk for you is over-optimizing for long-term growth while under-funding your short-term emergency reserves — which could force you to sell investments at the wrong time.",
+      strengths: [
+        "You understand compound growth and harness its power through consistent, long-term investing",
+        "Your automated approach removes emotion from the investment equation",
+        "You're likely accumulating wealth faster than most people your age"
+      ],
+      blindspots: [
+        "If your emergency fund is too lean, a major expense could force you to sell investments at a loss",
+        "Intense focus on wealth growth can make you underestimate near-term quality-of-life spending",
+        "Risk tolerance can shift dramatically when markets actually drop — test your reaction to drawdowns"
+      ],
+      strategy: [
+        "Maintain a true 3-6 month emergency fund separate from investments before maximizing contributions",
+        "Follow the investment priority order: 401k match → Roth IRA → HSA → taxable brokerage",
+        "Rebalance your portfolio annually to manage risk as you approach goals",
+        "Consider 'fun money' — a small monthly allowance for present-you — to avoid lifestyle burnout"
+      ],
+      tools: [
+        { name: "Investment Return Calculator — Project your portfolio growth", url: "/tools/investment-return-calculator" },
+        { name: "Retirement Savings Calculator — Are you on track to retire when you want?", url: "/tools/retirement-savings-calculator" },
+        { name: "Emergency Fund Calculator — Make sure your safety net is properly sized", url: "/tools/emergency-fund-calculator" }
+      ]
+    },
+    spirit: {
+      name: "The Free Spirit",
+      icon: "🌊",
+      tagline: "You live fully in the present — now let's secure your future too.",
+      description: "You value experiences, spontaneity, and enjoying the money you earn today. Rigid savings plans feel restrictive and tend to collapse within weeks. The good news: you don't need willpower to build wealth — you need automation. Setting up small, automatic savings transfers that happen before you see the money is the one strategy that works reliably for Free Spirits. Start tiny, increase automatically, and watch the habit build itself.",
+      strengths: [
+        "You enjoy life fully and rarely regret how you spend your money",
+        "Your adaptability means you can pivot quickly when circumstances change",
+        "You understand that money is a tool for living, not an end in itself"
+      ],
+      blindspots: [
+        "Without a safety net, any emergency creates a financial crisis",
+        "The gap between 'I'll start saving soon' and actually saving can stretch into years",
+        "Compound growth requires time — the earlier you start, even with tiny amounts, the better"
+      ],
+      strategy: [
+        "Start with $25-50 automatic transfer per paycheck to a savings account — amount so small you won't cancel it",
+        "Increase automatic transfer by $25 every 90 days — you'll barely notice the change",
+        "Use round-up apps or bank features to save spare change automatically without thinking",
+        "Set one tiny, concrete goal as your motivation — '$500 emergency fund' is more powerful than 'save money'"
+      ],
+      tools: [
+        { name: "Savings Goal Calculator — Find your first achievable savings target", url: "/tools/savings-goal-calculator" },
+        { name: "Budget Calculator — See where your money actually goes each month", url: "/tools/budget-calculator" },
+        { name: "Subscription Calculator — Uncover recurring costs you forgot about", url: "/tools/subscription-calculator" }
+      ]
+    }
+  };
+
+  let currentQuestion = 0;
+  const scores: Record<string, number> = { safety: 0, goal: 0, wealth: 0, spirit: 0 };
+
+  const quizCard = document.getElementById('quiz-card')!;
+  const resultCard = document.getElementById('result-card')!;
+  const progressBar = document.getElementById('progress-bar')!;
+  const progressText = document.getElementById('progress-text')!;
+  const questionText = document.getElementById('question-text')!;
+  const optionsContainer = document.getElementById('options-container')!;
+  const retakeButton = document.getElementById('retake-button')!;
+
+  function renderQuestion(): void {
+    const q = questions[currentQuestion];
+    progressBar.style.width = `${((currentQuestion + 1) / questions.length) * 100}%`;
+    progressText.textContent = `Question ${currentQuestion + 1} of ${questions.length}`;
+    questionText.textContent = q.text;
+
+    optionsContainer.innerHTML = '';
+    q.options.forEach((opt) => {
+      const btn = document.createElement('button');
+      btn.className = 'option-button';
+      btn.innerHTML = `<span class="option-label">${opt.label}</span>${opt.text}`;
+      btn.addEventListener('click', () => selectAnswer(opt.type));
+      optionsContainer.appendChild(btn);
+    });
+  }
+
+  function selectAnswer(type: string): void {
+    scores[type]++;
+    currentQuestion++;
+
+    if (currentQuestion < questions.length) {
+      renderQuestion();
+    } else {
+      showResults();
+    }
+  }
+
+  function showResults(): void {
+    quizCard.style.display = 'none';
+    resultCard.style.display = 'block';
+
+    let dominantType = 'goal';
+    let maxScore = 0;
+    for (const [type, score] of Object.entries(scores)) {
+      if (score > maxScore) {
+        maxScore = score;
+        dominantType = type;
+      }
+    }
+
+    const result = savingsTypes[dominantType];
+
+    document.getElementById('result-icon')!.textContent = result.icon;
+    document.getElementById('result-type-name')!.textContent = result.name;
+    document.getElementById('result-type-tagline')!.textContent = result.tagline;
+    document.getElementById('result-description')!.textContent = result.description;
+
+    const strengthsList = document.getElementById('result-strengths')!;
+    strengthsList.innerHTML = '';
+    result.strengths.forEach((s) => {
+      const li = document.createElement('li');
+      li.textContent = s;
+      strengthsList.appendChild(li);
+    });
+
+    const blindspotsList = document.getElementById('result-blindspots')!;
+    blindspotsList.innerHTML = '';
+    result.blindspots.forEach((s) => {
+      const li = document.createElement('li');
+      li.textContent = s;
+      blindspotsList.appendChild(li);
+    });
+
+    const strategyList = document.getElementById('result-strategy')!;
+    strategyList.innerHTML = '';
+    result.strategy.forEach((s) => {
+      const li = document.createElement('li');
+      li.textContent = s;
+      strategyList.appendChild(li);
+    });
+
+    const toolsContainer = document.getElementById('result-tools')!;
+    toolsContainer.innerHTML = '';
+    result.tools.forEach((t) => {
+      const a = document.createElement('a');
+      a.href = t.url;
+      a.textContent = t.name;
+      toolsContainer.appendChild(a);
+    });
+
+    resultCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  function resetQuiz(): void {
+    currentQuestion = 0;
+    scores.safety = 0;
+    scores.goal = 0;
+    scores.wealth = 0;
+    scores.spirit = 0;
+
+    resultCard.style.display = 'none';
+    quizCard.style.display = 'block';
+    renderQuestion();
+  }
+
+  retakeButton.addEventListener('click', resetQuiz);
+  renderQuestion();
+</script>
