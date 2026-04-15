@@ -3,6 +3,7 @@ title: "How to Budget for Living in Kansas City (2026 Cost Breakdown)"
 description: "Kansas City is one of America's most affordable large cities. Here's your complete budget breakdown for rent, food, transport, and more in KC."
 pubDate: "2026-04-15"
 tags: ["budgeting", "kansas-city", "cost-of-living", "city-budget"]
+heroImage: "/thumbs/thumb-budget-for-living-in-kansas-city.jpg"
 ---
 
 # How to Budget for Living in Kansas City

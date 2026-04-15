@@ -3,6 +3,7 @@ title: "Tiller Money vs Notion for Budgeting (2026 Comparison)"
 description: "Tiller Money vs Notion for budgeting: which spreadsheet-based system is better? Compare automation, cost, customization, and use cases."
 pubDate: "2026-04-15"
 tags: ["budgeting", "notion", "tiller", "spreadsheet", "app-comparison"]
+heroImage: "/thumbs/thumb-tiller-vs-notion-for-budgeting.jpg"
 ---
 
 # Tiller Money vs Notion for Budgeting

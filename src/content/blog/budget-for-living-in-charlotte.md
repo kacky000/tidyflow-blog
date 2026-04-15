@@ -3,6 +3,7 @@ title: "How to Budget for Living in Charlotte (2026 Cost Breakdown)"
 description: "Build a smart Charlotte budget with real cost data for housing, food, and transport. Free calculator and templates to get started."
 pubDate: "2026-04-12"
 tags: ["budgeting", "charlotte", "cost-of-living", "city-budget"]
+heroImage: "/thumbs/thumb-budget-for-living-in-charlotte.jpg"
 ---
 
 # How to Budget for Living in Charlotte

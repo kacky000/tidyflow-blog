@@ -3,6 +3,7 @@ title: "How to Budget for Living in Sacramento (2026 Cost Breakdown)"
 description: "Create a realistic Sacramento budget with rent, food, transport, and more. Sacramento is California's most affordable major city — here's how to make the most of it."
 pubDate: "2026-04-15"
 tags: ["budgeting", "sacramento", "cost-of-living", "city-budget"]
+heroImage: "/thumbs/thumb-budget-for-living-in-sacramento.jpg"
 ---
 
 # How to Budget for Living in Sacramento

@@ -3,6 +3,7 @@ title: "How to Budget for Living in San Antonio (2026 Cost Breakdown)"
 description: "Plan your San Antonio budget with real cost data for rent, food, transport, and more. Free budget calculator and templates included."
 pubDate: "2026-04-12"
 tags: ["budgeting", "san-antonio", "cost-of-living", "city-budget"]
+heroImage: "/thumbs/thumb-budget-for-living-in-san-antonio.jpg"
 ---
 
 # How to Budget for Living in San Antonio

@@ -3,6 +3,7 @@ title: "How to Budget on $9,000 a Month (2026 Guide)"
 description: "Learn how to budget $9,000 a month effectively with a clear breakdown for housing, savings, investments, and lifestyle spending."
 pubDate: "2026-04-12"
 tags: ["budgeting", "income-budget", "high-income", "financial-planning"]
+heroImage: "/thumbs/thumb-how-to-budget-on-9000-a-month.jpg"
 ---
 
 # How to Budget on $9,000 a Month

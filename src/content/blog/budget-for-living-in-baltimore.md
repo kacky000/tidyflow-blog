@@ -3,6 +3,7 @@ title: "How to Budget for Living in Baltimore (2026 Cost Breakdown)"
 description: "Baltimore offers East Coast living at a fraction of DC or NYC prices. Here's your complete budget breakdown for rent, food, transport, and more in Charm City."
 pubDate: "2026-04-15"
 tags: ["budgeting", "baltimore", "cost-of-living", "city-budget"]
+heroImage: "/thumbs/thumb-budget-for-living-in-baltimore.jpg"
 ---
 
 # How to Budget for Living in Baltimore

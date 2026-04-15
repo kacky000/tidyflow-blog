@@ -3,6 +3,7 @@ title: "Copilot vs Notion for Budgeting (2026 Honest Comparison)"
 description: "Copilot Money vs Notion for budgeting: which is better? We compare automation, flexibility, cost, and use cases so you can pick the right tool."
 pubDate: "2026-04-15"
 tags: ["budgeting", "notion", "copilot", "app-comparison"]
+heroImage: "/thumbs/thumb-copilot-vs-notion-for-budgeting.jpg"
 ---
 
 # Copilot vs Notion for Budgeting

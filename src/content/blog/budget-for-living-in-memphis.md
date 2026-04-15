@@ -3,6 +3,7 @@ title: "How to Budget for Living in Memphis (2026 Cost Breakdown)"
 description: "Memphis is one of America's most affordable cities with a rich culture. Here's your complete budget breakdown for rent, food, transport, and entertainment in Memphis."
 pubDate: "2026-04-15"
 tags: ["budgeting", "memphis", "cost-of-living", "city-budget"]
+heroImage: "/thumbs/thumb-budget-for-living-in-memphis.jpg"
 ---
 
 # How to Budget for Living in Memphis

@@ -3,6 +3,7 @@ title: "Budget Template for Pharmacists (2026 Guide + Free Download)"
 description: "A complete budgeting guide for pharmacists: manage student loan debt, irregular income from different shifts, and build long-term wealth on a pharmacist salary."
 pubDate: "2026-04-15"
 tags: ["budgeting", "pharmacists", "healthcare", "budget-template"]
+heroImage: "/thumbs/thumb-budget-template-for-pharmacists.jpg"
 ---
 
 # Budget Template for Pharmacists

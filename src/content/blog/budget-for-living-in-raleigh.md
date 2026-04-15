@@ -3,6 +3,7 @@ title: "How to Budget for Living in Raleigh (2026 Cost Breakdown)"
 description: "Create a realistic Raleigh budget with cost breakdowns for rent, food, transport, and more. Free calculator and templates included."
 pubDate: "2026-04-12"
 tags: ["budgeting", "raleigh", "cost-of-living", "city-budget"]
+heroImage: "/thumbs/thumb-budget-for-living-in-raleigh.jpg"
 ---
 
 # How to Budget for Living in Raleigh

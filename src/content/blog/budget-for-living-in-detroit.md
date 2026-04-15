@@ -3,6 +3,7 @@ title: "How to Budget for Living in Detroit (2026 Cost Breakdown)"
 description: "Build a smart Detroit budget with real cost data for housing, food, transport, and entertainment. Free tools and templates included."
 pubDate: "2026-04-12"
 tags: ["budgeting", "detroit", "cost-of-living", "city-budget"]
+heroImage: "/thumbs/thumb-budget-for-living-in-detroit.jpg"
 ---
 
 # How to Budget for Living in Detroit
