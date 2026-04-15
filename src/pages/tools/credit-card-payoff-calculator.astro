@@ -1,0 +1,906 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const title = 'Credit Card Payoff Calculator 2026 | Minimum Payment Trap';
+const description = "See how long it takes to pay off your credit card. Compare minimum payments vs fixed payments and discover how much interest you'll really pay.";
+---
+
+<BaseLayout title={title} description={description}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Credit Card Payoff Calculator",
+      "url": "https://gettidyflow.com/tools/credit-card-payoff-calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "description": description
+    })} />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why is paying only the minimum on a credit card so expensive?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Minimum payments are usually only 1-3% of your balance. Most of that goes to interest, so your principal barely shrinks. A $5,000 balance at 22% APR with minimum payments can take over 20 years to pay off, and you'll pay more in interest than the original balance."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much should I pay on my credit card each month?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pay as much as you can above the minimum. Even doubling your minimum payment can cut your payoff time in half and save thousands in interest. Use this calculator to find the sweet spot for your budget."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does a balance transfer help pay off credit card debt faster?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A 0% balance transfer can save significant interest if you pay off the balance during the intro period (usually 12-21 months). But watch for transfer fees (3-5%) and make sure you have a plan to pay it off before the regular APR kicks in."
+          }
+        }
+      ]
+    })} />
+  </Fragment>
+
+  <section class="tool-hero">
+    <div class="tool-hero-inner">
+      <span class="tool-badge">Free Tool — No Signup Required</span>
+      <h1>Credit Card Payoff <span class="gradient-text">Calculator</span></h1>
+      <p class="tool-subtitle">See the true cost of credit card debt. Compare minimum payments vs fixed payments and find out exactly when you'll be debt-free.</p>
+    </div>
+  </section>
+
+  <section class="tool-app">
+    <div class="tool-container">
+      <div class="calc-card">
+        <div class="input-group">
+          <label for="balance-input" class="input-label">Credit Card Balance</label>
+          <div class="input-wrapper">
+            <span class="currency-symbol">$</span>
+            <input type="number" id="balance-input" placeholder="e.g. 5,000" min="0" step="100" aria-label="Credit card balance in dollars" />
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="apr-input" class="input-label">Annual Interest Rate (APR)</label>
+          <div class="input-wrapper">
+            <span class="currency-symbol">%</span>
+            <input type="number" id="apr-input" placeholder="e.g. 22.9" min="0" max="50" step="0.1" value="22.9" aria-label="Annual interest rate in percent" />
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="min-pct-input" class="input-label">Minimum Payment Percentage</label>
+          <div class="input-wrapper">
+            <span class="currency-symbol">%</span>
+            <input type="number" id="min-pct-input" placeholder="e.g. 2" min="1" max="10" step="0.5" value="2" aria-label="Minimum payment percentage" />
+          </div>
+          <span class="input-hint">Most cards require 1-3% of balance (check your statement)</span>
+        </div>
+
+        <div class="input-group">
+          <label for="fixed-input" class="input-label">Your Fixed Monthly Payment (optional)</label>
+          <div class="input-wrapper">
+            <span class="currency-symbol">$</span>
+            <input type="number" id="fixed-input" placeholder="e.g. 200" min="0" step="25" aria-label="Fixed monthly payment in dollars" />
+          </div>
+          <span class="input-hint">Leave blank to see minimum-payment-only results</span>
+        </div>
+      </div>
+
+      <!-- Results -->
+      <div id="results-section" style="display:none;">
+        <!-- Minimum Payment Trap Warning -->
+        <div class="trap-card" id="trap-card">
+          <div class="trap-icon">&#9888;</div>
+          <h3>The Minimum Payment Trap</h3>
+          <p id="trap-text"></p>
+        </div>
+
+        <!-- Comparison -->
+        <div class="comparison-card">
+          <h3>Minimum Payment vs Fixed Payment</h3>
+          <div class="comparison-grid">
+            <div class="method-box min-box">
+              <div class="method-badge">Minimum Only</div>
+              <p class="method-desc">Paying <span id="min-pct-display">2</span>% of balance each month</p>
+              <div class="method-stat-row">
+                <span class="stat-label">Time to Payoff</span>
+                <span class="stat-value" id="min-months">—</span>
+              </div>
+              <div class="method-stat-row">
+                <span class="stat-label">Total Interest</span>
+                <span class="stat-value danger" id="min-interest">—</span>
+              </div>
+              <div class="method-stat-row">
+                <span class="stat-label">Total Paid</span>
+                <span class="stat-value" id="min-total">—</span>
+              </div>
+            </div>
+
+            <div class="method-box fixed-box" id="fixed-box">
+              <div class="method-badge">Fixed Payment</div>
+              <p class="method-desc">Paying <span id="fixed-display">$0</span>/month</p>
+              <div class="method-stat-row">
+                <span class="stat-label">Time to Payoff</span>
+                <span class="stat-value success" id="fixed-months">—</span>
+              </div>
+              <div class="method-stat-row">
+                <span class="stat-label">Total Interest</span>
+                <span class="stat-value success" id="fixed-interest">—</span>
+              </div>
+              <div class="method-stat-row">
+                <span class="stat-label">Total Paid</span>
+                <span class="stat-value" id="fixed-total">—</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Savings highlight -->
+        <div class="savings-card" id="savings-card" style="display:none;">
+          <h3>You'd Save</h3>
+          <div class="savings-grid">
+            <div class="savings-item">
+              <span class="savings-amount" id="save-interest">$0</span>
+              <span class="savings-label">Less Interest</span>
+            </div>
+            <div class="savings-item">
+              <span class="savings-amount" id="save-months">0</span>
+              <span class="savings-label">Months Sooner</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chart -->
+        <div class="chart-card">
+          <h3>Balance Over Time</h3>
+          <div class="chart-container" id="chart-container"></div>
+          <div class="chart-legend">
+            <span class="legend-item"><span class="legend-dot min-dot"></span> Minimum Payments</span>
+            <span class="legend-item"><span class="legend-dot fixed-dot"></span> Fixed Payments</span>
+          </div>
+        </div>
+
+        <!-- Monthly breakdown -->
+        <div class="breakdown-card">
+          <h3>Where Your First Payment Goes</h3>
+          <div class="breakdown-bar-container" id="breakdown-container">
+            <div class="breakdown-bar">
+              <div class="bar-interest" id="bar-interest"></div>
+              <div class="bar-principal" id="bar-principal"></div>
+            </div>
+            <div class="breakdown-labels">
+              <span class="breakdown-label"><span class="label-dot interest-lbl"></span> Interest: <strong id="first-interest">$0</strong></span>
+              <span class="breakdown-label"><span class="label-dot principal-lbl"></span> Principal: <strong id="first-principal">$0</strong></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Warnings -->
+      <div id="warning-card" style="display:none;" class="warning-card">
+        <p id="warning-text"></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool-cta">
+    <div class="tool-container">
+      <div class="cta-card">
+        <h2>Take Control of Your Credit Card Debt</h2>
+        <p>Knowing your payoff timeline is step one. Track every payment and watch your balance shrink with our <strong>free Debt Payoff Tracker</strong> on Gumroad.</p>
+        <a href="https://gettidyflow.gumroad.com" target="_blank" rel="noopener" class="cta-button">Get Free Debt Tracker &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool-content">
+    <div class="tool-container content-narrow">
+      <h2>How This Credit Card Payoff Calculator Works</h2>
+      <p>Enter your credit card balance, APR, and minimum payment percentage. The calculator simulates month-by-month payments to show you exactly how long it takes to pay off your card — and how much interest you'll pay. Add a fixed monthly payment to compare how much faster you could be debt-free.</p>
+
+      <h2>Why Minimum Payments Are a Trap</h2>
+      <p>Credit card companies set minimum payments low (usually 1-3% of your balance) because it maximizes the interest they earn from you. Here's why it's so dangerous:</p>
+      <ul>
+        <li><strong>Most of your payment goes to interest</strong> — on a $5,000 balance at 22% APR, your first minimum payment of $100 includes $92 in interest and only $8 toward your actual debt.</li>
+        <li><strong>Payments shrink as your balance shrinks</strong> — since the minimum is a percentage, your payment gets smaller over time, making progress even slower.</li>
+        <li><strong>It can take 20+ years</strong> — what feels manageable month-to-month can cost you thousands and decades of your financial life.</li>
+      </ul>
+
+      <h2>Strategies to Pay Off Credit Cards Faster</h2>
+      <ul>
+        <li><strong>Pay a fixed amount</strong> — even $50 above the minimum makes a massive difference. Use this calculator to find the right amount for your budget.</li>
+        <li><strong>Use the <a href="/tools/debt-payoff-calculator">avalanche method</a></strong> — pay off the highest-APR card first while making minimums on the rest.</li>
+        <li><strong>Consider a balance transfer</strong> — 0% intro APR cards can give you 12-21 months of interest-free payments.</li>
+        <li><strong>Track every payment</strong> — use a <a href="/blog/how-to-track-expenses-in-notion/">Notion expense tracker</a> or spreadsheet to stay motivated.</li>
+        <li><strong>Build an <a href="/tools/emergency-fund-calculator">emergency fund</a></strong> — even $500 prevents new credit card charges when unexpected expenses hit.</li>
+      </ul>
+
+      <h2>Related Tools</h2>
+      <ul>
+        <li><a href="/tools/debt-payoff-calculator">Debt Payoff Calculator (Snowball vs Avalanche)</a></li>
+        <li><a href="/tools/budget-calculator">50/30/20 Budget Calculator</a></li>
+        <li><a href="/tools/savings-rate-calculator">Savings Rate Calculator</a></li>
+        <li><a href="/tools/net-worth-calculator">Net Worth Calculator</a></li>
+      </ul>
+
+      <h2>Frequently Asked Questions</h2>
+      <details>
+        <summary>Why is paying only the minimum on a credit card so expensive?</summary>
+        <p>Minimum payments are usually only 1-3% of your balance. Most of that goes to interest, so your principal barely shrinks. A $5,000 balance at 22% APR with minimum payments can take over 20 years to pay off, and you'll pay more in interest than the original balance.</p>
+      </details>
+      <details>
+        <summary>How much should I pay on my credit card each month?</summary>
+        <p>Pay as much as you can above the minimum. Even doubling your minimum payment can cut your payoff time in half and save thousands in interest. Use this calculator to find the sweet spot for your budget.</p>
+      </details>
+      <details>
+        <summary>Does a balance transfer help pay off credit card debt faster?</summary>
+        <p>A 0% balance transfer can save significant interest if you pay off the balance during the intro period (usually 12-21 months). But watch for transfer fees (3-5%) and make sure you have a plan to pay it off before the regular APR kicks in.</p>
+      </details>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .tool-hero {
+    background: linear-gradient(135deg, #e53e3e 0%, #c53030 50%, #9b2c2c 100%);
+    padding: 4rem 1.5rem 3rem;
+    text-align: center;
+    color: #fff;
+  }
+  .tool-hero-inner {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .tool-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(4px);
+    padding: 0.35rem 1rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+  }
+  .tool-hero h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 800;
+    line-height: 1.15;
+    margin: 0 0 1rem;
+  }
+  .gradient-text {
+    background: linear-gradient(90deg, #fed7d7, #fefcbf);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .tool-subtitle {
+    font-size: 1.1rem;
+    opacity: 0.92;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .tool-app {
+    padding: 2.5rem 1.5rem;
+    background: #f8f9fb;
+  }
+  .tool-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .calc-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    margin-bottom: 2rem;
+  }
+  .input-group {
+    margin-bottom: 1.25rem;
+  }
+  .input-group:last-child {
+    margin-bottom: 0;
+  }
+  .input-label {
+    display: block;
+    font-weight: 700;
+    font-size: 1.05rem;
+    margin-bottom: 0.5rem;
+    color: #1a1a2e;
+  }
+  .input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .currency-symbol {
+    position: absolute;
+    left: 1.25rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #e53e3e;
+  }
+  .calc-card input[type="number"] {
+    width: 100%;
+    padding: 0.85rem 1rem 0.85rem 2.75rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    transition: border-color 0.2s;
+    outline: none;
+    font-family: inherit;
+    color: #1a1a2e;
+  }
+  .calc-card input[type="number"]:focus {
+    border-color: #e53e3e;
+    box-shadow: 0 0 0 3px rgba(229,62,62,0.15);
+  }
+  .calc-card input[type="number"]::placeholder {
+    color: #a0aec0;
+    font-weight: 400;
+  }
+  .input-hint {
+    display: block;
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: 0.35rem;
+  }
+
+  .trap-card {
+    background: linear-gradient(135deg, #fff5f5 0%, #fed7d7 100%);
+    border-radius: 16px;
+    padding: 2rem;
+    border-left: 5px solid #e53e3e;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  .trap-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .trap-card h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #c53030;
+  }
+  .trap-card p {
+    margin: 0;
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.7;
+  }
+
+  .comparison-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    margin-bottom: 2rem;
+  }
+  .comparison-card h3 {
+    margin: 0 0 1rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1a1a2e;
+  }
+  .comparison-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .method-box {
+    background: #f8f9fb;
+    border-radius: 12px;
+    padding: 1.25rem;
+    border-top: 4px solid transparent;
+  }
+  .min-box { border-top-color: #e53e3e; }
+  .fixed-box { border-top-color: #38a169; }
+  .method-badge {
+    font-weight: 700;
+    font-size: 1rem;
+    color: #1a1a2e;
+    margin-bottom: 0.25rem;
+  }
+  .method-desc {
+    font-size: 0.85rem;
+    color: #888;
+    margin: 0 0 0.75rem;
+  }
+  .method-stat-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-top: 1px solid #e2e8f0;
+  }
+  .stat-label {
+    font-size: 0.85rem;
+    color: #666;
+  }
+  .stat-value {
+    font-weight: 700;
+    color: #1a1a2e;
+    font-size: 0.95rem;
+  }
+  .stat-value.danger { color: #e53e3e; }
+  .stat-value.success { color: #38a169; }
+
+  .savings-card {
+    background: linear-gradient(135deg, #f0fff4 0%, #c6f6d5 100%);
+    border-radius: 16px;
+    padding: 2rem;
+    border-left: 5px solid #38a169;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  .savings-card h3 {
+    margin: 0 0 1rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #276749;
+  }
+  .savings-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .savings-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  .savings-amount {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #276749;
+  }
+  .savings-label {
+    font-size: 0.9rem;
+    color: #555;
+  }
+
+  .chart-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    margin-bottom: 2rem;
+  }
+  .chart-card h3 {
+    margin: 0 0 1rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1a1a2e;
+  }
+  .chart-container {
+    position: relative;
+    height: 200px;
+    border-bottom: 2px solid #e2e8f0;
+    margin-bottom: 0.5rem;
+  }
+  .chart-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .chart-legend {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 0.75rem;
+    font-size: 0.85rem;
+    color: #666;
+    flex-wrap: wrap;
+  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+  .legend-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .min-dot { background: #e53e3e; }
+  .fixed-dot { background: #38a169; }
+
+  .breakdown-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    margin-bottom: 2rem;
+  }
+  .breakdown-card h3 {
+    margin: 0 0 1rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1a1a2e;
+  }
+  .breakdown-bar {
+    display: flex;
+    height: 40px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 0.75rem;
+  }
+  .bar-interest {
+    background: linear-gradient(90deg, #e53e3e, #fc8181);
+    transition: width 0.4s;
+  }
+  .bar-principal {
+    background: linear-gradient(90deg, #38a169, #68d391);
+    transition: width 0.4s;
+  }
+  .breakdown-labels {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 0.9rem;
+    color: #555;
+    flex-wrap: wrap;
+  }
+  .breakdown-label {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+  .label-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .interest-lbl { background: #e53e3e; }
+  .principal-lbl { background: #38a169; }
+
+  .warning-card {
+    background: #fff3cd;
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    border-left: 5px solid #ffc107;
+  }
+  .warning-card p {
+    margin: 0;
+    color: #856404;
+    font-weight: 600;
+  }
+
+  .tool-cta {
+    padding: 2.5rem 1.5rem;
+    background: #fff;
+  }
+  .cta-card {
+    max-width: 800px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #e53e3e 0%, #9b2c2c 100%);
+    border-radius: 20px;
+    padding: 2.5rem;
+    text-align: center;
+    color: #fff;
+  }
+  .cta-card h2 {
+    margin: 0 0 0.75rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+  }
+  .cta-card p {
+    margin: 0 0 1.5rem;
+    opacity: 0.92;
+    line-height: 1.6;
+  }
+  .cta-button {
+    display: inline-block;
+    background: #fff;
+    color: #e53e3e;
+    font-weight: 700;
+    padding: 0.85rem 2rem;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  }
+
+  .tool-content {
+    padding: 3rem 1.5rem 4rem;
+    background: #f8f9fb;
+  }
+  .content-narrow {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .tool-content h2 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #1a1a2e;
+    margin: 2.5rem 0 0.75rem;
+  }
+  .tool-content h2:first-child {
+    margin-top: 0;
+  }
+  .tool-content p,
+  .tool-content li {
+    font-size: 1.02rem;
+    line-height: 1.7;
+    color: #444;
+  }
+  .tool-content ul,
+  .tool-content ol {
+    padding-left: 1.25rem;
+    margin: 0.5rem 0 1rem;
+  }
+  .tool-content li {
+    margin-bottom: 0.35rem;
+  }
+  .tool-content a {
+    color: #e53e3e;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .tool-content details {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 0.75rem;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  }
+  .tool-content summary {
+    font-weight: 600;
+    cursor: pointer;
+    color: #1a1a2e;
+    font-size: 1.02rem;
+  }
+  .tool-content details p {
+    margin: 0.75rem 0 0;
+  }
+
+  @media (max-width: 640px) {
+    .comparison-grid {
+      grid-template-columns: 1fr;
+    }
+    .savings-grid {
+      grid-template-columns: 1fr;
+    }
+    .cta-card {
+      padding: 2rem 1.5rem;
+    }
+  }
+</style>
+
+<script>
+  const balanceInput = document.getElementById('balance-input') as HTMLInputElement;
+  const aprInput = document.getElementById('apr-input') as HTMLInputElement;
+  const minPctInput = document.getElementById('min-pct-input') as HTMLInputElement;
+  const fixedInput = document.getElementById('fixed-input') as HTMLInputElement;
+  const resultsSection = document.getElementById('results-section')!;
+  const warningCard = document.getElementById('warning-card')!;
+
+  function fmt(n: number): string {
+    return '$' + n.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+  }
+
+  function monthsToText(m: number): string {
+    const y = Math.floor(m / 12);
+    const mo = m % 12;
+    let t = '';
+    if (y > 0) t += `${y} yr${y > 1 ? 's' : ''}`;
+    if (y > 0 && mo > 0) t += ' ';
+    if (mo > 0 || y === 0) t += `${mo} mo`;
+    return t;
+  }
+
+  interface PayoffResult {
+    months: number;
+    totalInterest: number;
+    totalPaid: number;
+    balanceHistory: number[];
+  }
+
+  function simulateMinPayment(balance: number, apr: number, minPct: number): PayoffResult {
+    const monthlyRate = apr / 100 / 12;
+    let bal = balance;
+    let totalInterest = 0;
+    let months = 0;
+    const maxMonths = 1200;
+    const history: number[] = [bal];
+    const minFloor = 25; // Most cards have a $25 minimum floor
+
+    while (bal > 0.5 && months < maxMonths) {
+      const interest = bal * monthlyRate;
+      totalInterest += interest;
+      bal += interest;
+      const minPayment = Math.max(bal * (minPct / 100), minFloor);
+      if (bal <= minPayment) {
+        months++;
+        history.push(0);
+        bal = 0;
+      } else {
+        bal -= minPayment;
+        months++;
+        history.push(bal);
+      }
+    }
+    return { months, totalInterest, totalPaid: balance + totalInterest, balanceHistory: history };
+  }
+
+  function simulateFixedPayment(balance: number, apr: number, payment: number): PayoffResult {
+    const monthlyRate = apr / 100 / 12;
+    let bal = balance;
+    let totalInterest = 0;
+    let months = 0;
+    const maxMonths = 1200;
+    const history: number[] = [bal];
+
+    while (bal > 0.5 && months < maxMonths) {
+      const interest = bal * monthlyRate;
+      totalInterest += interest;
+      bal += interest;
+      if (bal <= payment) {
+        months++;
+        history.push(0);
+        bal = 0;
+      } else {
+        bal -= payment;
+        months++;
+        history.push(bal);
+      }
+    }
+    return { months, totalInterest, totalPaid: balance + totalInterest, balanceHistory: history };
+  }
+
+  function calculate() {
+    const balance = parseFloat(balanceInput.value) || 0;
+    const apr = parseFloat(aprInput.value) || 0;
+    const minPct = parseFloat(minPctInput.value) || 2;
+    const fixed = parseFloat(fixedInput.value) || 0;
+
+    if (balance <= 0) {
+      resultsSection.style.display = 'none';
+      warningCard.style.display = 'none';
+      return;
+    }
+
+    warningCard.style.display = 'none';
+
+    // Minimum payment simulation
+    const minResult = simulateMinPayment(balance, apr, minPct);
+
+    if (minResult.months >= 1200) {
+      resultsSection.style.display = 'none';
+      warningCard.style.display = 'block';
+      document.getElementById('warning-text')!.textContent = 'At minimum payments, this debt would take over 100 years to pay off. You need a higher payment.';
+      return;
+    }
+
+    resultsSection.style.display = 'block';
+
+    // Trap warning
+    const trapText = document.getElementById('trap-text')!;
+    const interestRatio = (minResult.totalInterest / balance * 100).toFixed(0);
+    trapText.innerHTML = `Paying only the minimum on a <strong>${fmt(balance)}</strong> balance at <strong>${apr}% APR</strong> would take <strong>${monthsToText(minResult.months)}</strong> and cost <strong>${fmt(Math.round(minResult.totalInterest))}</strong> in interest — that's <strong>${interestRatio}%</strong> of your original balance paid in pure interest.`;
+
+    // Min payment results
+    document.getElementById('min-pct-display')!.textContent = minPct.toString();
+    document.getElementById('min-months')!.textContent = monthsToText(minResult.months);
+    document.getElementById('min-interest')!.textContent = fmt(Math.round(minResult.totalInterest));
+    document.getElementById('min-total')!.textContent = fmt(Math.round(minResult.totalPaid));
+
+    // Fixed payment results
+    const fixedBox = document.getElementById('fixed-box')!;
+    const savingsCard = document.getElementById('savings-card')!;
+
+    if (fixed > 0) {
+      const monthlyInterest = balance * (apr / 100 / 12);
+      if (fixed <= monthlyInterest) {
+        fixedBox.style.display = 'none';
+        savingsCard.style.display = 'none';
+        warningCard.style.display = 'block';
+        document.getElementById('warning-text')!.textContent =
+          `Your fixed payment ($${fixed}) must exceed the monthly interest (${fmt(Math.round(monthlyInterest))}) to make progress.`;
+        return;
+      }
+
+      const fixedResult = simulateFixedPayment(balance, apr, fixed);
+      fixedBox.style.display = 'block';
+      document.getElementById('fixed-display')!.textContent = fmt(fixed);
+      document.getElementById('fixed-months')!.textContent = monthsToText(fixedResult.months);
+      document.getElementById('fixed-interest')!.textContent = fmt(Math.round(fixedResult.totalInterest));
+      document.getElementById('fixed-total')!.textContent = fmt(Math.round(fixedResult.totalPaid));
+
+      // Savings
+      const savedMonths = minResult.months - fixedResult.months;
+      const savedInterest = minResult.totalInterest - fixedResult.totalInterest;
+      if (savedMonths > 0) {
+        savingsCard.style.display = 'block';
+        document.getElementById('save-interest')!.textContent = fmt(Math.round(savedInterest));
+        document.getElementById('save-months')!.textContent = savedMonths.toString();
+      } else {
+        savingsCard.style.display = 'none';
+      }
+
+      drawChart(minResult.balanceHistory, fixedResult.balanceHistory, balance);
+    } else {
+      fixedBox.style.display = 'none';
+      savingsCard.style.display = 'none';
+      drawChart(minResult.balanceHistory, [], balance);
+    }
+
+    // First payment breakdown
+    const firstInterest = balance * (apr / 100 / 12);
+    const firstMinPayment = Math.max(balance * (minPct / 100), 25);
+    const firstPrincipal = firstMinPayment - firstInterest;
+    const interestPct = (firstInterest / firstMinPayment) * 100;
+    const principalPct = (firstPrincipal / firstMinPayment) * 100;
+
+    (document.getElementById('bar-interest') as HTMLElement).style.width = `${interestPct}%`;
+    (document.getElementById('bar-principal') as HTMLElement).style.width = `${principalPct}%`;
+    document.getElementById('first-interest')!.textContent = `${fmt(Math.round(firstInterest))} (${interestPct.toFixed(0)}%)`;
+    document.getElementById('first-principal')!.textContent = `${fmt(Math.round(firstPrincipal))} (${principalPct.toFixed(0)}%)`;
+  }
+
+  function drawChart(minHistory: number[], fixedHistory: number[], maxBalance: number) {
+    const container = document.getElementById('chart-container')!;
+    container.innerHTML = '';
+
+    const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    svg.setAttribute('viewBox', '0 0 800 200');
+    svg.setAttribute('preserveAspectRatio', 'none');
+    svg.style.width = '100%';
+    svg.style.height = '100%';
+
+    const maxMonths = Math.max(minHistory.length, fixedHistory.length);
+    const yScale = 190 / maxBalance;
+    const xScale = 790 / (maxMonths - 1 || 1);
+
+    // Min payment line
+    let minPath = `M 5 ${200 - minHistory[0] * yScale}`;
+    for (let i = 1; i < minHistory.length; i++) {
+      minPath += ` L ${5 + i * xScale} ${200 - minHistory[i] * yScale}`;
+    }
+    const minLine = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    minLine.setAttribute('d', minPath);
+    minLine.setAttribute('fill', 'none');
+    minLine.setAttribute('stroke', '#e53e3e');
+    minLine.setAttribute('stroke-width', '3');
+    svg.appendChild(minLine);
+
+    // Fixed payment line
+    if (fixedHistory.length > 0) {
+      let fixedPath = `M 5 ${200 - fixedHistory[0] * yScale}`;
+      for (let i = 1; i < fixedHistory.length; i++) {
+        fixedPath += ` L ${5 + i * xScale} ${200 - fixedHistory[i] * yScale}`;
+      }
+      const fixedLine = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+      fixedLine.setAttribute('d', fixedPath);
+      fixedLine.setAttribute('fill', 'none');
+      fixedLine.setAttribute('stroke', '#38a169');
+      fixedLine.setAttribute('stroke-width', '3');
+      svg.appendChild(fixedLine);
+    }
+
+    container.appendChild(svg);
+  }
+
+  [balanceInput, aprInput, minPctInput, fixedInput].forEach(el => {
+    el.addEventListener('input', calculate);
+  });
+
+  // Calculate on load with default APR
+  calculate();
+</script>

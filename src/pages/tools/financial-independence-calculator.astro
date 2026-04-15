@@ -1,0 +1,975 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const title = 'FIRE Calculator 2026 | Financial Independence & Early Retirement';
+const description = "Calculate your path to financial independence. See your FIRE number, years to FI, and how savings rate impacts your retirement timeline.";
+---
+
+<BaseLayout title={title} description={description}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "FIRE Calculator — Financial Independence",
+      "url": "https://gettidyflow.com/tools/financial-independence-calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "description": description
+    })} />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the FIRE number?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Your FIRE number is the amount of money you need invested to live off the returns. It's typically 25 times your annual expenses, based on the 4% safe withdrawal rate. For example, if you spend $40,000 per year, your FIRE number is $1,000,000."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a good savings rate for FIRE?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A 50%+ savings rate can get you to financial independence in about 17 years. At 70%, you could reach FI in roughly 8.5 years. The average American saves about 5-10%, which means working 40+ years. The higher your savings rate, the faster you reach FI — and the less you need to save because you're accustomed to living on less."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the 4% rule still valid?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The 4% rule (Trinity Study) showed that a 4% withdrawal rate survived 95% of 30-year periods historically. For early retirees with 40-50+ year horizons, many experts suggest using 3.25-3.5% for extra safety. This calculator lets you adjust the withdrawal rate to see the impact."
+          }
+        }
+      ]
+    })} />
+  </Fragment>
+
+  <section class="tool-hero">
+    <div class="tool-hero-inner">
+      <span class="tool-badge">Free Tool — No Signup Required</span>
+      <h1>Financial Independence <span class="gradient-text">Calculator</span></h1>
+      <p class="tool-subtitle">Find your FIRE number and see exactly how many years until you can retire early. Discover how your savings rate is the most powerful lever for financial freedom.</p>
+    </div>
+  </section>
+
+  <section class="tool-app">
+    <div class="tool-container">
+      <div class="calc-card">
+        <div class="input-row">
+          <div class="input-group">
+            <label for="age-input" class="input-label">Current Age</label>
+            <div class="input-wrapper">
+              <input type="number" id="age-input" placeholder="30" min="18" max="80" step="1" aria-label="Current age" />
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="income-input" class="input-label">Annual Income (after tax)</label>
+            <div class="input-wrapper">
+              <span class="currency-symbol">$</span>
+              <input type="number" id="income-input" placeholder="60,000" min="0" step="1000" aria-label="Annual income after tax" />
+            </div>
+          </div>
+        </div>
+
+        <div class="input-row">
+          <div class="input-group">
+            <label for="expenses-input" class="input-label">Annual Expenses</label>
+            <div class="input-wrapper">
+              <span class="currency-symbol">$</span>
+              <input type="number" id="expenses-input" placeholder="36,000" min="0" step="1000" aria-label="Annual expenses" />
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="savings-input" class="input-label">Current Savings / Investments</label>
+            <div class="input-wrapper">
+              <span class="currency-symbol">$</span>
+              <input type="number" id="savings-input" placeholder="50,000" min="0" step="1000" value="0" aria-label="Current total savings and investments" />
+            </div>
+          </div>
+        </div>
+
+        <div class="input-row">
+          <div class="input-group">
+            <label for="return-input" class="input-label">Expected Annual Return</label>
+            <div class="input-wrapper">
+              <span class="currency-symbol">%</span>
+              <input type="number" id="return-input" placeholder="7" min="0" max="20" step="0.5" value="7" aria-label="Expected annual return rate" />
+            </div>
+            <span class="input-hint">S&P 500 historical avg: ~7% after inflation</span>
+          </div>
+
+          <div class="input-group">
+            <label for="swr-input" class="input-label">Safe Withdrawal Rate</label>
+            <div class="input-wrapper">
+              <span class="currency-symbol">%</span>
+              <input type="number" id="swr-input" placeholder="4" min="2" max="6" step="0.25" value="4" aria-label="Safe withdrawal rate" />
+            </div>
+            <span class="input-hint">Traditional: 4% (Trinity Study)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Results -->
+      <div id="results-section" style="display:none;">
+        <div class="results-grid">
+          <div class="result-card fire-card">
+            <div class="result-header">
+              <span class="result-icon">&#128293;</span>
+              <div>
+                <h3>Your FIRE Number</h3>
+                <p class="result-amount" id="fire-number">$0</p>
+              </div>
+            </div>
+            <p class="result-tip" id="fire-tip">Amount needed to retire, based on the 4% rule.</p>
+          </div>
+
+          <div class="result-card years-card">
+            <div class="result-header">
+              <span class="result-icon">&#9200;</span>
+              <div>
+                <h3>Years to FIRE</h3>
+                <p class="result-amount" id="years-result">0</p>
+              </div>
+            </div>
+            <p class="result-tip" id="fi-age-tip">You'll reach FI at age —</p>
+          </div>
+
+          <div class="result-card rate-card">
+            <div class="result-header">
+              <span class="result-icon">&#128176;</span>
+              <div>
+                <h3>Your Savings Rate</h3>
+                <p class="result-amount" id="savings-rate-result">0%</p>
+              </div>
+            </div>
+            <p class="result-tip" id="rate-tip">Higher savings rate = faster FI</p>
+          </div>
+        </div>
+
+        <!-- Progress bar -->
+        <div class="progress-card">
+          <h3>Progress to FIRE</h3>
+          <div class="progress-bar-container">
+            <div class="progress-bar" id="progress-bar"></div>
+          </div>
+          <div class="progress-labels">
+            <span id="progress-current">$0 saved</span>
+            <span id="progress-target">$0 goal</span>
+          </div>
+          <p class="progress-pct" id="progress-pct">0% there</p>
+        </div>
+
+        <!-- Savings rate impact -->
+        <div class="impact-card">
+          <h3>Savings Rate Impact</h3>
+          <p class="impact-desc">See how different savings rates change your timeline to financial independence:</p>
+          <div class="impact-table-wrapper">
+            <table class="impact-table" id="impact-table">
+              <thead>
+                <tr>
+                  <th>Savings Rate</th>
+                  <th>Monthly Savings</th>
+                  <th>Years to FI</th>
+                  <th>FI Age</th>
+                </tr>
+              </thead>
+              <tbody id="impact-tbody"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Net Worth Projection Chart -->
+        <div class="chart-card">
+          <h3>Net Worth Projection</h3>
+          <div class="chart-container" id="chart-container"></div>
+          <div class="chart-legend">
+            <span class="legend-item"><span class="legend-dot contrib-dot"></span> Contributions</span>
+            <span class="legend-item"><span class="legend-dot growth-dot"></span> Investment Growth</span>
+            <span class="legend-item"><span class="legend-dot fire-line-dot"></span> FIRE Number</span>
+          </div>
+        </div>
+
+        <!-- Monthly breakdown -->
+        <div class="breakdown-card">
+          <h3>Your Monthly Budget Split</h3>
+          <div class="budget-split">
+            <div class="split-item save-split">
+              <span class="split-amount" id="monthly-savings">$0</span>
+              <span class="split-label">Saved / Invested</span>
+            </div>
+            <div class="split-divider">vs</div>
+            <div class="split-item spend-split">
+              <span class="split-amount" id="monthly-expenses">$0</span>
+              <span class="split-label">Spent</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="warning-card" style="display:none;" class="warning-card">
+        <p id="warning-text"></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool-cta">
+    <div class="tool-container">
+      <div class="cta-card">
+        <h2>Track Your Path to Financial Independence</h2>
+        <p>Knowing your FIRE number is just the start. Track your net worth, savings rate, and investment growth monthly with our <strong>free Net Worth Tracker</strong>.</p>
+        <a href="https://gettidyflow.gumroad.com" target="_blank" rel="noopener" class="cta-button">Get Free Net Worth Tracker &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="tool-content">
+    <div class="tool-container content-narrow">
+      <h2>How This FIRE Calculator Works</h2>
+      <p>Enter your income, expenses, current savings, and expected investment returns. The calculator determines your FIRE number (the portfolio size needed to cover your expenses indefinitely using the safe withdrawal rate), then projects year-by-year growth to show when you'll reach financial independence.</p>
+
+      <h2>What Is FIRE?</h2>
+      <p>FIRE stands for <strong>Financial Independence, Retire Early</strong>. The core idea is simple: save and invest aggressively so your investment returns can cover your living expenses — freeing you from needing a paycheck. There are several variations:</p>
+      <ul>
+        <li><strong>Lean FIRE</strong> — reaching FI on minimal expenses (under $40k/year)</li>
+        <li><strong>Regular FIRE</strong> — standard FI with comfortable but not lavish spending</li>
+        <li><strong>Fat FIRE</strong> — FI with a higher lifestyle ($100k+/year)</li>
+        <li><strong>Barista FIRE</strong> — partial FI where you work part-time for benefits and small income</li>
+      </ul>
+
+      <h2>Why Savings Rate Matters More Than Income</h2>
+      <p>Your savings rate is the single most important factor in reaching FIRE. Here's why:</p>
+      <ul>
+        <li><strong>At 10% savings rate</strong>, you'll work ~51 years before FI</li>
+        <li><strong>At 25% savings rate</strong>, it drops to ~32 years</li>
+        <li><strong>At 50% savings rate</strong>, you're looking at ~17 years</li>
+        <li><strong>At 75% savings rate</strong>, you could reach FI in ~7 years</li>
+      </ul>
+      <p>A higher savings rate works double: you save more AND you prove you can live on less — meaning your FIRE number is lower. Use our <a href="/tools/savings-rate-calculator">Savings Rate Calculator</a> to find yours.</p>
+
+      <h2>The 4% Rule Explained</h2>
+      <p>The 4% rule (from the Trinity Study) states that if you withdraw 4% of your portfolio in year one and adjust for inflation each year after, your money has a 95%+ chance of lasting 30 years. For early retirees planning for 40-50+ years, consider a more conservative 3.25-3.5% withdrawal rate.</p>
+
+      <h2>Related Tools</h2>
+      <ul>
+        <li><a href="/tools/savings-rate-calculator">Savings Rate Calculator</a></li>
+        <li><a href="/tools/investment-return-calculator">Investment Return Calculator</a></li>
+        <li><a href="/tools/compound-interest-calculator">Compound Interest Calculator</a></li>
+        <li><a href="/tools/retirement-savings-calculator">Retirement Savings Calculator</a></li>
+        <li><a href="/tools/net-worth-calculator">Net Worth Calculator</a></li>
+      </ul>
+
+      <h2>Frequently Asked Questions</h2>
+      <details>
+        <summary>What is the FIRE number?</summary>
+        <p>Your FIRE number is the amount of money you need invested to live off the returns. It's typically 25 times your annual expenses, based on the 4% safe withdrawal rate. For example, if you spend $40,000 per year, your FIRE number is $1,000,000.</p>
+      </details>
+      <details>
+        <summary>What is a good savings rate for FIRE?</summary>
+        <p>A 50%+ savings rate can get you to financial independence in about 17 years. At 70%, you could reach FI in roughly 8.5 years. The average American saves about 5-10%, which means working 40+ years. The higher your savings rate, the faster you reach FI — and the less you need to save because you're accustomed to living on less.</p>
+      </details>
+      <details>
+        <summary>Is the 4% rule still valid?</summary>
+        <p>The 4% rule (Trinity Study) showed that a 4% withdrawal rate survived 95% of 30-year periods historically. For early retirees with 40-50+ year horizons, many experts suggest using 3.25-3.5% for extra safety. This calculator lets you adjust the withdrawal rate to see the impact.</p>
+      </details>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .tool-hero {
+    background: linear-gradient(135deg, #f6ad55 0%, #ed8936 50%, #dd6b20 100%);
+    padding: 4rem 1.5rem 3rem;
+    text-align: center;
+    color: #fff;
+  }
+  .tool-hero-inner {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .tool-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(4px);
+    padding: 0.35rem 1rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+  }
+  .tool-hero h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 800;
+    line-height: 1.15;
+    margin: 0 0 1rem;
+  }
+  .gradient-text {
+    background: linear-gradient(90deg, #fefcbf, #fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .tool-subtitle {
+    font-size: 1.1rem;
+    opacity: 0.92;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .tool-app {
+    padding: 2.5rem 1.5rem;
+    background: #f8f9fb;
+  }
+  .tool-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .calc-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    margin-bottom: 2rem;
+  }
+  .input-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  .input-group {
+    margin-bottom: 0.5rem;
+  }
+  .input-label {
+    display: block;
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin-bottom: 0.4rem;
+    color: #1a1a2e;
+  }
+  .input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .currency-symbol {
+    position: absolute;
+    left: 1rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #ed8936;
+  }
+  .calc-card input[type="number"] {
+    width: 100%;
+    padding: 0.75rem 1rem 0.75rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    transition: border-color 0.2s;
+    outline: none;
+    font-family: inherit;
+    color: #1a1a2e;
+  }
+  .calc-card input[type="number"]:focus {
+    border-color: #ed8936;
+    box-shadow: 0 0 0 3px rgba(237,137,54,0.15);
+  }
+  .calc-card input[type="number"]::placeholder {
+    color: #a0aec0;
+    font-weight: 400;
+  }
+  .input-hint {
+    display: block;
+    font-size: 0.78rem;
+    color: #888;
+    margin-top: 0.25rem;
+  }
+
+  .results-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  .result-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    border-top: 4px solid transparent;
+  }
+  .fire-card { border-top-color: #ed8936; }
+  .years-card { border-top-color: #667eea; }
+  .rate-card { border-top-color: #38a169; }
+  .result-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+  }
+  .result-icon {
+    font-size: 1.75rem;
+    line-height: 1;
+  }
+  .result-header h3 {
+    margin: 0;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #555;
+  }
+  .result-amount {
+    margin: 0.1rem 0 0;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #1a1a2e;
+  }
+  .result-tip {
+    font-size: 0.82rem;
+    color: #666;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  .progress-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    margin-bottom: 2rem;
+  }
+  .progress-card h3 {
+    margin: 0 0 1rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1a1a2e;
+  }
+  .progress-bar-container {
+    background: #edf2f7;
+    border-radius: 999px;
+    height: 24px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+  }
+  .progress-bar {
+    background: linear-gradient(90deg, #ed8936, #f6ad55);
+    height: 100%;
+    border-radius: 999px;
+    transition: width 0.5s;
+    min-width: 2px;
+  }
+  .progress-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    color: #666;
+  }
+  .progress-pct {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #ed8936;
+    margin: 0.75rem 0 0;
+  }
+
+  .impact-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    margin-bottom: 2rem;
+  }
+  .impact-card h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1a1a2e;
+  }
+  .impact-desc {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0 0 1rem;
+  }
+  .impact-table-wrapper {
+    overflow-x: auto;
+  }
+  .impact-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+  }
+  .impact-table th {
+    background: #f7fafc;
+    padding: 0.6rem 0.75rem;
+    text-align: left;
+    font-weight: 700;
+    color: #444;
+    border-bottom: 2px solid #e2e8f0;
+  }
+  .impact-table td {
+    padding: 0.6rem 0.75rem;
+    border-bottom: 1px solid #edf2f7;
+    color: #444;
+  }
+  .impact-table tr.current-row {
+    background: #fffaf0;
+    font-weight: 700;
+  }
+  .impact-table tr.current-row td {
+    color: #c05621;
+  }
+
+  .chart-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    margin-bottom: 2rem;
+  }
+  .chart-card h3 {
+    margin: 0 0 1rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1a1a2e;
+  }
+  .chart-container {
+    position: relative;
+    height: 220px;
+    border-bottom: 2px solid #e2e8f0;
+    border-left: 2px solid #e2e8f0;
+    margin-bottom: 0.5rem;
+  }
+  .chart-legend {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 0.75rem;
+    font-size: 0.85rem;
+    color: #666;
+    flex-wrap: wrap;
+  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+  .legend-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .contrib-dot { background: #ed8936; }
+  .growth-dot { background: #667eea; }
+  .fire-line-dot { background: #e53e3e; }
+
+  .breakdown-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    margin-bottom: 2rem;
+  }
+  .breakdown-card h3 {
+    margin: 0 0 1.25rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1a1a2e;
+  }
+  .budget-split {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .split-item {
+    text-align: center;
+    flex: 1;
+    padding: 1.25rem;
+    border-radius: 12px;
+  }
+  .save-split { background: #f0fff4; }
+  .spend-split { background: #fff5f5; }
+  .split-amount {
+    display: block;
+    font-size: 1.75rem;
+    font-weight: 800;
+    margin-bottom: 0.25rem;
+  }
+  .save-split .split-amount { color: #276749; }
+  .spend-split .split-amount { color: #c53030; }
+  .split-label {
+    font-size: 0.85rem;
+    color: #666;
+  }
+  .split-divider {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #a0aec0;
+  }
+
+  .warning-card {
+    background: #fff3cd;
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    border-left: 5px solid #ffc107;
+  }
+  .warning-card p {
+    margin: 0;
+    color: #856404;
+    font-weight: 600;
+  }
+
+  .tool-cta {
+    padding: 2.5rem 1.5rem;
+    background: #fff;
+  }
+  .cta-card {
+    max-width: 800px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #ed8936 0%, #dd6b20 100%);
+    border-radius: 20px;
+    padding: 2.5rem;
+    text-align: center;
+    color: #fff;
+  }
+  .cta-card h2 {
+    margin: 0 0 0.75rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+  }
+  .cta-card p {
+    margin: 0 0 1.5rem;
+    opacity: 0.92;
+    line-height: 1.6;
+  }
+  .cta-button {
+    display: inline-block;
+    background: #fff;
+    color: #dd6b20;
+    font-weight: 700;
+    padding: 0.85rem 2rem;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  }
+
+  .tool-content {
+    padding: 3rem 1.5rem 4rem;
+    background: #f8f9fb;
+  }
+  .content-narrow {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .tool-content h2 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #1a1a2e;
+    margin: 2.5rem 0 0.75rem;
+  }
+  .tool-content h2:first-child {
+    margin-top: 0;
+  }
+  .tool-content p,
+  .tool-content li {
+    font-size: 1.02rem;
+    line-height: 1.7;
+    color: #444;
+  }
+  .tool-content ul,
+  .tool-content ol {
+    padding-left: 1.25rem;
+    margin: 0.5rem 0 1rem;
+  }
+  .tool-content li {
+    margin-bottom: 0.35rem;
+  }
+  .tool-content a {
+    color: #ed8936;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .tool-content details {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 0.75rem;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  }
+  .tool-content summary {
+    font-weight: 600;
+    cursor: pointer;
+    color: #1a1a2e;
+    font-size: 1.02rem;
+  }
+  .tool-content details p {
+    margin: 0.75rem 0 0;
+  }
+
+  @media (max-width: 640px) {
+    .input-row {
+      grid-template-columns: 1fr;
+    }
+    .results-grid {
+      grid-template-columns: 1fr;
+    }
+    .budget-split {
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .split-divider {
+      display: none;
+    }
+    .cta-card {
+      padding: 2rem 1.5rem;
+    }
+  }
+</style>
+
+<script>
+  const ageInput = document.getElementById('age-input') as HTMLInputElement;
+  const incomeInput = document.getElementById('income-input') as HTMLInputElement;
+  const expensesInput = document.getElementById('expenses-input') as HTMLInputElement;
+  const savingsInput = document.getElementById('savings-input') as HTMLInputElement;
+  const returnInput = document.getElementById('return-input') as HTMLInputElement;
+  const swrInput = document.getElementById('swr-input') as HTMLInputElement;
+  const resultsSection = document.getElementById('results-section')!;
+  const warningCard = document.getElementById('warning-card')!;
+
+  function fmt(n: number): string {
+    return '$' + n.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+  }
+
+  function calculateYearsToFI(currentSavings: number, annualSaving: number, annualReturn: number, fireNumber: number): number {
+    if (currentSavings >= fireNumber) return 0;
+    if (annualSaving <= 0) return 999;
+
+    const r = annualReturn / 100;
+    let balance = currentSavings;
+    let years = 0;
+    const maxYears = 100;
+
+    while (balance < fireNumber && years < maxYears) {
+      balance = balance * (1 + r) + annualSaving;
+      years++;
+    }
+    return years >= maxYears ? 999 : years;
+  }
+
+  function calculate() {
+    const age = parseFloat(ageInput.value) || 0;
+    const income = parseFloat(incomeInput.value) || 0;
+    const expenses = parseFloat(expensesInput.value) || 0;
+    const currentSavings = parseFloat(savingsInput.value) || 0;
+    const annualReturn = parseFloat(returnInput.value) || 7;
+    const swr = parseFloat(swrInput.value) || 4;
+
+    if (income <= 0 || expenses <= 0) {
+      resultsSection.style.display = 'none';
+      warningCard.style.display = 'none';
+      return;
+    }
+
+    if (expenses >= income) {
+      resultsSection.style.display = 'none';
+      warningCard.style.display = 'block';
+      document.getElementById('warning-text')!.textContent =
+        'Your expenses are equal to or exceed your income. To reach FIRE, you need to save a portion of your income. Try reducing expenses or increasing income.';
+      return;
+    }
+
+    warningCard.style.display = 'none';
+
+    const annualSaving = income - expenses;
+    const savingsRate = (annualSaving / income) * 100;
+    const fireNumber = expenses / (swr / 100);
+    const yearsToFI = calculateYearsToFI(currentSavings, annualSaving, annualReturn, fireNumber);
+
+    resultsSection.style.display = 'block';
+
+    // FIRE number
+    document.getElementById('fire-number')!.textContent = fmt(Math.round(fireNumber));
+    document.getElementById('fire-tip')!.textContent =
+      `${fmt(Math.round(expenses))}/yr expenses ÷ ${swr}% withdrawal rate`;
+
+    // Years to FI
+    if (yearsToFI >= 999) {
+      document.getElementById('years-result')!.textContent = '99+';
+      document.getElementById('fi-age-tip')!.textContent = 'At current rates, FI is very far away. Consider increasing savings.';
+    } else if (yearsToFI === 0) {
+      document.getElementById('years-result')!.textContent = 'Now!';
+      document.getElementById('fi-age-tip')!.textContent = 'You\'ve already reached your FIRE number!';
+    } else {
+      document.getElementById('years-result')!.textContent = yearsToFI.toFixed(0);
+      const fiAge = age > 0 ? age + yearsToFI : 0;
+      document.getElementById('fi-age-tip')!.textContent =
+        age > 0 ? `You'll reach FI at age ${fiAge.toFixed(0)}` : `${yearsToFI} years from now`;
+    }
+
+    // Savings rate
+    document.getElementById('savings-rate-result')!.textContent = savingsRate.toFixed(1) + '%';
+    let rateMsg = '';
+    if (savingsRate >= 70) rateMsg = 'Exceptional! You\'re on the fast track.';
+    else if (savingsRate >= 50) rateMsg = 'Great! This is a strong FIRE savings rate.';
+    else if (savingsRate >= 30) rateMsg = 'Good. Consider optimizing expenses further.';
+    else if (savingsRate >= 15) rateMsg = 'Average. Increasing this would accelerate FI significantly.';
+    else rateMsg = 'Below average. Small increases make a big difference.';
+    document.getElementById('rate-tip')!.textContent = rateMsg;
+
+    // Progress bar
+    const pct = Math.min((currentSavings / fireNumber) * 100, 100);
+    (document.getElementById('progress-bar') as HTMLElement).style.width = `${pct}%`;
+    document.getElementById('progress-current')!.textContent = `${fmt(Math.round(currentSavings))} saved`;
+    document.getElementById('progress-target')!.textContent = `${fmt(Math.round(fireNumber))} goal`;
+    document.getElementById('progress-pct')!.textContent = `${pct.toFixed(1)}% there`;
+
+    // Impact table
+    const tbody = document.getElementById('impact-tbody')!;
+    tbody.innerHTML = '';
+    const rates = [10, 20, 30, 40, 50, 60, 70, 80];
+    const currentRateRounded = Math.round(savingsRate / 5) * 5;
+
+    rates.forEach(rate => {
+      const annSave = income * (rate / 100);
+      const annExp = income - annSave;
+      const fn = annExp / (swr / 100);
+      const yrs = calculateYearsToFI(currentSavings, annSave, annualReturn, fn);
+
+      const tr = document.createElement('tr');
+      if (Math.abs(rate - currentRateRounded) < 5 || rate === currentRateRounded) {
+        tr.className = 'current-row';
+      }
+      tr.innerHTML = `
+        <td>${rate}%${rate === currentRateRounded ? ' (you)' : ''}</td>
+        <td>${fmt(Math.round(annSave / 12))}</td>
+        <td>${yrs >= 999 ? '99+' : yrs + ' yrs'}</td>
+        <td>${age > 0 ? (yrs >= 999 ? '—' : (age + yrs).toString()) : '—'}</td>
+      `;
+      tbody.appendChild(tr);
+    });
+
+    // Monthly breakdown
+    document.getElementById('monthly-savings')!.textContent = fmt(Math.round(annualSaving / 12));
+    document.getElementById('monthly-expenses')!.textContent = fmt(Math.round(expenses / 12));
+
+    // Chart
+    drawChart(currentSavings, annualSaving, annualReturn, fireNumber, yearsToFI);
+  }
+
+  function drawChart(currentSavings: number, annualSaving: number, annualReturn: number, fireNumber: number, yearsToFI: number) {
+    const container = document.getElementById('chart-container')!;
+    container.innerHTML = '';
+
+    const r = annualReturn / 100;
+    const chartYears = Math.min(Math.max(yearsToFI + 5, 15), 50);
+    const data: { year: number; contributions: number; total: number }[] = [];
+
+    let balance = currentSavings;
+    let totalContributions = currentSavings;
+
+    data.push({ year: 0, contributions: totalContributions, total: balance });
+
+    for (let y = 1; y <= chartYears; y++) {
+      balance = balance * (1 + r) + annualSaving;
+      totalContributions += annualSaving;
+      data.push({ year: y, contributions: totalContributions, total: balance });
+    }
+
+    const maxVal = Math.max(data[data.length - 1].total, fireNumber) * 1.1;
+
+    const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    svg.setAttribute('viewBox', '0 0 800 210');
+    svg.setAttribute('preserveAspectRatio', 'none');
+    svg.style.width = '100%';
+    svg.style.height = '100%';
+
+    const xScale = 780 / chartYears;
+    const yScale = 200 / maxVal;
+    const offsetX = 10;
+
+    // FIRE line
+    const fireY = 210 - fireNumber * yScale;
+    const fireLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+    fireLine.setAttribute('x1', '0');
+    fireLine.setAttribute('y1', fireY.toString());
+    fireLine.setAttribute('x2', '800');
+    fireLine.setAttribute('y2', fireY.toString());
+    fireLine.setAttribute('stroke', '#e53e3e');
+    fireLine.setAttribute('stroke-width', '2');
+    fireLine.setAttribute('stroke-dasharray', '8 4');
+    svg.appendChild(fireLine);
+
+    // FIRE label
+    const fireLabel = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+    fireLabel.setAttribute('x', '790');
+    fireLabel.setAttribute('y', (fireY - 6).toString());
+    fireLabel.setAttribute('text-anchor', 'end');
+    fireLabel.setAttribute('fill', '#e53e3e');
+    fireLabel.setAttribute('font-size', '11');
+    fireLabel.setAttribute('font-weight', '700');
+    fireLabel.textContent = 'FIRE';
+    svg.appendChild(fireLabel);
+
+    // Contributions area
+    let contribPath = `M ${offsetX} 210`;
+    data.forEach(d => {
+      contribPath += ` L ${offsetX + d.year * xScale} ${210 - d.contributions * yScale}`;
+    });
+    contribPath += ` L ${offsetX + chartYears * xScale} 210 Z`;
+    const contribArea = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    contribArea.setAttribute('d', contribPath);
+    contribArea.setAttribute('fill', 'rgba(237,137,54,0.3)');
+    svg.appendChild(contribArea);
+
+    // Total area
+    let totalPath = `M ${offsetX} 210`;
+    data.forEach(d => {
+      totalPath += ` L ${offsetX + d.year * xScale} ${210 - d.total * yScale}`;
+    });
+    totalPath += ` L ${offsetX + chartYears * xScale} 210 Z`;
+    const totalArea = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    totalArea.setAttribute('d', totalPath);
+    totalArea.setAttribute('fill', 'rgba(102,126,234,0.2)');
+    svg.appendChild(totalArea);
+
+    // Total line
+    let totalLinePath = `M ${offsetX} ${210 - data[0].total * yScale}`;
+    for (let i = 1; i < data.length; i++) {
+      totalLinePath += ` L ${offsetX + data[i].year * xScale} ${210 - data[i].total * yScale}`;
+    }
+    const totalLine = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    totalLine.setAttribute('d', totalLinePath);
+    totalLine.setAttribute('fill', 'none');
+    totalLine.setAttribute('stroke', '#667eea');
+    totalLine.setAttribute('stroke-width', '3');
+    svg.appendChild(totalLine);
+
+    // Contributions line
+    let contribLinePath = `M ${offsetX} ${210 - data[0].contributions * yScale}`;
+    for (let i = 1; i < data.length; i++) {
+      contribLinePath += ` L ${offsetX + data[i].year * xScale} ${210 - data[i].contributions * yScale}`;
+    }
+    const contribLine = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    contribLine.setAttribute('d', contribLinePath);
+    contribLine.setAttribute('fill', 'none');
+    contribLine.setAttribute('stroke', '#ed8936');
+    contribLine.setAttribute('stroke-width', '3');
+    svg.appendChild(contribLine);
+
+    container.appendChild(svg);
+  }
+
+  [ageInput, incomeInput, expensesInput, savingsInput, returnInput, swrInput].forEach(el => {
+    el.addEventListener('input', calculate);
+  });
+</script>
