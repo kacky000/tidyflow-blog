@@ -83,6 +83,10 @@ Several Notion creators offer free or low-cost finance dashboard templates that 
 
 ---
 
+> **💡 Want a ready-to-use solution?** Skip the setup and download our [Freelancer Expense Tracker](https://gettidyflow.gumroad.com/l/freelancer-expense-tracker) — a professional Excel budget template with pre-built formulas, automatic totals, and a visual dashboard. Or browse [all TidyFlow templates](https://gettidyflow.gumroad.com) for Google Sheets, Excel, and Notion options.
+
+---
+
 ## Best Budget Templates by Budgeting Method
 
 Different budgeting methods need different templates. Here's the **best budget template** for each approach:
