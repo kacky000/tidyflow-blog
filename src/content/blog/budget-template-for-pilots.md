@@ -147,6 +147,8 @@ Use our [Budget Calculator](/tools/budget-calculator) to build your pilot budget
 
 For freelance flight instructors or 1099 contract pilots, our [Freelancer Expense Tracker](https://gettidyflow.gumroad.com) handles quarterly estimated taxes and variable income automatically — essential for CFIs and charter pilots with irregular 1099 income.
 
+Need a spreadsheet-based approach? See our roundup of the [best budget spreadsheet templates](/blog/best-budget-spreadsheet-templates/) — several are designed specifically for variable and irregular income. You can also [track expenses in Notion](/blog/how-to-track-expenses-in-notion/) for a more flexible digital system.
+
 ---
 
 *Related: [Budget for Irregular Income](/blog/budget-for-irregular-income/) | [How to Budget on $4,500 a Month](/blog/how-to-budget-on-4500-a-month/) | [Budget Template for Remote Workers](/blog/budget-template-for-remote-workers/)*

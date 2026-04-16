@@ -118,6 +118,8 @@ Use our [Budget Calculator](/tools/budget-calculator) to plug in your actual inc
 
 If you're moving to SLC with a new job, our [Freelancer Expense Tracker](https://gettidyflow.gumroad.com) helps you handle variable income and quarterly taxes — especially useful for SLC's growing tech and gig economy workers.
 
+Looking for a digital budgeting system? Learn [how to track expenses in Notion](/blog/how-to-track-expenses-in-notion/) or see our picks for [Notion templates worth paying for](/blog/notion-templates-worth-paying-for/). Couples moving together can also use our [budgeting for couples guide](/blog/budgeting-for-couples/).
+
 ---
 
 *Related: [How to Budget for Living in Seattle](/blog/budget-for-living-in-seattle/) | [How to Budget for Living in Denver](/blog/budget-for-living-in-denver/) | [Budget for Living in Austin](/blog/budget-for-living-in-austin/)*

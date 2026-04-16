@@ -164,6 +164,8 @@ If you're going with Notion, start with our [Best Budget Spreadsheet Templates](
 
 Ready to buy a proper template? Our [Notion Budget Templates](https://gettidyflow.gumroad.com) give you the database structure, formulas, and views pre-built — no blank-canvas overwhelm.
 
+Want a step-by-step setup guide? Read [how to track expenses in Notion](/blog/how-to-track-expenses-in-notion/) or browse [Notion templates worth paying for](/blog/notion-templates-worth-paying-for/) to find the right starting point.
+
 ---
 
 *Related: [Excel vs Notion Budget Template](/blog/excel-vs-notion-budget-template/) | [YNAB vs Notion for Budgeting](/blog/ynab-vs-notion-for-budgeting/) | [Google Sheets vs Notion for Budgeting](/blog/google-sheets-vs-notion-for-budgeting/)*
