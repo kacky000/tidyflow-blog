@@ -145,4 +145,4 @@ Summer electricity bills. Many newcomers budget $100/month for utilities based o
 
 ## Start Planning Your Phoenix Budget
 
-Phoenix gives you the rare opportunity to build real savings while enjoying a modern, growing city. The key is planning for the seasonal utility swing and car costs that define desert living. Download our [budgeting templates on Gumroad](https://gettidyflow.com) and build a Phoenix-proof spending plan today.
+Phoenix gives you the rare opportunity to build real savings while enjoying a modern, growing city. The key is planning for the seasonal utility swing and car costs that define desert living. Use our free [budget calculator](/tools/budget-calculator) to map your take-home pay to Phoenix's cost structure, then [download our free budget template](https://gettidyflow.gumroad.com) to build a Phoenix-proof spending plan today.

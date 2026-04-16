@@ -140,4 +140,4 @@ It is possible but limiting. If you live and work along the trolley corridor (do
 
 ## Build Your San Diego Budget Now
 
-San Diego offers a lifestyle that is hard to match — year-round sunshine, world-class beaches, and a thriving food scene. The price of entry is a California-sized budget, but smart planning makes it work. Grab our [free budgeting tools on Gumroad](https://gettidyflow.com) and start mapping your path to financial stability in America's Finest City.
+San Diego offers a lifestyle that is hard to match — year-round sunshine, world-class beaches, and a thriving food scene. The price of entry is a California-sized budget, but smart planning makes it work. Use our free [budget calculator](/tools/budget-calculator) to map your income to San Diego's cost structure, then [grab our free budget template](https://gettidyflow.gumroad.com) to start building your path to financial stability in America's Finest City.

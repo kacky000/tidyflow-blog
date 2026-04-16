@@ -145,4 +145,4 @@ Spreadsheets (Excel, Google Sheets) work best for annual budgets because of the 
 
 ## Build Your Annual Budget Today
 
-Ready to plan your entire year's finances? Our [budget templates on Gumroad](https://gettidyflow.gumroad.com/) include annual planning worksheets, sinking fund trackers, and monthly-to-annual reconciliation tools. Take control of your full-year financial picture.
+Ready to plan your entire year's finances? Start with our free [budget calculator](/tools/budget-calculator) to set your monthly targets, then use our [budget templates on Gumroad](https://gettidyflow.gumroad.com/) — including annual planning worksheets, sinking fund trackers, and monthly-to-annual reconciliation tools. Take control of your full-year financial picture.

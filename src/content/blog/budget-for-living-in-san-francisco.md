@@ -109,4 +109,4 @@ It is very difficult as a single person. After taxes, your take-home would be ar
 
 ## Build Your SF Budget Today
 
-San Francisco is expensive, but it is manageable with a clear plan. Start by listing your actual income after taxes, lock in your housing costs, and work backward from there. A well-structured budget template can make the process painless — grab our [free budgeting toolkit on Gumroad](https://gettidyflow.com) and take control of your Bay Area finances today.
+San Francisco is expensive, but it is manageable with a clear plan. Start by listing your actual income after taxes, lock in your housing costs, and work backward from there. A well-structured budget template can make the process painless — use our free [budget calculator](/tools/budget-calculator) to map your Bay Area income, then [grab our free budget template](https://gettidyflow.gumroad.com) to take control of your Bay Area finances today.

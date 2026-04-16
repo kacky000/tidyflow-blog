@@ -179,4 +179,4 @@ Antioch, Madison, Donelson, and Hermitage offer the most affordable rents within
 
 Moving to Nashville is exciting, but going in without a budget is a recipe for financial stress. Track every dollar from day one and adjust your plan as you learn the real costs of your specific lifestyle in Music City.
 
-Need a ready-made budgeting template to get started? [Grab a free budget planner on Gumroad](https://gettidyflow.gumroad.com) and take control of your Nashville finances today.
+Use our free [budget calculator](/tools/budget-calculator) to see how your take-home pay maps to Nashville's costs, then [grab our free budget template](https://gettidyflow.gumroad.com) to take control of your Nashville finances today.

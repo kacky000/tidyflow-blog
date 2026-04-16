@@ -148,4 +148,4 @@ Use a spreadsheet or a tool like Notion that lets you create repeating templates
 
 A biweekly budget template transforms your relationship with money by aligning your spending plan with your actual income schedule. No more guessing, no more overdrafts, no more wasted three-paycheck months.
 
-If you want a ready-made system to track every dollar across pay periods, check out the [Freelancer Expense Tracker](https://gettidyflow.gumroad.com/l/freelancer-expense-tracker) — it's built for people who need flexible, per-period budgeting that adapts to any pay schedule.
+Start by running your numbers through our free [budget calculator](/tools/budget-calculator) to set per-paycheck targets. Then, if you want a ready-made system to track every dollar across pay periods, check out the [Freelancer Expense Tracker](https://gettidyflow.gumroad.com/l/freelancer-expense-tracker) — it's built for people who need flexible, per-period budgeting that adapts to any pay schedule.

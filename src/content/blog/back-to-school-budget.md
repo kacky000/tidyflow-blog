@@ -103,6 +103,6 @@ Apply for free/reduced lunch programs, check if your school offers supply assist
 
 ## Plan Your Back-to-School Budget
 
-Use our [Budget Tracker Template](https://gettidyflow.gumroad.com/l/budget-tracker) to create a dedicated back-to-school savings category and track every purchase against your budget.
+First, use our free [budget calculator](/tools/budget-calculator) to estimate your total back-to-school spending. Then use our [Budget Tracker Template](https://gettidyflow.gumroad.com/l/budget-tracker) to create a dedicated back-to-school savings category and track every purchase against your budget.
 
 *Related: [Budget Template for Single Moms](/blog/budget-template-for-single-moms) | [How to Budget on $3,000 a Month](/blog/how-to-budget-on-3000-a-month)*

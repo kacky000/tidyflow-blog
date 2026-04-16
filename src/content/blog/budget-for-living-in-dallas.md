@@ -151,4 +151,4 @@ Underestimating car-related costs. Between car payments, insurance (Texas rates 
 
 ## Start Your Dallas Budget Today
 
-Dallas is one of the best cities in America for building wealth. No state income tax, affordable housing, and a deep job market create the foundation — but only if you budget deliberately. Get our [budgeting toolkit on Gumroad](https://gettidyflow.com) and turn Dallas's financial advantages into real savings starting this month.
+Dallas is one of the best cities in America for building wealth. No state income tax, affordable housing, and a deep job market create the foundation — but only if you budget deliberately. Use our free [budget calculator](/tools/budget-calculator) to map your income to Dallas's cost structure, then [grab our free budget template](https://gettidyflow.gumroad.com) to turn Dallas's financial advantages into real savings starting this month.

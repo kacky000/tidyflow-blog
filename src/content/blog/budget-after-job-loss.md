@@ -172,4 +172,4 @@ Yes. Pause all retirement contributions immediately. Your priority is covering e
 
 Job loss is temporary. The financial habits you build now will serve you long after you're employed again. Start with the basics: know your numbers, cut to essentials, access every resource available, and keep moving forward.
 
-Need a system to track your income and expenses as you rebuild? The **[Freelancer Expense Tracker](https://gettidyflow.gumroad.com/l/freelancer-expense-tracker)** ($9.99) is perfect for managing irregular income — whether you're freelancing between jobs, juggling gig work, or tracking unemployment benefits alongside side hustle earnings. It keeps everything organized in one place so you always know where you stand.
+First, use our free [budget calculator](/tools/budget-calculator) to calculate your bare-minimum monthly runway. Then, for tracking your income and expenses as you rebuild, the **[Freelancer Expense Tracker](https://gettidyflow.gumroad.com/l/freelancer-expense-tracker)** is perfect for managing irregular income — whether you're freelancing between jobs, juggling gig work, or tracking unemployment benefits alongside side hustle earnings.

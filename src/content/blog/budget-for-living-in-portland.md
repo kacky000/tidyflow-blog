@@ -117,4 +117,4 @@ Portland is excellent for remote workers. The combination of moderate rent, abun
 
 ## Take Control of Your Portland Budget
 
-Portland rewards budget-conscious residents with incredible food, free outdoor adventures, and a bike-friendly lifestyle. The key is understanding the income tax impact upfront and building your spending plan around it. Get started with our [budget planning templates on Gumroad](https://gettidyflow.com) to map out your Portland financial life with precision.
+Portland rewards budget-conscious residents with incredible food, free outdoor adventures, and a bike-friendly lifestyle. The key is understanding the income tax impact upfront and building your spending plan around it. Use our free [budget calculator](/tools/budget-calculator) to see exactly how your income maps to Portland's costs, then [get our free budget template](https://gettidyflow.gumroad.com) to map out your Portland financial life with precision.
