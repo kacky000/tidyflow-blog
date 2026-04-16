@@ -3,6 +3,7 @@ title: "Budget Template for Pilots: Manage Your Irregular Aviation Income (2026)
 description: "Pilot-specific budget template covering per diem income, irregular scheduling, training costs, and retirement planning. Free tools included."
 pubDate: "2026-04-16"
 tags: ["budgeting", "pilots", "aviation", "irregular-income", "budget-template"]
+heroImage: "/thumbs/thumb-budget-template-for-pilots.jpg"
 ---
 
 Pilot finances are uniquely complex. Your paycheck changes based on hours flown, per diem adds untaxed income that confuses spreadsheets, reserve schedules make cash flow unpredictable, and the path from regional airlines to majors means years of below-average pay followed by a dramatic salary jump.
