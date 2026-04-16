@@ -71,7 +71,7 @@ At this income level, you have much more flexibility. You can afford a nicer apa
 
 Use our free [budget calculator](/tools/budget-calculator) to see exactly how your income should be allocated. Pair it with a [monthly budget template](https://gettidyflow.gumroad.com) to track every dollar.
 
-If you're new to budgeting, start with the [50/30/20 rule](/blog/50-30-20-budget-rule-notion) — it's simple and works well for Seattle's cost structure. For a more hands-on approach, check out our guide on [how to track expenses in Notion](/blog/how-to-track-expenses-in-notion).
+If you're new to budgeting, start with the [50/30/20 rule](/blog/50-30-20-budget-rule-notion) — it's simple and works well for Seattle's cost structure. For a more hands-on approach, check out our guide on [how to track expenses in Notion](/blog/how-to-track-expenses-in-notion). For template options, see our [best budget spreadsheet templates](/blog/best-budget-spreadsheet-templates/) comparison. If you're moving to Seattle as a couple, our [budgeting for couples guide](/blog/budgeting-for-couples/) covers how to combine finances effectively.
 
 ## FAQ
 
