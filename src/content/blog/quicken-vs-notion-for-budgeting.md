@@ -2,6 +2,7 @@
 title: "Quicken vs Notion for Budgeting: Which One Actually Works in 2026?"
 description: "Hands-on comparison of Quicken vs Notion for budgeting. Compare automation, bank sync, investment tracking, and flexibility to find your perfect match."
 pubDate: "2026-04-16"
+heroImage: "/thumbs/thumb-quicken-vs-notion-for-budgeting.jpg"
 tags: ["budgeting", "quicken", "notion", "comparison", "personal-finance"]
 ---
 

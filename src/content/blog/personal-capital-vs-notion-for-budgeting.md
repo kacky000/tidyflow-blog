@@ -2,6 +2,7 @@
 title: "Personal Capital (Empower) vs Notion for Budgeting: Full Comparison 2026"
 description: "Compare Personal Capital (now Empower) vs Notion for budgeting. Covers net worth tracking, investment features, customization, and privacy. Which is right for you?"
 pubDate: "2026-04-16"
+heroImage: "/thumbs/thumb-personal-capital-vs-notion-for-budgeting.jpg"
 tags: ["budgeting", "personal-capital", "empower", "notion", "comparison", "personal-finance"]
 ---
 
