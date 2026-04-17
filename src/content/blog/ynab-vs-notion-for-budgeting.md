@@ -12,6 +12,8 @@ Choosing between **YNAB vs Notion for budgeting** is really a question about wha
 
 This guide compares YNAB and Notion across every dimension that matters: pricing, customization, automation, mobile experience, learning curve, and long-term value. By the end, you will know exactly which tool matches your financial style.
 
+**Not sure where to start?** Use our free **[Budget Calculator](/tools/budget-calculator/)** to see your ideal spending split in 30 seconds — it helps clarify which tool you actually need.
+
 ---
 
 ## Quick Comparison Table

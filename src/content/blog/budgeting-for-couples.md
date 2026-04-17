@@ -10,6 +10,8 @@ heroImage: "/thumbs/thumb-budgeting-for-couples.jpg"
 
 Money fights are the leading cause of relationship stress—studies show that financial disagreements are cited in over 36% of divorce cases. Yet, most couples avoid having serious conversations about budgeting until a crisis forces the issue. The good news? **Budgeting for couples doesn't have to be complicated or stressful.**
 
+**Before diving in:** Use our free **[Couple Budget Calculator](/tools/budget-calculator/)** to see how your combined income should be split — takes 30 seconds and gives you a clear starting point.
+
 When both partners have a clear understanding of shared finances, joint goals become achievable, and the stress that typically accompanies money conversations evaporates. Whether you're newlyweds combining finances for the first time or long-term partners looking to improve your financial partnership, learning how to budget together is one of the most valuable skills you can develop.
 
 This guide walks you through practical strategies, proven budget structures, and tools designed specifically for couples managing shared expenses.
@@ -226,4 +228,4 @@ The couples who succeed financially aren't the ones with the highest incomes—t
 
 **Ready to take control of your finances as a couple?**
 
-Explore our **[Notion Budget Templates](/blog/best-notion-budget-templates-2026/)** for couples, or download our **[Freelancer Expense Tracker](/)** if you're both self-employed. Both tools make monthly money dates effortless and transparent.
+Start with our free **[Budget Calculator](/tools/budget-calculator/)** to see how your combined income should be split — then grab our **[ready-made Notion & Excel budget templates](https://gettidyflow.gumroad.com/)** designed for couples. No setup headaches, just results from day one.
