@@ -8,6 +8,8 @@ tags: ["budgeting", "apartment", "checklist", "first-time"]
 
 # First Apartment Budget Checklist
 
+> **Skip the math — use our free template.** [Download the First Apartment Budget Tracker →](https://gettidyflow.gumroad.com/l/budget-tracker) Track move-in costs and monthly expenses in one place.
+
 Moving into your first apartment is exciting — until you realize how many costs you didn't plan for. Between security deposits, furniture, kitchen basics, and that first grocery haul, first-time renters routinely underestimate move-in costs by $2,000–$4,000. This first apartment budget checklist covers everything so you're not caught off guard.
 
 ## Before You Sign the Lease: Upfront Costs

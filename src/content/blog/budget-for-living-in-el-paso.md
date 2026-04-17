@@ -8,6 +8,8 @@ tags: ["budgeting", "el-paso", "cost-of-living", "city-budget"]
 
 # How to Budget for Living in El Paso
 
+> **Want a ready-made El Paso budget template?** [Download our free budget tracker →](https://gettidyflow.gumroad.com) Set up your monthly categories in minutes.
+
 **Budgeting for life in El Paso** is one of the best financial decisions you can make if you're looking for an affordable Texas city. El Paso sits on the US-Mexico border with some of the lowest costs of living in the entire state — making it a hidden gem for budget-conscious residents and military families stationed at Fort Bliss.
 
 El Paso's cost of living runs about 10-15% below the national average. Housing is the biggest win: you can rent a solid one-bedroom apartment for under $1,000 in many neighborhoods.
