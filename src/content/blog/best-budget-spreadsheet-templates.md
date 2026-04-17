@@ -13,6 +13,8 @@ Searching for the **best free budget templates** or the **best Google Sheets bud
 
 Whether you're a visual thinker who loves dashboards, a spreadsheet power user who wants full formula control, or someone who just needs a simple way to [track expenses](/blog/how-to-track-expenses-in-notion/), there's a **best budget template** here for you. If you keep [failing at budgeting](/blog/why-people-fail-at-budgeting/), the right template can make all the difference. And if you're new to budgeting entirely, start with our [how to create a budget](/blog/how-to-create-a-budget/) guide first.
 
+> **🎯 Not sure how much to budget?** Use our free [Budget Calculator](/tools/budget-calculator/) to instantly see how to split your income — then pick the right template below.
+
 ---
 
 ## What Makes a Great Budget Template?
