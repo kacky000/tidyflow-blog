@@ -3,6 +3,7 @@ title: "TSMC Q1 Profit Surges 58% on Record AI Chip Demand, Guides 30%+ Revenue 
 description: "Taiwan Semiconductor Manufacturing reported Q1 2026 net income of NT$572.48 billion, up 58% year over year, driven by unprecedented demand for AI accelerator chips. The company raised its full-year revenue growth forecast to over 30%."
 pubDate: "2026-04-18"
 tags: ["tsmc", "semiconductors", "ai-stocks", "earnings", "tech-stocks"]
+heroImage: "/thumbs/thumb-tsmc-q1-2026-earnings-ai-chip-demand.jpg"
 ---
 
 # TSMC Q1 Profit Surges 58% on Record AI Chip Demand, Guides 30%+ Revenue Growth for 2026

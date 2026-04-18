@@ -3,6 +3,7 @@ title: "Oil Crashes 15% in a Single Day After Trump Announces Iran Ceasefire"
 description: "Crude oil plunged from $117 to $95 per barrel on April 8, 2026, after President Trump announced a two-week ceasefire with Iran. Here is what happened, what it means for energy prices, and why markets are still nervous."
 pubDate: "2026-04-18"
 tags: ["oil-prices", "iran", "geopolitics", "energy", "stock-market"]
+heroImage: "/thumbs/thumb-iran-ceasefire-oil-price-crash-april-2026.jpg"
 ---
 
 # Oil Crashes 15% in a Single Day After Trump Announces Iran Ceasefire

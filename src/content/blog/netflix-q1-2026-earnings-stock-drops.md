@@ -3,6 +3,7 @@ title: "Netflix Stock Drops 9% After Hours Despite Beating Q1 Revenue and Earnin
 description: "Netflix reported Q1 2026 revenue of $12.25 billion and EPS of $1.23, both above analyst estimates. The stock still fell 9% in after-hours trading on weaker-than-expected Q2 guidance."
 pubDate: "2026-04-18"
 tags: ["netflix", "earnings", "stock-market", "streaming", "tech-stocks"]
+heroImage: "/thumbs/thumb-netflix-q1-2026-earnings-stock-drops.jpg"
 ---
 
 # Netflix Stock Drops 9% After Hours Despite Beating Q1 Revenue and Earnings Estimates
