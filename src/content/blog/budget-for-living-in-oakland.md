@@ -2,6 +2,7 @@
 title: "Budget for Living in Oakland, CA: Monthly Cost Breakdown 2026"
 description: "Budget for living in Oakland, CA — a realistic monthly cost breakdown covering rent, food, transport, and tips to save money in the East Bay."
 pubDate: "2026-04-18"
+heroImage: "/thumbs/thumb-budget-for-living-in-oakland.jpg"
 tags: ["budgeting", "city budget", "california", "oakland"]
 ---
 
