@@ -17,6 +17,20 @@ Whether you're a visual thinker who loves dashboards, a spreadsheet power user w
 
 ---
 
+## ⭐ Ready-to-Use Budget Template (Download Now)
+
+If you're self-employed, freelance, or have variable income and want a **professional Excel budget template** without building from scratch, our **Freelancer Expense Tracker** has everything pre-built:
+
+- ✅ Pre-built formulas (no setup needed)
+- ✅ Automatic income + expense totals by category
+- ✅ Visual dashboard with charts
+- ✅ Tax estimate calculator for self-employed income
+- ✅ Works in Excel and Google Sheets
+
+**[→ Download the Freelancer Expense Tracker ($9.99)](https://gettidyflow.gumroad.com/l/freelancer-expense-tracker)**
+
+---
+
 ## What Makes a Great Budget Template?
 
 Before diving into specific templates, here's what separates a genuinely useful **budget template** from one you'll abandon after a week:
