@@ -202,6 +202,8 @@ Try Tiller for Google Sheets (automated bank feeds) or build a custom Notion fin
 - Freelancer? Check our [freelancer budget template](/blog/budget-template-for-freelancers/) for irregular income tracking.
 - Planning a wedding? Our [wedding budget planning guide](/blog/wedding-budget-planning-guide/) has specialized templates.
 - Getting a divorce? Financial separation is complex — our [divorce budget checklist](/blog/divorce-budget-checklist/) helps.
+- Healthcare worker or nurse? Shift differentials and overtime make budgeting tricky — our [budget template for nurses](/blog/budget-template-for-nurses/) handles the specifics.
+- Expecting a baby? The costs add up fast — our [new baby budget checklist](/blog/new-baby-budget-checklist/) covers everything from diapers to childcare.
 
 ---
 
