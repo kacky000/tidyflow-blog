@@ -1,6 +1,6 @@
 ---
 title: "7 Best Free Notion Personal Finance Templates 2026 (Tested & Ranked)"
-description: "We tested 25+ Notion personal finance templates and ranked the 7 best for 2026. Compare free & paid budget trackers, expense logs & savings dashboards with real screenshots — setup in 5 minutes."
+description: "We tested 25+ Notion personal finance templates and ranked the 7 best for 2026. Compare free & paid budget trackers, expense logs & savings dashboards with real data — setup in 5 minutes."
 pubDate: 2026-03-05
 updatedDate: 2026-04-01
 tags: ["notion", "budgeting", "personal finance", "templates", "notion templates"]
