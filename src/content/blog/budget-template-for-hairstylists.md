@@ -157,15 +157,15 @@ If you're on commission, your budgeting is simpler — treat it like a W-2 job. 
 
 ---
 
-## FAQ
+## Frequently Asked Questions
 
-**Q: How much should I charge per service to hit my income goal?**
+### How much should I charge per service to hit my income goal?
 Work backwards: (Monthly expenses + taxes + savings) ÷ estimated monthly clients = minimum revenue per client. If you need $5,000/month net and see 80 clients/month, you need $62.50/client on average (before tips).
 
-**Q: Should I form an LLC?**
+### Should I form an LLC?
 Consult a tax professional, but many booth renters benefit from forming a single-member LLC for liability protection and potentially tax advantages.
 
-**Q: How do I budget if I'm slow right now?**
+### How do I budget if I'm slow right now?
 Cut variable expenses immediately and draw from your slow-season buffer. If there's no buffer, prioritize fixed costs (booth rental, rent, insurance) and pause discretionary spending until client load recovers.
 
 ---

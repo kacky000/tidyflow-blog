@@ -164,15 +164,15 @@ Late-paying clients are common in VA work. Build a cash flow buffer:
 
 ---
 
-## FAQ
+## Frequently Asked Questions
 
-**Q: When should I form an LLC?**
+### When should I form an LLC?
 Once you're earning $30,000+/year from VA work, consult a tax professional about LLC benefits. An S-Corp election at higher income levels can reduce self-employment taxes.
 
-**Q: What if a client refuses to pay?**
+### What if a client refuses to pay?
 Start with formal written demand. For amounts under $10,000, small claims court is an option. Prevention is better: use contracts with clear payment terms and stop work after 30 days of non-payment.
 
-**Q: Should I specialize or offer general VA services?**
+### Should I specialize or offer general VA services?
 Specialists consistently earn 2–3× more than generalists. Once you have basic VA skills, build depth in one area (social media, bookkeeping, tech, executive support) and market that specialization.
 
 ---

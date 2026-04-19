@@ -83,15 +83,15 @@ This reflection step is what separates kakeibo from simple expense tracking. Pai
 - **Don't judge yourself.** Kakeibo is about awareness, not perfection. A "bad" spending week is still valuable data.
 - **Start with one month.** Commit to 30 days. Most people see results by week three.
 
-## FAQ
+## Frequently Asked Questions
 
-**Q: Do I have to use pen and paper?**
+### Do I have to use pen and paper?
 Traditionally, yes — the handwriting is part of the mindfulness practice. But if digital tools help you stay consistent, a simple spreadsheet or Notion tracker works too. The key is the reflection habit, not the medium.
 
-**Q: How much should I aim to save with kakeibo?**
+### How much should I aim to save with kakeibo?
 Kakeibo practitioners in Japan commonly target saving 35% of income. Start wherever feels realistic — even 10% — and increase over time. The savings goal is set first, not last.
 
-**Q: Is kakeibo good for couples?**
+### Is kakeibo good for couples?
 Yes. Many Japanese households use a shared kakeibo. It creates transparency and a weekly conversation about money that most couples avoid. Try a joint monthly review session.
 
 ## Start Your Mindful Budgeting Journey

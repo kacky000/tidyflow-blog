@@ -165,18 +165,18 @@ Nanny employment is inherently less stable than corporate employment:
 
 ---
 
-## FAQ
+## Frequently Asked Questions
 
-**Q: Am I entitled to overtime?**
+### Am I entitled to overtime?
 Yes. Under federal law (and most state laws), you're entitled to time-and-a-half for hours worked over 40 in a week. Live-in nannies may have different overtime rules depending on the state.
 
-**Q: Can I collect unemployment if my nanny job ends?**
+### Can I collect unemployment if my nanny job ends?
 Only if you were paid on the books (W-2 employee) and your state includes household workers in unemployment coverage. Most states do, but only for documented employment.
 
-**Q: Should I open a Roth IRA?**
+### Should I open a Roth IRA?
 Yes — strongly recommended for nannies. Roth IRA contributions come from post-tax income, so if you're in a lower tax bracket now, you lock in tax-free growth for retirement. Max contribution: $7,000/year (2024).
 
-**Q: What if my employer won't put me on the books?**
+### What if my employer won't put me on the books?
 You can still report the income yourself on Schedule H when filing taxes. Or look for a family that will — being on the books is increasingly a non-negotiable for experienced nannies.
 
 ---

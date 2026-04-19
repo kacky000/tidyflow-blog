@@ -95,16 +95,27 @@ For more strategies on budgeting with unpredictable income, check out our guide 
 - **Ignoring debt** — The anti-budget covers minimums, but high-interest debt needs a plan
 - **Never checking in** — "No tracking" doesn't mean "no awareness." Glance at your balance weekly
 
-## FAQ
+## Frequently Asked Questions
 
-**Q: Is the anti-budget method actually effective?**
-A: Yes — for the right person. Research shows that automation is the #1 predictor of savings success. The anti-budget forces automation, which is why it works even when "willpower budgets" fail.
+### Is the anti-budget method actually effective?
 
-**Q: Can I combine the anti-budget with other methods?**
-A: Absolutely. Many people use the anti-budget as their base system but track one specific area (like dining out) where they tend to overspend.
+Yes — for the right person. Research shows that automation is the #1 predictor of savings success. The anti-budget forces automation, which is why it works even when "willpower budgets" fail repeatedly.
 
-**Q: How much should I save with the anti-budget?**
-A: Aim for 20% of after-tax income. If you're starting from zero savings, begin at 10% and increase gradually. The key is consistency over perfection.
+### Can I combine the anti-budget with other methods?
+
+Absolutely. Many people use the anti-budget as their base system but track one specific area (like dining out) where they tend to overspend. It pairs especially well with the [80/20 budget rule](/blog/80-20-budget-rule) framework.
+
+### How much should I save with the anti-budget?
+
+Aim for 20% of after-tax income. If you're starting from zero savings, begin at 10% and increase gradually. The key is consistency over perfection — saving 10% every month beats saving 25% for one month and quitting.
+
+### What's the difference between the anti-budget and the pay yourself first method?
+
+They're essentially the same concept with different names. "Pay yourself first" is the older term; "anti-budget" is Paula Pant's branding for the same idea. Both prioritize automating savings before spending anything else.
+
+### Can the anti-budget work on a low income?
+
+Yes, but the math gets tighter. On a low income, your fixed costs may consume most of your paycheck, leaving little room for a meaningful savings percentage. Start with whatever you can automate — even $25/month — and scale up as your income grows.
 
 ## Start Your Anti-Budget Today
 

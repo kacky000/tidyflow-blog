@@ -150,13 +150,13 @@ That said, most users find one tool sufficient. If you're deciding between the t
 
 ## Frequently Asked Questions
 
-**Q: Is PocketGuard safe to connect to my bank?**
+### Is PocketGuard safe to connect to my bank?
 PocketGuard uses Plaid for bank connections, which is a widely used and regulated financial data service. The connection is read-only — PocketGuard cannot move money. However, you are trusting a third party with access to your financial data, which carries inherent privacy considerations. Always read the privacy policy before connecting.
 
-**Q: Does Notion have a free budgeting template?**
+### Does Notion have a free budgeting template?
 Notion's template gallery includes free budget templates. There are also many high-quality free and paid templates available from the community on sites like Gumroad. TidyFlow offers a range of budget templates specifically designed for Notion users.
 
-**Q: Which is better for paying off debt?**
+### Which is better for paying off debt?
 PocketGuard Plus has a built-in debt payoff planner. Notion requires you to build one (or use a template), but the result can be more customizable — for example, tracking debt payoff alongside savings goals and monthly cash flow in a single dashboard. Both can work; PocketGuard is easier, Notion is more powerful if you set it up well.
 
 ---

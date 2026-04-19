@@ -103,16 +103,16 @@ Pair this with a solid budgeting system so you can see exactly how utility savin
 
 ---
 
-## FAQ
+## Frequently Asked Questions
 
-**Q: What's the single fastest way to reduce my electricity bill?**
-A: Adjust your thermostat by 2–3 degrees (lower in winter, higher in summer). This alone can cut your heating and cooling costs by 5–10% with zero upfront investment.
+### What's the single fastest way to reduce my electricity bill?
+Adjust your thermostat by 2–3 degrees (lower in winter, higher in summer). This alone can cut your heating and cooling costs by 5–10% with zero upfront investment.
 
-**Q: How much can I realistically save by reducing utility bills?**
-A: Most households can cut 15–25% of their utility spending through a combination of behavioral changes and low-cost upgrades. On a $300/month utility budget, that's $45–$75/month, or $540–$900 per year.
+### How much can I realistically save by reducing utility bills?
+Most households can cut 15–25% of their utility spending through a combination of behavioral changes and low-cost upgrades. On a $300/month utility budget, that's $45–$75/month, or $540–$900 per year.
 
-**Q: Is it worth buying solar panels to reduce my electric bill?**
-A: Solar panels can eliminate your electric bill entirely, but they require a significant upfront investment ($15,000–$25,000 after rebates). The payback period is typically 7–12 years. Focus on the low-cost wins in this guide first, then evaluate solar when your budget allows.
+### Is it worth buying solar panels to reduce my electric bill?
+Solar panels can eliminate your electric bill entirely, but they require a significant upfront investment ($15,000–$25,000 after rebates). The payback period is typically 7–12 years. Focus on the low-cost wins in this guide first, then evaluate solar when your budget allows.
 
 ---
 

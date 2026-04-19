@@ -161,13 +161,13 @@ By California standards, these are achievable figures. Median household income i
 
 ## Frequently Asked Questions
 
-**Q: Is Bakersfield really that cheap for California?**
+### Is Bakersfield really that cheap for California?
 Yes. Bakersfield's rent averages roughly 60% less than San Francisco and about 45% less than Los Angeles. For a major California city with over 400,000 residents, it is genuinely affordable. The trade-off is a hotter climate, car dependency, and fewer cultural amenities than coastal metros.
 
-**Q: What are the hidden costs of living in Bakersfield?**
+### What are the hidden costs of living in Bakersfield?
 The biggest surprise for new residents is the summer electricity bill. AC running constantly from June through September can add $100–$150/month to your average utility costs. Car ownership is also effectively mandatory, which adds $400–$700/month in transportation costs.
 
-**Q: Is Bakersfield a good place to save money?**
+### Is Bakersfield a good place to save money?
 For California, yes. If you earn a Bay Area remote salary while living in Bakersfield, the cost-of-living gap can allow you to save aggressively. Many remote workers in tech earn $100,000+ while paying $1,200–$1,500 for a 1BR apartment.
 
 ---

@@ -162,15 +162,15 @@ Budget for the exam cost ($400–$800) and continuing education ($500–$2,000) 
 
 ---
 
-## FAQ
+## Frequently Asked Questions
 
-**Q: Should I refinance my student loans?**
+### Should I refinance my student loans?
 Only if you're not pursuing PSLF and want a lower interest rate on private loans. Never refinance federal loans to private if you're in PSLF-eligible employment — you'll permanently lose forgiveness eligibility.
 
-**Q: Is travel PT worth it financially?**
+### Is travel PT worth it financially?
 For debt repayment: yes, strongly. The tax-free housing stipend dramatically increases effective income. The tradeoff is lifestyle instability and lack of permanence.
 
-**Q: What's the best emergency fund size for PTs?**
+### What's the best emergency fund size for PTs?
 3 months of expenses minimum. PTs in travel or contract positions should target 6 months due to assignment gaps.
 
 ---

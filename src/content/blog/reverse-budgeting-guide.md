@@ -90,15 +90,15 @@ It's less ideal if you're struggling with debt or need to actively [stick to a s
 3. **Ignoring irregular expenses.** Car registration, annual subscriptions, holiday gifts — these sneak up. Keep a small buffer in checking for these.
 4. **Never reviewing.** Reverse budgeting is low-maintenance, not zero-maintenance. Check in quarterly to see if your savings rate should increase.
 
-## FAQ
+## Frequently Asked Questions
 
-**Q: How is reverse budgeting different from the 50/30/20 rule?**
+### How is reverse budgeting different from the 50/30/20 rule?
 The 50/30/20 rule assigns percentages to three categories (needs, wants, savings). Reverse budgeting only cares about one number: your savings amount. Everything else is unstructured. It's simpler but offers less control over spending patterns.
 
-**Q: Can I use reverse budgeting with irregular income?**
+### Can I use reverse budgeting with irregular income?
 It's harder but possible. Save a fixed dollar amount (not percentage) based on your lowest expected income month. In high-income months, save more. The key is that the base savings transfer is non-negotiable.
 
-**Q: What if I can't save 20%?**
+### What if I can't save 20%?
 Save 5%. Save 3%. Save $50. The amount matters less than the habit. Automate whatever you can, and increase it over time. A person saving 5% consistently will outperform someone who "plans to save 20%" but never does.
 
 ## Build Your Savings Autopilot

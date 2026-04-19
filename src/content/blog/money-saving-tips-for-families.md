@@ -140,13 +140,13 @@ For a complete family budgeting system, visit [TidyFlow on Gumroad](https://gett
 
 ---
 
-## FAQ
+## Frequently Asked Questions
 
-**Q: How much should a family of four spend on groceries per month?**
-A: The USDA "moderate" food plan puts a family of four (two adults, two children) at $900–$1,000 per month. With active meal planning and strategic shopping, many families reduce this to $600–$750. The "thrifty" plan goes as low as $600–$700 per month.
+### How much should a family of four spend on groceries per month?
+The USDA "moderate" food plan puts a family of four (two adults, two children) at $900–$1,000 per month. With active meal planning and strategic shopping, many families reduce this to $600–$750. The "thrifty" plan goes as low as $600–$700 per month.
 
-**Q: At what age should kids get an allowance?**
-A: Most financial educators recommend starting around age 5–6, when children can begin to understand basic money concepts. Even a simple $2–$3/week with the spend/save/give framework builds habits that compound over time.
+### At what age should kids get an allowance?
+Most financial educators recommend starting around age 5–6, when children can begin to understand basic money concepts. Even a simple $2–$3/week with the spend/save/give framework builds habits that compound over time.
 
-**Q: How do we get the whole family on board with budgeting?**
-A: Frame it around shared goals rather than restrictions. "We're saving for a Disney trip" is far more motivating than "we need to spend less." Make the goal visible — a chart on the fridge tracking progress — and celebrate milestones together.
+### How do we get the whole family on board with budgeting?
+Frame it around shared goals rather than restrictions. "We're saving for a Disney trip" is far more motivating than "we need to spend less." Make the goal visible — a chart on the fridge tracking progress — and celebrate milestones together.

@@ -133,13 +133,13 @@ Oakland gives you Bay Area access at a meaningful discount. The BART commute fro
 
 ## Frequently Asked Questions
 
-**Q: Is Oakland cheaper than San Francisco?**
+### Is Oakland cheaper than San Francisco?
 Yes — meaningfully so. Average 1BR rent in Oakland is roughly $900/month less than San Francisco. Overall cost of living is about 20–25% lower. However, Oakland is still expensive by national standards.
 
-**Q: Is it safe to live in Oakland?**
+### Is it safe to live in Oakland?
 Oakland has neighborhoods ranging from very safe to high-crime. Temescal, Rockridge, Grand Lake, and Piedmont Avenue are generally considered safe. East Oakland has higher crime rates in some pockets. Researching specific neighborhoods before signing a lease is strongly recommended.
 
-**Q: Can you live in Oakland on $50,000/year?**
+### Can you live in Oakland on $50,000/year?
 It is possible with roommates. A $50,000 salary works out to roughly $3,300–$3,600/month after California state taxes and federal taxes. That is tight for solo living but manageable with a roommate splitting a 2BR.
 
 ---

@@ -172,15 +172,15 @@ Yoga income can be unpredictable — here's how to build stability:
 
 ---
 
-## FAQ
+## Frequently Asked Questions
 
-**Q: Can I make a living as a full-time yoga teacher?**
+### Can I make a living as a full-time yoga teacher?
 Yes — but it requires intentional income diversification. Studio classes alone are rarely sufficient. Add private clients, workshops, and at least one online income stream.
 
-**Q: Should I register with Yoga Alliance?**
+### Should I register with Yoga Alliance?
 RYT credentials open doors — many studios require them, and clients respect the certification. The $99/year is worth it once you're actively teaching.
 
-**Q: How do I handle the physical wear of teaching 20+ classes per week?**
+### How do I handle the physical wear of teaching 20+ classes per week?
 Budget for physical self-care: massage, chiropractic, PT if needed. Yoga teachers have high rates of overuse injuries, especially in their late 30s–40s. Healthcare costs should be a line item.
 
 ---

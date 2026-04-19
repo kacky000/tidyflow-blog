@@ -160,15 +160,15 @@ Wide range — but now you have a framework to fill in your real numbers.
 
 ---
 
-## FAQ
+## Frequently Asked Questions
 
-**Q: How much should I budget for an average local move?**
+### How much should I budget for an average local move?
 For a 1–2 bedroom local move with professional movers, budget $1,500–$3,500 including all the hidden costs listed above. For DIY, $800–$1,500 is more realistic when you include supplies, deposits, and incidentals.
 
-**Q: Can I deduct moving expenses on my taxes?**
+### Can I deduct moving expenses on my taxes?
 Since 2018, moving expense deductions are only available to active-duty military members under most circumstances. For everyone else, this deduction was suspended. Check with a tax professional for your specific situation.
 
-**Q: What's the cheapest time of year to move?**
+### What's the cheapest time of year to move?
 September through April (outside of summer) and weekdays are consistently cheaper. Moving mid-month also tends to be cheaper than end-of-month, when demand peaks as leases turn over.
 
 ---

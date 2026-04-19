@@ -216,18 +216,18 @@ One major Albuquerque advantage: **no personal income tax on Social Security**, 
 
 ---
 
-## FAQ
+## Frequently Asked Questions
 
-**Q: Is Albuquerque affordable for remote workers?**
+### Is Albuquerque affordable for remote workers?
 Yes — especially if your income is from a higher-cost metro. A $75K remote salary from San Francisco or NYC goes significantly further in Albuquerque.
 
-**Q: Can I live in Albuquerque without a car?**
+### Can I live in Albuquerque without a car?
 Technically yes if you live near UNM or Downtown and work remotely. In practice, most residents need a car for shopping, entertainment, and accessing the broader city.
 
-**Q: Is Albuquerque safe?**
+### Is Albuquerque safe?
 Albuquerque has elevated property crime rates compared to national averages. Research specific neighborhoods — Northeast Heights and Rio Rancho suburbs are generally considered safer for families.
 
-**Q: How does Albuquerque compare to Santa Fe?**
+### How does Albuquerque compare to Santa Fe?
 Santa Fe is significantly more expensive (especially housing) and more tourist-oriented. Albuquerque has more job opportunities and lower rents.
 
 ---

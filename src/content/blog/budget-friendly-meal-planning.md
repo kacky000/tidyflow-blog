@@ -146,16 +146,16 @@ Pairing meal planning with a complete budget helps you see exactly how food savi
 
 ---
 
-## FAQ
+## Frequently Asked Questions
 
-**Q: Is budget friendly meal planning time-consuming?**
-A: The initial setup takes 30–60 minutes per week, but it saves 2–4 hours of weeknight cooking and decision-making. Most people find it actually frees up time once the habit is established.
+### Is budget friendly meal planning time-consuming?
+The initial setup takes 30–60 minutes per week, but it saves 2–4 hours of weeknight cooking and decision-making. Most people find it actually frees up time once the habit is established.
 
-**Q: Can I eat healthy on a $200–$300 food budget?**
-A: Absolutely. Beans, lentils, eggs, oats, frozen vegetables, and seasonal produce are among the most nutrient-dense and affordable foods available. Budget eating and healthy eating overlap far more than most people think.
+### Can I eat healthy on a $200–$300 food budget?
+Absolutely. Beans, lentils, eggs, oats, frozen vegetables, and seasonal produce are among the most nutrient-dense and affordable foods available. Budget eating and healthy eating overlap far more than most people think.
 
-**Q: How do I stick to my grocery list?**
-A: Shop with a full stomach, use a physical or digital list and check items off as you go, set a timer for your shopping trip, and use grocery pickup/delivery to avoid impulse purchases entirely.
+### How do I stick to my grocery list?
+Shop with a full stomach, use a physical or digital list and check items off as you go, set a timer for your shopping trip, and use grocery pickup/delivery to avoid impulse purchases entirely.
 
 ---
 

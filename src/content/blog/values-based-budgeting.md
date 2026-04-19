@@ -105,15 +105,15 @@ For more pitfalls, read our guide on [budgeting mistakes to avoid](/blog/budgeti
 
 If traditional budgeting never clicked for you, it might not be a discipline problem — it might be a [motivation problem](/blog/how-to-budget-when-you-hate-budgeting). Values based budgeting solves that by connecting your money to your meaning.
 
-## FAQ
+## Frequently Asked Questions
 
-**Q: Isn't this just "spend on what you want"?**
+### Isn't this just "spend on what you want"?
 No. It requires deliberate identification of values, honest review of current spending, and active reallocation. "Spend on what you want" is reactive. Values based budgeting is intentional.
 
-**Q: How often should I revisit my values?**
+### How often should I revisit my values?
 Review quarterly. Life changes — a new relationship, a career shift, becoming a parent — can reshape your priorities. Your budget should evolve with you.
 
-**Q: Can values based budgeting work with a tight income?**
+### Can values based budgeting work with a tight income?
 Yes, and it might matter even more. When every dollar counts, spending on things that don't matter to you is a bigger loss. Even small reallocations — $30 from unused subscriptions to a hobby you love — make a real difference.
 
 ## Align Your Budget With Your Life

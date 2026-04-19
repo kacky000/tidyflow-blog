@@ -90,16 +90,16 @@ Once your emergency fund is full, redirect that automatic transfer to investment
 - **Not adjusting for income changes** — Got a raise? Increase your savings rate before lifestyle inflation kicks in.
 - **Saving but not investing** — Cash in a savings account loses to inflation. Once your emergency fund is set, invest the rest.
 
-## FAQ
+## Frequently Asked Questions
 
-**Q: What if I can't afford to pay myself first?**
-A: Start with 1%. Even $30-50/month builds the habit. The amount matters less than the automation. Increase gradually as you find areas to cut.
+### What if I can't afford to pay myself first?
+Start with 1%. Even $30-50/month builds the habit. The amount matters less than the automation. Increase gradually as you find areas to cut.
 
-**Q: Should I pay off debt or pay myself first?**
-A: Both. Pay minimums on all debt, then split your PYF amount: 50% to high-interest debt payoff, 50% to emergency fund. Once you have $1,000 in emergency savings, shift 100% to debt until it's gone.
+### Should I pay off debt or pay myself first?
+Both. Pay minimums on all debt, then split your PYF amount: 50% to high-interest debt payoff, 50% to emergency fund. Once you have $1,000 in emergency savings, shift 100% to debt until it's gone.
 
-**Q: How is PYF different from the anti-budget?**
-A: They're closely related. The anti-budget is a complete philosophy (save first, spend freely, no tracking). PYF is a specific tactic (automate savings on payday). Most anti-budgeters use PYF as their core mechanism.
+### How is PYF different from the anti-budget?
+They're closely related. The anti-budget is a complete philosophy (save first, spend freely, no tracking). PYF is a specific tactic (automate savings on payday). Most anti-budgeters use PYF as their core mechanism.
 
 ## Build Your Savings System
 

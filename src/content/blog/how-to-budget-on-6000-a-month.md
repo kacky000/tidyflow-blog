@@ -103,17 +103,17 @@ Pay yourself first. Transfer your savings amount on the same day your paycheck a
 
 ## Frequently Asked Questions
 
-**Q: Is $6,000 a month a good salary in 2026?**
+### Is $6,000 a month a good salary in 2026?
 
-A: It depends on where you live. In lower-cost cities and rural areas, $6,000/month ($72,000/year) is well above average and allows comfortable saving. In high-cost metros like San Francisco or New York, it covers basics but leaves limited margin. The good news: with a disciplined budget, you can build real financial progress at this income level regardless of location.
+It depends on where you live. In lower-cost cities and rural areas, $6,000/month ($72,000/year) is well above average and allows comfortable saving. In high-cost metros like San Francisco or New York, it covers basics but leaves limited margin. The good news: with a disciplined budget, you can build real financial progress at this income level regardless of location.
 
-**Q: How much should I save if I make $6,000 a month?**
+### How much should I save if I make $6,000 a month?
 
-A: Using the 50/30/20 rule on a $5,000 take-home, aim for at least $1,000/month in savings and debt payoff. If you can push this to $1,200–$1,500 by trimming wants spending, you'll hit major financial milestones significantly faster. Start by fully funding a 3-month emergency fund, then shift focus to retirement contributions and long-term investing.
+Using the 50/30/20 rule on a $5,000 take-home, aim for at least $1,000/month in savings and debt payoff. If you can push this to $1,200–$1,500 by trimming wants spending, you'll hit major financial milestones significantly faster. Start by fully funding a 3-month emergency fund, then shift focus to retirement contributions and long-term investing.
 
-**Q: How do I stick to a budget when my expenses vary month to month?**
+### How do I stick to a budget when my expenses vary month to month?
 
-A: Build your budget around your lowest predictable income month, not your best. For variable expenses like groceries and dining, set a weekly spending cap — for example, $150/week for food — instead of a monthly total. It's easier to check in and course-correct mid-month before a category runs over. Using a template you update weekly, rather than once a month, makes a significant difference in how consistently you stay on track.
+Build your budget around your lowest predictable income month, not your best. For variable expenses like groceries and dining, set a weekly spending cap — for example, $150/week for food — instead of a monthly total. It's easier to check in and course-correct mid-month before a category runs over. Using a template you update weekly, rather than once a month, makes a significant difference in how consistently you stay on track.
 
 ---
 

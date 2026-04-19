@@ -115,16 +115,16 @@ When you're ready to look at your overall financial picture, the [zero-based bud
 
 ---
 
-## FAQ
+## Frequently Asked Questions
 
-**Q: Should I pay off student loans or invest first?**
-A: A common rule of thumb: if your loan interest rate is above 6–7%, prioritize debt payoff. Below that, a split approach (minimum loan payments + investing) often makes mathematical sense, since long-term investment returns historically exceed lower interest rates. Always contribute enough to get your employer's 401(k) match first — that's a 50–100% instant return.
+### Should I pay off student loans or invest first?
+A common rule of thumb: if your loan interest rate is above 6–7%, prioritize debt payoff. Below that, a split approach (minimum loan payments + investing) often makes mathematical sense, since long-term investment returns historically exceed lower interest rates. Always contribute enough to get your employer's 401(k) match first — that's a 50–100% instant return.
 
-**Q: Can I pay off $50,000 in student loans in 5 years?**
-A: Yes, but it requires significant income and aggressive budgeting. On a 5-year timeline, $50,000 at 6% requires payments of about $966/month. That's achievable for many people, especially those who can eliminate major discretionary expenses or increase income.
+### Can I pay off $50,000 in student loans in 5 years?
+Yes, but it requires significant income and aggressive budgeting. On a 5-year timeline, $50,000 at 6% requires payments of about $966/month. That's achievable for many people, especially those who can eliminate major discretionary expenses or increase income.
 
-**Q: Will paying off student loans hurt my credit score?**
-A: Paying off loans may cause a small, temporary dip in your credit score (closing an account reduces your credit mix). However, the reduction in your debt-to-income ratio and the financial freedom you gain far outweigh any minor score fluctuation.
+### Will paying off student loans hurt my credit score?
+Paying off loans may cause a small, temporary dip in your credit score (closing an account reduces your credit mix). However, the reduction in your debt-to-income ratio and the financial freedom you gain far outweigh any minor score fluctuation.
 
 ---
 
