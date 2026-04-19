@@ -192,6 +192,8 @@ Using the 50/30/20 budgeting rule (50% for needs), here's the minimum gross inco
 
 New Mexico's median household income is approximately $58,000, which covers budget living for a single person. Dual-income households live much more comfortably.
 
+Use the free [Budget Calculator](/tools/budget-calculator/) to see exactly how much you need based on your specific situation.
+
 ---
 
 ## New Mexico Taxes
@@ -232,10 +234,16 @@ Santa Fe is significantly more expensive (especially housing) and more tourist-o
 
 ## Build Your Albuquerque Budget
 
-Ready to create your personal budget for Albuquerque? Use our free [Budget Calculator](/tools/budget-calculator/) to customize these numbers to your specific income and lifestyle. You can also download our [Freelancer Expense Tracker](https://gettidyflow.gumroad.com/l/freelancer-expense-tracker) if you're self-employed or have variable income.
+Ready to create your personal budget for Albuquerque? Start with our free **[Budget Calculator →](/tools/budget-calculator/)** — plug in your income and customize every category to your actual Albuquerque lifestyle in minutes.
 
-For more city cost comparisons, see:
-- [Budget for Living in Phoenix](/blog/budget-for-living-in-phoenix/)
-- [Budget for Living in Las Vegas](/blog/budget-for-living-in-las-vegas/)
-- [Budget for Living in Salt Lake City](/blog/budget-for-living-in-salt-lake-city/)
-- [Budget for Living in Denver](/blog/budget-for-living-in-denver/)
+**Free tools to help you track your spending:**
+- 📊 [Budget Calculator](/tools/budget-calculator/) — Free online tool. No signup required.
+- 📋 [Freelancer Expense Tracker](https://gettidyflow.gumroad.com/l/freelancer-expense-tracker) — Excel spreadsheet for self-employed & variable income
+- 💍 [Wedding Budget Planner](https://gettidyflow.gumroad.com/l/wedding-budget-planner) — Planning a wedding in Albuquerque? This keeps every cost organized
+
+**More Southwest city budget guides:**
+- [Budget for Living in El Paso](/blog/budget-for-living-in-el-paso/) — Similar Southwest climate, lower costs
+- [Budget for Living in Salt Lake City](/blog/budget-for-living-in-salt-lake-city/) — Mountain West comparison
+- [Budget for Living in Denver](/blog/budget-for-living-in-denver/) — The premium Mountain West option
+- [Budget for Living in Phoenix](/blog/budget-for-living-in-phoenix/) — Warm climate, larger job market
+- [Budget for Living in Las Vegas](/blog/budget-for-living-in-las-vegas/) — No state income tax advantage
