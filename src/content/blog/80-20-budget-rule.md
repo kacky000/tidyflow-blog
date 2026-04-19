@@ -107,16 +107,27 @@ The key: **pick a ratio you can sustain for 12+ months.** Saving 30% for one mon
 - **Dipping into savings** — Your savings account is not a backup checking account. If you're regularly pulling money back, lower your savings rate to something sustainable.
 - **Ignoring debt** — 20% to savings while carrying 22% APR credit card debt is mathematically backwards. Prioritize high-interest debt first.
 
-## FAQ
+## Frequently Asked Questions
 
-**Q: Is 20% savings enough to retire comfortably?**
-A: For most people, yes. Saving 20% starting in your 20s-30s, invested in index funds, typically builds enough for a traditional retirement. If you want to retire early, you'll need 30-50%+.
+### Is 20% savings enough to retire comfortably?
 
-**Q: Can I count debt payments as part of the 20%?**
-A: Extra debt payments beyond minimums, yes. Minimum payments are part of the 80% (they're a fixed bill). Any extra you throw at debt counts toward your 20%.
+For most people, yes. Saving 20% starting in your 20s-30s, invested in index funds, typically builds enough for a traditional retirement at 65. If you want to retire early (before 55), you'll likely need a 30-50%+ savings rate.
 
-**Q: What if I can't save 20% right now?**
-A: Start with whatever you can — even 5%. The habit of automated saving matters more than the percentage. Increase by 1% each month until you reach 20%.
+### Can I count debt payments as part of the 20%?
+
+Extra debt payments beyond minimums, yes. Minimum payments are part of the 80% (they're a fixed expense). Any extra you throw at debt counts toward your 20% savings allocation.
+
+### What if I can't save 20% right now?
+
+Start with whatever you can — even 5%. The habit of automated saving matters more than the percentage. Increase by 1% every time you get a raise or reduce a fixed expense until you reach 20%.
+
+### Does the 80/20 rule work for variable income?
+
+Yes, with one adjustment: base your savings transfer on your lowest expected income month, not your average. When you earn more in a good month, manually move the extra to savings. This prevents overextending during lean periods.
+
+### How is the 80/20 budget rule related to the Pareto Principle?
+
+They share the 80/20 ratio but are unrelated concepts. The Pareto Principle (80% of results come from 20% of inputs) is from business economics. The 80/20 budget rule is simply a money management framework that happens to use the same numbers.
 
 ## Start With Two Numbers
 

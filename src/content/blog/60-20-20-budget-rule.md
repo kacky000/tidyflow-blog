@@ -90,16 +90,27 @@ If you're also budgeting on a [biweekly pay schedule](/blog/biweekly-budget-temp
 2. **Ignoring irregular expenses.** Car repairs, medical bills, and annual subscriptions happen. Budget a small buffer within your 60%.
 3. **Not automating savings.** If you wait to save "what's left," there won't be anything left. Automate first.
 
-## FAQ
+## Frequently Asked Questions
 
-**Q: Can I adjust the percentages?**
-Absolutely. The 60/20/20 rule is a guideline, not a law. If your needs are 55%, shift the extra 5% to wants or savings. The point is having a framework.
+### Can I adjust the percentages?
 
-**Q: Is 20% savings enough?**
-For most people, 20% is a solid savings rate. It can build a 6-month emergency fund in about 2.5 years and contribute meaningfully to retirement. If you can save more, do it.
+Absolutely. The 60/20/20 rule is a guideline, not a law. If your needs are 55%, shift the extra 5% to wants or savings. The point is having a framework, not hitting exact numbers.
 
-**Q: What if my needs already exceed 60%?**
+### Is 20% savings enough?
+
+For most people, 20% is a solid savings rate. Starting in your 30s, it can build a 6-month emergency fund in about 2.5 years and contribute meaningfully to retirement. If you can save more, do it — but 20% is a realistic and effective target for most households.
+
+### What if my needs already exceed 60%?
+
 That's a signal to either increase income or reduce fixed costs. Consider downsizing housing, refinancing debt, or finding a roommate. Use 60% as a target to work toward, not a requirement from day one.
+
+### How is the 60/20/20 rule different from the 60/20/20 Microsoft budget?
+
+Microsoft historically used a "60/20/20" framework in internal budgeting contexts that referred to time allocation, not money. The personal finance version described here — 60% needs, 20% savings, 20% wants — is entirely unrelated. Don't confuse the two.
+
+### Should I include my 401(k) contribution in the 20% savings bucket?
+
+Yes. Pre-tax 401(k) contributions count toward your savings allocation. Calculate your after-tax income before the 401(k) deduction, then count the 401(k) as part of your 20%. This avoids double-counting and keeps the math simple.
 
 ## Start Tracking Your Budget Today
 
