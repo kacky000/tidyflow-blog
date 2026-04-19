@@ -27,22 +27,27 @@ In any Notion page, type `/database` and select "Database - Full page." Name it 
 
 You need four columns at minimum:
 
-- **Name** (Title) — What you bought ("Groceries," "Netflix," "Gas")
-- **Amount** (Number, formatted as currency) — How much it cost
-- **Category** (Select) — What type of expense it is
-- **Date** (Date) — When you spent it
+| Column | Notion Type | Purpose |
+|--------|------------|---------|
+| Name | Title | What you bought ("Groceries," "Netflix," "Gas") |
+| Amount | Number (currency) | How much it cost |
+| Category | Select | What type of expense it is |
+| Date | Date | When you spent it |
+| Notes | Text | Optional context ("weekly run at Costco") |
 
-For categories, start simple. Here are 9 that cover most people:
+For categories, start with these 9 that cover most people's spending:
 
-1. 🏠 Housing
-2. 🍽️ Food & Dining
-3. 🚗 Transportation
-4. 💡 Utilities
-5. 🎮 Entertainment
-6. 👕 Clothing
-7. 🏥 Healthcare
-8. 📚 Education
-9. 💼 Other
+| Category | Examples |
+|----------|----------|
+| 🏠 Housing | Rent, mortgage, repairs, cleaning |
+| 🍽️ Food & Dining | Groceries, restaurants, coffee |
+| 🚗 Transportation | Gas, car payment, transit, Uber |
+| 💡 Utilities | Electric, internet, phone, water |
+| 🎮 Entertainment | Streaming, games, concerts, hobbies |
+| 👕 Clothing | Clothes, shoes, accessories |
+| 🏥 Healthcare | Doctor visits, prescriptions, gym |
+| 📚 Education | Courses, books, software subscriptions |
+| 💼 Other | Gifts, miscellaneous, anything that doesn't fit above |
 
 ### Step 3: Add a Notes Column (Optional)
 

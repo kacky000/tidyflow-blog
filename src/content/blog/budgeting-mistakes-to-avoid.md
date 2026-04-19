@@ -53,6 +53,18 @@ If your budget lives in a tool you don't enjoy using, you won't use it. A powerf
 
 **Fix:** Choose a tool you already use daily. If you live in Notion, budget in Notion. If you prefer pen and paper, use a notebook. Remove every possible barrier between you and the act of logging an expense.
 
+## All 7 Mistakes at a Glance
+
+| Mistake | Why It Fails | The Fix |
+|---------|-------------|---------|
+| Over-complicated system | You abandon it after day 3 | Track 3 things: what, how much, when |
+| Not tracking income | No full financial picture | Track income + expenses together |
+| Ignoring irregular expenses | "Surprise" annual bills derail the budget | Divide annual costs by 12; budget monthly |
+| Being too strict | Unsustainable → guilt → quitting | Give yourself a reasonable "wants" budget |
+| No regular reviews | Budget drifts with no correction | 2 min/night, 5 min/Sunday, 15 min/month |
+| Tracking every penny | Friction kills the habit | Round to the nearest dollar |
+| Using the wrong tool | You won't open a tool you dislike | Use a tool you already open daily |
+
 ## The Bottom Line
 
 Budgeting isn't about restriction. It's about awareness. When you know where your money goes, you naturally start making better decisions — without willpower or discipline.
