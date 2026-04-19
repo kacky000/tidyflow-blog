@@ -179,4 +179,30 @@ Neither is objectively better — they serve different types of budgeters.
 
 ---
 
+---
+
+## Frequently Asked Questions
+
+### Is Simplifi worth the money?
+
+At $3.99/month ($47.99/year), Simplifi is one of the more affordable budgeting apps with automatic bank sync. If you value automatic transaction tracking and clean spending reports and would otherwise spend 30+ minutes a month managing your budget manually, the cost is easily justified. If you're comfortable with manual tracking, Notion (free) achieves similar results for $0.
+
+### Can Notion replace a budgeting app like Simplifi?
+
+Yes — for the right person. Notion can replicate most budgeting functions (expense tracking, savings goals, category summaries) through database views. The key difference is automation: Simplifi imports transactions automatically; Notion requires manual entry or CSV imports. If you don't mind the manual step, Notion is a powerful and free alternative.
+
+### Which is better for self-employed budgeting?
+
+Notion, in most cases. Self-employed budgeting involves irregular income, multiple income streams, tax set-asides, and business expense tracking. Notion's flexible database structure handles these complexities well, while Simplifi's structured spending plans work best for regular W-2 income.
+
+### Does Simplifi connect to all banks?
+
+Simplifi connects to thousands of financial institutions via Plaid. However, some smaller credit unions and regional banks aren't supported. Before subscribing, check if your specific accounts are compatible using Simplifi's free trial.
+
+### Can I use both Simplifi and Notion together?
+
+Yes. Some people use Simplifi for automatic transaction tracking and reporting, then export data to Notion for deeper analysis, annual planning, or goal tracking. The combination is overkill for most users, but it works well if you want automation and customization simultaneously.
+
+---
+
 > **Not sure which budgeting method is right for you?** Start with our free [Budget Calculator](/tools/budget-calculator/) to see how your income breaks down, then decide which tool fits that approach best.
