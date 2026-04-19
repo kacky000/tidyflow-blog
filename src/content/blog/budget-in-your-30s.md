@@ -2,6 +2,7 @@
 title: "Budget in Your 30s: How to Manage Money During Life's Biggest Changes"
 description: "Master budgeting in your 30s with strategies for homeownership, growing families, career growth, and fighting lifestyle creep while building long-term wealth."
 pubDate: "2026-04-08"
+updatedDate: "2026-04-16"
 heroImage: "/thumbs/thumb-budget-in-your-30s.jpg"
 tags: ["budgeting", "30s", "family finance", "money management"]
 ---
@@ -94,6 +95,20 @@ Your 30s are the time to move beyond "just put it in a target-date fund":
 | Wants (dining, travel, fun) | $800 | 10% |
 | Miscellaneous | $500 | 6% |
 | **Total** | **$7,900** | **100%** |
+
+## 30s Financial Milestones: What to Hit and When
+
+Use this as a rough roadmap — everyone's situation is different, but these targets reflect common financial planning benchmarks:
+
+| Age | Retirement Savings Target | Emergency Fund | Key Priority |
+|-----|--------------------------|----------------|-------------|
+| 30 | 1× annual salary | 3 months expenses | Max 401(k) match; start Roth IRA |
+| 32 | 1.5× annual salary | 3–6 months expenses | Eliminate high-interest debt |
+| 35 | 2× annual salary | 6 months expenses | 403b/457b if available; open 529 if applicable |
+| 38 | 2.5–3× annual salary | 6 months expenses | Increase 401(k) beyond match; HSA if eligible |
+| 40 | 3× annual salary | 6 months expenses | Backdoor Roth; taxable brokerage investing |
+
+If you're behind on these targets, don't freeze — the best action is always to increase your savings rate by even 1–2% and let compounding do the work.
 
 ## Common Mistakes to Avoid in Your 30s
 

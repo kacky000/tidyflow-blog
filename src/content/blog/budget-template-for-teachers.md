@@ -3,6 +3,7 @@ title: "Budget Template for Teachers: Manage a 9-Month Salary All Year Long"
 description: "A practical budget template for teachers that covers 9-month vs 12-month pay, summer savings, out-of-pocket classroom costs, and tutoring income."
 heroImage: "/thumbs/thumb-budget-template-for-teachers.jpg"
 pubDate: 2026-03-15
+updatedDate: 2026-04-16
 tags: ["budget template", "teachers", "personal finance", "budgeting", "education"]
 author: "Tidyflow"
 ---
@@ -105,43 +106,22 @@ If you have significant tutoring income, you may also need to make quarterly est
 
 ## A Simple Budget Template Structure for Teachers
 
-Here's how to organize your budget categories:
+Here's how to organize your budget categories. This table gives you a starting point — adjust the percentages based on your salary and local cost of living:
 
-**Income**
+| Category | What Goes Here | Suggested % of Take-Home |
+|----------|---------------|--------------------------|
+| **Fixed Expenses** | Rent/mortgage, car payment, insurance, loan payments, subscriptions | 45–55% |
+| **Variable Necessities** | Groceries, utilities, gas/transit, healthcare copays | 15–20% |
+| **Teacher-Specific** | Classroom supplies ($40–60/mo), professional development, union dues | 3–5% |
+| **Summer Savings** | Monthly transfer to dedicated summer account (if on 9-month pay) | 5–10% |
+| **Personal/Discretionary** | Dining out, entertainment, clothing, personal care | 5–10% |
+| **Savings & Debt** | Emergency fund, retirement (403b/457b), debt paydown | 10–15% |
+
+**Income to track:**
 - Net teacher salary (monthly or per paycheck)
 - Summer school / extended year (if applicable)
 - Tutoring income (variable — actual, not estimated)
 - Other side income
-
-**Fixed Expenses**
-- Rent or mortgage
-- Car payment / transportation
-- Insurance (health, auto, renters/homeowners)
-- Student loan payments
-- Subscriptions
-
-**Variable Necessities**
-- Groceries
-- Utilities
-- Gas / transit
-- Healthcare copays
-
-**Teacher-Specific Categories**
-- Classroom supplies budget ($40–60/month recommended)
-- Professional development / union dues
-- Summer savings contribution
-
-**Personal / Discretionary**
-- Dining out
-- Entertainment
-- Clothing
-- Personal care
-
-**Savings & Debt**
-- Emergency fund contribution
-- Retirement (403b/457b contributions beyond automatic payroll)
-- Summer fund (if on 9-month pay)
-- Debt paydown
 
 ---
 
@@ -157,16 +137,27 @@ For a step-by-step monthly routine, see our [monthly budget checklist](/blog/mon
 
 ---
 
-## FAQ
+## Frequently Asked Questions
 
-**Q: Should I choose 9-month or 12-month pay distribution?**
+### Should I choose 9-month or 12-month pay distribution?
+
 If you have strong spending discipline and want to maximize your in-school-year cash flow, 9-month works. If you tend to overspend when paychecks are larger, 12-month distribution removes the temptation. Either works — what matters is being intentional.
 
-**Q: What's the best way to track classroom supply spending?**
+### What's the best way to track classroom supply spending?
+
 Keep a simple note on your phone or a dedicated envelope for receipts. Once a month, total it up and enter it in your budget. At year-end, you'll have a clear record for tax purposes with almost no extra effort.
 
-**Q: Do I need a separate spreadsheet for tutoring income?**
+### Do I need a separate spreadsheet for tutoring income?
+
 Not necessarily. A single budget spreadsheet with a "variable income" section handles it well. The key is recording income when it actually arrives, not when you expect it.
+
+### How much should a teacher save for summer each month?
+
+Divide your estimated total summer expenses by the number of school-year paychecks. Example: $6,000 summer expenses ÷ 20 paychecks = $300 per paycheck. Automate this transfer on payday so it happens before you can spend the money.
+
+### Can teachers claim classroom supplies on their taxes?
+
+Yes. The IRS Educator Expense Deduction allows eligible K–12 teachers to deduct up to $300 per year ($600 for married couples who are both educators) in unreimbursed classroom expenses — no itemizing required. Keep all receipts throughout the year.
 
 ---
 
