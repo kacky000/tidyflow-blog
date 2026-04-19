@@ -1,6 +1,7 @@
 ---
 title: "Budget Template for Nannies: Manage Household Income, Taxes & Benefits"
 description: "A complete budget template for nannies and au pairs. Learn how to handle household employment taxes, negotiate benefits, and manage cash payments in your personal budget."
+heroImage: "/thumbs/thumb-budget-template-for-nannies.jpg"
 pubDate: "2026-04-19"
 tags: ["budget template", "nannies", "household employment", "childcare", "personal finance"]
 ---

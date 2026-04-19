@@ -1,6 +1,7 @@
 ---
 title: "Budget Template for Yoga Instructors: Manage Studio Splits, Privates & Certification Costs"
 description: "A complete budget template for yoga instructors. Learn to handle studio revenue splits, private client income, teacher training costs, and the financial reality of building a yoga career."
+heroImage: "/thumbs/thumb-budget-template-for-yoga-instructors.jpg"
 pubDate: "2026-04-19"
 tags: ["budget template", "yoga instructors", "fitness", "self-employed", "teaching"]
 ---

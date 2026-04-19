@@ -1,6 +1,7 @@
 ---
 title: "Budget Template for Virtual Assistants: Manage Client Income, Software & Taxes"
 description: "A budget template built for virtual assistants. Learn how to handle multiple client income streams, track software expenses, set tax aside correctly, and price yourself for financial stability."
+heroImage: "/thumbs/thumb-budget-template-for-virtual-assistants.jpg"
 pubDate: "2026-04-19"
 tags: ["budget template", "virtual assistants", "remote work", "self-employed", "freelance"]
 ---

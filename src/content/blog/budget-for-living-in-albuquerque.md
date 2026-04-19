@@ -1,6 +1,7 @@
 ---
 title: "Budget for Living in Albuquerque, NM (2026 Cost of Living Guide)"
 description: "How much does it really cost to live in Albuquerque? This 2026 cost of living guide breaks down rent, food, transportation, and utilities with a complete monthly budget template."
+heroImage: "/thumbs/thumb-budget-for-living-in-albuquerque.jpg"
 pubDate: "2026-04-19"
 tags: ["budget", "albuquerque", "cost of living", "new mexico", "monthly budget"]
 ---

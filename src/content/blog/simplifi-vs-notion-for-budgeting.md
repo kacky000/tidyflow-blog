@@ -1,6 +1,7 @@
 ---
 title: "Simplifi by Quicken vs Notion for Budgeting: Which Is Better in 2026?"
 description: "Simplifi vs Notion for budgeting: a detailed comparison of features, pricing, automation, and who each tool is actually built for. Find out which one fits your financial life."
+heroImage: "/thumbs/thumb-simplifi-vs-notion-for-budgeting.jpg"
 pubDate: "2026-04-19"
 tags: ["budgeting", "simplifi", "notion", "budgeting app", "personal finance"]
 ---

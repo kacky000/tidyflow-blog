@@ -1,6 +1,7 @@
 ---
 title: "Budget Template for Physical Therapists: Manage Student Loans, Salary & Career Costs"
 description: "A budget template for physical therapists navigating DPT student loan debt, licensing costs, and salary growth. Includes PT-specific expense categories and income optimization strategies."
+heroImage: "/thumbs/thumb-budget-template-for-physical-therapists.jpg"
 pubDate: "2026-04-19"
 tags: ["budget template", "physical therapists", "student loans", "healthcare", "DPT"]
 ---

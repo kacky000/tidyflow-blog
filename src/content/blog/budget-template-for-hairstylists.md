@@ -1,6 +1,7 @@
 ---
 title: "Budget Template for Hairstylists: Manage Tips, Chair Rental & Variable Income"
 description: "A budget template designed specifically for hairstylists and cosmetologists. Learn to track tip income, manage booth rental costs, and save for taxes as a salon professional."
+heroImage: "/thumbs/thumb-budget-template-for-hairstylists.jpg"
 pubDate: "2026-04-19"
 tags: ["budget template", "hairstylists", "cosmetology", "self-employed", "tips income"]
 ---
