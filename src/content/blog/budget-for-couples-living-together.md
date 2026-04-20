@@ -8,6 +8,8 @@ tags: ["budgeting", "couples", "relationships", "shared-expenses"]
 
 # Budget for Couples Living Together: How to Split Bills Fairly Without Arguments
 
+**→ Use the free [Budget Calculator](/tools/budget-calculator/) to calculate each partner's proportional share instantly. Or grab the [Freelancer Expense Tracker](https://gettidyflow.gumroad.com/l/freelancer-expense-tracker) ($9.99) — includes shared expense tracking and income-proportional split calculators.**
+
 Money is one of the leading causes of relationship conflict, and it rarely comes from not having enough — it comes from not having an agreed-upon system. A **budget for couples living together** needs to solve one core problem: how do two people with different incomes, spending habits, and financial histories build a shared life without resentment building up over who pays for what. This guide gives you three proven systems, the pros and cons of each, and a practical framework for using money as something that brings you closer instead of driving you apart.
 
 ---

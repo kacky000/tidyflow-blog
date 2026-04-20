@@ -8,6 +8,8 @@ tags: ["budgeting", "welders", "blue-collar", "template"]
 
 # Budget Template for Welders: Manage Variable Income Like a Pro
 
+**→ Use the free [Budget Calculator](/tools/budget-calculator/) to find your baseline income in 2 minutes. Or grab the [Freelancer Expense Tracker](https://gettidyflow.gumroad.com/l/freelancer-expense-tracker) ($9.99) — built for variable-income trades with overtime tracking and a buffer account formula.**
+
 If you're a welder, you already know how unpredictable a paycheck can be. A **budget template for welders** has to handle overtime spikes, slow project weeks, union dues, certification renewals, and the ongoing cost of keeping your gear in shape. Standard budget apps weren't built for that. This guide walks you through a system that actually works for the welding trade.
 
 ---
