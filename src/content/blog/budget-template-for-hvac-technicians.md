@@ -2,6 +2,7 @@
 title: "Budget Template for HVAC Technicians: Seasonal Income, Year-Round Savings"
 description: "A budget template for HVAC technicians that handles summer and winter income peaks, spring/fall slow seasons, van costs, certification fees, and emergency call pay."
 pubDate: "2026-04-20"
+heroImage: "/thumbs/thumb-budget-template-for-hvac-technicians.jpg"
 tags: ["budgeting", "hvac", "blue-collar", "seasonal-income"]
 ---
 

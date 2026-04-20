@@ -2,6 +2,7 @@
 title: "Back to School Budget Checklist: Save Money Without Sacrificing Quality"
 description: "A back to school budget checklist with grade-level supply lists, early vs. sale shopping strategies, and tips to cut spending without sending your kids back empty-handed."
 pubDate: "2026-04-20"
+heroImage: "/thumbs/thumb-back-to-school-budget-checklist.jpg"
 tags: ["budgeting", "back-to-school", "checklist", "education"]
 ---
 

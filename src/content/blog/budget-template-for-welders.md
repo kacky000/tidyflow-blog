@@ -2,6 +2,7 @@
 title: "Budget Template for Welders: Manage Variable Income Like a Pro"
 description: "A budget template for welders that handles overtime pay, project-based contracts, union dues, PPE costs, and tool maintenance so you keep more of every paycheck."
 pubDate: "2026-04-20"
+heroImage: "/thumbs/thumb-budget-template-for-welders.jpg"
 tags: ["budgeting", "welders", "blue-collar", "template"]
 ---
 

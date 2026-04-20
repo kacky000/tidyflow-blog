@@ -2,6 +2,7 @@
 title: "First Apartment Budget Checklist: Everything You Need Before Moving In"
 description: "A complete first apartment budget checklist covering security deposits, move-in costs, furniture, utilities, renter's insurance, and the hidden expenses nobody warns you about."
 pubDate: "2026-04-20"
+heroImage: "/thumbs/thumb-first-apartment-moving-budget.jpg"
 tags: ["budgeting", "apartment", "moving", "checklist", "young-adults"]
 ---
 

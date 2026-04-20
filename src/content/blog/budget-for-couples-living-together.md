@@ -2,6 +2,7 @@
 title: "Budget for Couples Living Together: How to Split Bills Fairly Without Arguments"
 description: "A budget for couples living together that covers three bill-splitting methods, joint account pros and cons, shared financial goals, and how to hold regular money dates without the drama."
 pubDate: "2026-04-20"
+heroImage: "/thumbs/thumb-budget-for-couples-living-together.jpg"
 tags: ["budgeting", "couples", "relationships", "shared-expenses"]
 ---
 

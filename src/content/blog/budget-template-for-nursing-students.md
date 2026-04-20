@@ -2,6 +2,7 @@
 title: "Budget Template for Nursing Students: Survive Clinical Rotations on a Tight Budget"
 description: "A budget template for nursing students that covers scrubs, NCLEX prep, clinical supplies, licensure fees, and how to manage money while balancing school and part-time work."
 pubDate: "2026-04-20"
+heroImage: "/thumbs/thumb-budget-template-for-nursing-students.jpg"
 tags: ["budgeting", "nursing-students", "student", "healthcare"]
 ---
 

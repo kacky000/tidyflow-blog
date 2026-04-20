@@ -2,6 +2,7 @@
 title: "Budget Template for Occupational Therapists: Student Loans, Licensure & Beyond"
 description: "A budget template for occupational therapists covering OTD/MOT loan repayment, PSLF eligibility, state licensure fees, CEU requirements, and salary differences across settings."
 pubDate: "2026-04-20"
+heroImage: "/thumbs/thumb-budget-template-for-occupational-therapists.jpg"
 tags: ["budgeting", "occupational-therapist", "healthcare", "student-loans"]
 ---
 
