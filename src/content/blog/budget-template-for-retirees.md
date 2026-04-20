@@ -114,6 +114,12 @@ Review your template at the end of each month. Look for:
 
 For a complete month-by-month action plan, see our [Retirement Budget Checklist](/blog/retirement-budget-checklist) — it covers every category you need to review before and during retirement.
 
+---
+
+**Ready to put this into action?** Our [Budget Calculator](/tools/budget-calculator) lets you enter your real income and expenses and see your monthly balance instantly — no signup, no spreadsheet setup.
+
+---
+
 ## Managing Healthcare Costs in Your Budget
 
 Healthcare is the wildcard in any retiree budget. Here are strategies to keep it manageable:
@@ -159,3 +165,8 @@ A solid budget template turns retirement from stressful to sustainable. Whether 
 - [Budget Calculator](/tools/budget-calculator) — Balance your monthly income and expenses in seconds
 
 Need a ready-made tracking solution? The [Freelancer Expense Tracker](https://gettidyflow.gumroad.com/l/freelancer-expense-tracker) ($9.99) works beautifully for retirees with multiple income streams and detailed expense categories — just rename the categories to fit your retirement life.
+
+**More helpful guides:**
+- [Annual Budget Template](/blog/annual-budget-template) — Plan the full year at once to spot seasonal cash flow gaps
+- [Anti-Budget Method Guide](/blog/anti-budget-method-guide) — A simpler approach if traditional budgeting feels overwhelming
+- [How to Track Expenses in Notion](/blog/how-to-track-expenses-in-notion) — Digital budgeting setup from scratch
