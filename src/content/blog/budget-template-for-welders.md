@@ -39,6 +39,8 @@ Everything earned above that baseline goes into a dedicated buffer account. This
 
 If you're a freelance or contract welder, read more in our guide on [budgeting with irregular income](/blog/budget-for-irregular-income).
 
+**Run the numbers now:** Use the free [Budget Calculator](/tools/budget-calculator/) to find your exact baseline in under 2 minutes.
+
 ---
 
 ## Step 2: Identify Welder-Specific Expenses
@@ -172,6 +174,8 @@ A: Always budget to your lowest expected rate. Treat higher-rate work as a windf
 
 Welding is physically demanding work. Your finances shouldn't be mentally exhausting on top of that. A solid tracking system lets you stop worrying about money between paychecks.
 
-For a ready-to-use expense tracker built for variable income trades, check out the **[Freelancer Expense Tracker on Gumroad](https://gettidyflow.gumroad.com)** ($9.99). It includes income smoothing formulas, a buffer account tracker, and monthly category breakdowns that work whether you earn $4,000 or $8,000 in a given month.
+**→ Start with the free [Budget Calculator](/tools/budget-calculator/) to map your income and expenses right now.**
+
+For a ready-to-use expense tracker built for variable income trades, grab the **[Freelancer Expense Tracker](https://gettidyflow.gumroad.com/l/freelancer-expense-tracker)** ($9.99). It includes income smoothing formulas, a buffer account tracker, and monthly category breakdowns that work whether you earn $4,000 or $8,000 in a given month.
 
 You can also find tips for electricians and other skilled trades in our [budget template for electricians](/blog/budget-template-for-electricians) guide.

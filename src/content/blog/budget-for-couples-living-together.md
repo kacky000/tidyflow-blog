@@ -35,6 +35,8 @@ Before you pick a splitting method, you need to know the actual numbers. Sit dow
 
 This conversation is uncomfortable for most couples. Have it anyway. Avoiding it doesn't make the differences go away — it just means they surface as arguments later.
 
+**Run your combined household numbers now:** Use the free [Budget Calculator](/tools/budget-calculator/) to see exactly how much you need to cover shared expenses.
+
 ---
 
 ## Three Bill-Splitting Methods
@@ -203,6 +205,8 @@ A: Start with a specific, low-stakes question rather than a full budget review. 
 
 There's no single right way to manage money as a couple. The right system is the one you both agree on, understand, and actually follow.
 
-The **[Freelancer Expense Tracker on Gumroad](https://gettidyflow.gumroad.com)** ($9.99) includes shared expense tracking templates, income-proportional split calculators, and a monthly budget framework that works for both individual and couple finances.
+**→ Use the free [Budget Calculator](/tools/budget-calculator/) to plug in both your incomes and see the proportional split instantly.**
+
+The **[Freelancer Expense Tracker](https://gettidyflow.gumroad.com/l/freelancer-expense-tracker)** ($9.99) includes shared expense tracking templates, income-proportional split calculators, and a monthly budget framework that works for both individual and couple finances.
 
 For couples taking the next step toward marriage or long-term partnership, our guide on [financial planning for newlyweds](/blog/financial-planning-for-newlyweds) covers the bigger picture. And if you're both working, see our [budget for dual-income couples](/blog/budget-for-dual-income-couples) for more advanced strategies.
