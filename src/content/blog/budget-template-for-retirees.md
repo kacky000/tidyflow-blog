@@ -8,7 +8,7 @@ heroImage: "/thumbs/thumb-budget-template-for-retirees.jpg"
 
 Finding the right **budget template for retirees** can mean the difference between financial peace and constant worry during your golden years. Unlike your working years when income could grow, retirement demands careful management of fixed income streams like Social Security, pensions, and investment withdrawals. A well-designed template keeps every dollar accounted for — from Medicare premiums to that dream vacation fund.
 
-**Not sure if your savings will last?** Use our free [Retirement Savings Calculator](/tools/retirement-savings-calculator) to project your nest egg with compound interest — no signup required.
+**→ See how long your savings will last with the free [Retirement Savings Calculator](/tools/retirement-savings-calculator) — no signup. Balance income and expenses now with the [Budget Calculator](/tools/budget-calculator). Or get a ready-made tracker: [Freelancer Expense Tracker](https://gettidyflow.gumroad.com/l/freelancer-expense-tracker) ($9.99) — adapts perfectly for retirees managing multiple income streams.**
 
 This guide walks you through exactly what a retiree budget template should include, how to set one up, and how to adapt it as your needs change over time.
 
