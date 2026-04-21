@@ -60,6 +60,8 @@ Microsoft's gaming segment, which includes Activision Blizzard following the 202
 - Gaming segment revenue (Activision integration) and subscriber trends
 - Operating margin — Microsoft has been managing the cost structure of the Activision integration while simultaneously scaling Azure AI infrastructure
 
+For a deeper breakdown of Microsoft's Q3 FY2026 earnings expectations — including Azure guidance, Copilot penetration data, and the OpenAI investment accounting impact — see the [full Microsoft Q3 FY2026 earnings preview](/blog/microsoft-q3-fy2026-earnings-preview-azure-copilot-april-29/).
+
 ## The AI Capex Question Hanging Over All Three
 
 The macro narrative across all three companies is the same: do AI capital expenditure commitments generate sufficient returns to justify the investment? All three companies — along with Amazon and Meta — have collectively committed to spending hundreds of billions on data centers, AI chips, and related infrastructure over the next several years.
@@ -77,6 +79,8 @@ The [S&P 500 and Nasdaq have been trading at or near all-time highs](/blog/sp500
 Options market data shows elevated implied volatility for Alphabet, Meta, and Microsoft in the next two weeks, reflecting genuine uncertainty about whether Q1 results confirm or challenge the prevailing AI monetization narrative. The asymmetry of outcomes is notable: a strong beat with raised guidance would likely produce a 5-8% single-session gain, while a miss with conservative guidance could result in 10-15% declines given current valuations.
 
 ## The Bottom Line
+
+**Update (April 22):** Apple announced Monday that Tim Cook will step down as CEO on September 1, 2026, with hardware chief John Ternus named successor. While Apple is not reporting this week, the [Apple CEO transition](/blog/apple-ceo-tim-cook-steps-down-john-ternus-2026/) adds a notable leadership dimension to the Big Tech narrative heading into earnings season.
 
 The Big Tech Q1 2026 earnings season is a de facto referendum on AI monetization. Alphabet, Meta, and Microsoft have all made enormous bets on AI — in infrastructure investment, product integration, and strategic positioning. The Q1 results will provide the most current, comprehensive answer to the question of whether those bets are paying off at a rate that justifies premium equity valuations. With stocks at record levels and investor patience not unlimited, the earnings bar is both high and consequential.
 
