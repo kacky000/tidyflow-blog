@@ -2,7 +2,7 @@
 title: "Iran-US Ceasefire Expires Today: Oil Prices Surge as Deal Collapses"
 description: "The two-week US-Iran ceasefire expires April 21 with no deal. WTI crude jumps above $88 as Tehran refuses further talks, raising fears of renewed Strait of Hormuz closure."
 pubDate: "2026-04-21"
-heroImage: "/images/blog/iran-ceasefire-expires-april-21-oil-price-spike-2026.jpg"
+heroImage: "/thumbs/thumb-iran-ceasefire-expires-april-21-oil-price-spike-2026.jpg"
 tags: ["iran", "oil price", "ceasefire", "geopolitics", "energy", "crude oil", "strait of hormuz"]
 ---
 

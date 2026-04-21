@@ -2,7 +2,7 @@
 title: "Tesla Q1 2026 Earnings Preview: EPS $0.37 Expected, Delivery Miss in Focus"
 description: "Tesla reports Q1 2026 earnings on April 22 after market close. Analysts expect EPS of $0.37 and revenue of $22.7B, but the 358K delivery miss shifts attention to margins and AI capex plans."
 pubDate: "2026-04-21"
-heroImage: "/images/blog/tesla-q1-2026-earnings-preview-april-22.jpg"
+heroImage: "/thumbs/thumb-tesla-q1-2026-earnings-preview-april-22.jpg"
 tags: ["tesla", "TSLA", "earnings", "EV", "Q1 2026", "stock", "Elon Musk", "AI"]
 ---
 

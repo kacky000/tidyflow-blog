@@ -2,7 +2,7 @@
 title: "Bitcoin Holds Near $77K as Iran Ceasefire Expires: Is Crypto Becoming a Safe Haven?"
 description: "Bitcoin is holding above $77K as the US-Iran ceasefire expires April 21. With institutional ETF inflows continuing and geopolitical uncertainty spiking, some analysts argue BTC is emerging as a new safe-haven asset."
 pubDate: "2026-04-21"
-heroImage: "/images/blog/bitcoin-77k-iran-ceasefire-expiry-safe-haven-april-2026.jpg"
+heroImage: "/thumbs/thumb-bitcoin-77k-iran-ceasefire-expiry-safe-haven-april-2026.jpg"
 tags: ["bitcoin", "BTC", "crypto", "safe haven", "ETF", "Iran", "geopolitics", "BlackRock", "institutional"]
 ---
 

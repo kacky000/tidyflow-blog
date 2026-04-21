@@ -2,7 +2,7 @@
 title: "Alphabet Q1 2026 Earnings Preview: Cloud 50%+ Growth Expected, AI Capex in Focus"
 description: "Alphabet (GOOGL) reports Q1 2026 earnings on April 29. Analysts expect EPS of $2.68 on $106.9B revenue. With Cloud Next happening April 22-24, this is the biggest AI earnings week of Q1 season."
 pubDate: "2026-04-21"
-heroImage: "/images/blog/alphabet-googl-q1-2026-earnings-preview-cloud-ai.jpg"
+heroImage: "/thumbs/thumb-alphabet-googl-q1-2026-earnings-preview-cloud-ai.jpg"
 tags: ["alphabet", "GOOGL", "Google", "earnings", "Q1 2026", "cloud", "AI", "stock", "Big Tech"]
 ---
 
