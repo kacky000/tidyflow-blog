@@ -2,6 +2,7 @@
 title: "Budget Template for Occupational Therapist Assistants: Manage Your OTA Salary Effectively"
 description: "A practical budgeting guide for occupational therapist assistants (OTAs) earning $45k–$65k/yr. Covers student loans, part-time income, and saving on a modest salary."
 pubDate: "2026-04-21"
+heroImage: "/thumbs/thumb-budget-template-for-occupational-therapist-assistants.jpg"
 tags: ["budgeting", "budget template", "healthcare"]
 ---
 

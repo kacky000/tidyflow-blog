@@ -2,6 +2,7 @@
 title: "Budget Template for Dental Hygienists: Make the Most of Your $65K Salary"
 description: "Best budget template for dental hygienists. Learn how to manage part-time income, variable hours, student loan repayment, and build financial security on a $55K–$80K salary."
 pubDate: "2026-04-21"
+heroImage: "/thumbs/thumb-budget-template-for-dental-hygienists.jpg"
 tags: ["budgeting", "budget template", "healthcare", "dental"]
 ---
 

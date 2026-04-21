@@ -2,6 +2,7 @@
 title: "Budget Template for Speech-Language Pathologists: Manage Your SLP Salary Effectively"
 description: "A practical budgeting guide for speech-language pathologists earning $60k–$90k/yr. Learn how to handle student loans, CFY costs, and build long-term financial stability."
 pubDate: "2026-04-21"
+heroImage: "/thumbs/thumb-budget-template-for-speech-language-pathologists.jpg"
 tags: ["budgeting", "budget template", "healthcare"]
 ---
 

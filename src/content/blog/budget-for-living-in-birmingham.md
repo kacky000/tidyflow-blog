@@ -2,6 +2,7 @@
 title: "Budget for Living in Birmingham AL: Monthly Cost Breakdown 2026"
 description: "Birmingham, Alabama is one of the most affordable cities in the US. Here's a complete budget for living in Birmingham — rent, food, utilities, and money-saving tips."
 pubDate: "2026-04-21"
+heroImage: "/thumbs/thumb-budget-for-living-in-birmingham.jpg"
 tags: ["budgeting", "cost of living", "city budget", "birmingham", "alabama"]
 ---
 

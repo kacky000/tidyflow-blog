@@ -2,6 +2,7 @@
 title: "Budget for Living in New Orleans: Monthly Cost Breakdown 2026"
 description: "Planning to move to New Orleans? Here's a realistic budget for living in New Orleans — rent, utilities, food, flood insurance, and money-saving tips for locals."
 pubDate: "2026-04-21"
+heroImage: "/thumbs/thumb-budget-for-living-in-new-orleans.jpg"
 tags: ["budgeting", "cost of living", "city budget", "new orleans", "louisiana"]
 ---
 

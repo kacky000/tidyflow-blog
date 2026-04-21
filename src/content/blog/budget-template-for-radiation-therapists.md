@@ -2,6 +2,7 @@
 title: "Budget Template for Radiation Therapists: Manage Your $70k–$100k Salary Effectively"
 description: "A complete budgeting guide for radiation therapists. Learn how to manage shift differentials, student loan debt, and licensing costs on a $70k–$100k salary."
 pubDate: "2026-04-21"
+heroImage: "/thumbs/thumb-budget-template-for-radiation-therapists.jpg"
 tags: ["budgeting", "budget template", "healthcare"]
 ---
 

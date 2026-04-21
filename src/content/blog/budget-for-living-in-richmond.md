@@ -2,6 +2,7 @@
 title: "Budget for Living in Richmond VA: Monthly Cost Breakdown 2026"
 description: "Thinking about moving to Richmond, Virginia? This guide breaks down a realistic budget for living in Richmond — rent, food, transportation, and tips to save more."
 pubDate: "2026-04-21"
+heroImage: "/thumbs/thumb-budget-for-living-in-richmond.jpg"
 tags: ["budgeting", "cost of living", "city budget", "richmond", "virginia"]
 ---
 
