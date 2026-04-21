@@ -8,6 +8,8 @@ author: "Tidyflow"
 heroImage: "/thumbs/thumb-50-30-20-rule.jpg"
 ---
 
+> **⚡ Try it first:** Use our free **[50/30/20 Budget Calculator](/tools/50-30-20-calculator/)** to instantly see your exact Need/Want/Savings split — enter your income and get your numbers in 30 seconds. Or grab the **[pre-built Notion Budget Tracker](https://gettidyflow.gumroad.com/l/notion-monthly-budget-tracker)** with categories already mapped to the 50/30/20 framework.
+
 If you've Googled "how to budget," you've seen the 50/30/20 rule. It shows up in every personal finance article for a reason: it's so simple that most people can implement it in 20 minutes and never need to revisit the rules again.
 
 Here's what it actually means, where it breaks down, and how to set it up in Notion so you don't have to rebuild your budget every month.

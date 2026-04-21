@@ -10,7 +10,9 @@ heroImage: "/thumbs/thumb-budgeting-for-couples.jpg"
 
 Money fights are the leading cause of relationship stress—studies show that financial disagreements are cited in over 36% of divorce cases. Yet, most couples avoid having serious conversations about budgeting until a crisis forces the issue. The good news? **Budgeting for couples doesn't have to be complicated or stressful.**
 
-**Before diving in:** Use our free **[Couple Budget Calculator](/tools/budget-calculator/)** to see how your combined income should be split — takes 30 seconds and gives you a clear starting point.
+**Before diving in:**
+
+> **⚡ Free tools for couples:** **[Couple Budget Calculator](/tools/budget-calculator/)** — see how your combined income should be split in 30 seconds. Ready to track it? Grab our **[Couple Budget Templates on Gumroad](https://gettidyflow.gumroad.com/)** — pre-built for joint finances, no setup required.
 
 When both partners have a clear understanding of shared finances, joint goals become achievable, and the stress that typically accompanies money conversations evaporates. Whether you're newlyweds combining finances for the first time or long-term partners looking to improve your financial partnership, learning how to budget together is one of the most valuable skills you can develop.
 
