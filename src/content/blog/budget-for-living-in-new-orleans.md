@@ -8,7 +8,10 @@ tags: ["budgeting", "cost of living", "city budget", "new orleans", "louisiana"]
 
 # Budget for Living in New Orleans: Complete Monthly Cost Breakdown (2026)
 
-> **Plan your New Orleans move today** — use the free [Budget Calculator](/tools/budget-calculator/) to see exactly how much you need, or grab the **[New Life Starter Kit ($3.99)](https://gettidyflow.gumroad.com/l/new-life-starter-kit)** to track every moving expense in Notion.
+**📊 Planning your New Orleans move?**
+- 🔢 **[Free Budget Calculator](/tools/budget-calculator/)** — Calculate your exact monthly budget for NOLA life
+- 📋 **[New Life Starter Kit ($3.99)](https://gettidyflow.gumroad.com/l/new-life-starter-kit)** — Track every moving expense in Notion
+- 💰 **[Budget Tracker Template ($9.99)](https://gettidyflow.gumroad.com/l/budget-tracker)** — Full monthly budget spreadsheet for your new city
 
 New Orleans is unlike any other city in the United States — and so is your budget for living in New Orleans. The Crescent City blends world-class cuisine, live music culture, and a subtropical climate into an experience that comes with its own unique set of expenses. From flood insurance to festival season splurges, budgeting in NOLA requires understanding costs that most American cities simply do not have.
 
@@ -101,6 +104,6 @@ Most newcomers are surprised by utility costs. The combination of near-constant 
 
 Moving to a new city is easier when your finances are organized before you arrive. The **[New Life Starter Kit](https://gettidyflow.gumroad.com)** ($3.99) is a Notion template designed to help you plan your first month's budget, track moving expenses, and build the financial foundation you need in a new place. Thousands of people have used it to start fresh without financial stress.
 
-If you are still figuring out how much income you need to cover your New Orleans lifestyle, the guides on [how to budget on $3,000 a month](/how-to-budget-on-3000-a-month/) and [how to budget on $4,000 a month](/how-to-budget-on-4000-a-month/) can help you see whether your income aligns with the costs laid out above.
+If you are still figuring out how much income you need to cover your New Orleans lifestyle, the guides on [how to budget on $3,000 a month](/blog/how-to-budget-on-3000-a-month/) and [how to budget on $4,000 a month](/blog/how-to-budget-on-4000-a-month/) can help you see whether your income aligns with the costs laid out above.
 
 New Orleans rewards people who embrace it fully. Budget for the city it actually is — and enjoy every second of it.
