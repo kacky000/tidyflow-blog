@@ -8,6 +8,8 @@ tags: ["budgeting", "budget template", "healthcare", "dental"]
 
 # Budget Template for Dental Hygienists: Make the Most of Your $65K Salary
 
+> **Build your dental hygienist budget now** — try the free [Budget Calculator](/tools/budget-calculator/) or download the **[New Life Starter Kit ($3.99)](https://gettidyflow.gumroad.com/l/new-life-starter-kit)** with income variability tracking and student loan payoff planner.
+
 Finding the right **budget template for dental hygienists** is harder than it sounds. Your salary looks stable on paper — typically $55,000–$80,000 per year — but the reality is more complicated. Many dental hygienists work part-time across two or more offices, deal with inconsistent hours, and face a unique mix of healthcare-adjacent expenses that generic budget templates completely ignore.
 
 Whether you're a new grad carrying student loan debt or a 10-year veteran trying to finally build savings, this guide gives you a complete framework to make your income work harder.

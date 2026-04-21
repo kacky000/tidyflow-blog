@@ -8,6 +8,8 @@ tags: ["budgeting", "cost of living", "city budget", "new orleans", "louisiana"]
 
 # Budget for Living in New Orleans: Complete Monthly Cost Breakdown (2026)
 
+> **Plan your New Orleans move today** — use the free [Budget Calculator](/tools/budget-calculator/) to see exactly how much you need, or grab the **[New Life Starter Kit ($3.99)](https://gettidyflow.gumroad.com/l/new-life-starter-kit)** to track every moving expense in Notion.
+
 New Orleans is unlike any other city in the United States — and so is your budget for living in New Orleans. The Crescent City blends world-class cuisine, live music culture, and a subtropical climate into an experience that comes with its own unique set of expenses. From flood insurance to festival season splurges, budgeting in NOLA requires understanding costs that most American cities simply do not have.
 
 Whether you are relocating for work, returning after school, or choosing NOLA as your home base, this breakdown covers what residents actually spend — not the tourist version.
