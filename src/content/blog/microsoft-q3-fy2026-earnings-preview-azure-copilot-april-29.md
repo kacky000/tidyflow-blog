@@ -2,7 +2,7 @@
 title: "Microsoft Q3 FY2026 Earnings Preview: Azure Growth and Copilot Adoption Under Scrutiny"
 description: "Microsoft reports Q3 FY2026 results on April 29. Wall Street is watching Azure growth (37–38% guidance), Copilot paid user expansion, and the impact of OpenAI losses on net income."
 pubDate: "2026-04-22"
-heroImage: "/thumbs/thumb-microsoft-q3-fy2026-earnings-preview-azure-copilot-april-29.md.jpg"
+heroImage: "/thumbs/thumb-microsoft-q3-fy2026-earnings-preview-azure-copilot-april-29.jpg"
 tags: ["microsoft", "msft", "earnings", "azure", "ai-stocks", "technology", "copilot", "cloud"]
 ---
 
