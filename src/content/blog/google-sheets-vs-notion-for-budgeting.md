@@ -10,6 +10,11 @@ tags: ["budgeting", "notion", "google-sheets", "comparison", "free", "expense-tr
 
 Looking for a **free Google Sheets expense tracker template in 2026**? Both Google Sheets and Notion offer excellent free budgeting options — but they take completely different approaches. Google Sheets gives you powerful formulas, rows, and columns. Notion gives you flexible databases, multiple views, and connected pages. This updated comparison helps you pick the right tool (with free templates for both).
 
+> **Free tools to get started right now:**
+> - 🧮 [Budget Calculator](https://gettidyflow.com/tools/budget-calculator/) — See exactly how much you should spend in each category (free)
+> - 📊 [Notion Budget Tracker Template](https://gettidyflow.gumroad.com/l/budget-tracker) — Ready-to-use Notion budget (free)
+> - 💼 [Freelancer Expense Tracker](https://gettidyflow.gumroad.com/l/freelancer-expense-tracker) — Excel with automated calculations ($9.99)
+
 ## Quick Comparison
 
 | Feature | Google Sheets | Notion |
