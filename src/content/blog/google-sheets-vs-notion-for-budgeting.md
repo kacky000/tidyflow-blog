@@ -104,6 +104,15 @@ Both work. The question is: do you think in cells or in databases?
 | You import/export CSV frequently | You already use Notion for other things |
 | You want maximum calculation power | You want a clean mobile entry experience |
 
+---
+
+> **Ready to start budgeting today?**
+> - 🧮 [Budget Calculator](https://gettidyflow.com/tools/budget-calculator/) — Find your ideal spending split in seconds (free)
+> - 📊 [Notion Budget Tracker Template](https://gettidyflow.gumroad.com/l/budget-tracker) — Pre-built Notion budget with categories & views (free)
+> - 💼 [Freelancer Expense Tracker](https://gettidyflow.gumroad.com/l/freelancer-expense-tracker) — Excel with automated dashboards ($9.99)
+
+---
+
 ## Free Google Sheets Budget Templates Worth Trying
 
 If you go the Google Sheets route, here are the best free templates to start with:
@@ -127,7 +136,7 @@ You can embed Google Sheets in Notion pages for the best of both worlds. This wo
 
 Both Google Sheets and Notion support popular budgeting frameworks:
 
-- **[50/30/20 Rule](/50-30-20-budget-rule-notion/)** — Allocate 50% needs, 30% wants, 20% savings. Easy to set up in either tool with category grouping.
+- **[50/30/20 Rule](/blog/50-30-20-budget-rule-notion/)** — Allocate 50% needs, 30% wants, 20% savings. Easy to set up in either tool with category grouping.
 - **[Zero-Based Budgeting](/blog/zero-based-budgeting-guide/)** — Assign every dollar a job. Spreadsheets are slightly better here due to formula power.
 - **[Envelope Method](/blog/envelope-budgeting-method/)** — Virtual envelopes for spending categories. Notion's board view naturally mimics envelopes.
 - **[Paycheck-to-Paycheck Method](/blog/paycheck-to-paycheck-budgeting/)** — Budget per paycheck instead of monthly. Both tools handle this well.
