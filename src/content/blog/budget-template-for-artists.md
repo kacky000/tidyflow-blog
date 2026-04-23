@@ -8,6 +8,11 @@ heroImage: "/thumbs/thumb-budget-template-for-artists.jpg"
 
 # Budget Template for Artists: Handle Irregular Income & Creative Expenses
 
+**📊 Tools for Artist Budgets**
+- 🔢 **[Free Budget Calculator](/tools/budget-calculator/)** — Calculate your income smoothing target in 2 minutes
+- 💼 **[Freelancer Expense Tracker ($9.99)](https://gettidyflow.gumroad.com/l/freelancer-expense-tracker)** — Built for irregular-income creatives with tax deduction tracking
+- 📋 **[New Life Starter Kit ($3.99)](https://gettidyflow.gumroad.com/l/new-life-starter-kit)** — Notion budget template to start fresh with your creative career
+
 Making a living as an artist means navigating one of the most financially unpredictable careers out there. Commissions come in waves, gallery sales are seasonal, and material costs can spike without warning. A standard spreadsheet won't cut it — you need a **budget template for artists** that's designed around irregular income and creative business expenses.
 
 This guide covers a practical budgeting framework for visual artists, illustrators, sculptors, and mixed-media creators — whether you're full-time, part-time, or transitioning from a day job.
@@ -155,6 +160,15 @@ Maintain two separate funds: a personal emergency fund (3 months of living expen
 ### Should I keep my art finances separate from personal finances?
 
 Absolutely. Open a dedicated business checking account and route all art income through it. Pay yourself a fixed monthly salary from that account. This separation makes tax preparation dramatically easier, gives you a clear picture of business profitability, and prevents the emotional spending swings that come with irregular income.
+
+---
+
+---
+
+**🎨 Ready to stabilize your creative income?**
+- 🔢 **[Free Budget Calculator](/tools/budget-calculator/)** — Map out your income smoothing number now
+- 💼 **[Freelancer Expense Tracker ($9.99)](https://gettidyflow.gumroad.com/l/freelancer-expense-tracker)** — Track materials, show costs, and tax deductions in one spreadsheet
+- 📋 **[New Life Starter Kit ($3.99)](https://gettidyflow.gumroad.com/l/new-life-starter-kit)** — Notion template for building your first structured budget
 
 ---
 

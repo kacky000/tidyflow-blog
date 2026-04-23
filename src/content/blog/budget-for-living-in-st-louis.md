@@ -82,6 +82,15 @@ Renters insurance in St. Louis varies by ZIP code more than in most cities. Some
 
 ---
 
+---
+
+**📊 Build Your St. Louis Budget Now**
+- 🔢 **[Free Budget Calculator](/tools/budget-calculator/)** — Enter your St. Louis income and get your full monthly budget
+- 📋 **[New Life Starter Kit ($3.99)](https://gettidyflow.gumroad.com/l/new-life-starter-kit)** — Notion template for new city movers
+- 💰 **[Freelancer Expense Tracker ($9.99)](https://gettidyflow.gumroad.com/l/freelancer-expense-tracker)** — Track every expense in your new city
+
+---
+
 ## Frequently Asked Questions
 
 **Is $2,500 a month enough to live on in St. Louis?**
