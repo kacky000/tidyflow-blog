@@ -2,6 +2,7 @@
 title: "Budget Template for Pharmacy Technicians: Managing Your PharmTech Salary"
 description: "Pharmacy technician salaries average $36,000–$52,000. Here's a practical budget template to stretch your income, pay off debt, and build financial stability on a pharm tech salary."
 pubDate: "2026-04-25"
+heroImage: "/thumbs/thumb-budget-template-for-pharmacy-technicians.jpg"
 tags: ["budgeting", "pharmacy technician", "healthcare", "budget template", "salary"]
 ---
 

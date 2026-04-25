@@ -2,6 +2,7 @@
 title: "Budget for Living in Fort Lauderdale, FL: Complete Cost of Living Guide 2026"
 description: "Thinking about moving to Fort Lauderdale? Here's a realistic monthly budget covering rent, utilities, no state income tax savings, and everything else you need to know."
 pubDate: "2026-04-25"
+heroImage: "/thumbs/thumb-budget-for-living-in-fort-lauderdale.jpg"
 tags: ["budgeting", "cost of living", "fort lauderdale", "florida", "moving"]
 ---
 

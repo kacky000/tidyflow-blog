@@ -2,6 +2,7 @@
 title: "Budget for Living in Lexington, KY: Complete Cost of Living Guide 2026"
 description: "Moving to Lexington, Kentucky? Get a realistic monthly budget breakdown covering rent, utilities, transportation, and daily expenses in the Horse Capital of the World."
 pubDate: "2026-04-25"
+heroImage: "/thumbs/thumb-budget-for-living-in-lexington.jpg"
 tags: ["budgeting", "cost of living", "lexington", "kentucky", "moving"]
 ---
 

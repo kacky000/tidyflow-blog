@@ -2,6 +2,7 @@
 title: "Budget Template for Corrections Officers: How to Manage a CO Salary"
 description: "Corrections officer salary can be unpredictable with overtime and shift differentials. Here's a practical budget template to manage your CO income and build financial stability."
 pubDate: "2026-04-25"
+heroImage: "/thumbs/thumb-budget-template-for-corrections-officers.jpg"
 tags: ["budgeting", "corrections officer", "law enforcement", "budget template", "salary"]
 ---
 

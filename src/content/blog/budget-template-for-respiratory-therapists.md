@@ -2,6 +2,7 @@
 title: "Budget Template for Respiratory Therapists: Managing Your RT Salary"
 description: "Respiratory therapists earn $55,000–$85,000. Here's a practical budget template to manage student debt, shift income, and build long-term financial security as an RT."
 pubDate: "2026-04-25"
+heroImage: "/thumbs/thumb-budget-template-for-respiratory-therapists.jpg"
 tags: ["budgeting", "respiratory therapist", "RT", "healthcare", "budget template"]
 ---
 

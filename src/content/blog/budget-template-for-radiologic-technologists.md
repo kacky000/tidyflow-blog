@@ -2,6 +2,7 @@
 title: "Budget Template for Radiologic Technologists: Managing Your Rad Tech Salary"
 description: "Radiologic technologists earn $55,000–$85,000 on average. Here's a complete budget template to manage your rad tech income, pay off student loans, and build wealth."
 pubDate: "2026-04-25"
+heroImage: "/thumbs/thumb-budget-template-for-radiologic-technologists.jpg"
 tags: ["budgeting", "radiologic technologist", "rad tech", "healthcare", "budget template"]
 ---
 

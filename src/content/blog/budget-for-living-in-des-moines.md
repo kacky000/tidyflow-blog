@@ -2,6 +2,7 @@
 title: "Budget for Living in Des Moines, Iowa: Complete Cost of Living Guide 2026"
 description: "Planning to move to Des Moines? Here's a realistic monthly budget breakdown covering rent, food, transport, and more for Iowa's capital city."
 pubDate: "2026-04-25"
+heroImage: "/thumbs/thumb-budget-for-living-in-des-moines.jpg"
 tags: ["budgeting", "cost of living", "des moines", "iowa", "moving"]
 ---
 
