@@ -6,6 +6,11 @@ heroImage: "/thumbs/thumb-budget-for-living-in-des-moines.jpg"
 tags: ["budgeting", "cost of living", "des moines", "iowa", "moving"]
 ---
 
+**📍 Ready to build your Des Moines budget?**
+- 🔢 **[Free Budget Calculator](/tools/budget-calculator/)** — Plug in your Des Moines expenses and see exactly where your money goes
+- 💰 **[Freelancer Expense Tracker ($9.99)](https://gettidyflow.gumroad.com/l/freelancer-expense-tracker)** — Track relocation costs and variable income with automated monthly summaries
+- 🌸 **[New Life Starter Kit ($3.99)](https://gettidyflow.gumroad.com/l/new-life-starter-kit)** — Moving-to-a-new-city budget planner + savings goal tracker
+
 Des Moines, Iowa is consistently ranked as one of the most affordable mid-sized cities in the United States. With a growing tech sector, strong job market, and a cost of living well below the national average, it's attracting remote workers and young professionals looking for quality of life without the big-city price tag.
 
 This guide breaks down what it actually costs to live in Des Moines so you can build a realistic monthly budget.
