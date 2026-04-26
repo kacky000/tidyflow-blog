@@ -2,6 +2,7 @@
 title: "Budget Template for Surgical Technologists: Monthly Finance Guide (2026)"
 description: "Surgical technologists earn $52,000–$65,000 on average. This budget template covers shift differentials, CST certification costs, and smart money strategies for OR techs."
 pubDate: "2026-04-26"
+heroImage: "/thumbs/thumb-budget-template-for-surgical-technologists.jpg"
 tags: ["budgeting", "surgical technologist", "healthcare budget", "surg tech", "budget template"]
 ---
 

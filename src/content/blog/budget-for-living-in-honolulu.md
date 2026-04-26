@@ -2,6 +2,7 @@
 title: "Budget for Living in Honolulu HI: Monthly Cost Breakdown (2026)"
 description: "Living in Honolulu, Hawaii is expensive — but how expensive? This complete monthly budget breakdown shows rent, groceries, transportation, and real numbers for 2026."
 pubDate: "2026-04-26"
+heroImage: "/thumbs/thumb-budget-for-living-in-honolulu.jpg"
 tags: ["budgeting", "hawaii", "cost of living", "honolulu", "city budget"]
 ---
 

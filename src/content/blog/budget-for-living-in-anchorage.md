@@ -2,6 +2,7 @@
 title: "Budget for Living in Anchorage AK: Monthly Cost Breakdown (2026)"
 description: "Thinking about living in Anchorage, Alaska? Get a complete monthly budget breakdown including the Alaska Permanent Fund Dividend, no state income tax, and high grocery costs."
 pubDate: "2026-04-26"
+heroImage: "/thumbs/thumb-budget-for-living-in-anchorage.jpg"
 tags: ["budgeting", "alaska", "cost of living", "anchorage", "city budget"]
 ---
 

@@ -2,6 +2,7 @@
 title: "Budget for Living in Chattanooga TN: Monthly Cost Breakdown (2026)"
 description: "Chattanooga, TN offers low cost of living, no state income tax, and world-class outdoor access. Here's the complete monthly budget breakdown for 2026."
 pubDate: "2026-04-26"
+heroImage: "/thumbs/thumb-budget-for-living-in-chattanooga.jpg"
 tags: ["budgeting", "tennessee", "cost of living", "chattanooga", "city budget"]
 ---
 

@@ -2,6 +2,7 @@
 title: "Budget Template for Medical Laboratory Technicians: Finance Guide (2026)"
 description: "Medical laboratory technicians and technologists earn $45,000–$75,000. This budget template covers MLT vs MLS salary differences, certification costs, and monthly money strategies."
 pubDate: "2026-04-26"
+heroImage: "/thumbs/thumb-budget-template-for-medical-laboratory-technicians.jpg"
 tags: ["budgeting", "medical laboratory", "MLT", "healthcare budget", "budget template"]
 ---
 

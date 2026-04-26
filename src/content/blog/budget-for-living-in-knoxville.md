@@ -2,6 +2,7 @@
 title: "Budget for Living in Knoxville TN: Monthly Cost Breakdown (2026)"
 description: "Knoxville, TN combines low cost of living, no state income tax, and Great Smoky Mountains access. Full monthly budget breakdown for singles and couples in 2026."
 pubDate: "2026-04-26"
+heroImage: "/thumbs/thumb-budget-for-living-in-knoxville.jpg"
 tags: ["budgeting", "tennessee", "cost of living", "knoxville", "city budget"]
 ---
 

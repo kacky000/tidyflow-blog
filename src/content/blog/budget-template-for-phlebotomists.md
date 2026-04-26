@@ -2,6 +2,7 @@
 title: "Budget Template for Phlebotomists: Monthly Finance Guide (2026)"
 description: "Phlebotomists earn $37,000–$50,000 on average. This budget template covers CPT certification costs, mobile phlebotomy pay, and how to build a solid financial plan on an entry-level healthcare salary."
 pubDate: "2026-04-26"
+heroImage: "/thumbs/thumb-budget-template-for-phlebotomists.jpg"
 tags: ["budgeting", "phlebotomist", "healthcare budget", "phlebotomy", "budget template"]
 ---
 
