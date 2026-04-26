@@ -108,6 +108,14 @@ At $80,000 gross with no state income tax, take-home is approximately $5,200/mon
 
 Buffer: ~$700/month. Livable, but tight if rent rises or car needs repair.
 
+---
+**📊 Fort Lauderdale移住の予算を立てるなら:**
+- 🔢 **[無料予算計算機](/tools/budget-calculator/)** — 収入と支出を入力してリアルな月次予算を確認
+- 💰 **[Freelancer Expense Tracker ($9.99)](https://gettidyflow.gumroad.com/l/freelancer-expense-tracker)** — 引越し費用・変動収入を一括管理
+- 🌸 **[New Life Starter Kit ($3.99)](https://gettidyflow.gumroad.com/l/new-life-starter-kit)** — 新生活用の予算プランナー＋貯蓄トラッカー
+
+---
+
 ## Is Fort Lauderdale Affordable?
 
 It depends on what you're comparing to:

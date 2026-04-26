@@ -132,6 +132,14 @@ One of the trickiest aspects of healthcare budgeting is that your pay schedule d
 - **Automate fixed bills.** Set up autopay for rent, utilities, insurance, and loan payments so they're never late regardless of your schedule.
 - **Weekly spending allowance.** Transfer your weekly variable spending (food, gas, personal) to a separate account each week. This prevents overspending early in the pay period.
 
+---
+**📊 医療従事者の家計管理ツール:**
+- 🔢 **[無料予算計算機](/tools/budget-calculator/)** — 変動シフト収入でも正確な月次予算を計算
+- 💰 **[Freelancer Expense Tracker ($9.99)](https://gettidyflow.gumroad.com/l/freelancer-expense-tracker)** — 残業代・シフト差額・不規則収入を一括管理
+- 🌸 **[New Life Starter Kit ($3.99)](https://gettidyflow.gumroad.com/l/new-life-starter-kit)** — 忙しいスケジュールでも続けられる予算プランナー
+
+---
+
 ## Frequently Asked Questions
 
 ### How should healthcare workers budget overtime pay?

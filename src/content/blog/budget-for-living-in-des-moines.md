@@ -103,6 +103,14 @@ If you earn $60,000/year gross, your monthly take-home in Iowa is approximately 
 
 Remaining buffer: ~$970/month — solid room for extra savings or debt payoff.
 
+---
+**📊 Des Moinesへの引越しを計画中なら:**
+- 🔢 **[無料予算計算機](/tools/budget-calculator/)** — あなたの収入と支出を入力してリアルな月次予算を確認
+- 💰 **[Freelancer Expense Tracker ($9.99)](https://gettidyflow.gumroad.com/l/freelancer-expense-tracker)** — 引越し費用・変動収入を一括管理
+- 🌸 **[New Life Starter Kit ($3.99)](https://gettidyflow.gumroad.com/l/new-life-starter-kit)** — 新生活用の予算プランナー＋貯蓄トラッカー
+
+---
+
 ## Is Des Moines Affordable?
 
 By most measures, yes. Des Moines regularly appears on "most affordable cities" lists because:
