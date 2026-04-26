@@ -6,6 +6,11 @@ heroImage: "/thumbs/thumb-budget-for-living-in-fort-lauderdale.jpg"
 tags: ["budgeting", "cost of living", "fort lauderdale", "florida", "moving"]
 ---
 
+**Quick tools for your Fort Lauderdale move:**
+- 🔢 **[Free Budget Calculator](/tools/budget-calculator/)** — Plug in your Fort Lauderdale expenses and see exactly where your money goes
+- 💰 **[Freelancer Expense Tracker ($9.99)](https://gettidyflow.gumroad.com/l/freelancer-expense-tracker)** — Track relocation costs and variable income with automated monthly summaries
+- 🌸 **[New Life Starter Kit ($3.99)](https://gettidyflow.gumroad.com/l/new-life-starter-kit)** — Moving-to-a-new-city budget planner + savings goal tracker
+
 Fort Lauderdale, Florida offers the appeal of South Florida living — warm weather, beaches, and a cosmopolitan lifestyle — without the full sticker shock of Miami. Known as the "Venice of America" for its extensive canal system, Fort Lauderdale has become a top destination for remote workers, retirees, and young professionals who want access to Miami's amenities without paying Miami prices.
 
 Florida's biggest financial perk: **no state income tax**. That alone can save a single earner thousands per year compared to high-tax states.

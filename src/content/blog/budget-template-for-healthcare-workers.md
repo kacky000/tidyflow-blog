@@ -8,6 +8,11 @@ tags: ["budgeting", "healthcare", "template", "shift-work"]
 
 # Budget Template for Healthcare Workers: Managing Shift Pay and Overtime
 
+**Free tools for healthcare workers:**
+- 🔢 **[Free Budget Calculator](/tools/budget-calculator/)** — Handle irregular shift income and see your real monthly picture
+- 💰 **[Freelancer Expense Tracker ($9.99)](https://gettidyflow.gumroad.com/l/freelancer-expense-tracker)** — Built for variable income: overtime, shift differentials, and irregular pay all in one dashboard
+- 🌸 **[New Life Starter Kit ($3.99)](https://gettidyflow.gumroad.com/l/new-life-starter-kit)** — Budget planner + savings tracker designed for people with demanding schedules
+
 Healthcare workers are some of the hardest-working professionals out there — and some of the hardest to budget for. Between rotating shifts, overtime pay that varies wildly month to month, shift differentials, and stress-driven spending, traditional budgeting advice falls flat.
 
 If you're a nurse, paramedic, medical technician, therapist, or any other healthcare professional dealing with irregular income and demanding schedules, this guide is built specifically for you.
