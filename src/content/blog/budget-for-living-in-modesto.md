@@ -95,6 +95,17 @@ Modesto's main employer in healthcare is Doctors Medical Center and Memorial Med
 
 ---
 
+---
+
+<div style="background: #f0f8ff; border: 2px solid #4a90d9; border-radius: 8px; padding: 20px; margin: 32px 0;">
+<strong>🧮 Build Your Modesto Budget Now</strong><br>
+→ <a href="/tools/budget-calculator/">Free Budget Calculator</a> — check if your income covers Modesto's costs<br>
+→ <a href="https://gettidyflow.gumroad.com/l/new-life-starter-kit">New Life Starter Kit</a> (free) — budget templates for moving to a new city<br>
+→ <a href="https://gettidyflow.gumroad.com/l/freelancer-expense-tracker">Freelancer Expense Tracker</a> ($9.99) — for California freelancers managing quarterly taxes
+</div>
+
+---
+
 ## Complete Monthly Budget Examples
 
 ### Budget on $3,200/month (take-home)
