@@ -140,4 +140,4 @@ For a complete expense tracking system, check out the [Freelancer Expense Tracke
 
 ---
 
-*Related: [How to Budget on $3,000 a Month](/blog/how-to-budget-on-3000-a-month/) | [Emergency Fund Budget Template](/blog/emergency-fund-budget-template/)*
+*Related: [How to Budget on $3,000 a Month](/blog/how-to-budget-on-3000-a-month/) | [Emergency Fund Budget Template](/blog/emergency-fund-budget-template/) | [Budget Template for Healthcare Workers](/blog/budget-template-for-healthcare-workers/)*

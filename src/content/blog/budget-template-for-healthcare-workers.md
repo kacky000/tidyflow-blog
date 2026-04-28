@@ -159,3 +159,7 @@ Healthcare workers should aim for 4–6 months of essential expenses in their em
 You take care of everyone else. It's time to take care of your finances with the same level of professionalism. Start with your base income, automate your essentials, create a system for overtime and differentials, and build habits that protect you from stress spending.
 
 Need a tool to manage your irregular income and track expenses across variable pay periods? The **[Freelancer Expense Tracker](https://gettidyflow.gumroad.com/l/freelancer-expense-tracker)** ($9.99) is designed for exactly this — managing income that changes month to month, categorizing expenses, and giving you a clear financial dashboard. It works perfectly for healthcare workers juggling base pay, overtime, and differentials all in one place.
+
+---
+
+*Related: [Budget Template for Nurses](/blog/budget-template-for-nurses/) | [Budget for Irregular Income](/blog/budget-for-irregular-income/) | [Emergency Fund Budget Template](/blog/emergency-fund-budget-template/)*
