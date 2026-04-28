@@ -145,3 +145,15 @@ Tracking shift differentials, licensing costs, and overtime income manually on a
 **[Download the Budget Template on Gumroad →](https://gettidyflow.gumroad.com)**
 
 The Freelancer Expense Tracker and Personal Finance Dashboard on TidyFlow are both designed to handle variable income — the same challenge security guards face. Grab the template that fits your needs and start tracking what you actually earn, not what you hope to earn.
+
+---
+
+## Related Budget Templates for Variable-Income Workers
+
+Other occupation-specific budget guides that handle irregular pay:
+
+- [Budget Template for Healthcare Workers](/blog/budget-template-for-healthcare-workers) — shift differentials, overtime, and licensing costs for nurses and medical staff
+- [Budget for Living in Cape Coral, FL](/blog/budget-for-living-in-cape-coral) — Southwest Florida cost-of-living breakdown for relocation planning
+- [Emergency Fund Budget Template](/blog/emergency-fund-budget-template) — build your 3-6 month cushion step by step
+
+Try the free **[Budget Calculator](/tools/budget-calculator)** to see how your security guard income stacks up against your monthly expenses.
