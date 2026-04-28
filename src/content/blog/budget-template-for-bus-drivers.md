@@ -2,6 +2,7 @@
 title: "Budget Template for Bus Drivers: Handle Split Shifts, CDL Costs, and Union Benefits"
 description: "Free budget template for bus drivers. Manage CDL renewal costs, split shift pay, summer income gaps, and union dues with a practical spreadsheet."
 pubDate: "2026-04-28"
+heroImage: "/thumbs/thumb-budget-template-for-bus-drivers.jpg"
 tags: ["budgeting", "bus-drivers", "irregular-income", "union-benefits"]
 ---
 

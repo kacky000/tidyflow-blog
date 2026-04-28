@@ -2,6 +2,7 @@
 title: "Budget Template for Security Guards: Manage Shift Pay, Licensing Costs, and Overtime"
 description: "Free budget template for security guards. Handle shift differentials, licensing renewals, overtime pay, and physical job expenses with a practical spreadsheet."
 pubDate: "2026-04-28"
+heroImage: "/thumbs/thumb-budget-template-for-security-guards.jpg"
 tags: ["budgeting", "security-guards", "shift-work", "overtime"]
 ---
 

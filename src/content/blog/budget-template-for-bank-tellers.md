@@ -2,6 +2,7 @@
 title: "Budget Template for Bank Tellers: 401k Match, Career Growth, and Work Wardrobe"
 description: "Free budget template for bank tellers. Maximize your 401k match, budget for professional attire, and plan your path from teller to personal banker with a practical spreadsheet."
 pubDate: "2026-04-28"
+heroImage: "/thumbs/thumb-budget-template-for-bank-tellers.jpg"
 tags: ["budgeting", "bank-tellers", "401k", "career-growth"]
 ---
 

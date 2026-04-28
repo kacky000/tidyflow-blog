@@ -2,6 +2,7 @@
 title: "Budget Template for Mail Carriers: Maximize TSP, FEHB, and Federal Benefits"
 description: "Free budget template for USPS mail carriers. Manage CCA income, peak season overtime, TSP contributions, and federal benefits with a practical spreadsheet."
 pubDate: "2026-04-28"
+heroImage: "/thumbs/thumb-budget-template-for-mail-carriers.jpg"
 tags: ["budgeting", "mail-carriers", "usps", "federal-benefits"]
 ---
 
