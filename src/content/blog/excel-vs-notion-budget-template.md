@@ -182,3 +182,18 @@ The best budget template is the one you'll use consistently. Excel rewards those
 Still exploring options? Browse our full roundup of the [best personal finance spreadsheet templates for 2026](/blog/best-budget-spreadsheet-templates/) — covering Excel, Google Sheets, and Notion side by side.
 
 Want a professionally built Excel template ready to go? The [Freelancer Expense Tracker](https://gettidyflow.gumroad.com/l/freelancer-expense-tracker) ($9.99) comes with automated formulas, category tracking, and a visual dashboard — no setup required, just open and start budgeting.
+
+---
+
+## Try Our Free Budget Calculator
+
+Not sure how to allocate your income? Use our **[Free Budget Calculator](/tools/budget-calculator)** to instantly calculate your ideal spending breakdown by category — no sign-up required.
+
+---
+
+## Related Budget Guides
+
+- [Best Budget Spreadsheet Templates for 2026](/blog/best-budget-spreadsheet-templates/) — Curated list of top Excel, Google Sheets, and Notion templates
+- [Notion vs Excel Budgeting: Full Comparison](/blog/notion-vs-excel-budgeting) — Deep-dive breakdown of both platforms for budgeting
+- [How to Track Expenses in Notion](/blog/how-to-track-expenses-in-notion/) — Step-by-step Notion expense tracking guide
+- [The 50/30/20 Budget Rule in Notion](/blog/50-30-20-budget-rule-notion/) — Apply the popular budgeting rule with a Notion template
