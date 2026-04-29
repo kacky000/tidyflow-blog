@@ -199,5 +199,7 @@ Our budget planners handle variable income input, professional expense tracking,
 - [Budget Template for Physical Therapists](/blog/budget-template-for-physical-therapists) — similar healthcare practice model and student debt profile
 - [Budget Template for Pharmacists](/blog/budget-template-for-pharmacists) — high education debt and healthcare salary profile parallel
 - [Emergency Fund Budget Template](/blog/emergency-fund-budget-template) — essential for practice owners navigating irregular cash flow
+- [Budget Template for Security Guards](/blog/budget-template-for-security-guards) — another profession with variable income and complex expense tracking
+- [Budget for Living in Huntsville, AL](/blog/budget-for-living-in-huntsville) — strong healthcare employer market for chiropractic professionals
 
 Use the free **[Budget Calculator](/tools/budget-calculator)** to model your chiropractic income across employed and practice-owner scenarios.
