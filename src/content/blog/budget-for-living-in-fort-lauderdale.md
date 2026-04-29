@@ -151,4 +151,11 @@ If you're planning a relocation budget or need to track moving costs, the [Freel
 
 ---
 
-*Related: [Budget for Living Alone](/blog/budget-for-living-alone/) | [Emergency Fund Budget Template](/blog/emergency-fund-budget-template/)*
+## Related Budget Guides
+
+- [Budget for Living in Cape Coral, FL](/blog/budget-for-living-in-cape-coral) — Another affordable Florida city comparison
+- [Budget for Living in Huntsville, AL](/blog/budget-for-living-in-huntsville) — Fast-growing city with lower housing costs
+- [Budget Template for Security Guards](/blog/budget-template-for-security-guards) — Variable shift income budgeting
+- [Budget Template for Chiropractors](/blog/budget-template-for-chiropractors) — Self-employed healthcare professional finances
+- [Budget for Living Alone](/blog/budget-for-living-alone/) — Single-income household planning
+- [Emergency Fund Budget Template](/blog/emergency-fund-budget-template/) — Florida hurricane prep savings strategy
