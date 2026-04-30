@@ -110,8 +110,10 @@ For income guidance, see [how to budget on $5,000 a month](/blog/how-to-budget-o
 
 ## Related Budget Guides
 
+- [Budget for Living in San Jose, CA](/blog/budget-for-living-in-san-jose) — The Bay Area salary you're escaping — compare the numbers
 - [Budget for Living in Cape Coral, FL](/blog/budget-for-living-in-cape-coral) — Sunbelt alternative with no state income tax
 - [Budget for Living in Huntsville, AL](/blog/budget-for-living-in-huntsville) — Affordable tech hub with low cost of living
 - [Budget for Living in Modesto, CA](/blog/budget-for-living-in-modesto) — Central Valley alternative to Bay Area costs
 - [Budget Template for Security Guards](/blog/budget-template-for-security-guards) — Shift-based income budgeting strategies
+- [Budget Template for Data Scientists](/blog/budget-template-for-data-scientists) — RSU, Nevada tax optimization, and tech salary planning
 - [Free Budget Calculator](/tools/budget-calculator) — Run your Reno numbers instantly
