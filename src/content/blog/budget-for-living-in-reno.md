@@ -105,3 +105,13 @@ Nevada's tax advantage, wildfire season, and seismic risk require budget plannin
 **[Browse Budget Templates on Gumroad →](https://gettidyflow.gumroad.com)**
 
 For income guidance, see [how to budget on $5,000 a month](/blog/how-to-budget-on-5000-a-month). Compare with our [budget for remote workers guide](/blog/budget-template-for-remote-workers) if you're relocating with a location-independent income.
+
+---
+
+## Related Budget Guides
+
+- [Budget for Living in Cape Coral, FL](/blog/budget-for-living-in-cape-coral) — Sunbelt alternative with no state income tax
+- [Budget for Living in Huntsville, AL](/blog/budget-for-living-in-huntsville) — Affordable tech hub with low cost of living
+- [Budget for Living in Modesto, CA](/blog/budget-for-living-in-modesto) — Central Valley alternative to Bay Area costs
+- [Budget Template for Security Guards](/blog/budget-template-for-security-guards) — Shift-based income budgeting strategies
+- [Free Budget Calculator](/tools/budget-calculator) — Run your Reno numbers instantly

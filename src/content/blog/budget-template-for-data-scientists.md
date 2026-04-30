@@ -122,3 +122,13 @@ RSU vesting schedules, remote work location optimization, and tax complexity at 
 **[Browse Budget Templates on Gumroad →](https://gettidyflow.gumroad.com)**
 
 For income guidance, see [how to budget on $8,000 a month](/blog/how-to-budget-on-8000-a-month) for non-FAANG positions or [how to budget on $10,000 a month](/blog/how-to-budget-on-10000-a-month) for senior roles. See also our [budget template for software engineers](/blog/budget-template-for-software-engineers) for related comparison.
+
+---
+
+## Related Budget Guides
+
+- [Budget Template for Software Engineers](/blog/budget-template-for-software-engineers) — RSU, 401(k), and tech compensation planning
+- [Budget Template for Healthcare Workers](/blog/budget-template-for-healthcare-workers) — Shift-differential and variable income strategies
+- [Budget Template for Chiropractors](/blog/budget-template-for-chiropractors) — Practice ownership and self-employment budgeting
+- [Budget for Living in Reno, NV](/blog/budget-for-living-in-reno) — Nevada's no-income-tax advantage for tech workers
+- [Free Budget Calculator](/tools/budget-calculator) — Calculate your data scientist monthly budget instantly
