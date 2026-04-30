@@ -100,3 +100,13 @@ Moderately. Rent in San Jose averages 10-20% less than San Francisco, groceries 
 ## Start Your San Jose Budget Today
 
 San Jose rewards high earners who budget with intention. The tech salaries are real, but so are the costs — and the difference between building wealth in Silicon Valley and just getting by comes down to tracking every dollar. [Get our free budget template](https://gettidyflow.gumroad.com) and take control of your San Jose finances starting this month.
+
+---
+
+## Related Budget Guides
+
+- [Budget for Living in Reno, NV](/blog/budget-for-living-in-reno) — Nevada's no-income-tax advantage: a popular Bay Area escape route
+- [Budget Template for Data Scientists](/blog/budget-template-for-data-scientists) — RSU vesting, FAANG comp, and high-income tax planning
+- [Budget for Living in Cape Coral, FL](/blog/budget-for-living-in-cape-coral) — Sunbelt alternative with zero state income tax
+- [Budget for Living in Huntsville, AL](/blog/budget-for-living-in-huntsville) — Affordable tech hub for remote workers leaving California
+- [Free Budget Calculator](/tools/budget-calculator) — Run your San Jose numbers instantly
