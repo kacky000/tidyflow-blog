@@ -201,5 +201,6 @@ Our budget planners handle variable income input, professional expense tracking,
 - [Emergency Fund Budget Template](/blog/emergency-fund-budget-template) — essential for practice owners navigating irregular cash flow
 - [Budget Template for Security Guards](/blog/budget-template-for-security-guards) — another profession with variable income and complex expense tracking
 - [Budget for Living in Huntsville, AL](/blog/budget-for-living-in-huntsville) — strong healthcare employer market for chiropractic professionals
+- [Budget Template for Data Scientists](/blog/budget-template-for-data-scientists) — high-income tech profession with RSU and variable comp parallels
 
 Use the free **[Budget Calculator](/tools/budget-calculator)** to model your chiropractic income across employed and practice-owner scenarios.
