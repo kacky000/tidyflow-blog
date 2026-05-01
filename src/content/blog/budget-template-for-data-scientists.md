@@ -131,4 +131,6 @@ For income guidance, see [how to budget on $8,000 a month](/blog/how-to-budget-o
 - [Budget Template for Healthcare Workers](/blog/budget-template-for-healthcare-workers) — Shift-differential and variable income strategies
 - [Budget Template for Chiropractors](/blog/budget-template-for-chiropractors) — Practice ownership and self-employment budgeting
 - [Budget for Living in Reno, NV](/blog/budget-for-living-in-reno) — Nevada's no-income-tax advantage for tech workers
+- [Budget for Living in Huntsville, AL](/blog/budget-for-living-in-huntsville) — Affordable tech hub for data scientists relocating from high-cost cities
+- [Best Budget Spreadsheet Templates](/blog/best-budget-spreadsheet-templates) — Top Excel and Notion templates for tracking complex income
 - [Free Budget Calculator](/tools/budget-calculator) — Calculate your data scientist monthly budget instantly
