@@ -161,3 +161,13 @@ Absolutely. When you duplicate a paid Notion template into your workspace, it be
 Check for these 5 quality signals: (1) preview screenshots showing the template in use with real data, (2) a clear description of what problems it solves, (3) positive reviews from verified buyers, (4) the creator's track record (do they have other templates?), and (5) a realistic price ($3-15 for single templates). Avoid templates with no preview and inflated "original prices."
 
 [Browse Tidyflow templates →](/products)
+
+---
+
+## Related Budget Guides
+
+- [Best Notion Budget Templates for 2026](/blog/best-notion-budget-templates-2026) — Top-rated picks reviewed and ranked
+- [How to Track Expenses in Notion](/blog/how-to-track-expenses-in-notion) — Step-by-step setup guide for expense tracking
+- [Notion vs Excel for Budgeting](/blog/notion-vs-excel-budgeting) — Which tool fits your workflow?
+- [Budgeting Mistakes to Avoid](/blog/budgeting-mistakes-to-avoid) — Common traps that good templates help you sidestep
+- [Free Budget Calculator](/tools/budget-calculator) — Estimate your monthly budget in seconds

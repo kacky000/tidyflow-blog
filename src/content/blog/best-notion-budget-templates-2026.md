@@ -277,3 +277,13 @@ Yes, absolutely. Sharing a budget with a partner in Notion is straightforward an
 The best time to start budgeting was last month. The second best time is today.
 
 [Get the Tidyflow Budget Tracker for $5.50 →](https://gettidyflow.gumroad.com/l/notion-monthly-budget-tracker)
+
+---
+
+## Related Guides
+
+- [Are These Notion Templates Worth Paying For?](/blog/notion-templates-worth-paying-for) — Quality checklist before you buy
+- [How to Track Expenses in Notion](/blog/how-to-track-expenses-in-notion) — Full setup walkthrough for expense tracking
+- [Notion vs Excel for Budgeting](/blog/notion-vs-excel-budgeting) — Which tool is right for your budget?
+- [Budgeting Mistakes to Avoid](/blog/budgeting-mistakes-to-avoid) — Common mistakes a good template prevents
+- [Free Budget Calculator](/tools/budget-calculator) — Run your monthly budget numbers instantly
