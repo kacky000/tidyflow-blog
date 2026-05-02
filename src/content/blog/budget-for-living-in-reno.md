@@ -116,4 +116,5 @@ For income guidance, see [how to budget on $5,000 a month](/blog/how-to-budget-o
 - [Budget for Living in Modesto, CA](/blog/budget-for-living-in-modesto) — Central Valley alternative to Bay Area costs
 - [Budget Template for Security Guards](/blog/budget-template-for-security-guards) — Shift-based income budgeting strategies
 - [Budget Template for Data Scientists](/blog/budget-template-for-data-scientists) — RSU, Nevada tax optimization, and tech salary planning
+- [Budget for Living in Oxnard, CA](/blog/budget-for-living-in-oxnard) — Coastal California at sub-LA prices
 - [Free Budget Calculator](/tools/budget-calculator) — Run your Reno numbers instantly

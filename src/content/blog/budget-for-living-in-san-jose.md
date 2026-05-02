@@ -107,6 +107,7 @@ San Jose rewards high earners who budget with intention. The tech salaries are r
 
 - [Budget for Living in Reno, NV](/blog/budget-for-living-in-reno) — Nevada's no-income-tax advantage: a popular Bay Area escape route
 - [Budget Template for Data Scientists](/blog/budget-template-for-data-scientists) — RSU vesting, FAANG comp, and high-income tax planning
+- [Budget for Living in Oxnard, CA](/blog/budget-for-living-in-oxnard) — Coastal California at sub-LA prices for Bay Area transplants
 - [Budget for Living in Cape Coral, FL](/blog/budget-for-living-in-cape-coral) — Sunbelt alternative with zero state income tax
 - [Budget for Living in Huntsville, AL](/blog/budget-for-living-in-huntsville) — Affordable tech hub for remote workers leaving California
 - [Free Budget Calculator](/tools/budget-calculator) — Run your San Jose numbers instantly
