@@ -84,3 +84,9 @@ For the broader market, this earnings season suggests the economy is navigating 
 - [Alphabet Near $5 Trillion: Can It Overtake Nvidia?](/blog/alphabet-near-5-trillion-overtake-nvidia-may-2026)
 - [Big Tech Earnings Week Preview: Alphabet, Meta, Microsoft, Amazon](/blog/big-tech-earnings-week-april-29-2026-alphabet-meta-microsoft-amazon)
 - [Big Tech Q1 2026 Earnings Preview](/blog/big-tech-q1-2026-earnings-preview-alphabet-meta-microsoft)
+
+---
+
+## Track Your Own AI-Era Budget
+
+Big Tech is spending $80B+ per quarter on AI. Are you managing your own finances with the same precision? Use our free **[Monthly Budget Calculator](/tools/budget-calculator)** to see exactly where your money is going — no spreadsheet required.
