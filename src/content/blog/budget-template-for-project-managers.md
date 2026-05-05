@@ -1,6 +1,7 @@
 ---
 title: "Budget Template for Project Managers: PMP Costs, Income Ranges, and Financial Planning"
 description: "Project managers span every industry with widely varying salaries. This budget guide covers PMP certification costs, income ranges by industry, and how to build financial stability."
+heroImage: "/thumbs/thumb-budget-template-for-project-managers.jpg"
 pubDate: "2026-05-05"
 tags: ["budgeting", "career", "project management", "template"]
 ---

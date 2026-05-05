@@ -1,6 +1,7 @@
 ---
 title: "Budget for Living in Corona CA: Affordable Inland Empire Guide (2026)"
 description: "Is Corona CA affordable? Full cost of living breakdown including rent, commute costs, and budgeting strategies for this Riverside County city."
+heroImage: "/thumbs/thumb-budget-for-living-in-corona.jpg"
 pubDate: "2026-05-05"
 tags: ["budgeting", "california", "cost of living", "inland empire"]
 ---

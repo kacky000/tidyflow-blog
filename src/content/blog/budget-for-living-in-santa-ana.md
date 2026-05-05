@@ -1,6 +1,7 @@
 ---
 title: "Budget for Living in Santa Ana CA: Real Cost of Living Breakdown (2026)"
 description: "How much does it cost to live in Santa Ana, California? Rent, groceries, transport, and budgeting tips for Orange County's largest city."
+heroImage: "/thumbs/thumb-budget-for-living-in-santa-ana.jpg"
 pubDate: "2026-05-05"
 tags: ["budgeting", "california", "cost of living", "orange county"]
 ---

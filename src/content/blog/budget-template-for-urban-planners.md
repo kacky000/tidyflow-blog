@@ -1,6 +1,7 @@
 ---
 title: "Budget Template for Urban Planners: Financial Guide for Planning Professionals"
 description: "Urban planners earn stable government salaries but navigate AICP certification costs, public sector pay scales, and career development expenses. Here's your complete budget guide."
+heroImage: "/thumbs/thumb-budget-template-for-urban-planners.jpg"
 pubDate: "2026-05-05"
 tags: ["budgeting", "career", "urban planning", "government", "template"]
 ---

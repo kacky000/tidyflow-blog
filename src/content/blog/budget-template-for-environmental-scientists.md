@@ -1,6 +1,7 @@
 ---
 title: "Budget Template for Environmental Scientists: Complete Financial Guide (2026)"
 description: "Environmental scientists navigate graduate school debt, field work expenses, and government pay scales. This budget guide covers every financial challenge unique to the field."
+heroImage: "/thumbs/thumb-budget-template-for-environmental-scientists.jpg"
 pubDate: "2026-05-05"
 tags: ["budgeting", "career", "science", "environment", "template"]
 ---

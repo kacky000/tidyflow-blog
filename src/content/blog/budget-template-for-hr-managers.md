@@ -1,6 +1,7 @@
 ---
 title: "Budget Template for HR Managers: Financial Planning for Human Resources Professionals"
 description: "HR managers earn stable salaries but face unique financial decisions around SHRM certification, career transitions, and managing others' compensation data. Here's your budget guide."
+heroImage: "/thumbs/thumb-budget-template-for-hr-managers.jpg"
 pubDate: "2026-05-05"
 tags: ["budgeting", "career", "human resources", "template"]
 ---

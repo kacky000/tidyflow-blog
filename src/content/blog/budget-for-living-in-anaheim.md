@@ -1,6 +1,7 @@
 ---
 title: "Budget for Living in Anaheim CA: Cost of Living Guide for 2026"
 description: "Complete budget breakdown for Anaheim, California. Rent, utilities, food, and money-saving tips for hospitality workers and Disneyland employees."
+heroImage: "/thumbs/thumb-budget-for-living-in-anaheim.jpg"
 pubDate: "2026-05-05"
 tags: ["budgeting", "california", "cost of living", "orange county"]
 ---

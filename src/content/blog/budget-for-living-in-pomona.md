@@ -1,6 +1,7 @@
 ---
 title: "Budget for Living in Pomona CA: Cost of Living Guide 2026"
 description: "How much does it cost to live in Pomona, CA? Rent, neighborhoods, and budgeting tips for Cal Poly students, young professionals, and families in LA County."
+heroImage: "/thumbs/thumb-budget-for-living-in-pomona.jpg"
 pubDate: "2026-05-05"
 tags: ["budgeting", "california", "cost of living", "los angeles county"]
 ---

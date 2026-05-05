@@ -1,6 +1,7 @@
 ---
 title: "Budget Template for Marketing Managers: Handle Variable Income Like a Pro"
 description: "Marketing managers deal with bonuses, commissions, and career-stage income swings. This budgeting guide covers every financial challenge unique to the role."
+heroImage: "/thumbs/thumb-budget-template-for-marketing-managers.jpg"
 pubDate: "2026-05-05"
 tags: ["budgeting", "career", "marketing", "template"]
 ---
