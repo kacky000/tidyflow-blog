@@ -241,6 +241,26 @@ For more guidance on budgeting as a healthcare professional, see our complete gu
 
 ---
 
+## Free Budget Calculator
+
+Before downloading a template, run your Boise numbers through our free tool. Enter your actual income and monthly expenses to see exactly where you stand—no signup required.
+
+[Try the Free Monthly Budget Calculator →](/tools/budget-calculator/)
+
+---
+
+## Related Budget Guides
+
+Comparing Boise to other cities, or budgeting for a different healthcare role?
+
+- [Budget for Living in Austin, Texas](/blog/budget-for-living-in-austin/)
+- [Budget for Living in San Jose, California](/blog/budget-for-living-in-san-jose/)
+- [Budget for Living in Huntsville, Alabama](/blog/budget-for-living-in-huntsville/)
+- [Budget for Living in Cape Coral, Florida](/blog/budget-for-living-in-cape-coral/)
+- [Budget Template for Healthcare Workers](/blog/budget-template-for-healthcare-workers/)
+
+---
+
 ## Ready to Take Control of Your Boise Budget?
 
 Stop guessing at the numbers. Our **Healthcare Worker Budget Template** is pre-built with categories specific to medical professionals—including shift differentials, CE credits, licensing fees, and scrubs. Available as an instant download.
