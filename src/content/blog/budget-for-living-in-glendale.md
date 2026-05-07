@@ -126,4 +126,14 @@ A single person needs approximately $75,000–$85,000 gross income to live comfo
 
 ---
 
-Planning your Glendale budget? Our [Freelancer Expense Tracker](https://gettidyflow.gumroad.com/l/freelancer-expense-tracker) helps track every expense category so you always know where your money goes. Also check our guides for [Burbank](/blog/budget-for-living-in-burbank), [Pasadena](/blog/budget-for-living-in-pasadena), and [Los Angeles](/blog/budget-for-living-in-los-angeles).
+Planning your Glendale budget? Use our free [Budget Calculator](/tools/budget-calculator) to see exactly how much you need to live comfortably here. Our [Freelancer Expense Tracker](https://gettidyflow.gumroad.com/l/freelancer-expense-tracker) helps track every expense category so you always know where your money goes.
+
+## Related Budget Guides
+
+- [Budget for Living in Burbank](/blog/budget-for-living-in-burbank)
+- [Budget for Living in Pasadena](/blog/budget-for-living-in-pasadena)
+- [Budget for Living in Los Angeles](/blog/budget-for-living-in-los-angeles)
+- [Budget for Living in Seattle](/blog/budget-for-living-in-seattle)
+- [Budget for Living in Boise](/blog/budget-for-living-in-boise)
+- [Budget for Living in Fort Lauderdale](/blog/budget-for-living-in-fort-lauderdale)
+- [Budget for Living in Cape Coral](/blog/budget-for-living-in-cape-coral)
