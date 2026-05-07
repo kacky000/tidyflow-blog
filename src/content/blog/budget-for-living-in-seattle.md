@@ -99,4 +99,7 @@ Planning to move or compare cities? These guides break down real costs city by c
 - [Budget for Living in Austin](/blog/budget-for-living-in-austin) — No income tax, lower rent
 - [Budget for Living in Cape Coral](/blog/budget-for-living-in-cape-coral) — Florida's affordable waterfront city
 - [Budget for Living in Huntsville](/blog/budget-for-living-in-huntsville) — Low-cost Southeast tech hub
+- [Budget for Living in Fort Lauderdale](/blog/budget-for-living-in-fort-lauderdale) — Sun Belt city with no income tax
+- [Budget for Living in Des Moines](/blog/budget-for-living-in-des-moines) — Most affordable Midwest metro
+- [Budget for Living in Modesto](/blog/budget-for-living-in-modesto) — Central Valley alternative to Bay Area costs
 - [Free Monthly Budget Calculator](/tools/budget-calculator) — Build your personalized Seattle budget in 2 minutes
