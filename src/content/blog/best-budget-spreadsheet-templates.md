@@ -138,6 +138,22 @@ Two incomes, shared expenses, individual spending — it gets complicated fast. 
 ### For Debt Payoff
 If your primary goal is eliminating debt, you need a template that prioritizes debt payments. Our [debt payoff budget template](/blog/debt-payoff-budget-template/) includes snowball and avalanche calculators.
 
+### For Specific Cities (Cost of Living Budgets)
+Budget needs vary dramatically by city. We've built detailed budget guides for specific metro areas with local cost data built in:
+- [Budget for Living in Glendale](/blog/budget-for-living-in-glendale/)
+- [Budget for Living in Seattle](/blog/budget-for-living-in-seattle/)
+- [Budget for Living in Boise](/blog/budget-for-living-in-boise/)
+- [Budget for Living in Cape Coral](/blog/budget-for-living-in-cape-coral/)
+- [Budget for Living in Fort Lauderdale](/blog/budget-for-living-in-fort-lauderdale/)
+- [Budget for Living in Huntsville](/blog/budget-for-living-in-huntsville/)
+- [Budget for Living in Des Moines](/blog/budget-for-living-in-des-moines/)
+
+### For Specific Professions
+Some jobs have unique pay structures that require specialized templates:
+- [Budget Template for Security Guards](/blog/budget-template-for-security-guards/) — shift differentials and overtime
+- [Budget Template for Healthcare Workers](/blog/budget-template-for-healthcare-workers/) — rotating schedules and multiple income streams
+- [Budget Template for Chiropractors](/blog/budget-template-for-chiropractors/) — practice owners and associates
+
 ### For Specific Income Levels
 We've built budget templates for specific monthly incomes:
 - [How to budget on $2,000/month](/blog/how-to-budget-on-2000-a-month/)
@@ -293,3 +309,9 @@ Planning a wedding? Our [Wedding Budget Planner](https://gettidyflow.gumroad.com
 - [Track Multiple Income Streams in Notion](/blog/track-multiple-income-streams-notion/)
 - [Biweekly Budget Template Guide](/blog/biweekly-budget-template/)
 - [No-Spend Challenge Guide](/blog/no-spend-challenge-guide/)
+- [Budget for Living in Glendale](/blog/budget-for-living-in-glendale/)
+- [Budget for Living in Seattle](/blog/budget-for-living-in-seattle/)
+- [Budget for Living in Boise](/blog/budget-for-living-in-boise/)
+- [Budget Template for Security Guards](/blog/budget-template-for-security-guards/)
+- [Budget Template for Healthcare Workers](/blog/budget-template-for-healthcare-workers/)
+- [Budget Template for Chiropractors](/blog/budget-template-for-chiropractors/)
