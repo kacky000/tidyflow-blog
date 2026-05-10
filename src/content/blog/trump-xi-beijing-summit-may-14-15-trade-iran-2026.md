@@ -3,6 +3,7 @@ title: "Trump Heads to Beijing for May 14-15 Summit With Xi — Iran, Not Tariff
 description: "Trump visits China for the first time in 8 years to meet Xi Jinping. Iran oil purchases, Boeing deals, and trade truce tensions top the agenda."
 pubDate: "2026-05-10"
 tags: ["Trump", "Xi Jinping", "China", "trade", "tariffs", "Iran", "summit", "Beijing"]
+heroImage: "/thumbs/thumb-trump-xi-beijing-summit-may-14-15-trade-iran-2026.jpg"
 ---
 
 # Trump Heads to Beijing for May 14-15 Summit With Xi — Iran, Not Tariffs, Will Dominate

@@ -3,6 +3,7 @@ title: "Kevin Warsh Clears Final Hurdle for Fed Chair — Senate Floor Vote Expe
 description: "The Senate is set to vote on Kevin Warsh's Fed chair confirmation as early as next week. Powell exits May 15. What the partisan battle means for rate policy."
 pubDate: "2026-05-10"
 tags: ["Kevin Warsh", "Fed", "Jerome Powell", "interest rates", "Senate", "confirmation"]
+heroImage: "/thumbs/thumb-warsh-fed-chair-senate-vote-powell-exits-may-15-2026.jpg"
 ---
 
 Kevin Warsh is one vote away from becoming the next chair of the Federal Reserve. The full Senate is expected to hold a floor vote on his confirmation as early as the week of May 11, following the removal of the last procedural obstacle — a hold placed by Senator Thom Tillis that was lifted after the Department of Justice dropped its criminal investigation into outgoing Chair Jerome Powell.

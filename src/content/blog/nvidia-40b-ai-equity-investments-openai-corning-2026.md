@@ -3,6 +3,7 @@ title: "Nvidia Has Committed Over $40 Billion in AI Equity Deals in 2026 — Mor
 description: "Nvidia's 2026 equity investments include ~$30B in OpenAI, $3.2B in Corning, and $2.1B in IREN. The chipmaker is building a self-reinforcing AI ecosystem."
 pubDate: "2026-05-10"
 tags: ["Nvidia", "AI", "OpenAI", "investments", "Corning", "IREN", "stocks"]
+heroImage: "/thumbs/thumb-nvidia-40b-ai-equity-investments-openai-corning-2026.jpg"
 ---
 
 Nvidia is no longer just selling the picks and shovels of the AI boom. In 2026, the chipmaker has committed more than **$40 billion in equity investments** across AI companies, data center operators, and infrastructure suppliers — a figure that exceeds the total amount the entire US venture capital industry deployed into AI startups in 2024.
