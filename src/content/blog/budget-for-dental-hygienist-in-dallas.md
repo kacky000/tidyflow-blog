@@ -99,6 +99,7 @@ Texas has no state income tax, but you still pay federal tax. Max your 401(k) ($
 - **[Budget Template for Dental Hygienists](/budget-template-for-dental-hygienists/)** — Framework built for variable hours and multi-office income
 - **[Free Budget Calculator](/tools/budget-calculator/)** — Calculate exact take-home for your salary
 - **[Freelancer Expense Tracker ($9.99)](https://gettidyflow.gumroad.com/l/freelancer-expense-tracker)** — Perfect if you work at 2+ offices or have 1099 income
+- **[PSLF for Social Workers: Complete Guide](/blog/pslf-for-social-workers-complete-guide/)** — If you work at an FQHC or Parkland affiliate, PSLF may apply to your loans too
 - **[Dental Hygienist Budget in Phoenix](/budget-for-dental-hygienist-in-phoenix/)** — Comparison: Dallas vs. Phoenix
 - **[Dental Hygienist Budget in Orlando](/budget-for-dental-hygienist-in-orlando/)** — Another no-tax state option
 

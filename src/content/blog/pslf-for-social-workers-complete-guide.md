@@ -137,21 +137,20 @@ Social work salaries tend to grow over time — especially with licensure (LCSW/
 
 As your salary rises, your IDR payment rises — but the remaining balance still gets forgiven at year 10. If you're at year 8 and earning $85K, you're still better off completing PSLF than switching repayment plans.
 
-## City-Specific PSLF Resources for Social Workers
+## PSLF Resources for Healthcare Professionals
 
-- **[PSLF for Teachers](/pslf-for-teachers-complete-guide/)** — If you're a school social worker
-- **[PSLF for Nurses](/pslf-for-nurses-complete-guide/)** — If you work alongside clinical staff in a nonprofit hospital
-- **[PSLF Core Guide](/pslf-loan-forgiveness-guide-for-public-service-workers/)** — All professions overview
-- **[Budget Template for Clinical Social Workers](/budget-template-for-clinical-social-workers/)** — Financial planning framework for LCSWs
-- **[General Social Worker Budget Template](/budget-template-for-social-workers/)** — BSW and MSW budget structure
+- **[PSLF Core Guide](/pslf-loan-forgiveness-guide-for-public-service-workers/)** — All public service professions overview
+- **[Budget for Dental Hygienists in Dallas](/blog/budget-for-dental-hygienist-in-dallas/)** — FQHC and county clinic PSLF eligibility for hygienists
+- **[Budget for Occupational Therapists in Memphis](/blog/budget-for-occupational-therapist-in-memphis/)** — VA and nonprofit hospital PSLF strategy for OTs
+- **[Free Budget Calculator](/tools/budget-calculator/)** — Calculate your monthly savings under SAVE vs. standard repayment
+- **[Freelancer Expense Tracker ($9.99)](https://gettidyflow.gumroad.com/l/freelancer-expense-tracker)** — Track income and expenses across multiple social work roles
 
 ---
 
 ## Tracking Your PSLF Payments
 
-A spreadsheet tracker helps you stay on top of payment counts, employer certifications, and projected forgiveness dates. See the [PSLF Tracker resources](https://gettidyflow.gumroad.com) — free download available.
+A spreadsheet tracker helps you stay on top of payment counts, employer certifications, and projected forgiveness dates. Use the free [Budget Calculator](/tools/budget-calculator/) to compare your SAVE plan payment against standard repayment — the difference is often $400–$700/month that you keep instead of paying to your servicer.
 
-heroImage: "/thumbs/pslf-for-social-workers-complete-guide.jpg"
 ---
 
 *Social workers who qualify for PSLF but aren't enrolled are leaving tens of thousands of dollars on the table. If you work for a county agency, nonprofit hospital, VA, or FQHC, enroll today. Use the [PSLF Help Tool](https://studentaid.gov/pslf/) to check eligibility.*

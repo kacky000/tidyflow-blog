@@ -112,7 +112,9 @@ This means Memphis OTs can realistically own a home within 2.5 years of starting
 - **[Budget Template for Occupational Therapists](/budget-template-for-occupational-therapists/)** — Income structure for hospital vs. outpatient vs. school-based OTs
 - **[OT Assistant Budget Guide](/budget-template-for-occupational-therapist-assistants/)** — For OTAs in Memphis
 - **[OT in Greensboro](/budget-for-occupational-therapist-in-greensboro/)** — Greensboro vs. Memphis comparison
+- **[PSLF for Social Workers: Complete Guide](/blog/pslf-for-social-workers-complete-guide/)** — Detailed PSLF breakdown for nonprofit and VA healthcare workers
 - **[PSLF Complete Guide](/pslf-loan-forgiveness-guide-for-public-service-workers/)** — VA and county hospital PSLF details
+- **[Free Budget Calculator](/tools/budget-calculator/)** — Calculate your SAVE plan payment vs. standard repayment at Memphis OT salary
 - **[Freelancer Expense Tracker ($9.99)](https://gettidyflow.gumroad.com/l/freelancer-expense-tracker)** — For PRN or contract OT work
 
 ---
