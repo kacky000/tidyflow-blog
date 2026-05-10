@@ -3,6 +3,7 @@ title: "Budget Template for Optometrists: Managing $120K–$165K with $200K in S
 description: "Optometrists face a unique financial challenge: $200K–$300K in student loans on a $120K–$165K salary. Here's the budget framework that actually works for ODs."
 pubDate: "2026-05-03"
 tags: ["budgeting", "optometrist", "healthcare", "student loans", "professional budget"]
+heroImage: "/thumbs/budget-template-for-optometrists.jpg"
 ---
 
 # Budget Template for Optometrists: Managing $120K–$165K with $200K in Student Loans

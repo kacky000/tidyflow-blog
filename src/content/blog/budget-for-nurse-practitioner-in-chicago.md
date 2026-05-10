@@ -3,6 +3,7 @@ title: "Nurse Practitioner Budget Template for Chicago, IL (2026)"
 description: "A complete budget guide for Nurse Practitioners living in Chicago. NP salary data, cost of living, PSLF strategy, and a free NP budget template."
 pubDate: "2026-05-08"
 tags: ["budgeting", "nurse practitioner", "chicago", "healthcare", "salary"]
+heroImage: "/thumbs/budget-for-nurse-practitioner-in-chicago.jpg"
 ---
 
 # Nurse Practitioner Budget Template for Chicago, IL (2026)

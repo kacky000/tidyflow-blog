@@ -3,6 +3,7 @@ title: "Soil Scientist Budget Template (2026) — Salary, Career Paths & Financi
 description: "A complete budget guide for Soil Scientists. Federal vs. private sector salaries, PSLF eligibility, certification pay bumps, and a free budget template."
 pubDate: "2026-05-08"
 tags: ["budgeting", "soil scientist", "environmental science", "usda", "salary"]
+heroImage: "/thumbs/budget-template-for-soil-scientists.jpg"
 ---
 
 # Soil Scientist Budget Template (2026)

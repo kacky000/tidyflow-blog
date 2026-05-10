@@ -3,6 +3,7 @@ title: "Budget Template for Pharmacists in Nashville, TN (2026)"
 description: "A monthly budget guide for pharmacists in Nashville earning $120K–$145K. Covers Tennessee's zero income tax advantage, cost of living by neighborhood, and student loan strategy."
 pubDate: "2026-05-09"
 tags: ["budgeting", "pharmacist", "nashville", "tennessee", "healthcare budget"]
+heroImage: "/thumbs/budget-for-pharmacist-in-nashville.jpg"
 ---
 
 Pharmacists in Nashville have one of the best financial setups in the country: Tennessee charges **zero state income tax on wages**, making your take-home pay significantly higher than pharmacists in states like California or New York. But Nashville's cost of living has surged since 2020. Here's how to actually build wealth on a pharmacist salary in Nashville.

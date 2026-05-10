@@ -3,6 +3,7 @@ title: "Budget for Living in Irvine CA: True Monthly Costs 2026"
 description: "Irvine CA is one of America's most expensive planned cities. Here's the real monthly budget breakdown — rent, tech salary requirements, and whether you can actually afford it."
 pubDate: "2026-05-04"
 tags: ["budgeting", "california", "cost of living", "irvine", "orange county"]
+heroImage: "/thumbs/budget-for-living-in-irvine.jpg"
 ---
 
 # Budget for Living in Irvine CA: True Monthly Costs 2026

@@ -3,6 +3,7 @@ title: "Budget Template for Registered Dietitians: Managing $58K–$90K with Stu
 description: "Registered dietitians face a tough financial equation: moderate salaries and significant student loan debt. Here's the budget framework that actually works for RDs in 2026."
 pubDate: "2026-05-04"
 tags: ["budgeting", "dietitian", "registered dietitian", "healthcare", "student loans", "professional budget"]
+heroImage: "/thumbs/budget-template-for-dietitians.jpg"
 ---
 
 # Budget Template for Registered Dietitians: Managing $58K–$90K with Student Loan Reality

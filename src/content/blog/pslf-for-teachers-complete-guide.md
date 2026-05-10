@@ -3,6 +3,7 @@ title: "PSLF for Teachers: Complete Guide to Public Service Loan Forgiveness (20
 description: "Everything teachers need to know about PSLF in 2026: which schools qualify, how to enroll, income-driven repayment options, and how much forgiveness to expect on teacher loans."
 pubDate: "2026-05-09"
 tags: ["PSLF", "teachers", "student loans", "loan forgiveness", "public service", "education"]
+heroImage: "/thumbs/pslf-for-teachers-complete-guide.jpg"
 ---
 
 Teachers are one of the largest groups eligible for Public Service Loan Forgiveness — and one of the most underserved in actually accessing it. This guide covers everything you need to know to navigate PSLF as a teacher in 2026, including which schools qualify, how to enroll correctly, and realistic forgiveness projections based on your loan balance and income.

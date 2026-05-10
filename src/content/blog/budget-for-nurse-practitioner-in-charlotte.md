@@ -3,6 +3,7 @@ title: "Budget Template for Nurse Practitioners in Charlotte, NC (2026)"
 description: "Monthly budget guide for NPs in Charlotte earning $105K–$130K. Covers North Carolina taxes, Uptown vs. South End living costs, and PSLF eligibility at Atrium and Novant."
 pubDate: "2026-05-09"
 tags: ["budgeting", "nurse practitioner", "charlotte", "north carolina", "healthcare budget"]
+heroImage: "/thumbs/budget-for-nurse-practitioner-in-charlotte.jpg"
 ---
 
 Charlotte is one of the fastest-growing metro areas in the Southeast, and Nurse Practitioners here earn competitive salaries while enjoying a cost of living well below coastal cities. North Carolina's income tax is also dropping year over year — currently at 4.5% flat in 2026 — making Charlotte increasingly attractive for NPs relocating from higher-tax states. Here's your complete budget breakdown.

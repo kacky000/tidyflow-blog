@@ -3,6 +3,7 @@ title: "Budget for Living in San Bernardino CA: Real Cost Breakdown 2026"
 description: "Planning to live in San Bernardino CA? Here's an honest monthly budget breakdown — rent, food, transport, and how to save $400–$800/month vs LA."
 pubDate: "2026-05-03"
 tags: ["budgeting", "california", "cost of living", "san bernardino", "inland empire"]
+heroImage: "/thumbs/budget-for-living-in-san-bernardino.jpg"
 ---
 
 # Budget for Living in San Bernardino CA: Real Cost Breakdown 2026

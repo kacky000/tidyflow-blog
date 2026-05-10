@@ -3,6 +3,7 @@ title: "Budget for Living in Spokane, Washington: A Complete Guide for Healthcar
 description: "Planning your budget for living in Spokane, WA? Discover real cost-of-living data for healthcare workers — rent, transportation, taxes, and more — to build a solid financial plan."
 pubDate: "2026-04-22"
 tags: ["budget", "healthcare", "spokane", "washington", "cost-of-living"]
+heroImage: "/thumbs/budget-for-living-in-spokane.jpg"
 ---
 
 # Budget for Living in Spokane, Washington: A Healthcare Worker's Cost of Living Guide
@@ -25,6 +26,7 @@ Spokane is the second-largest city in Washington state and serves as the regiona
 
 The combination of high healthcare demand, Washington's zero state income tax, and Spokane's affordable housing creates a strong financial case for healthcare workers who prioritize quality of life and savings rate over big-city prestige.
 
+heroImage: "/thumbs/budget-for-living-in-spokane.jpg"
 ---
 
 ## Spokane, Washington Cost of Living Overview (2026)
@@ -56,6 +58,7 @@ Housing is Spokane's biggest financial advantage over other Pacific Northwest ci
 
 **Homeownership**: Median home prices in Spokane hover around $320,000–$360,000 as of early 2026 — significantly more accessible than Seattle's $700,000+ median. At current mortgage rates, a median Spokane home costs roughly $1,900–$2,300/month PITI with 20% down.
 
+heroImage: "/thumbs/budget-for-living-in-spokane.jpg"
 ---
 
 ## Transportation Costs in Spokane
@@ -94,6 +97,7 @@ Spokane's grocery costs are among the lowest in the Pacific Northwest. The city 
 
 Spokane's farmer's markets (May–October) offer excellent produce deals. Healthcare workers on day shifts can shop the Saturday market at Riverfront Park without schedule conflicts.
 
+heroImage: "/thumbs/budget-for-living-in-spokane.jpg"
 ---
 
 ## No State Income Tax: Spokane's Hidden Financial Advantage
@@ -129,6 +133,7 @@ Note: Washington does have a 6.5% state sales tax (plus local taxes, total typic
 
 Healthcare workers at Providence or Deaconess often receive competitive benefit packages with low premium contributions. Check your specific employer's benefits during negotiation.
 
+heroImage: "/thumbs/budget-for-living-in-spokane.jpg"
 ---
 
 ## Utilities in Spokane
@@ -172,6 +177,7 @@ Spokane punches above its weight for outdoor recreation and quality of life.
 | Concerts/events | $30–$80 |
 | **Total entertainment** | **$200–$490** |
 
+heroImage: "/thumbs/budget-for-living-in-spokane.jpg"
 ---
 
 ## Sample Monthly Budgets for Spokane Healthcare Workers
@@ -234,6 +240,7 @@ Spokane punches above its weight for outdoor recreation and quality of life.
 
 Spokane is clearly the most financially advantageous Pacific Northwest city for healthcare workers who prioritize take-home pay and quality of life over metropolitan status.
 
+heroImage: "/thumbs/budget-for-living-in-spokane.jpg"
 ---
 
 ## Financial Tips for Healthcare Workers Moving to Spokane
@@ -253,6 +260,7 @@ With the numbers in this guide, you can build a realistic first-month budget bef
 
 For a complete framework built specifically for medical professionals, see our [Budget Template for Healthcare Workers](/blog/budget-template-for-healthcare-workers/). Nurses will also find specific guidance in our [Budget Template for Nurses](/blog/budget-template-for-nurses/).
 
+heroImage: "/thumbs/budget-for-living-in-spokane.jpg"
 ---
 
 ## Start Your Spokane Budget Today

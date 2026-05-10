@@ -3,6 +3,7 @@ title: "Pharmacist Budget Template for Denver, CO (2026)"
 description: "A complete budget guide for Pharmacists living in Denver. Salary breakdown, cost of living, student loan strategy, and free pharmacist budget template."
 pubDate: "2026-05-08"
 tags: ["budgeting", "pharmacist", "denver", "healthcare", "salary"]
+heroImage: "/thumbs/budget-for-pharmacist-in-denver.jpg"
 ---
 
 # Pharmacist Budget Template for Denver, CO (2026)

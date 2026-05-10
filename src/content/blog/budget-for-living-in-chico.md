@@ -3,6 +3,7 @@ title: "Budget for Living in Chico CA: True Monthly Costs 2026"
 description: "Chico CA is one of the most affordable mid-size California cities. Here's the real monthly budget breakdown for 2026 — CSU Chico, healthcare jobs, and what income you actually need."
 pubDate: "2026-05-04"
 tags: ["budgeting", "california", "cost of living", "chico", "north california"]
+heroImage: "/thumbs/budget-for-living-in-chico.jpg"
 ---
 
 # Budget for Living in Chico CA: True Monthly Costs 2026

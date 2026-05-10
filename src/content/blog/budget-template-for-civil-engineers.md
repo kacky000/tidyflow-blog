@@ -3,6 +3,7 @@ title: "Budget Template for Civil Engineers: Managing $80K–$140K in 2026"
 description: "Civil engineers earn solid salaries but face unique financial challenges — PE license costs, project-based income swings, and geographic salary gaps. Here's the budget framework that works."
 pubDate: "2026-05-04"
 tags: ["budgeting", "civil engineer", "engineering", "professional budget", "student loans"]
+heroImage: "/thumbs/budget-template-for-civil-engineers.jpg"
 ---
 
 # Budget Template for Civil Engineers: Managing $80K–$140K in 2026

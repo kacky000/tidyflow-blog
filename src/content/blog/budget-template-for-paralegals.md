@@ -3,6 +3,7 @@ title: "Budget Template for Paralegals: Manage Your Income and Build Financial S
 description: "A practical budget template for paralegals with real salary data, bar-prep loan strategies, CLE costs, and monthly budget frameworks to help you save on a paralegal income."
 pubDate: "2026-04-22"
 tags: ["budget", "paralegal", "legal", "template", "personal finance"]
+heroImage: "/thumbs/budget-template-for-paralegals.jpg"
 ---
 
 # Budget Template for Paralegals: Your Complete Financial Planning Guide
@@ -42,6 +43,7 @@ Paralegal compensation spans a wide range depending on practice area, firm size,
 
 **Important reality**: Big law firm paralegal positions in New York or D.C. can pay more than double small-firm positions in mid-sized markets. If you're geographically flexible, location is one of the highest-leverage factors in paralegal compensation.
 
+heroImage: "/thumbs/budget-template-for-paralegals.jpg"
 ---
 
 ## Paralegal-Specific Budget Categories
@@ -170,6 +172,7 @@ Here's a complete budget framework built for a paralegal earning $52,000/year (a
 
 The range is wide because the biggest variable is housing. In an expensive city (NYC, SF, D.C.), housing alone may consume 40–50% of take-home pay at this salary level, leaving almost nothing for savings. In mid-tier cities (Madison, Denver, Phoenix), the picture is more manageable.
 
+heroImage: "/thumbs/budget-template-for-paralegals.jpg"
 ---
 
 ## Geographic Arbitrage: The Most Powerful Budget Tool for Paralegals
@@ -202,6 +205,7 @@ Paralegal programs range from 6-month certificates (~$3,000–$8,000) to 4-year 
 
 **Public Service Loan Forgiveness (PSLF)**: If you work for a government agency (public defender's office, state attorney, government legal aid) or 501(c)(3) legal organization, you may qualify for PSLF. After 10 years of qualifying payments, remaining federal loan balance is forgiven. This is exceptionally valuable for paralegals at qualifying organizations with high student debt.
 
+heroImage: "/thumbs/budget-template-for-paralegals.jpg"
 ---
 
 ## Saving Strategies on a Paralegal Income
@@ -287,6 +291,7 @@ Paralegals may be able to deduct unreimbursed professional expenses (bar review 
 | **Total** | **$4,950** |
 | Remaining | $250 |
 
+heroImage: "/thumbs/budget-template-for-paralegals.jpg"
 ---
 
 ## Career Development: Increasing Paralegal Income
@@ -311,6 +316,7 @@ The paralegal work environment is detail-oriented and deadline-driven. Your pers
 
 For a systematic approach to expense tracking, see our [guide to tracking expenses in Notion](/blog/how-to-track-expenses-in-notion/). For healthcare-adjacent professional budgeting approaches that parallel the paralegal situation, our [Budget Template for Healthcare Workers](/blog/budget-template-for-healthcare-workers/) provides useful structural comparison.
 
+heroImage: "/thumbs/budget-template-for-paralegals.jpg"
 ---
 
 ## Paralegal Budget Template: Quick Reference Card

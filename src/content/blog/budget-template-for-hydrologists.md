@@ -3,6 +3,7 @@ title: "Hydrologist Budget Template (2026) — Salary, Student Loans & Financial
 description: "A complete financial planning guide for Hydrologists. Salary data by sector, student loan strategies, and a free budget template for water science professionals."
 pubDate: "2026-05-08"
 tags: ["budgeting", "hydrologist", "environmental science", "salary", "student loans"]
+heroImage: "/thumbs/budget-template-for-hydrologists.jpg"
 ---
 
 # Hydrologist Budget Template (2026)

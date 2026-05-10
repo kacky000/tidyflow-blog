@@ -3,6 +3,7 @@ title: "Budget Template for Supply Chain Managers: Income, Expenses & Savings"
 description: "Supply chain managers earn $90K–$140K with significant variable pay. Here's how to build a budget that handles APICS certification costs, travel, and bonus volatility."
 pubDate: "2026-05-06"
 tags: ["budgeting", "career", "supply chain", "budget template"]
+heroImage: "/thumbs/budget-template-for-supply-chain-managers.jpg"
 ---
 
 The COVID-era supply chain crisis made supply chain management one of the most in-demand career fields in the country—and compensation followed. Supply chain managers now earn significantly more than pre-2020 benchmarks, but the role comes with financial complexity: variable bonuses tied to company performance, frequent travel costs, expensive certifications, and the professional expectation to look the part on a salary that varies by industry more than almost any other management function.
@@ -60,6 +61,7 @@ If you work in analytics-heavy supply chain roles, you may invest in:
 - **SAP or Oracle training**: $500–$2,000
 - **Tableau**: $75–$150/month personal license
 
+heroImage: "/thumbs/budget-template-for-supply-chain-managers.jpg"
 ---
 
 ## Monthly Budget Template
@@ -126,6 +128,7 @@ Supply chain bonuses in 2024–2026 have been more volatile than in prior period
 | Discretionary | $2,000 | Acknowledge the reward |
 | **Total** | **$18,000** | |
 
+heroImage: "/thumbs/budget-template-for-supply-chain-managers.jpg"
 ---
 
 ## Career Transitions and Budget Planning
@@ -154,6 +157,7 @@ Supply chain managers often hit peak earnings in their 40s, making retirement ac
 
 For senior supply chain leaders earning $140,000+, max out 401k and HSA before adding taxable brokerage contributions.
 
+heroImage: "/thumbs/budget-template-for-supply-chain-managers.jpg"
 ---
 
 ## FAQ

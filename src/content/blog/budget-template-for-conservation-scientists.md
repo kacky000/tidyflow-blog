@@ -3,6 +3,7 @@ title: "Budget Template for Conservation Scientists (2026) — NPS, BLM & USFWS"
 description: "Monthly budget guide for conservation scientists and ecologists earning $48K–$90K at federal land agencies. Covers GS pay scale, PSLF eligibility, and career progression to GS-12."
 pubDate: "2026-05-09"
 tags: ["budgeting", "conservation scientist", "NPS", "federal jobs", "ecology", "PSLF"]
+heroImage: "/thumbs/budget-template-for-conservation-scientists.jpg"
 ---
 
 Conservation scientists work at the intersection of ecology, policy, and land management — often for federal or state agencies that protect natural resources. They're employed by the National Park Service (NPS), Bureau of Land Management (BLM), U.S. Fish & Wildlife Service (USFWS), U.S. Forest Service (USFS), and state natural resource departments. Like other federal science professionals, conservation scientists are compensated on the GS pay scale with excellent benefits — and nearly all qualify for Public Service Loan Forgiveness.

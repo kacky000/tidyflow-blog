@@ -3,6 +3,7 @@ title: "Budget Template for Veterinarians: Surviving $150K+ Debt on a $90K Salar
 description: "Veterinarians have the worst student debt-to-income ratio of any profession. Here's the honest budget framework for DVMs in 2026 — and how to build wealth anyway."
 pubDate: "2026-05-03"
 tags: ["budgeting", "veterinarian", "student loans", "DVM", "professional budget", "healthcare"]
+heroImage: "/thumbs/budget-template-for-veterinarians.jpg"
 ---
 
 # Budget Template for Veterinarians: Surviving $150K+ Debt on a $90K Salary

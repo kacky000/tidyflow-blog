@@ -3,6 +3,7 @@ title: "PSLF for Nurses: Complete Guide to Public Service Loan Forgiveness (2026
 description: "Nurses at nonprofit hospitals and government clinics can have student loans forgiven through PSLF after 10 years. This guide covers which employers qualify, how to enroll, and realistic forgiveness amounts."
 pubDate: "2026-05-09"
 tags: ["PSLF", "nurses", "student loans", "loan forgiveness", "nursing", "public service"]
+heroImage: "/thumbs/pslf-for-nurses-complete-guide.jpg"
 ---
 
 Nursing carries some of the highest student loan burdens in healthcare — BSN graduates average $47,000 in debt, MSN and DNP graduates often carry $80,000–$120,000. Public Service Loan Forgiveness (PSLF) can eliminate a significant portion of that debt, but most nurses don't realize they likely qualify if they work at a nonprofit or government hospital. This is your complete guide.

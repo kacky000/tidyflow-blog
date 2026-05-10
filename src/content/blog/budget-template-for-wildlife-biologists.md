@@ -3,6 +3,7 @@ title: "Budget Template for Wildlife Biologists (2026) — Federal & State Salar
 description: "Monthly budget guide for wildlife biologists earning $45K–$80K at USFWS, BLM, and state agencies. Covers GS pay scales, PSLF eligibility, and cost of living in rural field stations."
 pubDate: "2026-05-09"
 tags: ["budgeting", "wildlife biologist", "federal jobs", "pslf", "government salary"]
+heroImage: "/thumbs/budget-template-for-wildlife-biologists.jpg"
 ---
 
 Wildlife biologists are among the most mission-driven scientists in the federal workforce — and often among the most financially stressed. Salaries at the U.S. Fish & Wildlife Service (USFWS) and Bureau of Land Management (BLM) are set by the GS pay scale, which doesn't always keep pace with the cost of living in western field stations where many biologists are posted. Here's a real budget breakdown for wildlife biologists at different career stages.

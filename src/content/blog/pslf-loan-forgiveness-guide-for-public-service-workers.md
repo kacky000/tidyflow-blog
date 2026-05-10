@@ -3,6 +3,7 @@ title: "PSLF Loan Forgiveness Guide for Public Service Workers (2026)"
 description: "Complete guide to Public Service Loan Forgiveness in 2026. Qualifying employers, payment plans, tracking tools, and which professions benefit most."
 pubDate: "2026-05-08"
 tags: ["student loans", "PSLF", "public service", "loan forgiveness", "budgeting"]
+heroImage: "/thumbs/pslf-loan-forgiveness-guide-for-public-service-workers.jpg"
 ---
 
 # PSLF Loan Forgiveness Guide for Public Service Workers (2026)

@@ -3,6 +3,7 @@ title: "Budget for Living in Boise, Idaho: A Complete Guide for Healthcare Worke
 description: "Planning your budget for living in Boise, Idaho? Get real cost-of-living numbers for healthcare workers, from rent to groceries, and build a realistic financial plan."
 pubDate: "2026-04-22"
 tags: ["budget", "healthcare", "boise", "idaho", "cost-of-living"]
+heroImage: "/thumbs/budget-for-living-in-boise.jpg"
 ---
 
 # Budget for Living in Boise, Idaho: A Healthcare Worker's Complete Cost Guide
@@ -22,6 +23,7 @@ Beyond career opportunity, Boise offers:
 - Outdoor lifestyle with skiing, hiking, and mountain biking minutes from the city
 - A growing downtown with restaurants, arts, and culture
 
+heroImage: "/thumbs/budget-for-living-in-boise.jpg"
 ---
 
 ## Boise, Idaho Cost of Living Overview (2026)
@@ -55,6 +57,7 @@ Housing is the largest line item in any Boise budget. The city experienced rapid
 
 **Budget tip**: Healthcare workers with predictable schedules often find house-sharing viable. Splitting a 3-bedroom costs $700–$900 per person, freeing significant income for savings and loan repayment.
 
+heroImage: "/thumbs/budget-for-living-in-boise.jpg"
 ---
 
 ## Transportation Costs in Boise
@@ -93,6 +96,7 @@ Boise has a growing restaurant scene and solid grocery options. Costs are modera
 
 **Meal prep note**: Nurses and healthcare workers on rotating shifts benefit enormously from weekend meal prep. Spending $120–$150 at WinCo per week can cover most meals, including healthy options that support demanding work schedules.
 
+heroImage: "/thumbs/budget-for-living-in-boise.jpg"
 ---
 
 ## Healthcare Costs for Boise Residents
@@ -130,6 +134,7 @@ Idaho Power provides electricity to Boise. Energy costs are relatively low thank
 
 Note: Boise winters can be cold (average lows in the 20s°F in December/January), so heating bills spike in winter months. Budget $150–$200+ for combined heating in winter.
 
+heroImage: "/thumbs/budget-for-living-in-boise.jpg"
 ---
 
 ## Entertainment and Recreation in Boise
@@ -156,6 +161,7 @@ Unlike Washington (no state income tax), Idaho taxes income at rates ranging fro
 
 Account for Idaho state income tax in your net pay calculations—it will affect your take-home compared to working in Washington.
 
+heroImage: "/thumbs/budget-for-living-in-boise.jpg"
 ---
 
 ## Sample Monthly Budgets for Boise Healthcare Workers
@@ -218,6 +224,7 @@ Account for Idaho state income tax in your net pay calculations—it will affect
 
 Boise sits in the middle tier: not the cheapest option (Spokane is notably more affordable) but significantly cheaper than Portland or Seattle with a better outdoor lifestyle than Salt Lake.
 
+heroImage: "/thumbs/budget-for-living-in-boise.jpg"
 ---
 
 ## Tips for Healthcare Workers Budgeting in Boise
@@ -239,6 +246,7 @@ A well-structured budget spreadsheet helps you see exactly where money is going,
 
 For more guidance on budgeting as a healthcare professional, see our complete guide: [Budget Template for Healthcare Workers](/blog/budget-template-for-healthcare-workers/). If you're a nurse specifically, we cover your unique financial considerations in [Budgeting as a Nurse: What They Don't Teach You in School](/blog/budget-template-for-nurses/).
 
+heroImage: "/thumbs/budget-for-living-in-boise.jpg"
 ---
 
 ## Free Budget Calculator
@@ -259,6 +267,7 @@ Comparing Boise to other cities, or budgeting for a different healthcare role?
 - [Budget for Living in Cape Coral, Florida](/blog/budget-for-living-in-cape-coral/)
 - [Budget Template for Healthcare Workers](/blog/budget-template-for-healthcare-workers/)
 
+heroImage: "/thumbs/budget-for-living-in-boise.jpg"
 ---
 
 ## Ready to Take Control of Your Boise Budget?

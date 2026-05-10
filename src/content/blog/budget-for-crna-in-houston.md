@@ -3,6 +3,7 @@ title: "Budget Template for CRNAs in Houston, TX (2026)"
 description: "Complete monthly budget guide for Certified Registered Nurse Anesthetists in Houston earning $185K–$220K. Covers Texas zero income tax, Houston neighborhoods, and wealth-building strategy."
 pubDate: "2026-05-09"
 tags: ["budgeting", "crna", "houston", "texas", "nurse anesthetist", "healthcare budget"]
+heroImage: "/thumbs/budget-for-crna-in-houston.jpg"
 ---
 
 CRNAs in Houston have one of the most financially favorable positions in American healthcare: Texas charges **zero state income tax**, Houston has no city income tax, and CRNA salaries here are among the highest in the country. The real risk isn't earning — it's the lifestyle creep that hits when a Montrose townhouse, a truck payment, and a food scene the size of a small country start eating into a $200K+ income. Here's how to actually build wealth as a CRNA in Houston.

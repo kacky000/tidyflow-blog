@@ -3,6 +3,7 @@ title: "Budget Template for Physician Assistants in Atlanta, GA (2026)"
 description: "A complete monthly budget guide for PAs in Atlanta earning $95K–$130K. Covers Georgia state taxes, Beltline neighborhood costs, and PSLF eligibility for public hospital PAs."
 pubDate: "2026-05-09"
 tags: ["budgeting", "physician assistant", "atlanta", "georgia", "healthcare budget"]
+heroImage: "/thumbs/budget-for-physician-assistant-in-atlanta.jpg"
 ---
 
 If you're a Physician Assistant in Atlanta, your take-home pay looks very different from a PA in Seattle or Texas — Georgia has a flat 5.49% income tax, and Atlanta's cost of living keeps rising as the city attracts more tech and healthcare workers. This guide breaks down exactly what your budget should look like and where PAs in Atlanta often lose money.

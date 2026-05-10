@@ -3,6 +3,7 @@ title: "Budget for Living in Temecula CA: True Monthly Costs 2026"
 description: "Temecula CA costs less than San Diego but more than the rest of IE. Here's the real monthly budget breakdown — rent, wine country lifestyle, and how to afford it."
 pubDate: "2026-05-03"
 tags: ["budgeting", "california", "cost of living", "temecula", "inland empire"]
+heroImage: "/thumbs/budget-for-living-in-temecula.jpg"
 ---
 
 # Budget for Living in Temecula CA: True Monthly Costs 2026

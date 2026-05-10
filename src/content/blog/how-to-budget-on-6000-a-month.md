@@ -4,6 +4,7 @@ description: "Making $6,000 a month? Learn how to budget effectively with a real
 pubDate: "2026-04-18"
 tags: ["budgeting", "monthly budget", "income planning"]
 author: "Tidyflow"
+heroImage: "/thumbs/how-to-budget-on-6000-a-month.jpg"
 ---
 
 # How to Budget on $6,000 a Month: A Complete 2026 Guide
@@ -18,6 +19,7 @@ Before you budget, you need to know your actual take-home pay. A $6,000 gross mo
 
 For this guide, we'll use **$5,000/month** as your working take-home figure. Adjust up or down based on your actual paycheck.
 
+heroImage: "/thumbs/how-to-budget-on-6000-a-month.jpg"
 ---
 
 ## The 50/30/20 Framework Applied to $5,000 Take-Home
@@ -62,6 +64,7 @@ If your employer covers part of your premium, you may be closer to $100–$150. 
 
 This is the category most people forget to include — haircuts, toiletries, replacing worn-out items. Cap it at $200 and you're in solid shape.
 
+heroImage: "/thumbs/how-to-budget-on-6000-a-month.jpg"
 ---
 
 ## Financial Goals You Can Hit at $6,000/Month
@@ -99,6 +102,7 @@ Car registration, annual insurance premiums, holiday gifts, and home repairs don
 **Treating savings as what's left over**
 Pay yourself first. Transfer your savings amount on the same day your paycheck arrives, before spending anything else. If you wait until the end of the month, there is rarely anything left to save.
 
+heroImage: "/thumbs/how-to-budget-on-6000-a-month.jpg"
 ---
 
 ## Frequently Asked Questions

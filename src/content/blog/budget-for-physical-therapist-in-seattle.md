@@ -3,6 +3,7 @@ title: "Physical Therapist Budget Template for Seattle, WA (2026)"
 description: "A complete budget guide for Physical Therapists living in Seattle. PT salary data, cost of living breakdown, student loan strategy, and a free PT budget template."
 pubDate: "2026-05-08"
 tags: ["budgeting", "physical therapist", "seattle", "healthcare", "salary"]
+heroImage: "/thumbs/budget-for-physical-therapist-in-seattle.jpg"
 ---
 
 # Physical Therapist Budget Template for Seattle, WA (2026)

@@ -3,6 +3,7 @@ title: "Budget Template for Physical Therapists in Raleigh, NC (2026)"
 description: "Complete monthly budget guide for PTs in Raleigh-Durham earning $75K–$95K. Covers NC tax rates, Research Triangle cost of living, and PSLF eligibility at Duke and UNC Health."
 pubDate: "2026-05-09"
 tags: ["budgeting", "physical therapist", "raleigh", "north carolina", "healthcare budget"]
+heroImage: "/thumbs/budget-for-physical-therapist-in-raleigh.jpg"
 ---
 
 Physical Therapists in the Raleigh-Durham Research Triangle earn strong salaries relative to the area's cost of living — and with North Carolina's declining flat income tax rate, your take-home pay is heading in the right direction. This guide shows exactly what a PT budget looks like in Raleigh and how to maximize your financial position in one of the South's hottest markets.

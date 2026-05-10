@@ -3,6 +3,7 @@ title: "Arborist Budget Template (2026) — Salary Guide & Financial Planning fo
 description: "A complete budget guide for Arborists. ISA certification pay rates, salary by employer type, business vs. employment finances, and a free arborist budget template."
 pubDate: "2026-05-08"
 tags: ["budgeting", "arborist", "tree care", "ISA certification", "self-employed"]
+heroImage: "/thumbs/budget-template-for-arborists.jpg"
 ---
 
 # Arborist Budget Template (2026)

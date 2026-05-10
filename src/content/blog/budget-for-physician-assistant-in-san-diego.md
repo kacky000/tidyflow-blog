@@ -3,6 +3,7 @@ title: "Physician Assistant Budget Template for San Diego, CA (2026)"
 description: "A complete budget guide for Physician Assistants living in San Diego. Salary data, cost of living breakdown, and free PA budget template."
 pubDate: "2026-05-08"
 tags: ["budgeting", "physician assistant", "san diego", "healthcare", "salary"]
+heroImage: "/thumbs/budget-for-physician-assistant-in-san-diego.jpg"
 ---
 
 # Physician Assistant Budget Template for San Diego, CA (2026)

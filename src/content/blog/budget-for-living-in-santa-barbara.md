@@ -3,6 +3,7 @@ title: "Budget for Living in Santa Barbara CA: True Monthly Costs 2026"
 description: "Santa Barbara CA is beautiful — and brutally expensive. Here's the real monthly budget breakdown for 2026, including what income you actually need to live there."
 pubDate: "2026-05-04"
 tags: ["budgeting", "california", "cost of living", "santa barbara", "central coast"]
+heroImage: "/thumbs/budget-for-living-in-santa-barbara.jpg"
 ---
 
 # Budget for Living in Santa Barbara CA: True Monthly Costs 2026

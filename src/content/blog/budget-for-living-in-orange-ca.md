@@ -3,6 +3,7 @@ title: "Budget for Living in Orange, CA: Cost Breakdown for 2026"
 description: "Considering a move to Orange, CA? This guide covers real rent prices, grocery costs, commuting expenses, and sample budgets for life in this Orange County city."
 pubDate: "2026-05-06"
 tags: ["budgeting", "california", "cost of living", "orange county"]
+heroImage: "/thumbs/budget-for-living-in-orange-ca.jpg"
 ---
 
 Orange, California—not to be confused with "Orange County" itself—is one of the region's most historically rich cities. Home to Old Towne Orange (a nationally recognized historic district with antiques, indie restaurants, and weekend farmers markets) and Chapman University, Orange strikes a balance between suburban livability and small-city charm. But like everywhere in OC, charm has a price tag.
@@ -37,6 +38,7 @@ The median 1BR in Orange runs **$2,100–$2,400/month** in 2026. Two-bedrooms ra
 - **East Orange (near Villa Park)**: Upscale neighborhoods, mostly single-family homes. Rentals: $2,300–$2,700 for 1BR
 - **South Orange (near Tustin border)**: Good freeway access, newer complexes. 1BR: $2,000–$2,350
 
+heroImage: "/thumbs/budget-for-living-in-orange-ca.jpg"
 ---
 
 ## Transportation
@@ -76,6 +78,7 @@ Orange has a solid mix of grocery options:
 
 **Dining out**: Old Towne Orange is a genuine culinary destination with independent restaurants, wine bars, and farm-to-table spots. Budget $200–$400/month if you dine out regularly. The Saturday Farmers Market at Chapman is free to browse and reasonably priced for fresh produce.
 
+heroImage: "/thumbs/budget-for-living-in-orange-ca.jpg"
 ---
 
 ## Utilities
@@ -104,6 +107,7 @@ Orange is served by St. Joseph Hospital (a major regional medical center) and mu
 
 Chapman University has on-campus health services for students and staff.
 
+heroImage: "/thumbs/budget-for-living-in-orange-ca.jpg"
 ---
 
 ## Sample Monthly Budgets
@@ -167,6 +171,7 @@ A family of three earning $130K combined can save nearly $24,000 per year while 
 
 **School quality**: Orange Unified School District has several well-rated schools, which is a meaningful factor for families. This is part of why family demand keeps rents elevated.
 
+heroImage: "/thumbs/budget-for-living-in-orange-ca.jpg"
 ---
 
 ## FAQ

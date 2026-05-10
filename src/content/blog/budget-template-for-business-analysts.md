@@ -3,6 +3,7 @@ title: "Budget Template for Business Analysts: Salary, Expenses & Financial Plan
 description: "Business analysts earn $70K–$110K with wide variation by industry and location. Here's a practical budget template covering certifications, tech tools, and variable income."
 pubDate: "2026-05-06"
 tags: ["budgeting", "career", "business analysis", "budget template"]
+heroImage: "/thumbs/budget-template-for-business-analysts.jpg"
 ---
 
 Business analysts occupy one of the widest salary ranges in knowledge work—from $55,000 for entry-level government positions to $140,000+ for senior BAs at major financial institutions or tech companies. Add in variation between full-time, contract, and consulting arrangements, and building a stable personal budget as a BA requires deliberate structure. Here's a framework that works.
@@ -55,6 +56,7 @@ Employer covers: Health insurance (partially), 401k match, paid leave, professio
 
 **Note**: At $90K with employer benefits, a single BA with moderate lifestyle can save $2,400+ per month. This is one of the highest savings rates of any comparable career.
 
+heroImage: "/thumbs/budget-template-for-business-analysts.jpg"
 ---
 
 ### Contract / Freelance BA Budget: No Employer Benefits
@@ -103,6 +105,7 @@ Contract BAs earn more per hour but carry all their own costs. A contract BA at 
 - Tableau or Power BI: $15–$75/month
 - **Total tools budget**: $50–$150/month
 
+heroImage: "/thumbs/budget-template-for-business-analysts.jpg"
 ---
 
 ## Income Volatility Management
@@ -139,6 +142,7 @@ Many corporate BA roles include performance bonuses of 5–15% of base. Apply th
 
 $655/month toward emergency fund builds a $7,800 cushion in one year—critical foundation before taking on more financial risk (car purchase, moving solo, etc.).
 
+heroImage: "/thumbs/budget-template-for-business-analysts.jpg"
 ---
 
 ## Retirement Planning for Business Analysts
@@ -162,6 +166,7 @@ Generally yes. CBAP holders report median salaries $10,000–$15,000 higher than
 **How do contract BAs handle health insurance costs?**
 Options: COBRA from last employer (expensive but simple), ACA marketplace plan, professional association group plans (IIBA offers group coverage), or spouse/partner's employer plan. Budget $350–$600/month for a quality individual ACA plan in most states.
 
+heroImage: "/thumbs/budget-template-for-business-analysts.jpg"
 ---
 
 ## Get Your BA Budget Structured

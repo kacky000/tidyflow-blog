@@ -3,6 +3,7 @@ title: "Budget Template for Medical Assistants: Manage Your Salary and Build Fin
 description: "A practical budget template for medical assistants covering salary ranges, CE costs, scrub expenses, and strategies to stretch your income and save more each month."
 pubDate: "2026-04-22"
 tags: ["budget", "medical assistant", "healthcare", "template", "personal finance"]
+heroImage: "/thumbs/budget-template-for-medical-assistants.jpg"
 ---
 
 # Budget Template for Medical Assistants: Your Complete Financial Planning Guide
@@ -40,6 +41,7 @@ Before budgeting, you need honest salary data. Medical assistant pay varies sign
 
 **Bottom line**: Most medical assistants earn between $35,000 and $50,000 annually. This is a real income that requires intentional budgeting to make work well — especially if you're carrying student loan debt or living in a higher-cost area.
 
+heroImage: "/thumbs/budget-template-for-medical-assistants.jpg"
 ---
 
 ## Medical Assistant-Specific Budget Categories
@@ -165,6 +167,7 @@ Here's a complete budget template built for a medical assistant earning $42,000/
 
 The key insight: on the low end (shared housing, no car payment, cooking at home), a $42,000 salary can work with room for savings. The danger zone is taking on a car payment + high rent simultaneously — that combination eliminates all financial margin at this income level.
 
+heroImage: "/thumbs/budget-template-for-medical-assistants.jpg"
 ---
 
 ## Income-Boosting Strategies for Medical Assistants
@@ -225,6 +228,7 @@ Many MAs carry student loan debt from their MA programs (typically $10,000–$30
 
 If you work for a non-profit hospital or public health clinic, **Public Service Loan Forgiveness (PSLF)** may eliminate your federal loans after 10 years of qualifying payments. This is extremely valuable for MAs at qualifying employers.
 
+heroImage: "/thumbs/budget-template-for-medical-assistants.jpg"
 ---
 
 ## Emergency Fund Priority
@@ -247,6 +251,7 @@ The standard [50/30/20 rule](/blog/50-30-20-budget-rule-notion/) works at higher
 
 The MA reality: housing and transportation take a larger share of income at this salary level, especially in medium-cost cities. Be ruthless about the "wants" category to preserve any savings capacity.
 
+heroImage: "/thumbs/budget-template-for-medical-assistants.jpg"
 ---
 
 ## Tracking Your Medical Assistant Budget
@@ -283,6 +288,7 @@ For a structured system that handles MA-specific categories automatically, check
 
 Key takeaway: The conservative budget (shared housing, no car payment, cooking at home) leaves breathing room. The moderate budget with individual housing and a car can be tight or negative — requiring either more income through overtime/specialization or reduced spending.
 
+heroImage: "/thumbs/budget-template-for-medical-assistants.jpg"
 ---
 
 ## Start Budgeting with a Template Built for Healthcare Workers
