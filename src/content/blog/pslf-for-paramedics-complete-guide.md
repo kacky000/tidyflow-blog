@@ -159,6 +159,8 @@ The absolute forgiveness amount is smaller, but the monthly payment reduction is
 - **[PSLF Core Guide](/pslf-loan-forgiveness-guide-for-public-service-workers/)** — Complete mechanics of PSLF for all public service workers
 - **[PSLF for Firefighters and EMTs](/pslf-for-firefighters-emt-complete-guide/)** — Detailed guide for fire/EMS combined positions
 - **[PSLF for Nurses](/pslf-for-nurses-complete-guide/)** — For paramedics pursuing nursing bridge programs
+- **[PSLF for Social Workers](/blog/pslf-for-social-workers-complete-guide/)** — Nonprofit hospital and government agency PSLF qualification details
+- **[PSLF for Librarians](/blog/pslf-for-librarians-complete-guide/)** — Public, academic, and school librarian PSLF eligibility
 - **[Budget Template for Paramedics](/budget-template-for-paramedics/)** — Monthly budget framework at EMS salary levels
 - **[Free Budget Calculator](/tools/budget-calculator/)** — Calculate your SAVE payment at your EMS salary
 - **[Freelancer Expense Tracker ($9.99)](https://gettidyflow.gumroad.com/l/freelancer-expense-tracker)** — For paramedics with overtime, moonlighting, or PRN income
