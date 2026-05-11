@@ -1,6 +1,6 @@
 ---
-title: "10 Best Financial Planner Spreadsheets (2026) — Budget Templates with Transaction Import Ranked"
-description: "The best financial planner spreadsheet for 2026: we reviewed 30+ budget templates with transaction import and automatic categorization across Excel, Google Sheets & Notion."
+title: "10 Best Free Budget Spreadsheets for 2026 — Excel & Google Sheets Financial Planner Templates"
+description: "Best free Excel budget templates and financial planner spreadsheets for 2026. We tested 30+ budget templates with automatic calculations — download the best free Google Sheets, Excel & Notion options."
 pubDate: "2026-03-11"
 tags: ["budget", "spreadsheet", "excel", "google-sheets", "notion", "template", "best financial planner spreadsheet", "personal finance spreadsheet", "best budget template"]
 author: "Tidyflow"
