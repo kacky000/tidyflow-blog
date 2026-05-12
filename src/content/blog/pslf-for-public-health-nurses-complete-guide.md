@@ -117,8 +117,14 @@ The math heavily favors PSLF for public health nurses with more than $50,000 in 
 
 Managing student loan payments alongside a public health nursing salary requires careful budgeting. Use our free [budget templates](https://gettidyflow.com/blog/monthly-budget-checklist) to plan your finances and maximize your PSLF timeline.
 
-Also see:
-- [PSLF for Social Workers →](https://gettidyflow.com/blog/pslf-for-social-workers-complete-guide)
-- [PSLF for Teachers →](https://gettidyflow.com/blog/pslf-for-teachers-complete-guide)
+## PSLF Resources for Public Health Nurses
 
-Download the free **[New Life Starter Kit](https://gettidyflow.gumroad.com/l/new-life-starter-kit)** to structure your public health nursing finances from the ground up.
+- **[PSLF for Social Workers](/blog/pslf-for-social-workers-complete-guide/)** — Nonprofit organization and government agency PSLF qualification details
+- **[PSLF for Librarians](/blog/pslf-for-librarians-complete-guide/)** — Public, academic, and school librarian PSLF eligibility
+- **[PSLF for Paramedics](/blog/pslf-for-paramedics-complete-guide/)** — County EMS and municipal fire PSLF eligibility details
+- **[Free Budget Calculator](/tools/budget-calculator/)** — Calculate your SAVE plan payment vs. standard repayment at your nursing salary
+- **[New Life Starter Kit (Free)](https://gettidyflow.gumroad.com/l/new-life-starter-kit)** — Structure your public health nursing finances from the ground up
+
+---
+
+*Public health nurses working for government health departments, FQHCs, and nonprofits are among the strongest PSLF candidates in healthcare. If you haven't enrolled in SAVE and submitted your employment certification form, start today — every qualifying month counts.*

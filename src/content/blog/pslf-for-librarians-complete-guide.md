@@ -165,6 +165,7 @@ Some cities have contracted library operations to private companies (like LS&S o
 - **[PSLF for Teachers](/pslf-for-teachers-complete-guide/)** — School librarians and teachers share the same PSLF framework
 - **[PSLF for Social Workers](/blog/pslf-for-social-workers-complete-guide/)** — Nonprofit organization PSLF qualification details
 - **[PSLF for Paramedics](/blog/pslf-for-paramedics-complete-guide/)** — County EMS and municipal fire PSLF eligibility details
+- **[PSLF for Public Health Nurses](/blog/pslf-for-public-health-nurses-complete-guide/)** — Government health department and FQHC PSLF eligibility
 - **[Free Budget Calculator](/tools/budget-calculator/)** — Calculate your SAVE plan payment vs. standard repayment at librarian salary
 - **[Freelancer Expense Tracker ($9.99)](https://gettidyflow.gumroad.com/l/freelancer-expense-tracker)** — Track income across multiple library positions
 
