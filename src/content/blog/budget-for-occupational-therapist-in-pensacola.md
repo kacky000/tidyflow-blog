@@ -2,6 +2,7 @@
 title: "Occupational Therapist Budget Template for Pensacola, FL (2026 Guide)"
 description: "How to budget as an occupational therapist in Pensacola, FL. Salary expectations, cost of living, student loan tips, and a free budget template."
 pubDate: "2026-05-12"
+heroImage: "/thumbs/thumb-budget-for-occupational-therapist-in-pensacola.jpg"
 tags: ["budgeting", "occupational therapist", "Pensacola", "Florida", "salary"]
 ---
 

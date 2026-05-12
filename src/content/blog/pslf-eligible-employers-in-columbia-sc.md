@@ -2,6 +2,7 @@
 title: "PSLF-Eligible Employers in Columbia, SC (2026 Complete Guide)"
 description: "Who qualifies for PSLF in Columbia, SC? Complete list of nonprofit hospitals, government agencies, and universities where you can earn student loan forgiveness."
 pubDate: "2026-05-12"
+heroImage: "/thumbs/thumb-pslf-eligible-employers-in-columbia-sc.jpg"
 tags: ["PSLF", "Columbia SC", "South Carolina", "student loan forgiveness", "hospitals", "government jobs"]
 ---
 

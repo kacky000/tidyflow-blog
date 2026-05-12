@@ -2,6 +2,7 @@
 title: "Occupational Therapist Budget Template for Fayetteville, NC (2026 Guide)"
 description: "OT budget guide for Fayetteville, NC. Salary data, Cape Fear Valley PSLF options, Fort Liberty school contracts, and free budget templates."
 pubDate: "2026-05-12"
+heroImage: "/thumbs/thumb-budget-for-occupational-therapist-in-fayetteville-nc.jpg"
 tags: ["budgeting", "occupational therapist", "Fayetteville", "North Carolina", "PSLF"]
 ---
 

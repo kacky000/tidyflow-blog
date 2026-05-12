@@ -2,6 +2,7 @@
 title: "PSLF for City Planners and Urban Planners: Complete Guide (2026)"
 description: "City planners and urban planners almost always qualify for PSLF. Here's how government employment makes loan forgiveness near-automatic for planning professionals."
 pubDate: "2026-05-12"
+heroImage: "/thumbs/thumb-pslf-for-city-planners-complete-guide.jpg"
 tags: ["PSLF", "city planner", "urban planner", "student loan forgiveness", "government jobs"]
 ---
 
