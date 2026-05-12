@@ -2,6 +2,7 @@
 title: "Dental Hygienist Budget Template for Fayetteville, NC (2026 Guide)"
 description: "Budget guide for dental hygienists in Fayetteville, NC. Salary data, cost of living breakdown, Fort Liberty proximity tips, and a free template."
 pubDate: "2026-05-12"
+heroImage: "/thumbs/thumb-budget-for-dental-hygienist-in-fayetteville-nc.jpg"
 tags: ["budgeting", "dental hygienist", "Fayetteville", "North Carolina", "salary"]
 ---
 

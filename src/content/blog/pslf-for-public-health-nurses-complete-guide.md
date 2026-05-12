@@ -2,6 +2,7 @@
 title: "PSLF for Public Health Nurses: Complete Forgiveness Guide (2026)"
 description: "Do public health nurses qualify for PSLF? Yes — here's how to get student loan forgiveness working in government health departments, FQHCs, and nonprofits."
 pubDate: "2026-05-12"
+heroImage: "/thumbs/thumb-pslf-for-public-health-nurses-complete-guide.jpg"
 tags: ["PSLF", "public health nurse", "student loan forgiveness", "nursing", "healthcare"]
 ---
 

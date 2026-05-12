@@ -2,6 +2,7 @@
 title: "Dental Hygienist Budget Template for Greenville, SC (2026 Guide)"
 description: "How to budget as a dental hygienist in Greenville, SC. Covers salary expectations, cost of living breakdown, savings tips, and a free template."
 pubDate: "2026-05-12"
+heroImage: "/thumbs/thumb-budget-for-dental-hygienist-in-greenville-sc.jpg"
 tags: ["budgeting", "dental hygienist", "Greenville", "South Carolina", "salary"]
 ---
 

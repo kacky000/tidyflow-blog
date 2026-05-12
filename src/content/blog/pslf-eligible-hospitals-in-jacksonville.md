@@ -2,6 +2,7 @@
 title: "PSLF-Eligible Hospitals in Jacksonville, FL (2026 Complete List)"
 description: "Which Jacksonville hospitals qualify for PSLF? Complete list of nonprofit hospitals in Jacksonville where nurses, social workers, and OTs can earn loan forgiveness."
 pubDate: "2026-05-12"
+heroImage: "/thumbs/thumb-pslf-eligible-hospitals-in-jacksonville.jpg"
 tags: ["PSLF", "Jacksonville", "Florida", "hospitals", "student loan forgiveness", "nurses"]
 ---
 

@@ -2,6 +2,7 @@
 title: "Occupational Therapist Budget Template for Greenville, SC (2026 Guide)"
 description: "Budgeting guide for occupational therapists in Greenville, SC. OT salary data, cost of living, PSLF options at Prisma Health, and free templates."
 pubDate: "2026-05-12"
+heroImage: "/thumbs/thumb-budget-for-occupational-therapist-in-greenville-sc.jpg"
 tags: ["budgeting", "occupational therapist", "Greenville", "South Carolina", "salary"]
 ---
 

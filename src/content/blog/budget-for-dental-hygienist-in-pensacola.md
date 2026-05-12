@@ -2,6 +2,7 @@
 title: "Dental Hygienist Budget Template for Pensacola, FL (2026 Guide)"
 description: "A practical budget guide for dental hygienists living in Pensacola, FL. Covers cost of living, salary breakdown, savings tips, and a free template."
 pubDate: "2026-05-12"
+heroImage: "/thumbs/thumb-budget-for-dental-hygienist-in-pensacola.jpg"
 tags: ["budgeting", "dental hygienist", "Pensacola", "Florida", "salary"]
 ---
 
