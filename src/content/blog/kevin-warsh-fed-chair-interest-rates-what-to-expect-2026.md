@@ -3,6 +3,7 @@ title: "Kevin Warsh Set to Lead the Fed: What It Means for Interest Rates in 202
 description: "Kevin Warsh is expected to chair the Fed's June meeting, but faces a divided FOMC, sticky inflation at 3.3%, and a bond market betting against rate cuts."
 pubDate: "2026-05-12"
 tags: ["Federal Reserve", "interest rates", "Kevin Warsh", "monetary policy", "bonds", "2026"]
+heroImage: "/thumbs/thumb-kevin-warsh-fed-chair-interest-rates-what-to-expect-2026.jpg"
 ---
 
 # Kevin Warsh Set to Lead the Fed: What It Means for Interest Rates in 2026

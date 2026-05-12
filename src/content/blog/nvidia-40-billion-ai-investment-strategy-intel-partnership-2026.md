@@ -3,6 +3,7 @@ title: "Nvidia's $40 Billion AI Bet: How the Chipmaker Is Reshaping Tech Through
 description: "Nvidia has amassed over $40 billion in AI equity investments, with its $5 billion Intel stake alone now worth $25 billion. Here's how the AI giant is building an investment empire."
 pubDate: "2026-05-12"
 tags: ["Nvidia", "Intel", "AI", "semiconductor", "stock market", "2026"]
+heroImage: "/thumbs/thumb-nvidia-40-billion-ai-investment-strategy-intel-partnership-2026.jpg"
 ---
 
 Nvidia's transformation from chip supplier to AI ecosystem architect reached a new milestone this month. The company's equity investments in AI-related companies have topped **$40 billion**, a figure that places it alongside sovereign wealth funds and the largest institutional investors in terms of sheer capital deployed into the artificial intelligence sector.

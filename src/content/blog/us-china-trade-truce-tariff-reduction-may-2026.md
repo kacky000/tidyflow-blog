@@ -3,6 +3,7 @@ title: "US-China Trade Truce: Tariffs Slashed in 90-Day Geneva Deal"
 description: "The US and China agreed to a 90-day tariff reduction on May 12, cutting US tariffs on Chinese goods to 30% and Chinese tariffs on US goods to 10% after months of escalation."
 pubDate: "2026-05-12"
 tags: ["trade war", "tariffs", "US-China", "stock market", "economy", "2026"]
+heroImage: "/thumbs/thumb-us-china-trade-truce-tariff-reduction-may-2026.jpg"
 ---
 
 The United States and China announced a 90-day mutual tariff reduction on Monday, May 12, 2026, in what amounts to the most significant de-escalation of the bilateral trade conflict since it began accelerating more than a year ago. Under the terms of the agreement, US tariffs on Chinese goods drop to 30% -- a reduction of 115 percentage points from their prior levels -- while Chinese tariffs on American goods fall to 10%.

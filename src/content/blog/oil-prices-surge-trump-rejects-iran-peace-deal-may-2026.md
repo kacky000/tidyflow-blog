@@ -3,6 +3,7 @@ title: "Oil Surges Past $105 as Trump Rejects Iran Peace Proposal"
 description: "Brent crude jumped 4% to $105.50 per barrel after President Trump called Iran's peace proposal 'totally unacceptable,' raising fears of prolonged Strait of Hormuz disruption."
 pubDate: "2026-05-12"
 tags: ["oil prices", "Iran", "geopolitics", "energy", "inflation", "2026"]
+heroImage: "/thumbs/thumb-oil-prices-surge-trump-rejects-iran-peace-deal-may-2026.jpg"
 ---
 
 The brief flirtation with sub-$100 oil is over.
