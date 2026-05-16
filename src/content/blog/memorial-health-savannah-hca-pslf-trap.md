@@ -101,3 +101,14 @@ If you're rebuilding your PSLF strategy after an acquisition surprise, your budg
 Download the **[Freelancer Expense Tracker](https://gettidyflow.gumroad.com/l/freelancer-expense-tracker)** — handles PRN/contract therapy work — or the **[New Life Starter Kit](https://gettidyflow.gumroad.com/l/new-life-starter-kit)**.
 
 See also our [Dental Hygienist Budget for Savannah](https://gettidyflow.com/blog/budget-for-dental-hygienist-in-savannah) and [PSLF-Eligible Employers in Atlanta](https://gettidyflow.com/blog/pslf-eligible-employers-in-atlanta).
+
+## Related PSLF Resources
+
+If you're rebuilding your PSLF plan after the Memorial Health acquisition, these guides may help:
+
+- **[PSLF for Nurses — Complete Guide](https://gettidyflow.com/blog/pslf-for-nurses-complete-guide)** — Verify whether your nursing role qualifies and what to do after a hospital sale.
+- **[PSLF for Public Health Nurses](https://gettidyflow.com/blog/pslf-for-public-health-nurses-complete-guide)** — Coastal Health District (FQHC) is a top alternative employer in Savannah.
+- **[PSLF-Eligible Hospitals in Jacksonville](https://gettidyflow.com/blog/pslf-eligible-hospitals-in-jacksonville)** — Nearby market for healthcare workers willing to relocate within the Southeast.
+- **[PSLF-Eligible Employers in Nashville](https://gettidyflow.com/blog/pslf-eligible-employers-in-nashville)** — Another HCA-heavy city; learn which nonprofits remain.
+- **[Budget Template for Healthcare Workers](https://gettidyflow.com/blog/budget-template-for-healthcare-workers)** — Plan the salary transition from HCA to nonprofit.
+- **[Free Budget Calculator](https://gettidyflow.com/tools/budget-calculator)** — Model the take-home pay difference between HCA and St. Joseph's/Candler before you switch.
