@@ -115,6 +115,7 @@ Download the **[Freelancer Expense Tracker](https://gettidyflow.gumroad.com/l/fr
 - **[Saint Mary's Reno Is For-Profit: The Prime Healthcare PSLF Trap](https://gettidyflow.com/blog/saint-marys-reno-prime-pslf-trap)** — Same "Catholic name, for-profit reality" trap.
 - **[Memorial Health Savannah Is Now HCA](https://gettidyflow.com/blog/memorial-health-savannah-hca-pslf-trap)** — Single-flip version of the same trap (HCA).
 - **[Mission Health Asheville Is Now HCA](https://gettidyflow.com/blog/mission-health-asheville-hca-pslf-trap)** — Another regional dominant hospital sold to HCA.
+- **[Lovelace Albuquerque Is Now Ardent: The 2002 PSLF Trap](https://gettidyflow.com/blog/lovelace-albuquerque-ardent-pslf-trap)** — The oldest nonprofit-to-for-profit hospital flip still trapping PSLF workers.
 - **[Budget for Living in Tucson](https://gettidyflow.com/blog/budget-for-living-in-tucson)** — Tucson cost-of-living context.
 - **[Budget for Occupational Therapy Assistant in Tucson](https://gettidyflow.com/blog/budget-for-occupational-therapy-assistant-in-tucson)** — Tucson-specific OTA salary and PSLF math.
 - **[PSLF for Nurses — Complete Guide](https://gettidyflow.com/blog/pslf-for-nurses-complete-guide)** — Step-by-step PSLF process.

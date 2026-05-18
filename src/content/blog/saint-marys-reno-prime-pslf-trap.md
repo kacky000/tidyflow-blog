@@ -100,6 +100,8 @@ Download the **[Freelancer Expense Tracker](https://gettidyflow.gumroad.com/l/fr
 
 - **[Memorial Health Savannah Is Now HCA: The 2018 PSLF Trap](https://gettidyflow.com/blog/memorial-health-savannah-hca-pslf-trap)** — Same trap pattern, HCA version.
 - **[Mission Health Asheville Is Now HCA](https://gettidyflow.com/blog/mission-health-asheville-hca-pslf-trap)** — Another regional dominant hospital sold to HCA.
+- **[Lovelace Albuquerque Is Now Ardent: The 2002 PSLF Trap](https://gettidyflow.com/blog/lovelace-albuquerque-ardent-pslf-trap)** — The oldest of the nonprofit-to-for-profit hospital flips still trapping PSLF workers (Ardent IPO 2023).
+- **[Carondelet Tucson Is Now Tenet](https://gettidyflow.com/blog/carondelet-tucson-tenet-pslf-trap)** — Catholic-named hospital sold to Tenet (NYSE: THC) — same branding-trap pattern as Saint Mary's.
 - **[Budget for Living in Reno](https://gettidyflow.com/blog/budget-for-living-in-reno)** — Cost-of-living context for the Renown vs Saint Mary's salary calculation.
 - **[Budget for Occupational Therapy Assistant in Reno](https://gettidyflow.com/blog/budget-for-occupational-therapy-assistant-in-reno)** — Reno-specific OTA salary and PSLF math.
 - **[PSLF for Nurses — Complete Guide](https://gettidyflow.com/blog/pslf-for-nurses-complete-guide)** — Step-by-step PSLF process.

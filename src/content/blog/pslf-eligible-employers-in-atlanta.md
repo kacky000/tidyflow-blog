@@ -23,6 +23,7 @@ A single wrong job decision in Atlanta can cost you **$50,000–$200,000** in fo
 - **Wellstar Health System** — 501(c)(3) nonprofit (Wellstar Kennestone, Cobb, Douglas, North Fulton, Spalding Regional, Sylvan Grove, Paulding, etc.) → PSLF-eligible.
 - **DeKalb Medical / Emory Decatur** — Now part of Emory Healthcare → PSLF-eligible.
 - **Northeast Georgia Health System (NGHS)** — Gainesville area, 501(c)(3) nonprofit → PSLF-eligible (commute-distance from Atlanta northeast suburbs).
+- **Shepherd Center** — 501(c)(3) nonprofit specialty rehab hospital (spinal cord & brain injury) → PSLF-eligible. See our [Shepherd Center Atlanta PSLF Rehab Careers Guide](https://gettidyflow.com/blog/shepherd-center-atlanta-pslf-rehab-careers-guide/) for nurse/PT/OT/SLP pay and forgiveness math.
 
 ### Public / Governmental
 - **Grady Health System** — Public (Fulton-DeKalb Hospital Authority) → PSLF-eligible. Atlanta's primary safety-net hospital.
@@ -103,4 +104,4 @@ If you're an Atlanta healthcare worker pursuing PSLF, your budget needs to handl
 
 Download the **[Freelancer Expense Tracker](https://gettidyflow.gumroad.com/l/freelancer-expense-tracker)** — handles PRN/contract therapy work — or the **[New Life Starter Kit](https://gettidyflow.gumroad.com/l/new-life-starter-kit)**.
 
-See also our [PSLF-Eligible Employers in San Diego](https://gettidyflow.com/blog/pslf-eligible-employers-in-san-diego) and [PSLF-Eligible Employers in Norfolk VA](https://gettidyflow.com/blog/pslf-eligible-employers-in-norfolk-va).
+See also our [PSLF-Eligible Employers in San Diego](https://gettidyflow.com/blog/pslf-eligible-employers-in-san-diego), [PSLF-Eligible Employers in Norfolk VA](https://gettidyflow.com/blog/pslf-eligible-employers-in-norfolk-va), and the deep-dive [Shepherd Center Atlanta PSLF Rehab Careers Guide](https://gettidyflow.com/blog/shepherd-center-atlanta-pslf-rehab-careers-guide/).

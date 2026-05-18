@@ -79,6 +79,8 @@ This Ardent/Lovelace case is part of a broader pattern of nonprofit hospitals qu
 
 - [Memorial Health Savannah Is Now HCA: The 2018 PSLF Trap](/blog/memorial-health-savannah-hca-pslf-trap/)
 - [Mission Health Asheville Is Now HCA: The 2019 PSLF Trap](/blog/mission-health-asheville-hca-pslf-trap/)
+- [Carondelet Tucson Is Now Tenet: The For-Profit Conversion That Killed PSLF](/blog/carondelet-tucson-tenet-pslf-trap/)
+- [Saint Mary's Reno Is Now Prime Healthcare: The 2012 PSLF Trap](/blog/saint-marys-reno-prime-pslf-trap/)
 
 The Lovelace case is the oldest of all of them — and proves that an acquisition from over 20 years ago can still be costing today's workers six figures in lost forgiveness.
 
