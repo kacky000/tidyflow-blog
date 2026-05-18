@@ -105,6 +105,16 @@ Usually **no**. The freestanding Emory Rehabilitation Hospital facilities are op
 **How does Shepherd Center compare to working at Craig Hospital in Denver?**
 Both are top-10 specialty rehab hospitals, both are independent 501(c)(3) nonprofits, and both are unambiguously PSLF-eligible. Shepherd focuses more heavily on ABI alongside SCI; Craig is more SCI-dominant. Salaries are broadly comparable; Atlanta cost of living is meaningfully lower than Denver, so net purchasing power favors Shepherd by roughly 10–15% for the same role.
 
+## Related: PSLF Acquisition Trap Warnings
+
+Shepherd Center is the gold standard precisely because so many other "nonprofit-sounding" hospitals have quietly converted to for-profit ownership — silently disqualifying their employees from PSLF. Before accepting any hospital job, especially in the rehab space, read these acquisition-trap case studies:
+
+- [Memorial Health Savannah Is Now HCA: The 2018 PSLF Trap](/blog/memorial-health-savannah-hca-pslf-trap/) — How a beloved Georgia community hospital became for-profit overnight.
+- [Mission Health Asheville Is Now HCA: The 2019 PSLF Trap](/blog/mission-health-asheville-hca-pslf-trap/) — The same HCA playbook applied to North Carolina's largest mountain-region health system.
+- [Lovelace Albuquerque Is Now Ardent: The 2002 PSLF Trap](/blog/lovelace-albuquerque-ardent-pslf-trap/) — The oldest documented case, still costing nurses six figures in lost forgiveness.
+
+The pattern: rehab and acute-care positions inside acquired systems lose PSLF eligibility on the day the deal closes, even if the brand and badge remain unchanged. Shepherd Center's independent 501(c)(3) status is what makes the math work.
+
 ## Build Your Shepherd Center Budget Today
 
 Top-5 specialty hospital, independent nonprofit, clean PSLF math, Atlanta cost of living — Shepherd Center is one of the best rehab career setups in the country if you run the budget correctly from day one. Grab the [TidyFlow Healthcare PSLF Budget Template](https://gettidyflow.gumroad.com/) and start mapping your 10-year plan tonight.
