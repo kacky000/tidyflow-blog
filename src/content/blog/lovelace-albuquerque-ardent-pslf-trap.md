@@ -3,6 +3,7 @@ title: "Lovelace Medical Center Albuquerque Is Now Ardent Health: The Long-Forgo
 description: "Lovelace Medical Center in Albuquerque was acquired by Ardent Health Services (for-profit) — losing PSLF eligibility. UNMH and Presbyterian remain PSLF-eligible alternatives."
 pubDate: "2026-05-18"
 tags: ["PSLF", "Albuquerque", "New Mexico", "Ardent Health", "acquisition warning"]
+heroImage: "/thumbs/lovelace-albuquerque-ardent-pslf-trap.jpg"
 ---
 
 **Lovelace Medical Center in Albuquerque is owned by Ardent Health Services — a for-profit, NYSE-listed hospital company. That means employment at Lovelace does NOT count toward PSLF (Public Service Loan Forgiveness).** This isn't a recent change. The original Lovelace nonprofit assets were sold to Ardent back in 2002, and the system has operated as a for-profit ever since. Yet nearly two decades later, New Mexico nurses, therapists, and pharmacists still discover too late that their "Lovelace" years never qualified.

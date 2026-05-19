@@ -3,6 +3,7 @@ title: "OTA Salary & Budget in Los Angeles 2026: PSLF-Eligible Employers Guide"
 description: "Real OTA salaries in Los Angeles, top PSLF-eligible employers (Cedars-Sinai, Kaiser SoCal, LA County DHS, Rancho Los Amigos), HCA acquisition trap warnings, and a 50/30/20 budget breakdown."
 pubDate: "2026-05-19"
 tags: ["pslf", "occupational-therapy-assistant", "los-angeles", "budget", "healthcare-careers"]
+heroImage: "/thumbs/budget-for-occupational-therapy-assistant-in-los-angeles.jpg"
 ---
 
 # OTA Salary Los Angeles 2026: PSLF-Eligible Employers and Real Budget Breakdown

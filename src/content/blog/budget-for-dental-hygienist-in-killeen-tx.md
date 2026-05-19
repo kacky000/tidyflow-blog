@@ -3,6 +3,7 @@ title: "Dental Hygienist Budget Template for Killeen, TX (2026 Guide)"
 description: "Budget guide for dental hygienists in Killeen with Fort Hood. CRDAMC, KISD, Baylor Scott & White, AdventHealth, no TX state tax, PSLF map, military spouse strategies."
 pubDate: "2026-05-18"
 tags: ["budgeting", "dental hygienist", "Killeen", "Texas", "PSLF", "military"]
+heroImage: "/thumbs/budget-for-dental-hygienist-in-killeen-tx.jpg"
 ---
 
 # Dental Hygienist Budget Template for Killeen, TX (2026 Guide)

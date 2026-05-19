@@ -3,6 +3,7 @@ title: "OTA Salary & Budget in San Francisco 2026: PSLF-Eligible Employers Guide
 description: "Real OTA salaries in San Francisco, top PSLF-eligible employers (UCSF, Sutter, Kaiser NorCal, SFDPH, ZSFGH, Stanford), HCA/Select/Encompass acquisition trap warnings, and a 50/30/20 budget for the most expensive OTA city in the US."
 pubDate: "2026-05-19"
 tags: ["pslf", "occupational-therapy-assistant", "san-francisco", "budget", "healthcare-careers"]
+heroImage: "/thumbs/budget-for-occupational-therapy-assistant-in-san-francisco.jpg"
 ---
 
 # OTA Salary San Francisco 2026: PSLF-Eligible Employers and the Realest Budget You'll Ever Read

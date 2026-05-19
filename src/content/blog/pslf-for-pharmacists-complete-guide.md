@@ -3,6 +3,7 @@ title: "PSLF for Pharmacists: Complete 2026 Guide (PharmD Edition)"
 description: "How pharmacists qualify for PSLF in 2026: VA, FQHC, and nonprofit hospital eligibility, CVS/Walgreens/Walmart retail traps, $170K debt IDR math, and certification path."
 pubDate: "2026-05-19"
 tags: ["pslf", "pharmacists", "pharmd", "student-loan-forgiveness", "healthcare-careers"]
+heroImage: "/thumbs/pslf-for-pharmacists-complete-guide.jpg"
 ---
 
 Pharmacists carry the **largest non-physician student debt load in American healthcare** — median PharmD debt now exceeds **$170,000**, with many graduates over $200,000. Yet the median pharmacist salary of $132,000–$145,000 makes standard 10-year repayment brutal: roughly $1,900/month in post-tax dollars. Public Service Loan Forgiveness can erase **$60,000–$130,000 tax-free** for qualifying pharmacists, but the catch is that **CVS, Walgreens, Walmart, Rite Aid, and every other retail chain do not qualify**. Where you work is more financially important than how much you earn. This guide tells you why.

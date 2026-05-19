@@ -3,6 +3,7 @@ title: "PSLF for Speech-Language Pathologists: Complete 2026 Guide to Loan Forgi
 description: "How SLPs qualify for PSLF in 2026: school district vs hospital vs SNF tracks, IDR repayment math for $85K SLP salary, common SNF chain traps, and step-by-step certification."
 pubDate: "2026-05-19"
 tags: ["pslf", "speech-language-pathologist", "student-loan-forgiveness", "healthcare-careers"]
+heroImage: "/thumbs/pslf-for-speech-language-pathologists-complete-guide.jpg"
 ---
 
 Speech-language pathologists (SLPs) carry some of the heaviest debt loads in allied health — a master's degree is required for the CCC-SLP credential, and most SLPs graduate with **$80,000–$130,000** in combined federal loans. The good news: SLPs working in public schools, VA medical centers, and nonprofit hospitals are among the highest PSLF-eligible professions in healthcare. With a median SLP salary of **$85,000–$95,000**, PSLF can erase **$40,000–$80,000** tax-free.

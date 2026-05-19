@@ -3,6 +3,7 @@ title: "Brookwood Baptist Birmingham Is Now Orlando Health: The 2024 PSLF Except
 description: "Brookwood Baptist Birmingham was acquired by Orlando Health (nonprofit) in 2024 — restoring PSLF eligibility. Rare reverse acquisition that revived qualifying employment for 7,000 workers."
 pubDate: "2026-05-18"
 tags: ["PSLF", "Birmingham", "Alabama", "Orlando Health", "acquisition warning"]
+heroImage: "/thumbs/brookwood-baptist-birmingham-orlando-health-pslf-exception.jpg"
 ---
 
 # Brookwood Baptist Birmingham Is Now Orlando Health: The 2024 PSLF Exception That Most People Missed

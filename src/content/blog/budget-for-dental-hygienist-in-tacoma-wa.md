@@ -3,6 +3,7 @@ title: "Dental Hygienist Budget Template for Tacoma, WA (2026 Guide)"
 description: "Budget guide for dental hygienists in Tacoma with JBLM. Madigan AMC, MultiCare, Virginia Mason Franciscan, Western State Hospital, no WA state tax, PSLF map, military spouse strategies."
 pubDate: "2026-05-18"
 tags: ["budgeting", "dental hygienist", "Tacoma", "Washington", "PSLF", "military"]
+heroImage: "/thumbs/budget-for-dental-hygienist-in-tacoma-wa.jpg"
 ---
 
 # Dental Hygienist Budget Template for Tacoma, WA (2026 Guide)

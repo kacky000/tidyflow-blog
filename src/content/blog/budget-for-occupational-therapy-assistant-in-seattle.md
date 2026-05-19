@@ -3,6 +3,7 @@ title: "OTA Budget Template for Seattle, WA (2026 Guide)"
 description: "Budget guide for occupational therapy assistants in Seattle. UW Medicine, Virginia Mason Franciscan, Swedish, Seattle Children's, Kaiser — PSLF map, no state tax, Burien/Renton housing analysis."
 pubDate: "2026-05-18"
 tags: ["budgeting", "OTA", "Seattle", "Washington", "PSLF"]
+heroImage: "/thumbs/budget-for-occupational-therapy-assistant-in-seattle.jpg"
 ---
 
 # OTA Budget Template for Seattle, WA (2026 Guide)

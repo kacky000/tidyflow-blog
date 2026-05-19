@@ -3,6 +3,7 @@ title: "Shepherd Center Atlanta Careers: PSLF-Eligible Rehab Jobs Salary Guide (
 description: "Shepherd Center is a top-5 SCI/ABI rehab hospital in Atlanta — fully PSLF eligible. OT, PT, SLP, RN salary ranges, vs Emory Rehab and PCH Atlanta acquisition traps."
 pubDate: "2026-05-18"
 tags: ["PSLF", "Atlanta", "Georgia", "Shepherd Center", "rehab careers"]
+heroImage: "/thumbs/shepherd-center-atlanta-pslf-rehab-careers-guide.jpg"
 ---
 
 # Shepherd Center Atlanta Careers: PSLF-Eligible Rehab Jobs Salary Guide (2026)

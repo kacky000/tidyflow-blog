@@ -3,6 +3,7 @@ title: "OTA Salary & Budget in Killeen TX 2026: Fort Hood + PSLF-Eligible Employ
 description: "Real OTA salaries near Fort Hood Killeen TX, top PSLF-eligible employers (CRDAMC, Baylor Scott & White, Seton), military spouse OTA opportunities, and a 50/30/20 budget breakdown."
 pubDate: "2026-05-19"
 tags: ["pslf", "occupational-therapy-assistant", "killeen", "military-city", "budget"]
+heroImage: "/thumbs/budget-for-occupational-therapy-assistant-in-killeen-tx.jpg"
 ---
 
 # OTA Salary & Budget in Killeen TX 2026: Fort Hood + PSLF-Eligible Employers

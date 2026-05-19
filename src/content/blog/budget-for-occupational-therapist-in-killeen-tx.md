@@ -3,6 +3,7 @@ title: "Occupational Therapist Budget Template for Killeen, TX (2026 Guide)"
 description: "Budget guide for occupational therapists in Killeen with Fort Hood. CRDAMC, KISD, Baylor Scott & White, AdventHealth, no TX state tax, PSLF map, military spouse strategies."
 pubDate: "2026-05-18"
 tags: ["budgeting", "occupational therapist", "Killeen", "Texas", "PSLF", "military"]
+heroImage: "/thumbs/budget-for-occupational-therapist-in-killeen-tx.jpg"
 ---
 
 # Occupational Therapist Budget Template for Killeen, TX (2026 Guide)

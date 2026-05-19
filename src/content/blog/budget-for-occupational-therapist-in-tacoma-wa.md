@@ -3,6 +3,7 @@ title: "Occupational Therapist Budget Template for Tacoma, WA (2026 Guide)"
 description: "Budget guide for occupational therapists in Tacoma with JBLM. Madigan AMC, MultiCare, Virginia Mason Franciscan, Western State Hospital, no WA state tax, PSLF map, military spouse strategies."
 pubDate: "2026-05-18"
 tags: ["budgeting", "occupational therapist", "Tacoma", "Washington", "PSLF", "military"]
+heroImage: "/thumbs/budget-for-occupational-therapist-in-tacoma-wa.jpg"
 ---
 
 # Occupational Therapist Budget Template for Tacoma, WA (2026 Guide)

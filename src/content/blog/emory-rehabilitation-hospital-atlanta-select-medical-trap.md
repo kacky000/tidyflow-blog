@@ -3,6 +3,7 @@ title: "Emory Rehabilitation Hospital Atlanta + Select Medical: The PSLF Trap Hi
 description: "Emory Healthcare (Atlanta) operates inpatient rehab through a Select Medical joint venture — the 'Emory Rehabilitation Hospital' name suggests 501c3 PSLF eligibility, but employees are paid by Select Medical (for-profit). Full PSLF trap analysis."
 pubDate: "2026-05-19"
 tags: ["pslf", "acquisition-warning", "select-medical", "atlanta", "joint-venture-trap"]
+heroImage: "/thumbs/emory-rehabilitation-hospital-atlanta-select-medical-trap.jpg"
 ---
 
 If you are an occupational therapist, physical therapist, speech-language pathologist, rehab nurse, or rehab tech in Atlanta who took a job at **Emory Rehabilitation Hospital** thinking the "Emory" in the name guaranteed PSLF eligibility, **stop submitting payments and read this carefully**. The name is misleading by design. The legal employer is a Select Medical joint venture entity that is treated as for-profit for federal tax purposes — and **does not qualify for PSLF**.

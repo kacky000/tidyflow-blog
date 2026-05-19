@@ -3,6 +3,7 @@ title: "Inpatient Rehabilitation Hospital PSLF Map 2026: 6 Nonprofit Rehab Cente
 description: "Complete map of PSLF-eligible inpatient rehabilitation hospitals: Shepherd Center (Atlanta), Spaulding (Boston), Shirley Ryan AbilityLab (Chicago), Magee (Philadelphia), Patricia Neal (Knoxville), Siskin (Chattanooga). Plus Encompass/Select Medical trap warnings."
 pubDate: "2026-05-19"
 tags: ["pslf", "inpatient-rehabilitation", "rehab-careers", "occupational-therapy", "physical-therapy"]
+heroImage: "/thumbs/inpatient-rehabilitation-pslf-map-2026.jpg"
 ---
 
 If you are an occupational therapist, physical therapist, speech-language pathologist, rehab nurse, or rehab tech chasing PSLF, **inpatient rehabilitation is one of the most underrated career tracks in the entire program**. The work is dense, the patients are complex, the salaries are at the top of the rehab pay scale — and a small set of standalone nonprofit rehab hospitals will give you 120 qualifying payments without you ever having to switch employers.

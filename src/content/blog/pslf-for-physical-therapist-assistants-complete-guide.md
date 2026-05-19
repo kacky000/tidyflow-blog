@@ -3,6 +3,7 @@ title: "PSLF for Physical Therapist Assistants (PTA): Complete 2026 Guide"
 description: "How PTAs qualify for PSLF in 2026: eligible hospital/SNF/rehab employers, outpatient clinic trap warnings, IDR repayment math, and step-by-step certification path."
 pubDate: "2026-05-19"
 tags: ["pslf", "physical-therapist-assistant", "student-loan-forgiveness", "healthcare-careers"]
+heroImage: "/thumbs/pslf-for-physical-therapist-assistants-complete-guide.jpg"
 ---
 
 Physical Therapist Assistants (PTAs) earn a respectable $62,000–$68,000 median salary on an associate-degree investment of $25,000–$45,000 in student debt. That ratio looks healthy on paper — until you realize that the **specific PTA setting you take a job in** can swing your effective lifetime earnings by **$20,000–$50,000** through Public Service Loan Forgiveness (PSLF). Most PTAs never get told this in school, and many sign on with for-profit chains that permanently disqualify them from forgiveness. This guide fixes that.

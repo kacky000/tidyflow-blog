@@ -3,6 +3,7 @@ title: "PSLF for Respiratory Therapists: Complete 2026 Guide to Loan Forgiveness
 description: "How respiratory therapists qualify for PSLF in 2026: eligible hospital systems, ICU/ER tracks, IDR repayment math, common HCA acquisition traps, and step-by-step certification."
 pubDate: "2026-05-19"
 tags: ["pslf", "respiratory-therapist", "student-loan-forgiveness", "healthcare-careers"]
+heroImage: "/thumbs/pslf-for-respiratory-therapists-complete-guide.jpg"
 ---
 
 Respiratory therapists (RTs) sit in a quiet PSLF sweet spot. Most acute care RT jobs are inside nonprofit academic medical centers, county hospitals, or VA facilities — all of which are PSLF-qualifying employers. Yet the majority of practicing RTs have never submitted an Employment Certification Form. With AAS/BSRC debt of $25,000–$60,000 and a median respiratory therapist salary of **$72,000–$78,000**, PSLF can erase **$15,000–$45,000** in loan balances tax-free.

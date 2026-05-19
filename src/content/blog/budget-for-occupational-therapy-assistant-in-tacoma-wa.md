@@ -3,6 +3,7 @@ title: "OTA Salary & Budget in Tacoma WA 2026: JBLM + PSLF-Eligible Employers"
 description: "Real OTA salaries near JBLM Tacoma WA, top PSLF-eligible employers (Madigan, MultiCare, CHI Franciscan), military spouse OTA paths, WSLRP stacking, and a 50/30/20 budget."
 pubDate: "2026-05-19"
 tags: ["pslf", "occupational-therapy-assistant", "tacoma", "military-city", "budget"]
+heroImage: "/thumbs/budget-for-occupational-therapy-assistant-in-tacoma-wa.jpg"
 ---
 
 # OTA Salary & Budget in Tacoma WA 2026: JBLM + PSLF-Eligible Employers

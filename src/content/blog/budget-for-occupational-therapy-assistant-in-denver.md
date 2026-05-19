@@ -3,6 +3,7 @@ title: "OTA Budget Template for Denver, CO (2026 Guide)"
 description: "Budget guide for occupational therapy assistants in Denver. UCHealth, Denver Health, Craig Hospital (rehab top-10), PSLF map, Aurora/Lakewood commute analysis, CO 4.4% tax."
 pubDate: "2026-05-18"
 tags: ["budgeting", "OTA", "Denver", "Colorado", "PSLF"]
+heroImage: "/thumbs/budget-for-occupational-therapy-assistant-in-denver.jpg"
 ---
 
 # OTA Budget Template for Denver, CO (2026 Guide)
