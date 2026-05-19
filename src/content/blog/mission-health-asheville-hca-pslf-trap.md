@@ -96,6 +96,7 @@ Download the **[Freelancer Expense Tracker](https://gettidyflow.gumroad.com/l/fr
 
 - **[Memorial Health Savannah Is Now HCA: The 2018 PSLF Trap](https://gettidyflow.com/blog/memorial-health-savannah-hca-pslf-trap)** — The same HCA acquisition pattern, one year earlier.
 - **[Lovelace Albuquerque Is Now Ardent: The PSLF Trap That Started in 2002](https://gettidyflow.com/blog/lovelace-albuquerque-ardent-pslf-trap)** — The same nonprofit-to-for-profit playbook, but via Ardent Health Services — proving the trap is industry-wide, not HCA-specific.
+- **[Inpatient Rehabilitation PSLF Map 2026](https://gettidyflow.com/blog/inpatient-rehabilitation-pslf-map-2026)** — Asheville-area rehab therapists: the 6 nonprofit rehab hospitals nationwide that survive every acquisition wave.
 - **[PSLF for Nurses — Complete Guide](https://gettidyflow.com/blog/pslf-for-nurses-complete-guide)** — Verify whether your nursing role still qualifies after the sale.
 - **[PSLF for Public Health Nurses](https://gettidyflow.com/blog/pslf-for-public-health-nurses-complete-guide)** — WNCCHS and Blue Ridge Health are top FQHC alternatives.
 - **[PSLF-Eligible Employers in Nashville](https://gettidyflow.com/blog/pslf-eligible-employers-in-nashville)** — Another HCA-heavy market with the same trap.

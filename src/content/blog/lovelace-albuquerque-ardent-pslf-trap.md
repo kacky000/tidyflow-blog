@@ -82,6 +82,7 @@ This Ardent/Lovelace case is part of a broader pattern of nonprofit hospitals qu
 - [Mission Health Asheville Is Now HCA: The 2019 PSLF Trap](/blog/mission-health-asheville-hca-pslf-trap/)
 - [Carondelet Tucson Is Now Tenet: The For-Profit Conversion That Killed PSLF](/blog/carondelet-tucson-tenet-pslf-trap/)
 - [Saint Mary's Reno Is Now Prime Healthcare: The 2012 PSLF Trap](/blog/saint-marys-reno-prime-pslf-trap/)
+- [Inpatient Rehabilitation PSLF Map (2026)](/blog/inpatient-rehabilitation-pslf-map-2026/) — The 6 safe 501(c)(3) inpatient rehab employers nationwide. Use this if your Lovelace UNM Rehabilitation JV role isn't PSLF-qualifying.
 
 The Lovelace case is the oldest of all of them — and proves that an acquisition from over 20 years ago can still be costing today's workers six figures in lost forgiveness.
 

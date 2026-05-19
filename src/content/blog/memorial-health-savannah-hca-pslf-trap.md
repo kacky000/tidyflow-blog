@@ -107,6 +107,7 @@ See also our [Dental Hygienist Budget for Savannah](https://gettidyflow.com/blog
 If you're rebuilding your PSLF plan after the Memorial Health acquisition, these guides may help:
 
 - **[Mission Health Asheville Is Now HCA: The 2019 PSLF Trap](https://gettidyflow.com/blog/mission-health-asheville-hca-pslf-trap)** — The same HCA acquisition pattern repeated one year later in North Carolina.
+- **[Inpatient Rehabilitation PSLF Map 2026](https://gettidyflow.com/blog/inpatient-rehabilitation-pslf-map-2026)** — The 6 nonprofit rehab hospitals that survive every acquisition wave, plus the for-profit chains to avoid.
 - **[Lovelace Albuquerque Is Now Ardent: The PSLF Trap That Started in 2002](https://gettidyflow.com/blog/lovelace-albuquerque-ardent-pslf-trap)** — The oldest known nonprofit-to-for-profit hospital acquisition still trapping PSLF applicants today.
 - **[PSLF for Nurses — Complete Guide](https://gettidyflow.com/blog/pslf-for-nurses-complete-guide)** — Verify whether your nursing role qualifies and what to do after a hospital sale.
 - **[PSLF for Public Health Nurses](https://gettidyflow.com/blog/pslf-for-public-health-nurses-complete-guide)** — Coastal Health District (FQHC) is a top alternative employer in Savannah.

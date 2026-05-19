@@ -108,7 +108,7 @@ Both are top-10 specialty rehab hospitals, both are independent 501(c)(3) nonpro
 
 ## Related: PSLF Acquisition Trap Warnings
 
-Shepherd Center is the gold standard precisely because so many other "nonprofit-sounding" hospitals have quietly converted to for-profit ownership — silently disqualifying their employees from PSLF. Before accepting any hospital job, especially in the rehab space, read these acquisition-trap case studies:
+Shepherd Center is the gold standard precisely because so many other "nonprofit-sounding" hospitals have quietly converted to for-profit ownership — silently disqualifying their employees from PSLF. Before accepting any hospital job, especially in the rehab space, read these acquisition-trap case studies — or start with the full regional landscape: **[Inpatient Rehabilitation PSLF Map 2026](/blog/inpatient-rehabilitation-pslf-map-2026/)**, which catalogs every nonprofit-eligible inpatient rehab employer and flags the for-profit traps to avoid.
 
 - [Memorial Health Savannah Is Now HCA: The 2018 PSLF Trap](/blog/memorial-health-savannah-hca-pslf-trap/) — How a beloved Georgia community hospital became for-profit overnight.
 - [Mission Health Asheville Is Now HCA: The 2019 PSLF Trap](/blog/mission-health-asheville-hca-pslf-trap/) — The same HCA playbook applied to North Carolina's largest mountain-region health system.

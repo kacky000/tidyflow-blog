@@ -144,6 +144,7 @@ Inpatient rehab is a uniquely vulnerable specialty for PSLF traps because of two
 - **Brookwood Baptist Health** (Birmingham) was acquired by Orlando Health in 2024, an unusual *positive* outcome where the buyer is itself a 501(c)(3). See: [Brookwood Baptist Birmingham Orlando Health PSLF exception](/blog/brookwood-baptist-birmingham-orlando-health-pslf-exception).
 - **Memorial Health Savannah** (GA) sold to HCA in 2018 — the most catastrophic single PSLF acquisition in the Southeast. See: [Memorial Health Savannah HCA PSLF trap](/blog/memorial-health-savannah-hca-pslf-trap).
 - **Lovelace Albuquerque** sold to Ardent Health in 2002 — destroyed PSLF eligibility for an entire metro's rehab workforce. See: [Lovelace Albuquerque Ardent PSLF trap](/blog/lovelace-albuquerque-ardent-pslf-trap).
+- **Mission Health Asheville** (NC) sold to HCA in 2019 — a sister HCA acquisition to Memorial Savannah that hollowed out PSLF eligibility for Western North Carolina rehab clinicians. See: [Mission Health Asheville HCA PSLF trap](/blog/mission-health-asheville-hca-pslf-trap).
 
 ## Action Plan for Aspiring Rehab Therapists
 
