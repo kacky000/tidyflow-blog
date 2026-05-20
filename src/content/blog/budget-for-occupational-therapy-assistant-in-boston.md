@@ -96,7 +96,7 @@ Based on the $70,200 median, here is what actually fits on take-home pay of ~$4,
 | **Wants (30%)** | $1,308 | Dining out, gym, travel, subscriptions, gifts |
 | **Savings + Debt (20%)** | $872 | IDR minimum loan payment $200–$350, Roth IRA, emergency fund, HYSA |
 
-Reality check: a solo studio in the South End or Back Bay is not feasible on the Needs bucket. Most Boston OTAs share apartments in Allston, JP, Somerville, Dorchester, or Quincy through their first 3–4 years. Compare this to the [OTA budget in Los Angeles](/blog/budget-for-occupational-therapy-assistant-in-los-angeles) — Boston rent is similar, but no state income tax break exists.
+Reality check: a solo studio in the South End or Back Bay is not feasible on the Needs bucket. Most Boston OTAs share apartments in Allston, JP, Somerville, Dorchester, or Quincy through their first 3–4 years. Compare this to the [OTA budget in Los Angeles](/blog/budget-for-occupational-therapy-assistant-in-los-angeles) — Boston rent is similar, but no state income tax break exists. For another nonprofit-dominated, PSLF-friendly OTA market with a far lower cost of living, see the [OTA budget in Portland](/blog/budget-for-occupational-therapy-assistant-in-portland).
 
 ## The PSLF Math for Boston OTAs
 
