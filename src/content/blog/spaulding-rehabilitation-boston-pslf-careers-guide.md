@@ -3,6 +3,7 @@ title: "Spaulding Rehabilitation Boston PSLF Guide 2026: Mass General Brigham Ca
 description: "Spaulding Rehabilitation Network career guide for PSLF — Mass General Brigham 501(c)(3) status, locations (Charlestown/Cambridge/Brighton), OT/PT/RT/SLP/OTA/PTA pay ranges, and PSLF certification steps."
 pubDate: "2026-05-20"
 tags: ["pslf", "spaulding-rehabilitation", "boston", "mass-general-brigham", "rehab-careers", "healthcare-careers"]
+heroImage: "/thumbs/spaulding-rehabilitation-boston-pslf-careers-guide.jpg"
 ---
 
 Spaulding Rehabilitation Hospital Boston is widely considered one of the top three inpatient rehabilitation flagships in the United States, alongside Shirley Ryan AbilityLab in Chicago and Shepherd Center in Atlanta. What makes Spaulding strategically important for healthcare workers carrying federal student loans, however, is not just its clinical reputation — it is the fact that Spaulding sits inside the Mass General Brigham (MGB) family of 501(c)(3) nonprofit hospitals, which means **every clinical role at Spaulding qualifies for Public Service Loan Forgiveness (PSLF)**.

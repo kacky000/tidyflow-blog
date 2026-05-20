@@ -3,6 +3,7 @@ title: "OTA Salary & Budget in Pittsburgh 2026: PSLF-Eligible Employers Guide"
 description: "Real OTA salaries in Pittsburgh, top PSLF-eligible employers (UPMC's 40+ hospitals, Allegheny Health Network, Children's Institute), Encompass acquisition trap warnings, and a 50/30/20 budget."
 pubDate: "2026-05-20"
 tags: ["pslf", "occupational-therapy-assistant", "pittsburgh", "budget", "healthcare-careers"]
+heroImage: "/thumbs/budget-for-occupational-therapy-assistant-in-pittsburgh.jpg"
 ---
 
 # OTA Salary Pittsburgh 2026: PSLF-Eligible Employers and Real Budget Breakdown

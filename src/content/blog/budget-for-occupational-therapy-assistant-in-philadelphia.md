@@ -3,6 +3,7 @@ title: "OTA Salary & Budget in Philadelphia 2026: PSLF-Eligible Employers Guide"
 description: "Real OTA salaries in Philadelphia, top PSLF-eligible employers (Magee Rehab/Jefferson, Penn Medicine, CHOP, Temple Health), Encompass acquisition trap warnings, and a 50/30/20 budget breakdown."
 pubDate: "2026-05-20"
 tags: ["pslf", "occupational-therapy-assistant", "philadelphia", "budget", "healthcare-careers"]
+heroImage: "/thumbs/budget-for-occupational-therapy-assistant-in-philadelphia.jpg"
 ---
 
 # OTA Salary Philadelphia 2026: PSLF-Eligible Employers and Real Budget Breakdown

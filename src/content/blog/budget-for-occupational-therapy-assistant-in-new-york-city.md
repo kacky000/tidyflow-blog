@@ -3,6 +3,7 @@ title: "OTA Salary & Budget in New York City 2026: PSLF-Eligible Employers Guide
 description: "Real OTA salaries in NYC, top PSLF-eligible employers (NewYork-Presbyterian, Mount Sinai, NYU Langone, NYC H+H, Burke Rehab), HCA/Steward acquisition trap warnings, and a 50/30/20 budget."
 pubDate: "2026-05-20"
 tags: ["pslf", "occupational-therapy-assistant", "new-york-city", "budget", "healthcare-careers"]
+heroImage: "/thumbs/budget-for-occupational-therapy-assistant-in-new-york-city.jpg"
 ---
 
 # OTA Salary New York City 2026: PSLF-Eligible Employers and Real Budget Breakdown

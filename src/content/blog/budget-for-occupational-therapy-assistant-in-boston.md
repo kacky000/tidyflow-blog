@@ -3,6 +3,7 @@ title: "OTA Salary & Budget in Boston 2026: PSLF-Eligible Employers Guide"
 description: "Real OTA salaries in Boston, top PSLF-eligible employers (Spaulding/Mass General Brigham, Boston Children's, BMC, Tufts MC), Encompass acquisition trap warnings, and a 50/30/20 budget breakdown."
 pubDate: "2026-05-20"
 tags: ["pslf", "occupational-therapy-assistant", "boston", "budget", "healthcare-careers"]
+heroImage: "/thumbs/budget-for-occupational-therapy-assistant-in-boston.jpg"
 ---
 
 # OTA Salary Boston 2026: PSLF-Eligible Employers and Real Budget Breakdown

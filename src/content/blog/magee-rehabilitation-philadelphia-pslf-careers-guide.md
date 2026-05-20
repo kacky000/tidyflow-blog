@@ -3,6 +3,7 @@ title: "Magee Rehabilitation Philadelphia PSLF Guide 2026: Jefferson Health SCI 
 description: "Magee Rehabilitation Hospital Philadelphia career guide — Jefferson Health 501(c)(3) status post-2021 integration, SCI Model System designation, OT/PT/RT/SLP/OTA/PTA pay, and PSLF certification."
 pubDate: "2026-05-20"
 tags: ["pslf", "magee-rehabilitation", "philadelphia", "jefferson-health", "spinal-cord-injury", "rehab-careers"]
+heroImage: "/thumbs/magee-rehabilitation-philadelphia-pslf-careers-guide.jpg"
 ---
 
 Magee Rehabilitation Hospital, headquartered in Center City Philadelphia, is one of the nation's premier spinal cord injury (SCI) rehabilitation flagships. Founded in 1958 and federally designated as an SCI Model System center, Magee became part of the Jefferson Health system in 2021 and is now formally branded "Magee Rehabilitation Hospital at Jefferson." Because Jefferson Health is a registered 501(c)(3) nonprofit, every clinical role at Magee continues to qualify for Public Service Loan Forgiveness (PSLF). For occupational therapists, physical therapists, respiratory therapists, speech-language pathologists, rehab nurses, and assistants carrying graduate-school debt, Magee is one of the most strategically valuable employers in the Mid-Atlantic — and one of the few remaining nonprofit firewalls against the Encompass Health and Select Medical for-profit chains expanding aggressively across Pennsylvania.

@@ -3,6 +3,7 @@ title: "PSLF for Dietitians (RD/RDN): Complete 2026 Guide to Loan Forgiveness"
 description: "How registered dietitians qualify for PSLF in 2026: VA, public schools, nonprofit hospitals, WIC, FQHCs, and the Aramark/Sodexo/Compass food service contractor trap that disqualifies many RDs."
 pubDate: "2026-05-20"
 tags: ["pslf", "dietitian", "rdn", "student-loan-forgiveness", "healthcare-careers"]
+heroImage: "/thumbs/pslf-for-dietitians-complete-guide.jpg"
 ---
 
 **PSLF for dietitians** is one of the most overlooked — and most misunderstood — forgiveness pathways in healthcare. Since the Academy of Nutrition and Dietetics moved RD/RDN credentialing to a master's-level requirement in 2024, average debt loads have climbed to **$50,000–$90,000**, while the median Registered Dietitian salary still sits at just **$66,000–$72,000**. That math makes **RD PSLF** financially decisive — a successful 120-payment run can wipe out **$25,000–$60,000**. But there's a brutal trap most RDs walk into: working inside a nonprofit hospital while their W-2 is issued by **Aramark, Sodexo, Compass Group, or Morrison Healthcare** — all for-profit food service contractors that **do not qualify** for Public Service Loan Forgiveness.

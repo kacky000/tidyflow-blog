@@ -3,6 +3,7 @@ title: "PSLF for Audiologists: Complete 2026 Guide to Loan Forgiveness"
 description: "How audiologists qualify for PSLF in 2026: eligible school districts, VA medical centers, nonprofit hospitals, university clinics, Costco Hearing Aid trap, and step-by-step certification."
 pubDate: "2026-05-20"
 tags: ["pslf", "audiologist", "student-loan-forgiveness", "healthcare-careers"]
+heroImage: "/thumbs/pslf-for-audiologists-complete-guide.jpg"
 ---
 
 Audiology is one of the most debt-heavy healthcare professions in the U.S. The Doctor of Audiology (Au.D.) is a four-year clinical doctorate, and graduates routinely carry **$100,000 to $200,000+** in federal student loans. With a **median audiologist salary of $85,000 to $95,000**, the Standard 10-year repayment plan is brutally expensive.

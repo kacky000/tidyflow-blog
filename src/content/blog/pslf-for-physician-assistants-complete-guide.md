@@ -3,6 +3,7 @@ title: "PSLF for Physician Assistants (PAs): Complete 2026 Guide to Loan Forgive
 description: "How PAs qualify for PSLF in 2026: nonprofit hospitals, FQHCs, VA medical centers, Indian Health Service, and the Optum/Privia/HCA/Tenet corporate primary care trap that disqualifies many PAs."
 pubDate: "2026-05-20"
 tags: ["pslf", "physician-assistant", "pa-c", "student-loan-forgiveness", "healthcare-careers"]
+heroImage: "/thumbs/pslf-for-physician-assistants-complete-guide.jpg"
 ---
 
 Physician Assistants (PAs) finish school carrying serious debt. The median PA program graduate now owes **$120,000–$180,000** in federal student loans. With a median PA salary of just **$125,000–$135,000**, a Standard 10-year repayment plan demands **$1,400–$2,000 per month** — an extreme bite out of post-tax income, especially in high cost-of-living metros.

@@ -3,6 +3,7 @@ title: "PSLF for Mental Health Counselors (LPC/LMHC): Complete 2026 Guide"
 description: "How licensed mental health counselors qualify for PSLF in 2026: community mental health centers, public schools, VA, and the BetterHelp/Talkspace/private practice trap that disqualifies many therapists."
 pubDate: "2026-05-20"
 tags: ["pslf", "mental-health-counselor", "lpc", "lmhc", "student-loan-forgiveness"]
+heroImage: "/thumbs/pslf-for-mental-health-counselors-complete-guide.jpg"
 ---
 
 Licensed mental health counselors (LPC, LMHC, LPCC, LCMHC) sit at the worst possible intersection in U.S. healthcare: a master's degree is required, 2-3 years of supervised post-graduate hours are mandatory before independent licensure, and the median W-2 salary still lands between **$48,000 and $62,000**. Graduate debt of **$50,000-$90,000** is typical.
