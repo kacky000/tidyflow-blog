@@ -115,6 +115,6 @@ A: Travel OTA agencies are almost always for-profit staffing firms. Great short-
 If you're serious about combining a Los Angeles OTA career with PSLF, your two homework items this week are:
 
 1. Read [PSLF for Librarians: The Complete Guide](/blog/pslf-for-librarians-complete-guide) — the strategy framework applies identically to OTAs.
-2. Compare your situation to the flagship in this series: [Budget for OTA in Portland](/blog/budget-for-occupational-therapy-assistant-in-portland).
+2. Compare your situation to the flagship in this series: [Budget for OTA in Portland](/blog/budget-for-occupational-therapy-assistant-in-portland), or the other coastal high-rent market in [Budget for OTA in Boston](/blog/budget-for-occupational-therapy-assistant-in-boston) (similar rent, but no state-tax break and a Mass General Brigham / Encompass employer split).
 
 And to actually track all of this — the IDR payment, the qualifying employer dates, the savings glidepath — grab the [TidyFlow Personal Finance Dashboard](https://gettidyflow.gumroad.com) or the [Freelancer Expense Tracker](https://gettidyflow.gumroad.com) if you're piecing together per diem income. Both are built for healthcare workers chasing forgiveness while living in expensive cities.

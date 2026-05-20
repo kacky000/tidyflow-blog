@@ -140,4 +140,4 @@ Portland's near-uniformly nonprofit hospital landscape + competitive OTA pay = o
 
 Download the **[Freelancer Expense Tracker](https://gettidyflow.gumroad.com/l/freelancer-expense-tracker)** — handles PRN / contract OTA work — or the **[New Life Starter Kit](https://gettidyflow.gumroad.com/l/new-life-starter-kit)** if you're relocating to Portland.
 
-See also our [OTA Budget for Sacramento](https://gettidyflow.com/blog/budget-for-occupational-therapy-assistant-in-sacramento) and [OTA Budget for Salt Lake City](https://gettidyflow.com/blog/budget-for-occupational-therapy-assistant-in-salt-lake-city).
+See also our [OTA Budget for Sacramento](https://gettidyflow.com/blog/budget-for-occupational-therapy-assistant-in-sacramento), [OTA Budget for Salt Lake City](https://gettidyflow.com/blog/budget-for-occupational-therapy-assistant-in-salt-lake-city), and the high-cost-of-living comparison in [OTA Budget for Boston](https://gettidyflow.com/blog/budget-for-occupational-therapy-assistant-in-boston) (Mass General Brigham / Spaulding PSLF).
