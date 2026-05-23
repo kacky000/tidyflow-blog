@@ -197,3 +197,4 @@ Not sure how to allocate your income? Use our **[Free Budget Calculator](/tools/
 - [Notion vs Excel Budgeting: Full Comparison](/blog/notion-vs-excel-budgeting) — Deep-dive breakdown of both platforms for budgeting
 - [How to Track Expenses in Notion](/blog/how-to-track-expenses-in-notion/) — Step-by-step Notion expense tracking guide
 - [The 50/30/20 Budget Rule in Notion](/blog/50-30-20-budget-rule-notion/) — Apply the popular budgeting rule with a Notion template
+- [Copilot vs Notion for Budgeting](/blog/copilot-vs-notion-for-budgeting/) — Prefer a dedicated app over a template? Compare automated apps vs Notion
