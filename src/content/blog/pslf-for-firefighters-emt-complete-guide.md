@@ -142,10 +142,12 @@ Many wildland firefighters earn $45,000–$75,000 and have fire science degrees 
 
 ## Related Guides
 
-- **[PSLF Core Guide](/pslf-loan-forgiveness-guide-for-public-service-workers/)** — Full technical overview
-- **[PSLF for Nurses](/pslf-for-nurses-complete-guide/)** — For nurse-paramedics or flight nurses
-- **[PSLF for Teachers](/pslf-for-teachers-complete-guide/)** — For fire safety educators or community education roles
-- **[Budget Template for Paramedics](/budget-template-for-paramedics/)** — Financial planning for EMS careers
+- **[PSLF Core Guide](/blog/pslf-loan-forgiveness-guide-for-public-service-workers/)** — Full technical overview
+- **[PSLF for Nurses](/blog/pslf-for-nurses-complete-guide/)** — For nurse-paramedics or flight nurses
+- **[PSLF for Teachers](/blog/pslf-for-teachers-complete-guide/)** — For fire safety educators or community education roles
+- **[Budget Template for Firefighters](/blog/budget-template-for-firefighters/)** — Manage shift schedules, overtime, and out-of-pocket gear costs
+- **[Budget Template for EMTs](/blog/budget-template-for-emts/)** — Budgeting on EMT pay and saving for paramedic school
+- **[Budget Template for Paramedics](/blog/budget-template-for-paramedics/)** — Financial planning for EMS careers
 - **[Freelancer Expense Tracker ($9.99)](https://gettidyflow.gumroad.com/l/freelancer-expense-tracker)** — Track multiple jobs and income streams
 
 ---

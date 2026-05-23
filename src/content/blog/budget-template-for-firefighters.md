@@ -95,7 +95,7 @@ You're not going to sit down with a spreadsheet after a 24-hour shift. You need 
 
 **Notion-Based Expense Tracker**: If you want a more detailed system, a Notion template lets you log expenses from your phone, track spending per shift cycle, and see monthly trends at a glance. Check out our **[Freelancer Expense Tracker on Gumroad](https://gettidyflow.gumroad.com)** — it works just as well for firefighters managing irregular income.
 
-For a deeper look at why budgeting matters (and where most people go wrong), read our guide on [budgeting mistakes to avoid](/blog/budgeting-mistakes-to-avoid).
+For a deeper look at why budgeting matters (and where most people go wrong), read our guide on [budgeting mistakes to avoid](/blog/budgeting-mistakes-to-avoid). And if you carry student debt from a fire science or fire administration degree, you likely qualify for tax-free loan forgiveness — see our [PSLF guide for firefighters and EMTs](/blog/pslf-for-firefighters-emt-complete-guide/) to potentially erase tens of thousands in loans.
 
 ## FAQ
 

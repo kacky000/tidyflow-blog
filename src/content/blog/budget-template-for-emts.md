@@ -155,3 +155,4 @@ EMT pay is a difficult reality. But with a structured budget, a strategic approa
 For related guides, see:
 - [Budget Template for Paramedics: Higher Pay, New Financial Challenges](/blog/budget-template-for-paramedics/)
 - [Budget for Side Hustle Income: Track and Plan Your Extra Earnings](/blog/budget-for-side-hustle-income/)
+- [PSLF for Firefighters and EMTs: Get Your Student Loans Forgiven Tax-Free](/blog/pslf-for-firefighters-emt-complete-guide/)
