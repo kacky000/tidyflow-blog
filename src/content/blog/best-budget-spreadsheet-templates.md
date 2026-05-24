@@ -138,6 +138,9 @@ Two incomes, shared expenses, individual spending — it gets complicated fast. 
 ### For Debt Payoff
 If your primary goal is eliminating debt, you need a template that prioritizes debt payments. Our [debt payoff budget template](/blog/debt-payoff-budget-template/) includes snowball and avalanche calculators.
 
+### For Financial Recovery After Bankruptcy
+Rebuilding after a Chapter 7 or Chapter 13 discharge requires a recovery-focused budget that prioritizes an emergency fund and credit rebuilding. Our [how to budget after bankruptcy](/blog/how-to-budget-after-bankruptcy) guide walks through a modified 50/30/20 framework and the right templates to track your fresh start.
+
 ### For Specific Cities (Cost of Living Budgets)
 Budget needs vary dramatically by city. We've built detailed budget guides for specific metro areas with local cost data built in:
 - [Budget for Living in Glendale](/blog/budget-for-living-in-glendale/)

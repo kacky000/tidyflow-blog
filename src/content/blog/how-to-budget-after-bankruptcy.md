@@ -125,6 +125,8 @@ If you're struggling with sticking to these rules, the issue is usually not will
 
 After bankruptcy, you need total visibility into your spending. Not because you're being punished — because awareness is what prevents a repeat.
 
+The fastest way to get that visibility is a ready-made budget spreadsheet with automatic totals — see our roundup of the [best free budget spreadsheet templates](/blog/best-budget-spreadsheet-templates/) to pick one (Excel, Google Sheets, or Notion) that fits your recovery plan.
+
 ### Weekly Budget Reviews
 
 Every Sunday, spend 15 minutes:
