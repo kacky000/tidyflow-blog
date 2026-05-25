@@ -130,7 +130,7 @@ You can avoid these mistakes with proper planning. For more details on [budgetin
 
 ## Tools to Simplify Wedding Budget Planning
 
-The best tool for wedding budget management is a **wedding budget planner** that automatically calculates totals, shows spending by category, and alerts you when you're approaching limits. Our **[Wedding Budget Planner template](https://gettidyflow.gumroad.com)** ($14.99) provides:
+The best tool for wedding budget management is a **wedding budget planner** that automatically calculates totals, shows spending by category, and alerts you when you're approaching limits. Our **[Wedding Budget Planner template](https://gettidyflow.gumroad.com/l/wedding-budget-planner)** ($14.99) provides:
 
 - Pre-built 15-category breakdown
 - Real-time spending tracker
@@ -138,7 +138,7 @@ The best tool for wedding budget management is a **wedding budget planner** that
 - Timeline and payment schedule
 - Mobile-friendly interface
 
-Instead of juggling spreadsheets and receipts, one organized tool keeps everything in one place.
+Instead of juggling spreadsheets and receipts, one organized tool keeps everything in one place. If you want to compare it against other options first, see our roundup of the [best budget spreadsheet templates](/blog/best-budget-spreadsheet-templates/) — it covers Excel, Google Sheets, and Notion picks for every life situation, including weddings.
 
 ## Wedding Budget Timeline: When to Book and Pay
 
@@ -196,7 +196,7 @@ By using a comprehensive **wedding budget planner** and following this guide, yo
 ✓ Create a celebration that reflects your values
 ✓ Start married life without financial strain
 
-Ready to take control of your wedding budget? Download our **[Wedding Budget Planner template](https://gettidyflow.gumroad.com)** for just $14.99 and start planning with confidence today.
+Ready to take control of your wedding budget? Download our **[Wedding Budget Planner template](https://gettidyflow.gumroad.com/l/wedding-budget-planner)** for just $14.99 and start planning with confidence today.
 
 ## Frequently Asked Questions
 
@@ -220,4 +220,4 @@ Your future spouse will thank you for the organized approach—and your bank acc
 
 ---
 
-**Want more budgeting resources?** Check out our complete guides on [budgeting mistakes to avoid](/blog/budgeting-mistakes-to-avoid/) and the [monthly budget checklist](/blog/monthly-budget-checklist/) for additional financial planning strategies.
+**Want more budgeting resources?** Check out our complete guides on [budgeting mistakes to avoid](/blog/budgeting-mistakes-to-avoid/), the [monthly budget checklist](/blog/monthly-budget-checklist/), and our roundup of the [best budget spreadsheet templates](/blog/best-budget-spreadsheet-templates/) for additional financial planning strategies.
