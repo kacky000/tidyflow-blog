@@ -182,4 +182,6 @@ Run the numbers: calculate potential income minus childcare costs, commuting, wo
 
 A single income doesn't mean financial stress has to be constant. The right template gives you visibility, control, and confidence.
 
+Not sure which template fits your family? Compare your options side by side in our [best budget spreadsheet templates](/blog/best-budget-spreadsheet-templates/) roundup — it breaks down free and paid templates by life situation, including single-income households.
+
 **[Download the New Life Starter Kit](https://gettidyflow.gumroad.com/l/new-life-starter-kit)** — a comprehensive budget template designed for families managing big life transitions. Track expenses, set savings goals, and build financial stability on any income level.

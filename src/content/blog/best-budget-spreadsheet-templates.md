@@ -135,6 +135,9 @@ Limited income, irregular schedules, and unique expenses (textbooks, dining plan
 ### For Couples
 Two incomes, shared expenses, individual spending — it gets complicated fast. Our [budgeting for couples](/blog/budgeting-for-couples/) guide covers joint and split approaches.
 
+### For Stay-at-Home Parents (Single Income)
+Living on one income with kids leaves zero margin for error. You need a template built around a single paycheck, a larger emergency fund, and tight grocery control. Our [budget template for stay at home moms](/blog/budget-template-for-stay-at-home-moms) covers a 4-category single-income framework and family expense tracking.
+
 ### For Debt Payoff
 If your primary goal is eliminating debt, you need a template that prioritizes debt payments. Our [debt payoff budget template](/blog/debt-payoff-budget-template/) includes snowball and avalanche calculators.
 
