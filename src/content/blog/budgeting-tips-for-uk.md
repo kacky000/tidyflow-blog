@@ -188,4 +188,6 @@ The UK's financial system actually makes budgeting easier than in many countries
 
 Run your numbers through our [budget calculator](/tools/budget-calculator), set up your ISA contributions, and build a system that works with the UK's unique financial landscape.
 
-Ready to get organized? [Grab our free budget tracking template](https://gettidyflow.gumroad.com/) and adapt it for your UK finances.
+Ready to get organized? Our [Freelancer Expense Tracker (£8 / $9.99)](https://gettidyflow.gumroad.com/l/freelancer-expense-tracker) is currency-agnostic — switch the formulas to GBP, plug in your ISA and pension categories, and you have a budget-vs-actual tracker with formulas and a visual dashboard built in. Compare options first in our [round-up of the best budget spreadsheet templates](/blog/best-budget-spreadsheet-templates/).
+
+**[Download the Freelancer Expense Tracker (£8 / $9.99) →](https://gettidyflow.gumroad.com/l/freelancer-expense-tracker)**
