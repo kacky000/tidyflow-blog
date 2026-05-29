@@ -87,8 +87,12 @@ Childcare, by far. It averages $1,000–$2,000/month and often exceeds rent in m
 **How do I budget for a baby on a tight income?**
 Focus on essentials only, buy secondhand, apply for WIC and CHIP, and use your [monthly budget checklist](/blog/monthly-budget-checklist) to track every dollar. Many hospitals also have financial assistance programs.
 
+## Estimate Your First-Year Baby Costs
+
+Not sure how much your baby will actually cost? Try our free [Baby Cost Calculator](/tools/baby-cost-calculator) — enter your situation and get a personalized first-year estimate for medical bills, gear, childcare, and monthly expenses.
+
 ## Track Your Baby Budget
 
-Use our [Budget Tracker Template](https://gettidyflow.gumroad.com/l/budget-tracker) to add baby-specific categories to your existing budget. Track one-time purchases, monthly costs, and savings goals in one place.
+Use our [Budget Tracker Template](https://gettidyflow.gumroad.com/l/budget-tracker) to add baby-specific categories to your existing budget. Track one-time purchases, monthly costs, and savings goals in one place. If you prefer a spreadsheet, see our roundup of the [best budget spreadsheet templates](/blog/best-budget-spreadsheet-templates) to find one that fits.
 
-*Related: [Budget Template for Single Moms](/blog/budget-template-for-single-moms) | [Moving Budget Checklist](/blog/moving-budget-checklist)*
+*Related: [Baby Cost Calculator](/tools/baby-cost-calculator) | [Budget for Expecting Parents](/blog/budget-for-expecting-parents) | [Budget Template for Single Moms](/blog/budget-template-for-single-moms) | [Moving Budget Checklist](/blog/moving-budget-checklist)*
