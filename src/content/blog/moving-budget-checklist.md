@@ -177,8 +177,10 @@ September through April (outside of summer) and weekdays are consistently cheape
 
 Once you have your estimates, you need a place to track actuals against them. A spreadsheet with a dedicated moving budget tab — organized by category — makes it easy to see where you stand in real time and avoid overspending in one area because you forgot to account for another.
 
-**[Download a budget tracking template on Tidyflow →](https://gettidyflow.gumroad.com/)**
+Our [Freelancer Expense Tracker](https://gettidyflow.gumroad.com/l/freelancer-expense-tracker) works perfectly for one-off moves too — duplicate the category sheet, rename it "Moving," and you have a budget-vs-actual tracker with formulas and a visual dashboard built in. If you want to compare options first, see our [round-up of the best budget spreadsheet templates](/blog/best-budget-spreadsheet-templates/) — every template there handles category-based one-time projects like a move.
 
-For building a broader financial plan around your move, our [guide to creating a budget from scratch](/blog/how-to-create-a-budget/) covers how to integrate one-time costs like moving into your regular monthly budget.
+**[Download the Freelancer Expense Tracker ($9.99) →](https://gettidyflow.gumroad.com/l/freelancer-expense-tracker)**
+
+For building a broader financial plan around your move, our [guide to creating a budget from scratch](/blog/how-to-create-a-budget/) covers how to integrate one-time costs like moving into your regular monthly budget. If this is your first apartment, also see our [first apartment moving budget guide](/blog/first-apartment-moving-budget/) for the moving-specific costs first-timers miss most often.
 
 Moving is expensive, but it's rarely unpredictably expensive — as long as you use a checklist that captures the real costs upfront. Build your budget before you sign the lease, not after you've already committed.
