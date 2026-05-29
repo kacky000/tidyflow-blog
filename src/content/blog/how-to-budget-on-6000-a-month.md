@@ -19,7 +19,6 @@ Before you budget, you need to know your actual take-home pay. A $6,000 gross mo
 
 For this guide, we'll use **$5,000/month** as your working take-home figure. Adjust up or down based on your actual paycheck.
 
-heroImage: "/thumbs/how-to-budget-on-6000-a-month.jpg"
 ---
 
 ## The 50/30/20 Framework Applied to $5,000 Take-Home
@@ -64,7 +63,6 @@ If your employer covers part of your premium, you may be closer to $100–$150. 
 
 This is the category most people forget to include — haircuts, toiletries, replacing worn-out items. Cap it at $200 and you're in solid shape.
 
-heroImage: "/thumbs/how-to-budget-on-6000-a-month.jpg"
 ---
 
 ## Financial Goals You Can Hit at $6,000/Month
@@ -102,7 +100,6 @@ Car registration, annual insurance premiums, holiday gifts, and home repairs don
 **Treating savings as what's left over**
 Pay yourself first. Transfer your savings amount on the same day your paycheck arrives, before spending anything else. If you wait until the end of the month, there is rarely anything left to save.
 
-heroImage: "/thumbs/how-to-budget-on-6000-a-month.jpg"
 ---
 
 ## Frequently Asked Questions
@@ -125,6 +122,6 @@ Build your budget around your lowest predictable income month, not your best. Fo
 
 Knowing the numbers is step one. Actually tracking them every month is what changes your financial picture over time. A good budgeting template does the math for you, shows your category totals at a glance, and makes it easy to spot exactly where money is leaking before it becomes a habit.
 
-Ready to take control of your $6,000/month income? Browse free and paid budgeting templates — including a monthly budget planner and expense tracker built for people at your income level.
+Ready to take control of your $6,000/month income? Our [Freelancer Expense Tracker ($9.99)](https://gettidyflow.gumroad.com/l/freelancer-expense-tracker) does the math for you — log every category, see budget-vs-actual at a glance, and spot leaks before they become habits, all in a spreadsheet with formulas and a visual dashboard built in. Want to compare options first? See our [round-up of the best budget spreadsheet templates](/blog/best-budget-spreadsheet-templates/) — every template there handles a fixed monthly income like $6K with category-based tracking.
 
-**[Get your free budgeting templates at Tidyflow →](https://gettidyflow.gumroad.com/)**
+**[Download the Freelancer Expense Tracker ($9.99) →](https://gettidyflow.gumroad.com/l/freelancer-expense-tracker)**
