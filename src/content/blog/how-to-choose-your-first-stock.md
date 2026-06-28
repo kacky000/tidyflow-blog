@@ -12,7 +12,7 @@ Figuring out how to choose your first stock can feel paralyzing. There are thous
 
 This guide breaks the process into manageable steps. You will learn what to look for in a company, how to read basic financial metrics, and how to size your first position so a bad pick does not wreck your finances.
 
-**Disclaimer:** This article is educational content, not financial advice. We are not recommending any specific stock. Always do your own research and consider consulting a financial advisor before making investment decisions.
+**Disclaimer:** This is educational content, not financial advice. We are not recommending any specific stock. Do your own research and consider consulting a financial advisor before investing.
 
 ---
 
@@ -90,7 +90,7 @@ Every stock carries risk. The key is knowing which risks you are taking on.
 
 Your first stock purchase does not need to be large. In fact, it probably should not be.
 
-**Position sizing.** A common rule of thumb is to never put more than 5-10% of your portfolio in a single stock. If you have $1,000 to invest, that means $50-$100 in any one company. This keeps a bad pick from doing serious damage.
+**Position sizing.** A common rule is to never put more than 5-10% of your portfolio in a single stock. With $1,000 to invest, that means $50-$100 in any one company — keeping a bad pick from doing serious damage.
 
 **Fractional shares.** Most brokerages now let you buy a fraction of a share. If a stock trades at $400 per share, you can still buy $50 worth. This removes the barrier of high share prices.
 
@@ -132,7 +132,7 @@ There is no wrong answer. Many investors hold a core portfolio of ETFs and add i
 ## FAQ
 
 **How much money do I need to buy my first stock?**
-Technically, you can start with as little as $1 thanks to fractional shares. Most beginners start with $50-$500. The amount matters less than building the habit of investing consistently.
+You can start with as little as $1 thanks to fractional shares. Most beginners start with $50-$500. The amount matters less than building a consistent investing habit.
 
 **Should I buy a stock or a mutual fund first?**
 If you want simplicity and built-in diversification, start with an index fund or ETF. If you want to learn the research process and do not mind more risk, pick a single stock you understand well.
