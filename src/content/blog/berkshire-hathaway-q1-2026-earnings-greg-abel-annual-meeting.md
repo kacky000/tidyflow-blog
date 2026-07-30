@@ -4,6 +4,7 @@ description: "Berkshire Hathaway reported Q1 2026 operating earnings of $11.3 bi
 pubDate: "2026-05-03"
 heroImage: "/thumbs/thumb-berkshire-q1-2026-abel.jpg"
 tags: ["Berkshire Hathaway", "Warren Buffett", "Greg Abel", "earnings", "stocks", "investing"]
+noindex: true
 ---
 
 Berkshire Hathaway reported its first-quarter 2026 results on Saturday, marking the company's initial earnings release under new CEO Greg Abel — and the numbers suggest the transition from Warren Buffett's six-decade reign is off to a solid financial start.
@@ -49,6 +50,7 @@ The [April jobs report (May 8)](/blog/april-jobs-report-nfp-preview-may-8-2026) 
 
 **Related**: [Berkshire Q1 2026 Earnings Preview](/blog/berkshire-hathaway-q1-2026-earnings-annual-meeting-greg-abel) | [S&P 500 and Nasdaq Hit All-Time Highs This Week](/blog/sp500-nasdaq-all-time-highs-week-recap-may-2-2026)
 
+noindex: true
 ---
 
 *Sources: Berkshire Hathaway Q1 2026 earnings release, CNBC, Yahoo Finance, Investing.com*

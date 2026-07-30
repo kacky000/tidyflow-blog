@@ -4,6 +4,7 @@ description: "Nvidia stock extended its rally to ten sessions and 18% in April 2
 pubDate: "2026-04-17"
 heroImage: "/thumbs/thumb-nvidia-ising-quantum-2026.jpg"
 tags: ["nvidia", "ai-stocks", "quantum-computing", "semiconductors", "stock-market"]
+noindex: true
 ---
 
 # Nvidia Logs Longest-Ever Winning Streak as Ising Quantum Launch Lifts AI Sector
@@ -62,6 +63,7 @@ Nvidia's ten-session winning streak is a rare technical event, and the Ising ann
 - stockanalysis.com, [NVIDIA (NVDA) Stock Price & Overview](https://stockanalysis.com/stocks/nvda/)
 - FinancialContent, [The Architect of the AI Era: A Comprehensive 2026 Research Report on NVIDIA Corporation](https://markets.financialcontent.com/stocks/article/finterra-2026-4-7-the-architect-of-the-ai-era-a-comprehensive-2026-research-report-on-nvidia-corporation)
 
+noindex: true
 ---
 
 *This article summarizes publicly reported news and market data. It is for informational purposes only and does not constitute investment, tax, or financial advice. Past performance does not guarantee future results.*

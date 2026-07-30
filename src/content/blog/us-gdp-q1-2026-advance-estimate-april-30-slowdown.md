@@ -4,6 +4,7 @@ description: "The BEA releases the Q1 2026 GDP advance estimate on April 30. The
 pubDate: "2026-04-25"
 heroImage: "/thumbs/thumb-us-gdp-q1-2026-advance-estimate-april-30.jpg"
 tags: ["GDP", "US economy", "recession", "Federal Reserve", "economic data", "BEA", "Q1 2026", "macro"]
+noindex: true
 ---
 
 The Bureau of Economic Analysis (BEA) releases the first look at US economic growth for the January–March 2026 quarter on April 30 — the same day as Apple's earnings and one day after the Federal Reserve's rate decision. The **Q1 2026 Advance Estimate** will be one of the most closely watched data points of the year, arriving at a moment when growth forecasts are diverging sharply.
@@ -62,6 +63,7 @@ The GDP data drops at 8:30 AM Eastern, roughly twelve hours before Apple reports
 
 For broader market context, see our coverage of [the Big Tech earnings week](/blog/big-tech-earnings-week-april-29-2026-alphabet-meta-microsoft-amazon) and the [Fed rate decision preview](/blog/fed-fomc-april-29-2026-rate-hold-kevin-warsh-preview).
 
+noindex: true
 ---
 
 *This article is based on publicly available Federal Reserve data, BEA schedules, and analyst estimates. It is for informational purposes only and does not constitute investment advice.*

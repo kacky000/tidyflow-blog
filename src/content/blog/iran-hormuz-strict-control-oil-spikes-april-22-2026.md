@@ -4,6 +4,7 @@ description: "The US-Iran ceasefire expired April 22 with no deal. Iranian state
 pubDate: "2026-04-22"
 heroImage: "/thumbs/thumb-iran-hormuz-strict-control-oil-spikes-april-22-2026.jpg"
 tags: ["iran", "oil price", "hormuz", "geopolitics", "energy", "crude oil", "ceasefire"]
+noindex: true
 ---
 
 The two-week ceasefire between the United States and Iran has expired without a deal, and Iranian state television confirmed Wednesday that the Strait of Hormuz has "returned to its previous state" — meaning the waterway is once again under "strict management and control" by Iran's military. WTI crude oil surged 6.8% to $89.61 per barrel in response. International Brent crude rose 5.6% to $95.48.
@@ -68,6 +69,7 @@ For the broader market, the concern is that sustained oil above $90–$95 would 
 
 The [big-tech earnings season that begins this week](/blog/big-tech-q1-2026-earnings-preview-alphabet-meta-microsoft/) offers one partial hedge: if technology companies continue to report strong AI-driven revenue growth, the market may be able to absorb higher energy costs without a broader selloff.
 
+noindex: true
 ---
 
 *Sources: ABC7 (Iran ceasefire live updates), Bloomberg, PBS NewsHour, CNN, CNBC, NBC News, Washington Post. Oil prices cited reflect market close April 22, 2026.*

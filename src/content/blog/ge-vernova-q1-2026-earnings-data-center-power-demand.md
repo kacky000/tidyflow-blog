@@ -4,6 +4,7 @@ description: "GE Vernova reported Q1 2026 revenue of $9.34 billion with orders s
 pubDate: "2026-04-24"
 heroImage: "/thumbs/thumb-ge-vernova-q1-2026-earnings-data-center-power.jpg"
 tags: ["GE Vernova", "GEV", "earnings", "Q1 2026", "data center", "AI", "power", "energy", "stock"]
+noindex: true
 ---
 
 GE Vernova reported first-quarter 2026 results on April 22 that surprised even bullish investors: orders surged 71% year-over-year to $18.3 billion, driven largely by AI data center operators scrambling to secure power generation and transmission equipment for their rapidly expanding campuses. The stock gained more than 8% in premarket trading before opening higher.
@@ -61,6 +62,7 @@ Vertiv Holdings, which supplies data center cooling and power conditioning equip
 
 For investors who believe AI infrastructure spending will remain elevated for multiple years, GE Vernova offers exposure to a part of the supply chain — power generation and grid infrastructure — that is less discussed than GPU manufacturers but equally critical to keeping data centers operational.
 
+noindex: true
 ---
 
 *GE Vernova (NYSE: GEV) reported Q1 2026 results on April 22, 2026. The company, headquartered in Cambridge, Massachusetts, was spun out of General Electric in April 2024 and focuses on power generation, renewable energy, and electrification infrastructure. This article is based on publicly available earnings disclosures and analyst commentary — not investment advice.*

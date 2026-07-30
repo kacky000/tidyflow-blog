@@ -4,6 +4,7 @@ description: "The US-Iran two-week ceasefire expires April 21. WTI crude is at $
 pubDate: "2026-04-20"
 heroImage: "/thumbs/thumb-iran-ceasefire-deadline-april-21-oil-price-2026.jpg"
 tags: ["oil-price", "iran", "geopolitics", "energy", "ceasefire"]
+noindex: true
 ---
 
 # Iran Ceasefire Deadline Tomorrow: Oil Holds Near $84 as Traders Wait

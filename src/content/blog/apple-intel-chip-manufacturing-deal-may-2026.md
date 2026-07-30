@@ -4,6 +4,7 @@ description: "Apple has reached a preliminary agreement for Intel to manufacture
 pubDate: "2026-05-11"
 heroImage: "/thumbs/thumb-apple-intel-chip-manufacturing-deal-may-2026.jpg"
 tags: ["Apple", "Intel", "semiconductors", "chip manufacturing", "AAPL", "INTC", "stock market"]
+noindex: true
 ---
 
 # Apple and Intel Reach Preliminary Chip Manufacturing Deal — Intel Stock Surges 14%
@@ -104,6 +105,7 @@ Several milestones will determine whether this preliminary agreement becomes a p
 
 For now, the preliminary agreement represents a statement of intent — one that has already reshaped market expectations for both companies and for the global semiconductor industry. Whether it ultimately reshapes the industry itself will depend on execution in the years ahead.
 
+noindex: true
 ---
 
 *Interested in tracking how semiconductor investments perform over time? Use our [Investment Return Calculator](/tools/investment-return-calculator) to model potential returns across different market scenarios.*

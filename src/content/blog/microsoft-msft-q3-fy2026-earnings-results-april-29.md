@@ -4,6 +4,7 @@ description: "Microsoft (MSFT) reports fiscal Q3 2026 earnings on April 29. Azur
 pubDate: "2026-04-29"
 heroImage: "/thumbs/thumb-microsoft-q3-fy2026-earnings-results.jpg"
 tags: ["Microsoft", "MSFT", "earnings", "Azure", "AI", "Copilot", "OpenAI", "Q3 FY2026"]
+noindex: true
 ---
 
 # Microsoft Q3 FY2026 Earnings: Azure, OpenAI, and Whether AI Revenue Justifies the Spend

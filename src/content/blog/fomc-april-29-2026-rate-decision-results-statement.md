@@ -4,6 +4,7 @@ description: "The Federal Reserve kept rates unchanged at 3.50-3.75% at its Apri
 pubDate: "2026-04-29"
 heroImage: "/thumbs/thumb-fomc-april-29-2026-rate-decision.jpg"
 tags: ["FOMC", "Federal Reserve", "interest rates", "Jerome Powell", "inflation", "monetary policy", "2026"]
+noindex: true
 ---
 
 # Fed Holds Rates Steady at 3.50-3.75%: April 29 FOMC Decision and What It Means for Markets

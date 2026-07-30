@@ -4,6 +4,7 @@ description: "President Trump declared 50% tariffs on any country supplying weap
 pubDate: "2026-04-19"
 heroImage: "/thumbs/thumb-trump-50-percent-tariffs-china-iran-arms-2026.jpg"
 tags: ["tariffs", "china", "iran", "trade-war", "trump"]
+noindex: true
 ---
 
 # Trump Threatens 50% Tariffs on China Over Alleged Iran Arms Shipment

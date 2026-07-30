@@ -4,6 +4,7 @@ description: "The week of May 5-9 brings JOLTS data, the April jobs report, Disn
 pubDate: "2026-05-04"
 heroImage: "/thumbs/thumb-week-ahead-may-5-9-2026.jpg"
 tags: ["week ahead", "jobs report", "Disney", "Arm Holdings", "Fed", "Jerome Powell", "earnings", "JOLTS"]
+noindex: true
 ---
 
 Markets enter the week of May 5-9 riding fresh all-time highs — the S&P 500 at 7,230 and the Nasdaq at 25,114 — but a string of high-impact events could test whether the rally has staying power.
@@ -84,6 +85,7 @@ The transition from Powell to Warsh could introduce policy uncertainty. Warsh ha
 
 **Related**: [April Jobs Report: NFP Preview for May 8](/blog/april-jobs-report-nfp-preview-may-8-2026) | [Fed Holds Rates: FOMC April 29 Recap](/blog/fed-fomc-april-29-2026-rate-hold-kevin-warsh-preview) | [S&P 500 and Nasdaq at All-Time Highs](/blog/sp500-nasdaq-all-time-highs-week-recap-may-2-2026)
 
+noindex: true
 ---
 
 *Sources: CNBC, BlackRock Investment Institute, Investor Signals, CME FedWatch, BLS*

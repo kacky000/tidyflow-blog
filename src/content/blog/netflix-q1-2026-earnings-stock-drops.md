@@ -4,6 +4,7 @@ description: "Netflix reported Q1 2026 revenue of $12.25 billion and EPS of $1.2
 pubDate: "2026-04-18"
 tags: ["netflix", "earnings", "stock-market", "streaming", "tech-stocks"]
 heroImage: "/thumbs/thumb-netflix-q1-2026-earnings-stock-drops.jpg"
+noindex: true
 ---
 
 # Netflix Stock Drops 9% After Hours Despite Beating Q1 Revenue and Earnings Estimates

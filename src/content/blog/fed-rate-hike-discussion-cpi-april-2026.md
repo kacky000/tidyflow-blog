@@ -4,6 +4,7 @@ description: "March FOMC meeting minutes revealed that a growing number of Feder
 pubDate: "2026-04-18"
 tags: ["federal-reserve", "interest-rates", "inflation", "cpi", "economy"]
 heroImage: "/thumbs/thumb-fed-rate-hike-discussion-cpi-april-2026.jpg"
+noindex: true
 ---
 
 # More Fed Officials Now Open to Rate Hikes in 2026 as Inflation Sticks at 3.3%

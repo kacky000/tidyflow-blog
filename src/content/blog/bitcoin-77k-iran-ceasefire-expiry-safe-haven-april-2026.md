@@ -4,6 +4,7 @@ description: "Bitcoin is holding above $77K as the US-Iran ceasefire expires Apr
 pubDate: "2026-04-21"
 heroImage: "/thumbs/thumb-bitcoin-77k-iran-ceasefire-expiry-safe-haven-april-2026.jpg"
 tags: ["bitcoin", "BTC", "crypto", "safe haven", "ETF", "Iran", "geopolitics", "BlackRock", "institutional"]
+noindex: true
 ---
 
 Bitcoin is trading near $77,000 as the US-Iran ceasefire expires today — and the price action is raising a question that would have seemed absurd a few years ago: **Is Bitcoin becoming a safe-haven asset?**
@@ -64,6 +65,7 @@ Bitcoin holding above $77,000 as a major geopolitical risk event unfolds is nota
 
 The next major test: if the Iran situation escalates further and equity markets sell off more sharply this week, whether Bitcoin holds $73,000 support will be the clearest real-world data point on its safe-haven credentials.
 
+noindex: true
 ---
 
 *Sources: Yahoo Finance, Bloomberg, Fortune, Motley Fool, Intellectia AI, CoinGlass. Crypto prices are volatile; this article reflects market conditions as of April 21, 2026. Not investment advice.*

@@ -4,6 +4,7 @@ description: "A one-page MOU with 14 provisions is the closest the US and Iran h
 pubDate: "2026-05-09"
 heroImage: "/thumbs/thumb-iran-us-deal-may-2026.jpg"
 tags: ["Iran", "US", "nuclear deal", "oil prices", "geopolitics", "Strait of Hormuz"]
+noindex: true
 ---
 
 The United States and Iran are negotiating a one-page, 14-point memorandum of understanding that would constitute the most substantive framework for ending hostilities since the conflict began. The document — brokered through Pakistani intermediaries and negotiated on the US side by special envoy Steve Witkoff and senior adviser Jared Kushner — outlines a sequence starting with a formal end-of-war declaration and followed by a 30-day period for negotiating detailed terms.

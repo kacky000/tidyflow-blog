@@ -4,6 +4,7 @@ description: "With average U.S. tariff rates at multi-decade highs, corporate gu
 pubDate: "2026-04-26"
 heroImage: "/thumbs/thumb-trump-tariffs-q1-2026-earnings-guidance.jpg"
 tags: ["tariffs", "trade war", "Trump", "earnings", "Apple", "Amazon", "Microsoft", "corporate guidance", "economy", "inflation"]
+noindex: true
 ---
 
 The Trump administration's tariff escalation, which accelerated following the April 2 announcement of sweeping new trade measures, has forced corporate executives into an uncomfortable position: how do you give earnings guidance when the input cost assumptions behind your models could shift 30% in either direction based on the outcome of a diplomatic call?
@@ -71,6 +72,7 @@ Corporate counsel has been advising management teams to use broad hedging langua
 
 The more likely scenario is that companies provide cautious but not alarming guidance, noting uncertainty while stopping short of specific downside scenarios. Whether that language is enough to satisfy investors who have been pricing in AI-driven revenue acceleration will be the central question of earnings week.
 
+noindex: true
 ---
 
 *This article is for informational purposes only. Revenue estimates and tariff rate data are based on publicly available analyst and government sources. This does not constitute investment advice.*

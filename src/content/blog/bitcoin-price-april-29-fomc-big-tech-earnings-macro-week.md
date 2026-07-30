@@ -4,6 +4,7 @@ description: "Bitcoin is holding near $78,000 ahead of the most data-heavy week 
 pubDate: "2026-04-26"
 heroImage: "/thumbs/thumb-bitcoin-april-29-fomc-earnings-macro-week.jpg"
 tags: ["bitcoin", "BTC", "cryptocurrency", "FOMC", "Federal Reserve", "macro", "interest rates", "Big Tech", "earnings"]
+noindex: true
 ---
 
 Bitcoin enters the week of April 28 trading near $78,000, roughly flat over the past week, as institutional positioning has been quietly building ahead of what analysts are calling the most macro-loaded single trading day of 2026. On April 29, the Federal Reserve announces its interest rate decision at 2:00 p.m. ET — and Alphabet, Meta Platforms, and Microsoft all report quarterly earnings after the bell the same evening.
@@ -58,6 +59,7 @@ Several technical and on-chain metrics will be in focus heading into the week:
 
 The week of April 28 is the kind of market environment where price predictions carry less weight than understanding the scenario map. The most likely outcome — a Fed hold with neutral language and broadly strong Big Tech results — would likely be a modest positive for Bitcoin. The tail risks are to the downside: a hawkish Fed statement combined with a Big Tech miss on AI revenue would create a coordinated risk-off moment unlike anything since the 2022 rate cycle.
 
+noindex: true
 ---
 
 *This article is for informational purposes only and does not constitute investment advice. Bitcoin and other cryptocurrencies are highly volatile assets. Past performance does not predict future results.*

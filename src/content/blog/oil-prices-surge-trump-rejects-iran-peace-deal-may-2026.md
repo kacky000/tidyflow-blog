@@ -4,6 +4,7 @@ description: "Brent crude jumped 4% to $105.50 per barrel after President Trump 
 pubDate: "2026-05-12"
 tags: ["oil prices", "Iran", "geopolitics", "energy", "inflation", "2026"]
 heroImage: "/thumbs/thumb-oil-prices-surge-trump-rejects-iran-peace-deal-may-2026.jpg"
+noindex: true
 ---
 
 The brief flirtation with sub-$100 oil is over.

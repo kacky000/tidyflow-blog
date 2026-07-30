@@ -4,6 +4,7 @@ description: "Alphabet, Meta, Microsoft, and Amazon all beat Q1 2026 estimates i
 pubDate: "2026-05-01"
 heroImage: "/thumbs/thumb-big-tech-earnings-recap-april-2026.jpg"
 tags: ["Big Tech", "Magnificent Seven", "earnings", "AI", "Alphabet", "Meta", "Microsoft", "Amazon", "stock market", "2026"]
+noindex: true
 ---
 
 # Big Tech Earnings Week Recap: The AI Bet Is Paying Off — For Now
@@ -76,6 +77,7 @@ For the broader market, this earnings season suggests the economy is navigating 
 
 *Sources: Company earnings reports, CNBC, Yahoo Finance, Schwab Market Update.*
 
+noindex: true
 ---
 
 ## Related Coverage
@@ -85,6 +87,7 @@ For the broader market, this earnings season suggests the economy is navigating 
 - [Big Tech Earnings Week Preview: Alphabet, Meta, Microsoft, Amazon](/blog/big-tech-earnings-week-april-29-2026-alphabet-meta-microsoft-amazon)
 - [Big Tech Q1 2026 Earnings Preview](/blog/big-tech-q1-2026-earnings-preview-alphabet-meta-microsoft)
 
+noindex: true
 ---
 
 ## Track Your Own AI-Era Budget

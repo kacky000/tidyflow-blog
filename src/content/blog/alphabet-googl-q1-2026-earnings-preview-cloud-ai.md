@@ -4,6 +4,7 @@ description: "Alphabet (GOOGL) reports Q1 2026 earnings on April 29. Analysts ex
 pubDate: "2026-04-21"
 heroImage: "/thumbs/thumb-alphabet-googl-q1-2026-earnings-preview-cloud-ai.jpg"
 tags: ["alphabet", "GOOGL", "Google", "earnings", "Q1 2026", "cloud", "AI", "stock", "Big Tech"]
+noindex: true
 ---
 
 Alphabet (GOOGL) reports first-quarter 2026 results on **April 29** after the U.S. market close. With Google Cloud Next happening this week (April 22–24) and Q1 earnings just eight days away, this is the most concentrated period of Alphabet-related news flow in months — and potentially the most important single earnings print of the Big Tech season.
@@ -84,6 +85,7 @@ This week and next constitute the most concentrated period of mega-cap tech earn
 
 Meanwhile, the macro backdrop includes elevated oil prices following the [US-Iran ceasefire expiry today](/blog/iran-ceasefire-expires-april-21-oil-price-spike-2026/) — a reminder that geopolitical risk premiums can quickly overwhelm single-stock narratives.
 
+noindex: true
 ---
 
 *Sources: IG International, TIKR, MarketBeat, Seeking Alpha, Alphabet Investor Relations. Estimates represent analyst consensus as of April 21, 2026. Not investment advice.*

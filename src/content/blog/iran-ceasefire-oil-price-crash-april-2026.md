@@ -4,6 +4,7 @@ description: "Crude oil plunged from $117 to $95 per barrel on April 8, 2026, af
 pubDate: "2026-04-18"
 tags: ["oil-prices", "iran", "geopolitics", "energy", "stock-market"]
 heroImage: "/thumbs/thumb-iran-ceasefire-oil-price-crash-april-2026.jpg"
+noindex: true
 ---
 
 # Oil Crashes 15% in a Single Day After Trump Announces Iran Ceasefire

@@ -4,6 +4,7 @@ description: "Akamai reports Q1 2026 revenue of $1.074B and announces a $1.8B se
 pubDate: "2026-05-09"
 heroImage: "/thumbs/thumb-akamai-q1-2026-earnings.jpg"
 tags: ["Akamai", "AKAM", "earnings", "AI", "cloud infrastructure", "Q1 2026"]
+noindex: true
 ---
 
 # Akamai's $1.8 Billion Mystery AI Contract: How One Deal Transformed a CDN Giant Into a Cloud Contender
@@ -106,6 +107,7 @@ For Akamai specifically, the question going forward is execution. A $1.8 billion
 
 The market's verdict on May 8 was clear: the opportunity is real, the contract is transformative, and the stock was mispriced for years. Whether that verdict holds over the next seven years will depend on whether Akamai can execute on the most ambitious bet in its history.
 
+noindex: true
 ---
 
 *Disclosure: This article is for informational purposes only and does not constitute investment advice. Past performance is not indicative of future results. Readers should conduct their own research or consult a financial advisor before making investment decisions. Sources: GlobeNewsWire, StockTitan, Motley Fool, Yahoo Finance.*

@@ -4,6 +4,7 @@ description: "Disney reports Q2 FY2026 results beating estimates with $25.17B re
 pubDate: "2026-05-07"
 heroImage: "/thumbs/thumb-disney-q2-fy2026-earnings-results.jpg"
 tags: ["Disney", "DIS", "earnings", "streaming", "Q2 2026"]
+noindex: true
 ---
 
 # Disney Q2 FY2026 Earnings: Streaming Profits Surge 88%, Revenue Tops Estimates
@@ -98,6 +99,7 @@ For anyone watching the broader market, this earnings report also fits into a la
 
 If you are tracking your own investment portfolio or household budget alongside these market developments, our [budget calculator](/tools/budget-calculator) can help you organize your finances and plan ahead.
 
+noindex: true
 ---
 
 *Sources: The Walt Disney Company Q2 FY2026 Earnings Release, Disney Investor Relations, MarketBeat, Alphastreet, CNBC, Bloomberg*

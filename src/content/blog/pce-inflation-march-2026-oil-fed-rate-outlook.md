@@ -4,6 +4,7 @@ description: "The March 2026 PCE price index releases April 30. Goldman Sachs es
 pubDate: "2026-04-30"
 heroImage: "/thumbs/thumb-pce-inflation-march-2026.jpg"
 tags: ["PCE", "inflation", "Federal Reserve", "interest rates", "economy", "oil prices", "2026"]
+noindex: true
 ---
 
 # March PCE Inflation Preview: Oil-Driven Price Pressures Test the Fed's Patience

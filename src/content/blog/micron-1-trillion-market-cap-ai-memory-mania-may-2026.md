@@ -4,6 +4,7 @@ description: "Micron topped a $1 trillion market value for the first time after 
 pubDate: "2026-06-02"
 heroImage: "/thumbs/thumb-micron-1-trillion-market-cap-ai-memory-mania-may-2026.jpg"
 tags: ["Micron", "semiconductors", "AI", "memory chips", "stock market", "2026"]
+noindex: true
 ---
 
 Micron Technology has joined a club that, until recently, no memory-chip maker had any business being in. On Tuesday, May 26, the stock surged 19% in a single session and pushed the company's market value above $1 trillion for the first time — putting a maker of DRAM and high-bandwidth memory alongside Nvidia, Broadcom, Taiwan Semiconductor and Samsung in the trillion-dollar tier. For the month of May, Micron rose roughly 84%.
@@ -40,6 +41,7 @@ The sector has already shown it can turn quickly. May included a [sharp semicond
 
 The signposts from here are concrete: whether HBM pricing holds as new capacity comes online, how Micron's next earnings frame the durability of its long-term agreements, and whether the broader AI-spending wave keeps the demand side as tight as the bulls assume. For now Micron is a trillion-dollar company. Whether the memory cycle has truly been rewritten — or merely paused at the top — is the question that will decide if it stays one.
 
+noindex: true
 ---
 
 **Related reading:**

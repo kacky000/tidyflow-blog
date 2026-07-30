@@ -4,6 +4,7 @@ description: "Tesla Q1 2026 results show automotive gross margin improving to 17
 pubDate: "2026-04-23"
 heroImage: "/thumbs/thumb-tesla-q1-2026-earnings-results-april-23.jpg"
 tags: ["tesla", "TSLA", "earnings", "Q1 2026", "EV", "stock", "Elon Musk", "gross margin"]
+noindex: true
 ---
 
 Tesla reported Q1 2026 financial results after the market close on April 22, delivering a mixed picture: automotive margins hit their best level in two years, but energy storage volume plunged 38% from the previous quarter — the company's sharpest quarterly drop in that segment to date.

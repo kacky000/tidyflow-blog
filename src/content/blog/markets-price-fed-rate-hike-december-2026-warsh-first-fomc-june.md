@@ -4,6 +4,7 @@ description: "Fed funds futures put the odds of a December 2026 rate hike near 7
 pubDate: "2026-06-01"
 heroImage: "/thumbs/thumb-markets-price-fed-rate-hike-december-2026-warsh-first-fomc-june.jpg"
 tags: ["Federal Reserve", "interest rates", "Kevin Warsh", "inflation", "FOMC", "stock market", "2026"]
+noindex: true
 ---
 
 When Kevin Warsh was nominated to replace Jerome Powell, the consensus on Wall Street was that the Federal Reserve was about to get a chairman who wanted to cut rates. Two weeks into his tenure, the market is betting on the exact opposite. Fed funds futures now put the probability of an interest rate *hike* by December 2026 at nearly 70%, and a cut this year has effectively been priced out. Warsh inherits a central bank that the data is pushing in a direction he has spent his career arguing against.

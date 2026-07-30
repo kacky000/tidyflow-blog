@@ -4,6 +4,7 @@ description: "Palantir crushed Q1 2026 estimates with $1.63B in revenue and $0.3
 pubDate: "2026-05-06"
 heroImage: "/thumbs/thumb-palantir-q1-2026-results.jpg"
 tags: ["Palantir", "PLTR", "earnings", "AI stocks", "Q1 2026", "defense stocks"]
+noindex: true
 ---
 
 Palantir Technologies delivered a blowout first quarter — and the stock still fell.

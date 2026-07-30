@@ -4,6 +4,7 @@ description: "The Federal Reserve is widely expected to keep rates at 3.50-3.75%
 pubDate: "2026-04-17"
 heroImage: "/thumbs/thumb-fed-fomc-april-2026.jpg"
 tags: ["federal-reserve", "interest-rates", "inflation", "monetary-policy", "fomc"]
+noindex: true
 ---
 
 # Fed Holds the Line: What to Expect From the April 28-29 FOMC Meeting
@@ -64,6 +65,7 @@ The real signal will come not from the rate decision itself but from the tone of
 - Polymarket, [Fed decision in April](https://polymarket.com/event/fed-decision-in-april)
 - Yahoo Finance, [Live Fed meeting updates](https://finance.yahoo.com/news/live/fed-meeting-live-updates-federal-reserve-holds-rates-steady-forecasts-1-rate-cut-in-2026-180216872.html)
 
+noindex: true
 ---
 
 *This article is for informational purposes only and does not constitute investment, tax, or financial advice. Policy rate expectations can shift quickly in response to new economic data.*

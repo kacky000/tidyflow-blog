@@ -4,6 +4,7 @@ description: "ServiceNow plunged 18% and IBM fell 8% after Q1 2026 earnings desp
 pubDate: "2026-04-25"
 heroImage: "/thumbs/thumb-software-stocks-selloff-april-2026.jpg"
 tags: ["ServiceNow", "IBM", "software stocks", "AI disruption", "cloud", "selloff", "earnings", "stock market"]
+noindex: true
 ---
 
 Enterprise software stocks took their worst beating in months on April 24, 2026, after earnings from ServiceNow and IBM — both of which technically beat Wall Street's estimates — ignited fresh fears that AI-native tools are beginning to cannibalize the cloud subscription model that has driven software valuations for the past decade.
@@ -48,6 +49,7 @@ The software selloff sets up a critical test for the broader narrative when Alph
 
 If Microsoft shows strong evidence of AI-driven revenue growth, the software selloff may reverse. If Copilot adoption figures disappoint, the AI-disruption thesis could deepen.
 
+noindex: true
 ---
 
 *This article is based on publicly available company earnings reports, analyst commentary, and press releases. It is for informational purposes only and does not constitute investment advice.*

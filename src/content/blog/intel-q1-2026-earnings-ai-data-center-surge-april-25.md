@@ -4,6 +4,7 @@ description: "Intel reported Q1 2026 revenue of $13.6 billion, crushing Wall Str
 pubDate: "2026-04-25"
 heroImage: "/thumbs/thumb-intel-q1-2026-earnings-april-25.jpg"
 tags: ["Intel", "INTC", "earnings", "Q1 2026", "semiconductors", "AI", "data center", "stock"]
+noindex: true
 ---
 
 Intel delivered its strongest earnings beat in years, sending shares surging to an all-time high on April 25 after the chipmaker's first-quarter 2026 results topped Wall Street estimates by a wide margin. The results underscore a dramatic shift in Intel's business mix, with artificial intelligence and data center workloads now accounting for the majority of its revenue.
@@ -52,6 +53,7 @@ INTC shares soared roughly 25% in early trading on April 25, reaching all-time h
 
 The broader semiconductor index (SOXX) gained about 4% on April 25, with Arm Holdings, Marvell Technology, Super Micro Computer, ASML, and TSMC all rising 3.5% or more in the AI hardware updraft.
 
+noindex: true
 ---
 
 *This article is based on Intel's official Q1 2026 earnings press release and publicly available analyst data. It is for informational purposes only and does not constitute investment advice.*

@@ -4,6 +4,7 @@ description: "Four of the world's largest companies — Alphabet, Meta, Microsof
 pubDate: "2026-04-25"
 heroImage: "/thumbs/thumb-big-tech-earnings-week-april-29-2026.jpg"
 tags: ["Alphabet", "Meta", "Microsoft", "Amazon", "earnings", "Q1 2026", "AI", "Big Tech", "capex"]
+noindex: true
 ---
 
 The week of April 28 is shaping up to be the most consequential stretch of earnings season in years. On April 29 — the same day the Federal Reserve announces its interest rate decision — Alphabet, Meta Platforms, Microsoft, and Amazon all report quarterly results after the bell.
@@ -68,6 +69,7 @@ A dovish Fed surprise — signaling earlier cuts — would likely boost tech val
 
 The [software stock crash triggered by ServiceNow and IBM](/blog/software-stocks-selloff-servicenow-ibm-ai-disruption-april-2026) on April 24 raised the stakes for Big Tech earnings. If Alphabet, Meta, and Microsoft show concrete evidence that AI spending is generating incremental revenue — not just protecting competitive position — the selloff could reverse sharply. If AI monetization figures disappoint, the rout could extend.
 
+noindex: true
 ---
 
 *This article is based on publicly available analyst consensus data, company guidance, and press reports. It is for informational purposes only and does not constitute investment advice.*

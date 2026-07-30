@@ -4,6 +4,7 @@ description: "Amazon crushed Q1 2026 estimates with $181.5B revenue and $2.78 EP
 pubDate: "2026-05-01"
 heroImage: "/thumbs/thumb-amazon-q1-2026-earnings-results.jpg"
 tags: ["Amazon", "AMZN", "earnings", "AWS", "AI", "cloud computing", "Q1 2026", "Big Tech"]
+noindex: true
 ---
 
 # Amazon Smashes Q1 2026 Estimates: $181.5 Billion in Revenue, AWS Posts Fastest Growth in Nearly Four Years

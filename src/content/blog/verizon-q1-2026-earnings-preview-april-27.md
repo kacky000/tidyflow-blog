@@ -4,6 +4,7 @@ description: "Verizon reports Q1 2026 results April 27. Analysts expect EPS of $
 pubDate: "2026-04-27"
 heroImage: "/thumbs/thumb-verizon-q1-2026-earnings-preview-april-27.jpg"
 tags: ["Verizon", "VZ", "earnings", "Q1 2026", "telecom", "5G", "stock"]
+noindex: true
 ---
 
 Verizon Communications Inc. reports first-quarter 2026 results on Monday, April 27, before the market open at 8:30 AM ET. The report arrives at the front of what will be the busiest week of this earnings season — with Big Tech names including Alphabet, Meta, Microsoft, and Amazon all scheduled to report later in the week — and sets the tone for how investors view the defensive, dividend-paying corner of the equity market heading into the second half of the year.
@@ -80,6 +81,7 @@ Any indication that capital expenditure is rising faster than revenue growth cou
 
 The 8:30 AM ET release time means the report will be digested in premarket trading, with the management conference call following shortly after. Given the four-quarter beat streak, the consensus estimates likely already embed some expectation of outperformance. The real catalyst, in either direction, will be forward guidance — specifically whether management reaffirms or adjusts its 2026 targets for subscriber growth and revenue.
 
+noindex: true
 ---
 
 *Verizon Communications Inc. (NYSE: VZ) is scheduled to report Q1 2026 results on April 27, 2026 before the market open. Estimates referenced are from analyst consensus data as of April 27, 2026. This article is for informational purposes only and does not constitute investment advice.*

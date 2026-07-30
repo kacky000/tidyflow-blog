@@ -4,6 +4,7 @@ description: "Apple reports Q2 FY2026 results on April 30. Analysts expect reven
 pubDate: "2026-04-25"
 heroImage: "/thumbs/thumb-apple-q2-2026-earnings-preview-april-30.jpg"
 tags: ["Apple", "AAPL", "earnings", "Q2 2026", "tariffs", "China", "India", "Services", "iPhone"]
+noindex: true
 ---
 
 Apple reports fiscal second-quarter 2026 results after the bell on April 30, capping off Big Tech earnings mega-week. The company guided for revenue growth of 13–16% year-over-year in Q1, implying Q2 revenue between **$107.8 billion and $110.7 billion**.
@@ -68,6 +69,7 @@ Apple reports the day after [Alphabet, Meta, and Microsoft](/blog/big-tech-earni
 
 Apple's stock has underperformed the broader Mag-7 basket year-to-date as tariff concerns and the slower-than-expected monetization of AI features have weighed on sentiment. A clean beat with constructive tariff guidance could close that performance gap.
 
+noindex: true
 ---
 
 *This article is based on publicly available analyst estimates, Apple's Q1 FY2026 earnings call transcript, and press reports. It is for informational purposes only and does not constitute investment advice.*

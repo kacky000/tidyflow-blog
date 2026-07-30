@@ -4,6 +4,7 @@ description: "Meta Platforms (META) reports Q1 2026 earnings on April 29. Analys
 pubDate: "2026-04-29"
 heroImage: "/thumbs/thumb-meta-q1-2026-earnings-results.jpg"
 tags: ["Meta", "META", "earnings", "advertising", "AI", "Reality Labs", "Q1 2026", "Threads"]
+noindex: true
 ---
 
 # Meta Q1 2026 Earnings: Ad Machine vs. AI Spending — Where the Balance Stands

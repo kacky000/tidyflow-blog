@@ -4,6 +4,7 @@ description: "Alphabet reports April 29 with $106.7B revenue forecast. Meta and 
 pubDate: "2026-04-20"
 heroImage: "/thumbs/thumb-big-tech-q1-2026-earnings-preview-alphabet-meta-microsoft.jpg"
 tags: ["earnings", "alphabet", "meta", "microsoft", "ai-stocks", "technology"]
+noindex: true
 ---
 
 # Big Tech Q1 2026 Earnings Preview: Alphabet, Meta, and Microsoft Report This Week

@@ -4,6 +4,7 @@ description: "The April Producer Price Index drops on May 13 with energy costs a
 pubDate: "2026-05-13"
 heroImage: "/thumbs/thumb-ppi-april-2026-producer-prices-inflation-pipeline-may-13.jpg"
 tags: ["PPI", "inflation", "producer prices", "Federal Reserve", "economy", "oil", "tariffs", "2026"]
+noindex: true
 ---
 
 The Bureau of Labor Statistics releases the April 2026 Producer Price Index on Tuesday, May 13, at 8:30 AM Eastern Time. The report arrives less than 24 hours after the [April CPI came in at 3.8%](/blog/april-cpi-results-3-8-percent-inflation-surges-may-2026) — above consensus and at the highest level since mid-2024. If PPI confirms what CPI suggested, the inflation reacceleration thesis moves from concern to consensus. If PPI breaks cooler, as it did in March, markets might find a reason to stabilize after Monday's selloff.

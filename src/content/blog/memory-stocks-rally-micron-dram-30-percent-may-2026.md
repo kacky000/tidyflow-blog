@@ -4,6 +4,7 @@ description: "Memory semiconductor stocks posted their best week in years as DRA
 pubDate: "2026-05-11"
 heroImage: "/thumbs/thumb-memory-stocks-rally-micron-dram-30-percent-may-2026.jpg"
 tags: ["Micron", "DRAM", "memory chips", "semiconductors", "AI", "stock market", "2026"]
+noindex: true
 ---
 
 # Memory Chip Stocks Explode: Micron Up 14%, DRAM ETF Surges 30% in One Week
@@ -107,10 +108,12 @@ The semiconductor memory business has a well-documented pattern: prices rise, ma
 
 For now, the data points uniformly favor the bulls. HBM demand exceeds supply. DRAM prices are rising. Margins are expanding. And the companies buying memory chips — led by Nvidia, but including every major cloud provider and an increasing number of sovereign AI programs — show no signs of reducing their orders.
 
+noindex: true
 ---
 
 *Want to model potential returns on semiconductor investments? Try our [Investment Return Calculator](/tools/investment-return-calculator) to run different scenarios based on entry price, holding period, and expected growth rates.*
 
+noindex: true
 ---
 
 **Related Reading:**

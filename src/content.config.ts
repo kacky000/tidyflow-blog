@@ -11,6 +11,7 @@ const blog = defineCollection({
     heroImage: z.string().optional(),
     tags: z.array(z.string()).default([]),
     author: z.string().default('Tidyflow'),
+    noindex: z.boolean().default(false),
   }),
 });
 

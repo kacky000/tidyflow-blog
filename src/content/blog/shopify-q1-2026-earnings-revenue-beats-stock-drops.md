@@ -4,6 +4,7 @@ description: "Shopify beat Q1 2026 revenue estimates with $3.2B in sales and 35%
 pubDate: "2026-05-07"
 heroImage: "/thumbs/thumb-shopify-q1-2026-earnings.jpg"
 tags: ["Shopify", "SHOP", "earnings", "e-commerce", "Q1 2026"]
+noindex: true
 ---
 
 Shopify posted $3.2 billion in first-quarter revenue on May 5, beating Wall Street's $3.09 billion estimate by a comfortable margin. Gross merchandise volume surged 35% year over year. Adjusted earnings per share came in at $0.36, topping the consensus of $0.33. By most conventional measures, the Ottawa-based e-commerce giant delivered a strong quarter.
@@ -100,6 +101,7 @@ For Shopify, the path forward requires demonstrating that its investments in AI,
 
 The company remains the dominant independent e-commerce platform, and its 35% GMV growth suggests merchants are voting with their wallets. Whether that merchant confidence eventually translates into shareholder confidence depends on what the next few quarters look like on the bottom line.
 
+noindex: true
 ---
 
 *Tracking your own business finances or investment portfolio? Our free [Budget Calculator](/tools/budget-calculator) can help you build a clear picture of your income, expenses, and savings targets — no spreadsheet skills required.*

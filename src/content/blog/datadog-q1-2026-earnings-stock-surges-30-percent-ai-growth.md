@@ -4,6 +4,7 @@ description: "Datadog reports record Q1 revenue of $1.006B (+32%), raises full-y
 pubDate: "2026-05-08"
 heroImage: "/thumbs/thumb-datadog-q1-2026-earnings.jpg"
 tags: ["Datadog", "DDOG", "earnings", "AI stocks", "SaaS", "Q1 2026"]
+noindex: true
 ---
 
 # Datadog Q1 2026: Revenue Crosses $1B for First Time, Stock Surges 30% on AI-Driven Growth
@@ -113,6 +114,7 @@ The company has built a durable position at the intersection of two powerful tre
 
 For anyone tracking how tech earnings translate into portfolio impact, understanding the financial metrics behind moves like this is essential. Our [Budget Calculator](/tools/budget-calculator) can help you organize your investment tracking and assess how individual positions fit into your broader financial plan.
 
+noindex: true
 ---
 
 *Disclosure: This article is for informational purposes only and does not constitute investment advice. Past performance is not indicative of future results. Readers should conduct their own research or consult a financial advisor before making investment decisions.*

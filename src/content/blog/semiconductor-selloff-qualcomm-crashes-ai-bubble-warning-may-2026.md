@@ -4,6 +4,7 @@ description: "The Philadelphia Semiconductor Index fell 5% on May 12 as hot CPI 
 pubDate: "2026-05-13"
 heroImage: "/thumbs/thumb-semiconductor-selloff-qualcomm-crashes-ai-bubble-warning-may-2026.jpg"
 tags: ["semiconductors", "Qualcomm", "Intel", "AMD", "Nvidia", "AI", "stock market", "bubble", "2026"]
+noindex: true
 ---
 
 The semiconductor sector experienced its worst single session in months on Monday, May 12, as a hotter-than-expected [CPI report](/blog/april-cpi-results-3-8-percent-inflation-surges-may-2026) triggered aggressive selling across chip stocks. The Philadelphia Semiconductor Index (SOX) dropped approximately 5%. Qualcomm fell 12% — its worst trading day since 2020. Intel gave back 4.3%. Dell Technologies slid 4.9%.

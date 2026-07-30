@@ -4,6 +4,7 @@ description: "Trump's April 2026 Section 232 tariffs include up to 100% on paten
 pubDate: "2026-04-17"
 heroImage: "/thumbs/thumb-trump-pharma-tariffs-2026.jpg"
 tags: ["tariffs", "trade-policy", "trump", "pharmaceutical-stocks", "economic-policy"]
+noindex: true
 ---
 
 # 100% Pharma Tariffs and Section 232: Inside the Trump 2026 Tariff Strategy
@@ -78,6 +79,7 @@ The Trump administration's tariff strategy in April 2026 is characterized by thr
 - Deseret News, [White House releases 2026 economic report](https://www.deseret.com/politics/2026/04/13/white-house-2026-economic-report/)
 - Trade Compliance Resource Hub, [Trump 2.0 tariff tracker](https://www.tradecomplianceresourcehub.com/2026/04/15/trump-2-0-tariff-tracker/)
 
+noindex: true
 ---
 
 *This article summarizes publicly reported policy developments, legal filings, and economic research. It is for informational purposes only and does not constitute investment, tax, legal, or financial advice.*

@@ -4,6 +4,7 @@ description: "Disney reports Q2 FY2026 earnings on May 6. Wall Street expects $1
 pubDate: "2026-05-05"
 heroImage: "/thumbs/thumb-disney-q2-fy2026-earnings.jpg"
 tags: ["Disney", "DIS", "earnings", "streaming", "Disney+", "parks", "Q2 2026"]
+noindex: true
 ---
 
 Walt Disney Company reports its fiscal second-quarter 2026 earnings before the market opens on **Tuesday, May 6**, at 8:30 AM ET. The report arrives at an inflection point for the entertainment giant: streaming is finally profitable, but traditional strengths in parks and sports face mounting cost pressures.
@@ -85,6 +86,7 @@ Earnings are released Tuesday, May 6, at 8:30 AM ET, with a live webcast availab
 
 **Related**: [Week Ahead: May 5-9, 2026](/blog/week-ahead-may-5-9-2026-jobs-report-disney-arm-earnings) | [Palantir Q1 Earnings Preview](/blog/palantir-pltr-q1-2026-earnings-preview-ai-defense-may-4)
 
+noindex: true
 ---
 
 *Sources: WDWInfo, Alphastreet, TradingView, MarketBeat, Ticker Report, The Walt Disney Company IR*

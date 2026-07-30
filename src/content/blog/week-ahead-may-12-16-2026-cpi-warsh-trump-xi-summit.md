@@ -4,6 +4,7 @@ description: "April CPI, Kevin Warsh's Senate confirmation vote, and Trump's Bei
 pubDate: "2026-05-10"
 tags: ["week ahead", "CPI", "Kevin Warsh", "Fed", "Trump", "Xi Jinping", "inflation"]
 heroImage: "/thumbs/thumb-week-ahead-may-12-16-2026-cpi-warsh-trump-xi-summit.jpg"
+noindex: true
 ---
 
 The S&P 500 closed Friday at 7,398.93 — another all-time high — and the Nasdaq crossed 26,000 for the first time in history, finishing at 26,247.08. The rally has been fueled by a stronger-than-expected April jobs report (115,000 vs. 62,000 forecast) and growing optimism around a potential Iran deal that knocked oil prices down 9% last week.
@@ -145,6 +146,7 @@ This is a week where the macro forces — inflation, monetary policy transition,
 
 Markets at all-time highs have priced in a lot of good news. This week tests whether that optimism holds up against the data.
 
+noindex: true
 ---
 
 *Sources: Bureau of Labor Statistics, CME FedWatch, Reuters, CNBC, Associated Press*

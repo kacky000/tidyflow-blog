@@ -4,6 +4,7 @@ description: "Nvidia reported record quarterly revenue of $81.6 billion and a $5
 pubDate: "2026-06-01"
 heroImage: "/thumbs/thumb-nvidia-record-81-billion-revenue-q1-2026-stock-muted-softbank-surge.jpg"
 tags: ["Nvidia", "AI", "semiconductors", "earnings", "SoftBank", "stock market", "2026"]
+noindex: true
 ---
 
 Nvidia delivered one of the strongest quarters in the history of the semiconductor industry — and the stock reaction was a shrug. The chipmaker reported record revenue of $81.6 billion for its fiscal first quarter, up 85% year over year, with net profit soaring to $58.3 billion. Both numbers crushed Wall Street estimates. Management guided to $91 billion in revenue for the current quarter, comfortably above consensus. By any objective measure it was a blowout. Yet NVDA shares barely moved in the days after the May 20 report, a textbook case of "buy the rumor, sell the news."

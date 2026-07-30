@@ -4,6 +4,7 @@ description: "The May jobs report lands June 5 and CPI follows June 10, the last
 pubDate: "2026-06-02"
 heroImage: "/thumbs/thumb-may-jobs-report-cpi-warsh-first-fomc-june-2026-preview.jpg"
 tags: ["Federal Reserve", "jobs report", "CPI", "Kevin Warsh", "FOMC", "inflation"]
+noindex: true
 ---
 
 The Federal Reserve's June meeting is, on the surface, the least suspenseful in a while. A prediction market put the odds of the Federal Open Market Committee holding rates steady on June 16–17 near 98%. The number is settled. What is not settled is the message — and the two data releases that arrive first will shape it more than anything Kevin Warsh says when he steps to the podium for [his first press conference as Fed chair](/blog/markets-price-fed-rate-hike-december-2026-warsh-first-fomc-june).
@@ -40,6 +41,7 @@ Warsh arrives with a reputation for favoring lower rates, but he inherits a comm
 
 The June FOMC will likely deliver a hold that surprises no one. The market-moving information arrives before it: payrolls on the 5th, CPI on the 10th. A soft jobs report reopens the cut debate; a hot inflation print cements the hawkish turn. Everything else — including a stock market sitting at [record highs into June](/blog/sp500-record-highs-june-2026-nine-week-winning-streak) — is waiting on those two numbers. None of this is a forecast of how they land, only a map of what each outcome would mean.
 
+noindex: true
 ---
 
 **Related reading:**

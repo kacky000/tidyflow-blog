@@ -4,6 +4,7 @@ description: "WTI crude surges above $100 and Brent tops $111 on April 28, exten
 pubDate: "2026-04-29"
 heroImage: "/thumbs/thumb-oil-prices-wti-100-april-2026.jpg"
 tags: ["oil prices", "WTI", "Brent crude", "Iran", "Strait of Hormuz", "FOMC", "energy", "geopolitics", "2026"]
+noindex: true
 ---
 
 # Oil Tops $100 WTI as Iran-Hormuz Impasse Extends to Seventh Week

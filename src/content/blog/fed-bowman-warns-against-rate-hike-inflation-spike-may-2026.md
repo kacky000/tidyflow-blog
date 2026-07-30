@@ -4,6 +4,7 @@ description: "Fed Governor Michelle Bowman pushed back on rate-hike talk, arguin
 pubDate: "2026-06-01"
 heroImage: "/thumbs/thumb-fed-bowman-warns-against-rate-hike-inflation-spike-may-2026.jpg"
 tags: ["Federal Reserve", "Michelle Bowman", "interest rates", "inflation", "FOMC", "Kevin Warsh", "2026"]
+noindex: true
 ---
 
 Just as the market finished pricing in a likely Federal Reserve rate hike by year-end, a sitting Fed governor stepped in to complicate the picture. Michelle Bowman, speaking on May 29, warned against raising interest rates in response to the recent inflation spike, arguing that the price pressures are largely supply-driven and that tightening policy now would risk damaging a labor market that is already cooling. Her comments lay bare a split inside the Federal Open Market Committee that new chair [Kevin Warsh](/blog/warsh-fed-chair-senate-vote-powell-exits-may-15-2026) will have to manage at his first meeting on June 16-17.

@@ -4,6 +4,7 @@ description: "Apple reported fiscal Q2 2026 results that crushed estimates with 
 pubDate: "2026-05-02"
 heroImage: "/thumbs/thumb-apple-q2-2026-earnings-results.jpg"
 tags: ["Apple", "AAPL", "earnings", "Q2 2026", "iPhone", "Services", "stock market"]
+noindex: true
 ---
 
 Apple delivered fiscal second-quarter 2026 results that exceeded Wall Street expectations across every major line item, posting revenue of **$111.18 billion** — a 17% year-over-year increase — and earnings per share of **$2.01**, comfortably beating the consensus estimate of $1.94.
@@ -54,6 +55,7 @@ Apple's Q2 results reinforce the company's position as a cash-generation machine
 
 The combination of iPhone cycle strength, Services compounding, and better-than-expected tariff management positions Apple favorably heading into the summer months, though macro uncertainty from ongoing US-Iran tensions and potential Federal Reserve policy shifts remain headwinds for the broader market.
 
+noindex: true
 ---
 
 **Related articles:**

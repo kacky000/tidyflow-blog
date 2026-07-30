@@ -4,6 +4,7 @@ description: "One year after Liberation Day, Trump's tariff regime has cut the t
 pubDate: "2026-04-19"
 heroImage: "/thumbs/thumb-liberation-day-one-year-trump-tariffs-trade-2026.jpg"
 tags: ["tariffs", "trade", "trump", "economy", "manufacturing"]
+noindex: true
 ---
 
 # Liberation Day One Year Later: How Trump's Tariffs Reshaped US Trade

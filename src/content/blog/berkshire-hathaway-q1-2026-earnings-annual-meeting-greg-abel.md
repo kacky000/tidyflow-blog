@@ -4,6 +4,7 @@ description: "Berkshire Hathaway reports Q1 2026 results on May 2 alongside its 
 pubDate: "2026-05-02"
 heroImage: "/thumbs/thumb-berkshire-q1-2026-earnings-abel.jpg"
 tags: ["Berkshire Hathaway", "Warren Buffett", "Greg Abel", "earnings", "Q1 2026", "annual meeting"]
+noindex: true
 ---
 
 Berkshire Hathaway releases its first-quarter 2026 earnings report on Saturday, May 2, at approximately 8:00 a.m. ET, coinciding with the company's annual shareholders meeting in Omaha — the first under **Greg Abel's leadership as CEO** following Warren Buffett's transition to chairman emeritus on January 1, 2026.
@@ -75,6 +76,7 @@ Berkshire's earnings and Buffett's commentary serve as a barometer for the broad
 
 If Buffett's shareholder letter includes cautionary language about market valuations — as it has in past periods of elevated multiples — it could temper sentiment following the S&P 500's move above 7,200.
 
+noindex: true
 ---
 
 **Related articles:**

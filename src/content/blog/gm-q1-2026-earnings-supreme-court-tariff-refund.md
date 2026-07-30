@@ -4,6 +4,7 @@ description: "General Motors reported Q1 2026 adjusted EPS of $3.70 vs. $2.62 ex
 pubDate: "2026-04-29"
 heroImage: "/thumbs/thumb-gm-q1-2026-earnings-tariff-refund.jpg"
 tags: ["General Motors", "GM", "earnings", "tariffs", "Supreme Court", "auto industry", "Q1 2026", "IEEPA"]
+noindex: true
 ---
 
 # General Motors Smashes Q1 Estimates and Raises Guidance — Thank the Supreme Court

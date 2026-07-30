@@ -4,6 +4,7 @@ description: "Tim Cook will exit as Apple CEO on September 1, 2026, with hardwar
 pubDate: "2026-04-22"
 heroImage: "/thumbs/thumb-apple-ceo-tim-cook-steps-down-john-ternus-2026.jpg"
 tags: ["apple", "aapl", "ceo", "leadership", "tech-stocks", "ai-stocks", "technology"]
+noindex: true
 ---
 
 Apple announced Monday that Tim Cook will step down as chief executive officer on September 1, 2026, ending a 15-year tenure in which the company's market capitalization grew from roughly $350 billion to more than $4 trillion. John Ternus, Apple's senior vice president of Hardware Engineering, will assume the CEO role at the same date. Cook will transition to executive chairman of the board.
@@ -48,6 +49,7 @@ Apple is expected to report fiscal Q3 2026 results in late July. By that point, 
 
 The [Federal Reserve's interest rate trajectory](/blog/fed-fomc-april-2026-rate-decision-preview/) also matters for Apple's stock valuation: AAPL is frequently cited as a long-duration asset whose present value is sensitive to discount rate assumptions. Kevin Warsh's confirmation hearing this week will be watched for signals on Fed policy direction.
 
+noindex: true
 ---
 
 *Sources: CNBC, 9to5Mac, TechCrunch, MacRumors, Deadline. Shares cited reflect after-hours trading as of April 20, 2026.*

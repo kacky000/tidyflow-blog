@@ -4,6 +4,7 @@ description: "Eli Lilly reported Q1 2026 revenue of $19.8B, up 56% YoY. Mounjaro
 pubDate: "2026-05-01"
 heroImage: "/thumbs/thumb-eli-lilly-q1-2026-earnings.jpg"
 tags: ["Eli Lilly", "LLY", "earnings", "Mounjaro", "Zepbound", "GLP-1", "pharma", "obesity", "diabetes"]
+noindex: true
 ---
 
 # Eli Lilly Posts 56% Revenue Growth in Q1 2026 as GLP-1 Drugs Rewrite the Pharmaceutical Playbook

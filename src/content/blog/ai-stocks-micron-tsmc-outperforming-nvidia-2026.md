@@ -4,6 +4,7 @@ description: "While Nvidia dominates AI headlines, Micron Technology (+59% YTD) 
 pubDate: "2026-04-23"
 heroImage: "/thumbs/thumb-ai-stocks-micron-tsmc-outperforming-nvidia-2026.jpg"
 tags: ["AI stocks", "micron", "TSMC", "nvidia", "semiconductor", "investing", "tech stocks", "2026"]
+noindex: true
 ---
 
 Nvidia remains the defining AI infrastructure stock, but two other semiconductor companies are generating stronger returns in 2026: **Micron Technology is up 59% year-to-date**, and **TSMC reported Q1 revenue of $35.9 billion — a 41% year-over-year increase**. Nvidia, by comparison, is up roughly 8% over the same period despite expectations for 77% revenue growth in its upcoming quarter.

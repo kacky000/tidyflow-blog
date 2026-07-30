@@ -4,6 +4,7 @@ description: "Oil prices have surged past $100 amid the 2026 Iran conflict and S
 pubDate: "2026-05-05"
 heroImage: "/thumbs/thumb-hormuz-oil-crisis-2026.jpg"
 tags: ["oil prices", "inflation", "Federal Reserve", "Strait of Hormuz", "Iran", "portfolio", "energy", "macro economy"]
+noindex: true
 ---
 
 Oil is back above $100. And this time, the catalyst isn't a temporary supply disruption or an OPEC production cut — it's an active military conflict threatening the world's most critical energy chokepoint.
@@ -111,6 +112,7 @@ This article is for informational purposes only and does not constitute investme
 
 **Related**: [UAE Intercepts Iranian Missiles: Oil Surges, Markets Sell Off](/blog/uae-iran-missile-attack-oil-surges-105-markets-may-2026) | [Week Ahead: May 5-9, 2026](/blog/week-ahead-may-5-9-2026-jobs-report-disney-arm-earnings)
 
+noindex: true
 ---
 
 *Sources: CNBC, Al Jazeera, Wikipedia (2026 Iran war fuel crisis, Strait of Hormuz crisis), Congress.gov, CME FedWatch*

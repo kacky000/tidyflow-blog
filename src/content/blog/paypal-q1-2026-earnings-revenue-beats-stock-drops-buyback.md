@@ -4,6 +4,7 @@ description: "PayPal reports Q1 2026 revenue of $8.35B beating estimates by 3.8%
 pubDate: "2026-05-08"
 heroImage: "/thumbs/thumb-paypal-q1-2026-earnings.jpg"
 tags: ["PayPal", "PYPL", "earnings", "fintech", "Q1 2026"]
+noindex: true
 ---
 
 PayPal reported first-quarter 2026 revenue of **$8.353 billion**, a 7% increase over the same period last year and a comfortable beat against the **$8.05 billion** Wall Street consensus. Adjusted earnings per share came in at **$1.34**, up 1% year over year, also ahead of estimates. Total payment volume hit **$464 billion**, an 11% jump that signals the platform is moving more money than ever.
@@ -111,6 +112,7 @@ None of that was enough to prevent the stock from falling, because net income de
 
 For PayPal, the next two to three quarters will be decisive. Either Fastlane adoption accelerates and margins begin to recover, vindicating the investment thesis, or the margin compression persists and the stock drifts lower as investors lose patience. The revenue engine is working. The question is whether the profits will follow.
 
+noindex: true
 ---
 
 *Want a clearer picture of your own financial inflows and outflows? Try our free [Budget Calculator](/tools/budget-calculator) to set targets, track spending categories, and see where your money actually goes — no sign-up required.*

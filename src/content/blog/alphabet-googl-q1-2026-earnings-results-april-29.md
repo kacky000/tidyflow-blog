@@ -4,6 +4,7 @@ description: "Alphabet (GOOGL) reports Q1 2026 earnings after market close on Ap
 pubDate: "2026-04-29"
 heroImage: "/thumbs/thumb-alphabet-q1-2026-earnings-results.jpg"
 tags: ["Alphabet", "GOOGL", "earnings", "Google Cloud", "AI", "Q1 2026", "Big Tech"]
+noindex: true
 ---
 
 # Alphabet Q1 2026 Earnings: What the Results Tell Us About Google's AI Pivot

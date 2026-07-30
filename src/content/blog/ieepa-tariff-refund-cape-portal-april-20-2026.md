@@ -4,6 +4,7 @@ description: "The CBP CAPE tool goes live April 20, 2026, opening refund claims 
 pubDate: "2026-04-20"
 heroImage: "/thumbs/thumb-ieepa-tariff-refund-cape-portal-april-20-2026.jpg"
 tags: ["tariffs", "trade-policy", "supreme-court", "importers", "customs"]
+noindex: true
 ---
 
 # IEEPA Tariff Refund Portal Opens Today: $127 Billion Available for Importers

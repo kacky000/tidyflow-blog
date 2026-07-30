@@ -4,6 +4,7 @@ description: "Greg Abel opened Berkshire's 2026 annual meeting with an AI deepfa
 pubDate: "2026-05-04"
 heroImage: "/thumbs/thumb-berkshire-meeting-deepfake-2026.jpg"
 tags: ["Berkshire Hathaway", "Warren Buffett", "Greg Abel", "AI", "deepfake", "annual meeting", "cybersecurity"]
+noindex: true
 ---
 
 Berkshire Hathaway's 2026 annual meeting in Omaha delivered more than financial updates. CEO Greg Abel used the event to set the tone for the post-Buffett era — opening with an AI-generated deepfake of Warren Buffett, retiring the Oracle's jersey, and firmly ruling out any breakup of the conglomerate.
@@ -58,6 +59,7 @@ This measured approach contrasts with the aggressive AI investment strategies of
 
 **Related**: [Berkshire Q1 2026 Earnings: Profits Up 18%, Cash at $397B](/blog/berkshire-hathaway-q1-2026-earnings-greg-abel-annual-meeting) | [S&P 500 and Nasdaq Hit All-Time Highs](/blog/sp500-nasdaq-all-time-highs-week-recap-may-2-2026)
 
+noindex: true
 ---
 
 *Sources: CNBC, Business Standard, Traders Union, Yahoo Finance*

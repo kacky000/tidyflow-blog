@@ -4,6 +4,7 @@ description: "Google's parent company Alphabet surged 10% after strong earnings,
 pubDate: "2026-05-03"
 heroImage: "/thumbs/thumb-alphabet-5-trillion-nvidia.jpg"
 tags: ["Alphabet", "Google", "Nvidia", "market cap", "AI", "stocks", "tech"]
+noindex: true
 ---
 
 A major power shift is underway in the tech sector. Alphabet — Google's parent company — is on the verge of becoming the world's most valuable publicly traded company, threatening to unseat Nvidia from the top spot it has held since the AI boom began in 2023.
@@ -59,6 +60,7 @@ If current momentum holds, Alphabet could trade as the world's largest company b
 
 For now, the market is voting that **AI application** is catching up to **AI computation** in value creation.
 
+noindex: true
 ---
 
 ## Related Coverage
@@ -68,12 +70,14 @@ For now, the market is voting that **AI application** is catching up to **AI com
 - [S&P 500 and Nasdaq Hit All-Time Highs](/blog/sp500-nasdaq-all-time-highs-week-recap-may-2-2026)
 - [AI Stocks Outperforming Nvidia in 2026](/blog/ai-stocks-micron-tsmc-outperforming-nvidia-2026)
 
+noindex: true
 ---
 
 ## Plan Your Finances Like the Big Players Do
 
 Alphabet, Microsoft, and Amazon all track every dollar of capex with precision. You can do the same with your personal budget. Try our free **[Monthly Budget Calculator](/tools/budget-calculator)** to get a clear picture of your income, expenses, and savings rate.
 
+noindex: true
 ---
 
 *Sources: CNBC, Yahoo Finance, CryptoBriefing, The Motley Fool*

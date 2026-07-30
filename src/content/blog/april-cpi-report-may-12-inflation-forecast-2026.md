@@ -4,6 +4,7 @@ description: "The Bureau of Labor Statistics releases April CPI data on May 12. 
 pubDate: "2026-05-11"
 heroImage: "/thumbs/thumb-april-cpi-report-may-12-inflation-forecast-2026.jpg"
 tags: ["CPI", "inflation", "Federal Reserve", "economy", "interest rates", "2026"]
+noindex: true
 ---
 
 The Bureau of Labor Statistics will release the April 2026 Consumer Price Index report on Monday, May 12, at 8:30 AM Eastern Time. The consensus forecast is ugly: headline CPI is expected to come in at +0.6% month over month and +3.7% year over year, a significant acceleration from March's already elevated 3.3% annual reading.
@@ -120,6 +121,7 @@ A 3.7% inflation print would not, on its own, trigger a crisis. But it would con
 
 The data drops at 8:30 AM ET. Markets will react within seconds. The effects on household budgets will last much longer.
 
+noindex: true
 ---
 
 *Feeling the squeeze from rising prices? Use our [Budget Calculator](/tools/budget-calculator/) to see exactly where your money is going and find areas where you can cut back — before inflation does it for you.*

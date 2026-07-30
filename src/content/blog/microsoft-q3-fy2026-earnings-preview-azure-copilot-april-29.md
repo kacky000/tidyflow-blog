@@ -4,6 +4,7 @@ description: "Microsoft reports Q3 FY2026 results on April 29. Wall Street is wa
 pubDate: "2026-04-22"
 heroImage: "/thumbs/thumb-microsoft-q3-fy2026-earnings-preview-azure-copilot-april-29.jpg"
 tags: ["microsoft", "msft", "earnings", "azure", "ai-stocks", "technology", "copilot", "cloud"]
+noindex: true
 ---
 
 Microsoft will report its third-quarter fiscal year 2026 results after market close on April 29 — the same day as Alphabet's Q1 earnings. The two reports will define the market's view of whether the AI infrastructure investment cycle is translating into durable revenue growth, or whether the capex burden is outpacing the monetization timeline.
@@ -60,6 +61,7 @@ For Microsoft specifically, the answer hinges on whether Satya Nadella's positio
 - The [Apple CEO transition announced Monday](/blog/apple-ceo-tim-cook-steps-down-john-ternus-2026/) adds leadership uncertainty at a time when Apple is also navigating its AI strategy — a competitor dynamic relevant to Microsoft's enterprise AI positioning.
 - The [Federal Reserve's interest rate path](/blog/kevin-warsh-fed-chair-confirmation-hearing-2026/), being contested in the Kevin Warsh confirmation hearing, matters for Microsoft's stock valuation given its premium multiple and high sensitivity to discount rate assumptions.
 
+noindex: true
 ---
 
 *Sources: GuruFocus, Intellectia.ai, Yahoo Finance (Microsoft earnings preview), Microsoft Investor Relations, Evercore ISI analyst commentary. All revenue and EPS figures are consensus estimates and subject to change.*

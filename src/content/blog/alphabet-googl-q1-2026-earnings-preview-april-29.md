@@ -4,6 +4,7 @@ description: "Alphabet reports Q1 2026 results on April 29 after market close. A
 pubDate: "2026-04-24"
 heroImage: "/thumbs/thumb-alphabet-googl-q1-2026-earnings-preview.jpg"
 tags: ["Alphabet", "Google", "GOOGL", "earnings", "Q1 2026", "Google Cloud", "AI", "advertising", "stock"]
+noindex: true
 ---
 
 Alphabet Inc. reports first-quarter 2026 results on April 29 after the U.S. market close, with the press conference scheduled for shortly after. The report lands during one of the company's most consequential strategic periods: AI is reshaping how users interact with Google Search, and Google Cloud is the only segment growing fast enough to change Alphabet's overall revenue composition in the near term.
@@ -66,6 +67,7 @@ A strong report would also provide confirmation that the AI integration into sea
 
 A cloud growth miss — particularly one attributed to slower enterprise AI adoption rather than temporary capacity constraints — could raise questions about whether hyperscaler AI spending is translating into revenue at the pace the market has assumed. That scenario would likely weigh on cloud-adjacent technology names beyond just Alphabet.
 
+noindex: true
 ---
 
 *Alphabet Inc. (NASDAQ: GOOGL) is scheduled to report Q1 2026 results on April 29, 2026 after the market close. Estimates referenced are from Refinitiv and analyst consensus data as of April 24, 2026. This preview is based on publicly available analyst forecasts and company disclosures — not investment advice.*

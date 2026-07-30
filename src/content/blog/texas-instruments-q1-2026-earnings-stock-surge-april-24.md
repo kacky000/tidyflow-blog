@@ -4,6 +4,7 @@ description: "Texas Instruments reported Q1 2026 revenue of $4.83 billion, toppi
 pubDate: "2026-04-24"
 heroImage: "/thumbs/thumb-texas-instruments-q1-2026-earnings-april-24.jpg"
 tags: ["Texas Instruments", "TXN", "earnings", "Q1 2026", "semiconductors", "data center", "AI", "stock"]
+noindex: true
 ---
 
 Texas Instruments posted a significant earnings beat for the first quarter of 2026, with the chipmaker's stock surging more than 13% on April 23 and hitting an all-time high of $276.10 intraday. The results reflected stronger-than-expected demand from industrial and data center customers, reversing a multi-quarter inventory correction that had weighed on the company through much of 2025.
@@ -54,6 +55,7 @@ The primary variable heading into the second half of 2026 will be whether data c
 
 The stock's year-to-date gain of more than 56% also means expectations are elevated entering the second half. Any guidance miss or demand softening in Q3 could trigger a sharp reversal, given how much of the recovery is already priced in.
 
+noindex: true
 ---
 
 *Texas Instruments (NASDAQ: TXN) reported Q1 2026 results after the market close on April 22, 2026. The company is based in Dallas, Texas, and designs and manufactures analog semiconductors and embedded processors for industrial, automotive, and consumer markets. This article reports on publicly available earnings disclosures and analyst commentary — not investment advice.*

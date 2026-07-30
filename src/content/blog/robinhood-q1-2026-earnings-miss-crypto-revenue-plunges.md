@@ -4,6 +4,7 @@ description: "Robinhood (HOOD) missed Q1 2026 earnings estimates with EPS of $0.
 pubDate: "2026-04-30"
 heroImage: "/thumbs/thumb-robinhood-q1-2026-earnings-miss.jpg"
 tags: ["Robinhood", "HOOD", "earnings", "crypto", "fintech", "Q1 2026", "stock market"]
+noindex: true
 ---
 
 # Robinhood Misses Q1 Estimates as Crypto Revenue Drops by Nearly Half

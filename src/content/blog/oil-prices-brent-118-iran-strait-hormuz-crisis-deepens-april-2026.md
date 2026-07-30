@@ -4,6 +4,7 @@ description: "Brent crude hit $118.33/barrel as the Iran war chokes the Strait o
 pubDate: "2026-04-30"
 heroImage: "/thumbs/thumb-oil-prices-brent-118-hormuz.jpg"
 tags: ["oil prices", "Iran", "Strait of Hormuz", "energy", "inflation", "gas prices", "geopolitics"]
+noindex: true
 ---
 
 # Oil Surges Past $118 as the Strait of Hormuz Crisis Becomes the Biggest Supply Disruption in History

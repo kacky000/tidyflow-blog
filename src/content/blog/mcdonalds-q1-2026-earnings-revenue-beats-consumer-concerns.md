@@ -4,6 +4,7 @@ description: "McDonald's reports Q1 2026 revenue of $6.52B (+9%) and EPS of $2.8
 pubDate: "2026-05-08"
 heroImage: "/thumbs/thumb-mcdonalds-q1-2026-earnings.jpg"
 tags: ["McDonald's", "MCD", "earnings", "consumer spending", "Q1 2026"]
+noindex: true
 ---
 
 # McDonald's Q1 2026: Revenue Beats at $6.52B, But Management Warns on Consumer Spending
@@ -111,6 +112,7 @@ The stock's reaction — up 3% on the numbers, flat by midday — captures the a
 
 That question will not be answered by one earnings report. But McDonald's just gave the market a data point that deserves more attention than the headline beat-and-raise that most of Wall Street was hoping for.
 
+noindex: true
 ---
 
 *Planning your household budget around rising food and gas costs? Our [Budget Calculator](/tools/budget-calculator) can help you see where your money goes each month and find areas to adjust.*

@@ -4,6 +4,7 @@ description: "Brent crude falls below $100 for first time since Hormuz crisis as
 pubDate: "2026-05-08"
 heroImage: "/thumbs/thumb-oil-iran-deal-may-2026.jpg"
 tags: ["oil prices", "Iran", "geopolitics", "Brent crude", "Strait of Hormuz", "May 2026"]
+noindex: true
 ---
 
 # Brent Crude Falls Below $100 for the First Time Since February as Iran-US Peace Deal Takes Shape
@@ -114,6 +115,7 @@ The 14-point MOU is a starting point, not a finish line. The distance between "f
 
 For now, oil below $100 is a welcome development for consumers, central bankers, and equity investors. Whether it lasts depends on decisions being made in Tehran, Washington, and Islamabad over the next several days.
 
+noindex: true
 ---
 
 *Struggling to budget around volatile gas prices? Use our [Budget Calculator](/tools/budget-calculator) to adjust your monthly spending plan for higher fuel costs and see where you can find savings.*

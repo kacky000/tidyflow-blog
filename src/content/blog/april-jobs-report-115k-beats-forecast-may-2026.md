@@ -4,6 +4,7 @@ description: "April 2026 nonfarm payrolls rose 115K, nearly doubling the 62K con
 pubDate: "2026-05-09"
 heroImage: "/thumbs/thumb-april-jobs-report-may-2026.jpg"
 tags: ["jobs report", "NFP", "employment", "Federal Reserve", "economy"]
+noindex: true
 ---
 
 The U.S. economy added 115,000 nonfarm jobs in April 2026, according to data released Friday morning by the Bureau of Labor Statistics. That figure nearly doubled the consensus estimate of 62,000 — marking the second consecutive month of upside surprises and the first back-to-back increase in payrolls in nearly a year.
@@ -142,6 +143,7 @@ Several data points and events in the coming weeks will determine whether April'
 
 For a broader look at how the labor market has evolved this year, see our [analysis of the March employment report](/blog/march-employment-situation-nfp-2026).
 
+noindex: true
 ---
 
 *Sources: Bureau of Labor Statistics, CNBC, Trading Economics*

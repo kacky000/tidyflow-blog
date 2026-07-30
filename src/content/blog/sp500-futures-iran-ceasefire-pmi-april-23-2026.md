@@ -4,6 +4,7 @@ description: "U.S. equity futures are pointing higher after President Trump exte
 pubDate: "2026-04-23"
 heroImage: "/thumbs/thumb-sp500-futures-iran-ceasefire-pmi-april-23-2026.jpg"
 tags: ["S&P 500", "stock market", "SPY", "Iran", "PMI", "economic data", "geopolitics", "investing"]
+noindex: true
 ---
 
 U.S. stock index futures moved higher early Thursday after President Trump extended the ceasefire deadline in ongoing Iran negotiations, removing a near-term geopolitical tail risk that had weighed on equities through most of the week. SPY, the S&P 500 tracking ETF, was up approximately **0.62% in pre-market trading** as of Wednesday evening.

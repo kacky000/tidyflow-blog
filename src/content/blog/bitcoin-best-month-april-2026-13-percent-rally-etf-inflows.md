@@ -4,6 +4,7 @@ description: "Bitcoin surges 13% in April 2026, its strongest monthly gain in a 
 pubDate: "2026-04-27"
 heroImage: "/thumbs/thumb-bitcoin-april-2026-rally-etf-inflows.jpg"
 tags: ["Bitcoin", "BTC", "crypto", "ETF", "spot ETF", "FOMC", "April 2026", "rally"]
+noindex: true
 ---
 
 # Bitcoin's Best Month in a Year: April Rally Hits 13% as Spot ETF Inflows Top $2 Billion
@@ -92,6 +93,7 @@ The FOMC meeting on April 28–29 is the next major test. A rate hold at 99.7% p
 
 Whether the rally extends into May or runs into seasonal headwinds will depend on whether the institutional inflow trend sustains beyond the current streak — and on whether the broader macro environment continues to favor risk assets.
 
+noindex: true
 ---
 
 *Sources: CoinDesk, CoinGlass, CME FedWatch, Bloomberg, Yahoo Finance. Bitcoin prices are volatile and reflect market conditions as of April 27, 2026. This article is for informational purposes only and does not constitute investment advice.*

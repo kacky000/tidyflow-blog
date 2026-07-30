@@ -4,6 +4,7 @@ description: "The April CPI report showed headline inflation at 3.8% year-over-y
 pubDate: "2026-05-13"
 heroImage: "/thumbs/thumb-april-cpi-results-3-8-percent-inflation-surges-may-2026.jpg"
 tags: ["CPI", "inflation", "Federal Reserve", "economy", "interest rates", "stock market", "2026"]
+noindex: true
 ---
 
 The Bureau of Labor Statistics released the April 2026 Consumer Price Index report on Monday, May 12, and the number was worse than expected. Headline CPI rose 0.6% month over month and 3.8% year over year — above the consensus forecast of 3.7% and the highest annual inflation rate since mid-2024. Markets sold off immediately. The S&P 500 dropped 0.7% from its all-time high. The Nasdaq fell 1.2%. The Philadelphia Semiconductor Index lost roughly 5%.

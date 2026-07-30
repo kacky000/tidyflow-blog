@@ -4,6 +4,7 @@ description: "The April 2026 employment report drops May 8. After March's surpri
 pubDate: "2026-05-03"
 heroImage: "/thumbs/thumb-nfp-preview-may-8-2026.jpg"
 tags: ["jobs report", "NFP", "employment", "Federal Reserve", "economy", "interest rates", "labor market"]
+noindex: true
 ---
 
 The Bureau of Labor Statistics will release the April 2026 Employment Situation report on **Friday, May 8, at 8:30 AM ET**. After March's surprisingly strong 178K jobs print — which nearly tripled expectations of 60K — the upcoming report carries heightened significance for Federal Reserve policy and market direction.
@@ -87,6 +88,7 @@ But if the labor market cracks, it would be the first real stress signal in an e
 
 **Related**: [S&P 500 and Nasdaq at All-Time Highs](/blog/sp500-nasdaq-all-time-highs-week-recap-may-2-2026) | [US GDP Q1 2026 Slowdown](/blog/us-gdp-q1-2026-advance-estimate-april-30-slowdown) | [Trump Tariffs and Corporate Earnings Impact](/blog/trump-tariffs-q1-2026-earnings-guidance-corporate-impact)
 
+noindex: true
 ---
 
 *Sources: Bureau of Labor Statistics, Trading Economics, Investing.com, FXStreet, MarketPulse*

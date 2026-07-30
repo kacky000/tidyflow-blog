@@ -4,6 +4,7 @@ description: "The UAE said it intercepted missiles fired from Iran on May 4, the
 pubDate: "2026-05-05"
 heroImage: "/thumbs/thumb-uae-iran-missiles-oil-may-2026.jpg"
 tags: ["oil prices", "Iran", "UAE", "geopolitics", "stock market", "crude oil", "Middle East", "ceasefire"]
+noindex: true
 ---
 
 The fragile ceasefire between the United States and Iran took a direct hit on Monday when the United Arab Emirates confirmed that its air defense systems intercepted missiles fired from Iranian territory — the first such military incident since the April 8 truce took effect.
@@ -66,6 +67,7 @@ The UAE, which has maintained a careful diplomatic balance between Washington an
 4. **Energy stocks and defense contractors may outperform** in the near term as investors rotate into conflict-beneficiary sectors.
 5. **The Fed's job just got harder.** Rising oil prices feed directly into CPI, complicating any plans for rate cuts in the second half of 2026.
 
+noindex: true
 ---
 
 *Sources: CNBC, Al Jazeera, Arab News, Jerusalem Post, TheStreet, Wikipedia (2026 Strait of Hormuz crisis)*

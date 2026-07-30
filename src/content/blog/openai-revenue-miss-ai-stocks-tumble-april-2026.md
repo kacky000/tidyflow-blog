@@ -4,6 +4,7 @@ description: "A Wall Street Journal report reveals OpenAI fell short of internal
 pubDate: "2026-04-29"
 heroImage: "/thumbs/thumb-openai-revenue-miss-ai-stocks-2026.jpg"
 tags: ["OpenAI", "AI stocks", "Oracle", "SoftBank", "Nvidia", "ChatGPT", "AI spending", "earnings", "2026"]
+noindex: true
 ---
 
 # OpenAI Misses Revenue and User Targets, Triggering the Biggest AI Stock Selloff in Months

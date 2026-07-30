@@ -4,6 +4,7 @@ description: "ARM Holdings reports Q4 FY2026 earnings with analysts expecting $1
 pubDate: "2026-05-07"
 heroImage: "/thumbs/thumb-arm-q4-fy2026-earnings.jpg"
 tags: ["ARM Holdings", "ARM", "earnings", "AI chips", "semiconductors", "Q4 2026"]
+noindex: true
 ---
 
 # ARM Stock Up 84% in 2026: What Q4 Earnings Mean for the AI Chip Rally
@@ -115,6 +116,7 @@ For investors tracking the AI chip cycle, Arm's earnings and guidance provide on
 
 If you want to model potential returns on semiconductor and AI chip investments, our [Investment Return Calculator](/tools/investment-return-calculator) can help you run scenarios based on different growth and valuation assumptions.
 
+noindex: true
 ---
 
 *Disclosure: This article is for informational purposes only and does not constitute investment advice. Past performance is not indicative of future results. Readers should conduct their own research or consult a financial advisor before making investment decisions.*

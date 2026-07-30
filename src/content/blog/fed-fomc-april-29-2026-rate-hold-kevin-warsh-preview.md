@@ -4,6 +4,7 @@ description: "The Federal Reserve's April 28–29 FOMC meeting is widely expecte
 pubDate: "2026-04-24"
 heroImage: "/thumbs/thumb-fed-fomc-april-29-2026-rate-hold-preview.jpg"
 tags: ["Federal Reserve", "FOMC", "interest rates", "Kevin Warsh", "monetary policy", "economy", "inflation", "2026"]
+noindex: true
 ---
 
 The Federal Reserve's Federal Open Market Committee meets April 28–29 in Washington, with a policy statement scheduled for release at 2:00 p.m. ET on April 29, followed by a press conference at 2:30 p.m. ET. Markets are not expecting a rate move — but the meeting carries unusual weight because it may be one of Jerome Powell's last as Fed Chair before Kevin Warsh takes over.
@@ -62,6 +63,7 @@ For American consumers and investors, a prolonged rate hold at 3.50%–3.75% has
 
 The April 29 meeting is unlikely to change any of these dynamics in the near term. The more meaningful inflection point — if one comes — will be when the Fed signals it has seen enough progress on inflation to begin a genuine easing cycle.
 
+noindex: true
 ---
 
 *The Federal Open Market Committee meets April 28–29, 2026. The policy statement will be released at 2:00 p.m. ET on April 29, followed by a press conference. Federal funds rate data is sourced from the CME FedWatch Tool. This article reflects publicly available market data and commentary — not investment advice.*

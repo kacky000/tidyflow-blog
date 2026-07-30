@@ -4,6 +4,7 @@ description: "Tesla reports Q1 2026 earnings on April 22 after market close. Ana
 pubDate: "2026-04-21"
 heroImage: "/thumbs/thumb-tesla-q1-2026-earnings-preview-april-22.jpg"
 tags: ["tesla", "TSLA", "earnings", "EV", "Q1 2026", "stock", "Elon Musk", "AI"]
+noindex: true
 ---
 
 Tesla (TSLA) reports its first-quarter 2026 results **tomorrow, April 22**, after the U.S. market close. The print will be the most closely watched EV earnings of the season — and arguably more uncertain than usual, given a delivery miss that already rattled the stock.
@@ -74,6 +75,7 @@ The [Big Tech Q1 earnings season](/blog/big-tech-q1-2026-earnings-preview-alphab
 - **Ticker:** TSLA (NASDAQ)
 - **Current price range:** Roughly $250–$280 (as of mid-April)
 
+noindex: true
 ---
 
 *Sources: MarketBeat, IG International, HeyGoTrade, Moomoo, Yahoo Finance. Earnings previews represent analyst consensus estimates, not investment advice.*

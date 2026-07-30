@@ -4,6 +4,7 @@ description: "Iran proposed reopening the Strait of Hormuz to end the standoff w
 pubDate: "2026-04-28"
 heroImage: "/thumbs/thumb-iran-hormuz-oil-april-2026.jpg"
 tags: ["Iran", "oil prices", "Strait of Hormuz", "geopolitics", "crude oil", "Trump", "energy", "Brent"]
+noindex: true
 ---
 
 # Iran Proposes Reopening Strait of Hormuz Without Nuclear Agreement — Why Markets Aren't Celebrating

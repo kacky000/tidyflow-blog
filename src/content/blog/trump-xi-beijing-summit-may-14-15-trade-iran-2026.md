@@ -4,6 +4,7 @@ description: "Trump visits China for the first time in 8 years to meet Xi Jinpin
 pubDate: "2026-05-10"
 tags: ["Trump", "Xi Jinping", "China", "trade", "tariffs", "Iran", "summit", "Beijing"]
 heroImage: "/thumbs/thumb-trump-xi-beijing-summit-may-14-15-trade-iran-2026.jpg"
+noindex: true
 ---
 
 # Trump Heads to Beijing for May 14-15 Summit With Xi — Iran, Not Tariffs, Will Dominate

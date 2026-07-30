@@ -4,6 +4,7 @@ description: "Palantir reports Q1 2026 earnings after the bell on May 4. Wall St
 pubDate: "2026-05-04"
 heroImage: "/thumbs/thumb-palantir-q1-2026-earnings.jpg"
 tags: ["Palantir", "PLTR", "earnings", "AI stocks", "defense", "Q1 2026"]
+noindex: true
 ---
 
 Palantir Technologies reports its first-quarter 2026 earnings after the market close on Monday, May 4 — and the setup is one of the most polarized in the AI sector.
@@ -65,6 +66,7 @@ Earnings are released after the 4:00 PM ET close, with a webcast at 5:00 PM ET.
 
 **Related**: [Big Tech Earnings Recap: Mag 7 Results](/blog/big-tech-earnings-recap-mag7-results-april-30-2026) | [Amazon-Anthropic $330B AI Investment](/blog/amazon-anthropic-330-billion-ai-investment-2026)
 
+noindex: true
 ---
 
 *Sources: TipRanks, MarketBeat, BusinessWire, Foreign Policy Journal, CNBC*

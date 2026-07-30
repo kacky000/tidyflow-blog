@@ -4,6 +4,7 @@ description: "The two-week US-Iran ceasefire expires April 21 with no deal. WTI 
 pubDate: "2026-04-21"
 heroImage: "/thumbs/thumb-iran-ceasefire-expires-april-21-oil-price-spike-2026.jpg"
 tags: ["iran", "oil price", "ceasefire", "geopolitics", "energy", "crude oil", "strait of hormuz"]
+noindex: true
 ---
 
 The two-week ceasefire between the United States and Iran expires today, April 21, with no deal in place and no confirmed extension. Oil prices are surging in response, with WTI crude jumping more than 5% to $88.8 per barrel as traders price in the renewed risk of Strait of Hormuz disruptions.
@@ -63,6 +64,7 @@ The [S&P 500 hit all-time highs earlier this month](/blog/sp500-nasdaq-all-time-
 
 Similarly, the [IEEPA tariff refund portal that opened April 20](/blog/ieepa-tariff-refund-cape-portal-april-20-2026/) — worth $127 billion in potential corporate refunds — adds another layer of political complexity to this week's market environment.
 
+noindex: true
 ---
 
 *Sources: CNN (live updates as of April 20), Al Jazeera, CNBC, NPR, Reuters. This article reports on news as it stands; the situation remains fluid.*
