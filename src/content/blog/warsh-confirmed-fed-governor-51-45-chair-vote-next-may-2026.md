@@ -1,4 +1,5 @@
 ---
+noindex: true
 title: "Senate Confirms Warsh as Fed Governor 51-45 — Chair Vote Expected by May 15"
 description: "Kevin Warsh was confirmed as a Federal Reserve governor on May 12 in a party-line 51-45 vote. The separate vote on his elevation to Fed chair is expected before Powell's term expires May 15."
 pubDate: "2026-05-13"

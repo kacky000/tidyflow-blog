@@ -1,4 +1,5 @@
 ---
+noindex: true
 title: "S&P 500 Hits 7,400 in Longest Winning Streak Since October 2024 — Six Weeks of Gains"
 description: "The S&P 500 climbed above 7,300 for the first time and extended its winning streak to six consecutive weeks, the longest since October 2024. Strong earnings, an Apple-Intel chip deal, and better-than-expected jobs data fueled the rally."
 pubDate: "2026-05-11"

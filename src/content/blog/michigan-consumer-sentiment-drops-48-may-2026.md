@@ -1,4 +1,5 @@
 ---
+noindex: true
 title: "Consumer Sentiment Crashes to June-2022 Low as Iran War Drags Inflation Expectations to 4.7%"
 description: "Michigan Consumer Sentiment drops to 48.2 in preliminary May 2026 reading. Year-ahead inflation expectations surge to 4.7%, the largest monthly jump since April 2025."
 pubDate: "2026-05-09"

@@ -1,4 +1,5 @@
 ---
+noindex: true
 title: "UAE Exits OPEC After Six Decades: What It Means for Oil Prices and Energy Markets"
 description: "The UAE officially left OPEC on May 1, 2026, removing the cartel's third-largest producer. With Iran tensions keeping crude above $100, the exit reshapes global energy dynamics."
 pubDate: "2026-05-02"

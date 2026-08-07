@@ -1,4 +1,5 @@
 ---
+noindex: true
 title: "Bitcoin Slides to $73K as ETFs Bleed $1.5 Billion in Late May"
 description: "Bitcoin fell to around $73,000 after a volatile three-week correction, while spot Bitcoin ETFs saw roughly $1.5 billion in outflows — the largest weekly exodus of 2026. Here is what is driving it."
 pubDate: "2026-06-01"

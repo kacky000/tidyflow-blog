@@ -1,4 +1,5 @@
 ---
+noindex: true
 title: "Powell Will Stay on Fed Board After Stepping Down as Chair: 'I Have No Choice'"
 description: "Fed Chair Jerome Powell announced he will remain on the Federal Reserve Board after his term ends May 15, citing legal attacks. The April 29 rate decision saw 4 dissents — the most since 1992."
 pubDate: "2026-05-01"

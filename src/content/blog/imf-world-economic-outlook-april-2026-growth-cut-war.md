@@ -1,4 +1,5 @@
 ---
+noindex: true
 title: "IMF Cuts Global Growth to 3.1% as Middle East War Darkens 2026 Economic Outlook"
 description: "The IMF's April 2026 World Economic Outlook projects 3.1% global growth and 4.4% inflation as the Middle East conflict disrupts commodity markets and tightens financial conditions."
 pubDate: "2026-04-27"

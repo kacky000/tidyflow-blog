@@ -1,4 +1,5 @@
 ---
+noindex: true
 title: "Anthropic Unveils Claude Mythos: A Frontier AI Model That Finds Zero-Day Vulnerabilities — And Won't Be Released to the Public"
 description: "Anthropic announced Claude Mythos, a frontier AI model capable of automatically identifying zero-day software vulnerabilities. The model, priced five times higher than Opus, is available only to critical infrastructure operators through an invite-only Project Glasswing program."
 pubDate: "2026-04-26"

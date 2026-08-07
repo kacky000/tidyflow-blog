@@ -1,4 +1,5 @@
 ---
+noindex: true
 title: "JOLTS March 2026: Job Openings Hold at 6.9 Million as Hiring Quietly Improves"
 description: "The March 2026 JOLTS report showed job openings unchanged at 6.9M, slightly above estimates. Hiring rose to 5.6M. Here's what the labor market data means for the Fed, stocks, and your portfolio."
 pubDate: "2026-05-06"

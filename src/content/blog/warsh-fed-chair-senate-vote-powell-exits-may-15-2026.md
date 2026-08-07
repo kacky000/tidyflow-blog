@@ -1,4 +1,5 @@
 ---
+noindex: true
 title: "Kevin Warsh Clears Final Hurdle for Fed Chair — Senate Floor Vote Expected Next Week"
 description: "The Senate is set to vote on Kevin Warsh's Fed chair confirmation as early as next week. Powell exits May 15. What the partisan battle means for rate policy."
 pubDate: "2026-05-10"

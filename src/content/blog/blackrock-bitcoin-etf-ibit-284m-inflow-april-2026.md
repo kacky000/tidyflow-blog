@@ -1,4 +1,5 @@
 ---
+noindex: true
 title: "BlackRock Bitcoin ETF Records $284M Single-Day Inflow, Holdings Exceed 803,000 BTC"
 description: "BlackRock's iShares Bitcoin Trust attracted $284 million in a single session on April 17, pushing holdings above 803,000 BTC. US spot Bitcoin ETFs collectively pulled $663.9 million that day — the strongest since January."
 pubDate: "2026-04-20"

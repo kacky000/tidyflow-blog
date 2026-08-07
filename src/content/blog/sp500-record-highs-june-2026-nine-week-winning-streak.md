@@ -1,4 +1,5 @@
 ---
+noindex: true
 title: "Stocks Enter June at Record Highs After a Ninth Straight Weekly Gain"
 description: "The S&P 500 closed May at 7,580, its 19th record of 2026, as the Dow cleared 51,000 and the Nasdaq hit a new high. A month defined by AI and chip stocks now hands off to a heavy data calendar."
 pubDate: "2026-06-02"

@@ -1,4 +1,5 @@
 ---
+noindex: true
 title: "S&P 500 and Nasdaq Close at All-Time Highs: What Drove the Rally in the First Week of May 2026"
 description: "The S&P 500 hit 7,230 and the Nasdaq reached 25,114 as Apple earnings, AI rotation, and peace hopes fueled a record-setting week. Here's what happened and what's next."
 pubDate: "2026-05-03"

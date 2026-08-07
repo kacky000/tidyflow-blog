@@ -1,4 +1,5 @@
 ---
+noindex: true
 title: "The Fed Chair Transition: Powell Steps Down May 15, Warsh Confirmation Imminent — What Changes"
 description: "Jerome Powell leaves the Fed chair on May 15. Kevin Warsh is expected to be confirmed this week. Here's what the transition means for interest rates, markets, and Fed independence."
 pubDate: "2026-05-06"

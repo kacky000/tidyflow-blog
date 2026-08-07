@@ -1,4 +1,5 @@
 ---
+noindex: true
 title: "S&P 500 and Nasdaq Hit Fresh All-Time Records as Iran Ceasefire Sparks Global Rally"
 description: "The S&P 500 closed at 7,126 and the Dow surged over 1,000 points on April 17, 2026, as easing Iran tensions and crashing oil prices fueled a broad market rally."
 pubDate: "2026-04-19"

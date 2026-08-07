@@ -1,4 +1,5 @@
 ---
+noindex: true
 title: "S&P 500 Breaks 7,200 for the First Time as Apple Earnings Fuel May Rally"
 description: "The S&P 500 crossed 7,200 on May 1, 2026, hitting a new all-time high. Apple's earnings beat and easing trade tensions powered the strongest monthly gain since 2020."
 pubDate: "2026-05-02"

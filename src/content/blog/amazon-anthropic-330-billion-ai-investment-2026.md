@@ -1,4 +1,5 @@
 ---
+noindex: true
 title: "Amazon Commits Up to $330 Billion to Anthropic in Largest AI Infrastructure Bet Yet"
 description: "Amazon is investing $5 billion immediately in Anthropic, with a path to $200 billion more tied to milestones — and Anthropic has pledged over $100 billion in AWS cloud spending over the next decade."
 pubDate: "2026-04-23"
